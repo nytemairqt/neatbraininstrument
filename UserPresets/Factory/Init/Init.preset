@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Preset Version="1.0.0">
+  <Content Processor="Interface">
+    <Control type="ScriptSlider" id="knbMasterGain" value="-5.999998569488525"/>
+    <Control type="ScriptSlider" id="knbMasterPan" value="0.0"/>
+    <Control type="ScriptSlider" id="knbCoarseDetune" value="0.0"/>
+    <Control type="ScriptSlider" id="knbFineDetune" value="0.0"/>
+    <Control type="ScriptSlider" id="knbTranspose" value="0.0"/>
+  </Content>
+  <MidiAutomation>
+    <Controller Controller="7" Processor="Interface" MacroIndex="-1" Start="-100.0"
+                End="0.0" FullStart="-100.0" FullEnd="0.0" Skew="3.492788620791155"
+                Interval="0.01" Attribute="knbMasterGain" Inverted="0"/>
+    <Controller Controller="10" Processor="Interface" MacroIndex="-1" Start="-100.0"
+                End="100.0" FullStart="-100.0" FullEnd="100.0" Skew="1.0" Interval="0.01"
+                Attribute="knbMasterPan" Inverted="0"/>
+  </MidiAutomation>
+  <MPEData Enabled="0"/>
+</Preset>
