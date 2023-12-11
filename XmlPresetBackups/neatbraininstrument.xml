@@ -10,6 +10,7 @@
           <ChildProcessors/>
           <Content>
             <Control type="ScriptButton" id="btnPresetBrowser" value="0"/>
+            <Control type="ScriptSlider" id="knbModalRandomizationStrength" value="0.03999999910593033"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-5.999998569488525"/>
             <Control type="ScriptSlider" id="knbMasterPan" value="0.0"/>
             <Control type="ScriptSlider" id="knbCoarseDetune" value="0.0"/>
@@ -30,6 +31,24 @@
       <ChildProcessors>
         <Processor Type="SimpleGain" ID="masterGain" Bypassed="0" Gain="-5.999998569488525"
                    Delay="0.0" Width="100.0" Balance="0.0" InvertPolarity="0.0">
+          <ChildProcessors>
+            <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
+              <ChildProcessors/>
+            </Processor>
+            <Processor Type="ModulatorChain" ID="Delay Modulation" Bypassed="0" Intensity="1.0">
+              <ChildProcessors/>
+            </Processor>
+            <Processor Type="ModulatorChain" ID="Width Modulation" Bypassed="0" Intensity="1.0">
+              <ChildProcessors/>
+            </Processor>
+            <Processor Type="ModulatorChain" ID="Pan Modulation" Bypassed="0" Intensity="1.0">
+              <ChildProcessors/>
+            </Processor>
+          </ChildProcessors>
+          <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+        </Processor>
+        <Processor Type="SimpleGain" ID="Simple Gain1" Bypassed="0" Gain="0.0" Delay="0.0"
+                   Width="0.0" Balance="0.0" InvertPolarity="0.0">
           <ChildProcessors>
             <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
               <ChildProcessors/>
@@ -97,8 +116,8 @@
           <ChildProcessors>
             <Processor Type="AHDSR" ID="AHDSR Envelope1" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                       Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="300.0" Sustain="0.0"
-                       Release="20000.0" EcoMode="1.0">
+                       Attack="2.0" AttackLevel="0.0" Hold="10.0" Decay="3034.0" Sustain="-100.0"
+                       Release="15586.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -131,14 +150,14 @@
         <Processor Type="ModulatorChain" ID="Spread Mod" Bypassed="1" Intensity="1.0">
           <ChildProcessors/>
         </Processor>
-        <Processor Type="StreamingSampler" ID="ResidueSampler" Bypassed="0" Gain="1.0"
+        <Processor Type="StreamingSampler" ID="ResidueSampler" Bypassed="1" Gain="1.0"
                    Balance="0.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
-                   SamplerRepeatMode="3.0" RRGroupAmount="1.0" PitchTracking="0.0"
+                   SamplerRepeatMode="3.0" RRGroupAmount="8.0" PitchTracking="0.0"
                    OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0" Reversed="0.0"
                    NumChannels="1" UseStaticMatrix="0.0" Group0Table="" Group1Table=""
                    Group2Table="" Group3Table="" Group4Table="" Group5Table="" Group6Table=""
-                   Group7Table="" SampleMapID="">
+                   Group7Table="" SampleMapID="map">
           <ChildProcessors>
             <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
               <ChildProcessors/>
@@ -164,8 +183,8 @@
             <channelData enabled="1" level="0.0" suffix=""/>
           </channels>
         </Processor>
-        <Processor Type="ScriptSynth" ID="ModalSynth" Bypassed="0" Gain="0.25" Balance="0.0"
-                   VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0">
+        <Processor Type="ScriptSynth" ID="ModalSynth" Bypassed="0" Gain="0.3311311006546021"
+                   Balance="0.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0">
           <ChildProcessors>
             <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
               <ChildProcessors/>
@@ -213,10 +232,10 @@
   <MidiAutomation>
     <Controller Controller="7" Processor="Interface" MacroIndex="-1" Start="-100.0"
                 End="0.0" FullStart="-100.0" FullEnd="0.0" Skew="3.492788620791155"
-                Interval="0.01" Attribute="knbMasterGain" Inverted="0"/>
+                Interval="0.01" Attribute="fltPeakMeter" Inverted="0"/>
     <Controller Controller="10" Processor="Interface" MacroIndex="-1" Start="-100.0"
                 End="100.0" FullStart="-100.0" FullEnd="100.0" Skew="1.0" Interval="0.01"
-                Attribute="knbMasterPan" Inverted="0"/>
+                Attribute="knbMasterGain" Inverted="0"/>
   </MidiAutomation>
   <MPEData Enabled="0"/>
 </Processor>
