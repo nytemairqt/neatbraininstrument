@@ -1,6 +1,5 @@
 Content.makeFrontInterface(1000, 710);
 
-
 include("RhapsodyBoilerplate/includes/Ui.js");
 include("RhapsodyBoilerplate/includes/LookAndFeel.js");
 include("RhapsodyBoilerplate/includes/Paths.js");
@@ -17,110 +16,132 @@ const ratios_l = [1.0, 1.83829594498603, 3.26433619017115, 4.600857033422893, 6.
 
 // Build Module Tree
 
-/*DO NOT USE IN COMPILED PLUGIN*/
-
 const var builder = Synth.createBuilder();
-
-inline function CREATE_MODE(synthName, index)
-{
-	// Instantiate Sine Synth
-	local synth = builder.create("SineSynth", synthName + "_" + index, 0, builder.ChainIndexes.Direct);
-	
-	// Remove Default Simple Envelope
-	builder.clearChildren(synth, builder.ChainIndexes.Gain); 
-	
-	// Add the AHDSR
-	local ahdsr = builder.create(builder.Modulators.AHDSR, synthName + "_" + index + "_AHDSR", synth, builder.ChainIndexes.Gain);	
-		
-	// Add the Pitch Modulators	
-	local constant = builder.create(builder.Modulators.Constant, synthName + "_" + index + "_Constant", synth, builder.ChainIndexes.Pitch);
-	local drift = builder.create(builder.Modulators.AHDSR, synthName + "_" + index + "_Drift", synth, builder.ChainIndexes.Pitch);
-	local random = builder.create(builder.Modulators.Random, synthName + "_" + index + "_Random", synth, builder.ChainIndexes.Pitch);
-	local velocity = builder.create(builder.Modulators.Velocity, synthName + "_" + index + "_Velocity", drift, 1); // 1 is for Attack Level
-	
-	return synth;
-
-}
 
 const modes = [];
 const ahdsrs = [];
-const constants = [];
 const drifts = [];
 const randoms = [];
 const velocities = [];
 
-inline function CREATE_MODES(numModes)
+inline function CREATE_MODAL_SYNTH(numModes, synthName)
 {
+	// Create Synth Group First
+	
+	local synthGroup = builder.create("SynthGroup", "SynthGroupLeft", 0, builder.ChainIndexes.Direct);
+	builder.clearChildren(synthGroup, builder.ChainIndexes.Gain);
+	local synthGroupAHDSR = builder.create(builder.Modulators.AHDSR, "SynthGroupLeft_AHDSR", synthGroup, builder.ChainIndexes.Gain);
+	local synthGroupFilter = builder.create(builder.Effects.PolyphonicFilter, "SynthGroupLeft_Filter", synthGroup, builder.ChainIndexes.FX);
+	local synthGroupFilter_AHDSR = builder.create(builder.Modulators.AHDSR, "SynthGroupLeft_FilterAHDSR", synthGroupFilter, 0);
+	
+	// Create Individual Sine Generators
+	
 	for (i=0; i<numModes; i++)
 	{
-		local build = CREATE_MODE("Mode", i);
-		local mode = Synth.getChildSynth("Mode_" + i);
-		local ahdsr = Synth.getModulator("Mode_" + i + "_AHDSR");
-		local constant = Synth.getModulator("Mode_" + i + "_Constant");
-		local drift = Synth.getModulator("Mode_" + i + "_Drift");
-		local random = Synth.getModulator("Mode_" + i + "_Random");
-		local velocity = Synth.getModulator("Mode_" + i + "_Velocity");
+		local synth = builder.create("SineSynth", synthName + "_" + i, synthGroup, builder.ChainIndexes.Direct);
+		builder.clearChildren(synth, builder.ChainIndexes.Gain);
+		local synthAHDSR = builder.create(builder.Modulators.AHDSR, synthName + "_" + i + "_AHDSR", synth, builder.ChainIndexes.Gain);
+		local synthDrift = builder.create(builder.Modulators.AHDSR, synthName + "_" + i + "_Drift", synth, builder.ChainIndexes.Pitch);
+		local synthRandom = builder.create(builder.Modulators.Random, synthName + "_" + i + "_Random", synth, builder.ChainIndexes.Pitch);
+		local synthVelocity = builder.create(builder.Modulators.Velocity, synthName + "_" + i + "_Velocity", synthDrift, 1); // 1 is for Attack Level
 		
-		modes.push(mode);
-		ahdsrs.push(ahdsr);
-		constants.push(constant);
-		randoms.push(random);
-		drifts.push(drift);
-		velocities.push(velocity);
-	}
+		modes.push(synth);
+		ahdsrs.push(synthAHDSR);
+		drifts.push(synthDrift);
+		randoms.push(synthRandoms);
+		velocities.push(synthVelocity);
+	}	
+	
 	builder.flush();
-	
-	// Setting Default Values
-	
-	for (i=0; i<numModes; i++)
+}
+
+function GET_MODAL_SYNTH_REFERENCES()
+{
+	for (i=0; i<NUM_MODES; i++)
 	{
-		// Frequency Ratio
+		Modes.push(Synth.getChildSynth("Mode_"+i));	
+		AHDSRS.push(Synth.getModulator("Mode_"+i+"_AHDSR"));
+		Drifts.push(Synth.getModulator("Mode_" + i + "_Drift"));
+		Randoms.push(Synth.getModulator("Mode_" + i + "_Random"));
+		Velocities.push(Synth.getModulator("Mode_" + i + "_Velocity"));		
+	}	
+}
+
+function SET_MODAL_SYNTH_DEFAULTS()
+{
+	SynthGroupLeft.setAttribute(SynthGroupLeft.Gain, .5);	
+
+	SynthGroupLeft_AHDSR.setAttribute(SynthGroupLeft_AHDSR.Attack, 5);
+	SynthGroupLeft_AHDSR.setAttribute(SynthGroupLeft_AHDSR.Decay, 2500);
+	SynthGroupLeft_AHDSR.setAttribute(SynthGroupLeft_AHDSR.Sustain, -100);
+	SynthGroupLeft_AHDSR.setAttribute(SynthGroupLeft_AHDSR.Release, 15000);
+	
+	SynthGroupLeft_Filter.setAttribute(SynthGroupLeft_Filter.Frequency, 1000);
+	SynthGroupLeft_Filter.setAttribute(SynthGroupLeft_Filter.Q, .3);
+	
+	SynthGroupLeft_FilterAHDSR.setAttribute(SynthGroupLeft_FilterAHDSR.Attack, 5);
+	SynthGroupLeft_FilterAHDSR.setAttribute(SynthGroupLeft_FilterAHDSR.Decay, 2500);
+	SynthGroupLeft_FilterAHDSR.setAttribute(SynthGroupLeft_FilterAHDSR.Sustain, -100);
+	SynthGroupLeft_FilterAHDSR.setAttribute(SynthGroupLeft_FilterAHDSR.Release, 5000);
+
+	for (i=0; i<NUM_MODES; i++)
+	{
+		// Modes
 		
-		//ratios_l
+		Modes[i].setAttribute(Modes[i].UseFreqRatio, 1);
+		Modes[i].setAttribute(Modes[i].CoarseFreqRatio, Math.floor(ratios_l[i]));
+		Modes[i].setAttribute(Modes[i].FineFreqRatio, ratios_l[i] - Math.floor(ratios_l[i]));	
 		
-		local floor = Math.floor(ratios_l[i]);
+		// AHDSRS
+						
+		AHDSRS[i].setAttribute(AHDSRS[i].Attack, 5);
+		AHDSRS[i].setAttribute(AHDSRS[i].Decay, 2500);
+		AHDSRS[i].setAttribute(AHDSRS[i].Sustain, -100);
+		AHDSRS[i].setAttribute(AHDSRS[i].Release, 15000);
 		
-		modes[i].setAttribute(modes[i].UseFreqRatio, 1);
-		modes[i].setAttribute(modes[i].CoarseFreqRatio, floor);
-		modes[i].setAttribute(modes[i].FineFreqRatio, ratios_l[i] - floor);
+		// Drifts
+							
+		Drifts[i].setAttribute(Drifts[i].Attack, 5);
+		Drifts[i].setAttribute(Drifts[i].Decay, 2000);
+		Drifts[i].setAttribute(Drifts[i].Sustain, -100);
+		Drifts[i].setAttribute(Drifts[i].Release, 200);
 		
+		// Randoms
+							
+		Randoms[i].setIntensity(.1);
 		
-		
-		
-		// AHDSR
-		
-		ahdsrs[i].setAttribute(ahdsrs[i].Attack, 5);
-		ahdsrs[i].setAttribute(ahdsrs[i].Decay, 2000);
-		ahdsrs[i].setAttribute(ahdsrs[i].Sustain, -100);
-		ahdsrs[i].setAttribute(ahdsrs[i].Release, 15000);			
-		
-		// Constant Pitch
-		
-		constants[i].setIntensity(0.0);
-		
-		// Pitch Drift
-		
-		drifts[i].setAttribute(drifts[i].Attack, 5);
-		drifts[i].setAttribute(drifts[i].Decay, 2000);
-		drifts[i].setAttribute(drifts[i].Sustain, -100);
-		drifts[i].setAttribute(drifts[i].Release, 200);
-		
-		// Random
-		
-		randoms[i].setIntensity(.1);
-		
-		// Velocity
-		
-		velocities[i].setIntensity(.5);
+		// Velocities
+						
+		Velocities[i].setIntensity(.5);
 	}
 }
 
-//CREATE_MODES(5);
+//************************************************************
+// Build Modal Synth Module Tree
 
-// Setup Initial Ratios
+const Modes = [];
+const AHDSRS = [];
+const Drifts = [];
+const Randoms = [];
+const Velocities = [];
 
-const ModalSynth = Synth.getChildSynth("ModalSynth");
+// COMMENT OUT IN PLUGIN VERSION AFTER SAVING
 
+CREATE_MODAL_SYNTH(NUM_MODES, "Mode");
+
+// Get References
+
+const SynthGroupLeft = Synth.getChildSynth("SynthGroupLeft");
+const SynthGroupLeft_AHDSR = Synth.getModulator("SynthGroupLeft_AHDSR");
+const SynthGroupLeft_Filter = Synth.getEffect("SynthGroupLeft_Filter");
+const SynthGroupLeft_FilterAHDSR = Synth.getModulator("SynthGroupLeft_FilterAHDSR");
+
+GET_MODAL_SYNTH_REFERENCES();
+
+// Setup Defaults
+SET_MODAL_SYNTH_DEFAULTS();
+
+//************************************************************
 
 
 
