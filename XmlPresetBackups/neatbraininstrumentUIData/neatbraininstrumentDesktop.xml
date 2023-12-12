@@ -43,10 +43,7 @@
     <Component type="ScriptPanel" id="pnlBody" x="5.0" y="60.0" text="" width="990.0"
                height="565.0" bgColour="0" itemColour="4281282356" itemColour2="4281282356"
                textColour="0" parentComponent="pnlContainer" borderSize="0.0"
-               borderRadius="12.0">
-      <Component type="ScriptSlider" id="knbModalRandomizationStrength" x="730.0"
-                 y="202.0" parentComponent="pnlBody" width="100.0" height="16.0"/>
-    </Component>
+               borderRadius="12.0"/>
     <Component type="ScriptPanel" id="pnlStatusBar" x="5.0" y="585.0" text=""
                width="990.0" height="39.0" bgColour="0" itemColour="4281282356"
                itemColour2="4293978318" textColour="4293059571" parentComponent="pnlContainer"
