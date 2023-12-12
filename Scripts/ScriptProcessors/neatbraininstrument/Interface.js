@@ -12,8 +12,37 @@ include("RhapsodyBoilerplate/includes/Spinner.js");
 
 const NUM_MODES = 6;
 const STEREO_INSTRUMENT = false;
-const RATIOS_L = [1.0, 1.83829594498603, 3.26433619017115, 4.600857033422893, 6.404116475251082, 19.67718441824997];
-const RATIOS_R = [5.0, 4.83829594498603, 3.26433619017115, 2.600857033422893, 1.404116475251082, 8.67718441824997];
+const BUILD_MODULE_TREE = true; /* set to false when exporting*/
+
+const DATA_L = {
+	"object" : SynthGroupLeft,
+	"attack" : 5,
+	"decay" : 5000,
+	"sustain" : -100,
+	"release" : 15000,
+	"filter" : 1000,
+	"Q" : .5,
+	"filterAttack" : 5,
+	"filterDecay" : 2500,
+	"filterSustain" : -100,
+	"filterRelease" : 5000,
+	"ratios" : [1.0, 1.83829594498603, 3.26433619017115, 4.600857033422893, 6.404116475251082, 19.67718441824997]
+}
+
+const DATA_R = {
+	"object" : SynthGroupRight,
+	"attack" : 10,
+	"decay" : 5645,
+	"sustain" : -60,
+	"release" : 1000,
+	"filter" : 3000,
+	"Q" : .2,
+	"filterAttack" : 150,
+	"filterDecay" : 126,
+	"filterSustain" : -11,
+	"filterRelease" : 583,
+	"ratios" : [2.0, 2.83829594498603, 2.26433619017115, 2.600857033422893, 2.404116475251082, 2.67718441824997]
+}
 
 // Build Module Tree
 
@@ -77,41 +106,47 @@ inline function SET_MODAL_SYNTH_DEFAULTS(channel)
 {
 	/* need to setup panning */
 	
+	local data = (channel == "Left") ? DATA_L : DATA_R;
+	
 	local group = (channel == "Left") ? SynthGroupLeft : SynthGroupRight;
 	local group_AHDSR = (channel == "Left") ? SynthGroupLeft_AHDSR : SynthGroupRight_AHDSR;
 	local group_Filter = (channel == "Left") ? SynthGroupLeft_Filter : SynthGroupRight_Filter;
 	local group_FilterAHDSR = (channel == "Left") ? SynthGroupLeft_FilterAHDSR : SynthGroupRight_FilterAHDSR;
+		
 	local modes = (channel == "Left" ) ? Modes_L : Modes_R;
 	local AHDSRS = (channel == "Left") ? AHDSRS_L : AHDSRS_R;
 	local drifts = (channel == "Left") ? Drifts_L : Drifts_R;
 	local randoms = (channel == "Left") ? Randoms_L : Randoms_R;
 	local velocities = (channel == "Left") ? Velocities_L : Velocities_R;
-	local ratios = (channel == "Left") ? RATIOS_L : RATIOS_R;
+	local ratios = (channel == "Left") ? DATA_L.ratios : DATA_R.ratios;
+
 	
 	group.setAttribute(group.Gain, .5);
 	
-	group_AHDSR.setAttribute(group_AHDSR.Attack, 5);
-	group_AHDSR.setAttribute(group_AHDSR.Decay, 2500);
-	group_AHDSR.setAttribute(group_AHDSR.Sustain, -100);
-	group_AHDSR.setAttribute(group_AHDSR.Release, 15000);
+	group_AHDSR.setAttribute(group_AHDSR.Attack, data.attack);
+	group_AHDSR.setAttribute(group_AHDSR.Decay, data.decay);
+	group_AHDSR.setAttribute(group_AHDSR.Sustain, data.sustain);
+	group_AHDSR.setAttribute(group_AHDSR.Release, data.release);
 	
-	group_Filter.setAttribute(group_Filter.Frequency, 1000);
-	group_Filter.setAttribute(group_Filter.Q, .3);
+	group_Filter.setAttribute(group_Filter.Frequency, data.filter);
+	group_Filter.setAttribute(group_Filter.Q, data.Q);
 	
-	group_FilterAHDSR.setAttribute(group_FilterAHDSR.Attack, 5);
-	group_FilterAHDSR.setAttribute(group_FilterAHDSR.Decay, 2500);
-	group_FilterAHDSR.setAttribute(group_FilterAHDSR.Sustain, -100);
-	group_FilterAHDSR.setAttribute(group_FilterAHDSR.Release, 5000);
+	group_FilterAHDSR.setAttribute(group_FilterAHDSR.Attack, data.filterAttack);
+	group_FilterAHDSR.setAttribute(group_FilterAHDSR.Decay, data.filterDecay);
+	group_FilterAHDSR.setAttribute(group_FilterAHDSR.Sustain, data.filterSustain);
+	group_FilterAHDSR.setAttribute(group_FilterAHDSR.Release, data.filterRelease);
 
 	for (i=0; i<NUM_MODES; i++)
 	{
 		// Modes
-		
+				
 		modes[i].setAttribute(modes[i].UseFreqRatio, 1);
-		modes[i].setAttribute(modes[i].CoarseFreqRatio, Math.floor(ratios[i]));
-		modes[i].setAttribute(modes[i].FineFreqRatio, ratios[i] - Math.floor(ratios[i]));	
+		modes[i].setAttribute(modes[i].CoarseFreqRatio, Math.floor(data.ratios[i]));
+		modes[i].setAttribute(modes[i].FineFreqRatio, ratios[i] - Math.floor(data.ratios[i]));	
 		
 		// AHDSRS
+		
+		/*temp probably*/
 						
 		AHDSRS[i].setAttribute(AHDSRS[i].Attack, 5);
 		AHDSRS[i].setAttribute(AHDSRS[i].Decay, 2500);
@@ -126,6 +161,8 @@ inline function SET_MODAL_SYNTH_DEFAULTS(channel)
 		drifts[i].setAttribute(drifts[i].Release, 200);
 		
 		// Randoms
+		
+		/*not temp*/
 							
 		randoms[i].setIntensity(.1);
 		
@@ -152,8 +189,11 @@ const Velocities_R = [];
 
 // COMMENT OUT IN PLUGIN VERSION AFTER SAVING
 
-CREATE_MODAL_SYNTH(NUM_MODES, "Left");
-CREATE_MODAL_SYNTH(NUM_MODES, "Right");
+if (BUILD_MODULE_TREE)
+{
+	CREATE_MODAL_SYNTH(NUM_MODES, "Left");
+	CREATE_MODAL_SYNTH(NUM_MODES, "Right");
+}
 
 // Get References
 
@@ -171,8 +211,12 @@ GET_MODAL_SYNTH_REFERENCES("Left");
 GET_MODAL_SYNTH_REFERENCES("Right");
 
 // Setup Defaults
-SET_MODAL_SYNTH_DEFAULTS("Left");
-SET_MODAL_SYNTH_DEFAULTS("Right");
+
+if (BUILD_MODULE_TREE)
+{
+	SET_MODAL_SYNTH_DEFAULTS("Left");
+	SET_MODAL_SYNTH_DEFAULTS("Right");
+}
 
 //************************************************************
 
