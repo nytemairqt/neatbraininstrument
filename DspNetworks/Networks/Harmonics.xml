@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Network ID="Harmonics" Version="0.0.0">
+  <Node FactoryPath="container.chain" ID="Harmonics" Bypassed="0">
+    <Nodes>
+      <Node ID="framex_block" FactoryPath="container.framex_block" Bypassed="0">
+        <Nodes>
+          <Node ID="expr1" FactoryPath="math.expr" Bypassed="0">
+            <Properties>
+              <Property ID="Code" Value="input + ((Math.abs(input)) * value)"/>
+              <Property ID="Debug" Value="0"/>
+            </Properties>
+            <Parameters>
+              <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="0.07200000000000001"/>
+            </Parameters>
+          </Node>
+        </Nodes>
+        <Parameters/>
+      </Node>
+    </Nodes>
+    <Parameters/>
+  </Node>
+</Network>
