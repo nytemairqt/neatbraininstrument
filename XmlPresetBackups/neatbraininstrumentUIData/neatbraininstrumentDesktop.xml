@@ -210,4 +210,6 @@
                  parentComponent="pnlSpinnerContainer" borderSize="0.0" borderRadius="0.0"/>
     </Component>
   </Component>
+  <Component type="ScriptSlider" id="knbAttack" x="50" y="200" stepSize="1.0"
+             min="5" max="1000" text="Attack"/>
 </ContentProperties>
