@@ -18,8 +18,7 @@ inline function CREATE_MODAL_SYNTH(numModes, channel)
 		local synthAHDSR = builder.create(builder.Modulators.AHDSR, name + "_" + i + "_AHDSR", synth, builder.ChainIndexes.Gain);
 		local synthDrift = builder.create(builder.Modulators.AHDSR, name + "_" + i + "_Drift", synth, builder.ChainIndexes.Pitch);
 		local synthRandom = builder.create(builder.Modulators.Random, name + "_" + i + "_Random", synth, builder.ChainIndexes.Pitch);
-		local synthVelocity = builder.create(builder.Modulators.Velocity, name + "_" + i + "_Drift", synthDrift, 1); // attack level
-		
+		local synthVelocity = builder.create(builder.Modulators.Velocity, name + "_" + i + "_Velocity", synthDrift, 1); // attack level		
 		local synthPitchWheel = builder.create(builder.Modulators.PitchWheel, name+"_" +i + "_PitchWheel", synth, builder.ChainIndexes.Pitch);				
 				
 		/* Instantiate Values */			
@@ -47,102 +46,49 @@ inline function CREATE_MODAL_SYNTH(numModes, channel)
 			synthAHDSRref.setAttribute(synthAHDSRref.Release, data.release);
 
 			local synthDriftref = builder.get(synthDrift, builder.InterfaceTypes.Modulator);
-			synthDriftref.setIntensity(.7);
+			synthDriftref.setIntensity(.2);
 			synthDriftref.setAttribute(synthDriftref.Attack, 5);
 			synthDriftref.setAttribute(synthDriftref.Decay, 2000);
 			synthDriftref.setAttribute(synthDriftref.Sustain, -100);
 			synthDriftref.setAttribute(synthDriftref.Release, 200);
 
 			local synthRandomref = builder.get(synthRandom, builder.InterfaceTypes.Modulator);
-			synthRandomref.setIntensity(.1);
+			synthRandomref.setIntensity(.07);
 
 			local synthVelocityref = builder.get(synthVelocity, builder.InterfaceTypes.Modulator);
-			synthVelocityref.setIntensity(.5);
+			synthVelocityref.setIntensity(.2);
 		}
 	}
 			
 	builder.flush();
 }
 
-
-
-inline function SET_MODAL_SYNTH_DEFAULTS(channel)
+function GET_MODAL_SYNTH_REFERENCES(channel)
 {
-	local data = (channel == "Left") ? DATA_L : DATA_R;
-	
-	local group;
-	local groupAHDSR;
-	local groupFilter;
-	local groupFilterAHDSR;
-	
-	local modes;
-	local drifts;
-	local randoms;
-	local velocities;
-	local ratios;
-
-	group = (channel == "Left") ? SynthGroupLeft : SynthGroupRight;
-	groupAHDSR = (channel == "Left") ? SynthGroupLeft_AHDSR : SynthGroupRight_AHDSR;
-	groupFilter = (channel == "Left") ? SynthGroupLeft_Filter : SynthGroupRight_Filter;
-	groupFilterAHDSR = (channel == "Left") ? SynthGroupLeft_FilterAHDSR : SynthGroupRight_FilterAHDSR;
-
-	modes = (channel == "Left") ? modesL : modesR;;
-	drifts = (channel == "Left") ? driftsL : driftsR;
-	randoms = (channel == "Left") ? randomsL : randomsR;
-	velocities = (channel == "Left") ? velocitiesL : velocitiesR;
-	
-	
-	// Panning & Gain
-	
-	group.setAttribute(group.Gain, data.gain);
-	
-	if (STEREO_INSTRUMENT && channel == "Left")
+	if (Synth.getNumChildSynths() < NUM_MODES)
 	{
-		group.setAttribute(group.Balance, -100);
+		Console.print("Module not initialized, aborting.");
+		return;
 	}
-	if (STEREO_INSTRUMENT && channel == "Right")
+	
+	if (channel == "Left")
 	{
-		group.setAttribute(group.Balance, 100);
+		for (i=0; i<NUM_MODES; i++)
+		{
+			modesL.push(Synth.getChildSynth("Mode_L_"+i));	
+			driftsL.push(Synth.getModulator("Mode_L_" + i + "_Drift"));
+			randomsL.push(Synth.getModulator("Mode_L_" + i + "_Random"));
+			velocitiesL.push(Synth.getModulator("Mode_L_" + i + "_Velocity"));		
+		}	
 	}
-		
-	// AHDSR & Filter
-	
-	groupAHDSR.setAttribute(groupAHDSR.Attack, data.attack);
-	groupAHDSR.setAttribute(groupAHDSR.Decay, data.decay);
-	groupAHDSR.setAttribute(groupAHDSR.Sustain, data.sustain);
-	groupAHDSR.setAttribute(groupAHDSR.Release, data.release);
-	
-	groupFilter.setAttribute(groupFilter.Frequency, data.filter);
-	groupFilter.setAttribute(groupFilter.Q, data.Q);
-	
-	groupFilterAHDSR.setAttribute(groupFilterAHDSR.Attack, data.filterAttack);
-	groupFilterAHDSR.setAttribute(groupFilterAHDSR.Decay, data.filterDecay);
-	groupFilterAHDSR.setAttribute(groupFilterAHDSR.Sustain, data.filterSustain);
-	groupFilterAHDSR.setAttribute(groupFilterAHDSR.Release, data.filterRelease);
-	
-	/* Setup Modes */
-	
-	for (i=0; i<NUM_MODES; i++)
+	else
 	{
-		// Modes
-		
-		modes[i].setAttribute(modes[i].UseFreqRatio, 1);
-		modes[i].setAttribute(modes[i].CoarseFreqRatio, Math.floor(data.ratios[i]));
-		modes[i].setAttribute(modes[i].FineFreqRatio, ratios[i] - Math.floor(data.ratios[i]));
-		
-		// Drifts
-							
-		drifts[i].setAttribute(drifts[i].Attack, 5);
-		drifts[i].setAttribute(drifts[i].Decay, 2000);
-		drifts[i].setAttribute(drifts[i].Sustain, -100);
-		drifts[i].setAttribute(drifts[i].Release, 200);
-		
-		// Randoms
-							
-		randoms[i].setIntensity(.1);
-		
-		// Velocities
-						
-		velocities[i].setIntensity(.5);
-	}
+		for (i=0; i<NUM_MODES; i++)
+		{
+			modesR.push(Synth.getChildSynth("Mode_R_"+i));	
+			driftsR.push(Synth.getModulator("Mode_R_" + i + "_Drift"));
+			randomsR.push(Synth.getModulator("Mode_R_" + i + "_Random"));
+			velocitiesR.push(Synth.getModulator("Mode_R_" + i + "_Velocity"));		
+		}
+	}	
 }

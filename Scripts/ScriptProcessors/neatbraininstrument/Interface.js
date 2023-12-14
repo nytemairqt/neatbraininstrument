@@ -15,7 +15,6 @@ include("RhapsodyBoilerplate/includes/Spinner.js");
 - Call instruments "Memories"
 - add frontend controls for overtones
 - add frontend controls for Samplers
-
 */
 
 /* NEATBrain External Files*/
@@ -29,6 +28,8 @@ const STEREO_INSTRUMENT = true;
 const BUILD_MODULE_TREE = true; /* set to false when exporting*/
 const INITIALIZE_MODULE_DEFAULTS = true;
 const PITCH_RANDOMIZATION = 0.03;
+reg pitchOffsetL = 0.00;
+reg pitchOffsetR = 0.00;
 
 const DATA_L = {
 	"gain" : 0.07,
@@ -80,6 +81,8 @@ const DATA_R = {
     5.619901838351733]
 }
 
+
+
 /* Mode Vars */
 
 const modesL = [];
@@ -101,6 +104,9 @@ if (BUILD_MODULE_TREE)
 	if (STEREO_INSTRUMENT)
 		CREATE_MODAL_SYNTH(NUM_MODES, "Right");
 }
+
+GET_MODAL_SYNTH_REFERENCES("Left");
+GET_MODAL_SYNTH_REFERENCES("Right");
 
 // Get References
 
@@ -225,20 +231,20 @@ function onNoteOn()
 {
 	// Randomize Modal Ratios	
 	
-	/*
-	for (i=0; i<NUM_MODES; i++)
-	{
-		modesL[i].setAttribute(modesL[i].FineFreqRatio, DATA_L.ratios[i] - Math.floor(DATA_L.ratios[i]) + (Math.random() * PITCH_RANDOMIZATION));
-	}
+	pitchOffsetL = Math.randInt(-3, 3) / 100;
+	pitchOffsetR = Math.randInt(-3, 3) / 100;
 	
-	if (STEREO_INSTRUMENT)
-	{
+	if (modesL.length > 0)
 		for (i=0; i<NUM_MODES; i++)
 		{
-			modesR[i].setAttribute(modesR[i].FineFreqRatio, DATA_R.ratios[i] - Math.floor(DATA_R.ratios[i]) + (Math.random() * PITCH_RANDOMIZATION));
+			modesL[i].setAttribute(modesL[i].FineFreqRatio, DATA_L.ratios[i] - Math.floor(DATA_L.ratios[i]) + pitchOffsetL + (Math.random() * PITCH_RANDOMIZATION));
 		}
-	}	
-	*/
+	
+	if (modesR.length > 0)
+		for (i=0; i<NUM_MODES; i++)
+		{
+			modesR[i].setAttribute(modesR[i].FineFreqRatio, DATA_R.ratios[i] - Math.floor(DATA_R.ratios[i]) + pitchOffsetR + (Math.random() * PITCH_RANDOMIZATION));
+		}	
 }
  function onNoteOff()
 {
