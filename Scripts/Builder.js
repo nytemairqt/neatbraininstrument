@@ -2,9 +2,48 @@
 
 const var builder = Synth.createBuilder();
 
-inline function CREATE_MODAL_SYNTH(numModes, channel)
+
+inline function DELETE_ALL_MODULES()
 {
-	// Create Synth Groups
+	builder.clear();
+	builder.flush();
+}
+
+inline function CREATE_BASE_MODULES()
+{
+	// Reconstruct Rhapsody Defaults
+	
+	local masterGain = builder.create(builder.Effects.SimpleGain, "masterGain", 0, builder.ChainIndexes.FX);
+	local globalModulatorContainer0 = builder.create(builder.SoundGenerators.GlobalModulatorContainer, "Global Modulator Container0", 0, builder.ChainIndexes.Direct);
+	local container0 = builder.create(builder.SoundGenerators.SynthGroup, "Container0", 0, builder.ChainIndexes.Direct);
+	
+	// Create Samplers
+	
+	local samplerResidueL = builder.create(builder.SoundGenerators.StreamingSampler, "samplerResidueL", 0, builder.ChainIndexes.Direct);
+	local samplerResidueR = builder.create(builder.SoundGenerators.StreamingSampler, "samplerResidueR", 0, builder.ChainIndexes.Direct);
+	
+	// Left
+	local asSamplerL = builder.get(samplerResidueL, builder.InterfaceTypes.Sampler);	
+	local asSynthL = builder.get(samplerResidueL, builder.InterfaceTypes.ChildSynth);	
+	asSamplerL.loadSampleMap("sampleMapLeft");
+	asSynthL.setAttribute(asSynthL.PitchTracking, 0);
+	asSynthL.setAttribute(asSynthL.Gain, 1); // force gain to 0 
+	if (STEREO_INSTRUMENT)
+		asSynthL.setAttribute(asSynthL.Balance, -100);
+	
+	// Right
+	local asSamplerR = builder.get(samplerResidueR, builder.InterfaceTypes.Sampler);
+	local asSynthR = builder.get(samplerResidueR, builder.InterfaceTypes.ChildSynth);	
+	asSamplerR.loadSampleMap("sampleMapRight");
+	asSynthR.setAttribute(asSynthR.PitchTracking, 0);
+	asSynthR.setAttribute(asSynthR.Gain, 1); // force gain to 0 
+	if (STEREO_INSTRUMENT)
+		asSynthR.setAttribute(asSynthR.Balance, 100);
+}
+
+inline function CREATE_MODAL_SYNTH(numModes, channel)
+{	
+	// Create Synth Groups	
 
 	local name = (channel == "Left") ? "Mode_L" : "Mode_R";	
 	local data = (channel == "Left") ? DATA_L : DATA_R;
@@ -71,11 +110,23 @@ function GET_MODAL_SYNTH_REFERENCES(channel)
 		return;
 	}
 	
+	// Rhapsody Modules
+	
+	rhapsodyModules.push(Synth.getEffect("masterGain"));
+	rhapsodyModules.push(Synth.getChildSynth("Global Modulator Container0"));
+	rhapsodyModules.push(Synth.getChildSynth("Container0"));
+	
+	// Samplers
+	
+	samplers.push(Synth.getChildSynth("samplerResidueL"));
+	samplers.push(Synth.getChildSynth("samplerResidueR"));
+	
 	if (channel == "Left")
 	{
 		for (i=0; i<NUM_MODES; i++)
 		{
 			modesL.push(Synth.getChildSynth("Mode_L_"+i));	
+			ahdsrsL.push(Synth.getModulator("Mode_L_" + i + "_AHDSR"));
 			driftsL.push(Synth.getModulator("Mode_L_" + i + "_Drift"));
 			randomsL.push(Synth.getModulator("Mode_L_" + i + "_Random"));
 			velocitiesL.push(Synth.getModulator("Mode_L_" + i + "_Velocity"));		
@@ -86,6 +137,7 @@ function GET_MODAL_SYNTH_REFERENCES(channel)
 		for (i=0; i<NUM_MODES; i++)
 		{
 			modesR.push(Synth.getChildSynth("Mode_R_"+i));	
+			ahdsrsR.push(Synth.getModulator("Mode_R_" + i + "_AHDSR"));
 			driftsR.push(Synth.getModulator("Mode_R_" + i + "_Drift"));
 			randomsR.push(Synth.getModulator("Mode_R_" + i + "_Random"));
 			velocitiesR.push(Synth.getModulator("Mode_R_" + i + "_Velocity"));		

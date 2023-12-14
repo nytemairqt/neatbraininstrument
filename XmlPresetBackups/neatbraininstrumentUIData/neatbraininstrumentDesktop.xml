@@ -210,15 +210,4 @@
                  parentComponent="pnlSpinnerContainer" borderSize="0.0" borderRadius="0.0"/>
     </Component>
   </Component>
-  <Component type="ScriptSlider" id="knbAttack" x="100" y="200" stepSize="1.0"
-             min="5" max="1000" text="Attack"/>
-  <Component type="ScriptSlider" id="knbBrightness" x="100" y="400" stepSize="1.0"
-             min="500" max="12000" text="Brightness"/>
-  <Component type="ScriptSlider" id="knbDecay" x="300" y="200" stepSize="1.0"
-             min="500" max="20000" text="Decay"/>
-  <Component type="ScriptSlider" id="knbSustain" x="500" y="200" middlePosition="-12.0"
-             stepSize="1.0" max="0" text="Sustain" min="-100"/>
-  <Component type="ScriptSlider" id="knbRelease" x="700" y="200" stepSize="1.0"
-             min="5" max="15000" text="Release"/>
-  <Component type="ScriptSlider" id="knbHarmonics" x="300" y="400" text="Harmonics"/>
 </ContentProperties>
