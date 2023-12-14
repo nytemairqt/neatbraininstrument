@@ -12,8 +12,9 @@ include("RhapsodyBoilerplate/includes/Spinner.js");
 
 /* TO DO
 
-- pitch bend
 - Call instruments "Memories"
+- add frontend controls for overtones
+- add frontend controls for Samplers
 
 */
 
@@ -23,67 +24,74 @@ include("Builder.js");
 
 /* NEATBrain Global Vars */
 
-const NUM_MODES = 8; /* MAXIMUM 8 */
-const STEREO_INSTRUMENT = false;
-const BUILD_MODULE_TREE = false; /* set to false when exporting*/
+const NUM_MODES = 10; /* MAXIMUM 8 */
+const STEREO_INSTRUMENT = true;
+const BUILD_MODULE_TREE = true; /* set to false when exporting*/
 const INITIALIZE_MODULE_DEFAULTS = true;
+const PITCH_RANDOMIZATION = 0.03;
 
 const DATA_L = {
-	"gain" : 0.12,
+	"gain" : 0.07,
 	"object" : SynthGroupLeft,
 	"attack" : 30,
 	"decay" : 25000,
 	"sustain" : -100,
-	"release" : 5000,
-	"filter" : 1600,
+	"release" : 300,
+	"filter" : 500,
 	"Q" : .5,
 	"filterAttack" : 5,
 	"filterDecay" : 25000,
 	"filterSustain" : -100,
 	"filterRelease" : 6000,
 	"ratios" : [1.0,
-    2.017527433721409,
-    3.02109172841769,
-    4.04319476129672,
-    5.062172939147588,
-    6.077214616423551,
-    7.10009699417193,
-    8.119516634399462,
-    13.18585713232291,
-    14.1573595622601   ]
+    1.50611545132335,
+    2.016324247621238,
+    2.527350129491297,
+    3.035309537051999,
+    3.525344403230273,
+    4.04593794204812,
+    4.571776977544238,
+    5.099654773656049,
+    5.651269572535853   ]
 }
 
 const DATA_R = {
-	"gain" : 0.5,
+	"gain" : 0.07,
 	"object" : SynthGroupRight,
-	"attack" : 10,
-	"decay" : 5645,
-	"sustain" : 0,
-	"release" : 15000,
-	"filter" : 1000,
-	"Q" : .3,
+	"attack" : 30,
+	"decay" : 25000,
+	"sustain" : -100,
+	"release" : 300,
+	"filter" : 500,
+	"Q" : .5,
 	"filterAttack" : 5,
-	"filterDecay" : 1500,
-	"filterSustain" : 0,
-	"filterRelease" : 6000,
+	"filterDecay" : 25000,
+	"filterSustain" : -100,
+	"filterRelease" : 300,
 	"ratios" : [1.0,
-    1.384065231176883,
-    1.765772639492703,
-    2.488449331421106,
-    3.464810288997227]
+    1.505414182546647,
+    2.008330638755872,
+    2.514642394668172,
+    3.02555840107908,
+    3.528748398971077,
+    4.039515179259625,
+    4.559517235889062,
+    5.085521589146554,
+    5.619901838351733]
 }
 
-const Modes_L = [];
-const AHDSRS_L = [];
-const Drifts_L = [];
-const Randoms_L = [];
-const Velocities_L = [];
+/* Mode Vars */
 
-const Modes_R = [];
-const AHDSRS_R = [];
-const Drifts_R = [];
-const Randoms_R = [];
-const Velocities_R = [];
+const modesL = [];
+const driftsL = [];
+const randomsL = [];
+const velocitiesL = [];
+
+const modesR = [];
+const driftsR = [];
+const randomsR = [];
+const velocitiesR = [];
+
 
 // Build Module Tree
 
@@ -96,41 +104,23 @@ if (BUILD_MODULE_TREE)
 
 // Get References
 
+/*
 const SynthGroupLeft = Synth.getChildSynth("SynthGroupLeft");
 const SynthGroupLeft_AHDSR = Synth.getModulator("SynthGroupLeft_AHDSR");
 const SynthGroupLeft_Filter = Synth.getEffect("SynthGroupLeft_Filter");
 const SynthGroupLeft_FilterAHDSR = Synth.getModulator("SynthGroupLeft_FilterAHDSR");
-
-/*
 
 const SynthGroupRight = Synth.getChildSynth("SynthGroupRight");
 const SynthGroupRight_AHDSR = Synth.getModulator("SynthGroupRight_AHDSR");
 const SynthGroupRight_Filter = Synth.getEffect("SynthGroupRight_Filter");
 const SynthGroupRight_FilterAHDSR = Synth.getModulator("SynthGroupRight_FilterAHDSR");
 
+
 */
-
-GET_MODAL_SYNTH_REFERENCES("Left");
-if (STEREO_INSTRUMENT)
-	GET_MODAL_SYNTH_REFERENCES("Right");
-
-// Setup Default Values
-
-if (INITIALIZE_MODULE_DEFAULTS)
-{
-	SET_MODAL_SYNTH_DEFAULTS("Left");
-	if (STEREO_INSTRUMENT)
-		SET_MODAL_SYNTH_DEFAULTS("Right");
-}
 
 //************************************************************
 
-
-
 // Interface
-
-// use helper functions like the example below to keep things clean 
-// assign their functionality with scripting too because manually making stuff is annoying
 
 inline function createKnob(id, x, y, text, saveInPreset, callback, minValue, maxValue, stepSize)
 {
@@ -147,53 +137,108 @@ inline function createKnob(id, x, y, text, saveInPreset, callback, minValue, max
 	return k;
 }
 
+/* AHDSR */
+
 inline function onknbAttackControl(component, value)
 {
+	/*
+
 	SynthGroupLeft_AHDSR.setAttribute(SynthGroupLeft_AHDSR.Attack, value);
+	
+	if (STEREO_INSTRUMENT)
+		SynthGroupRight_AHDSR.setAttribute(SynthGroupRight_AHDSR.Attack, value);
+	*/
+
 }
 
-const knbAttack = createKnob("knbAttack", 50, 200, "Attack", true, onknbAttackControl, 5, 1000, 1.0);
-
-/*
-inline function createButton(id, x,y, text)
+inline function onknbDecayControl(component, value)
 {
-    // Create a button and stores it to the temporary variable 'b'
-    local b = Content.addButton(id, x, y);
-    
-    // Use the arguments to set properties differently
-    b.set("text", text);
-    
-    // Some random constant properties for every widget
-    b.set("saveInPreset", false);
-    b.set("visible", false);
-    
-    return b;
+	/*
+
+	SynthGroupLeft_AHDSR.setAttribute(SynthGroupLeft_AHDSR.Decay, value);
+	
+	if (STEREO_INSTRUMENT)
+		SynthGroupRight_AHDSR.setAttribute(SynthGroupRight_AHDSR.Decay, value);
+	*/
+		
 }
 
-button1 = createButton("button1", 0, 0, "Test 1");
-button2 = createButton("button2", 0, 0, "Test 2");	
-*/
+inline function onknbSustainControl(component, value)
+{	
+	/*
+	SynthGroupLeft_AHDSR.setAttribute(SynthGroupLeft_AHDSR.Sustain, value);
+	
+	if (STEREO_INSTRUMENT)
+		SynthGroupRight_AHDSR.setAttribute(SynthGroupRight_AHDSR.Sustain, value);
+	*/
+		
+}
+
+inline function onknbReleaseControl(component, value)
+{
+	/*
+
+	SynthGroupLeft_AHDSR.setAttribute(SynthGroupLeft_AHDSR.Release, value);
+	
+	if (STEREO_INSTRUMENT)
+		SynthGroupRight_AHDSR.setAttribute(SynthGroupRight_AHDSR.Release, value);
+		
+	*/
+		
+}
+
+/* TONE */
+
+
+inline function onknbBrightnessControl(component, value)
+{
+	/*
+
+	SynthGroupLeft_Filter.setAttribute(SynthGroupLeft_Filter.Frequency, value);
+	if (STEREO_INSTRUMENT)
+		SynthGroupRight_Filter.setAttribute(SynthGroupRight_Filter.Frequency, value);
+	*/
+		
+}
+
+inline function onknbHarmonicsControl(component, value)
+{
+	// add logic
+}
+
+
+/* Instantiate Sliders */
+
+const knbAttack = createKnob("knbAttack", 100, 200, "Attack", true, onknbAttackControl, 5, 1000, 1.0);
+const knbDecay = createKnob("knbDecay", 300, 200, "Decay", true, onknbDecayControl, 500, 20000, 1.0);
+const knbSustain = createKnob("knbSustain", 500, 200, "Sustain", true, onknbSustainControl, -100, 0, 1.0);
+const knbRelease = createKnob("knbRelease", 700, 200, "Release", true, onknbReleaseControl, 5, 15000, 1.0);
+
+const knbBrightness = createKnob("knbBrightness", 100, 400, "Brightness", true, onknbBrightnessControl, 500, 12000, 1.0);
+const knbHarmonics = createKnob("knbHarmonics", 300, 400, "Harmonics", true, onknbHarmonicsControl, 0, 1, 0.01);
+
+/* Setup Misc Defaults */
+
+knbSustain.set("middlePosition", -12.0);
 
 function onNoteOn()
 {
-	// Randomize Modal Ratios
+	// Randomize Modal Ratios	
 	
-	
-	
+	/*
 	for (i=0; i<NUM_MODES; i++)
 	{
-		Modes_L[i].setAttribute(Modes_L[i].FineFreqRatio, DATA_L.ratios[i] - Math.floor(DATA_L.ratios[i]) + (Math.random() * .02));
+		modesL[i].setAttribute(modesL[i].FineFreqRatio, DATA_L.ratios[i] - Math.floor(DATA_L.ratios[i]) + (Math.random() * PITCH_RANDOMIZATION));
 	}
 	
 	if (STEREO_INSTRUMENT)
 	{
 		for (i=0; i<NUM_MODES; i++)
 		{
-			Modes_R[i].setAttribute(Modes_R[i].FineFreqRatio, DATA_R.ratios[i] - Math.floor(DATA_R.ratios[i]) + (Math.random() * .02));
+			modesR[i].setAttribute(modesR[i].FineFreqRatio, DATA_R.ratios[i] - Math.floor(DATA_R.ratios[i]) + (Math.random() * PITCH_RANDOMIZATION));
 		}
 	}	
-	
-	
+	*/
 }
  function onNoteOff()
 {
