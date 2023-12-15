@@ -29,9 +29,6 @@ include("Builder.js");
 
 const MODULE_BUILD_MODE = 2; /* 0=Nothing, 1=ClearModules, 2=BuildModules
 
-const CLEAR_MODULE_TREE = false; /* keep false unless rebuilding modules */
-//const BUILD_MODULE_TREE = true; /* set to false when exporting*/
-
 /* DATA SLOTS */
 
 const DATA_L = {

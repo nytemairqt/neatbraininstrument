@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Network ID="Harmonics" Version="0.0.0">
-  <Node FactoryPath="container.chain" ID="Harmonics" Bypassed="0" ShowParameters="1">
+  <Node FactoryPath="container.chain" ID="Harmonics" Bypassed="0" ShowParameters="1"
+        NodeColour="4289893465">
     <Nodes>
       <Node ID="expr2" FactoryPath="math.expr" Bypassed="0">
         <Properties>
@@ -12,34 +13,11 @@
           <Parameter MinValue="0.0" MaxValue="0.99758228937178" ID="Value" Automated="1"/>
         </Parameters>
       </Node>
-      <Node ID="one_pole" FactoryPath="filters.one_pole" Bypassed="0">
-        <ComplexData>
-          <Filters>
-            <Filter Index="-1" EmbeddedData=""/>
-          </Filters>
-        </ComplexData>
-        <Parameters>
-          <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
-                     ID="Frequency" Automated="1"/>
-          <Parameter MinValue="0.300000011920929" MaxValue="9.899999618530273" SkewFactor="0.2647178173065186"
-                     ID="Q" Value="1.0"/>
-          <Parameter MinValue="-18.0" MaxValue="18.0" ID="Gain" Value="0.0"/>
-          <Parameter MinValue="0.0" MaxValue="1.0" SkewFactor="0.3010300099849701"
-                     ID="Smoothing" Value="0.009999999776482582"/>
-          <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Mode" Value="0.0"/>
-          <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Enabled" Value="1.0"/>
-        </Parameters>
-      </Node>
     </Nodes>
     <Parameters>
       <Parameter ID="harmonics" MinValue="0.0" MaxValue="1.0" Value="1.0">
         <Connections>
           <Connection NodeId="expr2" ParameterId="Value"/>
-        </Connections>
-      </Parameter>
-      <Parameter ID="filter" MinValue="0.0" MaxValue="1.0" Value="1.0">
-        <Connections>
-          <Connection NodeId="one_pole" ParameterId="Frequency"/>
         </Connections>
       </Parameter>
     </Parameters>
