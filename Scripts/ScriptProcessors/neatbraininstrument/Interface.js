@@ -27,8 +27,10 @@ include("Builder.js");
 
 /* HYPERPARAMETERS*/
 
+const MODULE_BUILD_MODE = 2; /* 0=Nothing, 1=ClearModules, 2=BuildModules
+
 const CLEAR_MODULE_TREE = false; /* keep false unless rebuilding modules */
-const BUILD_MODULE_TREE = false; /* set to false when exporting*/
+//const BUILD_MODULE_TREE = true; /* set to false when exporting*/
 
 /* DATA SLOTS */
 
@@ -111,12 +113,12 @@ const velocitiesR = [];
 
 // Build Module Tree
 
-if (CLEAR_MODULE_TREE)
+if (MODULE_BUILD_MODE == 1)
 {
 	Builder.DELETE_ALL_MODULES();
 }
 
-if (BUILD_MODULE_TREE)
+if (MODULE_BUILD_MODE == 2)
 {
 	Builder.CREATE_BASE_MODULES();
 
