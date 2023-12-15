@@ -94,10 +94,10 @@
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors/>
         </Processor>
-        <Processor Type="ModulatorChain" ID="Detune Mod" Bypassed="0" Intensity="1.0">
+        <Processor Type="ModulatorChain" ID="Detune Mod" Bypassed="1" Intensity="1.0">
           <ChildProcessors/>
         </Processor>
-        <Processor Type="ModulatorChain" ID="Spread Mod" Bypassed="0" Intensity="1.0">
+        <Processor Type="ModulatorChain" ID="Spread Mod" Bypassed="1" Intensity="1.0">
           <ChildProcessors/>
         </Processor>
       </ChildProcessors>
@@ -189,10 +189,10 @@
         <channelData enabled="1" level="0.0" suffix=""/>
       </channels>
     </Processor>
-    <Processor Type="SineSynth" ID="Mode_L_0" Bypassed="0" Gain="0.07000000029802322"
+    <Processor Type="SineSynth" ID="Mode_L_0" Bypassed="0" Gain="0.02999999932944775"
                Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="1.0"
-               FineFreqRatio="0.0" SaturationAmount="0.0">
+               FineFreqRatio="0.01194347534328699" SaturationAmount="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
@@ -268,10 +268,10 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="Mode_L_1" Bypassed="0" Gain="0.07000000029802322"
+    <Processor Type="SineSynth" ID="Mode_L_1" Bypassed="0" Gain="0.02999999932944775"
                Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="1.0"
-               FineFreqRatio="0.5061154365539551" SaturationAmount="0.0">
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="2.0"
+               FineFreqRatio="0.0197265800088644" SaturationAmount="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
@@ -347,10 +347,10 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="Mode_L_2" Bypassed="0" Gain="0.07000000029802322"
+    <Processor Type="SineSynth" ID="Mode_L_2" Bypassed="0" Gain="0.02999999932944775"
                Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="2.0"
-               FineFreqRatio="0.0163242481648922" SaturationAmount="0.0">
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="3.0"
+               FineFreqRatio="0.03112690337002277" SaturationAmount="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
@@ -426,10 +426,10 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="Mode_L_3" Bypassed="0" Gain="0.07000000029802322"
+    <Processor Type="SineSynth" ID="Mode_L_3" Bypassed="0" Gain="0.02999999932944775"
                Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="2.0"
-               FineFreqRatio="0.527350127696991" SaturationAmount="0.0">
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="4.0"
+               FineFreqRatio="0.04579716175794601" SaturationAmount="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
@@ -505,10 +505,10 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="Mode_L_4" Bypassed="0" Gain="0.07000000029802322"
+    <Processor Type="SineSynth" ID="Mode_L_4" Bypassed="0" Gain="0.02999999932944775"
                Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="3.0"
-               FineFreqRatio="0.03530953824520111" SaturationAmount="0.0">
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="5.0"
+               FineFreqRatio="0.04827669262886047" SaturationAmount="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
@@ -584,10 +584,10 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="Mode_L_5" Bypassed="0" Gain="0.07000000029802322"
+    <Processor Type="SineSynth" ID="Mode_L_5" Bypassed="0" Gain="0.02999999932944775"
                Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="3.0"
-               FineFreqRatio="0.5253444314002991" SaturationAmount="0.0">
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="6.0"
+               FineFreqRatio="0.05816091224551201" SaturationAmount="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
@@ -663,10 +663,10 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="Mode_L_6" Bypassed="0" Gain="0.07000000029802322"
+    <Processor Type="SineSynth" ID="Mode_L_6" Bypassed="0" Gain="0.02999999932944775"
                Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="4.0"
-               FineFreqRatio="0.04593794047832489" SaturationAmount="0.0">
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="7.0"
+               FineFreqRatio="0.08724219352006912" SaturationAmount="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
@@ -742,10 +742,10 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="Mode_L_7" Bypassed="0" Gain="0.07000000029802322"
+    <Processor Type="SineSynth" ID="Mode_L_7" Bypassed="0" Gain="0.02999999932944775"
                Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="4.0"
-               FineFreqRatio="0.5717769861221313" SaturationAmount="0.0">
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="8.0"
+               FineFreqRatio="0.08045382797718048" SaturationAmount="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
@@ -821,10 +821,10 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="Mode_L_8" Bypassed="0" Gain="0.07000000029802322"
+    <Processor Type="SineSynth" ID="Mode_L_8" Bypassed="0" Gain="0.02999999932944775"
                Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="5.0"
-               FineFreqRatio="0.09965477138757706" SaturationAmount="0.0">
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="9.0"
+               FineFreqRatio="0.128687784075737" SaturationAmount="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
@@ -900,10 +900,10 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="Mode_L_9" Bypassed="0" Gain="0.07000000029802322"
+    <Processor Type="SineSynth" ID="Mode_L_9" Bypassed="0" Gain="0.02999999932944775"
                Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="5.0"
-               FineFreqRatio="0.6512695550918579" SaturationAmount="0.0">
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="10.0"
+               FineFreqRatio="0.1375379413366318" SaturationAmount="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
@@ -979,10 +979,326 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="Mode_R_0" Bypassed="0" Gain="0.07000000029802322"
+    <Processor Type="SineSynth" ID="Mode_L_10" Bypassed="0" Gain="0.02999999932944775"
+               Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="11.0"
+               FineFreqRatio="0.1818574219942093" SaturationAmount="0.0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="Mode_L_10_AHDSR" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
+                       Attack="30.0" AttackLevel="0.0" Hold="10.0" Decay="1.0" Sustain="-100.0"
+                       Release="300.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="Mode_L_10_Drift" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Bipolar="1" Intensity="0.01666666753590107" AttackCurve="0.0"
+                       DecayCurve="0.0" Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="2000.0"
+                       Sustain="-100.0" Release="200.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors>
+                    <Processor Type="Velocity" ID="Mode_L_10_Velocity" Bypassed="0" Intensity="0.2000000029802322"
+                               UseTable="0.0" Inverted="0.0" DecibelMode="0.0">
+                      <ChildProcessors/>
+                    </Processor>
+                  </ChildProcessors>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="Random" ID="Mode_L_10_Random" Bypassed="0" Intensity="0.005833333358168602"
+                       Bipolar="1" UseTable="0.0" RandomTableData="">
+              <ChildProcessors/>
+            </Processor>
+            <Processor Type="PitchWheel" ID="Mode_L_10_PitchWheel" Bypassed="0" Intensity="0.0"
+                       Bipolar="1" UseTable="0.0" Inverted="0.0" SmoothTime="200.0">
+              <ChildProcessors/>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+    <Processor Type="SineSynth" ID="Mode_L_11" Bypassed="0" Gain="0.02999999932944775"
+               Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="12.0"
+               FineFreqRatio="0.1737271994352341" SaturationAmount="0.0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="Mode_L_11_AHDSR" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
+                       Attack="30.0" AttackLevel="0.0" Hold="10.0" Decay="1.0" Sustain="-100.0"
+                       Release="300.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="Mode_L_11_Drift" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Bipolar="1" Intensity="0.01666666753590107" AttackCurve="0.0"
+                       DecayCurve="0.0" Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="2000.0"
+                       Sustain="-100.0" Release="200.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors>
+                    <Processor Type="Velocity" ID="Mode_L_11_Velocity" Bypassed="0" Intensity="0.2000000029802322"
+                               UseTable="0.0" Inverted="0.0" DecibelMode="0.0">
+                      <ChildProcessors/>
+                    </Processor>
+                  </ChildProcessors>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="Random" ID="Mode_L_11_Random" Bypassed="0" Intensity="0.005833333358168602"
+                       Bipolar="1" UseTable="0.0" RandomTableData="">
+              <ChildProcessors/>
+            </Processor>
+            <Processor Type="PitchWheel" ID="Mode_L_11_PitchWheel" Bypassed="0" Intensity="0.0"
+                       Bipolar="1" UseTable="0.0" Inverted="0.0" SmoothTime="200.0">
+              <ChildProcessors/>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+    <Processor Type="SineSynth" ID="Mode_L_12" Bypassed="0" Gain="0.02999999932944775"
+               Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="13.0"
+               FineFreqRatio="0.2288433313369751" SaturationAmount="0.0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="Mode_L_12_AHDSR" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
+                       Attack="30.0" AttackLevel="0.0" Hold="10.0" Decay="1.0" Sustain="-100.0"
+                       Release="300.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="Mode_L_12_Drift" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Bipolar="1" Intensity="0.01666666753590107" AttackCurve="0.0"
+                       DecayCurve="0.0" Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="2000.0"
+                       Sustain="-100.0" Release="200.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors>
+                    <Processor Type="Velocity" ID="Mode_L_12_Velocity" Bypassed="0" Intensity="0.2000000029802322"
+                               UseTable="0.0" Inverted="0.0" DecibelMode="0.0">
+                      <ChildProcessors/>
+                    </Processor>
+                  </ChildProcessors>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="Random" ID="Mode_L_12_Random" Bypassed="0" Intensity="0.005833333358168602"
+                       Bipolar="1" UseTable="0.0" RandomTableData="">
+              <ChildProcessors/>
+            </Processor>
+            <Processor Type="PitchWheel" ID="Mode_L_12_PitchWheel" Bypassed="0" Intensity="0.0"
+                       Bipolar="1" UseTable="0.0" Inverted="0.0" SmoothTime="200.0">
+              <ChildProcessors/>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+    <Processor Type="SineSynth" ID="Mode_L_13" Bypassed="0" Gain="0.02999999932944775"
+               Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="15.0"
+               FineFreqRatio="0.3876261413097382" SaturationAmount="0.0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="Mode_L_13_AHDSR" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
+                       Attack="30.0" AttackLevel="0.0" Hold="10.0" Decay="1.0" Sustain="-100.0"
+                       Release="300.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="Mode_L_13_Drift" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Bipolar="1" Intensity="0.01666666753590107" AttackCurve="0.0"
+                       DecayCurve="0.0" Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="2000.0"
+                       Sustain="-100.0" Release="200.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors>
+                    <Processor Type="Velocity" ID="Mode_L_13_Velocity" Bypassed="0" Intensity="0.2000000029802322"
+                               UseTable="0.0" Inverted="0.0" DecibelMode="0.0">
+                      <ChildProcessors/>
+                    </Processor>
+                  </ChildProcessors>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="Random" ID="Mode_L_13_Random" Bypassed="0" Intensity="0.005833333358168602"
+                       Bipolar="1" UseTable="0.0" RandomTableData="">
+              <ChildProcessors/>
+            </Processor>
+            <Processor Type="PitchWheel" ID="Mode_L_13_PitchWheel" Bypassed="0" Intensity="0.0"
+                       Bipolar="1" UseTable="0.0" Inverted="0.0" SmoothTime="200.0">
+              <ChildProcessors/>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+    <Processor Type="SineSynth" ID="Mode_R_0" Bypassed="0" Gain="0.02999999932944775"
                Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="1.0"
-               FineFreqRatio="0.0" SaturationAmount="0.0">
+               FineFreqRatio="0.01562568545341492" SaturationAmount="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
@@ -1058,10 +1374,10 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="Mode_R_1" Bypassed="0" Gain="0.07000000029802322"
+    <Processor Type="SineSynth" ID="Mode_R_1" Bypassed="0" Gain="0.02999999932944775"
                Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="1.0"
-               FineFreqRatio="0.5054141879081726" SaturationAmount="0.0">
+               FineFreqRatio="0.9695881605148315" SaturationAmount="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
@@ -1137,10 +1453,10 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="Mode_R_2" Bypassed="0" Gain="0.07000000029802322"
+    <Processor Type="SineSynth" ID="Mode_R_2" Bypassed="0" Gain="0.02999999932944775"
                Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="2.0"
-               FineFreqRatio="0.008330638520419598" SaturationAmount="0.0">
+               FineFreqRatio="0.9677408337593079" SaturationAmount="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
@@ -1216,10 +1532,10 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="Mode_R_3" Bypassed="0" Gain="0.07000000029802322"
+    <Processor Type="SineSynth" ID="Mode_R_3" Bypassed="0" Gain="0.02999999932944775"
                Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="2.0"
-               FineFreqRatio="0.5146424174308777" SaturationAmount="0.0">
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="3.0"
+               FineFreqRatio="0.9746562242507935" SaturationAmount="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
@@ -1295,10 +1611,10 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="Mode_R_4" Bypassed="0" Gain="0.07000000029802322"
+    <Processor Type="SineSynth" ID="Mode_R_4" Bypassed="0" Gain="0.02999999932944775"
                Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="3.0"
-               FineFreqRatio="0.02555840089917183" SaturationAmount="0.0">
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="4.0"
+               FineFreqRatio="0.9826430678367615" SaturationAmount="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
@@ -1374,10 +1690,10 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="Mode_R_5" Bypassed="0" Gain="0.07000000029802322"
+    <Processor Type="SineSynth" ID="Mode_R_5" Bypassed="0" Gain="0.02999999932944775"
                Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="3.0"
-               FineFreqRatio="0.5287483930587769" SaturationAmount="0.0">
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="5.0"
+               FineFreqRatio="0.9592368602752686" SaturationAmount="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
@@ -1453,10 +1769,10 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="Mode_R_6" Bypassed="0" Gain="0.07000000029802322"
+    <Processor Type="SineSynth" ID="Mode_R_6" Bypassed="0" Gain="0.02999999932944775"
                Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="4.0"
-               FineFreqRatio="0.0395151786506176" SaturationAmount="0.0">
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="7.0"
+               FineFreqRatio="0.01285905204713345" SaturationAmount="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
@@ -1532,10 +1848,10 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="Mode_R_7" Bypassed="0" Gain="0.07000000029802322"
+    <Processor Type="SineSynth" ID="Mode_R_7" Bypassed="0" Gain="0.02999999932944775"
                Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="4.0"
-               FineFreqRatio="0.5595172643661499" SaturationAmount="0.0">
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="7.0"
+               FineFreqRatio="0.8738774657249451" SaturationAmount="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
@@ -1611,10 +1927,10 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="Mode_R_8" Bypassed="0" Gain="0.07000000029802322"
+    <Processor Type="SineSynth" ID="Mode_R_8" Bypassed="0" Gain="0.02999999932944775"
                Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="5.0"
-               FineFreqRatio="0.08552158623933792" SaturationAmount="0.0">
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="8.0"
+               FineFreqRatio="0.8927826881408691" SaturationAmount="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
@@ -1690,10 +2006,10 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SineSynth" ID="Mode_R_9" Bypassed="0" Gain="0.07000000029802322"
+    <Processor Type="SineSynth" ID="Mode_R_9" Bypassed="0" Gain="0.02999999932944775"
                Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="5.0"
-               FineFreqRatio="0.6199018359184265" SaturationAmount="0.0">
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="9.0"
+               FineFreqRatio="0.9090136885643005" SaturationAmount="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
@@ -1758,6 +2074,322 @@
               <ChildProcessors/>
             </Processor>
             <Processor Type="PitchWheel" ID="Mode_R_9_PitchWheel" Bypassed="0" Intensity="0.0"
+                       Bipolar="1" UseTable="0.0" Inverted="0.0" SmoothTime="200.0">
+              <ChildProcessors/>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+    <Processor Type="SineSynth" ID="Mode_R_10" Bypassed="0" Gain="0.02999999932944775"
+               Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="10.0"
+               FineFreqRatio="0.960670530796051" SaturationAmount="0.0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="Mode_R_10_AHDSR" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
+                       Attack="30.0" AttackLevel="0.0" Hold="10.0" Decay="1.0" Sustain="-100.0"
+                       Release="300.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="Mode_R_10_Drift" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Bipolar="1" Intensity="0.01666666753590107" AttackCurve="0.0"
+                       DecayCurve="0.0" Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="2000.0"
+                       Sustain="-100.0" Release="200.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors>
+                    <Processor Type="Velocity" ID="Mode_R_10_Velocity" Bypassed="0" Intensity="0.2000000029802322"
+                               UseTable="0.0" Inverted="0.0" DecibelMode="0.0">
+                      <ChildProcessors/>
+                    </Processor>
+                  </ChildProcessors>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="Random" ID="Mode_R_10_Random" Bypassed="0" Intensity="0.005833333358168602"
+                       Bipolar="1" UseTable="0.0" RandomTableData="">
+              <ChildProcessors/>
+            </Processor>
+            <Processor Type="PitchWheel" ID="Mode_R_10_PitchWheel" Bypassed="0" Intensity="0.0"
+                       Bipolar="1" UseTable="0.0" Inverted="0.0" SmoothTime="200.0">
+              <ChildProcessors/>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+    <Processor Type="SineSynth" ID="Mode_R_11" Bypassed="0" Gain="0.02999999932944775"
+               Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="13.0"
+               FineFreqRatio="0.02325141057372093" SaturationAmount="0.0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="Mode_R_11_AHDSR" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
+                       Attack="30.0" AttackLevel="0.0" Hold="10.0" Decay="1.0" Sustain="-100.0"
+                       Release="300.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="Mode_R_11_Drift" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Bipolar="1" Intensity="0.01666666753590107" AttackCurve="0.0"
+                       DecayCurve="0.0" Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="2000.0"
+                       Sustain="-100.0" Release="200.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors>
+                    <Processor Type="Velocity" ID="Mode_R_11_Velocity" Bypassed="0" Intensity="0.2000000029802322"
+                               UseTable="0.0" Inverted="0.0" DecibelMode="0.0">
+                      <ChildProcessors/>
+                    </Processor>
+                  </ChildProcessors>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="Random" ID="Mode_R_11_Random" Bypassed="0" Intensity="0.005833333358168602"
+                       Bipolar="1" UseTable="0.0" RandomTableData="">
+              <ChildProcessors/>
+            </Processor>
+            <Processor Type="PitchWheel" ID="Mode_R_11_PitchWheel" Bypassed="0" Intensity="0.0"
+                       Bipolar="1" UseTable="0.0" Inverted="0.0" SmoothTime="200.0">
+              <ChildProcessors/>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+    <Processor Type="SineSynth" ID="Mode_R_12" Bypassed="0" Gain="0.02999999932944775"
+               Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="13.0"
+               FineFreqRatio="1.002962589263916" SaturationAmount="0.0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="Mode_R_12_AHDSR" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
+                       Attack="30.0" AttackLevel="0.0" Hold="10.0" Decay="1.0" Sustain="-100.0"
+                       Release="300.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="Mode_R_12_Drift" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Bipolar="1" Intensity="0.01666666753590107" AttackCurve="0.0"
+                       DecayCurve="0.0" Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="2000.0"
+                       Sustain="-100.0" Release="200.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors>
+                    <Processor Type="Velocity" ID="Mode_R_12_Velocity" Bypassed="0" Intensity="0.2000000029802322"
+                               UseTable="0.0" Inverted="0.0" DecibelMode="0.0">
+                      <ChildProcessors/>
+                    </Processor>
+                  </ChildProcessors>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="Random" ID="Mode_R_12_Random" Bypassed="0" Intensity="0.005833333358168602"
+                       Bipolar="1" UseTable="0.0" RandomTableData="">
+              <ChildProcessors/>
+            </Processor>
+            <Processor Type="PitchWheel" ID="Mode_R_12_PitchWheel" Bypassed="0" Intensity="0.0"
+                       Bipolar="1" UseTable="0.0" Inverted="0.0" SmoothTime="200.0">
+              <ChildProcessors/>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+    <Processor Type="SineSynth" ID="Mode_R_13" Bypassed="0" Gain="0.02999999932944775"
+               Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
+               OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="15.0"
+               FineFreqRatio="0.1129284426569939" SaturationAmount="0.0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="Mode_R_13_AHDSR" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
+                       Attack="30.0" AttackLevel="0.0" Hold="10.0" Decay="1.0" Sustain="-100.0"
+                       Release="300.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors>
+            <Processor Type="AHDSR" ID="Mode_R_13_Drift" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Bipolar="1" Intensity="0.01666666753590107" AttackCurve="0.0"
+                       DecayCurve="0.0" Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="2000.0"
+                       Sustain="-100.0" Release="200.0" EcoMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors>
+                    <Processor Type="Velocity" ID="Mode_R_13_Velocity" Bypassed="0" Intensity="0.2000000029802322"
+                               UseTable="0.0" Inverted="0.0" DecibelMode="0.0">
+                      <ChildProcessors/>
+                    </Processor>
+                  </ChildProcessors>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="Random" ID="Mode_R_13_Random" Bypassed="0" Intensity="0.005833333358168602"
+                       Bipolar="1" UseTable="0.0" RandomTableData="">
+              <ChildProcessors/>
+            </Processor>
+            <Processor Type="PitchWheel" ID="Mode_R_13_PitchWheel" Bypassed="0" Intensity="0.0"
                        Bipolar="1" UseTable="0.0" Inverted="0.0" SmoothTime="200.0">
               <ChildProcessors/>
             </Processor>

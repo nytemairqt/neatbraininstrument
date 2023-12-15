@@ -62,41 +62,39 @@ inline function CREATE_MODAL_SYNTH(numModes, channel)
 				
 		/* Instantiate Values */			
 
-		if (INITIALIZE_MODULE_DEFAULTS)
-		{
-			local synthRef = builder.get(synth, builder.InterfaceTypes.ChildSynth);
+		local synthRef = builder.get(synth, builder.InterfaceTypes.ChildSynth);
 
-			if (channel == "Left" && STEREO_INSTRUMENT)
-				synthRef.setAttribute(synthRef.Balance, -100);
-			if (channel == "Right" && STEREO_INSTRUMENT)
-				synthRef.setAttribute(synthRef.Balance, 100);
+		if (channel == "Left" && STEREO_INSTRUMENT)
+			synthRef.setAttribute(synthRef.Balance, -100);
+		if (channel == "Right" && STEREO_INSTRUMENT)
+			synthRef.setAttribute(synthRef.Balance, 100);
 
-			synthRef.setAttribute(synthRef.Gain, data.gain);
-			synthRef.setAttribute(synthRef.UseFreqRatio, 1);
-			synthRef.setAttribute(synthRef.CoarseFreqRatio, Math.floor(data.ratios[i]));
-			synthRef.setAttribute(synthRef.FineFreqRatio, data.ratios[i] - Math.floor(data.ratios[i]));
+		synthRef.setAttribute(synthRef.Gain, data.gain);
+		synthRef.setAttribute(synthRef.UseFreqRatio, 1);
+		synthRef.setAttribute(synthRef.CoarseFreqRatio, Math.floor(data.ratios[i]));
+		synthRef.setAttribute(synthRef.FineFreqRatio, data.ratios[i] - Math.floor(data.ratios[i]));
 
-			local synthAHDSRref = builder.get(synthAHDSR, builder.InterfaceTypes.Modulator);
-			local synthAHDSRcoefficient = .1;
-			local synthAHDSRfalloff = data.decay * (synthAHDSRcoefficient * i);
-			synthAHDSRref.setAttribute(synthAHDSRref.Attack, data.attack);
-			synthAHDSRref.setAttribute(synthAHDSRref.Decay, data.decay - synthAHDSRfalloff);
-			synthAHDSRref.setAttribute(synthAHDSRref.Sustain, data.sustain);
-			synthAHDSRref.setAttribute(synthAHDSRref.Release, data.release);
+		local synthAHDSRref = builder.get(synthAHDSR, builder.InterfaceTypes.Modulator);
+		local synthAHDSRcoefficient = .1;
+		local synthAHDSRfalloff = data.decay * (synthAHDSRcoefficient * i);
+		synthAHDSRref.setAttribute(synthAHDSRref.Attack, data.attack);
+		synthAHDSRref.setAttribute(synthAHDSRref.Decay, data.decay - synthAHDSRfalloff);
+		synthAHDSRref.setAttribute(synthAHDSRref.Sustain, data.sustain);
+		synthAHDSRref.setAttribute(synthAHDSRref.Release, data.release);
 
-			local synthDriftref = builder.get(synthDrift, builder.InterfaceTypes.Modulator);
-			synthDriftref.setIntensity(.2);
-			synthDriftref.setAttribute(synthDriftref.Attack, 5);
-			synthDriftref.setAttribute(synthDriftref.Decay, 2000);
-			synthDriftref.setAttribute(synthDriftref.Sustain, -100);
-			synthDriftref.setAttribute(synthDriftref.Release, 200);
+		local synthDriftref = builder.get(synthDrift, builder.InterfaceTypes.Modulator);
+		synthDriftref.setIntensity(.2);
+		synthDriftref.setAttribute(synthDriftref.Attack, 5);
+		synthDriftref.setAttribute(synthDriftref.Decay, 2000);
+		synthDriftref.setAttribute(synthDriftref.Sustain, -100);
+		synthDriftref.setAttribute(synthDriftref.Release, 200);
 
-			local synthRandomref = builder.get(synthRandom, builder.InterfaceTypes.Modulator);
-			synthRandomref.setIntensity(.07);
+		local synthRandomref = builder.get(synthRandom, builder.InterfaceTypes.Modulator);
+		synthRandomref.setIntensity(.07);
 
-			local synthVelocityref = builder.get(synthVelocity, builder.InterfaceTypes.Modulator);
-			synthVelocityref.setIntensity(.2);
-		}
+		local synthVelocityref = builder.get(synthVelocity, builder.InterfaceTypes.Modulator);
+		synthVelocityref.setIntensity(.2);
+		
 	}
 			
 	builder.flush();
