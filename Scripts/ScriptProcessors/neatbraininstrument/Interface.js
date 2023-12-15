@@ -23,8 +23,12 @@ include("RhapsodyBoilerplate/includes/Spinner.js");
 
 /* NEATBrain External Files*/
 
-
 include("Builder.js");
+
+/* HYPERPARAMETERS*/
+
+const CLEAR_MODULE_TREE = false; /* keep false unless rebuilding modules */
+const BUILD_MODULE_TREE = false; /* set to false when exporting*/
 
 /* DATA SLOTS */
 
@@ -82,9 +86,6 @@ if (isDefined(DATA_R))
 	STEREO_INSTRUMENT = true;
 }
 
-const CLEAR_MODULE_TREE = false; /* keep false unless rebuilding modules */
-const BUILD_MODULE_TREE = false; /* set to false when exporting*/
-
 /* Hyperparameters */
 
 const PITCH_RANDOMIZATION = 0.03;
@@ -112,21 +113,22 @@ const velocitiesR = [];
 
 if (CLEAR_MODULE_TREE)
 {
-	DELETE_ALL_MODULES();
+	Builder.DELETE_ALL_MODULES();
 }
 
 if (BUILD_MODULE_TREE)
 {
-	CREATE_BASE_MODULES();
+	Builder.CREATE_BASE_MODULES();
 
-	CREATE_MODAL_SYNTH(NUM_MODES, "Left");
+	Builder.CREATE_MODAL_SYNTH(NUM_MODES, "Left");
 	if (STEREO_INSTRUMENT)
-		CREATE_MODAL_SYNTH(NUM_MODES, "Right");
+		Builder.CREATE_MODAL_SYNTH(NUM_MODES, "Right");
+		
+	Builder.CREATE_OVERTONE_FX();
 }
 
-GET_MODAL_SYNTH_REFERENCES("Left");
-GET_MODAL_SYNTH_REFERENCES("Right");
-
+Builder.GET_MODAL_SYNTH_REFERENCES("Left");
+Builder.GET_MODAL_SYNTH_REFERENCES("Right");
 
 //************************************************************
 
