@@ -28,7 +28,38 @@ include("NEATBRAINBoilerplate/Debug_DisableModules.js");
 
 /* CONSTRUCTOR */
 
-const MODULE_BUILD_MODE = 5; // 0=DoNothing, 1=ClearModules(Modes), 2=ClearModules(All) 3=RebuildBaseModules, 4=RebuildModes, 5=Release
+const MODULE_BUILD_MODE = 5; // 0=DoNothing, 1=ClearModules(Modes), 2=ClearModules(All) 3=RebuildBaseModules, 4=RebuildModes, 5=UpdateValues, 6=Release
+
+// Hyperparameters
+
+reg pitchOffsetL = 0.00;
+reg pitchOffsetR = 0.00;
+
+const GROUP_FILTER_CUTOFF = 1200;
+const MODE_INDIVIDUAL_RANDOM = 0.1;
+const MODE_GROUP_RANDOM = 20;
+
+const MODE_ATTACK = 30;
+const MODE_DECAY = 19999;
+const MODE_SUSTAIN = -100;
+const MODE_RELEASE = 500;
+const MODE_ADHSR_RANDOM = .25;
+const MODE_HARMONIC_VELOCITY = .07;
+
+const MODE_GAIN_GROUP = Engine.getGainFactorForDecibels(-3);
+const MODE_GAIN_BASE = -24;
+reg MODE_GAIN_COEFFICIENT = 1.9; // connect to slider, larger value = quieter harmonics
+reg MODE_DECAY_COEFFICIENT = .03; // connect to slider, larger value = faster harmonic falloff
+
+const MODE_ATTACK_RANDOM = .1; 
+const MODE_DECAY_RANDOM = .1; 
+
+const MODE_PITCH_DRIFT = .13;
+const MODE_PITCH_ATTACK = 20;
+const MODE_PITCH_DECAY = 2000;
+const MODE_PITCH_SUSTAIN = -100;
+const MODE_PITCH_RELEASE = 200;
+const MODE_PITCH_ATTACK_VELOCITY = .2;
 
 /* INSTRUMENT DATA */
 
@@ -88,7 +119,6 @@ const MODES_R = [1.0,
     27.96432995023516,
     29.07589813787308];
 
-
 // NEATBrain Global Vars 
 
 const NUM_MODES = MODES_L.length;
@@ -98,76 +128,7 @@ if (isDefined(MODES_R))
 	STEREO_INSTRUMENT = true;
 }
 
-// Hyperparameters
-
-reg pitchOffsetL = 0.00;
-reg pitchOffsetR = 0.00;
-
-const GROUP_FILTER_CUTOFF = 1200;
-const MODE_INDIVIDUAL_RANDOM = 0.1;
-const MODE_GROUP_RANDOM = 20;
-
-const MODE_ATTACK = 30;
-const MODE_DECAY = 19999;
-const MODE_SUSTAIN = -100;
-const MODE_RELEASE = 500;
-const MODE_ADHSR_RANDOM = .25;
-const MODE_HARMONIC_VELOCITY = .07;
-
-const MODE_GAIN_GROUP = Engine.getGainFactorForDecibels(-3);
-const MODE_GAIN_BASE = -24;
-reg MODE_GAIN_COEFFICIENT = 1.9; // connect to slider, larger value = quieter harmonics
-reg MODE_DECAY_COEFFICIENT = .03; // connect to slider, larger value = faster harmonic falloff
-
-const MODE_ATTACK_RANDOM = .1; 
-const MODE_DECAY_RANDOM = .1; 
-
-const MODE_PITCH_DRIFT = .13;
-const MODE_PITCH_ATTACK = 20;
-const MODE_PITCH_DECAY = 2000;
-const MODE_PITCH_SUSTAIN = -100;
-const MODE_PITCH_RELEASE = 200;
-const MODE_PITCH_ATTACK_VELOCITY = .2;
-
-// Build Module Tree
-
-switch(MODULE_BUILD_MODE)
-{
-	case 0:
-		return;
-
-	case 1:
-		CLEAR_MODULE_TREE(false);
-		break;
-
-	case 2:
-		CLEAR_MODULE_TREE(true);
-		break;
-
-	case 3:
-		REBUILD_MODULE_TREE();
-		break;
-
-	case 4:
-		REBUILD_MODES(NUM_MODES, "Left");
-		if (STEREO_INSTRUMENT)
-			REBUILD_MODES(NUM_MODES, "Right");
-		break;
-
-	case 5:
-		GET_MODAL_SYNTH_REFERENCES("Left");
-		if (STEREO_INSTRUMENT)
-			GET_MODAL_SYNTH_REFERENCES("Right");
-		break;
-}
-
-// Interface
-
-// Keyboard
-
-
-
-
+START_BUILDER();
 
 function onNoteOn()
 {
@@ -175,9 +136,6 @@ function onNoteOn()
 	
 	pitchOffsetL = Math.randInt(-MODE_GROUP_RANDOM, MODE_GROUP_RANDOM) / 100;
 	pitchOffsetR = Math.randInt(-MODE_GROUP_RANDOM, MODE_GROUP_RANDOM) / 100;
-	
-	Console.print(pitchOffsetL);
-	Console.print(pitchOffsetR);
 
 	if (constantsL.length > 0)
 		for (i=0; i<constantsL.length; i++)
