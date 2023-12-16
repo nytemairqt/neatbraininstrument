@@ -131,18 +131,29 @@ inline function onknbDampeningControl(component, value)
 	if (modesL_GAIN_AHDSRsDecayFalloffs.length == 0)
 		return;
 
-	MODE_DECAY_COEFFICIENT = (1 - value) / 5;
+	/* Iterate through the Constants and REDUCE their intensity incrementally based on the strengthFactor */
+
+	local strengthFactor = 0.05;
+	//MODE_DECAY_COEFFICIENT = 1 - (value * strengthFactor); 
+
+	//MODE_DECAY_COEFFICIENT = 1.0 - ((strengthFactor * value) * i);
 
 	for (i=0; i<modesL_GAIN_AHDSRsDecayFalloffs.length; i++)
-	{
-		modesL_GAIN_AHDSRsDecayFalloffs[i].setIntensity(1.0 - (MODE_DECAY_COEFFICIENT * i));
+	{		
+		MODE_DECAY_COEFFICIENT = 1.0 - ((strengthFactor * value) * i);
+		modesL_GAIN_AHDSRsDecayFalloffs[i].setIntensity(1-MODE_DECAY_COEFFICIENT);
+		if (STEREO_INSTRUMENT)
+			modesR_GAIN_AHDSRsDecayFalloffs[i].setIntensity(1-MODE_DECAY_COEFFICIENT);
 	}
 		
+		/*
 	if (STEREO_INSTRUMENT)
 		for (i=0; i<modesR_GAIN_AHDSRsDecayFalloffs.length; i++)
-	{
-		modesR_GAIN_AHDSRsDecayFalloffs[i].setIntensity(1.0 - (MODE_DECAY_COEFFICIENT * i));
-	}
+		{
+			
+			//modesR_GAIN_AHDSRsDecayFalloffs[i].setIntensity(1.0 - (MODE_DECAY_COEFFICIENT * i));
+		}
+		*/
 }
 
 /* Instantiate Sliders */

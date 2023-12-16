@@ -462,7 +462,7 @@
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="Group_L_Filter" Bypassed="0" Gain="0.0"
-                       Frequency="1200.0" Q="1.0" Mode="6.0" Quality="1.769239296e9"
+                       Frequency="1200.0" Q="1.0" Mode="6.0" Quality="1.203982848e9"
                        BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
@@ -618,7 +618,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_1_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.800000011920929">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -720,7 +720,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_2_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.6000000238418579">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -822,7 +822,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_3_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.4000000059604645">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -924,7 +924,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_4_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.2000000029802322">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -3459,7 +3459,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_1_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.800000011920929">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -3561,7 +3561,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_2_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.6000000238418579">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -3663,7 +3663,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_3_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.4000000059604645">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -3765,7 +3765,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_4_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.2000000029802322">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>

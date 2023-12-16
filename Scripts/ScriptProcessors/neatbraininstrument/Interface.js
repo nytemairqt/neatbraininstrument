@@ -89,6 +89,8 @@ const MODES_L = [1.0,
     29.7514432324793,
     31.11213974195163];
 
+// Comment out for Mono Instruments
+
 const MODES_R = [1.0,
     1.997420838486636,
     2.995898201674351,
@@ -116,6 +118,7 @@ const MODES_R = [1.0,
     26.86579718386571,
     27.96432995023516,
     29.07589813787308];
+
 
 // NEATBrain Global Vars 
 

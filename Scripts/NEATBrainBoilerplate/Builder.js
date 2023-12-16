@@ -46,10 +46,12 @@ inline function REBUILD_MODULE_TREE()
 	local masterGain = builder.create(builder.Effects.SimpleGain, "masterGain", 0, builder.ChainIndexes.FX);
 	local globalModulatorContainer0 = builder.create(builder.SoundGenerators.GlobalModulatorContainer, "Global Modulator Container0", 0, builder.ChainIndexes.Direct);
 	local container0 = builder.create(builder.SoundGenerators.SynthChain, "Container0", 0, builder.ChainIndexes.Direct);
+
+	local numSamplers = (STEREO_INSTRUMENT) ? 6 : 3;
 		
 	// Create Samplers
 
-	for (i=0; i<BASE_MODULES.samplers.length; i++)
+	for (i=0; i<numSamplers; i++)
 	{
 		local sampler = builder.create(builder.SoundGenerators.StreamingSampler, BASE_MODULES.samplers[i], 0, builder.ChainIndexes.Direct);
 		builder.clearChildren(sampler, builder.ChainIndexes.Gain);
@@ -86,13 +88,17 @@ inline function REBUILD_MODULE_TREE()
 
 	// Create Mode Groups
 
-	for (i=0; i<2; i++)
+	local groupL = builder.create(builder.SoundGenerators.SynthChain, "Group_L", 0, builder.ChainIndexes.Direct);
+	local filterL = builder.create(builder.Effects.PolyphonicFilter, "Group_L_Filter", groupL, builder.ChainIndexes.FX);
+	local filterLref = builder.get(filterL, builder.InterfaceTypes.Effect);
+	filterLref.setAttribute(filterLref.Frequency, GROUP_FILTER_CUTOFF);
+
+	if (STEREO_INSTRUMENT)
 	{
-		local groupName = (i==0) ? "Group_L" : "Group_R";
-		local group = builder.create(builder.SoundGenerators.SynthChain, groupName, 0, builder.ChainIndexes.Direct);
-		local filter = builder.create(builder.Effects.PolyphonicFilter, groupName + "_Filter", group, builder.ChainIndexes.FX);
-		local filterref = builder.get(filter, builder.InterfaceTypes.Effect);
-		filterref.setAttribute(filterref.Frequency, GROUP_FILTER_CUTOFF);
+		local groupR = builder.create(builder.SoundGenerators.SynthChain, "Group_R", 0, builder.ChainIndexes.Direct);
+		local filterR = builder.create(builder.Effects.PolyphonicFilter, "Group_R_Filter", groupR, builder.ChainIndexes.FX);
+		local filterRref = builder.get(filterR, builder.InterfaceTypes.Effect);
+		filterRref.setAttribute(filterRref.Frequency, GROUP_FILTER_CUTOFF);
 	}
 
 	builder.flush();
@@ -154,9 +160,9 @@ inline function REBUILD_MODES(numModes, channel)
 
 		// AHDSR
 		local synth_GAIN_AHDSRref = builder.get(synth_GAIN_AHDSR, builder.InterfaceTypes.Modulator);
-		local synth_GAIN_AHDSRAttackRandomref = builder.get(synth_GAIN_AHDSRAttackRandom, builder.InterfaceTypes.Modulator);
-		local synth_GAIN_AHDSRDecayRandomref = builder.get(synth_GAIN_AHDSRDecayRandom, builder.InterfaceTypes.Modulator);
+		local synth_GAIN_AHDSRAttackRandomref = builder.get(synth_GAIN_AHDSRAttackRandom, builder.InterfaceTypes.Modulator);		
 		local synth_GAIN_AHDSRDecayFalloffref = builder.get(synth_GAIN_AHDSRDecayFalloff, builder.InterfaceTypes.Modulator);
+		local synth_GAIN_AHDSRDecayRandomref = builder.get(synth_GAIN_AHDSRDecayRandom, builder.InterfaceTypes.Modulator);
 
 		synth_GAIN_AHDSRref.setAttribute(synth_GAIN_AHDSRref.Attack, MODE_ATTACK);
 		synth_GAIN_AHDSRref.setAttribute(synth_GAIN_AHDSRref.Decay, MODE_DECAY);
@@ -191,6 +197,8 @@ inline function REBUILD_MODES(numModes, channel)
 		synth_PITCH_Randomref.setIntensity(MODE_INDIVIDUAL_RANDOM);
 		
 	}
+
+	UPDATE_MODE_VALUES(channel);
 			
 	builder.flush();
 }
@@ -244,7 +252,7 @@ inline function UPDATE_MODE_VALUES(channel)
 
 		synth_GAIN_AHDSRAttackRandomref.setIntensity(MODE_ADHSR_RANDOM);
 		synth_GAIN_AHDSRDecayRandomref.setIntensity(MODE_ADHSR_RANDOM);
-		synth_GAIN_AHDSRDecayFalloffref.setIntensity(1.0 - (MODE_DECAY_COEFFICIENT * i));
+		//synth_GAIN_AHDSRDecayFalloffref.setIntensity(1.0 - (MODE_DECAY_COEFFICIENT * i));
 
 		local synth_GAIN_Velocityref = Synth.getModulator(name + "_" + i + "_GAIN_Velocity");
 		synth_GAIN_Velocityref.setIntensity(MODE_HARMONIC_VELOCITY * i);
