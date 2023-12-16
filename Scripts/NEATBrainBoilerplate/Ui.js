@@ -128,20 +128,20 @@ inline function onknbHarmonicsControl(component, value)
 
 inline function onknbDampeningControl(component, value)
 {
-	if (decayFalloffsL.length == 0)
+	if (modesL_GAIN_AHDSRsDecayFalloffs.length == 0)
 		return;
 
-	MODE_DECAY_COEFFICIENT = value / 20;
+	MODE_DECAY_COEFFICIENT = (1 - value) / 5;
 
-	for (i=0; i<decayFalloffsL.length; i++)
+	for (i=0; i<modesL_GAIN_AHDSRsDecayFalloffs.length; i++)
 	{
-		decayFalloffsL[i].setIntensity(1.0 - (MODE_DECAY_COEFFICIENT * i));
+		modesL_GAIN_AHDSRsDecayFalloffs[i].setIntensity(1.0 - (MODE_DECAY_COEFFICIENT * i));
 	}
 		
 	if (STEREO_INSTRUMENT)
-		for (i=0; i<decayFalloffsR.length; i++)
+		for (i=0; i<modesR_GAIN_AHDSRsDecayFalloffs.length; i++)
 	{
-		decayFalloffsR[i].setIntensity(1.0 - (MODE_DECAY_COEFFICIENT * i));
+		modesR_GAIN_AHDSRsDecayFalloffs[i].setIntensity(1.0 - (MODE_DECAY_COEFFICIENT * i));
 	}
 }
 

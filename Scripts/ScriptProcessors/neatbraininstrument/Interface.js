@@ -15,8 +15,6 @@ include("RhapsodyBoilerplate/includes/Spinner.js");
 - Call instruments "Memories"
 - add frontend controls for overtones
 - add frontend controls for Samplers
-- setup release Sampler
-	- disable it using a global 
 */
 
 /* NEATBrain External Files */

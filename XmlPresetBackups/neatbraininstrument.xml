@@ -17,8 +17,8 @@
             <Control type="ScriptSlider" id="knbTranspose" value="0.0"/>
             <Control type="ScriptSlider" id="knbHarmonics" value="0.0"/>
             <Control type="ScriptSlider" id="knbAttack" value="0.0"/>
-            <Control type="ScriptSlider" id="knbDecay" value="0.0"/>
-            <Control type="ScriptSlider" id="knbSustain" value="0.0"/>
+            <Control type="ScriptSlider" id="knbDecay" value="20000.0"/>
+            <Control type="ScriptSlider" id="knbSustain" value="-100.0"/>
             <Control type="ScriptSlider" id="knbRelease" value="0.0"/>
             <Control type="ScriptSlider" id="knbDampening" value="0.0"/>
           </Content>
@@ -462,7 +462,7 @@
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="Group_L_Filter" Bypassed="0" Gain="0.0"
-                       Frequency="1200.0" Q="1.0" Mode="6.0" Quality="1.203982848e9"
+                       Frequency="1200.0" Q="1.0" Mode="6.0" Quality="1.769239296e9"
                        BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
@@ -618,7 +618,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_1_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.9700000286102295">
+                                   Intensity="0.800000011920929">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -720,7 +720,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_2_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.9399999976158142">
+                                   Intensity="0.6000000238418579">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -822,7 +822,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_3_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.9100000262260437">
+                                   Intensity="0.4000000059604645">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -924,7 +924,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_4_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.8799999952316284">
+                                   Intensity="0.2000000029802322">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -1026,7 +1026,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_5_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.8500000238418579">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -1128,7 +1128,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_6_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.8199999928474426">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -1230,7 +1230,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_7_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.7900000214576721">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -1332,7 +1332,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_8_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.7599999904632568">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -1434,7 +1434,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_9_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.7300000190734863">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -1536,7 +1536,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_10_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.699999988079071">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -1638,7 +1638,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_11_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.6700000166893005">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -1740,7 +1740,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_12_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.6399999856948853">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -1842,7 +1842,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_13_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.6100000143051147">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -1944,7 +1944,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_14_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.5799999833106995">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -2046,7 +2046,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_15_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.550000011920929">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -2152,7 +2152,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_16_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.5199999809265137">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -2258,7 +2258,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_17_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.4900000095367432">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -2364,7 +2364,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_18_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.4600000083446503">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -2470,7 +2470,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_19_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.4300000071525574">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -2576,7 +2576,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_20_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.4000000059604645">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -2682,7 +2682,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_21_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.3700000047683716">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -2788,7 +2788,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_22_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.3400000035762787">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -2894,7 +2894,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_23_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.3100000023841858">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -3000,7 +3000,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_24_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.2800000011920929">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -3106,7 +3106,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_25_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.25">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -3212,7 +3212,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_L_26_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.2199999988079071">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -3459,7 +3459,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_1_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.9700000286102295">
+                                   Intensity="0.800000011920929">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -3561,7 +3561,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_2_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.9399999976158142">
+                                   Intensity="0.6000000238418579">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -3663,7 +3663,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_3_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.9100000262260437">
+                                   Intensity="0.4000000059604645">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -3765,7 +3765,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_4_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.8799999952316284">
+                                   Intensity="0.2000000029802322">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -3867,7 +3867,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_5_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.8500000238418579">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -3969,7 +3969,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_6_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.8199999928474426">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -4071,7 +4071,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_7_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.7900000214576721">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -4173,7 +4173,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_8_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.7599999904632568">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -4275,7 +4275,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_9_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.7300000190734863">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -4377,7 +4377,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_10_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.699999988079071">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -4479,7 +4479,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_11_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.6700000166893005">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -4581,7 +4581,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_12_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.6399999856948853">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -4683,7 +4683,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_13_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.6100000143051147">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -4785,7 +4785,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_14_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.5799999833106995">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -4887,7 +4887,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_15_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.550000011920929">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -4993,7 +4993,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_16_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.5199999809265137">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -5099,7 +5099,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_17_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.4900000095367432">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -5205,7 +5205,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_18_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.4600000083446503">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -5311,7 +5311,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_19_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.4300000071525574">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -5417,7 +5417,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_20_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.4000000059604645">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -5523,7 +5523,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_21_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.3700000047683716">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -5629,7 +5629,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_22_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.3400000035762787">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -5735,7 +5735,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_23_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.3100000023841858">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -5841,7 +5841,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_24_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.2800000011920929">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -5947,7 +5947,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_25_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.25">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
@@ -6053,7 +6053,7 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="Constant" ID="Mode_R_26_GAIN_AHDSRDecayFalloff" Bypassed="0"
-                                   Intensity="0.2199999988079071">
+                                   Intensity="0.0">
                           <ChildProcessors/>
                         </Processor>
                       </ChildProcessors>
