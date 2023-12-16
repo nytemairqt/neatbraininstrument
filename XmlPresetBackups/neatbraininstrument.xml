@@ -157,7 +157,17 @@
                Group7Table="" SampleMapID="">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
-          <ChildProcessors/>
+          <ChildProcessors>
+            <Processor Type="ReleaseTrigger" ID="samplerReleaseL_MidiReleaseProcessor"
+                       Bypassed="0">
+              <ChildProcessors/>
+              <Content>
+                <Control type="ScriptButton" id="TimeAttenuate" value="0.0"/>
+                <Control type="ScriptSlider" id="Time" value="0.0"/>
+                <Control type="ScriptTable" id="TimeTable" value="0.0" data=""/>
+              </Content>
+            </Processor>
+          </ChildProcessors>
         </Processor>
         <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
           <ChildProcessors>
@@ -325,7 +335,17 @@
                Group7Table="" SampleMapID="">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
-          <ChildProcessors/>
+          <ChildProcessors>
+            <Processor Type="ReleaseTrigger" ID="samplerReleaseR_MidiReleaseProcessor"
+                       Bypassed="0">
+              <ChildProcessors/>
+              <Content>
+                <Control type="ScriptButton" id="TimeAttenuate" value="0.0"/>
+                <Control type="ScriptSlider" id="Time" value="0.0"/>
+                <Control type="ScriptTable" id="TimeTable" value="0.0" data=""/>
+              </Content>
+            </Processor>
+          </ChildProcessors>
         </Processor>
         <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
           <ChildProcessors>
@@ -442,7 +462,7 @@
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="Group_L_Filter" Bypassed="0" Gain="0.0"
-                       Frequency="1200.0" Q="1.0" Mode="6.0" Quality="1.051269568e9"
+                       Frequency="1200.0" Q="1.0" Mode="6.0" Quality="1.203982848e9"
                        BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
@@ -3283,7 +3303,8 @@
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="Group_R_Filter" Bypassed="0" Gain="0.0"
-                       Frequency="1200.0" Q="1.0" Mode="6.0" Quality="1.1370496e9" BipolarIntensity="0.0">
+                       Frequency="1200.0" Q="1.0" Mode="6.0" Quality="1.203982848e9"
+                       BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1.0">

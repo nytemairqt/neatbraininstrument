@@ -57,6 +57,9 @@ inline function REBUILD_MODULE_TREE()
 
 		local asSampler = builder.get(sampler, builder.InterfaceTypes.Sampler);
 		local asSynth = builder.get(sampler, builder.InterfaceTypes.ChildSynth);
+
+		if (i==1 || i==4)
+			local releaseMidiProcessor = builder.create(builder.MidiProcessors.ReleaseTrigger, BASE_MODULES.samplers[i] + "_MidiReleaseProcessor", sampler, builder.ChainIndexes.Midi);
 		
 		asSynth.setAttribute(asSynth.PitchTracking, 0);
 		asSynth.setAttribute(asSynth.Gain, 1);
@@ -76,6 +79,10 @@ inline function REBUILD_MODULE_TREE()
 		if (BASE_MODULES.sampleMaps[i] != undefined)
 			asSampler.loadSampleMap(BASE_MODULES.sampleMaps[i]); 
 	}
+
+	//samplerReleaseL
+
+	//local 
 
 	// Create Mode Groups
 
