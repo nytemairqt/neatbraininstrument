@@ -1,8 +1,9 @@
+include("NEATBRAINBoilerplate/NEATBrainLookAndFeel.js");
 
 for (i = 0; i < 128; i++)
    	Engine.setKeyColour(i, Colours.withAlpha(Colours.black, 0.2));
 
-inline function createKnob(id, x, y, text, saveInPreset, callback, minValue, maxValue, stepSize)
+inline function createKnob(id, x, y, width, height, text, saveInPreset, callback, minValue, maxValue, stepSize, defaultValue)
 {
 	local k = Content.addKnob(id, x, y);
 	
@@ -10,6 +11,9 @@ inline function createKnob(id, x, y, text, saveInPreset, callback, minValue, max
 	k.set("min", minValue);
 	k.set("max", maxValue);
 	k.set("stepSize", stepSize);
+	k.set("defaultValue", defaultValue);
+	k.set("width", width);
+	k.set("height", height);
 	
 	k.set("saveInPreset", saveInPreset);
 	k.setControlCallback(callback);
@@ -17,9 +21,37 @@ inline function createKnob(id, x, y, text, saveInPreset, callback, minValue, max
 	Content.setPropertiesFromJSON(id, {
           parentComponent: "pnlBody"
 	});
+
+	k.setLocalLookAndFeel(LAFSliderNEATBrain);
 	
 	return k;
 }
+
+inline function createTextPanel(id, x, y, width, height, fontSize, text)
+{
+	local p = Content.addPanel(id, x, y);
+
+	p.set("width", width);
+	p.set("height", height);
+	p.set("text", text);
+
+	p.data.text = text;
+	p.data.fontSize = fontSize;
+	
+	Content.setPropertiesFromJSON(id, {
+          parentComponent: "pnlBody"
+	});
+
+	p.setPaintRoutine(function(g)
+	{
+		g.fillAll(Colours.withAlpha(Colours.grey, 0.0));
+		g.setColour(Colours.withAlpha(Colours.grey, 1.0));
+		g.setFont("bold", this.data.fontSize);
+		g.drawAlignedText(this.data.text, [0, 0, this.getWidth(), this.getHeight()], "centred");
+
+	});
+}
+
 
 /* AHDSR */
 
@@ -141,17 +173,22 @@ inline function onknbFilterControl(component, value)
 
 /* Instantiate Sliders */
 
-const var pnlBody = Content.getComponent("pnlBody");
+const knbFilter = createKnob("knbFilter", 100, 400, 64, 64, "Filter", true, onknbFilterControl, 300, 6000, 1.0, 1200);
+const knbDampening = createKnob("knbDampening", 500, 400, 64, 64, "Dampening", true, onknbDampeningControl, 0.0, 1.0, 0.01, 0.0);
 
-const knbFilter = createKnob("knbFilter", 100, 400, "Filter", true, onknbFilterControl, 50, 20000, 1.0);
-const knbDampening = createKnob("knbDampening", 500, 400, "Dampening", true, onknbDampeningControl, 0.0, 1.0, 0.01);
-
-const knbAttack = createKnob("knbAttack", 100, 200, "Attack", true, onknbAttackControl, 5, 1000, 1.0);
-const knbDecay = createKnob("knbDecay", 300, 200, "Decay", true, onknbDecayControl, 500, 20000, 1.0);
-const knbSustain = createKnob("knbSustain", 500, 200, "Sustain", true, onknbSustainControl, -100, 0, 1.0);
-const knbRelease = createKnob("knbRelease", 700, 200, "Release", true, onknbReleaseControl, 5, 15000, 1.0);
+const knbAttack = createKnob("knbAttack", 70, 120, 64, 64, "Attack", true, onknbAttackControl, 5, 1000, 1.0, 5);
+const knbDecay = createKnob("knbDecay", 180, 120, 64, 64, "Decay", true, onknbDecayControl, 500, 20000, 1.0, 15000);
+const knbSustain = createKnob("knbSustain", 290, 120, 64, 64, "Sustain", true, onknbSustainControl, -100, 0, 1.0, -100);
+const knbRelease = createKnob("knbRelease", 400, 120, 64, 64, "Release", true, onknbReleaseControl, 5, 15000, 1.0, 200);
 
 /* Setup Misc Defaults */
 
 knbSustain.set("middlePosition", -12.0);
 knbFilter.set("middlePosition", 1400);
+
+/* Generic UI Elements */
+
+const lblAttack = createTextPanel("lblAttack", 40, 180, 128, 32, 16, "Attack");
+const lblDecay = createTextPanel("lblDecay", 148, 180, 128, 32, 16, "Decay");
+const lblSustain = createTextPanel("lblSustain", 259, 180, 128, 32, 16, "Sustain");
+const lblRelease = createTextPanel("lblRelease", 370, 180, 128, 32, 16, "Release");

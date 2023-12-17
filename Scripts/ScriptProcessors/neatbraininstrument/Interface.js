@@ -15,13 +15,12 @@ include("RhapsodyBoilerplate/includes/Spinner.js");
 - Call instruments "Memories"
 - add frontend controls for overtones
 - add frontend controls for Samplers
-- connect LFOs to inter-modal pitch? increase their intensity over the sustain lifetime?
 */
 
 /* NEATBrain External Files */
 
 include("NEATBRAINBoilerplate/Builder.js");
-include("NEATBRAINBoilerplate/Ui.js");
+include("NEATBRAINBoilerplate/NEATBrainUi.js");
 include("NEATBRAINBoilerplate/Constants.js");
 include("NEATBRAINBoilerplate/Debug_DisableModules.js");
 

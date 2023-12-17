@@ -146,17 +146,10 @@ inline function REBUILD_MODES(numModes, channel)
 		synthRef.setAttribute(synthRef.Gain, falloff);
 		synthRef.setAttribute(synthRef.UseFreqRatio, 1);
 
-		// Scale Mode if Ratio > 16
-		local scaledMode = (modes[i] > 16) ? modes[i] / 2 : modes[i];
-		synthRef.setAttribute(synthRef.CoarseFreqRatio, Math.floor(scaledMode));
-		synthRef.setAttribute(synthRef.FineFreqRatio, scaledMode - Math.floor(scaledMode));
+		local ratio = modes[i];
 
-		if (modes[i] > 16)
-		{
-			local octaveConstant = builder.create(builder.Modulators.Constant, name + "_" + i + "_PITCH_OctaveConstant", synth, builder.ChainIndexes.Pitch);
-			local octaveConstantref = builder.get(octaveConstant, builder.InterfaceTypes.Modulator);
-			octaveConstantref.setIntensity(12);
-		}
+		synthRef.setAttribute(synthRef.CoarseFreqRatio, Math.floor(ratio));
+		synthRef.setAttribute(synthRef.FineFreqRatio, ratio - Math.floor(ratio));
 
 		// AHDSR
 		local synth_GAIN_AHDSRref = builder.get(synth_GAIN_AHDSR, builder.InterfaceTypes.Modulator);
