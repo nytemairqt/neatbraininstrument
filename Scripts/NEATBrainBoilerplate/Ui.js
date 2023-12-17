@@ -21,16 +21,16 @@ inline function createKnob(id, x, y, text, saveInPreset, callback, minValue, max
 
 inline function onknbAttackControl(component, value)
 {
-	if (ahdsrsL.length == 0)
+	if (modesL_GAIN_AHDSRs.length == 0)
 		return;
 
-	for (a in ahdsrsL)
+	for (a in modesL_GAIN_AHDSRs)
 	{
 		a.setAttribute(a.Attack, value);
 	}
 	
 	if (STEREO_INSTRUMENT)
-		for (a in ahdsrsR)
+		for (a in modesR_GAIN_AHDSRs)
 		{
 			a.setAttribute(a.Attack, value);
 		}
@@ -38,16 +38,16 @@ inline function onknbAttackControl(component, value)
 
 inline function onknbDecayControl(component, value)
 {
-	if (ahdsrsL.length == 0)
+	if (modesL_GAIN_AHDSRs.length == 0)
 		return;
 
-	for (a in ahdsrsL)
+	for (a in modesL_GAIN_AHDSRs)
 		{
 			a.setAttribute(a.Decay, value);
 		}
 		
 		if (STEREO_INSTRUMENT)
-			for (a in ahdsrsR)
+			for (a in modesR_GAIN_AHDSRs)
 			{
 				a.setAttribute(a.Decay, value);
 			}
@@ -55,16 +55,16 @@ inline function onknbDecayControl(component, value)
 
 inline function onknbSustainControl(component, value)
 {		
-	if (ahdsrsL.length == 0)
+	if (modesL_GAIN_AHDSRs.length == 0)
 		return;
 
-	for (a in ahdsrsL)
+	for (a in modesL_GAIN_AHDSRs)
 	{
 		a.setAttribute(a.Sustain, value);
 	}
 	
 	if (STEREO_INSTRUMENT)
-		for (a in ahdsrsR)
+		for (a in modesR_GAIN_AHDSRs)
 		{
 			a.setAttribute(a.Sustain, value);
 		}
@@ -72,16 +72,16 @@ inline function onknbSustainControl(component, value)
 
 inline function onknbReleaseControl(component, value)
 {
-	if (ahdsrsL.length == 0)
+	if (modesL_GAIN_AHDSRs.length == 0)
 		return;
 
-	for (a in ahdsrsL)
+	for (a in modesL_GAIN_AHDSRs)
 		{
 			a.setAttribute(a.Release, value);
 		}
 		
 	if (STEREO_INSTRUMENT)
-		for (a in ahdsrsR)
+		for (a in modesR_GAIN_AHDSRs)
 		{
 			a.setAttribute(a.Release, value);
 		}		
