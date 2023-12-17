@@ -210,7 +210,6 @@
                  parentComponent="pnlSpinnerContainer" borderSize="0.0" borderRadius="0.0"/>
     </Component>
   </Component>
-  <Component type="ScriptSlider" id="knbHarmonics" x="300" y="400" text="Harmonics"/>
   <Component type="ScriptSlider" id="knbAttack" x="100" y="200" stepSize="1.0"
              min="5" max="1000" text="Attack"/>
   <Component type="ScriptSlider" id="knbDecay" x="300" y="200" stepSize="1.0"
@@ -220,4 +219,6 @@
   <Component type="ScriptSlider" id="knbRelease" x="700" y="200" stepSize="1.0"
              min="5" max="15000" text="Release"/>
   <Component type="ScriptSlider" id="knbDampening" x="500" y="400" text="Dampening"/>
+  <Component type="ScriptSlider" id="knbFilter" x="100" y="400" middlePosition="1400.0"
+             stepSize="1.0" min="50" max="20000" text="Filter"/>
 </ContentProperties>

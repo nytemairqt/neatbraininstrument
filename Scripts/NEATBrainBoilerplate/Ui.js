@@ -13,6 +13,10 @@ inline function createKnob(id, x, y, text, saveInPreset, callback, minValue, max
 	
 	k.set("saveInPreset", saveInPreset);
 	k.setControlCallback(callback);
+
+	Content.setPropertiesFromJSON(id, {
+          parentComponent: "pnlBody"
+	});
 	
 	return k;
 }
@@ -89,18 +93,6 @@ inline function onknbReleaseControl(component, value)
 
 /* TONE */
 
-
-inline function onknbBrightnessControl(component, value)
-{
-	/*
-
-	SynthGroupLeft_Filter.setAttribute(SynthGroupLeft_Filter.Frequency, value);
-	if (STEREO_INSTRUMENT)
-		SynthGroupRight_Filter.setAttribute(SynthGroupRight_Filter.Frequency, value);
-	*/
-		
-}
-
 // Rhapsody Front End Controls
 
 inline function onknbMasterGainControl(component, value)
@@ -120,11 +112,6 @@ Content.getComponent("knbMasterPan").setControlCallback(onknbMasterPanControl);
 
 // NEATBrain Front End Controls
 
-inline function onknbHarmonicsControl(component, value)
-{
-	
-}
-
 inline function onknbDampeningControl(component, value)
 {
 	if (modesL_GAIN_AHDSRsDecayFalloffs.length == 0)
@@ -143,9 +130,20 @@ inline function onknbDampeningControl(component, value)
 	}		
 }
 
+inline function onknbFilterControl(component, value)
+{
+	if (modalFilters.length == 0)
+		return; 
+
+	for (filter in modalFilters)
+		filter.setAttribute(filter.Frequency, value);
+}
+
 /* Instantiate Sliders */
 
-const knbHarmonics = createKnob("knbHarmonics", 300, 400, "Harmonics", true, onknbHarmonicsControl, 0, 1, 0.01);
+const var pnlBody = Content.getComponent("pnlBody");
+
+const knbFilter = createKnob("knbFilter", 100, 400, "Filter", true, onknbFilterControl, 50, 20000, 1.0);
 const knbDampening = createKnob("knbDampening", 500, 400, "Dampening", true, onknbDampeningControl, 0.0, 1.0, 0.01);
 
 const knbAttack = createKnob("knbAttack", 100, 200, "Attack", true, onknbAttackControl, 5, 1000, 1.0);
@@ -153,8 +151,7 @@ const knbDecay = createKnob("knbDecay", 300, 200, "Decay", true, onknbDecayContr
 const knbSustain = createKnob("knbSustain", 500, 200, "Sustain", true, onknbSustainControl, -100, 0, 1.0);
 const knbRelease = createKnob("knbRelease", 700, 200, "Release", true, onknbReleaseControl, 5, 15000, 1.0);
 
-//const knbBrightness = createKnob("knbBrightness", 100, 400, "Brightness", true, onknbBrightnessControl, 500, 12000, 1.0);
-
 /* Setup Misc Defaults */
 
 knbSustain.set("middlePosition", -12.0);
+knbFilter.set("middlePosition", 1400);

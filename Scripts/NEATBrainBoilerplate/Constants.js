@@ -3,6 +3,7 @@
 const rhapsodyModules = [];
 const neatbrainModules = [];
 const samplers = [];
+const modalFilters = [];
 
 // Left
 

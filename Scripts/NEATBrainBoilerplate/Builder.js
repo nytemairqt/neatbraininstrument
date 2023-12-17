@@ -322,6 +322,7 @@ function GET_MODAL_SYNTH_REFERENCES(channel)
 	if (channel == "Left")
 	{
 		samplers.push(Synth.getChildSynth("samplerResidueL"));
+		modalFilters.push(Synth.getEffect("Group_L_Filter"));
 		for (i=0; i<NUM_MODES; i++)
 		{
 			modesL.push(Synth.getChildSynth("Mode_L_"+ i));	
@@ -342,6 +343,7 @@ function GET_MODAL_SYNTH_REFERENCES(channel)
 	else
 	{
 		samplers.push(Synth.getChildSynth("samplerResidueR"));
+		modalFilters.push(Synth.getEffect("Group_R_Filter"));
 		for (i=0; i<NUM_MODES; i++)
 		{
 			modesR.push(Synth.getChildSynth("Mode_R_"+ i));	

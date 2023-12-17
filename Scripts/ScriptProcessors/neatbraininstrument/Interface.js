@@ -47,7 +47,7 @@ const MODE_HARMONIC_VELOCITY = .07;
 
 const MODE_GAIN_GROUP = Engine.getGainFactorForDecibels(-3);
 const MODE_GAIN_BASE = -24;
-reg MODE_GAIN_COEFFICIENT = 1.9; // connect to slider, larger value = quieter harmonics
+const MODE_GAIN_COEFFICIENT = 1.6; // larger value = quieter harmonics DEFINITELY don't connect to a slider
 reg MODE_DECAY_COEFFICIENT = .03; // connect to slider, larger value = faster harmonic falloff
 
 const MODE_ATTACK_RANDOM = .1; 
