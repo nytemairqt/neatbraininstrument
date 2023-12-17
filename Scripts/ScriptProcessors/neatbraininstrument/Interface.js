@@ -15,6 +15,7 @@ include("RhapsodyBoilerplate/includes/Spinner.js");
 - Call instruments "Memories"
 - add frontend controls for overtones
 - add frontend controls for Samplers
+- connect LFOs to inter-modal pitch? increase their intensity over the sustain lifetime?
 */
 
 /* NEATBrain External Files */
@@ -58,6 +59,8 @@ const MODE_PITCH_DECAY = 2000;
 const MODE_PITCH_SUSTAIN = -100;
 const MODE_PITCH_RELEASE = 200;
 const MODE_PITCH_ATTACK_VELOCITY = .2;
+const MODE_PITCH_LFO_FREQUENCY = 0.5;
+const MODE_PITCH_LFO_INTENSITY = .15;
 
 /* INSTRUMENT DATA */
 

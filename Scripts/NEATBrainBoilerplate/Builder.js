@@ -20,7 +20,6 @@ const BASE_MODULES = {
 		undefined]
 };
 
-
 inline function CLEAR_MODULE_TREE(clearAllModules)
 {
 	if (clearAllModules)
@@ -125,11 +124,12 @@ inline function REBUILD_MODES(numModes, channel)
 		local synth_GAIN_AHDSRDecayRandom = builder.create(builder.Modulators.Random, name + "_" + i + "_GAIN_AHDSRDecayRandom", synth_GAIN_AHDSR, 2); 
 		local synth_GAIN_AHDSRDecayFalloff = builder.create(builder.Modulators.Constant, name + "_" + i + "_GAIN_AHDSRDecayFalloff", synth_GAIN_AHDSR, 2);
 		local synth_GAIN_Velocity = builder.create(builder.Modulators.Velocity, name + "_" + i + "_GAIN_Velocity", synth, builder.ChainIndexes.Gain);
+		local synth_PITCH_PitchWheel = builder.create(builder.Modulators.PitchWheel, name + "_" + i + "_PITCH_PitchWheel", synth, builder.ChainIndexes.Pitch);				
 		local synth_PITCH_Constant = builder.create(builder.Modulators.Constant, name + "_" + i + "_PITCH_Constant", synth, builder.ChainIndexes.Pitch);
 		local synth_PITCH_Drift = builder.create(builder.Modulators.AHDSR, name + "_" + i + "_PITCH_Drift", synth, builder.ChainIndexes.Pitch);
-		local synth_PITCH_Random = builder.create(builder.Modulators.Random, name + "_" + i + "_PITCH_Random", synth, builder.ChainIndexes.Pitch);
 		local synth_PITCH_DriftVelocity = builder.create(builder.Modulators.Velocity, name + "_" + i + "_PITCH_DriftVelocity", synth_PITCH_Drift, 1); // attack level		
-		local synth_PITCH_PitchWheel = builder.create(builder.Modulators.PitchWheel, name+"_" +i + "_PITCH_PitchWheel", synth, builder.ChainIndexes.Pitch);				
+		local synth_PITCH_LFO = builder.create(builder.Modulators.LFO, name + "_" + i + "_PITCH_LFO", synth, builder.ChainIndexes.Pitch);
+		local synth_PITCH_Random = builder.create(builder.Modulators.Random, name + "_" + i + "_PITCH_Random", synth, builder.ChainIndexes.Pitch);				
 				
 		/* Instantiate Values */			
 
@@ -192,6 +192,12 @@ inline function REBUILD_MODES(numModes, channel)
 		local synth_PITCH_DriftVelocityref = builder.get(synth_PITCH_DriftVelocity, builder.InterfaceTypes.Modulator);
 		synth_PITCH_DriftVelocityref.setIntensity(MODE_PITCH_ATTACK_VELOCITY);		
 
+		// Pitch LFO 
+		local synth_PITCH_LFOref = builder.get(synth_PITCH_LFO, builder.InterfaceTypes.Modulator);
+		synth_PITCH_LFOref.setAttribute(synth_PITCH_LFOref.Frequency, MODE_PITCH_LFO_FREQUENCY);
+		synth_PITCH_LFOref.setAttribute(synth_PITCH_LFOref.PhaseOffset, Math.random());
+		synth_PITCH_LFOref.setIntensity(MODE_PITCH_LFO_INTENSITY);
+
 		// Pitch Random
 		local synth_PITCH_Randomref = builder.get(synth_PITCH_Random, builder.InterfaceTypes.Modulator);
 		synth_PITCH_Randomref.setIntensity(MODE_INDIVIDUAL_RANDOM);
@@ -240,6 +246,7 @@ inline function UPDATE_MODE_VALUES(channel)
 
 		// GAIN
 
+		// AHDSR
 		local synth_GAIN_AHDSRref = Synth.getModulator(name + "_" + i + "_GAIN_AHDSR");
 		local synth_GAIN_AHDSRAttackRandomref = Synth.getModulator(name + "_" + i + "_GAIN_AHDSRAttackRandom");
 		local synth_GAIN_AHDSRDecayRandomref = Synth.getModulator(name + "_" + i + "_GAIN_AHDSRDecayRandom");
@@ -250,17 +257,20 @@ inline function UPDATE_MODE_VALUES(channel)
 		synth_GAIN_AHDSRref.setAttribute(synth_GAIN_AHDSRref.Sustain, MODE_SUSTAIN);
 		synth_GAIN_AHDSRref.setAttribute(synth_GAIN_AHDSRref.Release, MODE_RELEASE);
 
+		// AHDSR Random
 		synth_GAIN_AHDSRAttackRandomref.setIntensity(MODE_ADHSR_RANDOM);
 		synth_GAIN_AHDSRDecayRandomref.setIntensity(MODE_ADHSR_RANDOM);
-		//synth_GAIN_AHDSRDecayFalloffref.setIntensity(1.0 - (MODE_DECAY_COEFFICIENT * i));
 
+		// Velocity
 		local synth_GAIN_Velocityref = Synth.getModulator(name + "_" + i + "_GAIN_Velocity");
 		synth_GAIN_Velocityref.setIntensity(MODE_HARMONIC_VELOCITY * i);
 
 		// PITCH
 
+		// Constant
 		local synth_PITCH_Constantref = Synth.getModulator(name + "_" + i + "_PITCH_Constant");
 
+		// Drift
 		local synth_PITCH_Driftref = Synth.getModulator(name + "_" + i + "_PITCH_Drift");
 		synth_PITCH_Driftref.setIntensity(MODE_PITCH_DRIFT);
 		synth_PITCH_Driftref.setAttribute(synth_PITCH_Driftref.Attack, MODE_PITCH_ATTACK);
@@ -268,9 +278,17 @@ inline function UPDATE_MODE_VALUES(channel)
 		synth_PITCH_Driftref.setAttribute(synth_PITCH_Driftref.Sustain, MODE_PITCH_SUSTAIN);
 		synth_PITCH_Driftref.setAttribute(synth_PITCH_Driftref.Release, MODE_PITCH_RELEASE);
 
+		// Drift Velocity
 		local synth_PITCH_DriftVelocityref = Synth.getModulator(name + "_" + i + "_PITCH_DriftVelocity");
 		synth_PITCH_DriftVelocityref.setIntensity(MODE_PITCH_ATTACK_VELOCITY);
 
+		// LFO
+		local synth_PITCH_LFOref = Synth.getModulator(name + "_" + i + "_PITCH_LFO");
+		synth_PITCH_LFOref.setAttribute(synth_PITCH_LFOref.Frequency, MODE_PITCH_LFO_FREQUENCY);
+		synth_PITCH_LFOref.setAttribute(synth_PITCH_LFOref.PhaseOffset, Math.random());
+		synth_PITCH_LFOref.setIntensity(MODE_PITCH_LFO_INTENSITY);
+
+		// Random
 		local synth_PITCH_Randomref = Synth.getModulator(name + "_" + i + "_PITCH_Random");
 		synth_PITCH_Randomref.setIntensity(MODE_INDIVIDUAL_RANDOM);			
 	}
@@ -315,7 +333,8 @@ function GET_MODAL_SYNTH_REFERENCES(channel)
 
 			modesL_PITCH_Constants.push(Synth.getModulator("Mode_L_" + i + "_PITCH_Constant"));
 			modesL_PITCH_Drifts.push(Synth.getModulator("Mode_L_" + i + "_PITCH_Drift"));
-			modesL_PITCH_DriftsVelocities.push(Synth.getModulator("Mode_L_" + i + "_PITCH_DriftVelocity"));
+			modesL_PITCH_DriftsVelocities.push(Synth.getModulator("Mode_L_" + i + "_PITCH_DriftVelocity"));			
+			modesL_PITCH_LFOs.push(Synth.getModulator("Mode_L_" + i + "_PITCH_LFO"));
 			modesL_PITCH_Randoms.push(Synth.getModulator("Mode_L_" + i + "_PITCH_Random"));
 			modesL_PITCH_PitchWheels.push(Synth.getModulator("Mode_L_" + i + "_PITCH_PitchWheel"));
 		}	
@@ -335,8 +354,10 @@ function GET_MODAL_SYNTH_REFERENCES(channel)
 			modesR_PITCH_Constants.push(Synth.getModulator("Mode_R_" + i + "_PITCH_Constant"));
 			modesR_PITCH_Drifts.push(Synth.getModulator("Mode_R_" + i + "_PITCH_Drift"));
 			modesR_PITCH_DriftsVelocities.push(Synth.getModulator("Mode_R_" + i + "_PITCH_DriftVelocity"));
+			modesR_PITCH_LFOs.push(Synth.getModulator("Mode_R_" + i + "_PITCH_LFO"));
 			modesR_PITCH_Randoms.push(Synth.getModulator("Mode_R_" + i + "_PITCH_Random"));
 			modesR_PITCH_PitchWheels.push(Synth.getModulator("Mode_R_" + i + "_PITCH_PitchWheel"));
+
 		}
 	}	
 }

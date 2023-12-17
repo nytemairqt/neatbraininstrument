@@ -122,8 +122,7 @@ Content.getComponent("knbMasterPan").setControlCallback(onknbMasterPanControl);
 
 inline function onknbHarmonicsControl(component, value)
 {
-	if (isDefined(neatbrainModules[0]))
-		neatbrainModules[0].setAttribute(neatbrainModules.harmonics, value);
+	
 }
 
 inline function onknbDampeningControl(component, value)
@@ -132,28 +131,16 @@ inline function onknbDampeningControl(component, value)
 		return;
 
 	/* Iterate through the Constants and REDUCE their intensity incrementally based on the strengthFactor */
+	/* I promise its working lmao (combination of Lowpass filter & Harmonic Ratios make it hard to tell) */
 
 	local strengthFactor = 0.05;
-	//MODE_DECAY_COEFFICIENT = 1 - (value * strengthFactor); 
-
-	//MODE_DECAY_COEFFICIENT = 1.0 - ((strengthFactor * value) * i);
-
 	for (i=0; i<modesL_GAIN_AHDSRsDecayFalloffs.length; i++)
 	{		
 		MODE_DECAY_COEFFICIENT = 1.0 - ((strengthFactor * value) * i);
 		modesL_GAIN_AHDSRsDecayFalloffs[i].setIntensity(1-MODE_DECAY_COEFFICIENT);
 		if (STEREO_INSTRUMENT)
 			modesR_GAIN_AHDSRsDecayFalloffs[i].setIntensity(1-MODE_DECAY_COEFFICIENT);
-	}
-		
-		/*
-	if (STEREO_INSTRUMENT)
-		for (i=0; i<modesR_GAIN_AHDSRsDecayFalloffs.length; i++)
-		{
-			
-			//modesR_GAIN_AHDSRsDecayFalloffs[i].setIntensity(1.0 - (MODE_DECAY_COEFFICIENT * i));
-		}
-		*/
+	}		
 }
 
 /* Instantiate Sliders */

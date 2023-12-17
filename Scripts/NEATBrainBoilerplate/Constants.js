@@ -19,6 +19,7 @@ const modesL_PITCH_DriftsVelocities = [];
 const modesL_PITCH_Randoms = [];
 const modesL_PITCH_PitchWheels = [];
 const modesL_PITCH_OctaveConstants = [];
+const modesL_PITCH_LFOs = [];
 
 // Right
 
@@ -35,3 +36,4 @@ const modesR_PITCH_DriftsVelocities = [];
 const modesR_PITCH_Randoms = [];
 const modesR_PITCH_PitchWheels = [];
 const modesR_PITCH_OctaveConstants = [];
+const modesR_PITCH_LFOs = [];
