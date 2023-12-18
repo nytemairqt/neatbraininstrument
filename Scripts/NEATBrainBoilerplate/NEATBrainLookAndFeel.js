@@ -1,5 +1,10 @@
 const var LAFSliderNEATBrain = Content.createLocalLookAndFeel();
 
+const var pnlBody = Content.getComponent("pnlBody");
+
+const pnlBodyColour = 0xff2f2f34;
+
+
 inline function reduced(obj, amount)
 {
     return [amount, amount, obj.area[2] - 2*amount, obj.area[3] - 2* amount];
@@ -54,4 +59,15 @@ LAFSliderNEATBrain.registerFunction("drawRotarySlider", function(g, obj)
 
     g.setColour(Colours.lightgrey);    
     g.drawLine(obj.area[2] * .65, obj.area[2] * .83, obj.area[3] * .65, obj.area[3] * .83, 3);     
+});
+
+pnlBody.setPaintRoutine(function(g)
+{
+	g.fillAll(pnlBodyColour);
+	g.setColour(Colours.withAlpha(0xFFB1C1C1, .3));
+	g.drawLine(30, 30, 30, 20, 1.5);
+	g.drawLine(30, this.getWidth() / 2, 20, 20, 1.5);
+	g.drawLine(this.getWidth() / 2, this.getWidth() / 2, 20, this.getHeight() - 60, 1.5);
+	g.drawLine(this.getWidth() / 2, this.getWidth() - 30, this.getHeight() - 60, this.getHeight() - 60, 1.5);
+	g.drawLine(this.getWidth() - 30, this.getWidth() - 30, this.getHeight() - 60, this.getHeight() - 70, 1.5);
 });

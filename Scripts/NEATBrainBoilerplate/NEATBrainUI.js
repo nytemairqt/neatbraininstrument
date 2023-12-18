@@ -176,10 +176,10 @@ inline function onknbFilterControl(component, value)
 const knbFilter = createKnob("knbFilter", 100, 400, 64, 64, "Filter", true, onknbFilterControl, 300, 6000, 1.0, 1200);
 const knbDampening = createKnob("knbDampening", 500, 400, 64, 64, "Dampening", true, onknbDampeningControl, 0.0, 1.0, 0.01, 0.0);
 
-const knbAttack = createKnob("knbAttack", 70, 120, 64, 64, "Attack", true, onknbAttackControl, 5, 1000, 1.0, 5);
-const knbDecay = createKnob("knbDecay", 180, 120, 64, 64, "Decay", true, onknbDecayControl, 500, 20000, 1.0, 15000);
-const knbSustain = createKnob("knbSustain", 290, 120, 64, 64, "Sustain", true, onknbSustainControl, -100, 0, 1.0, -100);
-const knbRelease = createKnob("knbRelease", 400, 120, 64, 64, "Release", true, onknbReleaseControl, 5, 15000, 1.0, 200);
+const knbAttack = createKnob("knbAttack", 565, 120, 64, 64, "Attack", true, onknbAttackControl, 5, 1000, 1.0, 5);
+const knbDecay = createKnob("knbDecay", 665, 120, 64, 64, "Decay", true, onknbDecayControl, 500, 20000, 1.0, 15000);
+const knbSustain = createKnob("knbSustain", 765, 120, 64, 64, "Sustain", true, onknbSustainControl, -100, 0, 1.0, -100);
+const knbRelease = createKnob("knbRelease", 865, 120, 64, 64, "Release", true, onknbReleaseControl, 5, 15000, 1.0, 200);
 
 /* Setup Misc Defaults */
 
@@ -188,7 +188,12 @@ knbFilter.set("middlePosition", 1400);
 
 /* Generic UI Elements */
 
-const lblAttack = createTextPanel("lblAttack", 40, 180, 128, 32, 16, "Attack");
-const lblDecay = createTextPanel("lblDecay", 148, 180, 128, 32, 16, "Decay");
-const lblSustain = createTextPanel("lblSustain", 259, 180, 128, 32, 16, "Sustain");
-const lblRelease = createTextPanel("lblRelease", 370, 180, 128, 32, 16, "Release");
+
+//id, x, y, width, height, fontSize, text
+const lblResidue = createTextPanel("lblResidue", 20, 10, 128, 64, 24, "Residue_");
+const lblModes = createTextPanel("lblModes", 480, 10, 128, 64, 24, "Modes_");
+
+const lblAttack = createTextPanel("lblAttack", 535, 180, 128, 32, 16, "Attack");
+const lblDecay = createTextPanel("lblDecay", 632, 180, 128, 32, 16, "Decay");
+const lblSustain = createTextPanel("lblSustain", 733, 180, 128, 32, 16, "Sustain");
+const lblRelease = createTextPanel("lblRelease", 836, 180, 128, 32, 16, "Release");

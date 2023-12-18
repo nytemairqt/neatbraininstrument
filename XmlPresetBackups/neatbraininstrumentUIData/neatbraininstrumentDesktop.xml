@@ -49,26 +49,30 @@
                  width="64" height="64" parentComponent="pnlBody"/>
       <Component type="ScriptSlider" id="knbDampening" x="500" y="400" text="Dampening"
                  width="64" height="64" parentComponent="pnlBody"/>
-      <Component type="ScriptSlider" id="knbAttack" x="70" y="120" stepSize="1.0"
+      <Component type="ScriptSlider" id="knbAttack" x="565" y="120" stepSize="1.0"
                  min="5" max="1000" text="Attack" defaultValue="5.0" width="64"
                  height="64" parentComponent="pnlBody"/>
-      <Component type="ScriptSlider" id="knbDecay" x="180" y="120" stepSize="1.0"
+      <Component type="ScriptSlider" id="knbDecay" x="665" y="120" stepSize="1.0"
                  min="500" max="20000" text="Decay" defaultValue="15000.0" width="64"
                  height="64" parentComponent="pnlBody"/>
-      <Component type="ScriptSlider" id="knbSustain" x="290" y="120" middlePosition="-12.0"
+      <Component type="ScriptSlider" id="knbSustain" x="765" y="120" middlePosition="-12.0"
                  stepSize="1.0" min="-100" max="0" text="Sustain" defaultValue="-100.0"
                  width="64" height="64" parentComponent="pnlBody"/>
-      <Component type="ScriptSlider" id="knbRelease" x="400" y="120" stepSize="1.0"
+      <Component type="ScriptSlider" id="knbRelease" x="865" y="120" stepSize="1.0"
                  min="5" max="15000" text="Release" defaultValue="200.0" width="64"
                  height="64" parentComponent="pnlBody"/>
-      <Component type="ScriptPanel" id="lblAttack" x="40" y="180" width="128"
+      <Component type="ScriptPanel" id="lblAttack" x="535" y="180" width="128"
                  height="32" text="Attack" parentComponent="pnlBody"/>
-      <Component type="ScriptPanel" id="lblDecay" x="148" y="180" width="128"
+      <Component type="ScriptPanel" id="lblDecay" x="632" y="180" width="128"
                  height="32" text="Decay" parentComponent="pnlBody"/>
-      <Component type="ScriptPanel" id="lblSustain" x="259" y="180" width="128"
+      <Component type="ScriptPanel" id="lblSustain" x="733" y="180" width="128"
                  height="32" text="Sustain" parentComponent="pnlBody"/>
-      <Component type="ScriptPanel" id="lblRelease" x="370" y="180" width="128"
+      <Component type="ScriptPanel" id="lblRelease" x="836" y="180" width="128"
                  height="32" text="Release" parentComponent="pnlBody"/>
+      <Component type="ScriptPanel" id="lblResidue" x="20" y="10" width="128"
+                 height="64" text="Residue_" parentComponent="pnlBody"/>
+      <Component type="ScriptPanel" id="lblModes" x="480" y="10" width="128" height="64"
+                 text="Modes_" parentComponent="pnlBody"/>
     </Component>
     <Component type="ScriptPanel" id="pnlStatusBar" x="5.0" y="585.0" text=""
                width="990.0" height="39.0" bgColour="0" itemColour="4281282356"
