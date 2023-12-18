@@ -29,18 +29,25 @@ LAFSliderNEATBrain.registerFunction("drawRotarySlider", function(g, obj)
 
     //unfilled ring
     sliderRing3.addArc([0.0, 0.0, 1.0, 1.0], start, Math.max(start, start + Math.PI * 1.5 * obj.valueNormalized));
-    g.setColour(obj.hover ? Colours.darkgrey : 0xFF262626);
+    g.setColour(obj.hover ? 0xFF292929 : 0xFF262626);
     g.drawPath(sliderRing2, reduced(obj, ringWidth), ringWidth * 2);
 
     //filled ring
-    g.setColour(obj.hover? Colours.white : Colours.lightblue);
+    //g.setColour(obj.hover? Colours.white : Colours.lightblue);
+    //g.setColour(Colours.lightblue);
+    //g.setColour(0xFF99D4D4); //matte light blue
+    //g.setColour(0xFFD0E6E6); //offwhite
+    //g.setColour(0xFFB1C1C1); // light grey
+    
+    g.setColour(obj.hover ? 0xFFD0E6E6 : 0xFFB1C1C1);
     g.drawPath(sliderRing3, reduced(obj, ringWidth), ringWidth * (1.6));
     
     g.rotate((1.0 - (obj.valueNormalized - 0.02)) * -1.5 * Math.PI, [obj.area[2] / 2, obj.area[3] / 2]);  
     
     //Center Ellipse
         
-    g.setColour(obj.hover ? 0xFF2C2C2C : 0xFF1C1C1C);
+    //g.setColour(obj.hover ? 0xFF2C2C2C : 0xFF1C1C1C);
+    g.setColour(0xFF1C1C1C);
     g.fillEllipse(reduced(obj, obj.area[2] * .86));
 
     //value line

@@ -15,6 +15,10 @@ include("RhapsodyBoilerplate/includes/Spinner.js");
 - Call instruments "Memories"
 - add frontend controls for overtones
 - add frontend controls for Samplers
+- fix sustain issue (some modes sustain forever)
+- pitch bend not working in DAW (additive or something?)
+- maybe add a filter to the sampler residue to cut off the hiss tail?
+
 */
 
 /* NEATBrain External Files */
@@ -26,7 +30,7 @@ include("NEATBRAINBoilerplate/Debug_DisableModules.js");
 
 /* CONSTRUCTOR */
 
-const MODULE_BUILD_MODE = 5; // 0=DoNothing, 1=ClearModules(Modes), 2=ClearModules(All) 3=RebuildBaseModules, 4=RebuildModes, 5=UpdateValues, 6=Release
+const MODULE_BUILD_MODE = 6; // 0=DoNothing, 1=ClearModules(Modes), 2=ClearModules(All) 3=RebuildBaseModules, 4=RebuildModes, 5=UpdateValues, 6=Release
 
 // Hyperparameters
 
@@ -34,8 +38,8 @@ reg pitchOffsetL = 0.00;
 reg pitchOffsetR = 0.00;
 
 const GROUP_FILTER_CUTOFF = 1200;
-const MODE_INDIVIDUAL_RANDOM = 0.1;
-const MODE_GROUP_RANDOM = 20;
+const MODE_INDIVIDUAL_RANDOM = 0.23;
+const MODE_GROUP_RANDOM = 40;
 
 const MODE_ATTACK = 30;
 const MODE_DECAY = 19999;
@@ -45,7 +49,7 @@ const MODE_ADHSR_RANDOM = .25;
 const MODE_HARMONIC_VELOCITY = .07;
 
 const MODE_GAIN_GROUP = Engine.getGainFactorForDecibels(-3);
-const MODE_GAIN_BASE = -24;
+const MODE_GAIN_BASE = -30;
 const MODE_GAIN_COEFFICIENT = 1.6; // larger value = quieter harmonics DEFINITELY don't connect to a slider
 reg MODE_DECAY_COEFFICIENT = .03; // connect to slider, larger value = faster harmonic falloff
 

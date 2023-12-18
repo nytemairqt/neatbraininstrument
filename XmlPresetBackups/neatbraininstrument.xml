@@ -10,10 +10,10 @@
           <ChildProcessors/>
           <Content>
             <Control type="ScriptButton" id="btnPresetBrowser" value="0"/>
-            <Control type="ScriptSlider" id="knbFilter" value="730.0"/>
+            <Control type="ScriptSlider" id="knbFilter" value="729.0"/>
             <Control type="ScriptSlider" id="knbDampening" value="0.0"/>
             <Control type="ScriptSlider" id="knbAttack" value="5.0"/>
-            <Control type="ScriptSlider" id="knbDecay" value="15000.0"/>
+            <Control type="ScriptSlider" id="knbDecay" value="20000.0"/>
             <Control type="ScriptSlider" id="knbSustain" value="-100.0"/>
             <Control type="ScriptSlider" id="knbRelease" value="200.0"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-6.0"/>
@@ -94,7 +94,7 @@
     <Processor Type="StreamingSampler" ID="samplerResidueL" Bypassed="0" Gain="1.0"
                Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
-               SamplerRepeatMode="3.0" RRGroupAmount="19.0" PitchTracking="0.0"
+               SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="0.0"
                OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0" Reversed="0.0"
                NumChannels="1" UseStaticMatrix="0.0" Group0Table="" Group1Table=""
                Group2Table="" Group3Table="" Group4Table="" Group5Table="" Group6Table=""
@@ -272,7 +272,7 @@
     <Processor Type="StreamingSampler" ID="samplerResidueR" Bypassed="0" Gain="1.0"
                Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
-               SamplerRepeatMode="3.0" RRGroupAmount="19.0" PitchTracking="0.0"
+               SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="0.0"
                OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0" Reversed="0.0"
                NumChannels="1" UseStaticMatrix="0.0" Group0Table="" Group1Table=""
                Group2Table="" Group3Table="" Group4Table="" Group5Table="" Group6Table=""
@@ -462,7 +462,7 @@
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="Group_L_Filter" Bypassed="0" Gain="0.0"
-                       Frequency="730.0" Q="1.0" Mode="6.0" Quality="1.203982848e9"
+                       Frequency="729.0" Q="1.0" Mode="6.0" Quality="1.203982848e9"
                        BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
@@ -483,7 +483,7 @@
             </Processor>
           </ChildProcessors>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_0" Bypassed="0" Gain="0.06309573352336884"
+        <Processor Type="SineSynth" ID="Mode_L_0" Bypassed="0" Gain="0.03162277489900589"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="1.0"
                    FineFreqRatio="0.0" SaturationAmount="0.0">
@@ -495,7 +495,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_0_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -576,7 +576,7 @@
                 <Processor Type="LFO" ID="Mode_L_0_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.3502132892608643" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.6660718321800232" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -587,7 +587,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_0_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_0_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -599,7 +599,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_1" Bypassed="0" Gain="0.05248074606060982"
+        <Processor Type="SineSynth" ID="Mode_L_1" Bypassed="0" Gain="0.02630268037319183"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="1.0"
                    FineFreqRatio="0.984811544418335" SaturationAmount="0.0">
@@ -611,7 +611,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_1_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -692,7 +692,7 @@
                 <Processor Type="LFO" ID="Mode_L_1_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.6018070578575134" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.6362935900688171" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -703,7 +703,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_1_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_1_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -715,7 +715,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_2" Bypassed="0" Gain="0.04365158453583717"
+        <Processor Type="SineSynth" ID="Mode_L_2" Bypassed="0" Gain="0.02187761664390564"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="2.0"
                    FineFreqRatio="0.9893435835838318" SaturationAmount="0.0">
@@ -727,7 +727,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_2_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -808,7 +808,7 @@
                 <Processor Type="LFO" ID="Mode_L_2_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.5263619422912598" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.605068564414978" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -819,7 +819,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_2_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_2_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -831,7 +831,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_3" Bypassed="0" Gain="0.03630780428647995"
+        <Processor Type="SineSynth" ID="Mode_L_3" Bypassed="0" Gain="0.01819700933992863"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="3.0"
                    FineFreqRatio="0.9876216053962708" SaturationAmount="0.0">
@@ -843,7 +843,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_3_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -924,7 +924,7 @@
                 <Processor Type="LFO" ID="Mode_L_3_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.4428560733795166" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.9846270084381104" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -935,7 +935,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_3_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_3_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -947,7 +947,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_4" Bypassed="0" Gain="0.03019951656460762"
+        <Processor Type="SineSynth" ID="Mode_L_4" Bypassed="0" Gain="0.01513561233878136"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="4.0"
                    FineFreqRatio="0.9943065643310547" SaturationAmount="0.0">
@@ -959,7 +959,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_4_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -1040,7 +1040,7 @@
                 <Processor Type="LFO" ID="Mode_L_4_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.4158139526844025" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.4062314629554749" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -1051,7 +1051,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_4_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_4_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -1063,7 +1063,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_5" Bypassed="0" Gain="0.0251188650727272"
+        <Processor Type="SineSynth" ID="Mode_L_5" Bypassed="0" Gain="0.01258925441652536"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="5.0"
                    FineFreqRatio="0.996539294719696" SaturationAmount="0.0">
@@ -1075,7 +1075,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_5_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -1156,7 +1156,7 @@
                 <Processor Type="LFO" ID="Mode_L_5_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.8297591209411621" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.5512396693229675" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -1167,7 +1167,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_5_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_5_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -1179,7 +1179,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_6" Bypassed="0" Gain="0.02089296095073223"
+        <Processor Type="SineSynth" ID="Mode_L_6" Bypassed="0" Gain="0.01047128532081842"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="6.0"
                    FineFreqRatio="0.9930700063705444" SaturationAmount="0.0">
@@ -1191,7 +1191,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_6_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -1272,7 +1272,7 @@
                 <Processor Type="LFO" ID="Mode_L_6_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.5871338248252869" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.8596569299697876" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -1283,7 +1283,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_6_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_6_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -1295,7 +1295,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_7" Bypassed="0" Gain="0.01737800799310207"
+        <Processor Type="SineSynth" ID="Mode_L_7" Bypassed="0" Gain="0.008709635585546494"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="8.0"
                    FineFreqRatio="0.0311583336442709" SaturationAmount="0.0">
@@ -1307,7 +1307,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_7_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -1388,7 +1388,7 @@
                 <Processor Type="LFO" ID="Mode_L_7_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.4252997040748596" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.3292506635189056" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -1399,7 +1399,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_7_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_7_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -1411,7 +1411,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_8" Bypassed="0" Gain="0.01445439737290144"
+        <Processor Type="SineSynth" ID="Mode_L_8" Bypassed="0" Gain="0.007244359701871872"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="9.0"
                    FineFreqRatio="0.06019888818264008" SaturationAmount="0.0">
@@ -1423,7 +1423,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_8_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -1504,7 +1504,7 @@
                 <Processor Type="LFO" ID="Mode_L_8_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.5298362374305725" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.7355159521102905" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -1515,7 +1515,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_8_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_8_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -1527,7 +1527,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_9" Bypassed="0" Gain="0.01202264428138733"
+        <Processor Type="SineSynth" ID="Mode_L_9" Bypassed="0" Gain="0.006025596056133509"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="10.0"
                    FineFreqRatio="0.12726229429245" SaturationAmount="0.0">
@@ -1539,7 +1539,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_9_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -1620,7 +1620,7 @@
                 <Processor Type="LFO" ID="Mode_L_9_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.2413359433412552" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.5527978539466858" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -1631,7 +1631,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_9_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_9_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -1643,7 +1643,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_10" Bypassed="0" Gain="0.009999999776482582"
+        <Processor Type="SineSynth" ID="Mode_L_10" Bypassed="0" Gain="0.005011872388422489"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="11.0"
                    FineFreqRatio="0.167372077703476" SaturationAmount="0.0">
@@ -1655,7 +1655,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_10_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -1736,7 +1736,7 @@
                 <Processor Type="LFO" ID="Mode_L_10_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.4485339224338531" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.9335362911224365" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -1747,7 +1747,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_10_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_10_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -1759,7 +1759,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_11" Bypassed="0" Gain="0.008317637257277966"
+        <Processor Type="SineSynth" ID="Mode_L_11" Bypassed="0" Gain="0.004168693907558918"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="12.0"
                    FineFreqRatio="0.2177147716283798" SaturationAmount="0.0">
@@ -1771,7 +1771,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_11_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -1852,7 +1852,7 @@
                 <Processor Type="LFO" ID="Mode_L_11_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.8491093516349792" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.6444141864776611" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -1863,7 +1863,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_11_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_11_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -1875,7 +1875,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_12" Bypassed="0" Gain="0.006918309722095728"
+        <Processor Type="SineSynth" ID="Mode_L_12" Bypassed="0" Gain="0.003467368427664042"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="13.0"
                    FineFreqRatio="0.2852981686592102" SaturationAmount="0.0">
@@ -1887,7 +1887,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_12_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -1968,7 +1968,7 @@
                 <Processor Type="LFO" ID="Mode_L_12_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.05219010263681412" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.5331710577011108" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -1979,7 +1979,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_12_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_12_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -1991,7 +1991,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_13" Bypassed="0" Gain="0.005754399579018354"
+        <Processor Type="SineSynth" ID="Mode_L_13" Bypassed="0" Gain="0.002884031506255269"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="14.0"
                    FineFreqRatio="0.3468074202537537" SaturationAmount="0.0">
@@ -2003,7 +2003,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_13_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -2084,7 +2084,7 @@
                 <Processor Type="LFO" ID="Mode_L_13_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.7975796461105347" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.260805070400238" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -2095,7 +2095,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_13_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_13_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -2107,7 +2107,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_14" Bypassed="0" Gain="0.00478630093857646"
+        <Processor Type="SineSynth" ID="Mode_L_14" Bypassed="0" Gain="0.002398832933977246"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="15.0"
                    FineFreqRatio="0.4508724212646484" SaturationAmount="0.0">
@@ -2119,7 +2119,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_14_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -2200,7 +2200,7 @@
                 <Processor Type="LFO" ID="Mode_L_14_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.7525439262390137" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.9987673163414001" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -2211,7 +2211,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_14_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_14_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -2223,7 +2223,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_15" Bypassed="0" Gain="0.003981071524322033"
+        <Processor Type="SineSynth" ID="Mode_L_15" Bypassed="0" Gain="0.00199526222422719"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="16.0"
                    FineFreqRatio="0.5347220301628113" SaturationAmount="0.0">
@@ -2235,7 +2235,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_15_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -2316,7 +2316,7 @@
                 <Processor Type="LFO" ID="Mode_L_15_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.2212293446063995" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.8282521963119507" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -2327,7 +2327,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_15_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_15_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -2339,7 +2339,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_16" Bypassed="0" Gain="0.003311311127617955"
+        <Processor Type="SineSynth" ID="Mode_L_16" Bypassed="0" Gain="0.001659586909227073"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="17.0"
                    FineFreqRatio="0.6705940365791321" SaturationAmount="0.0">
@@ -2351,7 +2351,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_16_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -2432,7 +2432,7 @@
                 <Processor Type="LFO" ID="Mode_L_16_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.7899755835533142" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.9060092568397522" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -2443,7 +2443,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_16_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_16_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -2455,7 +2455,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_17" Bypassed="0" Gain="0.00275422865524888"
+        <Processor Type="SineSynth" ID="Mode_L_17" Bypassed="0" Gain="0.001380384317599237"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="18.0"
                    FineFreqRatio="0.7676282525062561" SaturationAmount="0.0">
@@ -2467,7 +2467,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_17_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -2548,7 +2548,7 @@
                 <Processor Type="LFO" ID="Mode_L_17_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.166751354932785" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.8807251453399658" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -2559,7 +2559,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_17_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_17_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -2571,7 +2571,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_18" Bypassed="0" Gain="0.002290867734700441"
+        <Processor Type="SineSynth" ID="Mode_L_18" Bypassed="0" Gain="0.001148153678514063"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="19.0"
                    FineFreqRatio="0.9433839917182922" SaturationAmount="0.0">
@@ -2583,7 +2583,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_18_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -2664,7 +2664,7 @@
                 <Processor Type="LFO" ID="Mode_L_18_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.3393411040306091" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.5273733139038086" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -2675,7 +2675,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_18_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_18_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -2687,7 +2687,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_19" Bypassed="0" Gain="0.001905460725538433"
+        <Processor Type="SineSynth" ID="Mode_L_19" Bypassed="0" Gain="0.0009549926035106182"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="21.0"
                    FineFreqRatio="0.3033212721347809" SaturationAmount="0.0">
@@ -2699,7 +2699,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_19_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -2780,7 +2780,7 @@
                 <Processor Type="LFO" ID="Mode_L_19_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.4708253741264343" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.9809988737106323" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -2791,7 +2791,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_19_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_19_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -2803,7 +2803,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_20" Bypassed="0" Gain="0.001584893208928406"
+        <Processor Type="SineSynth" ID="Mode_L_20" Bypassed="0" Gain="0.0007943282253108919"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="22.0"
                    FineFreqRatio="0.3927563428878784" SaturationAmount="0.0">
@@ -2815,7 +2815,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_20_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -2896,7 +2896,7 @@
                 <Processor Type="LFO" ID="Mode_L_20_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.05271307379007339" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.9047002196311951" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -2907,7 +2907,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_20_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_20_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -2919,7 +2919,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_21" Bypassed="0" Gain="0.001318256719969213"
+        <Processor Type="SineSynth" ID="Mode_L_21" Bypassed="0" Gain="0.0006606934475712478"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="24.0"
                    FineFreqRatio="0.7445579767227173" SaturationAmount="0.0">
@@ -2931,7 +2931,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_21_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -3012,7 +3012,7 @@
                 <Processor Type="LFO" ID="Mode_L_21_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.6895906925201416" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.6059743762016296" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -3023,7 +3023,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_21_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_21_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -3035,7 +3035,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_22" Bypassed="0" Gain="0.001096478197723627"
+        <Processor Type="SineSynth" ID="Mode_L_22" Bypassed="0" Gain="0.0005495408549904823"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="26.0"
                    FineFreqRatio="0.008119655773043633" SaturationAmount="0.0">
@@ -3047,7 +3047,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_22_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -3128,7 +3128,7 @@
                 <Processor Type="LFO" ID="Mode_L_22_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.582884669303894" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.9604409337043762" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -3139,7 +3139,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_22_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_22_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -3151,7 +3151,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_23" Bypassed="0" Gain="0.0009120108443312347"
+        <Processor Type="SineSynth" ID="Mode_L_23" Bypassed="0" Gain="0.0004570882010739297"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="27.0"
                    FineFreqRatio="0.197060689330101" SaturationAmount="0.0">
@@ -3163,7 +3163,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_23_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -3244,7 +3244,7 @@
                 <Processor Type="LFO" ID="Mode_L_23_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.3323236405849457" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.9918143749237061" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -3255,7 +3255,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_23_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_23_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -3267,7 +3267,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_24" Bypassed="0" Gain="0.0007585776038467884"
+        <Processor Type="SineSynth" ID="Mode_L_24" Bypassed="0" Gain="0.0003801893908530474"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="28.0"
                    FineFreqRatio="0.5302074551582336" SaturationAmount="0.0">
@@ -3279,7 +3279,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_24_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -3360,7 +3360,7 @@
                 <Processor Type="LFO" ID="Mode_L_24_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.3703228235244751" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.04382700473070145" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -3371,7 +3371,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_24_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_24_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -3383,7 +3383,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_25" Bypassed="0" Gain="0.000630957365501672"
+        <Processor Type="SineSynth" ID="Mode_L_25" Bypassed="0" Gain="0.0003162277571391314"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="29.0"
                    FineFreqRatio="0.7514432072639465" SaturationAmount="0.0">
@@ -3395,7 +3395,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_25_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -3476,7 +3476,7 @@
                 <Processor Type="LFO" ID="Mode_L_25_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.6914719939231873" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.3205164968967438" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -3487,7 +3487,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_25_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_25_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -3499,7 +3499,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_L_26" Bypassed="0" Gain="0.0005248074885457754"
+        <Processor Type="SineSynth" ID="Mode_L_26" Bypassed="0" Gain="0.0002630267990753055"
                    Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="31.0"
                    FineFreqRatio="0.1121397390961647" SaturationAmount="0.0">
@@ -3511,7 +3511,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_L_26_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -3592,7 +3592,7 @@
                 <Processor Type="LFO" ID="Mode_L_26_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.7961975336074829" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.00870463065803051" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -3603,7 +3603,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_L_26_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_L_26_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -3633,7 +3633,7 @@
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="Group_R_Filter" Bypassed="0" Gain="0.0"
-                       Frequency="730.0" Q="1.0" Mode="6.0" Quality="1.203982848e9"
+                       Frequency="729.0" Q="1.0" Mode="6.0" Quality="1.203982464e9"
                        BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
@@ -3654,7 +3654,7 @@
             </Processor>
           </ChildProcessors>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_0" Bypassed="0" Gain="0.06309573352336884"
+        <Processor Type="SineSynth" ID="Mode_R_0" Bypassed="0" Gain="0.03162277489900589"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="1.0"
                    FineFreqRatio="0.0" SaturationAmount="0.0">
@@ -3666,7 +3666,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_0_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -3747,7 +3747,7 @@
                 <Processor Type="LFO" ID="Mode_R_0_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.8351866602897644" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.06146509945392609" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -3758,7 +3758,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_0_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_0_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -3770,7 +3770,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_1" Bypassed="0" Gain="0.05248074606060982"
+        <Processor Type="SineSynth" ID="Mode_R_1" Bypassed="0" Gain="0.02630268037319183"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="1.0"
                    FineFreqRatio="0.9974208474159241" SaturationAmount="0.0">
@@ -3782,7 +3782,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_1_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -3863,7 +3863,7 @@
                 <Processor Type="LFO" ID="Mode_R_1_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.3763337731361389" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.06781801581382751" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -3874,7 +3874,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_1_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_1_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -3886,7 +3886,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_2" Bypassed="0" Gain="0.04365158453583717"
+        <Processor Type="SineSynth" ID="Mode_R_2" Bypassed="0" Gain="0.02187761664390564"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="2.0"
                    FineFreqRatio="0.9958981871604919" SaturationAmount="0.0">
@@ -3898,7 +3898,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_2_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -3979,7 +3979,7 @@
                 <Processor Type="LFO" ID="Mode_R_2_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.9243061542510986" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.8212044835090637" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -3990,7 +3990,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_2_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_2_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -4002,7 +4002,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_3" Bypassed="0" Gain="0.03630780428647995"
+        <Processor Type="SineSynth" ID="Mode_R_3" Bypassed="0" Gain="0.01819700933992863"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="3.0"
                    FineFreqRatio="0.9958681464195251" SaturationAmount="0.0">
@@ -4014,7 +4014,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_3_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -4095,7 +4095,7 @@
                 <Processor Type="LFO" ID="Mode_R_3_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.6369176506996155" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.3034804463386536" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -4106,7 +4106,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_3_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_3_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -4118,7 +4118,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_4" Bypassed="0" Gain="0.03019951656460762"
+        <Processor Type="SineSynth" ID="Mode_R_4" Bypassed="0" Gain="0.01513561233878136"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="4.0"
                    FineFreqRatio="0.9975107908248901" SaturationAmount="0.0">
@@ -4130,7 +4130,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_4_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -4211,7 +4211,7 @@
                 <Processor Type="LFO" ID="Mode_R_4_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.4062115252017975" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.5694398880004883" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -4222,7 +4222,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_4_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_4_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -4234,7 +4234,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_5" Bypassed="0" Gain="0.0251188650727272"
+        <Processor Type="SineSynth" ID="Mode_R_5" Bypassed="0" Gain="0.01258925441652536"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="5.0"
                    FineFreqRatio="0.9984394907951355" SaturationAmount="0.0">
@@ -4246,7 +4246,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_5_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -4327,7 +4327,7 @@
                 <Processor Type="LFO" ID="Mode_R_5_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.1330320537090302" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.2422067373991013" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -4338,7 +4338,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_5_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_5_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -4350,7 +4350,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_6" Bypassed="0" Gain="0.02089296095073223"
+        <Processor Type="SineSynth" ID="Mode_R_6" Bypassed="0" Gain="0.01047128532081842"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="7.0"
                    FineFreqRatio="0.006170176900923252" SaturationAmount="0.0">
@@ -4362,7 +4362,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_6_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -4443,7 +4443,7 @@
                 <Processor Type="LFO" ID="Mode_R_6_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.02871677279472351" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.9308249354362488" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -4454,7 +4454,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_6_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_6_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -4466,7 +4466,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_7" Bypassed="0" Gain="0.01737800799310207"
+        <Processor Type="SineSynth" ID="Mode_R_7" Bypassed="0" Gain="0.008709635585546494"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="8.0"
                    FineFreqRatio="0.01135117094963789" SaturationAmount="0.0">
@@ -4478,7 +4478,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_7_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -4559,7 +4559,7 @@
                 <Processor Type="LFO" ID="Mode_R_7_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.4062685072422028" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.6415694952011108" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -4570,7 +4570,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_7_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_7_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -4582,7 +4582,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_8" Bypassed="0" Gain="0.01445439737290144"
+        <Processor Type="SineSynth" ID="Mode_R_8" Bypassed="0" Gain="0.007244359701871872"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="9.0"
                    FineFreqRatio="0.02019678242504597" SaturationAmount="0.0">
@@ -4594,7 +4594,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_8_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -4675,7 +4675,7 @@
                 <Processor Type="LFO" ID="Mode_R_8_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.6827112436294556" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.3824580907821655" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -4686,7 +4686,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_8_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_8_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -4698,7 +4698,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_9" Bypassed="0" Gain="0.01202264428138733"
+        <Processor Type="SineSynth" ID="Mode_R_9" Bypassed="0" Gain="0.006025596056133509"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="10.0"
                    FineFreqRatio="0.03089567646384239" SaturationAmount="0.0">
@@ -4710,7 +4710,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_9_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -4791,7 +4791,7 @@
                 <Processor Type="LFO" ID="Mode_R_9_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.5705934762954712" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.9179391860961914" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -4802,7 +4802,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_9_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_9_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -4814,7 +4814,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_10" Bypassed="0" Gain="0.009999999776482582"
+        <Processor Type="SineSynth" ID="Mode_R_10" Bypassed="0" Gain="0.005011872388422489"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="11.0"
                    FineFreqRatio="0.05010977387428284" SaturationAmount="0.0">
@@ -4826,7 +4826,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_10_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -4907,7 +4907,7 @@
                 <Processor Type="LFO" ID="Mode_R_10_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.2047303318977356" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.3883536458015442" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -4918,7 +4918,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_10_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_10_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -4930,7 +4930,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_11" Bypassed="0" Gain="0.008317637257277966"
+        <Processor Type="SineSynth" ID="Mode_R_11" Bypassed="0" Gain="0.004168693907558918"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="12.0"
                    FineFreqRatio="0.0521647147834301" SaturationAmount="0.0">
@@ -4942,7 +4942,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_11_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -5023,7 +5023,7 @@
                 <Processor Type="LFO" ID="Mode_R_11_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.7593820095062256" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.9953978657722473" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -5034,7 +5034,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_11_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_11_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -5046,7 +5046,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_12" Bypassed="0" Gain="0.006918309722095728"
+        <Processor Type="SineSynth" ID="Mode_R_12" Bypassed="0" Gain="0.003467368427664042"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="13.0"
                    FineFreqRatio="0.05726391822099686" SaturationAmount="0.0">
@@ -5058,7 +5058,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_12_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -5139,7 +5139,7 @@
                 <Processor Type="LFO" ID="Mode_R_12_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.9540667533874512" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.6487921476364136" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -5150,7 +5150,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_12_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_12_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -5162,7 +5162,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_13" Bypassed="0" Gain="0.005754399579018354"
+        <Processor Type="SineSynth" ID="Mode_R_13" Bypassed="0" Gain="0.002884031506255269"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="14.0"
                    FineFreqRatio="0.08014369010925293" SaturationAmount="0.0">
@@ -5174,7 +5174,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_13_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -5255,7 +5255,7 @@
                 <Processor Type="LFO" ID="Mode_R_13_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.2617522478103638" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.2947354912757874" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -5266,7 +5266,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_13_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_13_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -5278,7 +5278,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_14" Bypassed="0" Gain="0.00478630093857646"
+        <Processor Type="SineSynth" ID="Mode_R_14" Bypassed="0" Gain="0.002398832933977246"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="15.0"
                    FineFreqRatio="0.1741364151239395" SaturationAmount="0.0">
@@ -5290,7 +5290,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_14_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -5371,7 +5371,7 @@
                 <Processor Type="LFO" ID="Mode_R_14_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.6396664977073669" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.4046275615692139" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -5382,7 +5382,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_14_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_14_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -5394,7 +5394,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_15" Bypassed="0" Gain="0.003981071524322033"
+        <Processor Type="SineSynth" ID="Mode_R_15" Bypassed="0" Gain="0.00199526222422719"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="16.0"
                    FineFreqRatio="0.180250808596611" SaturationAmount="0.0">
@@ -5406,7 +5406,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_15_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -5487,7 +5487,7 @@
                 <Processor Type="LFO" ID="Mode_R_15_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.7001059651374817" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.5958638787269592" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -5498,7 +5498,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_15_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_15_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -5510,7 +5510,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_16" Bypassed="0" Gain="0.003311311127617955"
+        <Processor Type="SineSynth" ID="Mode_R_16" Bypassed="0" Gain="0.001659586909227073"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="17.0"
                    FineFreqRatio="0.2200771868228912" SaturationAmount="0.0">
@@ -5522,7 +5522,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_16_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -5603,7 +5603,7 @@
                 <Processor Type="LFO" ID="Mode_R_16_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.9803315997123718" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.6467735767364502" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -5614,7 +5614,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_16_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_16_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -5626,7 +5626,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_17" Bypassed="0" Gain="0.00275422865524888"
+        <Processor Type="SineSynth" ID="Mode_R_17" Bypassed="0" Gain="0.001380384317599237"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="18.0"
                    FineFreqRatio="0.2542356550693512" SaturationAmount="0.0">
@@ -5638,7 +5638,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_17_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -5719,7 +5719,7 @@
                 <Processor Type="LFO" ID="Mode_R_17_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.4623923897743225" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.292547732591629" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -5730,7 +5730,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_17_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_17_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -5742,7 +5742,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_18" Bypassed="0" Gain="0.002290867734700441"
+        <Processor Type="SineSynth" ID="Mode_R_18" Bypassed="0" Gain="0.001148153678514063"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="19.0"
                    FineFreqRatio="0.07272679358720779" SaturationAmount="0.0">
@@ -5754,7 +5754,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_18_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -5835,7 +5835,7 @@
                 <Processor Type="LFO" ID="Mode_R_18_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.438415139913559" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.08467715233564377" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -5846,7 +5846,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_18_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_18_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -5858,7 +5858,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_19" Bypassed="0" Gain="0.001905460725538433"
+        <Processor Type="SineSynth" ID="Mode_R_19" Bypassed="0" Gain="0.0009549926035106182"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="20.0"
                    FineFreqRatio="0.4549221098423004" SaturationAmount="0.0">
@@ -5870,7 +5870,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_19_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -5951,7 +5951,7 @@
                 <Processor Type="LFO" ID="Mode_R_19_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.01871228404343128" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.1864126622676849" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -5962,7 +5962,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_19_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_19_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -5974,7 +5974,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_20" Bypassed="0" Gain="0.001584893208928406"
+        <Processor Type="SineSynth" ID="Mode_R_20" Bypassed="0" Gain="0.0007943282253108919"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="21.0"
                    FineFreqRatio="0.4407287240028381" SaturationAmount="0.0">
@@ -5986,7 +5986,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_20_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -6067,7 +6067,7 @@
                 <Processor Type="LFO" ID="Mode_R_20_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.115496039390564" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.5017796158790588" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -6078,7 +6078,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_20_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_20_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -6090,7 +6090,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_21" Bypassed="0" Gain="0.001318256719969213"
+        <Processor Type="SineSynth" ID="Mode_R_21" Bypassed="0" Gain="0.0006606934475712478"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="22.0"
                    FineFreqRatio="0.5322560667991638" SaturationAmount="0.0">
@@ -6102,7 +6102,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_21_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -6183,7 +6183,7 @@
                 <Processor Type="LFO" ID="Mode_R_21_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.6242164373397827" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.5882934331893921" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -6194,7 +6194,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_21_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_21_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -6206,7 +6206,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_22" Bypassed="0" Gain="0.001096478197723627"
+        <Processor Type="SineSynth" ID="Mode_R_22" Bypassed="0" Gain="0.0005495408549904823"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="23.0"
                    FineFreqRatio="0.5894219875335693" SaturationAmount="0.0">
@@ -6218,7 +6218,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_22_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -6299,7 +6299,7 @@
                 <Processor Type="LFO" ID="Mode_R_22_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.221290335059166" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.3206613957881927" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -6310,7 +6310,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_22_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_22_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -6322,7 +6322,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_23" Bypassed="0" Gain="0.0009120108443312347"
+        <Processor Type="SineSynth" ID="Mode_R_23" Bypassed="0" Gain="0.0004570882010739297"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="24.0"
                    FineFreqRatio="0.6888668537139893" SaturationAmount="0.0">
@@ -6334,7 +6334,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_23_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -6415,7 +6415,7 @@
                 <Processor Type="LFO" ID="Mode_R_23_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.4117124974727631" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.3296690881252289" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -6426,7 +6426,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_23_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_23_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -6438,7 +6438,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_24" Bypassed="0" Gain="0.0007585776038467884"
+        <Processor Type="SineSynth" ID="Mode_R_24" Bypassed="0" Gain="0.0003801893908530474"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="26.0"
                    FineFreqRatio="0.8657971620559692" SaturationAmount="0.0">
@@ -6450,7 +6450,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_24_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -6531,7 +6531,7 @@
                 <Processor Type="LFO" ID="Mode_R_24_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.04653893783688545" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.7775465250015259" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -6542,7 +6542,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_24_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_24_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -6554,7 +6554,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_25" Bypassed="0" Gain="0.000630957365501672"
+        <Processor Type="SineSynth" ID="Mode_R_25" Bypassed="0" Gain="0.0003162277571391314"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="27.0"
                    FineFreqRatio="0.9643299579620361" SaturationAmount="0.0">
@@ -6566,7 +6566,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_25_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -6647,7 +6647,7 @@
                 <Processor Type="LFO" ID="Mode_R_25_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.731087863445282" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.0642559826374054" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -6658,7 +6658,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_25_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_25_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -6670,7 +6670,7 @@
           </ChildProcessors>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
-        <Processor Type="SineSynth" ID="Mode_R_26" Bypassed="0" Gain="0.0005248074885457754"
+        <Processor Type="SineSynth" ID="Mode_R_26" Bypassed="0" Gain="0.0002630267990753055"
                    Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                    OctaveTranspose="0.0" SemiTones="0.0" UseFreqRatio="1.0" CoarseFreqRatio="29.0"
                    FineFreqRatio="0.07589814066886902" SaturationAmount="0.0">
@@ -6682,7 +6682,7 @@
               <ChildProcessors>
                 <Processor Type="AHDSR" ID="Mode_R_26_GAIN_AHDSR" Bypassed="0" Monophonic="0.0"
                            Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                           Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                            Release="200.0" EcoMode="1.0">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -6763,7 +6763,7 @@
                 <Processor Type="LFO" ID="Mode_R_26_PITCH_LFO" Bypassed="0" Intensity="0.01250000018626451"
                            Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                            Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
-                           PhaseOffset="0.8906480669975281" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
+                           PhaseOffset="0.2331516444683075" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
                            CustomWaveform="" StepData="64....f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+....9C...3O...f+.">
                   <ChildProcessors>
                     <Processor Type="ModulatorChain" ID="LFO Intensity Mod" Bypassed="0" Intensity="1.0">
@@ -6774,7 +6774,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="Mode_R_26_PITCH_Random" Bypassed="0" Intensity="0.008333333767950535"
+                <Processor Type="Random" ID="Mode_R_26_PITCH_Random" Bypassed="0" Intensity="0.01916666701436043"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
