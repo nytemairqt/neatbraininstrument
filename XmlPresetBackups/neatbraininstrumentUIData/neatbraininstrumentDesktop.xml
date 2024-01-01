@@ -73,6 +73,11 @@
                  height="64" text="Residue_" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblModes" x="480" y="10" width="128" height="64"
                  text="Modes_" parentComponent="pnlBody"/>
+      <Component type="ScriptSliderPack" id="SliderPack_RatiosL" x="165.0" y="131.0"
+                 parentComponent="pnlBody" processorId="synthPartials" max="31.11000061035156"
+                 sliderAmount="27.0"/>
+      <Component type="ScriptButton" id="Button1" x="85.0" y="270.0" parentComponent="pnlBody"
+                 isMomentary="1"/>
     </Component>
     <Component type="ScriptPanel" id="pnlStatusBar" x="5.0" y="585.0" text=""
                width="990.0" height="39.0" bgColour="0" itemColour="4281282356"
@@ -240,4 +245,7 @@
                  parentComponent="pnlSpinnerContainer" borderSize="0.0" borderRadius="0.0"/>
     </Component>
   </Component>
+  <Component type="ScriptSliderPack" id="SliderPack_RatiosR" x="260.0" y="340.0"
+             sliderAmount="27.0" processorId="synthPartials" SliderPackIndex="1"
+             max="31.11"/>
 </ContentProperties>

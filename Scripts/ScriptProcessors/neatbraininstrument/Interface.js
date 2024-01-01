@@ -109,11 +109,45 @@ const MODES_R = [1.0,
 
 // NEATBrain Global Vars 
 
+const SliderPack_RatiosL = Content.getComponent("SliderPack_RatiosL");
+const SliderPack_RatiosR = Content.getComponent("SliderPack_RatiosR");
+
+
+
 const NUM_MODES = MODES_L.length;
+const INITIALIZE_RATIOS = true;
 var STEREO_INSTRUMENT = false;
+
+Console.print(NUM_MODES);
+
+//SliderPack_RatiosL.set("sliderAmount", NUM_MODES);
+//SliderPack_RatiosR.set("sliderAmount", NUM_MODES);
+
+
+inline function onButton1Control(component, value)
+{
+	if (INITIALIZE_RATIOS)
+	{
+		for (i=0; i<SliderPack_RatiosL.getNumSliders(); i++)
+	    {
+	        SliderPack_RatiosL.setSliderAtIndex(i, MODES_L[i]);
+	        SliderPack_RatiosL.changed();    
+	    }   
+	    for (i=0; i<SliderPack_RatiosR.getNumSliders(); i++)
+   	    {
+   	        SliderPack_RatiosR.setSliderAtIndex(i, MODES_R[i]);
+   	        SliderPack_RatiosR.changed();    
+   	    }
+    }
+};
+
+Content.getComponent("Button1").setControlCallback(onButton1Control);
+
+
 if (isDefined(MODES_R))
 {
-	STEREO_INSTRUMENT = true;
+	STEREO_INSTRUMENT = true;   
+    
 }
 
 function onNoteOn()
