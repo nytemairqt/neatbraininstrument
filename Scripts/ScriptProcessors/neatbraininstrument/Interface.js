@@ -13,57 +13,38 @@ include("RhapsodyBoilerplate/includes/Spinner.js");
 /* TO DO
 
 - Call instruments "Memories"
-- add frontend controls for overtones
-- add frontend controls for Samplers
 - fix sustain issue (some modes sustain forever)
 - pitch bend not working in DAW (additive or something?)
 - maybe add a filter to the sampler residue to cut off the hiss tail?
+- palm mutes sound weaker :) (check amplitude velocity), maybe add a EQ boost?
+- adjust LaF lines to account for extended Modes UI real-estate
 
+Expose Front-End Controls
+
+Modes:
+	- AHDSR
+	- Mute/Solo
+	- Gain
+	- Dampen
+	- Filter
+	- Pitch Drift Strength
+	- Pitch Velocity Strength
+	- Pitch LFO Strength
+	- InterModal Randomness Strength
+
+Residue:
+	- AHDSR
+	- Mute/Solo
+	- Gain
 */
 
 /* NEATBrain External Files */
 
-include("NEATBRAINBoilerplate/Builder.js");
+//include("NEATBRAINBoilerplate/Builder.js");
 include("NEATBRAINBoilerplate/NEATBrainUi.js");
-include("NEATBRAINBoilerplate/Constants.js");
-include("NEATBRAINBoilerplate/Debug_DisableModules.js");
+//include("NEATBRAINBoilerplate/Constants.js");
+//include("NEATBRAINBoilerplate/Debug_DisableModules.js");
 
-/* CONSTRUCTOR */
-
-const MODULE_BUILD_MODE = 6; // 0=DoNothing, 1=ClearModules(Modes), 2=ClearModules(All) 3=RebuildBaseModules, 4=RebuildModes, 5=UpdateValues, 6=Release
-
-// Hyperparameters
-
-reg pitchOffsetL = 0.00;
-reg pitchOffsetR = 0.00;
-
-const GROUP_FILTER_CUTOFF = 1200;
-const MODE_INDIVIDUAL_RANDOM = 0.23;
-const MODE_GROUP_RANDOM = 40;
-
-const MODE_ATTACK = 30;
-const MODE_DECAY = 19999;
-const MODE_SUSTAIN = -100;
-const MODE_RELEASE = 500;
-const MODE_ADHSR_RANDOM = .25;
-const MODE_HARMONIC_VELOCITY = .07;
-
-const MODE_GAIN_GROUP = Engine.getGainFactorForDecibels(-3);
-const MODE_GAIN_BASE = -30;
-const MODE_GAIN_COEFFICIENT = 1.6; // larger value = quieter harmonics DEFINITELY don't connect to a slider
-reg MODE_DECAY_COEFFICIENT = .03; // connect to slider, larger value = faster harmonic falloff
-
-const MODE_ATTACK_RANDOM = .1; 
-const MODE_DECAY_RANDOM = .1; 
-
-const MODE_PITCH_DRIFT = .13;
-const MODE_PITCH_ATTACK = 20;
-const MODE_PITCH_DECAY = 2000;
-const MODE_PITCH_SUSTAIN = -100;
-const MODE_PITCH_RELEASE = 200;
-const MODE_PITCH_ATTACK_VELOCITY = .2;
-const MODE_PITCH_LFO_FREQUENCY = 0.5;
-const MODE_PITCH_LFO_INTENSITY = .15;
 
 /* INSTRUMENT DATA */
 
@@ -135,25 +116,9 @@ if (isDefined(MODES_R))
 	STEREO_INSTRUMENT = true;
 }
 
-START_BUILDER();
-
 function onNoteOn()
 {
-	// Randomize Modal Ratios	
 	
-	pitchOffsetL = Math.randInt(-MODE_GROUP_RANDOM, MODE_GROUP_RANDOM) / 100;
-	pitchOffsetR = Math.randInt(-MODE_GROUP_RANDOM, MODE_GROUP_RANDOM) / 100;
-
-	if (constantsL.length > 0)
-		for (i=0; i<constantsL.length; i++)
-		{
-			constantsL[i].setIntensity(pitchOffsetL);
-		}
-	if (constantsR.length > 0)
-		for (i=0; i<constantsR.length; i++)
-		{
-			constantsR[i].setIntensity(pitchOffsetR);
-		}	
 }
  function onNoteOff()
 {
