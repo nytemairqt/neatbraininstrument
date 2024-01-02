@@ -1,9 +1,28 @@
 include("NEATBRAINBoilerplate/NEATBrainLookAndFeel.js");
+include("NEATBRAINBoilerplate/NEATBrainModules.js");
 
-const synthPartials = Synth.getChildSynth("synthPartials");
 
 for (i = 0; i < 128; i++)
    	Engine.setKeyColour(i, Colours.withAlpha(Colours.black, 0.2));
+   	
+inline function createButton(id, x, y, width, height, text, saveInPreset, callback, isMomentary, visible)
+{
+	local b = Content.addButton(id, x, y);
+	
+	b.set("width", width);
+	b.set("height", height);
+	b.set("text", text);
+	b.set("saveInPreset", saveInPreset);
+	b.set("isMomentary", isMomentary);
+	b.set("visible", visible);
+	b.setControlCallback(callback);
+	
+	Content.setPropertiesFromJSON(id, {
+	          parentComponent: "pnlBody"
+		});
+	
+	return b;
+}
 
 inline function createKnob(id, x, y, width, height, text, saveInPreset, callback, minValue, maxValue, stepSize, defaultValue)
 {
@@ -24,7 +43,7 @@ inline function createKnob(id, x, y, width, height, text, saveInPreset, callback
           parentComponent: "pnlBody"
 	});
 
-	k.setLocalLookAndFeel(LAFSliderNEATBrain);
+	k.setLocalLookAndFeel(LAFSliderNEATBrain); // move this to outside the constructor...
 	
 	return k;
 }

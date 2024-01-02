@@ -16,7 +16,8 @@
             <Control type="ScriptSlider" id="knbDecay" value="20000.0"/>
             <Control type="ScriptSlider" id="knbSustain" value="-100.0"/>
             <Control type="ScriptSlider" id="knbRelease" value="200.0"/>
-            <Control type="ScriptSliderPack" id="SliderPack_RatiosL" value="26" data="108....f+3jC9+CZQ8CPwTye.wUzeBjoi+KP6b72.A5e.Dzj1CQPDkfHA4XqxDjv6MTPUBIUAYHikEjw1bWPbbDgAAVWMFjFjXYPMv3mAQSapFTWjLaPaSewAEJDPGTkSlcPc2C4AUu.tGjpkieP"/>
+            <Control type="ScriptSliderPack" id="SliderPack_RatiosL" value="26.0"
+                     data="108....f+3jC9+CZQ8CPwTye.wUzeBjoi+KP6b72.A5e.Dzj1CQPDkfHA4XqxDjv6MTPUBIUAYHikEjw1bWPbbDgAAVWMFjFjXYPMv3mAQSapFTWjLaPaSewAEJDPGTkSlcPc2C4AUu.tGjpkieP"/>
             <Control type="ScriptButton" id="Button1" value="0.0"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-6.0"/>
             <Control type="ScriptSlider" id="knbMasterPan" value="0.0"/>

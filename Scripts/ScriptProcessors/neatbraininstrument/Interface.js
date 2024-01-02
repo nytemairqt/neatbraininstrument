@@ -40,10 +40,8 @@ Residue:
 
 /* NEATBrain External Files */
 
-//include("NEATBRAINBoilerplate/Builder.js");
 include("NEATBRAINBoilerplate/NEATBrainUi.js");
 //include("NEATBRAINBoilerplate/Constants.js");
-//include("NEATBRAINBoilerplate/Debug_DisableModules.js");
 
 
 /* INSTRUMENT DATA */
@@ -107,19 +105,13 @@ const MODES_R = [1.0,
     29.07589813787308];
 
 
-// NEATBrain Modules
-
-const var synthPartialsEQ = Synth.getEffect("synthPartialsEQ");
-
 // NEATBrain Global Vars 
 
 const SliderPack_RatiosL = Content.getComponent("SliderPack_RatiosL");
 const SliderPack_RatiosR = Content.getComponent("SliderPack_RatiosR");
 
-
-
 const NUM_MODES = MODES_L.length;
-const INITIALIZE_RATIOS = true;
+const INITIALIZE_RATIOS = false;
 var STEREO_INSTRUMENT = false;
 
 //SliderPack_RatiosL.set("sliderAmount", NUM_MODES);
