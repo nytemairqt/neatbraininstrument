@@ -44,42 +44,66 @@
                height="565.0" bgColour="0" itemColour="4281282356" itemColour2="4281282356"
                textColour="0" parentComponent="pnlContainer" borderSize="0.0"
                borderRadius="12.0">
-      <Component type="ScriptSlider" id="knbFilter" x="100" y="400" middlePosition="1400.0"
-                 stepSize="1.0" min="300" max="4000" text="Filter" defaultValue="1200.0"
-                 width="48" height="48" parentComponent="pnlBody"/>
-      <Component type="ScriptSlider" id="knbDampening" x="500" y="400" text="Dampening"
-                 width="48" height="48" parentComponent="pnlBody"/>
-      <Component type="ScriptSlider" id="knbAttack" x="565" y="120" stepSize="1.0"
-                 min="5" max="1000" text="Attack" defaultValue="5.0" width="48"
-                 height="48" parentComponent="pnlBody"/>
-      <Component type="ScriptSlider" id="knbDecay" x="665" y="120" stepSize="1.0"
-                 min="500" max="20000" text="Decay" defaultValue="15000.0" width="48"
-                 height="48" parentComponent="pnlBody"/>
-      <Component type="ScriptSlider" id="knbSustain" x="765" y="120" middlePosition="-12.0"
-                 stepSize="1.0" min="-100" max="0" text="Sustain" defaultValue="-100.0"
-                 width="48" height="48" parentComponent="pnlBody"/>
-      <Component type="ScriptSlider" id="knbRelease" x="865" y="120" stepSize="1.0"
-                 min="5" max="15000" text="Release" defaultValue="200.0" width="48"
-                 height="48" parentComponent="pnlBody"/>
-      <Component type="ScriptPanel" id="lblAttack" x="535" y="180" width="128"
-                 height="32" text="Attack" parentComponent="pnlBody"/>
-      <Component type="ScriptPanel" id="lblDecay" x="632" y="180" width="128"
-                 height="32" text="Decay" parentComponent="pnlBody"/>
-      <Component type="ScriptPanel" id="lblSustain" x="733" y="180" width="128"
-                 height="32" text="Sustain" parentComponent="pnlBody"/>
-      <Component type="ScriptPanel" id="lblRelease" x="836" y="180" width="128"
-                 height="32" text="Release" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblResidue" x="487" y="10" width="128"
                  height="64" text="Residue_" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblModes" x="15" y="10" width="128" height="64"
                  text="Modes_" parentComponent="pnlBody"/>
-      <Component type="ScriptSliderPack" id="SliderPack_RatiosL" x="165.0" y="131.0"
+      <Component type="ScriptSliderPack" id="SliderPack_RatiosL" x="524.0" y="230.0"
                  parentComponent="pnlBody" processorId="synthPartials" max="31.11000061035156"
-                 sliderAmount="27.0"/>
+                 sliderAmount="27.0" width="440" height="100"/>
       <Component type="ScriptButton" id="btnResetRatios" x="420" y="30" width="30"
                  height="30" text="reset" saveInPreset="0" isMomentary="1" parentComponent="pnlBody"/>
-      <Component type="ScriptButton" id="btnShowAdvancedPanel" x="471" y="200"
+      <Component type="ScriptButton" id="btnShowAdvancedPanel" x="471" y="227"
                  width="24" height="80" text="open" saveInPreset="0" parentComponent="pnlBody"/>
+      <Component type="ScriptSlider" id="knbPartialAttack" x="75" y="110" stepSize="1.0"
+                 min="5" max="1000" text="Attack" defaultValue="5.0" width="48"
+                 height="48" parentComponent="pnlBody"/>
+      <Component type="ScriptSlider" id="knbPartialDecay" x="175" y="110" stepSize="1.0"
+                 min="500" max="20000" text="Decay" defaultValue="15000.0" width="48"
+                 height="48" parentComponent="pnlBody"/>
+      <Component type="ScriptSlider" id="knbPartialSustain" x="275" y="110" middlePosition="-12.0"
+                 stepSize="1.0" min="-100" max="0" text="Sustain" defaultValue="-100.0"
+                 width="48" height="48" parentComponent="pnlBody"/>
+      <Component type="ScriptSlider" id="knbPartialRelease" x="375" y="110" stepSize="1.0"
+                 min="5" max="15000" text="Release" defaultValue="200.0" width="48"
+                 height="48" parentComponent="pnlBody"/>
+      <Component type="ScriptPanel" id="lblPartialAttack" x="36" y="160" width="128"
+                 height="32" text="Attack" parentComponent="pnlBody"/>
+      <Component type="ScriptPanel" id="lblPartialDecay" x="135" y="160" width="128"
+                 height="32" text="Decay" parentComponent="pnlBody"/>
+      <Component type="ScriptPanel" id="lblPartialSustain" x="235" y="160" width="128"
+                 height="32" text="Sustain" parentComponent="pnlBody"/>
+      <Component type="ScriptPanel" id="lblPartialRelease" x="337" y="160" width="128"
+                 height="32" text="Release" parentComponent="pnlBody"/>
+      <Component type="ScriptSlider" id="knbPartialFilter" x="100" y="400" middlePosition="1400.0"
+                 stepSize="1.0" min="300" max="4000" text="Filter" defaultValue="1200.0"
+                 width="48" height="48" parentComponent="pnlBody"/>
+      <Component type="ScriptSlider" id="knbPartialDampening" x="200" y="400"
+                 text="Dampening" width="48" height="48" parentComponent="pnlBody"/>
+      <Component type="ScriptSlider" id="knbResidueAttack" x="564" y="110" style="Knob"
+                 middlePosition="-1.0" stepSize="1.0" min="5" max="1000" suffix=""
+                 filmstripImage="Use default skin" linkedTo="" text="Attack" defaultValue="5.0"
+                 width="48" height="48" parentComponent="pnlBody"/>
+      <Component type="ScriptSlider" id="knbResidueDecay" x="664" y="110" style="Knob"
+                 middlePosition="-1.0" stepSize="1.0" min="500" max="20000" suffix=""
+                 filmstripImage="Use default skin" linkedTo="" text="Decay" defaultValue="15000.0"
+                 width="48" height="48" parentComponent="pnlBody"/>
+      <Component type="ScriptSlider" id="knbResidueSustain" x="764" y="110" style="Knob"
+                 middlePosition="-1.0" stepSize="1.0" min="-100" max="0" suffix=""
+                 filmstripImage="Use default skin" linkedTo="" text="Sustain"
+                 defaultValue="-100.0" width="48" height="48" parentComponent="pnlBody"/>
+      <Component type="ScriptSlider" id="knbResidueRelease" x="864" y="110" style="Knob"
+                 middlePosition="-1.0" stepSize="1.0" min="5" max="15000" suffix=""
+                 filmstripImage="Use default skin" linkedTo="" text="Release"
+                 defaultValue="200.0" width="48" height="48" parentComponent="pnlBody"/>
+      <Component type="ScriptPanel" id="lblResidueAttack" x="525" y="160" width="128"
+                 height="32" text="Attack" parentComponent="pnlBody"/>
+      <Component type="ScriptPanel" id="lblResidueDecay" x="624" y="160" width="128"
+                 height="32" text="Decay" parentComponent="pnlBody"/>
+      <Component type="ScriptPanel" id="lblResidueSustain" x="724" y="160" width="128"
+                 height="32" text="Sustain" parentComponent="pnlBody"/>
+      <Component type="ScriptPanel" id="lblResidueRelease" x="826" y="160" width="128"
+                 height="32" text="Release" parentComponent="pnlBody"/>
     </Component>
     <Component type="ScriptPanel" id="pnlStatusBar" x="5.0" y="585.0" text=""
                width="990.0" height="39.0" bgColour="0" itemColour="4281282356"
@@ -247,7 +271,7 @@
                  parentComponent="pnlSpinnerContainer" borderSize="0.0" borderRadius="0.0"/>
     </Component>
   </Component>
-  <Component type="ScriptSliderPack" id="SliderPack_RatiosR" x="260.0" y="340.0"
+  <Component type="ScriptSliderPack" id="SliderPack_RatiosR" x="529.0" y="400.0"
              sliderAmount="27.0" processorId="synthPartials" SliderPackIndex="1"
-             max="31.11000061035156"/>
+             max="31.11000061035156" width="440.0"/>
 </ContentProperties>

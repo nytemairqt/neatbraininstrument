@@ -10,14 +10,14 @@
           <ChildProcessors/>
           <Content>
             <Control type="ScriptButton" id="btnPresetBrowser" value="0"/>
-            <Control type="ScriptSlider" id="knbFilter" value="3142.0"/>
-            <Control type="ScriptSlider" id="knbDampening" value="0.8299999833106995"/>
-            <Control type="ScriptSlider" id="knbAttack" value="5.0"/>
-            <Control type="ScriptSlider" id="knbDecay" value="20000.0"/>
-            <Control type="ScriptSlider" id="knbSustain" value="-100.0"/>
-            <Control type="ScriptSlider" id="knbRelease" value="200.0"/>
             <Control type="ScriptSliderPack" id="SliderPack_RatiosL" value="26.0"
                      data="108....f+3jC9+CZQ8CPwTye.wUzeBjoi+KP6b72.A5e.Dzj1CQPDkfHA4XqxDjv6MTPUBIUAYHikEjw1bWPbbDgAAVWMFjFjXYPMv3mAQSapFTWjLaPaSewAEJDPGTkSlcPc2C4AUu.tGjpkieP"/>
+            <Control type="ScriptSlider" id="knbPartialAttack" value="5.0"/>
+            <Control type="ScriptSlider" id="knbPartialDecay" value="500.0"/>
+            <Control type="ScriptSlider" id="knbPartialSustain" value="-100.0"/>
+            <Control type="ScriptSlider" id="knbPartialRelease" value="5.0"/>
+            <Control type="ScriptSlider" id="knbPartialFilter" value="1200.0"/>
+            <Control type="ScriptSlider" id="knbPartialDampening" value="0.0"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-6.0"/>
             <Control type="ScriptSlider" id="knbMasterPan" value="0.0"/>
             <Control type="ScriptSlider" id="knbCoarseDetune" value="0.0"/>
@@ -25,6 +25,10 @@
             <Control type="ScriptSlider" id="knbTranspose" value="0.0"/>
             <Control type="ScriptSliderPack" id="SliderPack_RatiosR" value="26.0"
                      data="108....f+v2p++Cy79CPNw6e.w45eBzMy+KPLJC3.8mK.DjtRAQPL5GHAATyvDzpUCTPNpNTAUDRgEzPIKWPmDWfAgqvIFTqHHYPxSIlA45niFTmFtZPOHDsAMxs7FTyBVbPmzt0AMuseGDbahdP"/>
+            <Control type="ScriptSlider" id="knbResidueAttack" value="5.0"/>
+            <Control type="ScriptSlider" id="knbResidueDecay" value="15000.0"/>
+            <Control type="ScriptSlider" id="knbResidueSustain" value="-100.0"/>
+            <Control type="ScriptSlider" id="knbResidueRelease" value="200.0"/>
           </Content>
           <UIData Source="neatbraininstrumentUIData"/>
         </Processor>

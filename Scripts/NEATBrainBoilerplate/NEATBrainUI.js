@@ -43,36 +43,60 @@ inline function onbtnShowAdvancedPanelControl(component, value)
 		Console.print("closed!");
 }
 
+// Partials
+
 // AHDSR Attack
-inline function onknbAttackControl(component, value)
+inline function onknbPartialAttackControl(component, value)
 {
 }
 
 // AHDSR Decay
-inline function onknbDecayControl(component, value)
+inline function onknbPartialDecayControl(component, value)
 {
 }
 
 // AHDSR Sustain
-inline function onknbSustainControl(component, value)
+inline function onknbPartialSustainControl(component, value)
 {		
 }
 
 // AHDSR Release
-inline function onknbReleaseControl(component, value)
+inline function onknbPartialReleaseControl(component, value)
 {
 }
 
 // Filter Static
-inline function onknbFilterControl(component, value)
+inline function onknbPartialFilterControl(component, value)
 {
 	synthPartials.setAttribute(synthPartials.filterStaticFrequency, value);
 }
 
 // Filter Decay
-inline function onknbDampeningControl(component, value)
+inline function onknbPartialDampeningControl(component, value)
 {
 	synthPartials.setAttribute(synthPartials.filterFalloffDecay, value);
+}
+
+// Residue
+
+// AHDSR Attack
+inline function onknbResidueAttackControl(component, value)
+{
+}
+
+// AHDSR Decay
+inline function onknbResidueDecayControl(component, value)
+{
+}
+
+// AHDSR Sustain
+inline function onknbResidueSustainControl(component, value)
+{		
+}
+
+// AHDSR Release
+inline function onknbResidueReleaseControl(component, value)
+{
 }
 
 // Rhapsody Gain
@@ -97,31 +121,45 @@ Content.getComponent("knbMasterPan").setControlCallback(onknbMasterPanControl);
 /* Instantiate Buttons */
 
 const btnResetRatios = createButton("btnResetRatios", 420, 30, 30, 30, "reset", false, onbtnResetRatiosControl, true, true);
-
-const btnShowAdvancedPanel = createButton("btnShowAdvancedPanel", 471, 200, 24, 80, "open", false, onbtnShowAdvancedPanelControl, false, true);
+const btnShowAdvancedPanel = createButton("btnShowAdvancedPanel", 471, 227, 24, 80, "open", false, onbtnShowAdvancedPanelControl, false, true);
 
 /* Instantiate Sliders */
 
-const knbFilter = createKnob("knbFilter", 100, 400, 48, 48, "Filter", true, onknbFilterControl, 300, 4000, 1.0, 1200);
-const knbDampening = createKnob("knbDampening", 500, 400, 48, 48, "Dampening", true, onknbDampeningControl, 0.0, 1.0, 0.01, 0.0);
+// Partials
+const knbPartialFilter = createKnob("knbPartialFilter", 100, 400, 48, 48, "Filter", true, onknbPartialFilterControl, 300, 4000, 1.0, 1200);
+const knbPartialDampening = createKnob("knbPartialDampening", 200, 400, 48, 48, "Dampening", true, onknbPartialDampeningControl, 0.0, 1.0, 0.01, 0.0);
 
-const knbAttack = createKnob("knbAttack", 565, 120, 48, 48, "Attack", true, onknbAttackControl, 5, 1000, 1.0, 5);
-const knbDecay = createKnob("knbDecay", 665, 120, 48, 48, "Decay", true, onknbDecayControl, 500, 20000, 1.0, 15000);
-const knbSustain = createKnob("knbSustain", 765, 120, 48, 48, "Sustain", true, onknbSustainControl, -100, 0, 1.0, -100);
-const knbRelease = createKnob("knbRelease", 865, 120, 48, 48, "Release", true, onknbReleaseControl, 5, 15000, 1.0, 200);
+const knbPartialAttack = createKnob("knbPartialAttack", 75, 110, 48, 48, "Attack", true, onknbPartialAttackControl, 5, 1000, 1.0, 5);
+const knbPartialDecay = createKnob("knbPartialDecay", 175, 110, 48, 48, "Decay", true, onknbPartialDecayControl, 500, 20000, 1.0, 15000);
+const knbPartialSustain = createKnob("knbPartialSustain", 275, 110, 48, 48, "Sustain", true, onknbPartialSustainControl, -100, 0, 1.0, -100);
+const knbPartialRelease = createKnob("knbPartialRelease", 375, 110, 48, 48, "Release", true, onknbPartialReleaseControl, 5, 15000, 1.0, 200);
+
+// Residue
+
+const knbResidueAttack = createKnob("knbResidueAttack", 564, 110, 48, 48, "Attack", true, onknbResidueAttackControl, 5, 1000, 1.0, 5);
+const knbResidueDecay = createKnob("knbResidueDecay", 664, 110, 48, 48, "Decay", true, onknbResidueDecayControl, 500, 20000, 1.0, 15000);
+const knbResidueSustain = createKnob("knbResidueSustain", 764, 110, 48, 48, "Sustain", true, onknbResidueSustainControl, -100, 0, 1.0, -100);
+const knbResidueRelease = createKnob("knbResidueRelease", 864, 110, 48, 48, "Release", true, onknbResidueReleaseControl, 5, 15000, 1.0, 200);
 
 /* Instantiate Labels */
 
+// Partials
 const lblResidue = createLabel("lblResidue", 487, 10, 128, 64, 24, "Residue_");
 const lblModes = createLabel("lblModes", 15, 10, 128, 64, 24, "Modes_");
 
-const lblAttack = createLabel("lblAttack", 535, 180, 128, 32, 16, "Attack");
-const lblDecay = createLabel("lblDecay", 632, 180, 128, 32, 16, "Decay");
-const lblSustain = createLabel("lblSustain", 733, 180, 128, 32, 16, "Sustain");
-const lblRelease = createLabel("lblRelease", 836, 180, 128, 32, 16, "Release");
+const lblPartialAttack = createLabel("lblPartialAttack", knbPartialAttack.get("x") - 39, 160, 128, 32, 16, "Attack");
+const lblPartialDecay = createLabel("lblPartialDecay", knbPartialDecay.get("x") - 40, 160, 128, 32, 16, "Decay");
+const lblPartialSustain = createLabel("lblPartialSustain", knbPartialSustain.get("x") - 40, 160, 128, 32, 16, "Sustain");
+const lblPartialRelease = createLabel("lblPartialRelease", knbPartialRelease.get("x") - 38, 160, 128, 32, 16, "Release");
+
+// Residue
+const lblResidueAttack = createLabel("lblResidueAttack", knbResidueAttack.get("x") - 39, 160, 128, 32, 16, "Attack");
+const lblResidueDecay = createLabel("lblResidueDecay", knbResidueDecay.get("x") - 40, 160, 128, 32, 16, "Decay");
+const lblResidueSustain = createLabel("lblResidueSustain", knbResidueSustain.get("x") - 40, 160, 128, 32, 16, "Sustain");
+const lblResidueRelease = createLabel("lblResidueRelease", knbResidueRelease.get("x") - 38, 160, 128, 32, 16, "Release");
 
 /* Setup Misc Defaults */
 
-knbSustain.set("middlePosition", -12.0);
-knbFilter.set("middlePosition", 1400);
+knbPartialSustain.set("middlePosition", -12.0);
+knbPartialFilter.set("middlePosition", 1400);
 
