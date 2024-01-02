@@ -76,8 +76,10 @@
       <Component type="ScriptSliderPack" id="SliderPack_RatiosL" x="165.0" y="131.0"
                  parentComponent="pnlBody" processorId="synthPartials" max="31.11000061035156"
                  sliderAmount="27.0"/>
-      <Component type="ScriptButton" id="Button1" x="85.0" y="270.0" parentComponent="pnlBody"
-                 isMomentary="1"/>
+      <Component type="ScriptButton" id="btnResetRatios" x="420" y="30" width="30"
+                 height="30" text="reset" saveInPreset="0" isMomentary="1" parentComponent="pnlBody"/>
+      <Component type="ScriptButton" id="btnShowAdvancedPanel" x="471" y="200"
+                 width="24" height="80" text="open" saveInPreset="0" parentComponent="pnlBody"/>
     </Component>
     <Component type="ScriptPanel" id="pnlStatusBar" x="5.0" y="585.0" text=""
                width="990.0" height="39.0" bgColour="0" itemColour="4281282356"

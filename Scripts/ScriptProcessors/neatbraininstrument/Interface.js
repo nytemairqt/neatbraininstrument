@@ -10,39 +10,15 @@ include("RhapsodyBoilerplate/includes/Presets.js");
 include("RhapsodyBoilerplate/includes/UserSettings.js");
 include("RhapsodyBoilerplate/includes/Spinner.js");
 
-/* TO DO
+/* NEATBrain Global Vars */
 
-- Call instruments "Memories"
-- fix sustain issue (some modes sustain forever)
-- pitch bend not working in DAW (additive or something?)
-- maybe add a filter to the sampler residue to cut off the hiss tail?
-- palm mutes sound weaker :) (check amplitude velocity), maybe add a EQ boost?
-- adjust LaF lines to account for extended Modes UI real-estate
-
-Expose Front-End Controls
-
-Modes:
-	- AHDSR
-	- Mute/Solo
-	- Gain
-	- Dampen
-	- Filter
-	- Pitch Drift Strength
-	- Pitch Velocity Strength
-	- Pitch LFO Strength
-	- InterModal Randomness Strength
-
-Residue:
-	- AHDSR
-	- Mute/Solo
-	- Gain
-*/
+const NUM_MODES = MODES_L.length;
+const INITIALIZE_RATIOS = false;
+var STEREO_INSTRUMENT = false;
 
 /* NEATBrain External Files */
 
 include("NEATBRAINBoilerplate/NEATBrainUi.js");
-//include("NEATBRAINBoilerplate/Constants.js");
-
 
 /* INSTRUMENT DATA */
 
@@ -105,36 +81,14 @@ const MODES_R = [1.0,
     29.07589813787308];
 
 
-// NEATBrain Global Vars 
 
-const SliderPack_RatiosL = Content.getComponent("SliderPack_RatiosL");
-const SliderPack_RatiosR = Content.getComponent("SliderPack_RatiosR");
-
-const NUM_MODES = MODES_L.length;
-const INITIALIZE_RATIOS = false;
-var STEREO_INSTRUMENT = false;
 
 //SliderPack_RatiosL.set("sliderAmount", NUM_MODES);
 //SliderPack_RatiosR.set("sliderAmount", NUM_MODES);
 
-inline function onButton1Control(component, value)
-{
-	if (INITIALIZE_RATIOS)
-	{
-		for (i=0; i<SliderPack_RatiosL.getNumSliders(); i++)
-	    {
-	        SliderPack_RatiosL.setSliderAtIndex(i, MODES_L[i]);
-	        SliderPack_RatiosL.changed();    
-	    }   
-	    for (i=0; i<SliderPack_RatiosR.getNumSliders(); i++)
-   	    {
-   	        SliderPack_RatiosR.setSliderAtIndex(i, MODES_R[i]);
-   	        SliderPack_RatiosR.changed();    
-   	    }
-    }
-};
 
-Content.getComponent("Button1").setControlCallback(onButton1Control);
+
+//Content.getComponent("Button1").setControlCallback(onButton1Control);
 
 
 if (isDefined(MODES_R))
