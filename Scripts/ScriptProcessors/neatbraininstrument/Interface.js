@@ -107,6 +107,10 @@ const MODES_R = [1.0,
     29.07589813787308];
 
 
+// NEATBrain Modules
+
+const var synthPartialsEQ = Synth.getEffect("synthPartialsEQ");
+
 // NEATBrain Global Vars 
 
 const SliderPack_RatiosL = Content.getComponent("SliderPack_RatiosL");
@@ -118,11 +122,8 @@ const NUM_MODES = MODES_L.length;
 const INITIALIZE_RATIOS = true;
 var STEREO_INSTRUMENT = false;
 
-Console.print(NUM_MODES);
-
 //SliderPack_RatiosL.set("sliderAmount", NUM_MODES);
 //SliderPack_RatiosR.set("sliderAmount", NUM_MODES);
-
 
 inline function onButton1Control(component, value)
 {

@@ -1,5 +1,7 @@
 include("NEATBRAINBoilerplate/NEATBrainLookAndFeel.js");
 
+const synthPartials = Synth.getChildSynth("synthPartials");
+
 for (i = 0; i < 128; i++)
    	Engine.setKeyColour(i, Colours.withAlpha(Colours.black, 0.2));
 
@@ -125,6 +127,16 @@ inline function onknbReleaseControl(component, value)
 
 /* TONE */
 
+inline function onknbFilterControl(component, value)
+{
+	synthPartials.setAttribute(synthPartials.filterStaticFrequency, value);
+}
+
+inline function onknbDampeningControl(component, value)
+{
+	synthPartials.setAttribute(synthPartials.filterFalloffDecay, value);
+}
+
 // Rhapsody Front End Controls
 
 inline function onknbMasterGainControl(component, value)
@@ -142,38 +154,9 @@ inline function onknbMasterPanControl(component, value)
 Content.getComponent("knbMasterGain").setControlCallback(onknbMasterGainControl);
 Content.getComponent("knbMasterPan").setControlCallback(onknbMasterPanControl);
 
-// NEATBrain Front End Controls
-
-inline function onknbDampeningControl(component, value)
-{
-	if (modesL_GAIN_AHDSRsDecayFalloffs.length == 0)
-		return;
-
-	/* Iterate through the Constants and REDUCE their intensity incrementally based on the strengthFactor */
-	/* I promise its working lmao (combination of Lowpass filter & Harmonic Ratios make it hard to tell) */
-
-	local strengthFactor = 0.05;
-	for (i=0; i<modesL_GAIN_AHDSRsDecayFalloffs.length; i++)
-	{		
-		MODE_DECAY_COEFFICIENT = 1.0 - ((strengthFactor * value) * i);
-		modesL_GAIN_AHDSRsDecayFalloffs[i].setIntensity(1-MODE_DECAY_COEFFICIENT);
-		if (STEREO_INSTRUMENT)
-			modesR_GAIN_AHDSRsDecayFalloffs[i].setIntensity(1-MODE_DECAY_COEFFICIENT);
-	}		
-}
-
-inline function onknbFilterControl(component, value)
-{
-	if (modalFilters.length == 0)
-		return; 
-
-	for (filter in modalFilters)
-		filter.setAttribute(filter.Frequency, value);
-}
-
 /* Instantiate Sliders */
 
-const knbFilter = createKnob("knbFilter", 100, 400, 64, 64, "Filter", true, onknbFilterControl, 300, 6000, 1.0, 1200);
+const knbFilter = createKnob("knbFilter", 100, 400, 64, 64, "Filter", true, onknbFilterControl, 300, 4000, 1.0, 1200);
 const knbDampening = createKnob("knbDampening", 500, 400, 64, 64, "Dampening", true, onknbDampeningControl, 0.0, 1.0, 0.01, 0.0);
 
 const knbAttack = createKnob("knbAttack", 565, 120, 64, 64, "Attack", true, onknbAttackControl, 5, 1000, 1.0, 5);

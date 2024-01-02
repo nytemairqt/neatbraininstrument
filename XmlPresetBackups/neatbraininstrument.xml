@@ -10,8 +10,8 @@
           <ChildProcessors/>
           <Content>
             <Control type="ScriptButton" id="btnPresetBrowser" value="0"/>
-            <Control type="ScriptSlider" id="knbFilter" value="729.0"/>
-            <Control type="ScriptSlider" id="knbDampening" value="0.0"/>
+            <Control type="ScriptSlider" id="knbFilter" value="3142.0"/>
+            <Control type="ScriptSlider" id="knbDampening" value="0.8299999833106995"/>
             <Control type="ScriptSlider" id="knbAttack" value="5.0"/>
             <Control type="ScriptSlider" id="knbDecay" value="20000.0"/>
             <Control type="ScriptSlider" id="knbSustain" value="-100.0"/>
@@ -451,7 +451,7 @@
         <channelData enabled="1" level="0.0" suffix=""/>
       </channels>
     </Processor>
-    <Processor Type="ScriptSynth" ID="synthPartials" Bypassed="0" Gain="0.1364583224058151"
+    <Processor Type="ScriptSynth" ID="synthPartials" Bypassed="0" Gain="0.1905460804700851"
                Balance="0.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                NumSliderPacks="2">
       <ChildProcessors>
@@ -505,6 +505,11 @@
                   <ChildProcessors/>
                 </Processor>
               </ChildProcessors>
+              <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+            </Processor>
+            <Processor Type="CurveEq" ID="synthPartialsEQ" Bypassed="0" NumFilters="0"
+                       FFTEnabled="0">
+              <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
           </ChildProcessors>
