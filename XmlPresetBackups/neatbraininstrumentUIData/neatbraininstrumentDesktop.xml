@@ -117,9 +117,8 @@
                    height="32" text="Ratios R" parentComponent="pnlAdvancedPartialSettings"/>
       </Component>
       <Component type="ScriptSlider" id="knbPartialRandomGlobal" x="75" y="250"
-                 style="Knob" middlePosition="-1.0" suffix="" filmstripImage="Use default skin"
-                 linkedTo="" text="RandomGlobal" defaultValue="0.1000000014901161"
-                 width="48" height="48" parentComponent="pnlBody"/>
+                 text="RandomGlobal" defaultValue="0.1000000014901161" width="48"
+                 height="48" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblPartialRandomGlobal" x="36" y="300"
                  width="128" height="32" text="Global" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblModesGain" x="-30" y="80" width="128"
@@ -127,9 +126,8 @@
       <Component type="ScriptPanel" id="lblModesDrift" x="-30" y="220" width="128"
                  height="32" text="Drift" parentComponent="pnlBody"/>
       <Component type="ScriptSlider" id="knbPartialRandomSingle" x="175" y="250"
-                 style="Knob" middlePosition="-1.0" suffix="" filmstripImage="Use default skin"
-                 linkedTo="" text="RandomSingle" defaultValue="0.1000000014901161"
-                 width="48" height="48" parentComponent="pnlBody"/>
+                 text="RandomSingle" defaultValue="0.1000000014901161" width="48"
+                 height="48" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblPartialRandomSingle" x="135" y="300"
                  width="128" height="32" text="Inter" parentComponent="pnlBody"/>
     </Component>

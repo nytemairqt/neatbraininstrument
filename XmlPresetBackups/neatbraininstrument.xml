@@ -24,13 +24,13 @@
                      data="108....f+3jC9+CZQ8CPwTye.wUzeBjoi+KP6b72.A5e.Dzj1CQPDkfHA4XqxDjv6MTPUBIUAYHikEjw1bWPbbDgAAVWMFjFjXYPMv3mAQSapFTWjLaPaSewAEJDPGTkSlcPc2C4AUu.tGjpkieP"/>
             <Control type="ScriptSliderPack" id="SliderPack_RatiosR" value="26.0"
                      data="108....f+v2p++Cy79CPNw6e.w45eBzMy+KPLJC3.8mK.DjtRAQPL5GHAATyvDzpUCTPNpNTAUDRgEzPIKWPmDWfAgqvIFTqHHYPxSIlA45niFTmFtZPOHDsAMxs7FTyBVbPmzt0AMuseGDbahdP"/>
+            <Control type="ScriptSlider" id="knbPartialRandomGlobal" value="0.1599999964237213"/>
+            <Control type="ScriptSlider" id="knbPartialRandomSingle" value="0.119999997317791"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-6.0"/>
             <Control type="ScriptSlider" id="knbMasterPan" value="0.0"/>
             <Control type="ScriptSlider" id="knbCoarseDetune" value="0.0"/>
             <Control type="ScriptSlider" id="knbFineDetune" value="0.0"/>
             <Control type="ScriptSlider" id="knbTranspose" value="0.0"/>
-            <Control type="ScriptSlider" id="knbPartialRandomGlobal" value="0.1000000014901161"/>
-            <Control type="ScriptSlider" id="knbPartialRandomSingle" value="0.1000000014901161"/>
           </Content>
           <UIData Source="neatbraininstrumentUIData"/>
         </Processor>
@@ -115,7 +115,7 @@
         </Processor>
         <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
           <ChildProcessors>
-            <Processor Type="AHDSR" ID="samplerResidueL_AHDSR" Bypassed="0" Monophonic="0.0"
+            <Processor Type="AHDSR" ID="ahdsrResidueL" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
                        Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="300.0" Sustain="0.0"
                        Release="20.0" EcoMode="1.0">
@@ -181,7 +181,7 @@
         </Processor>
         <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
           <ChildProcessors>
-            <Processor Type="AHDSR" ID="samplerReleaseL_AHDSR" Bypassed="0" Monophonic="0.0"
+            <Processor Type="AHDSR" ID="ahdsrReleaseL" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
                        Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="300.0" Sustain="0.0"
                        Release="20.0" EcoMode="1.0">
@@ -237,10 +237,10 @@
         </Processor>
         <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
           <ChildProcessors>
-            <Processor Type="AHDSR" ID="samplerNoiseL_AHDSR" Bypassed="0" Monophonic="0.0"
-                       Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                       Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="300.0" Sustain="0.0"
-                       Release="20.0" EcoMode="1.0">
+            <Processor Type="AHDSR" ID="ahdsrNoiseL" Bypassed="0" Monophonic="0.0" Retrigger="1.0"
+                       Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0" Attack="20.0"
+                       AttackLevel="0.0" Hold="10.0" Decay="300.0" Sustain="0.0" Release="20.0"
+                       EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -293,7 +293,7 @@
         </Processor>
         <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
           <ChildProcessors>
-            <Processor Type="AHDSR" ID="samplerResidueR_AHDSR" Bypassed="0" Monophonic="0.0"
+            <Processor Type="AHDSR" ID="ahdsrResidueR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
                        Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="300.0" Sustain="0.0"
                        Release="20.0" EcoMode="1.0">
@@ -359,7 +359,7 @@
         </Processor>
         <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
           <ChildProcessors>
-            <Processor Type="AHDSR" ID="samplerReleaseR_AHDSR" Bypassed="0" Monophonic="0.0"
+            <Processor Type="AHDSR" ID="ahdsrReleaseR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
                        Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="300.0" Sustain="0.0"
                        Release="20.0" EcoMode="1.0">
@@ -415,10 +415,10 @@
         </Processor>
         <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
           <ChildProcessors>
-            <Processor Type="AHDSR" ID="samplerNoiseR_AHDSR" Bypassed="0" Monophonic="0.0"
-                       Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                       Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="300.0" Sustain="0.0"
-                       Release="20.0" EcoMode="1.0">
+            <Processor Type="AHDSR" ID="ahdsrNoiseR" Bypassed="0" Monophonic="0.0" Retrigger="1.0"
+                       Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0" Attack="20.0"
+                       AttackLevel="0.0" Hold="10.0" Decay="300.0" Sustain="0.0" Release="20.0"
+                       EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -457,7 +457,7 @@
         <channelData enabled="1" level="0.0" suffix=""/>
       </channels>
     </Processor>
-    <Processor Type="ScriptSynth" ID="synthPartials" Bypassed="0" Gain="0.1905460804700851"
+    <Processor Type="ScriptSynth" ID="synthPartials" Bypassed="0" Gain="1.0"
                Balance="0.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                NumSliderPacks="2">
       <ChildProcessors>
@@ -466,7 +466,7 @@
         </Processor>
         <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
           <ChildProcessors>
-            <Processor Type="AHDSR" ID="AHDSR_partials" Bypassed="0" Monophonic="0.0"
+            <Processor Type="AHDSR" ID="ahdsrPartials" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
                        Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                        Release="20.0" EcoMode="1.0">
@@ -495,8 +495,9 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="SimpleGain" ID="Simple Gain1" Bypassed="0" Gain="-15.27999973297119"
-                       Delay="0.0" Width="100.0" Balance="0.0" InvertPolarity="0.0">
+            <Processor Type="SimpleGain" ID="synthPartialsGainControl" Bypassed="0"
+                       Gain="-33.59000015258789" Delay="0.0" Width="100.0" Balance="0.0"
+                       InvertPolarity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -513,8 +514,9 @@
               </ChildProcessors>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="synthPartialsEQ" Bypassed="0" NumFilters="0"
-                       FFTEnabled="0">
+            <Processor Type="CurveEq" ID="synthPartialsEQ" Bypassed="0" NumFilters="1"
+                       Band0="-4.965517044067383" Band1="100.857177734375" Band2="0.8500000238418579"
+                       Band3="1.0" Band4="1.0" FFTEnabled="1">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
