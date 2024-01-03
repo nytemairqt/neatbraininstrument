@@ -7381,7 +7381,7 @@
         </Nodes>
         <Parameters/>
       </Node>
-      <Node ID="lowPass" FactoryPath="filters.one_pole" Bypassed="1">
+      <Node ID="lowPass" FactoryPath="filters.one_pole" Bypassed="0">
         <ComplexData>
           <Filters>
             <Filter Index="-1" EmbeddedData=""/>

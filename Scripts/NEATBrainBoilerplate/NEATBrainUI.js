@@ -71,6 +71,20 @@ inline function onknbPartialRandomSingleControl(component, value)
 	synthPartials.setAttribute(synthPartials.pitchRandomSingleIntensity, value);
 }
 
+// Falloff Intensity
+
+inline function onknbPartialFalloffIntensityControl(component, value)
+{
+	synthPartials.setAttribute(synthPartials.pitchFalloffIntensity, value);
+}
+
+// Falloff Decay
+
+inline function onknbPartialFalloffDecayControl(component, value)
+{
+	synthPartials.setAttribute(synthPartials.pitchFalloffDecay, value);
+}
+
 // Filter Static
 inline function onknbPartialFilterControl(component, value)
 {
@@ -81,6 +95,18 @@ inline function onknbPartialFilterControl(component, value)
 inline function onknbPartialDampenControl(component, value)
 {
 	synthPartials.setAttribute(synthPartials.filterFalloffDecay, value);
+}
+
+// Stiffness Type
+inline function onknbPartialStiffnessTypeControl(component, value)
+{
+	synthPartials.setAttribute(synthPartials.stiffnessType, value);
+}
+
+// Stiffness Intensity
+inline function onknbPartialStiffnessIntensityControl(component, value)
+{
+	synthPartials.setAttribute(synthPartials.stiffnessIntensity, value);
 }
 
 // Residue
@@ -129,8 +155,9 @@ Content.getComponent("knbMasterPan").setControlCallback(onknbMasterPanControl);
 const lblResidue = createLabel("lblResidue", 487, 0, 128, 64, 24, "Residue_");
 const lblModes = createLabel("lblModes", 15, 0, 128, 64, 24, "Modes_");
 
-const lblModesGain = createLabel("lblModesGain", -30, 80 , 128, 32, 20, "Gain");
-const lblModesDrift = createLabel("lblModesDrift", -30, lblModesGain.get("y") + 140 , 128, 32, 20, "Drift");
+const lblPartialGain = createLabel("lblPartialGain", -30, 80 , 128, 32, 20, "Gain");
+const lblPartialDrift = createLabel("lblPartialDrift", -30, lblPartialGain.get("y") + 140 , 128, 32, 20, "Drift");
+const lblPartialTone = createLabel("lblPartialTone", -30, lblPartialDrift.get("y") + 140, 128, 32, 20, "Tone");
 
 /* Instantiate Buttons */
 
@@ -141,16 +168,20 @@ const btnShowAdvancedPanel = createButton("btnShowAdvancedPanel", 471, 227, 24, 
 
 // Partials
 
-const knbPartialAttack = createKnob("knbPartialAttack", 75, lblModesGain.get("y") + 30, 48, 48, "Attack", true, onknbPartialAttackControl, 5, 1000, 1.0, 5);
-const knbPartialDecay = createKnob("knbPartialDecay", knbPartialAttack.get("x") + 100, lblModesGain.get("y") + 30, 48, 48, "Decay", true, onknbPartialDecayControl, 500, 20000, 1.0, 15000);
-const knbPartialSustain = createKnob("knbPartialSustain", knbPartialAttack.get("x") + 200, lblModesGain.get("y") + 30, 48, 48, "Sustain", true, onknbPartialSustainControl, -100, 0, 1.0, -100);
-const knbPartialRelease = createKnob("knbPartialRelease", knbPartialAttack.get("x") + 300, lblModesGain.get("y") + 30, 48, 48, "Release", true, onknbPartialReleaseControl, 5, 15000, 1.0, 200);
+const knbPartialAttack = createKnob("knbPartialAttack", 75, lblPartialGain.get("y") + 30, 48, 48, "Attack", true, onknbPartialAttackControl, 5, 1000, 1.0, 5);
+const knbPartialDecay = createKnob("knbPartialDecay", knbPartialAttack.get("x") + 100, lblPartialGain.get("y") + 30, 48, 48, "Decay", true, onknbPartialDecayControl, 500, 20000, 1.0, 15000);
+const knbPartialSustain = createKnob("knbPartialSustain", knbPartialAttack.get("x") + 200, lblPartialGain.get("y") + 30, 48, 48, "Sustain", true, onknbPartialSustainControl, -100, 0, 1.0, -100);
+const knbPartialRelease = createKnob("knbPartialRelease", knbPartialAttack.get("x") + 300, lblPartialGain.get("y") + 30, 48, 48, "Release", true, onknbPartialReleaseControl, 5, 15000, 1.0, 200);
 
-const knbPartialRandomGlobal = createKnob("knbPartialRandomGlobal", 75, lblModesDrift.get("y") + 30, 48, 48, "RandomGlobal", true, onknbPartialRandomGlobalControl, 0.0, 1.0, 0.01, 0.1);
-const knbPartialRandomSingle = createKnob("knbPartialRandomSingle", knbPartialRandomGlobal.get("x") + 100, lblModesDrift.get("y") + 30, 48, 48, "RandomSingle", true, onknbPartialRandomSingleControl, 0.0, 1.0, 0.01, 0.1);
+const knbPartialRandomGlobal = createKnob("knbPartialRandomGlobal", 75, lblPartialDrift.get("y") + 30, 48, 48, "RandomGlobal", true, onknbPartialRandomGlobalControl, 0.0, 1.0, 0.01, 0.1);
+const knbPartialRandomSingle = createKnob("knbPartialRandomSingle", knbPartialRandomGlobal.get("x") + 100, lblPartialDrift.get("y") + 30, 48, 48, "RandomSingle", true, onknbPartialRandomSingleControl, 0.0, 1.0, 0.01, 0.1);
+const knbPartialFalloffIntensity = createKnob("knbPartialFalloffIntensity", knbPartialRandomSingle.get("x") + 100, lblPartialDrift.get("y") + 30, 48, 48, "FalloffIntensity", true, onknbPartialFalloffIntensityControl, 0.0, 1.0, 0.01, 0.1);
+const knbPartialFalloffDecay = createKnob("knbPartialFalloffDecay", knbPartialFalloffIntensity.get("x") + 100, lblPartialDrift.get("y") + 30, 48, 48, "FalloffDecay", true, onknbPartialFalloffDecayControl, 0, 40000, 1.0, 2200);
 
-const knbPartialFilter = createKnob("knbPartialFilter", 75, 400, 48, 48, "Filter", true, onknbPartialFilterControl, 300, 4000, 1.0, 1200);
-const knbPartialDampen = createKnob("knbPartialDampen", 175, 400, 48, 48, "Dampening", true, onknbPartialDampenControl, 0.0, 1.0, 0.01, 0.0);
+const knbPartialFilter = createKnob("knbPartialFilter", 75, lblPartialTone.get("y") + 30, 48, 48, "Filter", true, onknbPartialFilterControl, 50, 20000, 1.0, 4000);
+const knbPartialDampen = createKnob("knbPartialDampen", knbPartialFilter.get("x") + 100, lblPartialTone.get("y") + 30, 48, 48, "Dampening", true, onknbPartialDampenControl, 0.0, 1.0, 0.01, 0.0);
+const knbPartialStiffnessType = createKnob("knbPartialStiffnessType", knbPartialDampen.get("x") + 100, lblPartialTone.get("y") + 30, 48, 48, "StiffnessType", true, onknbPartialStiffnessTypeControl, 0.0, 1.0, 1.0, 1.0);
+const knbPartialStiffnessIntensity = createKnob("knbPartialStiffnessIntensity", knbPartialStiffnessType.get("x") + 100, lblPartialTone.get("y") + 30, 48, 48, "StiffnessIntensity", true, onknbPartialStiffnessIntensityControl, 0.0, 1.0, 0.01, 0.0);
 
 // Residue
 
@@ -169,9 +200,15 @@ const lblPartialRelease = createLabel("lblPartialRelease", knbPartialRelease.get
 
 const lblPartialRandomGlobal = createLabel("lblPartialRandomGlobal", knbPartialRandomGlobal.get("x") - 39, knbPartialRandomGlobal.get("y") + 50, 128, 32, 16, "Global");
 const lblPartialRandomSingle = createLabel("lblPartialRandomSingle", knbPartialRandomSingle.get("x") - 40, knbPartialRandomGlobal.get("y") + 50, 128, 32, 16, "Inter");
+const lblPartialFalloffIntensity = createLabel("lblPartialFalloffIntensity", knbPartialFalloffIntensity.get("x") - 40, knbPartialRandomGlobal.get("y") + 50, 128, 32, 16, "Falloff");
+const lblPartialFalloffDecay = createLabel("lblPartialFalloffDecay", knbPartialFalloffDecay.get("x") - 40, knbPartialRandomGlobal.get("y") + 50, 128, 32, 16, "Decay");
 
 const lblPartialFilter = createLabel("lblPartialFilter", knbPartialFilter.get("x") - 40, knbPartialFilter.get("y") + 50, 128, 32, 16, "Filter");
 const lblPartialDampen = createLabel("lblPartialDampen", knbPartialDampen.get("x") - 40, knbPartialDampen.get("y") + 50, 128, 32, 16, "Dampen");
+const lblPartialStiffnessType = createLabel("lblPartialStiffnessType", knbPartialStiffnessType.get("x") - 40, knbPartialStiffnessType.get("y") + 50, 128, 32, 16, "Type");
+const lblPartialStiffnessA = createLabel("lblPartialStiffnessA", knbPartialStiffnessType.get("x") - 75, knbPartialStiffnessType.get("y") + 37, 128, 32, 16, "A");
+const lblPartialStiffnessB = createLabel("lblPartialStiffnessB", knbPartialStiffnessType.get("x") - 5, knbPartialStiffnessType.get("y") + 37, 128, 32, 16, "B");
+const lblPartialStiffnessIntensity = createLabel("lblPartialStiffnessIntensity", knbPartialStiffnessIntensity.get("x") - 40, knbPartialStiffnessIntensity.get("y") + 50, 128, 32, 16, "Amount");
 
 // Residue
 const lblResidueAttack = createLabel("lblResidueAttack", knbResidueAttack.get("x") - 39, knbResidueAttack.get("y") + 50, 128, 32, 16, "Attack");
@@ -200,5 +237,5 @@ lblRatios_R.set("visible", STEREO_INSTRUMENT);
 /* Setup Misc Defaults */
 
 knbPartialSustain.set("middlePosition", -12.0);
-knbPartialFilter.set("middlePosition", 1400);
+knbPartialFilter.set("middlePosition", 12000);
 
