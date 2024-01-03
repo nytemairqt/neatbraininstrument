@@ -29,6 +29,8 @@
             <Control type="ScriptSlider" id="knbCoarseDetune" value="0.0"/>
             <Control type="ScriptSlider" id="knbFineDetune" value="0.0"/>
             <Control type="ScriptSlider" id="knbTranspose" value="0.0"/>
+            <Control type="ScriptSlider" id="knbPartialRandomGlobal" value="0.1000000014901161"/>
+            <Control type="ScriptSlider" id="knbPartialRandomSingle" value="0.1000000014901161"/>
           </Content>
           <UIData Source="neatbraininstrumentUIData"/>
         </Processor>
