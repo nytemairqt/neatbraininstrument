@@ -14,7 +14,7 @@ include("RhapsodyBoilerplate/includes/Spinner.js");
 
 const NUM_MODES = MODES_L.length;
 const INITIALIZE_RATIOS = false;
-var STEREO_INSTRUMENT = false;
+var STEREO_INSTRUMENT = true;
 
 /* NEATBrain External Files */
 

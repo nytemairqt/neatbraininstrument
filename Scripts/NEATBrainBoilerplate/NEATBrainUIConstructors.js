@@ -83,9 +83,9 @@ inline function createChildPanel(id, x, y, width, height)
 
 	p.setPaintRoutine(function(g)
 	{
-		g.fillAll(Colours.withAlpha(Colours.grey, 0.4));
-		//g.setColour(Colours.withAlpha(Colours.grey, 1.0));			
+		g.fillAll(pnlBodyColour);
 
+		//g.fillAll(Colours.withAlpha(Colours.grey, 0.4));
 	});
 	
 	return p;

@@ -65,9 +65,9 @@ pnlBody.setPaintRoutine(function(g)
 {
 	g.fillAll(pnlBodyColour);
 	g.setColour(Colours.withAlpha(0xFFB1C1C1, .3));
-	g.drawLine(30, 30, 30, 20, 1.5);
-	g.drawLine(30, this.getWidth() / 2, 20, 20, 1.5);
-	g.drawLine(this.getWidth() / 2, this.getWidth() / 2, 20, this.getHeight() - 60, 1.5);
-	g.drawLine(this.getWidth() / 2, this.getWidth() - 30, this.getHeight() - 60, this.getHeight() - 60, 1.5);
-	g.drawLine(this.getWidth() - 30, this.getWidth() - 30, this.getHeight() - 60, this.getHeight() - 70, 1.5);
+	g.drawLine(10, 10, 20, 10, 1.5);
+	g.drawLine(10, this.getWidth() / 2, 10, 10, 1.5);
+	g.drawLine(this.getWidth() / 2, this.getWidth() / 2, 10, this.getHeight() - 50, 1.5);
+	g.drawLine(this.getWidth() / 2, this.getWidth() - 10, this.getHeight() - 50, this.getHeight() - 50, 1.5);
+	g.drawLine(this.getWidth() - 10, this.getWidth() - 10, this.getHeight() - 50, this.getHeight() - 60, 1.5);
 });

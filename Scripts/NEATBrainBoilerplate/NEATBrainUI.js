@@ -10,9 +10,6 @@ const SliderPack_RatiosR = Content.getComponent("SliderPack_RatiosR");
 for (i = 0; i < 128; i++)
    	Engine.setKeyColour(i, Colours.withAlpha(Colours.black, 0.2));
    	
-
-
-
 /* UI Control Methods */
 
 // Reset Ratios
@@ -141,8 +138,8 @@ const knbResidueRelease = createKnob("knbResidueRelease", 864, 110, 48, 48, "Rel
 /* Instantiate Labels */
 
 // Partials
-const lblResidue = createLabel("lblResidue", 487, 10, 128, 64, 24, "Residue_");
-const lblModes = createLabel("lblModes", 15, 10, 128, 64, 24, "Modes_");
+const lblResidue = createLabel("lblResidue", 487, 0, 128, 64, 24, "Residue_");
+const lblModes = createLabel("lblModes", 15, 0, 128, 64, 24, "Modes_");
 
 const lblPartialAttack = createLabel("lblPartialAttack", knbPartialAttack.get("x") - 39, knbPartialAttack.get("y") + 50, 128, 32, 16, "Attack");
 const lblPartialDecay = createLabel("lblPartialDecay", knbPartialDecay.get("x") - 40, knbPartialDecay.get("y") + 50, 128, 32, 16, "Decay");
@@ -161,16 +158,20 @@ const lblResidueRelease = createLabel("lblResidueRelease", knbResidueRelease.get
 /* Create Advanced Panel */
 
 const pnlAdvancedPartialSettings = createChildPanel("pnlAdvancedPartialSettings", 498, 20, 459, 482);
-//pnlAdvancedPartialSettings.set("visible", 0);
-
+const lblAdvancedPartialSettings = createLabel("lblAdvancedPartialSettings", -4, -20, 128, 64, 24, "Advanced_");
+const lblRatios_L = createLabel("lblRatios_L", -26, 44, 128, 32, 16, "Ratios L");
+const lblRatios_R = createLabel("lblRatios_R", -26, 193, 128, 32, 16, "Ratios R");
 
 SliderPack_RatiosL.set("parentComponent", "pnlAdvancedPartialSettings");
-//SliderPack_RatiosL.set("x", 0);
-//SliderPack_RatiosL.set("y", 0);
 SliderPack_RatiosR.set("parentComponent", "pnlAdvancedPartialSettings");
-//Content.setPropertiesFromJSON(SliderPack_RatiosL, {parentComponent: pnlAdvancedPartialSettings});
-//Content.setPropertiesFromJSON(SliderPack_RatiosR, {parentComponent: pnlAdvancedPartialSettings});
+lblAdvancedPartialSettings.set("parentComponent", "pnlAdvancedPartialSettings");
+lblRatios_L.set("parentComponent", "pnlAdvancedPartialSettings");
+lblRatios_R.set("parentComponent", "pnlAdvancedPartialSettings");
 
+SliderPack_RatiosR.set("visible", STEREO_INSTRUMENT);
+lblRatios_R.set("visible", STEREO_INSTRUMENT);
+	
+	
 
 /* Setup Misc Defaults */
 
