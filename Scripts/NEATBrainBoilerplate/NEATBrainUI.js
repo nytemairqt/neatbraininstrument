@@ -37,10 +37,7 @@ inline function onbtnResetRatiosControl(component, value)
 
 inline function onbtnShowAdvancedPanelControl(component, value)
 {
-	if (value)	
-		Console.print("opened!");
-	else
-		Console.print("closed!");
+	pnlAdvancedPartialSettings.set("visible", value);
 }
 
 // Partials
@@ -72,7 +69,7 @@ inline function onknbPartialFilterControl(component, value)
 }
 
 // Filter Decay
-inline function onknbPartialDampeningControl(component, value)
+inline function onknbPartialDampenControl(component, value)
 {
 	synthPartials.setAttribute(synthPartials.filterFalloffDecay, value);
 }
@@ -127,7 +124,7 @@ const btnShowAdvancedPanel = createButton("btnShowAdvancedPanel", 471, 227, 24, 
 
 // Partials
 const knbPartialFilter = createKnob("knbPartialFilter", 100, 400, 48, 48, "Filter", true, onknbPartialFilterControl, 300, 4000, 1.0, 1200);
-const knbPartialDampening = createKnob("knbPartialDampening", 200, 400, 48, 48, "Dampening", true, onknbPartialDampeningControl, 0.0, 1.0, 0.01, 0.0);
+const knbPartialDampen = createKnob("knbPartialDampen", 200, 400, 48, 48, "Dampening", true, onknbPartialDampenControl, 0.0, 1.0, 0.01, 0.0);
 
 const knbPartialAttack = createKnob("knbPartialAttack", 75, 110, 48, 48, "Attack", true, onknbPartialAttackControl, 5, 1000, 1.0, 5);
 const knbPartialDecay = createKnob("knbPartialDecay", 175, 110, 48, 48, "Decay", true, onknbPartialDecayControl, 500, 20000, 1.0, 15000);
@@ -147,16 +144,33 @@ const knbResidueRelease = createKnob("knbResidueRelease", 864, 110, 48, 48, "Rel
 const lblResidue = createLabel("lblResidue", 487, 10, 128, 64, 24, "Residue_");
 const lblModes = createLabel("lblModes", 15, 10, 128, 64, 24, "Modes_");
 
-const lblPartialAttack = createLabel("lblPartialAttack", knbPartialAttack.get("x") - 39, 160, 128, 32, 16, "Attack");
-const lblPartialDecay = createLabel("lblPartialDecay", knbPartialDecay.get("x") - 40, 160, 128, 32, 16, "Decay");
-const lblPartialSustain = createLabel("lblPartialSustain", knbPartialSustain.get("x") - 40, 160, 128, 32, 16, "Sustain");
-const lblPartialRelease = createLabel("lblPartialRelease", knbPartialRelease.get("x") - 38, 160, 128, 32, 16, "Release");
+const lblPartialAttack = createLabel("lblPartialAttack", knbPartialAttack.get("x") - 39, knbPartialAttack.get("y") + 50, 128, 32, 16, "Attack");
+const lblPartialDecay = createLabel("lblPartialDecay", knbPartialDecay.get("x") - 40, knbPartialDecay.get("y") + 50, 128, 32, 16, "Decay");
+const lblPartialSustain = createLabel("lblPartialSustain", knbPartialSustain.get("x") - 40, knbPartialSustain.get("y") + 50, 128, 32, 16, "Sustain");
+const lblPartialRelease = createLabel("lblPartialRelease", knbPartialRelease.get("x") - 38, knbPartialRelease.get("y") + 50, 128, 32, 16, "Release");
+
+const lblPartialFilter = createLabel("lblPartialFilter", knbPartialFilter.get("x") - 40, knbPartialFilter.get("y") + 50, 128, 32, 16, "Filter");
+const lblPartialDampen = createLabel("lblPartialDampen", knbPartialDampen.get("x") - 40, knbPartialDampen.get("y") + 50, 128, 32, 16, "Dampen");
 
 // Residue
-const lblResidueAttack = createLabel("lblResidueAttack", knbResidueAttack.get("x") - 39, 160, 128, 32, 16, "Attack");
-const lblResidueDecay = createLabel("lblResidueDecay", knbResidueDecay.get("x") - 40, 160, 128, 32, 16, "Decay");
-const lblResidueSustain = createLabel("lblResidueSustain", knbResidueSustain.get("x") - 40, 160, 128, 32, 16, "Sustain");
-const lblResidueRelease = createLabel("lblResidueRelease", knbResidueRelease.get("x") - 38, 160, 128, 32, 16, "Release");
+const lblResidueAttack = createLabel("lblResidueAttack", knbResidueAttack.get("x") - 39, knbResidueAttack.get("y") + 50, 128, 32, 16, "Attack");
+const lblResidueDecay = createLabel("lblResidueDecay", knbResidueDecay.get("x") - 40, knbResidueDecay.get("y") + 50, 128, 32, 16, "Decay");
+const lblResidueSustain = createLabel("lblResidueSustain", knbResidueSustain.get("x") - 40, knbResidueSustain.get("y") + 50, 128, 32, 16, "Sustain");
+const lblResidueRelease = createLabel("lblResidueRelease", knbResidueRelease.get("x") - 38, knbResidueRelease.get("y") + 50, 128, 32, 16, "Release");
+
+/* Create Advanced Panel */
+
+const pnlAdvancedPartialSettings = createChildPanel("pnlAdvancedPartialSettings", 498, 20, 459, 482);
+//pnlAdvancedPartialSettings.set("visible", 0);
+
+
+SliderPack_RatiosL.set("parentComponent", "pnlAdvancedPartialSettings");
+//SliderPack_RatiosL.set("x", 0);
+//SliderPack_RatiosL.set("y", 0);
+SliderPack_RatiosR.set("parentComponent", "pnlAdvancedPartialSettings");
+//Content.setPropertiesFromJSON(SliderPack_RatiosL, {parentComponent: pnlAdvancedPartialSettings});
+//Content.setPropertiesFromJSON(SliderPack_RatiosR, {parentComponent: pnlAdvancedPartialSettings});
+
 
 /* Setup Misc Defaults */
 

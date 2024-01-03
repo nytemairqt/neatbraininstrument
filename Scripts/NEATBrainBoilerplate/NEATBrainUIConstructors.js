@@ -83,10 +83,8 @@ inline function createChildPanel(id, x, y, width, height)
 
 	p.setPaintRoutine(function(g)
 	{
-		g.fillAll(Colours.withAlpha(Colours.grey, 0.0));
-		g.setColour(Colours.withAlpha(Colours.grey, 1.0));
-		g.setFont("bold", this.data.fontSize);
-		g.drawAlignedText(this.data.text, [0, 0, this.getWidth(), this.getHeight()], "centred");
+		g.fillAll(Colours.withAlpha(Colours.grey, 0.4));
+		//g.setColour(Colours.withAlpha(Colours.grey, 1.0));			
 
 	});
 	
