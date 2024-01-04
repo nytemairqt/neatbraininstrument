@@ -38,4 +38,6 @@
   <UseGlobalAppDataFolderWindows value="No"/>
   <UseGlobalAppDataFolderMacOS value="No"/>
   <DefaultUserPreset value=""/>
+  <CompileWithPerfetto value="No"/>
+  <CompileWithDebugSymbols value="No"/>
 </ProjectSettings>

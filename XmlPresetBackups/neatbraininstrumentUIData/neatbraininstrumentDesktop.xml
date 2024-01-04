@@ -149,9 +149,9 @@
                  y="390" text="StiffnessIntensity" width="48" height="48" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblPartialStiffnessIntensity" x="335"
                  y="440" width="128" height="32" text="Amount" parentComponent="pnlBody"/>
-      <Component type="ScriptPanel" id="lblPartialStiffnessA" x="200" y="440"
+      <Component type="ScriptPanel" id="lblPartialStiffnessA" x="200" y="427"
                  width="128" height="32" text="A" parentComponent="pnlBody"/>
-      <Component type="ScriptPanel" id="lblPartialStiffnessB" x="270" y="440"
+      <Component type="ScriptPanel" id="lblPartialStiffnessB" x="270" y="427"
                  width="128" height="32" text="B" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblPartialStiffnessType" x="235" y="440"
                  width="128" height="32" text="Type" parentComponent="pnlBody"/>

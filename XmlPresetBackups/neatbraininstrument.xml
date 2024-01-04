@@ -500,7 +500,7 @@
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
             <Processor Type="SimpleGain" ID="synthPartialsGainControl" Bypassed="0"
-                       Gain="-40.0" Delay="0.0" Width="100.0" Balance="0.0" InvertPolarity="0.0">
+                       Gain="-32.0" Delay="0.0" Width="100.0" Balance="0.0" InvertPolarity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -518,7 +518,7 @@
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
             <Processor Type="CurveEq" ID="synthPartialsEQ" Bypassed="0" NumFilters="1"
-                       Band0="-4.965517044067383" Band1="100.857177734375" Band2="0.8500000238418579"
+                       Band0="-4.965517044067383" Band1="95.66703033447266" Band2="0.8500000238418579"
                        Band3="1.0" Band4="1.0" FFTEnabled="1">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
