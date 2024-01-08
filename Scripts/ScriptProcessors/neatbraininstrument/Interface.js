@@ -16,6 +16,7 @@ const NUM_MODES = MODES_L.length;
 const INITIALIZE_RATIOS = false;
 var STEREO_INSTRUMENT = true;
 reg randomGlobalIntensity = .1;
+reg randomGlobalDirection = 0.5;
 reg randomGlobalBang = 0.0;
 
 /* NEATBrain External Files */
@@ -101,7 +102,15 @@ if (isDefined(MODES_R))
 
 function onNoteOn()
 {
-	randomGlobalBang = (Math.randInt(-100, 100) * synthPartials.getAttribute(synthPartials.pitchRandomGlobalIntensity));	
+	//randomGlobalBang = (Math.randInt(-1, 1) * synthPartials.getAttribute(synthPartials.pitchRandomGlobalIntensity));	
+	
+	// Global Random
+	randomGlobalDirection = Math.random();	
+	if (randomGlobalDirection > .5)
+		randomGlobalBang = Math.random();
+	else 
+		randomGlobalBang = 0-Math.random();
+
 	synthPartials.setAttribute(synthPartials.pitchRandomGlobalBang, randomGlobalBang);
 	//ScriptnodeSyntesiser1.setAttribute(ScriptnodeSyntesiser1.pitchRandomGlobalBang, randomGlobalBang);
 	//Console.print(synthPartials.getAttribute(synthPartials.pitchRandomGlobalIntensity));

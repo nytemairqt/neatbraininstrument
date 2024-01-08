@@ -1,6 +1,6 @@
 /* Constructors */
    	
-inline function createButton(id, x, y, width, height, text, saveInPreset, callback, isMomentary, visible)
+inline function createButton(id, x, y, width, height, text, saveInPreset, callback, isMomentary, visible, parent)
 {
 	local b = Content.addButton(id, x, y);
 	
@@ -13,13 +13,13 @@ inline function createButton(id, x, y, width, height, text, saveInPreset, callba
 	b.setControlCallback(callback);
 	
 	Content.setPropertiesFromJSON(id, {
-	          parentComponent: "pnlBody"
+	          parentComponent: parent
 		});
 	
 	return b;
 }
 
-inline function createKnob(id, x, y, width, height, text, saveInPreset, callback, minValue, maxValue, stepSize, defaultValue)
+inline function createKnob(id, x, y, width, height, text, saveInPreset, callback, minValue, maxValue, stepSize, defaultValue, parent)
 {
 	local k = Content.addKnob(id, x, y);
 	
@@ -35,7 +35,7 @@ inline function createKnob(id, x, y, width, height, text, saveInPreset, callback
 	k.setControlCallback(callback);
 
 	Content.setPropertiesFromJSON(id, {
-          parentComponent: "pnlBody"
+          parentComponent: parent
 	});
 
 	k.setLocalLookAndFeel(LAFSliderNEATBrain); // move this to outside the constructor...
@@ -43,7 +43,7 @@ inline function createKnob(id, x, y, width, height, text, saveInPreset, callback
 	return k;
 }
 
-inline function createLabel(id, x, y, width, height, fontSize, text)
+inline function createLabel(id, x, y, width, height, fontSize, text, parent)
 {
 	local p = Content.addPanel(id, x, y);
 
@@ -55,7 +55,7 @@ inline function createLabel(id, x, y, width, height, fontSize, text)
 	p.data.fontSize = fontSize;
 	
 	Content.setPropertiesFromJSON(id, {
-          parentComponent: "pnlBody"
+          parentComponent: parent
 	});
 
 	p.setPaintRoutine(function(g)

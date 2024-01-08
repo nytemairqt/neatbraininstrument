@@ -2,4 +2,5 @@
 
 // Partial Synth
 const synthPartials = Synth.getChildSynth("synthPartials");
-const var synthPartialsEQ = Synth.getEffect("synthPartialsEQ");
+const synthPartialsEQ = Synth.getEffect("synthPartialsEQ");
+const ahdsrPartials = Synth.getModulator("ahdsrPartials");
