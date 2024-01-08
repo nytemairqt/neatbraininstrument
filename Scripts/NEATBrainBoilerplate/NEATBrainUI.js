@@ -215,8 +215,8 @@ const lblResidueRelease = createLabel("lblResidueRelease", knbResidueRelease.get
 
 /* Advanced Panel */
 
-const btnShowAdvancedPanel = createButton("btnShowAdvancedPanel", 471, 227, 24, 80, "open", false, onbtnShowAdvancedPanelControl, false, true, "pnlBody");
-const pnlAdvanced = createChildPanel("pnlAdvanced", 498, 20, 459, 482);
+const btnShowAdvancedPanel = createButton("btnShowAdvancedPanel", 471, 200, 24, 160, "open", false, onbtnShowAdvancedPanelControl, false, true, "pnlBody");
+const pnlAdvanced = createChildPanel("pnlAdvanced", 498, 20, 480, 482);
 
 const lblAdvanced = createLabel("lblAdvanced", -8, -26, 128, 64, 24, "Advanced_", "pnlAdvanced", Colours.grey, "centred");
 const lblRatios_L = createLabel("lblRatios_L", SliderPack_RatiosL.get("x") + 350, SliderPack_RatiosL.get("y") + 96, 128, 32, 16, "Ratios L", "pnlAdvanced", Colours.grey, "centred");
@@ -285,4 +285,8 @@ Content.setPropertiesFromJSON("knbResidueGain", {
 
 knbPartialSustain.set("middlePosition", -12.0);
 knbPartialFilter.set("middlePosition", 3000);
+
+/* Custom LAF */
+
+btnShowAdvancedPanel.setLocalLookAndFeel(LAFButtonShowAdvancedPanel);
 

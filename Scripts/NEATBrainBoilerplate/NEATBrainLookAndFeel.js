@@ -1,6 +1,7 @@
-const var LAFSliderNEATBrain = Content.createLocalLookAndFeel();
+const LAFSliderNEATBrain = Content.createLocalLookAndFeel();
+const LAFButtonShowAdvancedPanel = Content.createLocalLookAndFeel();
 
-const var pnlBody = Content.getComponent("pnlBody");
+const pnlBody = Content.getComponent("pnlBody");
 
 const pnlBodyColour = 0xff2f2f34;
 
@@ -16,12 +17,11 @@ LAFSliderNEATBrain.registerFunction("drawRotarySlider", function(g, obj)
 {
     var ringWidth = obj.area[2] / 16;    
     
-    //background
-    
+    // Background    
     g.setColour(0x33000000);
     g.fillEllipse(reduced(obj, ringWidth * 2.0));
     
-    //arc
+    // Arc
     var sliderRing2 = Content.createPath();
     var sliderRing3 = Content.createPath();
 
@@ -32,35 +32,51 @@ LAFSliderNEATBrain.registerFunction("drawRotarySlider", function(g, obj)
 
     var start = -Math.PI*0.75;
 
-    //unfilled ring
+    // Unfilled ring
     sliderRing3.addArc([0.0, 0.0, 1.0, 1.0], start, Math.max(start, start + Math.PI * 1.5 * obj.valueNormalized));
     g.setColour(obj.hover ? 0xFF292929 : 0xFF262626);
     g.drawPath(sliderRing2, reduced(obj, ringWidth), ringWidth * 2);
-
-    //filled ring
-    //g.setColour(obj.hover? Colours.white : Colours.lightblue);
-    //g.setColour(Colours.lightblue);
-    //g.setColour(0xFF99D4D4); //matte light blue
-    //g.setColour(0xFFD0E6E6); //offwhite
-    //g.setColour(0xFFB1C1C1); // light grey
-    
+   
     g.setColour(obj.hover ? 0xFFD0E6E6 : 0xFFB1C1C1);
     g.drawPath(sliderRing3, reduced(obj, ringWidth), ringWidth * (1.6));
     
     g.rotate((1.0 - (obj.valueNormalized - 0.02)) * -1.5 * Math.PI, [obj.area[2] / 2, obj.area[3] / 2]);  
     
-    //Center Ellipse
-        
-    //g.setColour(obj.hover ? 0xFF2C2C2C : 0xFF1C1C1C);
+    // Center Ellipse        
     g.setColour(0xFF1C1C1C);
     g.fillEllipse(reduced(obj, obj.area[2] * .86));
 
-    //value line
-
+    // Value line
     g.setColour(Colours.lightgrey);    
     g.drawLine(obj.area[2] * .65, obj.area[2] * .83, obj.area[3] * .65, obj.area[3] * .83, 3);     
 });
 
+
+const miscTextAdvanced = ["A", "d", "v", "a", "n", "c", "e", "d"];
+const miscTextAdvancedOffset = 10;
+
+// Button Show Advanced Panel
+
+
+LAFButtonShowAdvancedPanel.registerFunction("drawToggleButton", function(g, obj)
+{
+	g.setFont("bold", 22);
+
+	g.setColour(obj.over ? 0xFFE2E3F3 : Colours.grey);
+	if (obj.value)
+		g.setColour(0xFFE2E3F3);
+	g.rotate(Math.toRadians(270), [obj.area[2] / 2, obj.area[3] / 2]);
+	for (i=0; i<miscTextAdvanced.length; i++)
+	{
+		g.drawText(miscTextAdvanced[i], [miscTextAdvancedOffset * i, 0, obj.area[2], obj.area[3]]); // lol
+	}
+	
+	
+     
+});
+
+
+// Main Panel
 pnlBody.setPaintRoutine(function(g)
 {
 	g.fillAll(pnlBodyColour);
