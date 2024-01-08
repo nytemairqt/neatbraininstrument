@@ -43,13 +43,15 @@ inline function createKnob(id, x, y, width, height, text, saveInPreset, callback
 	return k;
 }
 
-inline function createLabel(id, x, y, width, height, fontSize, text, parent)
+inline function createLabel(id, x, y, width, height, fontSize, text, parent, textColour, alignment)
 {
 	local p = Content.addPanel(id, x, y);
 
 	p.set("width", width);
 	p.set("height", height);
 	p.set("text", text);
+	p.data.textColour = textColour;
+	p.data.alignment = alignment;
 
 	p.data.text = text;
 	p.data.fontSize = fontSize;
@@ -61,10 +63,9 @@ inline function createLabel(id, x, y, width, height, fontSize, text, parent)
 	p.setPaintRoutine(function(g)
 	{
 		g.fillAll(Colours.withAlpha(Colours.grey, 0.0));
-		g.setColour(Colours.withAlpha(Colours.grey, 1.0));
+		g.setColour(this.data.textColour);
 		g.setFont("bold", this.data.fontSize);
-		g.drawAlignedText(this.data.text, [0, 0, this.getWidth(), this.getHeight()], "centred");
-
+		g.drawAlignedText(this.data.text, [0, 0, this.getWidth(), this.getHeight()], this.data.alignment);
 	});
 	
 	return p;

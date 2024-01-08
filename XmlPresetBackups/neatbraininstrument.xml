@@ -18,12 +18,12 @@
             <Control type="ScriptSlider" id="knbResidueDecay" value="15000.0"/>
             <Control type="ScriptSlider" id="knbResidueSustain" value="-100.0"/>
             <Control type="ScriptSlider" id="knbResidueRelease" value="200.0"/>
-            <Control type="ScriptSlider" id="knbPartialGain" value="0.7599999904632568"/>
+            <Control type="ScriptSlider" id="knbPartialGain" value="0.75"/>
             <Control type="ScriptSlider" id="knbPartialRandomGlobal" value="0.0"/>
             <Control type="ScriptSlider" id="knbPartialRandomSingle" value="0.6000000238418579"/>
             <Control type="ScriptSlider" id="knbPartialFalloffIntensity" value="0.0"/>
             <Control type="ScriptSlider" id="knbPartialFalloffDecay" value="19600.0"/>
-            <Control type="ScriptSlider" id="knbPartialFilter" value="602.0"/>
+            <Control type="ScriptSlider" id="knbPartialFilter" value="50.0"/>
             <Control type="ScriptSlider" id="knbPartialDampen" value="0.9700000286102295"/>
             <Control type="ScriptSlider" id="knbPartialStiffnessType" value="1.0"/>
             <Control type="ScriptSlider" id="knbPartialStiffnessIntensity" value="0.239999994635582"/>
@@ -36,6 +36,7 @@
             <Control type="ScriptSlider" id="knbCoarseDetune" value="0.0"/>
             <Control type="ScriptSlider" id="knbFineDetune" value="0.0"/>
             <Control type="ScriptSlider" id="knbTranspose" value="0.0"/>
+            <Control type="ScriptSlider" id="knbResidueGain" value="0.75"/>
           </Content>
           <UIData Source="neatbraininstrumentUIData"/>
         </Processor>
@@ -106,7 +107,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="StreamingSampler" ID="samplerResidueL" Bypassed="1" Gain="1.0"
+    <Processor Type="StreamingSampler" ID="samplerResidueL" Bypassed="1" Gain="0.75"
                Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
                SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="0.0"
@@ -162,7 +163,7 @@
         <channelData enabled="1" level="0.0" suffix=""/>
       </channels>
     </Processor>
-    <Processor Type="StreamingSampler" ID="samplerReleaseL" Bypassed="0" Gain="1.0"
+    <Processor Type="StreamingSampler" ID="samplerReleaseL" Bypassed="0" Gain="0.75"
                Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
                SamplerRepeatMode="3.0" RRGroupAmount="1.0" PitchTracking="0.0"
@@ -228,7 +229,7 @@
         <channelData enabled="1" level="0.0" suffix=""/>
       </channels>
     </Processor>
-    <Processor Type="StreamingSampler" ID="samplerNoiseL" Bypassed="0" Gain="1.0"
+    <Processor Type="StreamingSampler" ID="samplerNoiseL" Bypassed="0" Gain="0.75"
                Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
                SamplerRepeatMode="3.0" RRGroupAmount="1.0" PitchTracking="0.0"
@@ -284,7 +285,7 @@
         <channelData enabled="1" level="0.0" suffix=""/>
       </channels>
     </Processor>
-    <Processor Type="StreamingSampler" ID="samplerResidueR" Bypassed="1" Gain="1.0"
+    <Processor Type="StreamingSampler" ID="samplerResidueR" Bypassed="1" Gain="0.75"
                Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
                SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="0.0"
@@ -340,7 +341,7 @@
         <channelData enabled="1" level="0.0" suffix=""/>
       </channels>
     </Processor>
-    <Processor Type="StreamingSampler" ID="samplerReleaseR" Bypassed="0" Gain="1.0"
+    <Processor Type="StreamingSampler" ID="samplerReleaseR" Bypassed="0" Gain="0.75"
                Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
                SamplerRepeatMode="3.0" RRGroupAmount="1.0" PitchTracking="0.0"
@@ -406,7 +407,7 @@
         <channelData enabled="1" level="0.0" suffix=""/>
       </channels>
     </Processor>
-    <Processor Type="StreamingSampler" ID="samplerNoiseR" Bypassed="0" Gain="1.0"
+    <Processor Type="StreamingSampler" ID="samplerNoiseR" Bypassed="0" Gain="0.75"
                Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
                SamplerRepeatMode="3.0" RRGroupAmount="1.0" PitchTracking="0.0"
@@ -462,7 +463,7 @@
         <channelData enabled="1" level="0.0" suffix=""/>
       </channels>
     </Processor>
-    <Processor Type="ScriptSynth" ID="synthPartials" Bypassed="0" Gain="0.7599999904632568"
+    <Processor Type="ScriptSynth" ID="synthPartials" Bypassed="0" Gain="0.75"
                Balance="0.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                NumSliderPacks="2" NumDisplayBuffers="1">
       <ChildProcessors>
@@ -515,31 +516,6 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="PolyphonicFilter" ID="Filter1" Bypassed="0" Gain="0.0"
-                       Frequency="20000.0" Q="0.3199999928474426" Mode="6.0" Quality="262144.0"
-                       BipolarIntensity="0.0">
-              <ChildProcessors>
-                <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
-                           Intensity="1.0">
-                  <ChildProcessors>
-                    <Processor Type="KeyNumber" ID="Notenumber Modulator1" Bypassed="0" Intensity="1.0"
-                               MidiTableData="24.......yZgzC...vO...f+.HUW1C...vO">
-                      <ChildProcessors/>
-                    </Processor>
-                  </ChildProcessors>
-                </Processor>
-                <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
-                  <ChildProcessors/>
-                </Processor>
-                <Processor Type="ModulatorChain" ID="Bipolar Freq Modulation" Bypassed="0"
-                           Intensity="1.0">
-                  <ChildProcessors/>
-                </Processor>
-                <Processor Type="ModulatorChain" ID="Q Modulation" Bypassed="0" Intensity="1.0">
-                  <ChildProcessors/>
-                </Processor>
-              </ChildProcessors>
-            </Processor>
             <Processor Type="SimpleGain" ID="synthPartialsGainControl" Bypassed="0"
                        Gain="-23.38999938964844" Delay="0.0" Width="100.0" Balance="0.0"
                        InvertPolarity="0.0">
@@ -629,10 +605,10 @@
   <MidiAutomation>
     <Controller Controller="7" Processor="Interface" MacroIndex="-1" Start="-100.0"
                 End="0.0" FullStart="-100.0" FullEnd="0.0" Skew="3.492788620791155"
-                Interval="0.01" Attribute="lblPartialStiffnessIntensity" Inverted="0"/>
+                Interval="0.01" Attribute="lblPartialStiffnessB" Inverted="0"/>
     <Controller Controller="10" Processor="Interface" MacroIndex="-1" Start="-100.0"
                 End="100.0" FullStart="-100.0" FullEnd="100.0" Skew="1.0" Interval="0.01"
-                Attribute="lblPartialDrift" Inverted="0"/>
+                Attribute="lblPartialTone" Inverted="0"/>
   </MidiAutomation>
   <MPEData Enabled="0"/>
 </Processor>

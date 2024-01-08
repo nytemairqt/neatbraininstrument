@@ -44,9 +44,9 @@
                height="565.0" bgColour="0" itemColour="4281282356" itemColour2="4281282356"
                textColour="0" parentComponent="pnlContainer" borderSize="0.0"
                borderRadius="12.0">
-      <Component type="ScriptPanel" id="lblResidue" x="487" y="0" width="128"
+      <Component type="ScriptPanel" id="lblResidue" x="483" y="-6" width="128"
                  height="64" text="Residue_" parentComponent="pnlBody"/>
-      <Component type="ScriptPanel" id="lblModes" x="15" y="0" width="128" height="64"
+      <Component type="ScriptPanel" id="lblModes" x="-10" y="-6" width="128" height="64"
                  text="Modes_" parentComponent="pnlBody"/>
       <Component type="ScriptButton" id="btnShowAdvancedPanel" x="471" y="227"
                  width="24" height="80" text="open" saveInPreset="0" parentComponent="pnlBody"/>
@@ -93,17 +93,19 @@
       <Component type="ScriptPanel" id="pnlAdvancedPartialSettings" x="498.0"
                  y="20.0" width="459.0" height="482.0" parentComponent="pnlBody"
                  visible="0.0"/>
-      <Component type="ScriptPanel" id="lblPartialGain" x="-30" y="390" width="128"
-                 height="32" text="Gain" parentComponent="pnlBody"/>
-      <Component type="ScriptSlider" id="knbPartialGain" x="305" y="26" style="Horizontal"
+      <Component type="ScriptSlider" id="knbPartialGain" x="380" y="25" style="Horizontal"
                  middlePosition="0.5" suffix=" dB" text="Gain" width="100" height="16"
-                 parentComponent="pnlBody" defaultValue="1.0" mode="Decibel" bgColour="0"
-                 itemColour="4285493103" itemColour2="4292333756" textColour="4281611319"
-                 dragDirection="Horizontal" showTextBox="0"/>
-      <Component type="ScriptPanel" id="lblResidueGain" x="467" y="390" width="128"
-                 height="32" text="Gain" parentComponent="pnlBody"/>
+                 parentComponent="pnlBody" defaultValue="0.75" mode="Decibel"
+                 bgColour="0" itemColour="4285493103" itemColour2="4292333756"
+                 textColour="4281611319" dragDirection="Horizontal" showTextBox="0"/>
+      <Component type="ScriptPanel" id="lblPartialADSR" x="-30" y="390" width="128"
+                 height="32" text="Env" parentComponent="pnlBody"/>
+      <Component type="ScriptPanel" id="lblResidueADSR" x="467" y="390" width="128"
+                 height="32" text="Env" parentComponent="pnlBody"/>
+      <Component type="ScriptPanel" id="lblPartialGain" x="240" y="0" width="128"
+                 height="64" text="VOL" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="pnlAdvanced" x="498" y="20" width="459"
-                 height="482" parentComponent="pnlBody">
+                 height="482" parentComponent="pnlBody" visible="0.0">
         <Component type="ScriptPanel" id="lblRatios_L" x="367" y="133" width="128"
                    height="32" text="Ratios L" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblRatios_R" x="367" y="263" width="128"
@@ -161,13 +163,21 @@
         <Component type="ScriptSliderPack" id="SliderPack_RatiosR" x="17.0" y="167.0"
                    sliderAmount="27.0" processorId="synthPartials" SliderPackIndex="1"
                    max="31.11000061035156" width="440.0" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblAdvanced" x="-4" y="-20" width="128"
+        <Component type="ScriptPanel" id="lblAdvanced" x="-8" y="-26" width="128"
                    height="64" text="Advanced_" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblPartialDrift" x="-31" y="275" width="128"
                    height="32" text="Drift" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblPartialTone" x="-31" y="370" width="128"
                    height="32" text="Tone" parentComponent="pnlAdvanced"/>
       </Component>
+      <Component type="ScriptPanel" id="lblResidueGain" x="740" y="0" width="128"
+                 height="64" text="VOL" parentComponent="pnlBody"/>
+      <Component type="ScriptSlider" id="knbResidueGain" x="880" y="25" style="Horizontal"
+                 middlePosition="-18.0" suffix=" dB" filmstripImage="Use default skin"
+                 linkedTo="" text="Gain" defaultValue="0.75" width="100" height="16"
+                 parentComponent="pnlBody" mode="Decibel" bgColour="0" itemColour="4285493103"
+                 itemColour2="4292333756" textColour="4281611319" dragDirection="Horizontal"
+                 showTextBox="0"/>
     </Component>
     <Component type="ScriptPanel" id="pnlStatusBar" x="5.0" y="585.0" text=""
                width="990.0" height="39.0" bgColour="0" itemColour="4281282356"
