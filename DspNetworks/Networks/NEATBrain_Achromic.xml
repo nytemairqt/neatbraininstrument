@@ -54,11 +54,11 @@
                 </ModulationTargets>
                 <ComplexData>
                   <SliderPacks>
-                    <SliderPack Index="0"/>
+                    <SliderPack Index="-1"/>
                   </SliderPacks>
                 </ComplexData>
                 <Parameters>
-                  <Parameter MinValue="1.0" MaxValue="2" StepSize="1.0" ID="NumClones" Value="2"/>
+                  <Parameter MinValue="1.0" MaxValue="3" StepSize="1.0" ID="NumClones" Value="3"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0"/>
                 </Parameters>
               </Node>
@@ -68,16 +68,13 @@
           <Node ID="container_ratiosR" FactoryPath="container.no_midi" Bypassed="0">
             <Nodes>
               <Node ID="sliderpack_ratiosR" FactoryPath="control.clone_pack" Bypassed="0">
-                <ModulationTargets>
-                  <Connection NodeId="sineR_0_pma_normalizer" ParameterId="Value"/>
-                </ModulationTargets>
                 <ComplexData>
                   <SliderPacks>
-                    <SliderPack Index="1"/>
+                    <SliderPack Index="-1"/>
                   </SliderPacks>
                 </ComplexData>
                 <Parameters>
-                  <Parameter MinValue="1.0" MaxValue="2" StepSize="1.0" ID="NumClones" Value="2"/>
+                  <Parameter MinValue="1.0" MaxValue="3" StepSize="1.0" ID="NumClones" Value="3"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0"/>
                 </Parameters>
               </Node>
@@ -87,7 +84,8 @@
         </Nodes>
         <Parameters/>
       </Node>
-      <Node ID="global_params" FactoryPath="container.split" Bypassed="0">
+      <Node ID="global_params" FactoryPath="container.split" Bypassed="0"
+            Folded="1">
         <Nodes>
           <Node ID="pitchModL" FactoryPath="container.chain" Bypassed="0">
             <Nodes>
@@ -175,14 +173,25 @@
               </Node>
               <Node ID="pitchBendL" FactoryPath="control.midi_cc" Bypassed="0">
                 <ModulationTargets>
-                  <Connection NodeId="pmaCombineBL" ParameterId="Add"/>
+                  <Connection NodeId="bipolarPitchBendL" ParameterId="Value"/>
                 </ModulationTargets>
                 <Parameters>
                   <Parameter MinValue="0.0" MaxValue="131.0" StepSize="1.0" ID="CCNumber"
                              Value="128.0"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="EnableMPE" Value="0.0"/>
-                  <Parameter MinValue="0.0" MaxValue="1.0" ID="DefaultValue" Value="0.0"/>
+                  <Parameter MinValue="0.0" MaxValue="1.0" ID="DefaultValue" Value="0.5"/>
                 </Parameters>
+              </Node>
+              <Node ID="bipolarPitchBendL" FactoryPath="control.bipolar" Bypassed="0">
+                <Parameters>
+                  <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Scale" Value="1.0"/>
+                  <Parameter MinValue="0.5" MaxValue="2.0" SkewFactor="0.6309297680854797"
+                             ID="Gamma" Value="1.0"/>
+                </Parameters>
+                <ModulationTargets>
+                  <Connection NodeId="pmaCombineBL" ParameterId="Add"/>
+                </ModulationTargets>
               </Node>
               <Node ID="pmaCombineBL" FactoryPath="control.pma_unscaled" Bypassed="0">
                 <ModulationTargets>
@@ -200,7 +209,7 @@
                 </Properties>
                 <Parameters>
                   <Parameter MinValue="1.0" MaxValue="40.0" StepSize="1.0" ID="NumClones"
-                             Value="2"/>
+                             Value="3"/>
                   <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" Automated="1"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Gamma" Value="0.0"/>
                 </Parameters>
@@ -211,7 +220,7 @@
             </Nodes>
             <Parameters/>
           </Node>
-          <Node ID="pitchModR" FactoryPath="container.chain" Bypassed="0">
+          <Node ID="pitchModR" FactoryPath="container.chain" Bypassed="0" Folded="1">
             <Nodes>
               <Node ID="midiVelocityR" FactoryPath="control.midi" Bypassed="0">
                 <Properties>
@@ -297,14 +306,25 @@
               </Node>
               <Node ID="pitchBendR" FactoryPath="control.midi_cc" Bypassed="0">
                 <ModulationTargets>
-                  <Connection NodeId="pmaCombineBR" ParameterId="Add"/>
+                  <Connection NodeId="bipolarPitchBendR" ParameterId="Value"/>
                 </ModulationTargets>
                 <Parameters>
                   <Parameter MinValue="0.0" MaxValue="131.0" StepSize="1.0" ID="CCNumber"
                              Value="128.0"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="EnableMPE" Value="0.0"/>
-                  <Parameter MinValue="0.0" MaxValue="1.0" ID="DefaultValue" Value="0.0"/>
+                  <Parameter MinValue="0.0" MaxValue="1.0" ID="DefaultValue" Value="0.5"/>
                 </Parameters>
+              </Node>
+              <Node ID="bipolarPitchBendR" FactoryPath="control.bipolar" Bypassed="0">
+                <Parameters>
+                  <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Scale" Value="1.0"/>
+                  <Parameter MinValue="0.5" MaxValue="2.0" SkewFactor="0.6309297680854797"
+                             ID="Gamma" Value="1.0"/>
+                </Parameters>
+                <ModulationTargets>
+                  <Connection NodeId="pmaCombineBR" ParameterId="Add"/>
+                </ModulationTargets>
               </Node>
               <Node ID="pmaCombineBR" FactoryPath="control.pma_unscaled" Bypassed="0">
                 <ModulationTargets>
@@ -322,13 +342,10 @@
                 </Properties>
                 <Parameters>
                   <Parameter MinValue="1.0" MaxValue="40.0" StepSize="1.0" ID="NumClones"
-                             Value="2"/>
+                             Value="3"/>
                   <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" Automated="1"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Gamma" Value="0.0"/>
                 </Parameters>
-                <ModulationTargets>
-                  <Connection NodeId="sineR_0_pmaPitchStack" ParameterId="Value"/>
-                </ModulationTargets>
               </Node>
             </Nodes>
             <Parameters/>
@@ -342,7 +359,7 @@
                 </Properties>
                 <Parameters>
                   <Parameter MinValue="1.0" MaxValue="40.0" StepSize="1.0" ID="NumClones"
-                             Value="2"/>
+                             Value="3"/>
                   <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" Value="1.0"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Gamma" Value="0.0"/>
                 </Parameters>
@@ -356,13 +373,10 @@
                 </Properties>
                 <Parameters>
                   <Parameter MinValue="1.0" MaxValue="40.0" StepSize="1.0" ID="NumClones"
-                             Value="2"/>
+                             Value="3"/>
                   <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" Value="1.0"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Gamma" Value="0.0"/>
                 </Parameters>
-                <ModulationTargets>
-                  <Connection NodeId="sineR_0_pmaRandomSingle" ParameterId="Value"/>
-                </ModulationTargets>
               </Node>
               <Node ID="container_cable_randomSingleIntensityL" FactoryPath="container.no_midi"
                     Bypassed="0">
@@ -374,7 +388,7 @@
                     </Properties>
                     <Parameters>
                       <Parameter MinValue="1.0" MaxValue="40.0" StepSize="1.0" ID="NumClones"
-                                 Value="2"/>
+                                 Value="3"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Gamma" Value="0.0"/>
                     </Parameters>
@@ -395,13 +409,10 @@
                     </Properties>
                     <Parameters>
                       <Parameter MinValue="1.0" MaxValue="40.0" StepSize="1.0" ID="NumClones"
-                                 Value="2"/>
+                                 Value="3"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Gamma" Value="0.0"/>
                     </Parameters>
-                    <ModulationTargets>
-                      <Connection NodeId="sineR_0_pmaRandomSingle" ParameterId="Multiply"/>
-                    </ModulationTargets>
                   </Node>
                 </Nodes>
                 <Parameters/>
@@ -474,7 +485,7 @@
                     </Properties>
                     <Parameters>
                       <Parameter MinValue="1.0" MaxValue="40.0" StepSize="1.0" ID="NumClones"
-                                 Value="2"/>
+                                 Value="3"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Gamma" Value="0.0"/>
                     </Parameters>
@@ -488,7 +499,8 @@
             </Nodes>
             <Parameters/>
           </Node>
-          <Node ID="chainLFODriftR" FactoryPath="container.chain" Bypassed="0">
+          <Node ID="chainLFODriftR" FactoryPath="container.chain" Bypassed="0"
+                Folded="1">
             <Nodes>
               <Node ID="noMidiLFODriftR" FactoryPath="container.no_midi" Bypassed="0">
                 <Nodes>
@@ -553,13 +565,10 @@
                     </Properties>
                     <Parameters>
                       <Parameter MinValue="1.0" MaxValue="40.0" StepSize="1.0" ID="NumClones"
-                                 Value="2"/>
+                                 Value="3"/>
                       <Parameter MinValue="-0.2" MaxValue="0.2" ID="Value" Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Gamma" Value="0.0"/>
                     </Parameters>
-                    <ModulationTargets>
-                      <Connection NodeId="sineR_0_pma_drift" ParameterId="Add"/>
-                    </ModulationTargets>
                   </Node>
                 </Nodes>
                 <Parameters/>
@@ -570,367 +579,254 @@
         </Nodes>
         <Parameters/>
       </Node>
-      <Node ID="multiChannel" FactoryPath="container.multi" Bypassed="0">
+      <Node ID="chainL" FactoryPath="container.chain" Bypassed="0" Folded="1">
         <Nodes>
-          <Node ID="chainL" FactoryPath="container.chain" Bypassed="0">
+          <Node ID="clonerL" FactoryPath="container.clone" Bypassed="0" ShowClones="0"
+                ShowParameters="1">
+            <Properties>
+              <Property ID="IsVertical" Value="0"/>
+            </Properties>
             <Nodes>
-              <Node ID="clonerL" FactoryPath="container.clone" Bypassed="0" ShowClones="0"
-                    ShowParameters="1">
-                <Properties>
-                  <Property ID="IsVertical" Value="0"/>
-                </Properties>
+              <Node ID="sineL_0_chain" FactoryPath="container.chain" Bypassed="0">
                 <Nodes>
-                  <Node ID="sineL_0_chain" FactoryPath="container.chain" Bypassed="0">
-                    <Nodes>
-                      <Node ID="sineL_0_pmaRandomSingle" FactoryPath="control.pma_unscaled"
-                            Bypassed="0">
-                        <ModulationTargets>
-                          <Connection NodeId="sineL_0_pma_drift" ParameterId="Value"/>
-                        </ModulationTargets>
-                        <Parameters>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Automated="1"/>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Value="0.0"/>
-                        </Parameters>
-                      </Node>
-                      <Node ID="sineL_0_pma_drift" FactoryPath="control.pma_unscaled" Bypassed="0">
-                        <ModulationTargets>
-                          <Connection NodeId="sineL_0_pmaPitchStack" ParameterId="Add"/>
-                        </ModulationTargets>
-                        <Parameters>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
-                        </Parameters>
-                      </Node>
-                      <Node ID="sineL_0_pmaPitchStack" FactoryPath="control.pma_unscaled"
-                            Bypassed="0">
-                        <ModulationTargets>
-                          <Connection NodeId="sineL_0_pma_output" ParameterId="Add"/>
-                        </ModulationTargets>
-                        <Parameters>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
-                        </Parameters>
-                      </Node>
-                      <Node ID="sineL_0_pma_normalizer" FactoryPath="control.pma_unscaled"
-                            Bypassed="0">
-                        <ModulationTargets>
-                          <Connection NodeId="sineL_0_pma_output" ParameterId="Value"/>
-                        </ModulationTargets>
-                        <Parameters>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Add" Value="0.0"/>
-                        </Parameters>
-                      </Node>
-                      <Node ID="sineL_0_pma_output" FactoryPath="control.pma_unscaled" Bypassed="0">
-                        <ModulationTargets>
-                          <Connection NodeId="sineL_0" ParameterId="Freq Ratio"/>
-                        </ModulationTargets>
-                        <Parameters>
-                          <Parameter MinValue="0.0" MaxValue="100.0" ID="Value" StepSize="0.01" Automated="1"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
-                        </Parameters>
-                      </Node>
-                      <Node ID="sineL_0" FactoryPath="core.oscillator" Bypassed="0">
-                        <ComplexData>
-                          <DisplayBuffers>
-                            <DisplayBuffer Index="-1"/>
-                          </DisplayBuffers>
-                        </ComplexData>
-                        <Parameters>
-                          <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
-                          <Parameter MinValue="0.3" MaxValue="20000.0" StepSize="0.1000000014901161"
-                                     SkewFactor="0.2299045622348785" ID="Frequency" Value="220.0"/>
-                          <Parameter MinValue="1.0" MaxValue="30.0" StepSize="1.0" ID="Freq Ratio"
-                                     Automated="1"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
-                        </Parameters>
-                      </Node>
-                    </Nodes>
-                    <Parameters/>
+                  <Node ID="sineL_0_pmaRandomSingle" FactoryPath="control.pma_unscaled"
+                        Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_0_pma_drift" ParameterId="Value"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Automated="1"/>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Value="0.0"/>
+                    </Parameters>
                   </Node>
-                  <Node ID="sineL_1_chain" FactoryPath="container.chain" Bypassed="0">
-                    <Nodes>
-                      <Node ID="sineL_1_pmaRandomSingle" FactoryPath="control.pma_unscaled"
-                            Bypassed="0">
-                        <ModulationTargets>
-                          <Connection NodeId="sineL_1_pma_drift" ParameterId="Value"/>
-                        </ModulationTargets>
-                        <Parameters>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0" StepSize="0.01"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Value="0.0"/>
-                        </Parameters>
-                      </Node>
-                      <Node ID="sineL_1_pma_drift" FactoryPath="control.pma_unscaled" Bypassed="0">
-                        <ModulationTargets>
-                          <Connection NodeId="sineL_1_pmaPitchStack" ParameterId="Add"/>
-                        </ModulationTargets>
-                        <Parameters>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Value="0.0"/>
-                        </Parameters>
-                      </Node>
-                      <Node ID="sineL_1_pmaPitchStack" FactoryPath="control.pma_unscaled"
-                            Bypassed="0">
-                        <ModulationTargets>
-                          <Connection NodeId="sineL_1_pma_output" ParameterId="Add"/>
-                        </ModulationTargets>
-                        <Parameters>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" Value="1.0" StepSize="0.01"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
-                        </Parameters>
-                      </Node>
-                      <Node ID="sineL_1_pma_normalizer" FactoryPath="control.pma_unscaled"
-                            Bypassed="0">
-                        <ModulationTargets>
-                          <Connection NodeId="sineL_1_pma_output" ParameterId="Value"/>
-                        </ModulationTargets>
-                        <Parameters>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0" StepSize="0.01"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Add" Value="0.0"/>
-                        </Parameters>
-                      </Node>
-                      <Node ID="sineL_1_pma_output" FactoryPath="control.pma_unscaled" Bypassed="0">
-                        <ModulationTargets>
-                          <Connection NodeId="sineL_1" ParameterId="Freq Ratio"/>
-                        </ModulationTargets>
-                        <Parameters>
-                          <Parameter MinValue="0.0" MaxValue="100.0" ID="Value" StepSize="0.01" Automated="1"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
-                        </Parameters>
-                      </Node>
-                      <Node ID="sineL_1" FactoryPath="core.oscillator" Bypassed="0">
-                        <ComplexData>
-                          <DisplayBuffers>
-                            <DisplayBuffer Index="-1"/>
-                          </DisplayBuffers>
-                        </ComplexData>
-                        <Parameters>
-                          <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
-                          <Parameter MinValue="0.3" MaxValue="20000.0" StepSize="0.1000000014901161"
-                                     SkewFactor="0.2299045622348785" ID="Frequency" Value="220.0"/>
-                          <Parameter MinValue="1.0" MaxValue="30.0" StepSize="1.0" ID="Freq Ratio"
-                                     Automated="1"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
-                        </Parameters>
-                      </Node>
-                    </Nodes>
-                    <Parameters/>
+                  <Node ID="sineL_0_pma_drift" FactoryPath="control.pma_unscaled" Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_0_pmaPitchStack" ParameterId="Add"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_0_pmaPitchStack" FactoryPath="control.pma" Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_0_pma_output" ParameterId="Add"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_0_pma_normalizer" FactoryPath="control.pma_unscaled"
+                        Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_0_pma_output" ParameterId="Value"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Add" Value="0.0"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_0_pma_output" FactoryPath="control.pma_unscaled" Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_0" ParameterId="Freq Ratio"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="0.0" MaxValue="100.0" ID="Value" StepSize="0.01" Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_0" FactoryPath="core.oscillator" Bypassed="0">
+                    <ComplexData>
+                      <DisplayBuffers>
+                        <DisplayBuffer Index="-1"/>
+                      </DisplayBuffers>
+                    </ComplexData>
+                    <Parameters>
+                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
+                      <Parameter MinValue="0.3" MaxValue="20000.0" StepSize="0.1000000014901161"
+                                 SkewFactor="0.2299045622348785" ID="Frequency" Value="220.0"/>
+                      <Parameter MinValue="1.0" MaxValue="30.0" StepSize="1.0" ID="Freq Ratio"
+                                 Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                    </Parameters>
                   </Node>
                 </Nodes>
-                <Parameters>
-                  <Parameter MinValue="1.0" MaxValue="2" StepSize="1.0" ID="NumClones" Value="2"/>
-                  <Parameter MinValue="0.0" MaxValue="2.0" StepSize="1.0" ID="SplitSignal"
-                             Value="1.0"/>
-                </Parameters>
+                <Parameters/>
               </Node>
-              <Node ID="jpanLeft" FactoryPath="jdsp.jpanner" Bypassed="0">
-                <Parameters>
-                  <Parameter MinValue="-1.0" MaxValue="1.0" ID="Pan" Value="-1.0"/>
-                  <Parameter MinValue="0.0" MaxValue="6.0" StepSize="1.0" ID="Rule" Value="1.0"/>
-                </Parameters>
-              </Node>
-            </Nodes>
-            <Parameters/>
-          </Node>
-          <Node ID="chainR" FactoryPath="container.chain" Bypassed="0" Folded="1">
-            <Nodes>
-              <Node ID="clonerR" FactoryPath="container.clone" Bypassed="0" ShowClones="0"
-                    ShowParameters="1">
-                <Properties>
-                  <Property ID="IsVertical" Value="0"/>
-                </Properties>
+              <Node ID="sineL_1_chain" FactoryPath="container.chain" Bypassed="0">
                 <Nodes>
-                  <Node ID="sineR_0_chain" FactoryPath="container.chain" Bypassed="0">
-                    <Nodes>
-                      <Node ID="sineR_0_pmaRandomSingle" FactoryPath="control.pma_unscaled"
-                            Bypassed="0">
-                        <ModulationTargets>
-                          <Connection NodeId="sineR_0_pma_drift" ParameterId="Value"/>
-                        </ModulationTargets>
-                        <Parameters>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Automated="1"/>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Value="0.0"/>
-                        </Parameters>
-                      </Node>
-                      <Node ID="sineR_0_pma_drift" FactoryPath="control.pma_unscaled" Bypassed="0">
-                        <ModulationTargets>
-                          <Connection NodeId="sineR_0_pmaPitchStack" ParameterId="Add"/>
-                        </ModulationTargets>
-                        <Parameters>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
-                        </Parameters>
-                      </Node>
-                      <Node ID="sineR_0_pmaPitchStack" FactoryPath="control.pma_unscaled"
-                            Bypassed="0">
-                        <ModulationTargets>
-                          <Connection NodeId="sineR_0_pma_output" ParameterId="Add"/>
-                        </ModulationTargets>
-                        <Parameters>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
-                        </Parameters>
-                      </Node>
-                      <Node ID="sineR_0_pma_normalizer" FactoryPath="control.pma_unscaled"
-                            Bypassed="0">
-                        <ModulationTargets>
-                          <Connection NodeId="sineR_0_pma_output" ParameterId="Value"/>
-                        </ModulationTargets>
-                        <Parameters>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Add" Value="0.0"/>
-                        </Parameters>
-                      </Node>
-                      <Node ID="sineR_0_pma_output" FactoryPath="control.pma_unscaled" Bypassed="0">
-                        <ModulationTargets>
-                          <Connection NodeId="sineR_0" ParameterId="Freq Ratio"/>
-                        </ModulationTargets>
-                        <Parameters>
-                          <Parameter MinValue="0.0" MaxValue="100.0" ID="Value" StepSize="0.01" Automated="1"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
-                        </Parameters>
-                      </Node>
-                      <Node ID="sineR_0" FactoryPath="core.oscillator" Bypassed="0">
-                        <ComplexData>
-                          <DisplayBuffers>
-                            <DisplayBuffer Index="-1"/>
-                          </DisplayBuffers>
-                        </ComplexData>
-                        <Parameters>
-                          <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
-                          <Parameter MinValue="0.3" MaxValue="20000.0" StepSize="0.1000000014901161"
-                                     SkewFactor="0.2299045622348785" ID="Frequency" Value="220.0"/>
-                          <Parameter MinValue="1.0" MaxValue="30.0" StepSize="1.0" ID="Freq Ratio"
-                                     Automated="1"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
-                        </Parameters>
-                      </Node>
-                    </Nodes>
-                    <Parameters/>
+                  <Node ID="sineL_1_pmaRandomSingle" FactoryPath="control.pma_unscaled"
+                        Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_1_pma_drift" ParameterId="Value"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0" StepSize="0.01"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Value="0.0"/>
+                    </Parameters>
                   </Node>
-                  <Node ID="sineR_1_chain" FactoryPath="container.chain" Bypassed="0">
-                    <Nodes>
-                      <Node ID="sineR_1_pmaRandomSingle" FactoryPath="control.pma_unscaled"
-                            Bypassed="0">
-                        <ModulationTargets>
-                          <Connection NodeId="sineR_1_pma_drift" ParameterId="Value"/>
-                        </ModulationTargets>
-                        <Parameters>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" Value="1.0" StepSize="0.01"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Value="0.0"/>
-                        </Parameters>
-                      </Node>
-                      <Node ID="sineR_1_pma_drift" FactoryPath="control.pma_unscaled" Bypassed="0">
-                        <ModulationTargets>
-                          <Connection NodeId="sineR_1_pmaPitchStack" ParameterId="Add"/>
-                        </ModulationTargets>
-                        <Parameters>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Value="0.0"/>
-                        </Parameters>
-                      </Node>
-                      <Node ID="sineR_1_pmaPitchStack" FactoryPath="control.pma_unscaled"
-                            Bypassed="0">
-                        <ModulationTargets>
-                          <Connection NodeId="sineR_1_pma_output" ParameterId="Add"/>
-                        </ModulationTargets>
-                        <Parameters>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" Value="1.0" StepSize="0.01"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
-                        </Parameters>
-                      </Node>
-                      <Node ID="sineR_1_pma_normalizer" FactoryPath="control.pma_unscaled"
-                            Bypassed="0">
-                        <ModulationTargets>
-                          <Connection NodeId="sineR_1_pma_output" ParameterId="Value"/>
-                        </ModulationTargets>
-                        <Parameters>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0" StepSize="0.01"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Add" Value="0.0"/>
-                        </Parameters>
-                      </Node>
-                      <Node ID="sineR_1_pma_output" FactoryPath="control.pma_unscaled" Bypassed="0">
-                        <ModulationTargets>
-                          <Connection NodeId="sineR_1" ParameterId="Freq Ratio"/>
-                        </ModulationTargets>
-                        <Parameters>
-                          <Parameter MinValue="0.0" MaxValue="100.0" ID="Value" StepSize="0.01" Automated="1"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
-                          <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
-                        </Parameters>
-                      </Node>
-                      <Node ID="sineR_1" FactoryPath="core.oscillator" Bypassed="0">
-                        <ComplexData>
-                          <DisplayBuffers>
-                            <DisplayBuffer Index="-1"/>
-                          </DisplayBuffers>
-                        </ComplexData>
-                        <Parameters>
-                          <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
-                          <Parameter MinValue="0.3" MaxValue="20000.0" StepSize="0.1000000014901161"
-                                     SkewFactor="0.2299045622348785" ID="Frequency" Value="220.0"/>
-                          <Parameter MinValue="1.0" MaxValue="30.0" StepSize="1.0" ID="Freq Ratio"
-                                     Automated="1"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
-                          <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
-                        </Parameters>
-                      </Node>
-                    </Nodes>
-                    <Parameters/>
+                  <Node ID="sineL_1_pma_drift" FactoryPath="control.pma_unscaled" Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_1_pmaPitchStack" ParameterId="Add"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Value="0.0"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_1_pmaPitchStack" FactoryPath="control.pma" Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_1_pma_output" ParameterId="Add"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" Value="1.0" StepSize="0.01"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_1_pma_normalizer" FactoryPath="control.pma_unscaled"
+                        Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_1_pma_output" ParameterId="Value"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0" StepSize="0.01"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Add" Value="0.0"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_1_pma_output" FactoryPath="control.pma_unscaled" Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_1" ParameterId="Freq Ratio"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="0.0" MaxValue="100.0" ID="Value" StepSize="0.01" Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_1" FactoryPath="core.oscillator" Bypassed="0">
+                    <ComplexData>
+                      <DisplayBuffers>
+                        <DisplayBuffer Index="-1"/>
+                      </DisplayBuffers>
+                    </ComplexData>
+                    <Parameters>
+                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
+                      <Parameter MinValue="0.3" MaxValue="20000.0" StepSize="0.1000000014901161"
+                                 SkewFactor="0.2299045622348785" ID="Frequency" Value="220.0"/>
+                      <Parameter MinValue="1.0" MaxValue="30.0" StepSize="1.0" ID="Freq Ratio"
+                                 Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                    </Parameters>
                   </Node>
                 </Nodes>
-                <Parameters>
-                  <Parameter MinValue="1.0" MaxValue="2" StepSize="1.0" ID="NumClones" Value="2"/>
-                  <Parameter MinValue="0.0" MaxValue="2.0" StepSize="1.0" ID="SplitSignal"
-                             Value="1.0"/>
-                </Parameters>
+                <Parameters/>
               </Node>
-              <Node ID="jpanRight" FactoryPath="jdsp.jpanner" Bypassed="0">
-                <Parameters>
-                  <Parameter MinValue="-1.0" MaxValue="1.0" ID="Pan" Value="1.0"/>
-                  <Parameter MinValue="0.0" MaxValue="6.0" StepSize="1.0" ID="Rule" Value="1.0"/>
-                </Parameters>
+              <Node ID="sineL_2_chain" FactoryPath="container.chain" Bypassed="0">
+                <Nodes>
+                  <Node ID="sineL_2_pmaRandomSingle" FactoryPath="control.pma_unscaled"
+                        Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_2_pma_drift" ParameterId="Value"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0" StepSize="0.01"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Value="0.0"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_2_pma_drift" FactoryPath="control.pma_unscaled" Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_2_pmaPitchStack" ParameterId="Add"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Value="0.0"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_2_pmaPitchStack" FactoryPath="control.pma" Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_2_pma_output" ParameterId="Add"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" Value="1.0" StepSize="0.01"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_2_pma_normalizer" FactoryPath="control.pma_unscaled"
+                        Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_2_pma_output" ParameterId="Value"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0" StepSize="0.01"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Add" Value="0.0"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_2_pma_output" FactoryPath="control.pma_unscaled" Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_2" ParameterId="Freq Ratio"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="0.0" MaxValue="100.0" ID="Value" StepSize="0.01" Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_2" FactoryPath="core.oscillator" Bypassed="0">
+                    <ComplexData>
+                      <DisplayBuffers>
+                        <DisplayBuffer Index="-1"/>
+                      </DisplayBuffers>
+                    </ComplexData>
+                    <Parameters>
+                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
+                      <Parameter MinValue="0.3" MaxValue="20000.0" StepSize="0.1000000014901161"
+                                 SkewFactor="0.2299045622348785" ID="Frequency" Value="220.0"/>
+                      <Parameter MinValue="1.0" MaxValue="30.0" StepSize="1.0" ID="Freq Ratio"
+                                 Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                    </Parameters>
+                  </Node>
+                </Nodes>
+                <Parameters/>
               </Node>
             </Nodes>
-            <Parameters/>
+            <Parameters>
+              <Parameter MinValue="1.0" MaxValue="3" StepSize="1.0" ID="NumClones" Value="3"/>
+              <Parameter MinValue="0.0" MaxValue="2.0" StepSize="1.0" ID="SplitSignal"
+                         Value="1.0"/>
+            </Parameters>
           </Node>
         </Nodes>
         <Parameters/>
       </Node>
-      <Node ID="tanhSplit" FactoryPath="container.split" Bypassed="0" Folded="1">
+      <Node ID="stiffnessSplit" FactoryPath="container.split" Bypassed="0">
         <Nodes>
-          <Node ID="tanhOff" FactoryPath="container.chain" Bypassed="0">
+          <Node ID="stiffnessOff" FactoryPath="container.chain" Bypassed="0">
             <Nodes>
-              <Node ID="tanhDry" FactoryPath="core.gain" Bypassed="0">
+              <Node ID="stiffnessDry" FactoryPath="core.gain" Bypassed="0">
                 <Parameters>
                   <Parameter MinValue="0" MaxValue="-100" StepSize="0.1000000014901161" SkewFactor="11.20230558362116"
-                             ID="Gain" Automated="1"/>
+                             ID="Gain" Value="0.0"/>
                   <Parameter MinValue="0.0" MaxValue="1000.0" StepSize="0.1000000014901161"
                              SkewFactor="0.3010300099849701" ID="Smoothing" Value="20.0"/>
                   <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
@@ -940,88 +836,84 @@
             </Nodes>
             <Parameters/>
           </Node>
-          <Node ID="tanhOn" FactoryPath="container.chain" Bypassed="0">
+          <Node ID="stiffnessOn" FactoryPath="container.chain" Bypassed="0" ShowParameters="1">
             <Nodes>
-              <Node ID="stiffnessSwitch" FactoryPath="container.chain" ShowParameters="1"
-                    Bypassed="0">
+              <Node ID="switcher" FactoryPath="control.xfader" Bypassed="0">
+                <Properties>
+                  <Property ID="NumParameters" Value="2"/>
+                  <Property ID="Mode" Value="Switch"/>
+                </Properties>
+                <SwitchTargets>
+                  <SwitchTarget>
+                    <Connections>
+                      <Connection NodeId="tanhBypass" ParameterId="Bypassed"/>
+                    </Connections>
+                  </SwitchTarget>
+                  <SwitchTarget>
+                    <Connections>
+                      <Connection NodeId="absBypass" ParameterId="Bypassed"/>
+                    </Connections>
+                  </SwitchTarget>
+                </SwitchTargets>
+                <Parameters>
+                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                </Parameters>
+              </Node>
+              <Node ID="sb_container" FactoryPath="container.split" Bypassed="0"
+                    ShowParameters="1">
                 <Nodes>
-                  <Node ID="switcher" FactoryPath="control.xfader" Bypassed="0">
-                    <Properties>
-                      <Property ID="NumParameters" Value="2"/>
-                      <Property ID="Mode" Value="Switch"/>
-                    </Properties>
-                    <SwitchTargets>
-                      <SwitchTarget>
-                        <Connections>
-                          <Connection NodeId="tanhBypass" ParameterId="Bypassed"/>
-                        </Connections>
-                      </SwitchTarget>
-                      <SwitchTarget>
-                        <Connections>
-                          <Connection NodeId="absBypass" ParameterId="Bypassed"/>
-                        </Connections>
-                      </SwitchTarget>
-                    </SwitchTargets>
-                    <Parameters>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
-                    </Parameters>
-                  </Node>
-                  <Node ID="sb_container" FactoryPath="container.chain" Bypassed="0">
-                    <Properties>
-                      <Property ID="IsVertical" Value="0"/>
-                    </Properties>
+                  <Node ID="tanhBypass" FactoryPath="container.soft_bypass" Bypassed="0">
                     <Nodes>
-                      <Node ID="tanhBypass" FactoryPath="container.soft_bypass" Bypassed="0">
+                      <Node ID="tanhSplit" FactoryPath="container.split" Bypassed="0">
                         <Nodes>
+                          <Node ID="tanhDry" FactoryPath="container.chain" Bypassed="0">
+                            <Nodes/>
+                            <Parameters/>
+                          </Node>
                           <Node ID="tanh" FactoryPath="math.tanh" Bypassed="0">
                             <Parameters>
                               <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0"/>
                             </Parameters>
                           </Node>
                         </Nodes>
-                        <Properties>
-                          <Property ID="SmoothingTime" Value="20"/>
-                        </Properties>
-                        <Parameters/>
-                      </Node>
-                      <Node ID="absBypass" FactoryPath="container.soft_bypass" Bypassed="0">
-                        <Nodes>
-                          <Node ID="absSplit" FactoryPath="container.split" Bypassed="0">
-                            <Nodes>
-                              <Node ID="absDrySignal" FactoryPath="container.chain" Bypassed="0">
-                                <Nodes/>
-                                <Parameters/>
-                              </Node>
-                              <Node ID="abs" FactoryPath="math.abs" Bypassed="0">
-                                <Parameters>
-                                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0"/>
-                                </Parameters>
-                              </Node>
-                            </Nodes>
-                            <Parameters/>
-                          </Node>
-                        </Nodes>
-                        <Properties>
-                          <Property ID="SmoothingTime" Value="20"/>
-                        </Properties>
                         <Parameters/>
                       </Node>
                     </Nodes>
                     <Parameters/>
+                    <Properties>
+                      <Property ID="SmoothingTime" Value="20"/>
+                    </Properties>
+                  </Node>
+                  <Node ID="absBypass" FactoryPath="container.soft_bypass" Bypassed="0"
+                        ShowParameters="0">
+                    <Nodes>
+                      <Node ID="absSplit" FactoryPath="container.split" Bypassed="0">
+                        <Nodes>
+                          <Node ID="absDry" FactoryPath="container.chain" Bypassed="0">
+                            <Nodes/>
+                            <Parameters/>
+                          </Node>
+                          <Node ID="abs" FactoryPath="math.abs" Bypassed="0">
+                            <Parameters>
+                              <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0"/>
+                            </Parameters>
+                          </Node>
+                        </Nodes>
+                        <Parameters/>
+                      </Node>
+                    </Nodes>
+                    <Parameters/>
+                    <Properties>
+                      <Property ID="SmoothingTime" Value="20"/>
+                    </Properties>
                   </Node>
                 </Nodes>
-                <Parameters>
-                  <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Type" Automated="1">
-                    <Connections>
-                      <Connection NodeId="switcher" ParameterId="Value"/>
-                    </Connections>
-                  </Parameter>
-                </Parameters>
+                <Parameters/>
               </Node>
-              <Node ID="tanhWet" FactoryPath="core.gain" Bypassed="0">
+              <Node ID="stiffnessWet" FactoryPath="core.gain" Bypassed="0">
                 <Parameters>
                   <Parameter MinValue="-100" MaxValue="0" StepSize="0.1000000014901161" SkewFactor="11.20230558362116"
-                             ID="Gain" Automated="1"/>
+                             ID="Gain" Value="0.0"/>
                   <Parameter MinValue="0.0" MaxValue="1000.0" StepSize="0.1000000014901161"
                              SkewFactor="0.3010300099849701" ID="Smoothing" Value="20.0"/>
                   <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
@@ -1029,12 +921,18 @@
                 </Parameters>
               </Node>
             </Nodes>
-            <Parameters/>
+            <Parameters>
+              <Parameter ID="Switch" MinValue="0.0" MaxValue="1.0" Automated="1">
+                <Connections>
+                  <Connection NodeId="switcher" ParameterId="Value"/>
+                </Connections>
+              </Parameter>
+            </Parameters>
           </Node>
         </Nodes>
         <Parameters/>
       </Node>
-      <Node ID="lowPass" FactoryPath="filters.one_pole" Bypassed="0">
+      <Node ID="lowPass" FactoryPath="filters.svf" Bypassed="0">
         <ComplexData>
           <Filters>
             <Filter Index="-1" EmbeddedData=""/>
@@ -1051,7 +949,7 @@
           <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Enabled" Value="1.0"/>
         </Parameters>
       </Node>
-      <Node ID="ahdsrFilter" FactoryPath="filters.one_pole" Bypassed="0">
+      <Node ID="ahdsrFilter" FactoryPath="filters.svf" Bypassed="0">
         <ComplexData>
           <Filters>
             <Filter Index="-1" EmbeddedData=""/>
@@ -1154,7 +1052,7 @@
       <Parameter ID="stiffnessType" MinValue="0.0" MaxValue="1.0" StepSize="1.0"
                  Value="0.0">
         <Connections>
-          <Connection NodeId="stiffnessSwitch" ParameterId="Type"/>
+          <Connection NodeId="stiffnessOn" ParameterId="Switch"/>
         </Connections>
       </Parameter>
     </Parameters>

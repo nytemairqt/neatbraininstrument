@@ -215,7 +215,7 @@ const lblResidueRelease = createLabel("lblResidueRelease", knbResidueRelease.get
 
 /* Advanced Panel */
 
-const btnShowAdvancedPanel = createButton("btnShowAdvancedPanel", 471, 200, 24, 160, "open", false, onbtnShowAdvancedPanelControl, false, true, "pnlBody");
+const btnShowAdvancedPanel = createButton("btnShowAdvancedPanel", 471, 200, 24, 100, "open", false, onbtnShowAdvancedPanelControl, false, true, "pnlBody");
 const pnlAdvanced = createChildPanel("pnlAdvanced", 498, 20, 480, 482);
 
 const lblAdvanced = createLabel("lblAdvanced", -8, -26, 128, 64, 24, "Advanced_", "pnlAdvanced", Colours.grey, "centred");

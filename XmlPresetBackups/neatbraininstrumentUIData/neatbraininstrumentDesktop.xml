@@ -48,8 +48,8 @@
                  height="64" text="Residue_" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblModes" x="-10" y="-6" width="128" height="64"
                  text="Modes_" parentComponent="pnlBody"/>
-      <Component type="ScriptButton" id="btnShowAdvancedPanel" x="471" y="200"
-                 width="24" height="160" text="open" saveInPreset="0" parentComponent="pnlBody"/>
+      <Component type="ScriptButton" id="btnShowAdvancedPanel" x="471.0" y="200.0"
+                 width="20" height="90" text="open" saveInPreset="0" parentComponent="pnlBody"/>
       <Component type="ScriptSlider" id="knbPartialAttack" x="75" y="420" stepSize="1.0"
                  min="5" max="1000" text="Attack" defaultValue="5.0" width="48"
                  height="48" parentComponent="pnlBody"/>

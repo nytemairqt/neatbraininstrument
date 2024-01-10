@@ -11,16 +11,16 @@
           <Content>
             <Control type="ScriptButton" id="btnPresetBrowser" value="0"/>
             <Control type="ScriptSlider" id="knbPartialAttack" value="5.0"/>
-            <Control type="ScriptSlider" id="knbPartialDecay" value="500.0"/>
+            <Control type="ScriptSlider" id="knbPartialDecay" value="20000.0"/>
             <Control type="ScriptSlider" id="knbPartialSustain" value="-100.0"/>
             <Control type="ScriptSlider" id="knbPartialRelease" value="5.0"/>
             <Control type="ScriptSlider" id="knbResidueAttack" value="5.0"/>
             <Control type="ScriptSlider" id="knbResidueDecay" value="15000.0"/>
             <Control type="ScriptSlider" id="knbResidueSustain" value="-100.0"/>
             <Control type="ScriptSlider" id="knbResidueRelease" value="200.0"/>
-            <Control type="ScriptSlider" id="knbPartialGain" value="0.75"/>
+            <Control type="ScriptSlider" id="knbPartialGain" value="0.9900000095367432"/>
             <Control type="ScriptSlider" id="knbResidueGain" value="0.75"/>
-            <Control type="ScriptSlider" id="knbPartialRandomGlobal" value="0.0"/>
+            <Control type="ScriptSlider" id="knbPartialRandomGlobal" value="1.0"/>
             <Control type="ScriptSlider" id="knbPartialRandomSingle" value="0.6000000238418579"/>
             <Control type="ScriptSlider" id="knbPartialFalloffIntensity" value="0.0"/>
             <Control type="ScriptSlider" id="knbPartialFalloffDecay" value="19600.0"/>
@@ -463,7 +463,7 @@
         <channelData enabled="1" level="0.0" suffix=""/>
       </channels>
     </Processor>
-    <Processor Type="ScriptSynth" ID="synthPartials" Bypassed="0" Gain="0.75"
+    <Processor Type="ScriptSynth" ID="synthPartials" Bypassed="0" Gain="0.9900000095367432"
                Balance="0.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                NumSliderPacks="2" NumDisplayBuffers="1">
       <ChildProcessors>
@@ -474,7 +474,7 @@
           <ChildProcessors>
             <Processor Type="AHDSR" ID="ahdsrPartials" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                       Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="500.0" Sustain="-100.0"
+                       Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
                        Release="5.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -517,8 +517,7 @@
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
             <Processor Type="SimpleGain" ID="synthPartialsGainControl" Bypassed="0"
-                       Gain="-23.38999938964844" Delay="0.0" Width="100.0" Balance="0.0"
-                       InvertPolarity="0.0">
+                       Gain="-23.0" Delay="0.0" Width="100.0" Balance="0.0" InvertPolarity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>

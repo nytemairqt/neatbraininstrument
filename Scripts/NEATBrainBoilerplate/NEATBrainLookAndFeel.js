@@ -68,7 +68,7 @@ LAFButtonShowAdvancedPanel.registerFunction("drawToggleButton", function(g, obj)
 	g.rotate(Math.toRadians(270), [obj.area[2] / 2, obj.area[3] / 2]);
 	for (i=0; i<miscTextAdvanced.length; i++)
 	{
-		g.drawText(miscTextAdvanced[i], [miscTextAdvancedOffset * i, 0, obj.area[2], obj.area[3]]); // lol
+		g.drawAlignedText(miscTextAdvanced[i], [(miscTextAdvancedOffset * i) - 40, 0, obj.area[2], obj.area[3]], "right"); // lol
 	}
 	
 	
