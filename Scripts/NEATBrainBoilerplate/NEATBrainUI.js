@@ -12,7 +12,7 @@ for (i = 0; i < 128; i++)
    	
 /* UI Control Methods */
 
-// Reset Ratios
+// Reset All Controls
 inline function onbtnResetRatiosControl(component, value)
 {
 	if (!value)
@@ -29,6 +29,15 @@ inline function onbtnResetRatiosControl(component, value)
 	    SliderPack_RatiosR.changed();    
 	}
 };
+
+// Randomize All Controls
+inline function onbtnRandomRatiosControl(component, value)
+{
+	if (!value)
+		return;
+}
+
+
 
 // Open Advanced Panel
 
@@ -112,7 +121,6 @@ inline function onknbPartialDampenControl(component, value)
 }
 
 // Stiffness Types
-
 inline function onbtnPartialStiffnessTypeAControl(component, value)
 {
 	if (value)
@@ -186,10 +194,7 @@ Content.getComponent("knbMasterPan").setControlCallback(onknbMasterPanControl);
 /* Partials */
 
 const lblModes = createLabel("lblModes", -10, -6, 128, 64, 24, "Modes_", "pnlBody", Colours.grey, "centred");
-
-const lblPartialADSR = createLabel("lblPartialADSR", -30, 390 , 128, 32, 20, "Env", "pnlBody", Colours.grey, "centred");
-
-
+const lblPartialADSR = createLabel("lblPartialADSR", -30, 402 , 128, 32, 20, "Env", "pnlBody", Colours.grey, "centred");
 
 const lblPartialGain = createLabel("lblPartialGain", 240, 0, 128, 64, 14, "VOL", "pnlBody", Colours.grey, "right");
 const knbPartialGain = createKnob("knbPartialGain", lblPartialGain.get("x") + 140, lblPartialGain.get("y") + 25, 100, 16, "Gain", true, onknbPartialGainControl, 0, 1, 0.01, .75, "pnlBody");
@@ -199,21 +204,19 @@ const knbPartialDecay = createKnob("knbPartialDecay", knbPartialAttack.get("x") 
 const knbPartialSustain = createKnob("knbPartialSustain", knbPartialAttack.get("x") + 200, lblPartialADSR.get("y") + 30, 48, 48, "Sustain", true, onknbPartialSustainControl, -100, 0, 1.0, -100, "pnlBody");
 const knbPartialRelease = createKnob("knbPartialRelease", knbPartialAttack.get("x") + 300, lblPartialADSR.get("y") + 30, 48, 48, "Release", true, onknbPartialReleaseControl, 5, 15000, 1.0, 200, "pnlBody");
 
-
 const lblPartialAttack = createLabel("lblPartialAttack", knbPartialAttack.get("x") - 39, knbPartialAttack.get("y") + 50, 128, 32, 16, "Attack", "pnlBody", Colours.grey, "centred");
 const lblPartialDecay = createLabel("lblPartialDecay", knbPartialDecay.get("x") - 40, knbPartialDecay.get("y") + 50, 128, 32, 16, "Decay", "pnlBody", Colours.grey, "centred");
 const lblPartialSustain = createLabel("lblPartialSustain", knbPartialSustain.get("x") - 40, knbPartialSustain.get("y") + 50, 128, 32, 16, "Sustain", "pnlBody", Colours.grey, "centred");
 const lblPartialRelease = createLabel("lblPartialRelease", knbPartialRelease.get("x") - 38, knbPartialRelease.get("y") + 50, 128, 32, 16, "Release", "pnlBody", Colours.grey, "centred");
 
-
 /* Residue */
 
 const lblResidue = createLabel("lblResidue", 483, -6, 128, 64, 24, "Residue_", "pnlBody", Colours.grey, "centred");
+
 const lblResidueGain = createLabel("lblResidueGain", 740, 0, 128, 64, 14, "VOL", "pnlBody", Colours.grey, "right");
 const knbResidueGain = createKnob("knbResidueGain", lblResidueGain.get("x") + 140, lblResidueGain.get("y") + 25, 100, 16, "Gain", true, onknbResidueGainControl, 0, 1, 0.01, .75, "pnlBody");
 
-
-const lblResidueADSR = createLabel("lblResidueADSR", 467, 390, 128, 32, 20, "Env", "pnlBody", Colours.grey, "centred");
+const lblResidueADSR = createLabel("lblResidueADSR", 467, lblPartialADSR.get("y"), 128, 32, 20, "Env", "pnlBody", Colours.grey, "centred");
 
 const knbResidueAttack = createKnob("knbResidueAttack", 573, lblResidueADSR.get("y") + 30, 48, 48, "Attack", true, onknbResidueAttackControl, 5, 1000, 1.0, 5, "pnlBody");
 const knbResidueDecay = createKnob("knbResidueDecay", knbResidueAttack.get("x") + 100, lblResidueADSR.get("y") + 30, 48, 48, "Decay", true, onknbResidueDecayControl, 500, 20000, 1.0, 15000, "pnlBody");
@@ -228,16 +231,19 @@ const lblResidueRelease = createLabel("lblResidueRelease", knbResidueRelease.get
 /* Advanced Panel */
 
 const btnShowAdvancedPanel = createButton("btnShowAdvancedPanel", 471, 200, 24, 100, "open", false, onbtnShowAdvancedPanelControl, false, true, "pnlBody");
-const pnlAdvanced = createChildPanel("pnlAdvanced", 498, 20, 480, 482);
+const pnlAdvanced = createChildPanel("pnlAdvanced", 498, 20, 480, 490, "pnlBody");
 
-const btnResetRatios = createButton("btnResetRatios", 430, 0, 24, 24, "reset", false, onbtnResetRatiosControl, true, true, "pnlAdvanced");
-const btnRandomRatios = createButton("btnRandomRatios", 410, -2, 24, 24, "reset", false, onbtnResetRatiosControl, true, true, "pnlAdvanced");
+
+
+const btnResetRatios = createButton("btnResetRatios", 300, -8, 70, 32, "Reset", false, onbtnResetRatiosControl, true, true, "pnlAdvanced");
+const btnRandomRatios = createButton("btnRandomRatios", 360, -8, 70, 32, "Random", false, onbtnRandomRatiosControl, true, true, "pnlAdvanced");
+
 
 const lblAdvanced = createLabel("lblAdvanced", -8, -26, 128, 64, 24, "Advanced_", "pnlAdvanced", Colours.grey, "centred");
 const lblRatios_L = createLabel("lblRatios_L", SliderPack_RatiosL.get("x") + 350, SliderPack_RatiosL.get("y") + 96, 128, 32, 16, "Ratios L", "pnlAdvanced", Colours.grey, "centred");
 const lblRatios_R = createLabel("lblRatios_R", SliderPack_RatiosR.get("x") + 350, SliderPack_RatiosR.get("y") + 96, 128, 32, 16, "Ratios R", "pnlAdvanced", Colours.grey, "centred");
 
-const lblPartialSculpt = createLabel("lblPartialSculpt", -31, SliderPack_RatiosR.get("y") + 203, 128, 32, 20, "Sculpt", "pnlAdvanced", Colours.grey, "centred");
+const lblPartialSculpt = createLabel("lblPartialSculpt", -31, SliderPack_RatiosR.get("y") + 215, 128, 32, 20, "Sculpt", "pnlAdvanced", Colours.grey, "centred");
 
 const knbPartialRandomGlobal = createKnob("knbPartialRandomGlobal", 75, lblPartialSculpt.get("y") - 70, 48, 48, "RandomGlobal", true, onknbPartialRandomGlobalControl, 0.0, 1.0, 0.01, 0.02, "pnlAdvanced");
 const knbPartialRandomSingle = createKnob("knbPartialRandomSingle", knbPartialRandomGlobal.get("x") + 100, lblPartialSculpt.get("y") - 70, 48, 48, "RandomSingle", true, onknbPartialRandomSingleControl, 0.0, 1.0, 0.01, 0.1, "pnlAdvanced");
@@ -270,9 +276,6 @@ const lblPartialFalloffDecay = createLabel("lblPartialFalloffDecay", knbPartialF
 const lblPartialDriftIntensity = createLabel("lblPartialDriftIntensity", knbPartialDriftIntensity.get("x") - 40, knbPartialDriftIntensity.get("y") + 50, 128, 32, 16, "Drift", "pnlAdvanced", Colours.grey, "centred");
 const lblPartialFilter = createLabel("lblPartialFilter", knbPartialFilter.get("x") - 40, knbPartialFilter.get("y") + 50, 128, 32, 16, "Filter", "pnlAdvanced", Colours.grey, "centred");
 const lblPartialDampen = createLabel("lblPartialDampen", knbPartialDampen.get("x") - 40, knbPartialDampen.get("y") + 50, 128, 32, 16, "Dampen", "pnlAdvanced", Colours.grey, "centred");
-//const lblPartialStiffnessType = createLabel("lblPartialStiffnessType", knbPartialStiffnessType.get("x") - 40, knbPartialStiffnessType.get("y") + 50, 128, 32, 16, "Type", "pnlAdvanced", Colours.grey, "centred");
-//const lblPartialStiffnessA = createLabel("lblPartialStiffnessA", knbPartialStiffnessType.get("x") - 75, knbPartialStiffnessType.get("y") + 37, 128, 32, 16, "A", "pnlAdvanced", Colours.grey, "centred");
-//const lblPartialStiffnessB = createLabel("lblPartialStiffnessB", knbPartialStiffnessType.get("x") - 5, knbPartialStiffnessType.get("y") + 37, 128, 32, 16, "B", "pnlAdvanced", Colours.grey, "centred");
 const lblPartialStiffnessIntensity = createLabel("lblPartialStiffnessIntensity", knbPartialStiffnessIntensity.get("x") - 40, knbPartialStiffnessIntensity.get("y") + 50, 128, 32, 16, "Stiffness", "pnlAdvanced", Colours.grey, "centred");
 
 SliderPack_RatiosL.set("parentComponent", "pnlAdvanced");
@@ -308,6 +311,91 @@ Content.setPropertiesFromJSON("knbResidueGain", {
 	    "showTextBox": false		    
 	});	
 
+/* Info Popup Panel */
+
+const pnlInfoPopup = createChildPanel("pnlInfoPopup", 10, 10, 485, 510, "pnlBody");
+pnlInfoPopup.set("visible", 0);
+
+// need to include text as a JSON object and iterate through the lines
+
+const jsonInfoSubtitles = ["RATIOS", "GLOBAL", "INTER", "FALLOFF", "DECAY", "DRIFT", "FILTER", "DAMPEN", "STIFFNESS"];
+
+const jsonInfoPopup = [
+"Control Individual Partial Frequencies.",
+"The amount of Global pitch randomization per note.",
+"The amount of frequency randomization for each Partial.",
+"The amount of upward pitch drift when playing harder velocities.",
+"The time it takes for the Falloff to return to the base value.",
+"The amount of time-varying pitch-drift applied to the Partials.",
+"The cutoff frequency of a lowpass SVF filter.",
+"Softens high frequencies over time, creating a dampening effect.",
+"The amount and type of additional overtones added to Partialss"
+ ];
+
+pnlInfoPopup.setPaintRoutine(function(g)
+{	
+	g.fillAll(pnlBodyColour);
+	g.setFont("bold", 24);
+    
+    g.setColour(0xFFE2E3F3);
+    g.drawAlignedText("Memory Journal", [0, 0, this.getWidth(), this.getHeight()], "centredTop");
+    
+    var baseVerticalOffset = 180;
+    var verticalOffset = 24;
+    
+    g.setFont("bold", 16);
+    
+    g.setColour(Colours.grey);
+    
+    g.drawAlignedText("Welcome to", [0, 40, this.getWidth(), this.getHeight()], "topLeft");
+    g.setColour(0xFFE2E3F3);
+    g.drawAlignedText("NEATBrain!", [70, 40, this.getWidth(), this.getHeight()], "topLeft");
+    g.setColour(Colours.grey);
+    g.drawAlignedText("Select a Partial and Residue Profile from the main window, then tweak and sculpt your ", [0, 75, this.getWidth(), this.getHeight()], "topLeft");
+    g.drawAlignedText("sound with the Advanced controls.", [0, 95, this.getWidth(), this.getHeight()], "topLeft");
+    g.drawAlignedText("Have fun!", [0, 125, this.getWidth(), this.getHeight()], "topLeft");
+
+	g.setColour(0xFFE2E3F3);
+    for (i=0; i<jsonInfoSubtitles.length; i++)
+    {
+    	g.drawAlignedText(jsonInfoSubtitles[i] + ":", [-410, baseVerticalOffset + verticalOffset * i, this.getWidth(), this.getHeight()], "topRight");
+    }
+
+    g.setColour(Colours.grey);
+
+    for (i=0; i<jsonInfoPopup.length; i++)
+    {
+	    g.drawAlignedText(jsonInfoPopup[i], [90, baseVerticalOffset + verticalOffset * i, this.getWidth(), this.getHeight()], "topLeft");
+    }    
+});
+
+
+	
+/* Info Mouseover Panel */
+
+const pnlShowInfoPopup = createChildPanel("pnlShowInfoPopup", 436, 0, 16, 16, "pnlAdvanced");
+
+pnlShowInfoPopup.set("allowCallbacks", "Clicks & Hover");
+
+pnlShowInfoPopup.setMouseCallback(function(event)
+{
+	this.data.over = event.hover;
+	this.repaint();
+	
+	pnlInfoPopup.set("visible", event.hover);
+
+});
+
+pnlShowInfoPopup.setPaintRoutine(function(g)
+{
+	g.setFont("bold", 20);
+    g.setColour(this.data.over ? 0xFFE2E3F3 : Colours.grey);
+    g.drawAlignedText("?", [0, 0, this.getWidth(), this.getHeight()], "centred");
+});
+
+
+
+
 /* Setup Misc Defaults */
 
 knbPartialSustain.set("middlePosition", -12.0);
@@ -322,4 +410,9 @@ btnPartialStiffnessTypeA.setLocalLookAndFeel(LAFButtonStiffness);
 btnPartialStiffnessTypeB.setLocalLookAndFeel(LAFButtonStiffness);
 
 btnShowAdvancedPanel.setLocalLookAndFeel(LAFButtonShowAdvancedPanel);
+
+pnlAdvanced.setPaintRoutine(function(g)
+{
+	g.fillAll(pnlBodyColour);
+});
 

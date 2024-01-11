@@ -71,7 +71,7 @@ inline function createLabel(id, x, y, width, height, fontSize, text, parent, tex
 	return p;
 }
 
-inline function createChildPanel(id, x, y, width, height)
+inline function createChildPanel(id, x, y, width, height, parent)
 {
 	local p = Content.addPanel(id, x, y);
 
@@ -79,15 +79,8 @@ inline function createChildPanel(id, x, y, width, height)
 	p.set("height", height);
 	
 	Content.setPropertiesFromJSON(id, {
-          parentComponent: "pnlBody"
-	});
-
-	p.setPaintRoutine(function(g)
-	{
-		g.fillAll(pnlBodyColour);
-
-		//g.fillAll(Colours.withAlpha(Colours.grey, 0.4));
-	});
+          parentComponent: parent
+	});	
 	
 	return p;
 }

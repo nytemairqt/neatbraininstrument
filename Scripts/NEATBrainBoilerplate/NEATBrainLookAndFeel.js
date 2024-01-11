@@ -91,28 +91,18 @@ LAFButtonStiffness.registerFunction("drawToggleButton", function(g, obj)
 // Random Ratios
 LAFButtonRandomRatios.registerFunction("drawToggleButton", function(g, obj)
 {
-    g.setFont("bold", 26);
+    g.setFont("bold", 16);
     g.setColour(obj.over ? 0xFFE2E3F3 : Colours.grey);
-    g.drawAlignedText("?", [0, 0, obj.area[2], obj.area[3]], "centred");
+    g.drawAlignedText("Random", [0, 0, obj.area[2], obj.area[3]], "centred");
 
 });
 
 // Reset Ratios
 LAFButtonResetRatios.registerFunction("drawToggleButton", function(g, obj)
 {    
-    var btnResetPath = Content.createPath();
-    var leftOffset = 4;
-    var rightOffset = 16;
-    var reducedOffset = 7;	
-    
-    
-    btnResetPath.clear();
-    btnResetPath.loadFromData(pathResetButtonStroke);
+    g.setFont("bold", 16);
     g.setColour(obj.over ? 0xFFE2E3F3 : Colours.grey);
-    g.drawPath(btnResetPath, reduced(obj, reducedOffset), 3);
-    btnResetPath.clear();
-    btnResetPath.loadFromData(pathResetButtonFill);
-    g.fillPath(btnResetPath, [obj.area[0] + leftOffset, obj.area[1] + leftOffset, obj.area[2] - rightOffset, obj.area[3] - rightOffset]);
+    g.drawAlignedText("Reset", [0, 0, obj.area[2], obj.area[3]], "centred");
 });
 
 
@@ -123,7 +113,7 @@ pnlBody.setPaintRoutine(function(g)
 	g.setColour(Colours.withAlpha(0xFFB1C1C1, .3));
 	g.drawLine(10, 10, 20, 10, 1.5);
 	g.drawLine(10, this.getWidth() / 2, 10, 10, 1.5);
-	g.drawLine(this.getWidth() / 2, this.getWidth() / 2, 10, this.getHeight() - 50, 1.5);
-	g.drawLine(this.getWidth() / 2, this.getWidth() - 10, this.getHeight() - 50, this.getHeight() - 50, 1.5);
-	g.drawLine(this.getWidth() - 10, this.getWidth() - 10, this.getHeight() - 50, this.getHeight() - 60, 1.5);
+	g.drawLine(this.getWidth() / 2, this.getWidth() / 2, 10, this.getHeight() - 44, 1.5);
+	g.drawLine(this.getWidth() / 2, this.getWidth() - 10, this.getHeight() - 44, this.getHeight() - 44, 1.5);
+	g.drawLine(this.getWidth() - 10, this.getWidth() - 10, this.getHeight() - 44, this.getHeight() - 54, 1.5);
 });

@@ -28,7 +28,8 @@
             <Control type="ScriptSlider" id="knbPartialDampen" value="0.9700000286102295"/>
             <Control type="ScriptSlider" id="knbPartialStiffnessIntensity" value="0.03999999910593033"/>
             <Control type="ScriptSlider" id="knbPartialDriftIntensity" value="0.0"/>
-            <Control type="ScriptSliderPack" id="SliderPack_RatiosL" value="6.0" data="108....f+3jC9+CZQ8CPwTye.wUzeBjoi+KP35Q4.A5e.Dzj1CQPDkfHA4XqxDjv6MTPUBIUAYHikEjw1bWPbbDgAAVWMFjFjXYPMv3mAQSapFTWjLaPaSewAEJDPGTkSlcPc2C4AUu.tGjpkieP"/>
+            <Control type="ScriptSliderPack" id="SliderPack_RatiosL" value="26.0"
+                     data="108....f+3jC9+CZQ8CPwTye.wUzeBjoi+KP6b72.A5e.Dzj1CQPDkfHA4XqxDjv6MTPUBIUAYHikEjw1bWPbbDgAAVWMFjFjXYPMv3mAQSapFTWjLaPaSewAEJDPGTkSlcPc2C4AUu.tGjpkieP"/>
             <Control type="ScriptSliderPack" id="SliderPack_RatiosR" value="26.0"
                      data="108....f+v2p++Cy79CPNw6e.w45eBzMy+KPLJC3.8mK.DjtRAQPL5GHAATyvDzpUCTPNpNTAUDRgEzPIKWPmDWfAgqvIFTqHHYPxSIlA45niFTmFtZPOHDsAMxs7FTyBVbPmzt0AMuseGDbahdP"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-6.0"/>
@@ -603,10 +604,10 @@
   <MidiAutomation>
     <Controller Controller="7" Processor="Interface" MacroIndex="-1" Start="-100.0"
                 End="0.0" FullStart="-100.0" FullEnd="0.0" Skew="3.492788620791155"
-                Interval="0.01" Attribute="lblPartialDampen" Inverted="0"/>
+                Interval="0.01" Attribute="lblPartialFilter" Inverted="0"/>
     <Controller Controller="10" Processor="Interface" MacroIndex="-1" Start="-100.0"
                 End="100.0" FullStart="-100.0" FullEnd="100.0" Skew="1.0" Interval="0.01"
-                Attribute="btnPartialStiffnessTypeB" Inverted="0"/>
+                Attribute="btnPartialStiffnessTypeA" Inverted="0"/>
   </MidiAutomation>
   <MPEData Enabled="0"/>
 </Processor>
