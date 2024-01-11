@@ -1,5 +1,6 @@
 const LAFSliderNEATBrain = Content.createLocalLookAndFeel();
 const LAFButtonShowAdvancedPanel = Content.createLocalLookAndFeel();
+const LAFButtonStiffness = Content.createLocalLookAndFeel();
 
 const pnlBody = Content.getComponent("pnlBody");
 
@@ -69,10 +70,18 @@ LAFButtonShowAdvancedPanel.registerFunction("drawToggleButton", function(g, obj)
 	for (i=0; i<miscTextAdvanced.length; i++)
 	{
 		g.drawAlignedText(miscTextAdvanced[i], [(miscTextAdvancedOffset * i) - 40, 0, obj.area[2], obj.area[3]], "right"); // lol
-	}
-	
-	
-     
+	}  
+});
+
+// Stiffness Type
+LAFButtonStiffness.registerFunction("drawToggleButton", function(g, obj)
+{
+    g.setFont("bold", 16);
+    g.setColour(obj.over ? 0xFFE2E3F3 : Colours.grey);
+    if (obj.value)
+        g.setColour(0xFFE2E3F3);
+    
+    g.drawAlignedText(obj.text, [0, 0, obj.area[2], obj.area[3]], "centred");
 });
 
 

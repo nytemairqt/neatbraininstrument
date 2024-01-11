@@ -4,7 +4,7 @@
   <Node FactoryPath="container.chain" ID="NEATBrain_Achromic" Bypassed="0"
         ShowParameters="1">
     <Nodes>
-      <Node ID="ahdsrs" FactoryPath="container.split" Bypassed="0" Folded="1">
+      <Node ID="ahdsrs" FactoryPath="container.split" Bypassed="0">
         <Nodes>
           <Node ID="ahdsrFilter" FactoryPath="envelope.ahdsr" Bypassed="0">
             <Properties>
@@ -84,8 +84,7 @@
         </Nodes>
         <Parameters/>
       </Node>
-      <Node ID="global_params" FactoryPath="container.split" Bypassed="0"
-            Folded="1">
+      <Node ID="global_params" FactoryPath="container.split" Bypassed="0">
         <Nodes>
           <Node ID="pitchModL" FactoryPath="container.chain" Bypassed="0">
             <Nodes>
@@ -112,7 +111,7 @@
                 </ModulationTargets>
                 <Parameters>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
-                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Automated="1"/>
+                  <Parameter MinValue="0.0" MaxValue="0.2" ID="Multiply" Automated="1"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Add" Value="0.0"/>
                 </Parameters>
               </Node>
@@ -157,7 +156,7 @@
                 </ModulationTargets>
                 <Parameters>
                   <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
-                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Automated="1"/>
+                  <Parameter MinValue="0.0" MaxValue="0.2" ID="Multiply" Automated="1"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Add" Value="0.0"/>
                 </Parameters>
               </Node>
@@ -245,7 +244,7 @@
                 </ModulationTargets>
                 <Parameters>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
-                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Automated="1"/>
+                  <Parameter MinValue="0.0" MaxValue="0.2" ID="Multiply" Automated="1"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Add" Value="0.0"/>
                 </Parameters>
               </Node>
@@ -290,7 +289,7 @@
                 </ModulationTargets>
                 <Parameters>
                   <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
-                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Automated="1"/>
+                  <Parameter MinValue="0.0" MaxValue="0.2" ID="Multiply" Automated="1"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Add" Value="0.0"/>
                 </Parameters>
               </Node>
@@ -389,7 +388,7 @@
                     <Parameters>
                       <Parameter MinValue="1.0" MaxValue="40.0" StepSize="1.0" ID="NumClones"
                                  Value="3"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="0.2" ID="Value" Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Gamma" Value="0.0"/>
                     </Parameters>
                     <ModulationTargets>
@@ -410,7 +409,7 @@
                     <Parameters>
                       <Parameter MinValue="1.0" MaxValue="40.0" StepSize="1.0" ID="NumClones"
                                  Value="3"/>
-                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="0.2" ID="Value" Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Gamma" Value="0.0"/>
                     </Parameters>
                   </Node>
@@ -819,14 +818,15 @@
         </Nodes>
         <Parameters/>
       </Node>
-      <Node ID="stiffnessSplit" FactoryPath="container.split" Bypassed="0">
+      <Node ID="stiffnessSplit" FactoryPath="container.split" Bypassed="0"
+            Folded="1">
         <Nodes>
           <Node ID="stiffnessOff" FactoryPath="container.chain" Bypassed="0">
             <Nodes>
               <Node ID="stiffnessDry" FactoryPath="core.gain" Bypassed="0">
                 <Parameters>
                   <Parameter MinValue="0" MaxValue="-100" StepSize="0.1000000014901161" SkewFactor="11.20230558362116"
-                             ID="Gain" Value="0.0"/>
+                             ID="Gain" Automated="1"/>
                   <Parameter MinValue="0.0" MaxValue="1000.0" StepSize="0.1000000014901161"
                              SkewFactor="0.3010300099849701" ID="Smoothing" Value="20.0"/>
                   <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
@@ -836,7 +836,7 @@
             </Nodes>
             <Parameters/>
           </Node>
-          <Node ID="stiffnessOn" FactoryPath="container.chain" Bypassed="0" ShowParameters="1">
+          <Node ID="stiffnessOn" FactoryPath="container.chain" Bypassed="0">
             <Nodes>
               <Node ID="switcher" FactoryPath="control.xfader" Bypassed="0">
                 <Properties>
@@ -859,8 +859,7 @@
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
                 </Parameters>
               </Node>
-              <Node ID="sb_container" FactoryPath="container.split" Bypassed="0"
-                    ShowParameters="1">
+              <Node ID="sb_container" FactoryPath="container.split" Bypassed="0">
                 <Nodes>
                   <Node ID="tanhBypass" FactoryPath="container.soft_bypass" Bypassed="0">
                     <Nodes>
@@ -884,8 +883,7 @@
                       <Property ID="SmoothingTime" Value="20"/>
                     </Properties>
                   </Node>
-                  <Node ID="absBypass" FactoryPath="container.soft_bypass" Bypassed="0"
-                        ShowParameters="0">
+                  <Node ID="absBypass" FactoryPath="container.soft_bypass" Bypassed="0">
                     <Nodes>
                       <Node ID="absSplit" FactoryPath="container.split" Bypassed="0">
                         <Nodes>
@@ -913,7 +911,7 @@
               <Node ID="stiffnessWet" FactoryPath="core.gain" Bypassed="0">
                 <Parameters>
                   <Parameter MinValue="-100" MaxValue="0" StepSize="0.1000000014901161" SkewFactor="11.20230558362116"
-                             ID="Gain" Value="0.0"/>
+                             ID="Gain" Automated="1"/>
                   <Parameter MinValue="0.0" MaxValue="1000.0" StepSize="0.1000000014901161"
                              SkewFactor="0.3010300099849701" ID="Smoothing" Value="20.0"/>
                   <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
@@ -998,8 +996,8 @@
           <Connection NodeId="ahdsrVelocityL" ParameterId="Decay"/>
         </Connections>
       </Parameter>
-      <Parameter ID="pitchDriftIntensity" MinValue="0.0" MaxValue="0.2" StepSize="0.01"
-                 Value="0.1">
+      <Parameter ID="pitchDriftIntensity" MinValue="0.0" MaxValue="1.0" StepSize="0.01"
+                 Value="1.0">
         <Connections>
           <Connection NodeId="bipolarDriftR" ParameterId="Scale"/>
           <Connection NodeId="bipolarDriftL" ParameterId="Scale"/>
@@ -1031,22 +1029,22 @@
         <Connections/>
       </Parameter>
       <Parameter ID="filterFalloffDecay" MinValue="0" MaxValue="40000" StepSize="1"
-                 Value="5000">
+                 Value="0.0">
         <Connections>
           <Connection NodeId="ahdsrFilter" ParameterId="Decay"/>
         </Connections>
       </Parameter>
-      <Parameter ID="filterStaticFrequency" MinValue="100" MaxValue="20000" StepSize="1"
+      <Parameter ID="filterStaticFrequency" MinValue="50" MaxValue="5000" StepSize="1"
                  Value="3000">
         <Connections>
           <Connection NodeId="lowPass" ParameterId="Frequency"/>
         </Connections>
       </Parameter>
       <Parameter ID="stiffnessIntensity" MinValue="0.0" MaxValue="1.0" StepSize="0.01"
-                 Value="0.0">
+                 Value="1.0">
         <Connections>
-          <Connection NodeId="tanhWet" ParameterId="Gain"/>
-          <Connection NodeId="tanhDry" ParameterId="Gain"/>
+          <Connection NodeId="stiffnessWet" ParameterId="Gain"/>
+          <Connection NodeId="stiffnessDry" ParameterId="Gain"/>
         </Connections>
       </Parameter>
       <Parameter ID="stiffnessType" MinValue="0.0" MaxValue="1.0" StepSize="1.0"

@@ -82,17 +82,21 @@ inline function onknbPartialRandomSingleControl(component, value)
 }
 
 // Falloff Intensity
-
 inline function onknbPartialFalloffIntensityControl(component, value)
 {
 	synthPartials.setAttribute(synthPartials.pitchFalloffIntensity, value);
 }
 
 // Falloff Decay
-
 inline function onknbPartialFalloffDecayControl(component, value)
 {
 	synthPartials.setAttribute(synthPartials.pitchFalloffDecay, value);
+}
+
+// Pitch LFO Drift
+inline function onknbPartialDriftIntensityControl(component, value)
+{
+	synthPartials.setAttribute(synthPartials.pitchDriftIntensity, value);
 }
 
 // Filter Static
@@ -107,10 +111,18 @@ inline function onknbPartialDampenControl(component, value)
 	synthPartials.setAttribute(synthPartials.filterFalloffDecay, value);
 }
 
-// Stiffness Type
-inline function onknbPartialStiffnessTypeControl(component, value)
+// Stiffness Types
+
+inline function onbtnPartialStiffnessTypeAControl(component, value)
 {
-	synthPartials.setAttribute(synthPartials.stiffnessType, value);
+	if (value)
+		synthPartials.setAttribute(synthPartials.stiffnessType, 0);
+}
+
+inline function onbtnPartialStiffnessTypeBControl(component, value)
+{
+	if (value)
+		synthPartials.setAttribute(synthPartials.stiffnessType, 1);	
 }
 
 // Stiffness Intensity
@@ -218,35 +230,58 @@ const lblResidueRelease = createLabel("lblResidueRelease", knbResidueRelease.get
 const btnShowAdvancedPanel = createButton("btnShowAdvancedPanel", 471, 200, 24, 100, "open", false, onbtnShowAdvancedPanelControl, false, true, "pnlBody");
 const pnlAdvanced = createChildPanel("pnlAdvanced", 498, 20, 480, 482);
 
-const lblAdvanced = createLabel("lblAdvanced", -8, -26, 128, 64, 24, "Advanced_", "pnlAdvanced", Colours.grey, "centred");
-const lblRatios_L = createLabel("lblRatios_L", SliderPack_RatiosL.get("x") + 350, SliderPack_RatiosL.get("y") + 96, 128, 32, 16, "Ratios L", "pnlAdvanced", Colours.grey, "centred");
-const lblRatios_R = createLabel("lblRatios_R", SliderPack_RatiosR.get("x") + 350, SliderPack_RatiosR.get("y") + 96, 128, 32, 16, "Ratios R", "pnlAdvanced", Colours.grey, "centred");
-const lblPartialDrift = createLabel("lblPartialDrift", -31, SliderPack_RatiosR.get("y") + 108 , 128, 32, 20, "Drift", "pnlAdvanced", Colours.grey, "centred");
-const lblPartialTone = createLabel("lblPartialTone", -31, lblPartialDrift.get("y") + 95, 128, 32, 20, "Tone", "pnlAdvanced", Colours.grey, "centred");
-
 const btnResetRatios = createButton("btnResetRatios", 380, 0, 30, 30, "reset", false, onbtnResetRatiosControl, true, true, "pnlAdvanced");
 const btnRandomRatios = createButton("btnRandomRatios", 420, 0, 30, 30, "reset", false, onbtnResetRatiosControl, true, true, "pnlAdvanced");
 
-const knbPartialRandomGlobal = createKnob("knbPartialRandomGlobal", 75, lblPartialDrift.get("y") + 30, 48, 48, "RandomGlobal", true, onknbPartialRandomGlobalControl, 0.0, 1.0, 0.01, 0.02, "pnlAdvanced");
-const knbPartialRandomSingle = createKnob("knbPartialRandomSingle", knbPartialRandomGlobal.get("x") + 100, lblPartialDrift.get("y") + 30, 48, 48, "RandomSingle", true, onknbPartialRandomSingleControl, 0.0, 1.0, 0.01, 0.1, "pnlAdvanced");
-const knbPartialFalloffIntensity = createKnob("knbPartialFalloffIntensity", knbPartialRandomSingle.get("x") + 100, lblPartialDrift.get("y") + 30, 48, 48, "FalloffIntensity", true, onknbPartialFalloffIntensityControl, 0.0, 1.0, 0.01, 0.1, "pnlAdvanced");
-const knbPartialFalloffDecay = createKnob("knbPartialFalloffDecay", knbPartialFalloffIntensity.get("x") + 100, lblPartialDrift.get("y") + 30, 48, 48, "FalloffDecay", true, onknbPartialFalloffDecayControl, 0, 20000, 1.0, 2200, "pnlAdvanced");
+const lblAdvanced = createLabel("lblAdvanced", -8, -26, 128, 64, 24, "Advanced_", "pnlAdvanced", Colours.grey, "centred");
+const lblRatios_L = createLabel("lblRatios_L", SliderPack_RatiosL.get("x") + 350, SliderPack_RatiosL.get("y") + 96, 128, 32, 16, "Ratios L", "pnlAdvanced", Colours.grey, "centred");
+const lblRatios_R = createLabel("lblRatios_R", SliderPack_RatiosR.get("x") + 350, SliderPack_RatiosR.get("y") + 96, 128, 32, 16, "Ratios R", "pnlAdvanced", Colours.grey, "centred");
 
-const knbPartialFilter = createKnob("knbPartialFilter", 75, lblPartialTone.get("y") + 30, 48, 48, "Filter", true, onknbPartialFilterControl, 50, 5000, 1.0, 4000, "pnlAdvanced");
-const knbPartialDampen = createKnob("knbPartialDampen", knbPartialFilter.get("x") + 100, lblPartialTone.get("y") + 30, 48, 48, "Dampening", true, onknbPartialDampenControl, 0.0, 1.0, 0.01, 0.0, "pnlAdvanced");
-const knbPartialStiffnessType = createKnob("knbPartialStiffnessType", knbPartialDampen.get("x") + 100, lblPartialTone.get("y") + 30, 48, 48, "StiffnessType", true, onknbPartialStiffnessTypeControl, 0.0, 1.0, 1.0, 1.0, "pnlAdvanced");
-const knbPartialStiffnessIntensity = createKnob("knbPartialStiffnessIntensity", knbPartialStiffnessType.get("x") + 100, lblPartialTone.get("y") + 30, 48, 48, "StiffnessIntensity", true, onknbPartialStiffnessIntensityControl, 0.0, 0.3, 0.01, 0.0, "pnlAdvanced");
+const lblPartialSculpt = createLabel("lblPartialSculpt", -31, SliderPack_RatiosR.get("y") + 203, 128, 32, 20, "Sculpt", "pnlAdvanced", Colours.grey, "centred");
+
+//const lblPartialDrift = createLabel("lblPartialDrift", -31, SliderPack_RatiosR.get("y") + 108 , 128, 32, 20, "Drift", "pnlAdvanced", Colours.grey, "centred");
+//const lblPartialTone = createLabel("lblPartialTone", -31, lblPartialDrift.get("y") + 95, 128, 32, 20, "Tone", "pnlAdvanced", Colours.grey, "centred");
+
+
+
+const knbPartialRandomGlobal = createKnob("knbPartialRandomGlobal", 75, lblPartialSculpt.get("y") - 70, 48, 48, "RandomGlobal", true, onknbPartialRandomGlobalControl, 0.0, 1.0, 0.01, 0.02, "pnlAdvanced");
+const knbPartialRandomSingle = createKnob("knbPartialRandomSingle", knbPartialRandomGlobal.get("x") + 100, lblPartialSculpt.get("y") - 70, 48, 48, "RandomSingle", true, onknbPartialRandomSingleControl, 0.0, 1.0, 0.01, 0.1, "pnlAdvanced");
+const knbPartialFalloffIntensity = createKnob("knbPartialFalloffIntensity", knbPartialRandomSingle.get("x") + 100, lblPartialSculpt.get("y") - 70, 48, 48, "FalloffIntensity", true, onknbPartialFalloffIntensityControl, 0.0, 1.0, 0.01, 0.1, "pnlAdvanced");
+const knbPartialFalloffDecay = createKnob("knbPartialFalloffDecay", knbPartialFalloffIntensity.get("x") + 100, lblPartialSculpt.get("y") - 70, 48, 48, "FalloffDecay", true, onknbPartialFalloffDecayControl, 0, 20000, 1.0, 2200, "pnlAdvanced");
+
+const knbPartialDriftIntensity = createKnob("knbPartialDriftIntensity", 75, lblPartialSculpt.get("y") + 30, 48, 48, "Drift", true, onknbPartialDriftIntensityControl, 0, 1, 0.01, 0.1, "pnlAdvanced");
+
+const knbPartialFilter = createKnob("knbPartialFilter", knbPartialDriftIntensity.get("x") + 100, lblPartialSculpt.get("y") + 30, 48, 48, "Filter", true, onknbPartialFilterControl, 50, 5000, 1.0, 4000, "pnlAdvanced");
+const knbPartialDampen = createKnob("knbPartialDampen", knbPartialFilter.get("x") + 100, lblPartialSculpt.get("y") + 30, 48, 48, "Dampening", true, onknbPartialDampenControl, 0.0, 1.0, 0.01, 0.0, "pnlAdvanced");
+//const knbPartialStiffnessType = createKnob("knbPartialStiffnessType", knbPartialDampen.get("x") + 100, lblPartialSculpt.get("y") + 130, 48, 48, "StiffnessType", true, onknbPartialStiffnessTypeControl, 0.0, 1.0, 1.0, 1.0, "pnlAdvanced");
+
+const knbPartialStiffnessIntensity = createKnob("knbPartialStiffnessIntensity", knbPartialDampen.get("x") + 100, lblPartialSculpt.get("y") + 30, 48, 48, "StiffnessIntensity", true, onknbPartialStiffnessIntensityControl, 0.0, 0.3, 0.01, 0.0, "pnlAdvanced");
+
+const btnPartialStiffnessTypeA = createButton("btnPartialStiffnessTypeA", knbPartialStiffnessIntensity.get("x") + 60, knbPartialStiffnessIntensity.get("y") - 10, 30, 30, "A", false, onbtnPartialStiffnessTypeAControl, false, true, "pnlAdvanced");
+const btnPartialStiffnessTypeB = createButton("btnPartialStiffnessTypeB", knbPartialStiffnessIntensity.get("x") + 60, knbPartialStiffnessIntensity.get("y") + 30, 30, 30, "B", false, onbtnPartialStiffnessTypeBControl, false, true, "pnlAdvanced");
+
+btnPartialStiffnessTypeA.set("radioGroup", 1);
+btnPartialStiffnessTypeB.set("radioGroup", 1);
+
+// check to make sure there's no dead buttons
+
+if (btnPartialStiffnessTypeA.getValue() == 0 && btnPartialStiffnessTypeB.getValue() == 0)
+{
+	btnPartialStiffnessTypeA.setValue(1);
+	btnPartialStiffnessTypeA.changed();
+}
 
 const lblPartialRandomGlobal = createLabel("lblPartialRandomGlobal", knbPartialRandomGlobal.get("x") - 39, knbPartialRandomGlobal.get("y") + 50, 128, 32, 16, "Global", "pnlAdvanced", Colours.grey, "centred");
 const lblPartialRandomSingle = createLabel("lblPartialRandomSingle", knbPartialRandomSingle.get("x") - 40, knbPartialRandomGlobal.get("y") + 50, 128, 32, 16, "Inter", "pnlAdvanced", Colours.grey, "centred");
 const lblPartialFalloffIntensity = createLabel("lblPartialFalloffIntensity", knbPartialFalloffIntensity.get("x") - 40, knbPartialRandomGlobal.get("y") + 50, 128, 32, 16, "Falloff", "pnlAdvanced", Colours.grey, "centred");
 const lblPartialFalloffDecay = createLabel("lblPartialFalloffDecay", knbPartialFalloffDecay.get("x") - 40, knbPartialRandomGlobal.get("y") + 50, 128, 32, 16, "Decay", "pnlAdvanced", Colours.grey, "centred");
+const lblPartialDriftIntensity = createLabel("lblPartialDriftIntensity", knbPartialDriftIntensity.get("x") - 40, knbPartialDriftIntensity.get("y") + 50, 128, 32, 16, "Drift", "pnlAdvanced", Colours.grey, "centred");
 const lblPartialFilter = createLabel("lblPartialFilter", knbPartialFilter.get("x") - 40, knbPartialFilter.get("y") + 50, 128, 32, 16, "Filter", "pnlAdvanced", Colours.grey, "centred");
 const lblPartialDampen = createLabel("lblPartialDampen", knbPartialDampen.get("x") - 40, knbPartialDampen.get("y") + 50, 128, 32, 16, "Dampen", "pnlAdvanced", Colours.grey, "centred");
-const lblPartialStiffnessType = createLabel("lblPartialStiffnessType", knbPartialStiffnessType.get("x") - 40, knbPartialStiffnessType.get("y") + 50, 128, 32, 16, "Type", "pnlAdvanced", Colours.grey, "centred");
-const lblPartialStiffnessA = createLabel("lblPartialStiffnessA", knbPartialStiffnessType.get("x") - 75, knbPartialStiffnessType.get("y") + 37, 128, 32, 16, "A", "pnlAdvanced", Colours.grey, "centred");
-const lblPartialStiffnessB = createLabel("lblPartialStiffnessB", knbPartialStiffnessType.get("x") - 5, knbPartialStiffnessType.get("y") + 37, 128, 32, 16, "B", "pnlAdvanced", Colours.grey, "centred");
-const lblPartialStiffnessIntensity = createLabel("lblPartialStiffnessIntensity", knbPartialStiffnessIntensity.get("x") - 40, knbPartialStiffnessIntensity.get("y") + 50, 128, 32, 16, "Amount", "pnlAdvanced", Colours.grey, "centred");
+//const lblPartialStiffnessType = createLabel("lblPartialStiffnessType", knbPartialStiffnessType.get("x") - 40, knbPartialStiffnessType.get("y") + 50, 128, 32, 16, "Type", "pnlAdvanced", Colours.grey, "centred");
+//const lblPartialStiffnessA = createLabel("lblPartialStiffnessA", knbPartialStiffnessType.get("x") - 75, knbPartialStiffnessType.get("y") + 37, 128, 32, 16, "A", "pnlAdvanced", Colours.grey, "centred");
+//const lblPartialStiffnessB = createLabel("lblPartialStiffnessB", knbPartialStiffnessType.get("x") - 5, knbPartialStiffnessType.get("y") + 37, 128, 32, 16, "B", "pnlAdvanced", Colours.grey, "centred");
+const lblPartialStiffnessIntensity = createLabel("lblPartialStiffnessIntensity", knbPartialStiffnessIntensity.get("x") - 40, knbPartialStiffnessIntensity.get("y") + 50, 128, 32, 16, "Stiffness", "pnlAdvanced", Colours.grey, "centred");
 
 SliderPack_RatiosL.set("parentComponent", "pnlAdvanced");
 SliderPack_RatiosR.set("parentComponent", "pnlAdvanced");
@@ -287,6 +322,9 @@ knbPartialSustain.set("middlePosition", -12.0);
 knbPartialFilter.set("middlePosition", 3000);
 
 /* Custom LAF */
+
+btnPartialStiffnessTypeA.setLocalLookAndFeel(LAFButtonStiffness);
+btnPartialStiffnessTypeB.setLocalLookAndFeel(LAFButtonStiffness);
 
 btnShowAdvancedPanel.setLocalLookAndFeel(LAFButtonShowAdvancedPanel);
 
