@@ -117,20 +117,22 @@
                    height="32" text="Ratios L" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblRatios_R" x="367" y="263" width="128"
                    height="32" text="Ratios R" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptButton" id="btnResetRatios" x="380" y="0" width="30"
-                   height="30" text="reset" saveInPreset="0" isMomentary="1" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptButton" id="btnRandomRatios" x="420" y="0" width="30"
-                   height="30" text="reset" saveInPreset="0" isMomentary="1" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbPartialRandomGlobal" x="75" y="296"
+        <Component type="ScriptButton" id="btnResetRatios" x="430" y="0" width="24"
+                   height="24" text="reset" saveInPreset="0" isMomentary="1" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptButton" id="btnRandomRatios" x="410" y="-2" width="24"
+                   height="24" text="reset" saveInPreset="0" isMomentary="1" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptPanel" id="lblPartialSculpt" x="-31" y="370" width="128"
+                   height="32" text="Sculpt" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptSlider" id="knbPartialRandomGlobal" x="75" y="300"
                    text="RandomGlobal" defaultValue="0.01999999955296516" width="48"
                    height="48" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbPartialRandomSingle" x="175" y="296"
+        <Component type="ScriptSlider" id="knbPartialRandomSingle" x="175" y="300"
                    text="RandomSingle" defaultValue="0.1000000014901161" width="48"
                    height="48" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbPartialFalloffIntensity" x="275" y="296"
+        <Component type="ScriptSlider" id="knbPartialFalloffIntensity" x="275" y="300"
                    text="FalloffIntensity" defaultValue="0.1000000014901161" width="48"
                    height="48" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbPartialFalloffDecay" x="375" y="296"
+        <Component type="ScriptSlider" id="knbPartialFalloffDecay" x="375" y="300"
                    stepSize="1.0" max="20000" text="FalloffDecay" defaultValue="2200.0"
                    width="48" height="48" parentComponent="pnlAdvanced"/>
         <Component type="ScriptSlider" id="knbPartialFilter" x="175" y="400" middlePosition="3000.0"
@@ -141,13 +143,13 @@
         <Component type="ScriptSlider" id="knbPartialStiffnessIntensity" x="375"
                    y="400" text="StiffnessIntensity" width="48" height="48" parentComponent="pnlAdvanced"
                    max="0.3"/>
-        <Component type="ScriptPanel" id="lblPartialRandomGlobal" x="36" y="346"
+        <Component type="ScriptPanel" id="lblPartialRandomGlobal" x="36" y="350"
                    width="128" height="32" text="Global" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblPartialRandomSingle" x="135" y="346"
+        <Component type="ScriptPanel" id="lblPartialRandomSingle" x="135" y="350"
                    width="128" height="32" text="Inter" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblPartialFalloffIntensity" x="235" y="346"
+        <Component type="ScriptPanel" id="lblPartialFalloffIntensity" x="235" y="350"
                    width="128" height="32" text="Falloff" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblPartialFalloffDecay" x="335" y="346"
+        <Component type="ScriptPanel" id="lblPartialFalloffDecay" x="335" y="350"
                    width="128" height="32" text="Decay" parentComponent="pnlAdvanced"/>
         <Component type="ScriptSlider" id="knbPartialDriftIntensity" x="75" y="400"
                    text="Drift" defaultValue="0.1000000014901161" width="48" height="48"
@@ -157,7 +159,7 @@
         <Component type="ScriptPanel" id="lblPartialDampen" x="235" y="450" width="128"
                    height="32" text="Dampen" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblPartialStiffnessIntensity" x="335"
-                   y="450" width="128" height="32" text="Amount" parentComponent="pnlAdvanced"/>
+                   y="450" width="128" height="32" text="Stiffness" parentComponent="pnlAdvanced"/>
         <Component type="ScriptSliderPack" id="SliderPack_RatiosL" x="17.0" y="37.0"
                    parentComponent="pnlAdvanced" processorId="synthPartials" max="31.11000061035156"
                    sliderAmount="27.0" width="440.0" height="100.0"/>
@@ -166,8 +168,14 @@
                    max="31.11000061035156" width="440.0" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblAdvanced" x="-8" y="-26" width="128"
                    height="64" text="Advanced_" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblPartialSculpt" x="-31" y="370" width="128"
-                   height="32" text="Sculpt" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptButton" id="btnPartialStiffnessTypeA" x="435" y="400"
+                   width="30" height="30" text="A" saveInPreset="0" parentComponent="pnlAdvanced"
+                   radioGroup="1"/>
+        <Component type="ScriptButton" id="btnPartialStiffnessTypeB" x="435" y="420"
+                   width="30" height="30" text="B" saveInPreset="0" parentComponent="pnlAdvanced"
+                   radioGroup="1"/>
+        <Component type="ScriptPanel" id="lblPartialDriftIntensity" x="35" y="450"
+                   width="128" height="32" text="Drift" parentComponent="pnlAdvanced"/>
       </Component>
     </Component>
     <Component type="ScriptPanel" id="pnlStatusBar" x="5.0" y="585.0" text=""

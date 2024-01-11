@@ -1,10 +1,14 @@
 const LAFSliderNEATBrain = Content.createLocalLookAndFeel();
 const LAFButtonShowAdvancedPanel = Content.createLocalLookAndFeel();
 const LAFButtonStiffness = Content.createLocalLookAndFeel();
+const LAFButtonRandomRatios = Content.createLocalLookAndFeel();
+const LAFButtonResetRatios = Content.createLocalLookAndFeel();
 
 const pnlBody = Content.getComponent("pnlBody");
 
 const pnlBodyColour = 0xff2f2f34;
+
+include("NEATBRAINBoilerplate/NEATBrainPathData.js");
 
 
 inline function reduced(obj, amount)
@@ -82,6 +86,33 @@ LAFButtonStiffness.registerFunction("drawToggleButton", function(g, obj)
         g.setColour(0xFFE2E3F3);
     
     g.drawAlignedText(obj.text, [0, 0, obj.area[2], obj.area[3]], "centred");
+});
+
+// Random Ratios
+LAFButtonRandomRatios.registerFunction("drawToggleButton", function(g, obj)
+{
+    g.setFont("bold", 26);
+    g.setColour(obj.over ? 0xFFE2E3F3 : Colours.grey);
+    g.drawAlignedText("?", [0, 0, obj.area[2], obj.area[3]], "centred");
+
+});
+
+// Reset Ratios
+LAFButtonResetRatios.registerFunction("drawToggleButton", function(g, obj)
+{    
+    var btnResetPath = Content.createPath();
+    var leftOffset = 4;
+    var rightOffset = 16;
+    var reducedOffset = 7;	
+    
+    
+    btnResetPath.clear();
+    btnResetPath.loadFromData(pathResetButtonStroke);
+    g.setColour(obj.over ? 0xFFE2E3F3 : Colours.grey);
+    g.drawPath(btnResetPath, reduced(obj, reducedOffset), 3);
+    btnResetPath.clear();
+    btnResetPath.loadFromData(pathResetButtonFill);
+    g.fillPath(btnResetPath, [obj.area[0] + leftOffset, obj.area[1] + leftOffset, obj.area[2] - rightOffset, obj.area[3] - rightOffset]);
 });
 
 
