@@ -12,30 +12,35 @@ include("NEATBRAINBoilerplate/NEATBrainUIConstructors.js");
 inline function onknbPartialGainControl(component, value)
 {
 	synthWTLeft.setAttribute(synthWTLeft.Gain, value);
+	synthWTRight.setAttribute(synthWTRight.Gain, value);
 }		
 
 // AHDSR Attack
 inline function onknbPartialAttackControl(component, value)
 {
 	synthWTLeft_gainAHDSR.setAttribute(synthWTLeft_gainAHDSR.Attack, value);
+	synthWTRight_gainAHDSR.setAttribute(synthWTRight_gainAHDSR.Attack, value);
 }
 
 // AHDSR Decay
 inline function onknbPartialDecayControl(component, value)
 {
 	synthWTLeft_gainAHDSR.setAttribute(synthWTLeft_gainAHDSR.Decay, value);
+	synthWTRight_gainAHDSR.setAttribute(synthWTRight_gainAHDSR.Decay, value);
 }
 
 // AHDSR Sustain
 inline function onknbPartialSustainControl(component, value)
 {
 	synthWTLeft_gainAHDSR.setAttribute(synthWTLeft_gainAHDSR.Sustain, value);
+	synthWTRight_gainAHDSR.setAttribute(synthWTRight_gainAHDSR.Sustain, value);
 }
 
 // AHDSR Release
 inline function onknbPartialReleaseControl(component, value)
 {
 	synthWTLeft_gainAHDSR.setAttribute(synthWTLeft_gainAHDSR.Release, value);
+	synthWTRight_gainAHDSR.setAttribute(synthWTRight_gainAHDSR.Release, value);
 }
 
 // Create UI Elements
@@ -135,44 +140,51 @@ inline function onbtnShowAdvancedPanelControl(component, value)
 // Amp Velocity
 inline function onknbAmpVelocityControl(component, value) 
 {
-	synthWTLeft_gainVelocity.setIntensity(value);
+	synthWTLeft_gainVelocity.setIntensity(value * .1);
+	synthWTRight_gainVelocity.setIntensity(value * .1);
 }
 
 
 // Amp LFO
 inline function onknbAmpLFOControl(component, value)
 {
-	synthWTLeft_gainLFO.setIntensity(value);
+	synthWTLeft_gainLFO.setIntensity(value * .1);
+	synthWTRight_gainLFO.setIntensity(value * .1);
 }
 
 // Amp Random
 inline function onknbAmpRandomControl(component, value)
 {
-	synthWTLeft_gainRandom.setIntensity(value);
+	synthWTLeft_gainRandom.setIntensity(value * .1);
+	synthWTRight_gainRandom.setIntensity(value * .1);
 }
 
 // Pitch Velocity
 inline function onknbPitchVelocityControl(component, value)
 {
-	synthWTLeft_pitchAHDSRVelocity.setIntensity(value);
+	synthWTLeft_pitchAHDSR.setIntensity(value * .6);
+	synthWTRight_pitchAHDSR.setIntensity(value * .6);
 }
 
 // Pitch Decay
 inline function onknbPitchDecayControl(component, value)
 {
 	synthWTLeft_pitchAHDSR.setAttribute(synthWTLeft_pitchAHDSR.Decay, value);
+	synthWTRight_pitchAHDSR.setAttribute(synthWTLeft_pitchAHDSR.Decay, value);
 }
 
 // Pitch Random
 inline function onknbPitchRandomControl(component, value)
 {
-	synthWTLeft_pitchRandom.setIntensity(value);
+	synthWTLeft_pitchRandom.setIntensity(value * .5);
+	synthWTRight_pitchRandom.setIntensity(value * .5);
 }
 
 // Pitch LFO 
 inline function onknbPitchLFOControl(component, value)
 {
-	synthWTLeft_pitchLFO.setIntensity(value);
+	synthWTLeft_pitchLFO.setIntensity(value * .2);
+	synthWTRight_pitchLFO.setIntensity(value * .2);
 }
 
 // Tone Dampen
@@ -214,20 +226,20 @@ const lblTone = createLabel("lblTone", -30, 382 , 128, 32, 20, "Tone", "pnlAdvan
 const lblPitch = createLabel("lblPitch", -30, lblTone.get("y") - 130, 128, 32, 20, "Pitch", "pnlAdvanced", Colours.grey, "centred");
 const lblAmp = createLabel("lblAmp", -30, lblPitch.get("y") - 130, 128, 32, 20, "Amp", "pnlAdvanced", Colours.grey, "centred");
 
-const knbAmpVelocity = createKnob("knbAmpVelocity", lblAmp.get("x") + 106, lblAmp.get("y") + 30, 48, 48, "Vel", true, onknbAmpVelocityControl, 0, 0.2, 0.01, 0.1, "pnlAdvanced");
-const knbAmpLFO = createKnob("knbAmpLFO", knbAmpVelocity.get("x") + 100, lblAmp.get("y") + 30, 48, 48, "Vel", true, onknbAmpLFOControl, 0, 0.1, 0.01, 0.1, "pnlAdvanced");
-const knbAmpRandom = createKnob("knbAmpRandom", knbAmpLFO.get("x") + 100, lblAmp.get("y") + 30, 48, 48, "Vel", true, onknbAmpRandomControl, 0, 0.1, 0.01, 0.1, "pnlAdvanced");
+const knbAmpVelocity = createKnob("knbAmpVelocity", lblAmp.get("x") + 106, lblAmp.get("y") + 30, 48, 48, "Vel", true, onknbAmpVelocityControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
+const knbAmpLFO = createKnob("knbAmpLFO", knbAmpVelocity.get("x") + 100, lblAmp.get("y") + 30, 48, 48, "Vel", true, onknbAmpLFOControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
+const knbAmpRandom = createKnob("knbAmpRandom", knbAmpLFO.get("x") + 100, lblAmp.get("y") + 30, 48, 48, "Vel", true, onknbAmpRandomControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
 
-const knbPitchVelocity = createKnob("knbPitchVelocity", lblPitch.get("x") + 106, lblPitch.get("y") + 30, 48, 48, "Vel", true, onknbPitchVelocityControl, 0, 1.0, 0.01, 0.1, "pnlAdvanced");
+const knbPitchVelocity = createKnob("knbPitchVelocity", lblPitch.get("x") + 106, lblPitch.get("y") + 30, 48, 48, "Vel", true, onknbPitchVelocityControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
 const knbPitchDecay = createKnob("knbPitchDecay", knbPitchVelocity.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "Vel", true, onknbPitchDecayControl, 20, 4000, 1.0, 1000, "pnlAdvanced");
-const knbPitchLFO = createKnob("knbPitchLFO", knbPitchDecay.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "Vel", true, onknbPitchLFOControl, 0, 0.1, 0.01, 0.1, "pnlAdvanced");
-const knbPitchRandom = createKnob("knbPitchRandom", knbPitchLFO.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "Vel", true, onknbPitchRandomControl, 0, 0.15, 0.01, 0.1, "pnlAdvanced");
+const knbPitchLFO = createKnob("knbPitchLFO", knbPitchDecay.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "Vel", true, onknbPitchLFOControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
+const knbPitchRandom = createKnob("knbPitchRandom", knbPitchLFO.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "Vel", true, onknbPitchRandomControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
 
 
 const knbToneDampen = createKnob("knbToneDampen", lblTone.get("x") + 106, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneDampenControl, 4000, 8000, 1.0, 6000, "pnlAdvanced");
-const knbToneDecay = createKnob("knbToneDecay", knbToneDampen.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneDecayControl, 0, 1.0, 0.01, 0.1, "pnlAdvanced");
-const knbTonePosition = createKnob("knbTonePosition", knbToneDecay.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbTonePositionControl, 0, 1.0, 0.01, 0.1, "pnlAdvanced");
-const knbToneStiffness = createKnob("knbToneStiffness", knbTonePosition.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneStiffnessControl, 0, 1.0, 0.01, 0.1, "pnlAdvanced");
+const knbToneDecay = createKnob("knbToneDecay", knbToneDampen.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneDecayControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
+const knbTonePosition = createKnob("knbTonePosition", knbToneDecay.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbTonePositionControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
+const knbToneStiffness = createKnob("knbToneStiffness", knbTonePosition.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneStiffnessControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
 const btnToneStiffnessTypeA = createButton("btnToneStiffnessTypeA", knbToneStiffness.get("x") + 66, knbToneStiffness.get("y") - 14, 24, 24, "A", true, onbtnToneStiffnessTypeAControl, false, true, "pnlAdvanced");
 const btnToneStiffnessTypeB = createButton("btnToneStiffnessTypeB", knbToneStiffness.get("x") + 66, knbToneStiffness.get("y") + 34, 24, 24, "B", true, onbtnToneStiffnessTypeBControl, false, true, "pnlAdvanced");
 
