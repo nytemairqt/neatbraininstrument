@@ -4,7 +4,7 @@
   <Node FactoryPath="container.chain" ID="NEATBrain_Achromic" Bypassed="0"
         ShowParameters="1">
     <Nodes>
-      <Node ID="ahdsrs" FactoryPath="container.split" Bypassed="0">
+      <Node ID="ahdsrs" FactoryPath="container.split" Bypassed="0" Folded="1">
         <Nodes>
           <Node ID="ahdsrFilter" FactoryPath="envelope.ahdsr" Bypassed="0">
             <Properties>
@@ -54,11 +54,11 @@
                 </ModulationTargets>
                 <ComplexData>
                   <SliderPacks>
-                    <SliderPack Index="-1"/>
+                    <SliderPack Index="0"/>
                   </SliderPacks>
                 </ComplexData>
                 <Parameters>
-                  <Parameter MinValue="1.0" MaxValue="3" StepSize="1.0" ID="NumClones" Value="3"/>
+                  <Parameter MinValue="1.0" MaxValue="5" StepSize="1.0" ID="NumClones" Value="5"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0"/>
                 </Parameters>
               </Node>
@@ -74,7 +74,7 @@
                   </SliderPacks>
                 </ComplexData>
                 <Parameters>
-                  <Parameter MinValue="1.0" MaxValue="3" StepSize="1.0" ID="NumClones" Value="3"/>
+                  <Parameter MinValue="1.0" MaxValue="5" StepSize="1.0" ID="NumClones" Value="5"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0"/>
                 </Parameters>
               </Node>
@@ -84,7 +84,8 @@
         </Nodes>
         <Parameters/>
       </Node>
-      <Node ID="global_params" FactoryPath="container.split" Bypassed="0">
+      <Node ID="global_params" FactoryPath="container.split" Bypassed="0"
+            Folded="1">
         <Nodes>
           <Node ID="pitchModL" FactoryPath="container.chain" Bypassed="0">
             <Nodes>
@@ -208,7 +209,7 @@
                 </Properties>
                 <Parameters>
                   <Parameter MinValue="1.0" MaxValue="40.0" StepSize="1.0" ID="NumClones"
-                             Value="3"/>
+                             Value="5"/>
                   <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" Automated="1"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Gamma" Value="0.0"/>
                 </Parameters>
@@ -341,7 +342,7 @@
                 </Properties>
                 <Parameters>
                   <Parameter MinValue="1.0" MaxValue="40.0" StepSize="1.0" ID="NumClones"
-                             Value="3"/>
+                             Value="5"/>
                   <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" Automated="1"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Gamma" Value="0.0"/>
                 </Parameters>
@@ -358,7 +359,7 @@
                 </Properties>
                 <Parameters>
                   <Parameter MinValue="1.0" MaxValue="40.0" StepSize="1.0" ID="NumClones"
-                             Value="3"/>
+                             Value="5"/>
                   <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" Value="1.0"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Gamma" Value="0.0"/>
                 </Parameters>
@@ -372,7 +373,7 @@
                 </Properties>
                 <Parameters>
                   <Parameter MinValue="1.0" MaxValue="40.0" StepSize="1.0" ID="NumClones"
-                             Value="3"/>
+                             Value="5"/>
                   <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" Value="1.0"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Gamma" Value="0.0"/>
                 </Parameters>
@@ -387,7 +388,7 @@
                     </Properties>
                     <Parameters>
                       <Parameter MinValue="1.0" MaxValue="40.0" StepSize="1.0" ID="NumClones"
-                                 Value="3"/>
+                                 Value="5"/>
                       <Parameter MinValue="0.0" MaxValue="0.2" ID="Value" Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Gamma" Value="0.0"/>
                     </Parameters>
@@ -408,7 +409,7 @@
                     </Properties>
                     <Parameters>
                       <Parameter MinValue="1.0" MaxValue="40.0" StepSize="1.0" ID="NumClones"
-                                 Value="3"/>
+                                 Value="5"/>
                       <Parameter MinValue="0.0" MaxValue="0.2" ID="Value" Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Gamma" Value="0.0"/>
                     </Parameters>
@@ -484,7 +485,7 @@
                     </Properties>
                     <Parameters>
                       <Parameter MinValue="1.0" MaxValue="40.0" StepSize="1.0" ID="NumClones"
-                                 Value="3"/>
+                                 Value="5"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Gamma" Value="0.0"/>
                     </Parameters>
@@ -564,7 +565,7 @@
                     </Properties>
                     <Parameters>
                       <Parameter MinValue="1.0" MaxValue="40.0" StepSize="1.0" ID="NumClones"
-                                 Value="3"/>
+                                 Value="5"/>
                       <Parameter MinValue="-0.2" MaxValue="0.2" ID="Value" Automated="1"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Gamma" Value="0.0"/>
                     </Parameters>
@@ -578,9 +579,9 @@
         </Nodes>
         <Parameters/>
       </Node>
-      <Node ID="chainL" FactoryPath="container.chain" Bypassed="0" Folded="1">
+      <Node ID="chainL" FactoryPath="container.chain" Bypassed="0">
         <Nodes>
-          <Node ID="clonerL" FactoryPath="container.clone" Bypassed="0" ShowClones="0"
+          <Node ID="clonerL" FactoryPath="container.clone" Bypassed="0" ShowClones="1"
                 ShowParameters="1">
             <Properties>
               <Property ID="IsVertical" Value="0"/>
@@ -657,6 +658,16 @@
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
                     </Parameters>
                   </Node>
+                  <Node ID="sineL_0_gain" FactoryPath="core.gain" Bypassed="0">
+                    <Parameters>
+                      <Parameter MinValue="-100.0" MaxValue="12.0" StepSize="0.1000000014901161"
+                                 SkewFactor="11.20230558362116" ID="Gain" Value="-2.899998553097262"/>
+                      <Parameter MinValue="0.0" MaxValue="1000.0" StepSize="0.1000000014901161"
+                                 SkewFactor="0.3010300099849701" ID="Smoothing" Value="20.0"/>
+                      <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
+                                 SkewFactor="5.422270774841309" ID="ResetValue" Value="0.0"/>
+                    </Parameters>
+                  </Node>
                 </Nodes>
                 <Parameters/>
               </Node>
@@ -729,6 +740,16 @@
                       <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_1_gain" FactoryPath="core.gain" Bypassed="0">
+                    <Parameters>
+                      <Parameter MinValue="-100.0" MaxValue="12.0" StepSize="0.1000000014901161"
+                                 SkewFactor="11.20230558362116" ID="Gain" Value="-2.899998553097262"/>
+                      <Parameter MinValue="0.0" MaxValue="1000.0" StepSize="0.1000000014901161"
+                                 SkewFactor="0.3010300099849701" ID="Smoothing" Value="20.0"/>
+                      <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
+                                 SkewFactor="5.422270774841309" ID="ResetValue" Value="0.0"/>
                     </Parameters>
                   </Node>
                 </Nodes>
@@ -805,12 +826,190 @@
                       <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
                     </Parameters>
                   </Node>
+                  <Node ID="sineL_2_gain" FactoryPath="core.gain" Bypassed="0">
+                    <Parameters>
+                      <Parameter MinValue="-100.0" MaxValue="12.0" StepSize="0.1000000014901161"
+                                 SkewFactor="11.20230558362116" ID="Gain" Value="-2.899998553097262"/>
+                      <Parameter MinValue="0.0" MaxValue="1000.0" StepSize="0.1000000014901161"
+                                 SkewFactor="0.3010300099849701" ID="Smoothing" Value="20.0"/>
+                      <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
+                                 SkewFactor="5.422270774841309" ID="ResetValue" Value="0.0"/>
+                    </Parameters>
+                  </Node>
+                </Nodes>
+                <Parameters/>
+              </Node>
+              <Node ID="sineL_3_chain" FactoryPath="container.chain" Bypassed="0">
+                <Nodes>
+                  <Node ID="sineL_3_pmaRandomSingle" FactoryPath="control.pma_unscaled"
+                        Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_3_pma_drift" ParameterId="Value"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0" StepSize="0.01"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Value="0.0"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_3_pma_drift" FactoryPath="control.pma_unscaled" Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_3_pmaPitchStack" ParameterId="Add"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Value="0.0"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_3_pmaPitchStack" FactoryPath="control.pma" Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_3_pma_output" ParameterId="Add"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" Value="1.0" StepSize="0.01"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_3_pma_normalizer" FactoryPath="control.pma_unscaled"
+                        Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_3_pma_output" ParameterId="Value"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0" StepSize="0.01"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Add" Value="0.0"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_3_pma_output" FactoryPath="control.pma_unscaled" Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_3" ParameterId="Freq Ratio"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="0.0" MaxValue="100.0" ID="Value" StepSize="0.01" Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_3" FactoryPath="core.oscillator" Bypassed="0">
+                    <ComplexData>
+                      <DisplayBuffers>
+                        <DisplayBuffer Index="-1"/>
+                      </DisplayBuffers>
+                    </ComplexData>
+                    <Parameters>
+                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
+                      <Parameter MinValue="0.3" MaxValue="20000.0" StepSize="0.1000000014901161"
+                                 SkewFactor="0.2299045622348785" ID="Frequency" Value="220.0"/>
+                      <Parameter MinValue="1.0" MaxValue="30.0" StepSize="1.0" ID="Freq Ratio"
+                                 Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_3_gain" FactoryPath="core.gain" Bypassed="0">
+                    <Parameters>
+                      <Parameter MinValue="-100.0" MaxValue="12.0" StepSize="0.1000000014901161"
+                                 SkewFactor="11.20230558362116" ID="Gain" Value="-2.899998553097262"/>
+                      <Parameter MinValue="0.0" MaxValue="1000.0" StepSize="0.1000000014901161"
+                                 SkewFactor="0.3010300099849701" ID="Smoothing" Value="20.0"/>
+                      <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
+                                 SkewFactor="5.422270774841309" ID="ResetValue" Value="0.0"/>
+                    </Parameters>
+                  </Node>
+                </Nodes>
+                <Parameters/>
+              </Node>
+              <Node ID="sineL_4_chain" FactoryPath="container.chain" Bypassed="0">
+                <Nodes>
+                  <Node ID="sineL_4_pmaRandomSingle" FactoryPath="control.pma_unscaled"
+                        Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_4_pma_drift" ParameterId="Value"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0" StepSize="0.01"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Value="0.0"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_4_pma_drift" FactoryPath="control.pma_unscaled" Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_4_pmaPitchStack" ParameterId="Add"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" StepSize="0.01" Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Value="0.0"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_4_pmaPitchStack" FactoryPath="control.pma" Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_4_pma_output" ParameterId="Add"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Value" Value="1.0" StepSize="0.01"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_4_pma_normalizer" FactoryPath="control.pma_unscaled"
+                        Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_4_pma_output" ParameterId="Value"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="1.0" StepSize="0.01"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Add" Value="0.0"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_4_pma_output" FactoryPath="control.pma_unscaled" Bypassed="0">
+                    <ModulationTargets>
+                      <Connection NodeId="sineL_4" ParameterId="Freq Ratio"/>
+                    </ModulationTargets>
+                    <Parameters>
+                      <Parameter MinValue="0.0" MaxValue="100.0" ID="Value" StepSize="0.01" Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Value="1.0"/>
+                      <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Automated="1"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_4" FactoryPath="core.oscillator" Bypassed="0">
+                    <ComplexData>
+                      <DisplayBuffers>
+                        <DisplayBuffer Index="-1"/>
+                      </DisplayBuffers>
+                    </ComplexData>
+                    <Parameters>
+                      <Parameter MinValue="0.0" MaxValue="4.0" StepSize="1.0" ID="Mode" Automated="1"/>
+                      <Parameter MinValue="0.3" MaxValue="20000.0" StepSize="0.1000000014901161"
+                                 SkewFactor="0.2299045622348785" ID="Frequency" Value="220.0"/>
+                      <Parameter MinValue="1.0" MaxValue="30.0" StepSize="1.0" ID="Freq Ratio"
+                                 Automated="1"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Gate" Value="1.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Phase" Value="0.0"/>
+                      <Parameter MinValue="0.0" MaxValue="1.0" ID="Gain" Value="1.0"/>
+                    </Parameters>
+                  </Node>
+                  <Node ID="sineL_4_gain" FactoryPath="core.gain" Bypassed="0">
+                    <Parameters>
+                      <Parameter MinValue="-100.0" MaxValue="12.0" StepSize="0.1000000014901161"
+                                 SkewFactor="11.20230558362116" ID="Gain" Value="-2.899998553097262"/>
+                      <Parameter MinValue="0.0" MaxValue="1000.0" StepSize="0.1000000014901161"
+                                 SkewFactor="0.3010300099849701" ID="Smoothing" Value="20.0"/>
+                      <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
+                                 SkewFactor="5.422270774841309" ID="ResetValue" Value="0.0"/>
+                    </Parameters>
+                  </Node>
                 </Nodes>
                 <Parameters/>
               </Node>
             </Nodes>
             <Parameters>
-              <Parameter MinValue="1.0" MaxValue="3" StepSize="1.0" ID="NumClones" Value="3"/>
+              <Parameter MinValue="1.0" MaxValue="5" StepSize="1.0" ID="NumClones" Value="5"/>
               <Parameter MinValue="0.0" MaxValue="2.0" StepSize="1.0" ID="SplitSignal"
                          Value="1.0"/>
             </Parameters>
@@ -825,8 +1024,8 @@
             <Nodes>
               <Node ID="stiffnessDry" FactoryPath="core.gain" Bypassed="0">
                 <Parameters>
-                  <Parameter MinValue="0" MaxValue="-100" StepSize="0.1000000014901161" SkewFactor="11.20230558362116"
-                             ID="Gain" Automated="1"/>
+                  <Parameter MinValue="0.0" MaxValue="-100.0" StepSize="0.1000000014901161"
+                             SkewFactor="11.20230558362116" ID="Gain" Automated="1"/>
                   <Parameter MinValue="0.0" MaxValue="1000.0" StepSize="0.1000000014901161"
                              SkewFactor="0.3010300099849701" ID="Smoothing" Value="20.0"/>
                   <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
@@ -910,8 +1109,8 @@
               </Node>
               <Node ID="stiffnessWet" FactoryPath="core.gain" Bypassed="0">
                 <Parameters>
-                  <Parameter MinValue="-100" MaxValue="0" StepSize="0.1000000014901161" SkewFactor="11.20230558362116"
-                             ID="Gain" Automated="1"/>
+                  <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
+                             SkewFactor="11.20230558362116" ID="Gain" Automated="1"/>
                   <Parameter MinValue="0.0" MaxValue="1000.0" StepSize="0.1000000014901161"
                              SkewFactor="0.3010300099849701" ID="Smoothing" Value="20.0"/>
                   <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
@@ -966,16 +1165,16 @@
       </Node>
     </Nodes>
     <Parameters>
-      <Parameter ID="max_ratio_R" MinValue="29.07589813787308" MaxValue="29.07589813787308"
-                 StepSize="0.01" Value="29.07589813787308">
+      <Parameter ID="max_ratio_R" MinValue="5.90566037735849" MaxValue="5.90566037735849"
+                 StepSize="0.01" Value="5.90566037735849">
         <Connections/>
       </Parameter>
       <Parameter ID="min_ratio_R" MinValue="1.0" MaxValue="1.0" StepSize="0.01"
                  Value="1.0">
         <Connections/>
       </Parameter>
-      <Parameter ID="max_ratio_L" MinValue="31.11213974195163" MaxValue="31.11213974195163"
-                 StepSize="0.01" Value="31.11213974195163">
+      <Parameter ID="max_ratio_L" MinValue="10.38679245283019" MaxValue="10.38679245283019"
+                 StepSize="0.01" Value="10.38679245283019">
         <Connections/>
       </Parameter>
       <Parameter ID="min_ratio_L" MinValue="1.0" MaxValue="1.0" StepSize="0.01"
@@ -997,7 +1196,7 @@
         </Connections>
       </Parameter>
       <Parameter ID="pitchDriftIntensity" MinValue="0.0" MaxValue="1.0" StepSize="0.01"
-                 Value="1.0">
+                 Value="0.1">
         <Connections>
           <Connection NodeId="bipolarDriftR" ParameterId="Scale"/>
           <Connection NodeId="bipolarDriftL" ParameterId="Scale"/>
@@ -1029,7 +1228,7 @@
         <Connections/>
       </Parameter>
       <Parameter ID="filterFalloffDecay" MinValue="0" MaxValue="40000" StepSize="1"
-                 Value="0.0">
+                 Value="5000">
         <Connections>
           <Connection NodeId="ahdsrFilter" ParameterId="Decay"/>
         </Connections>
@@ -1041,7 +1240,7 @@
         </Connections>
       </Parameter>
       <Parameter ID="stiffnessIntensity" MinValue="0.0" MaxValue="1.0" StepSize="0.01"
-                 Value="1.0">
+                 Value="0.0">
         <Connections>
           <Connection NodeId="stiffnessWet" ParameterId="Gain"/>
           <Connection NodeId="stiffnessDry" ParameterId="Gain"/>

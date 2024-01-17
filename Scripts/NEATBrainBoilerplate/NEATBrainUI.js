@@ -12,31 +12,6 @@ for (i = 0; i < 128; i++)
    	
 /* UI Control Methods */
 
-// Reset All Controls
-inline function onbtnResetRatiosControl(component, value)
-{
-	if (!value)
-		return;	
-
-	for (i=0; i<SliderPack_RatiosL.getNumSliders(); i++)
-    {
-        SliderPack_RatiosL.setSliderAtIndex(i, MODES_L[i]);
-        SliderPack_RatiosL.changed();    
-    }   
-    for (i=0; i<SliderPack_RatiosR.getNumSliders(); i++)
-	{
-	    SliderPack_RatiosR.setSliderAtIndex(i, MODES_R[i]);
-	    SliderPack_RatiosR.changed();    
-	}
-};
-
-// Randomize All Controls
-inline function onbtnRandomRatiosControl(component, value)
-{
-	if (!value)
-		return;
-}
-
 
 
 // Open Advanced Panel
@@ -49,95 +24,48 @@ inline function onbtnShowAdvancedPanelControl(component, value)
 // Partials
 
 // Partial Gain
-inline function onknbPartialGainControl(component, value)
-{
-	synthPartials.setAttribute(synthPartials.Gain, value);	
-}
+inline function onknbPartialGainControl(component, value){}		
 
 // AHDSR Attack
-inline function onknbPartialAttackControl(component, value)
-{
-	ahdsrPartials.setAttribute(ahdsrPartials.Attack, value);
-}
+inline function onknbPartialAttackControl(component, value){}
 
 // AHDSR Decay
-inline function onknbPartialDecayControl(component, value)
-{
-	ahdsrPartials.setAttribute(ahdsrPartials.Decay, value);
-}
+inline function onknbPartialDecayControl(component, value){}
 
 // AHDSR Sustain
-inline function onknbPartialSustainControl(component, value)
-{		
-	ahdsrPartials.setAttribute(ahdsrPartials.Sustain, value);
-}
+inline function onknbPartialSustainControl(component, value){}
 
 // AHDSR Release
-inline function onknbPartialReleaseControl(component, value)
-{
-	ahdsrPartials.setAttribute(ahdsrPartials.Release, value);
-}
+inline function onknbPartialReleaseControl(component, value){}
 
 // Random Global
-inline function onknbPartialRandomGlobalControl(component, value)
-{
-	synthPartials.setAttribute(synthPartials.pitchRandomGlobalIntensity, value);
-}
+inline function onknbPartialRandomGlobalControl(component, value){}
 
 // Random Single
-inline function onknbPartialRandomSingleControl(component, value)
-{
-	synthPartials.setAttribute(synthPartials.pitchRandomSingleIntensity, value);
-}
+inline function onknbPartialRandomSingleControl(component, value){}
 
 // Falloff Intensity
-inline function onknbPartialFalloffIntensityControl(component, value)
-{
-	synthPartials.setAttribute(synthPartials.pitchFalloffIntensity, value);
-}
+inline function onknbPartialFalloffIntensityControl(component, value){}
 
 // Falloff Decay
-inline function onknbPartialFalloffDecayControl(component, value)
-{
-	synthPartials.setAttribute(synthPartials.pitchFalloffDecay, value);
-}
+inline function onknbPartialFalloffDecayControl(component, value){}
 
 // Pitch LFO Drift
-inline function onknbPartialDriftIntensityControl(component, value)
-{
-	synthPartials.setAttribute(synthPartials.pitchDriftIntensity, value);
-}
+inline function onknbPartialDriftIntensityControl(component, value){}
 
 // Filter Static
-inline function onknbPartialFilterControl(component, value)
-{
-	synthPartials.setAttribute(synthPartials.filterStaticFrequency, value);
-}
+inline function onknbPartialFilterControl(component, value){}
 
 // Filter Decay
-inline function onknbPartialDampenControl(component, value)
-{
-	synthPartials.setAttribute(synthPartials.filterFalloffDecay, value);
-}
+inline function onknbPartialDampenControl(component, value){}
 
 // Stiffness Types
-inline function onbtnPartialStiffnessTypeAControl(component, value)
-{
-	if (value)
-		synthPartials.setAttribute(synthPartials.stiffnessType, 0);
-}
+inline function onbtnPartialStiffnessTypeAControl(component, value){}
 
-inline function onbtnPartialStiffnessTypeBControl(component, value)
-{
-	if (value)
-		synthPartials.setAttribute(synthPartials.stiffnessType, 1);	
-}
+inline function onbtnPartialStiffnessTypeBControl(component, value){}
 
 // Stiffness Intensity
-inline function onknbPartialStiffnessIntensityControl(component, value)
-{
-	synthPartials.setAttribute(synthPartials.stiffnessIntensity, value);
-}
+inline function onknbPartialStiffnessIntensityControl(component, value){}
 
 // Residue
 
@@ -234,11 +162,6 @@ const btnShowAdvancedPanel = createButton("btnShowAdvancedPanel", 471, 200, 24, 
 const pnlAdvanced = createChildPanel("pnlAdvanced", 498, 20, 480, 490, "pnlBody");
 
 
-
-const btnResetRatios = createButton("btnResetRatios", 300, -8, 70, 32, "Reset", false, onbtnResetRatiosControl, true, true, "pnlAdvanced");
-const btnRandomRatios = createButton("btnRandomRatios", 360, -8, 70, 32, "Random", false, onbtnRandomRatiosControl, true, true, "pnlAdvanced");
-
-
 const lblAdvanced = createLabel("lblAdvanced", -8, -26, 128, 64, 24, "Advanced_", "pnlAdvanced", Colours.grey, "centred");
 const lblRatios_L = createLabel("lblRatios_L", SliderPack_RatiosL.get("x") + 350, SliderPack_RatiosL.get("y") + 96, 128, 32, 16, "Ratios L", "pnlAdvanced", Colours.grey, "centred");
 const lblRatios_R = createLabel("lblRatios_R", SliderPack_RatiosR.get("x") + 350, SliderPack_RatiosR.get("y") + 96, 128, 32, 16, "Ratios R", "pnlAdvanced", Colours.grey, "centred");
@@ -260,14 +183,6 @@ const btnPartialStiffnessTypeB = createButton("btnPartialStiffnessTypeB", knbPar
 
 btnPartialStiffnessTypeA.set("radioGroup", 1);
 btnPartialStiffnessTypeB.set("radioGroup", 1);
-
-// check to make sure there's no dead buttons
-
-if (btnPartialStiffnessTypeA.getValue() == 0 && btnPartialStiffnessTypeB.getValue() == 0)
-{
-	btnPartialStiffnessTypeA.setValue(1);
-	btnPartialStiffnessTypeA.changed();
-}
 
 const lblPartialRandomGlobal = createLabel("lblPartialRandomGlobal", knbPartialRandomGlobal.get("x") - 39, knbPartialRandomGlobal.get("y") + 50, 128, 32, 16, "Global", "pnlAdvanced", Colours.grey, "centred");
 const lblPartialRandomSingle = createLabel("lblPartialRandomSingle", knbPartialRandomSingle.get("x") - 40, knbPartialRandomGlobal.get("y") + 50, 128, 32, 16, "Inter", "pnlAdvanced", Colours.grey, "centred");
@@ -402,9 +317,6 @@ knbPartialSustain.set("middlePosition", -12.0);
 knbPartialFilter.set("middlePosition", 3000);
 
 /* Custom LAF */
-
-btnResetRatios.setLocalLookAndFeel(LAFButtonResetRatios);
-btnRandomRatios.setLocalLookAndFeel(LAFButtonRandomRatios);
 
 btnPartialStiffnessTypeA.setLocalLookAndFeel(LAFButtonStiffness);
 btnPartialStiffnessTypeB.setLocalLookAndFeel(LAFButtonStiffness);

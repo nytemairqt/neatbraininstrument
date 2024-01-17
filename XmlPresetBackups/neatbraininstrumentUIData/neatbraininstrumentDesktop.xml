@@ -114,7 +114,7 @@
       <Component type="ScriptPanel" id="pnlInfoPopup" x="10" y="10" width="485"
                  height="510" parentComponent="pnlBody" visible="0"/>
       <Component type="ScriptPanel" id="pnlAdvanced" x="498" y="20" width="480"
-                 height="490" parentComponent="pnlBody">
+                 height="490" parentComponent="pnlBody" visible="0.0">
         <Component type="ScriptPanel" id="lblRatios_L" x="367" y="133" width="128"
                    height="32" text="Ratios L" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblRatios_R" x="367" y="263" width="128"
@@ -164,9 +164,9 @@
                    y="462" width="128" height="32" text="Stiffness" parentComponent="pnlAdvanced"/>
         <Component type="ScriptSliderPack" id="SliderPack_RatiosL" x="17.0" y="37.0"
                    parentComponent="pnlAdvanced" processorId="synthPartials" max="31.11000061035156"
-                   sliderAmount="27.0" width="440.0" height="100.0"/>
+                   sliderAmount="32.0" width="440.0" height="100.0"/>
         <Component type="ScriptSliderPack" id="SliderPack_RatiosR" x="17.0" y="167.0"
-                   sliderAmount="27.0" processorId="synthPartials" SliderPackIndex="1"
+                   sliderAmount="32.0" processorId="synthPartials" SliderPackIndex="1"
                    max="31.11000061035156" width="440.0" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblAdvanced" x="-8" y="-26" width="128"
                    height="64" text="Advanced_" parentComponent="pnlAdvanced"/>
