@@ -17,11 +17,7 @@ include("RhapsodyBoilerplate/includes/Spinner.js");
 /* NEATBrain External Files */
 
 include("NEATBRAINBoilerplate/NEATBrainUi.js");
-
-/* Main Interface */
-
-const var synthWTLeft = Synth.getChildSynth("synthWTLeft");
-const var synthWTRight = Synth.getChildSynth("synthWTRight");function onNoteOn()
+function onNoteOn()
 {
 	
 }

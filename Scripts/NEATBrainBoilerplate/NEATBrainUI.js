@@ -72,8 +72,6 @@ inline function onknbResidueGainControl(component, value)
 {
 	samplerResidueL.setAttribute(samplerResidueL.Gain, value);	
 	samplerResidueR.setAttribute(samplerResidueR.Gain, value);	
-	samplerNoiseL.setAttribute(samplerNoiseL.Gain, value);
-	samplerNoiseR.setAttribute(samplerNoiseR.Gain, value);
 	samplerReleaseL.setAttribute(samplerReleaseL.Gain, value);
 	samplerReleaseR.setAttribute(samplerReleaseR.Gain, value);
 }
