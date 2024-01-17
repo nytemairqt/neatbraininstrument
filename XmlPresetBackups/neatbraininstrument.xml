@@ -20,24 +20,24 @@
             <Control type="ScriptSlider" id="knbResidueRelease" value="5.0"/>
             <Control type="ScriptSlider" id="knbPartialGain" value="1.0"/>
             <Control type="ScriptSlider" id="knbResidueGain" value="0.8700000047683716"/>
+            <Control type="ScriptSlider" id="knbPitchVelocity" value="0.0"/>
+            <Control type="ScriptSlider" id="knbPitchDecay" value="20.0"/>
+            <Control type="ScriptSlider" id="knbPitchRandom" value="0.05000000074505806"/>
+            <Control type="ScriptSlider" id="knbPitchLFO" value="0.07000000029802322"/>
+            <Control type="ScriptSlider" id="knbAmpVelocity" value="0.3499999940395355"/>
+            <Control type="ScriptSlider" id="knbAmpLFO" value="0.1800000071525574"/>
+            <Control type="ScriptSlider" id="knbAmpRandom" value="0.05999999865889549"/>
+            <Control type="ScriptSlider" id="knbToneDampen" value="4000.0"/>
+            <Control type="ScriptSlider" id="knbToneDecay" value="0.1000000014901161"/>
+            <Control type="ScriptSlider" id="knbToneStiffness" value="0.1099999994039536"/>
+            <Control type="ScriptButton" id="btnToneStiffnessTypeA" value="1.0"/>
+            <Control type="ScriptButton" id="btnToneStiffnessTypeB" value="0.0"/>
+            <Control type="ScriptSlider" id="knbTonePosition" value="0.1000000014901161"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-6.0"/>
             <Control type="ScriptSlider" id="knbMasterPan" value="0.0"/>
             <Control type="ScriptSlider" id="knbCoarseDetune" value="0.0"/>
             <Control type="ScriptSlider" id="knbFineDetune" value="0.0"/>
             <Control type="ScriptSlider" id="knbTranspose" value="0.0"/>
-            <Control type="ScriptSlider" id="knbPitchVelocity" value="0.0"/>
-            <Control type="ScriptSlider" id="knbPitchDecay" value="0.1000000014901161"/>
-            <Control type="ScriptSlider" id="knbPitchRandom" value="0.1000000014901161"/>
-            <Control type="ScriptSlider" id="knbPitchLFO" value="0.09000000357627869"/>
-            <Control type="ScriptSlider" id="knbAmpVelocity" value="0.1400000005960464"/>
-            <Control type="ScriptSlider" id="knbAmpLFO" value="0.1599999964237213"/>
-            <Control type="ScriptSlider" id="knbAmpRandom" value="0.07000000029802322"/>
-            <Control type="ScriptSlider" id="knbToneDampen" value="0.119999997317791"/>
-            <Control type="ScriptSlider" id="knbToneDecay" value="0.1000000014901161"/>
-            <Control type="ScriptSlider" id="knbToneWTPosition" value="0.07999999821186066"/>
-            <Control type="ScriptSlider" id="knbToneStiffness" value="0.09000000357627869"/>
-            <Control type="ScriptButton" id="btnToneStiffnessTypeA" value="0.0"/>
-            <Control type="ScriptButton" id="btnToneStiffnessTypeB" value="0.0"/>
           </Content>
           <UIData Source="neatbraininstrumentUIData"/>
         </Processor>
@@ -414,6 +414,10 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
+            <Processor Type="Velocity" ID="synthWTLeft_gainVelocity" Bypassed="0" Intensity="0.05999999865889549"
+                       UseTable="0.0" Inverted="0.0" DecibelMode="0.0">
+              <ChildProcessors/>
+            </Processor>
             <Processor Type="LFO" ID="synthWTLeft_gainLFO" Bypassed="0" Intensity="1.0"
                        Frequency="0.6800000071525574" FadeIn="1000.0" WaveformType="1.0"
                        Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
@@ -439,7 +443,7 @@
             <Processor Type="AHDSR" ID="synthWTLeft_pitchAHDSR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Bipolar="1" Intensity="0.0" AttackCurve="0.0"
                        DecayCurve="0.0" Attack="20.0" AttackLevel="0.0" Hold="10.0"
-                       Decay="300.0" Sustain="0.0" Release="20.0" EcoMode="1.0">
+                       Decay="20.0" Sustain="0.0" Release="20.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -447,7 +451,7 @@
                 <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
                   <ChildProcessors>
                     <Processor Type="Velocity" ID="synthWTLeft_pitchAHDSRVelocity" Bypassed="0"
-                               Intensity="1.0" UseTable="0.0" Inverted="0.0" DecibelMode="0.0">
+                               Intensity="0.0" UseTable="0.0" Inverted="0.0" DecibelMode="0.0">
                       <ChildProcessors/>
                     </Processor>
                   </ChildProcessors>
@@ -463,11 +467,11 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="Random" ID="synthWTLeft_pitchRandom" Bypassed="0" Intensity="0.0"
+            <Processor Type="Random" ID="synthWTLeft_pitchRandom" Bypassed="0" Intensity="0.004166666883975267"
                        Bipolar="1" UseTable="0.0" RandomTableData="">
               <ChildProcessors/>
             </Processor>
-            <Processor Type="LFO" ID="synthWTLeft_pitchLFO" Bypassed="0" Intensity="0.0"
+            <Processor Type="LFO" ID="synthWTLeft_pitchLFO" Bypassed="0" Intensity="0.005833333358168602"
                        Bipolar="1" Frequency="3.0" FadeIn="1000.0" WaveformType="1.0"
                        Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
                        PhaseOffset="0.0" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
@@ -603,10 +607,10 @@
   <MidiAutomation>
     <Controller Controller="7" Processor="Interface" MacroIndex="-1" Start="-100.0"
                 End="0.0" FullStart="-100.0" FullEnd="0.0" Skew="3.492788620791155"
-                Interval="0.01" Attribute="btnLazyLoad" Inverted="0"/>
+                Interval="0.01" Attribute="lblAmpLFO" Inverted="0"/>
     <Controller Controller="10" Processor="Interface" MacroIndex="-1" Start="-100.0"
                 End="100.0" FullStart="-100.0" FullEnd="100.0" Skew="1.0" Interval="0.01"
-                Attribute="pnlSettingsTab2" Inverted="0"/>
+                Attribute="knbTonePosition" Inverted="0"/>
   </MidiAutomation>
   <MPEData Enabled="0"/>
 </Processor>

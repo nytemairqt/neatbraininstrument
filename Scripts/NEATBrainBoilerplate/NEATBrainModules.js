@@ -5,6 +5,7 @@
 const synthWTLeft = Synth.getChildSynth("synthWTLeft");
 
 const synthWTLeft_gainAHDSR = Synth.getModulator("synthWTLeft_gainAHDSR");
+const synthWTLeft_gainVelocity = Synth.getModulator("synthWTLeft_gainVelocity");
 const synthWTLeft_gainLFO = Synth.getModulator("synthWTLeft_gainLFO");
 const synthWTLeft_gainRandom = Synth.getModulator("synthWTLeft_gainRandom");
 
