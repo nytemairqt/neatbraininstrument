@@ -132,18 +132,7 @@ if (isDefined(MODES_R))
 
 function onNoteOn()
 {
-	//randomGlobalBang = (Math.randInt(-1, 1) * synthPartials.getAttribute(synthPartials.pitchRandomGlobalIntensity));	
 	
-	// Global Random
-	randomGlobalDirection = Math.random();	
-	if (randomGlobalDirection > .5)
-		randomGlobalBang = Math.random();
-	else 
-		randomGlobalBang = 0-Math.random();
-
-	synthPartials.setAttribute(synthPartials.pitchRandomGlobalBang, randomGlobalBang);
-	//ScriptnodeSyntesiser1.setAttribute(ScriptnodeSyntesiser1.pitchRandomGlobalBang, randomGlobalBang);
-	//Console.print(synthPartials.getAttribute(synthPartials.pitchRandomGlobalIntensity));
 }
  function onNoteOff()
 {

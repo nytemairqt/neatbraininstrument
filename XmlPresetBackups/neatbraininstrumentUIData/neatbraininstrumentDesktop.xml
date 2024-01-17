@@ -119,10 +119,11 @@
                    height="32" text="Ratios L" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblRatios_R" x="367" y="263" width="128"
                    height="32" text="Ratios R" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptButton" id="btnResetRatios" x="300" y="-8" width="70"
-                   height="32" text="Reset" saveInPreset="0" isMomentary="1" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptButton" id="btnRandomRatios" x="360" y="-8" width="70"
-                   height="32" text="Random" saveInPreset="0" isMomentary="1" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptButton" id="btnResetRatios" x="300.0" y="-8.0" width="70.0"
+                   height="32.0" text="Reset" saveInPreset="0" isMomentary="1" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptButton" id="btnRandomRatios" x="360.0" y="-8.0" width="70.0"
+                   height="32.0" text="Random" saveInPreset="0" isMomentary="1"
+                   parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblPartialSculpt" x="-31" y="382" width="128"
                    height="32" text="Sculpt" parentComponent="pnlAdvanced"/>
         <Component type="ScriptSlider" id="knbPartialRandomGlobal" x="75" y="312"
