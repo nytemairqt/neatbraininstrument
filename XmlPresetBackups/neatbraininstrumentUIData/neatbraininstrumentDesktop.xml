@@ -182,6 +182,9 @@
         <Component type="ScriptPanel" id="pnlShowInfoPopup" x="436" y="0" width="16"
                    height="16" parentComponent="pnlAdvanced" allowCallbacks="Clicks &amp; Hover"/>
       </Component>
+      <Component type="ScriptComboBox" id="ComboBox1" x="175.0" y="190.0" parentComponent="pnlBody"
+                 processorId="Wavetable Synthesiser1" parameterId="LoadedBankIndex"
+                 items="nothing&#10;03&#10;04&#10;03&#10;04" max="5"/>
     </Component>
     <Component type="ScriptPanel" id="pnlStatusBar" x="5.0" y="585.0" text=""
                width="990.0" height="39.0" bgColour="0" itemColour="4281282356"

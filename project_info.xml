@@ -7,7 +7,7 @@
   <Description value=""/>
   <BundleIdentifier value="com.iamlamprey.neatbraininstrument"/>
   <PluginCode value="Nbrn"/>
-  <EmbedAudioFiles value="Yes"/>
+  <EmbedAudioFiles value="1"/>
   <EmbedImageFiles value="Yes"/>
   <SupportFullDynamicsHLAC value="No"/>
   <AdditionalDspLibraries value=""/>

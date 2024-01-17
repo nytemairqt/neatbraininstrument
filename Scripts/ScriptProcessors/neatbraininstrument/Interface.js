@@ -1,5 +1,8 @@
 Content.makeFrontInterface(1000, 710);
 
+
+Engine.loadAudioFilesIntoPool();
+
 include("RhapsodyBoilerplate/includes/Ui.js");
 include("RhapsodyBoilerplate/includes/LookAndFeel.js");
 include("RhapsodyBoilerplate/includes/Paths.js");
@@ -9,6 +12,17 @@ include("RhapsodyBoilerplate/includes/Footer.js");
 include("RhapsodyBoilerplate/includes/Presets.js");
 include("RhapsodyBoilerplate/includes/UserSettings.js");
 include("RhapsodyBoilerplate/includes/Spinner.js");
+
+const var ComboBox1 = Content.getComponent("ComboBox1");
+
+//ComboBox1.set("items", "nothing");
+
+for (w in Engine.getWavetableList())
+{
+	Console.print(w);
+	ComboBox1.addItem(w);
+}
+
 
 /* NEATBrain Global Vars */
 
