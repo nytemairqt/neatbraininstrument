@@ -15,9 +15,9 @@
             <Control type="ScriptSlider" id="knbPartialSustain" value="-100.0"/>
             <Control type="ScriptSlider" id="knbPartialRelease" value="5.0"/>
             <Control type="ScriptSlider" id="knbResidueAttack" value="5.0"/>
-            <Control type="ScriptSlider" id="knbResidueDecay" value="15000.0"/>
+            <Control type="ScriptSlider" id="knbResidueDecay" value="20000.0"/>
             <Control type="ScriptSlider" id="knbResidueSustain" value="-100.0"/>
-            <Control type="ScriptSlider" id="knbResidueRelease" value="200.0"/>
+            <Control type="ScriptSlider" id="knbResidueRelease" value="5.0"/>
             <Control type="ScriptSlider" id="knbPartialGain" value="1.0"/>
             <Control type="ScriptSlider" id="knbResidueGain" value="0.8700000047683716"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-6.0"/>
@@ -25,6 +25,19 @@
             <Control type="ScriptSlider" id="knbCoarseDetune" value="0.0"/>
             <Control type="ScriptSlider" id="knbFineDetune" value="0.0"/>
             <Control type="ScriptSlider" id="knbTranspose" value="0.0"/>
+            <Control type="ScriptSlider" id="knbPitchVelocity" value="0.0"/>
+            <Control type="ScriptSlider" id="knbPitchDecay" value="0.1000000014901161"/>
+            <Control type="ScriptSlider" id="knbPitchRandom" value="0.1000000014901161"/>
+            <Control type="ScriptSlider" id="knbPitchLFO" value="0.09000000357627869"/>
+            <Control type="ScriptSlider" id="knbAmpVelocity" value="0.1400000005960464"/>
+            <Control type="ScriptSlider" id="knbAmpLFO" value="0.1599999964237213"/>
+            <Control type="ScriptSlider" id="knbAmpRandom" value="0.07000000029802322"/>
+            <Control type="ScriptSlider" id="knbToneDampen" value="0.119999997317791"/>
+            <Control type="ScriptSlider" id="knbToneDecay" value="0.1000000014901161"/>
+            <Control type="ScriptSlider" id="knbToneWTPosition" value="0.07999999821186066"/>
+            <Control type="ScriptSlider" id="knbToneStiffness" value="0.09000000357627869"/>
+            <Control type="ScriptButton" id="btnToneStiffnessTypeA" value="0.0"/>
+            <Control type="ScriptButton" id="btnToneStiffnessTypeB" value="0.0"/>
           </Content>
           <UIData Source="neatbraininstrumentUIData"/>
         </Processor>
@@ -95,24 +108,24 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="StreamingSampler" ID="samplerResidueL" Bypassed="0" Gain="0.8700000047683716"
-               Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
-               SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="0.0"
-               OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0" Reversed="0.0"
-               NumChannels="1" UseStaticMatrix="0.0" Group0Table="" Group1Table=""
-               Group2Table="" Group3Table="" Group4Table="" Group5Table="" Group6Table=""
-               Group7Table="" SampleMapID="sampleMapLeft">
+    <Processor Type="StreamingSampler" ID="samplerResidueLeft" Bypassed="0"
+               Gain="0.8700000047683716" Balance="-100.0" VoiceLimit="256.0"
+               KillFadeTime="20.0" IconColour="0" PreloadSize="8192.0" BufferSize="4096.0"
+               VoiceAmount="256.0" SamplerRepeatMode="3.0" RRGroupAmount="15.0"
+               PitchTracking="0.0" OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0"
+               Reversed="0.0" NumChannels="1" UseStaticMatrix="0.0" Group0Table=""
+               Group1Table="" Group2Table="" Group3Table="" Group4Table="" Group5Table=""
+               Group6Table="" Group7Table="" SampleMapID="sampleMapLeft">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
         </Processor>
         <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
           <ChildProcessors>
-            <Processor Type="AHDSR" ID="ahdsrResidueL" Bypassed="0" Monophonic="0.0"
+            <Processor Type="AHDSR" ID="samplerResidueLeft_gainAHDSR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                       Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="300.0" Sustain="0.0"
-                       Release="20.0" EcoMode="1.0">
+                       Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
+                       Release="5.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -151,14 +164,14 @@
         <channelData enabled="1" level="0.0" suffix=""/>
       </channels>
     </Processor>
-    <Processor Type="StreamingSampler" ID="samplerReleaseL" Bypassed="1" Gain="0.8700000047683716"
-               Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
-               SamplerRepeatMode="3.0" RRGroupAmount="1.0" PitchTracking="0.0"
-               OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0" Reversed="0.0"
-               NumChannels="1" UseStaticMatrix="0.0" Group0Table="" Group1Table=""
-               Group2Table="" Group3Table="" Group4Table="" Group5Table="" Group6Table=""
-               Group7Table="" SampleMapID="">
+    <Processor Type="StreamingSampler" ID="samplerReleaseLeft" Bypassed="1"
+               Gain="0.8700000047683716" Balance="-100.0" VoiceLimit="256.0"
+               KillFadeTime="20.0" IconColour="0" PreloadSize="8192.0" BufferSize="4096.0"
+               VoiceAmount="256.0" SamplerRepeatMode="3.0" RRGroupAmount="1.0"
+               PitchTracking="0.0" OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0"
+               Reversed="0.0" NumChannels="1" UseStaticMatrix="0.0" Group0Table=""
+               Group1Table="" Group2Table="" Group3Table="" Group4Table="" Group5Table=""
+               Group6Table="" Group7Table="" SampleMapID="">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors>
@@ -217,24 +230,24 @@
         <channelData enabled="1" level="0.0" suffix=""/>
       </channels>
     </Processor>
-    <Processor Type="StreamingSampler" ID="samplerResidueR" Bypassed="0" Gain="0.8700000047683716"
-               Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
-               SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="0.0"
-               OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0" Reversed="0.0"
-               NumChannels="1" UseStaticMatrix="0.0" Group0Table="" Group1Table=""
-               Group2Table="" Group3Table="" Group4Table="" Group5Table="" Group6Table=""
-               Group7Table="" SampleMapID="sampleMapRight">
+    <Processor Type="StreamingSampler" ID="samplerResidueRight" Bypassed="0"
+               Gain="0.8700000047683716" Balance="100.0" VoiceLimit="256.0"
+               KillFadeTime="20.0" IconColour="0" PreloadSize="8192.0" BufferSize="4096.0"
+               VoiceAmount="256.0" SamplerRepeatMode="3.0" RRGroupAmount="15.0"
+               PitchTracking="0.0" OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0"
+               Reversed="0.0" NumChannels="1" UseStaticMatrix="0.0" Group0Table=""
+               Group1Table="" Group2Table="" Group3Table="" Group4Table="" Group5Table=""
+               Group6Table="" Group7Table="" SampleMapID="sampleMapRight">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors/>
         </Processor>
         <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
           <ChildProcessors>
-            <Processor Type="AHDSR" ID="ahdsrResidueR" Bypassed="0" Monophonic="0.0"
-                       Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                       Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="300.0" Sustain="0.0"
-                       Release="20.0" EcoMode="1.0">
+            <Processor Type="AHDSR" ID="samplerResidueRight_gainAHDSR" Bypassed="0"
+                       Monophonic="0.0" Retrigger="1.0" Intensity="1.0" AttackCurve="0.0"
+                       DecayCurve="0.0" Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0"
+                       Sustain="-100.0" Release="5.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -273,14 +286,14 @@
         <channelData enabled="1" level="0.0" suffix=""/>
       </channels>
     </Processor>
-    <Processor Type="StreamingSampler" ID="samplerReleaseR" Bypassed="1" Gain="0.8700000047683716"
-               Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
-               SamplerRepeatMode="3.0" RRGroupAmount="1.0" PitchTracking="0.0"
-               OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0" Reversed="0.0"
-               NumChannels="1" UseStaticMatrix="0.0" Group0Table="" Group1Table=""
-               Group2Table="" Group3Table="" Group4Table="" Group5Table="" Group6Table=""
-               Group7Table="" SampleMapID="">
+    <Processor Type="StreamingSampler" ID="samplerReleaseRight" Bypassed="1"
+               Gain="0.8700000047683716" Balance="100.0" VoiceLimit="256.0"
+               KillFadeTime="20.0" IconColour="0" PreloadSize="8192.0" BufferSize="4096.0"
+               VoiceAmount="256.0" SamplerRepeatMode="3.0" RRGroupAmount="1.0"
+               PitchTracking="0.0" OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0"
+               Reversed="0.0" NumChannels="1" UseStaticMatrix="0.0" Group0Table=""
+               Group1Table="" Group2Table="" Group3Table="" Group4Table="" Group5Table=""
+               Group6Table="" Group7Table="" SampleMapID="">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors>
@@ -381,8 +394,8 @@
           <ChildProcessors>
             <Processor Type="AHDSR" ID="synthWTLeft_gainAHDSR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                       Attack="248.0" AttackLevel="0.0" Hold="10.0" Decay="14752.0"
-                       Sustain="-100.0" Release="20.0" EcoMode="1.0">
+                       Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
+                       Release="5.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -478,7 +491,7 @@
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="synthWTLeft_fxLowpass" Bypassed="0"
                        Gain="0.0" Frequency="5368.7099609375" Q="0.5899999737739563"
-                       Mode="6.0" Quality="0.0" BipolarIntensity="0.0">
+                       Mode="6.0" Quality="262656.0" BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1.0">
@@ -590,10 +603,10 @@
   <MidiAutomation>
     <Controller Controller="7" Processor="Interface" MacroIndex="-1" Start="-100.0"
                 End="0.0" FullStart="-100.0" FullEnd="0.0" Skew="3.492788620791155"
-                Interval="0.01" Attribute="knbCoarseDetune" Inverted="0"/>
+                Interval="0.01" Attribute="btnLazyLoad" Inverted="0"/>
     <Controller Controller="10" Processor="Interface" MacroIndex="-1" Start="-100.0"
                 End="100.0" FullStart="-100.0" FullEnd="100.0" Skew="1.0" Interval="0.01"
-                Attribute="fltMidiChannels" Inverted="0"/>
+                Attribute="pnlSettingsTab2" Inverted="0"/>
   </MidiAutomation>
   <MPEData Enabled="0"/>
 </Processor>

@@ -3,119 +3,39 @@ include("NEATBRAINBoilerplate/NEATBrainModules.js");
 include("NEATBRAINBoilerplate/NEATBrainUIConstructors.js");
 
 
-/* Key Colours */
-
-for (i = 0; i < 128; i++)
-   	Engine.setKeyColour(i, Colours.withAlpha(Colours.black, 0.2));
-   	
-/* UI Control Methods */
 
 
+/* Partials */
 
-// Open Advanced Panel
-
-inline function onbtnShowAdvancedPanelControl(component, value)
-{
-	pnlAdvanced.set("visible", value);
-}
-
-// Partials
 
 // Partial Gain
 inline function onknbPartialGainControl(component, value){}		
 
 // AHDSR Attack
-inline function onknbPartialAttackControl(component, value){}
-
-// AHDSR Decay
-inline function onknbPartialDecayControl(component, value){}
-
-// AHDSR Sustain
-inline function onknbPartialSustainControl(component, value){}
-
-// AHDSR Release
-inline function onknbPartialReleaseControl(component, value){}
-
-// Random Global
-inline function onknbPartialRandomGlobalControl(component, value){}
-
-// Random Single
-inline function onknbPartialRandomSingleControl(component, value){}
-
-// Falloff Intensity
-inline function onknbPartialFalloffIntensityControl(component, value){}
-
-// Falloff Decay
-inline function onknbPartialFalloffDecayControl(component, value){}
-
-// Pitch LFO Drift
-inline function onknbPartialDriftIntensityControl(component, value){}
-
-// Filter Static
-inline function onknbPartialFilterControl(component, value){}
-
-// Filter Decay
-inline function onknbPartialDampenControl(component, value){}
-
-// Stiffness Types
-inline function onbtnPartialStiffnessTypeAControl(component, value){}
-
-inline function onbtnPartialStiffnessTypeBControl(component, value){}
-
-// Stiffness Intensity
-inline function onknbPartialStiffnessIntensityControl(component, value){}
-
-// Residue
-
-// Partial Gain
-inline function onknbResidueGainControl(component, value)
+inline function onknbPartialAttackControl(component, value)
 {
-	samplerResidueL.setAttribute(samplerResidueL.Gain, value);	
-	samplerResidueR.setAttribute(samplerResidueR.Gain, value);	
-	samplerReleaseL.setAttribute(samplerReleaseL.Gain, value);
-	samplerReleaseR.setAttribute(samplerReleaseR.Gain, value);
-}
-
-// AHDSR Attack
-inline function onknbResidueAttackControl(component, value)
-{
+	synthWTLeft_gainAHDSR.setAttribute(synthWTLeft_gainAHDSR.Attack, value);
 }
 
 // AHDSR Decay
-inline function onknbResidueDecayControl(component, value)
+inline function onknbPartialDecayControl(component, value)
 {
+	synthWTLeft_gainAHDSR.setAttribute(synthWTLeft_gainAHDSR.Decay, value);
 }
 
 // AHDSR Sustain
-inline function onknbResidueSustainControl(component, value)
-{		
+inline function onknbPartialSustainControl(component, value)
+{
+	synthWTLeft_gainAHDSR.setAttribute(synthWTLeft_gainAHDSR.Sustain, value);
 }
 
 // AHDSR Release
-inline function onknbResidueReleaseControl(component, value)
+inline function onknbPartialReleaseControl(component, value)
 {
+	synthWTLeft_gainAHDSR.setAttribute(synthWTLeft_gainAHDSR.Release, value);
 }
 
-// Rhapsody Gain
-inline function onknbMasterGainControl(component, value)
-{
-	/* might cause issues */
-	if (isDefined(rhapsodyModules[0]))
-		rhapsodyModules[0].setAttribute(rhapsodyModules[0].Gain, value);
-}
-
-// Rhapsody Pan
-inline function onknbMasterPanControl(component, value)
-{
-	/* might cause issues */
-	if (isDefined(rhapsodyModules[0]))
-		rhapsodyModules[0].setAttribute(rhapsodyModules[0].Balance, value);
-}
-
-Content.getComponent("knbMasterGain").setControlCallback(onknbMasterGainControl);
-Content.getComponent("knbMasterPan").setControlCallback(onknbMasterPanControl);
-
-/* Partials */
+// Create UI Elements
 
 const lblModes = createLabel("lblModes", -10, -6, 128, 64, 24, "Modes_", "pnlBody", Colours.grey, "centred");
 const lblPartialADSR = createLabel("lblPartialADSR", -30, 402 , 128, 32, 20, "Env", "pnlBody", Colours.grey, "centred");
@@ -124,7 +44,6 @@ const lblPartialGain = createLabel("lblPartialGain", 240, 0, 128, 64, 14, "VOL",
 const knbPartialGain = createKnob("knbPartialGain", lblPartialGain.get("x") + 140, lblPartialGain.get("y") + 25, 100, 16, "Gain", true, onknbPartialGainControl, 0, 1, 0.01, .75, "pnlBody");
 
 knbPartialGain.setLocalLookAndFeel(LookAndFeel.horizontalSlider);
-
 
 const knbPartialAttack = createKnob("knbPartialAttack", 75, lblPartialADSR.get("y") + 30, 48, 48, "Attack", true, onknbPartialAttackControl, 5, 1000, 1.0, 5, "pnlBody");
 const knbPartialDecay = createKnob("knbPartialDecay", knbPartialAttack.get("x") + 100, lblPartialADSR.get("y") + 30, 48, 48, "Decay", true, onknbPartialDecayControl, 500, 20000, 1.0, 15000, "pnlBody");
@@ -138,8 +57,46 @@ const lblPartialRelease = createLabel("lblPartialRelease", knbPartialRelease.get
 
 /* Residue */
 
-const lblResidue = createLabel("lblResidue", 483, -6, 128, 64, 24, "Residue_", "pnlBody", Colours.grey, "centred");
+// Residue Gain
+inline function onknbResidueGainControl(component, value)
+{
+	samplerResidueLeft.setAttribute(samplerResidueLeft.Gain, value);	
+	samplerResidueRight.setAttribute(samplerResidueRight.Gain, value);	
+	samplerReleaseLeft.setAttribute(samplerReleaseLeft.Gain, value);
+	samplerReleaseRight.setAttribute(samplerReleaseRight.Gain, value);
+}
 
+// AHDSR Attack
+inline function onknbResidueAttackControl(component, value)
+{
+	samplerResidueLeft_gainAHDSR.setAttribute(samplerResidueLeft_gainAHDSR.Attack, value);
+	samplerResidueRight_gainAHDSR.setAttribute(samplerResidueRight_gainAHDSR.Attack, value);
+}
+
+// AHDSR Decay
+inline function onknbResidueDecayControl(component, value)
+{
+	samplerResidueLeft_gainAHDSR.setAttribute(samplerResidueLeft_gainAHDSR.Decay, value);
+	samplerResidueRight_gainAHDSR.setAttribute(samplerResidueRight_gainAHDSR.Decay, value);
+}
+
+// AHDSR Sustain
+inline function onknbResidueSustainControl(component, value)
+{		
+	samplerResidueLeft_gainAHDSR.setAttribute(samplerResidueLeft_gainAHDSR.Sustain, value);
+	samplerResidueRight_gainAHDSR.setAttribute(samplerResidueRight_gainAHDSR.Sustain, value);
+}
+
+// AHDSR Release
+inline function onknbResidueReleaseControl(component, value)
+{
+	samplerResidueLeft_gainAHDSR.setAttribute(samplerResidueLeft_gainAHDSR.Release, value);
+	samplerResidueRight_gainAHDSR.setAttribute(samplerResidueRight_gainAHDSR.Release, value);
+}
+
+// Create UI Elements
+
+const lblResidue = createLabel("lblResidue", 483, -6, 128, 64, 24, "Residue_", "pnlBody", Colours.grey, "centred");
 const lblResidueGain = createLabel("lblResidueGain", 740, 0, 128, 64, 14, "VOL", "pnlBody", Colours.grey, "right");
 const knbResidueGain = createKnob("knbResidueGain", lblResidueGain.get("x") + 140, lblResidueGain.get("y") + 25, 100, 16, "Gain", true, onknbResidueGainControl, 0, 1, 0.01, .75, "pnlBody");
 
@@ -147,7 +104,7 @@ knbResidueGain.setLocalLookAndFeel(LookAndFeel.horizontalSlider);
 
 const lblResidueADSR = createLabel("lblResidueADSR", 467, lblPartialADSR.get("y"), 128, 32, 20, "Env", "pnlBody", Colours.grey, "centred");
 
-const knbResidueAttack = createKnob("knbResidueAttack", 573, lblResidueADSR.get("y") + 30, 48, 48, "Attack", true, onknbResidueAttackControl, 5, 1000, 1.0, 5, "pnlBody");
+const knbResidueAttack = createKnob("knbResidueAttack", lblResidueADSR.get("x") + 106, lblResidueADSR.get("y") + 30, 48, 48, "Attack", true, onknbResidueAttackControl, 5, 1000, 1.0, 5, "pnlBody");
 const knbResidueDecay = createKnob("knbResidueDecay", knbResidueAttack.get("x") + 100, lblResidueADSR.get("y") + 30, 48, 48, "Decay", true, onknbResidueDecayControl, 500, 20000, 1.0, 15000, "pnlBody");
 const knbResidueSustain = createKnob("knbResidueSustain", knbResidueAttack.get("x") + 200, lblResidueADSR.get("y") + 30, 48, 48, "Sustain", true, onknbResidueSustainControl, -100, 0, 1.0, -100, "pnlBody");
 const knbResidueRelease = createKnob("knbResidueRelease", knbResidueAttack.get("x") + 300, lblResidueADSR.get("y") + 30, 48, 48, "Release", true, onknbResidueReleaseControl, 5, 15000, 1.0, 200, "pnlBody");
@@ -159,11 +116,81 @@ const lblResidueRelease = createLabel("lblResidueRelease", knbResidueRelease.get
 
 /* Advanced Panel */
 
+
+// Open Advanced Panel
+
+inline function onbtnShowAdvancedPanelControl(component, value)
+{
+	pnlAdvanced.set("visible", value);
+}
+
+// Amp Velocity
+inline function onknbAmpVelocityControl(component, value){}
+
+// Amp LFO
+inline function onknbAmpLFOControl(component, value){}
+
+// Amp Random
+inline function onknbAmpRandomControl(component, value){}
+
+// Pitch Velocity
+inline function onknbPitchVelocityControl(component, value){}
+
+// Pitch Decay
+inline function onknbPitchDecayControl(component, value){}
+
+// Pitch Random
+inline function onknbPitchRandomControl(component, value){}
+
+// Pitch LFO 
+inline function onknbPitchLFOControl(component, value){}
+
+// Tone Dampen
+inline function onknbToneDampenControl(component, value){}
+
+// Tone Decay 
+inline function onknbToneDecayControl(component, value){}
+
+// Tone WT Position
+// no idea what to do here
+inline function onknbToneWTPositionControl(component, value){} // rename this later?
+
+// Tone Stiffness Intensity
+inline function onknbToneStiffnessControl(component, value){}
+
+// Tone Stiffness Type (Buttons)
+inline function onbtnToneStiffnessTypeAControl(component, value){}
+inline function onbtnToneStiffnessTypeBControl(component, value){}
+
+// Instantiate UI Elements
+
 const btnShowAdvancedPanel = createButton("btnShowAdvancedPanel", 471, 200, 24, 100, "open", false, onbtnShowAdvancedPanelControl, false, true, "pnlBody");
 const pnlAdvanced = createChildPanel("pnlAdvanced", 498, 20, 480, 490, "pnlBody");
-
-
 const lblAdvanced = createLabel("lblAdvanced", -8, -26, 128, 64, 24, "Advanced_", "pnlAdvanced", Colours.grey, "centred");
+
+const lblTone = createLabel("lblTone", -30, 382 , 128, 32, 20, "Tone", "pnlAdvanced", Colours.grey, "centred");
+const lblPitch = createLabel("lblPitch", -30, lblTone.get("y") - 130, 128, 32, 20, "Pitch", "pnlAdvanced", Colours.grey, "centred");
+const lblAmp = createLabel("lblAmp", -30, lblPitch.get("y") - 130, 128, 32, 20, "Amp", "pnlAdvanced", Colours.grey, "centred");
+
+const knbAmpVelocity = createKnob("knbAmpVelocity", lblAmp.get("x") + 106, lblAmp.get("y") + 30, 48, 48, "Vel", true, onknbAmpVelocityControl, 0, 1.0, 0.01, 0.1, "pnlAdvanced");
+const knbAmpLFO = createKnob("knbAmpLFO", knbAmpVelocity.get("x") + 100, lblAmp.get("y") + 30, 48, 48, "Vel", true, onknbAmpVelocityControl, 0, 1.0, 0.01, 0.1, "pnlAdvanced");
+const knbAmpRandom = createKnob("knbAmpRandom", knbAmpLFO.get("x") + 100, lblAmp.get("y") + 30, 48, 48, "Vel", true, onknbAmpVelocityControl, 0, 1.0, 0.01, 0.1, "pnlAdvanced");
+
+const knbPitchVelocity = createKnob("knbPitchVelocity", lblPitch.get("x") + 106, lblPitch.get("y") + 30, 48, 48, "Vel", true, onknbPitchVelocityControl, 0, 1.0, 0.01, 0.1, "pnlAdvanced");
+const knbPitchDecay = createKnob("knbPitchDecay", knbPitchVelocity.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "Vel", true, onknbPitchDecayControl, 0, 1.0, 0.01, 0.1, "pnlAdvanced");
+const knbPitchRandom = createKnob("knbPitchRandom", knbPitchDecay.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "Vel", true, onknbPitchRandomControl, 0, 1.0, 0.01, 0.1, "pnlAdvanced");
+const knbPitchLFO = createKnob("knbPitchLFO", knbPitchRandom.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "Vel", true, onknbPitchLFOControl, 0, 1.0, 0.01, 0.1, "pnlAdvanced");
+
+const knbToneDampen = createKnob("knbToneDampen", lblTone.get("x") + 106, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneDampenControl, 0, 1.0, 0.01, 0.1, "pnlAdvanced");
+const knbToneDecay = createKnob("knbToneDecay", knbToneDampen.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneDampenControl, 0, 1.0, 0.01, 0.1, "pnlAdvanced");
+const knbToneWTPosition = createKnob("knbToneWTPosition", knbToneDecay.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneWTPositionControl, 0, 1.0, 0.01, 0.1, "pnlAdvanced");
+const knbToneStiffness = createKnob("knbToneStiffness", knbToneWTPosition.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneStiffnessControl, 0, 1.0, 0.01, 0.1, "pnlAdvanced");
+const btnToneStiffnessTypeA = createButton("btnToneStiffnessTypeA", knbToneStiffness.get("x") + 66, knbToneStiffness.get("y") - 14, 24, 24, "A", true, onbtnToneStiffnessTypeAControl, false, true, "pnlAdvanced");
+const btnToneStiffnessTypeB = createButton("btnToneStiffnessTypeB", knbToneStiffness.get("x") + 66, knbToneStiffness.get("y") + 34, 24, 24, "B", true, onbtnToneStiffnessTypeBControl, false, true, "pnlAdvanced");
+
+btnToneStiffnessTypeA.setLocalLookAndFeel(LAFButtonStiffness);
+btnToneStiffnessTypeB.setLocalLookAndFeel(LAFButtonStiffness);
+
 	
 /* Horizontal Sliders */
 
@@ -275,13 +302,37 @@ pnlShowInfoPopup.setPaintRoutine(function(g)
 
 /* Custom LAF */
 
-
-
-
 btnShowAdvancedPanel.setLocalLookAndFeel(LAFButtonShowAdvancedPanel);
 
 pnlAdvanced.setPaintRoutine(function(g)
 {
 	g.fillAll(pnlBodyColour);
 });
+
+/* Rhapsody Stuff */
+
+// Rhapsody Gain
+inline function onknbMasterGainControl(component, value)
+{
+	/* might cause issues */
+	if (isDefined(rhapsodyModules[0]))
+		rhapsodyModules[0].setAttribute(rhapsodyModules[0].Gain, value);
+}
+
+// Rhapsody Pan
+inline function onknbMasterPanControl(component, value)
+{
+	/* might cause issues */
+	if (isDefined(rhapsodyModules[0]))
+		rhapsodyModules[0].setAttribute(rhapsodyModules[0].Balance, value);
+}
+
+Content.getComponent("knbMasterGain").setControlCallback(onknbMasterGainControl);
+Content.getComponent("knbMasterPan").setControlCallback(onknbMasterPanControl);
+
+
+/* Key Colours */
+
+for (i = 0; i < 128; i++)
+   	Engine.setKeyColour(i, Colours.withAlpha(Colours.black, 0.2));
 

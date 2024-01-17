@@ -119,6 +119,60 @@
                    height="64" text="Advanced_" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="pnlShowInfoPopup" x="436" y="0" width="16"
                    height="16" parentComponent="pnlAdvanced" allowCallbacks="Clicks &amp; Hover"/>
+        <Component type="ScriptPanel" id="lblTone" x="-30" y="382" width="128" height="32"
+                   text="Tone" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptPanel" id="lblPitch" x="-30" y="252" width="128"
+                   height="32" text="Pitch" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptPanel" id="lblAmp" x="-30" y="122" width="128" height="32"
+                   text="Amp" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptSlider" id="knbPitchVelocity" x="76" y="282" style="Knob"
+                   middlePosition="-1.0" suffix="" filmstripImage="Use default skin"
+                   linkedTo="" text="Vel" defaultValue="0.1000000014901161" width="48"
+                   height="48" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptSlider" id="knbPitchDecay" x="176" y="282" style="Knob"
+                   middlePosition="-1.0" suffix="" filmstripImage="Use default skin"
+                   linkedTo="" text="Vel" defaultValue="0.1000000014901161" width="48"
+                   height="48" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptSlider" id="knbPitchRandom" x="276" y="282" style="Knob"
+                   middlePosition="-1.0" suffix="" filmstripImage="Use default skin"
+                   linkedTo="" text="Vel" defaultValue="0.1000000014901161" width="48"
+                   height="48" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptSlider" id="knbPitchLFO" x="376" y="282" style="Knob"
+                   middlePosition="-1.0" suffix="" filmstripImage="Use default skin"
+                   linkedTo="" text="Vel" defaultValue="0.1000000014901161" width="48"
+                   height="48" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptSlider" id="knbAmpVelocity" x="76" y="152" style="Knob"
+                   middlePosition="-1.0" suffix="" filmstripImage="Use default skin"
+                   linkedTo="" text="Vel" defaultValue="0.1000000014901161" width="48"
+                   height="48" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptSlider" id="knbAmpLFO" x="176" y="152" style="Knob"
+                   middlePosition="-1.0" suffix="" filmstripImage="Use default skin"
+                   linkedTo="" text="Vel" defaultValue="0.1000000014901161" width="48"
+                   height="48" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptSlider" id="knbAmpRandom" x="276" y="152" style="Knob"
+                   middlePosition="-1.0" suffix="" filmstripImage="Use default skin"
+                   linkedTo="" text="Vel" defaultValue="0.1000000014901161" width="48"
+                   height="48" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptSlider" id="knbToneDampen" x="76" y="412" style="Knob"
+                   middlePosition="-1.0" suffix="" filmstripImage="Use default skin"
+                   linkedTo="" text="Vel" defaultValue="0.1000000014901161" width="48"
+                   height="48" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptSlider" id="knbToneDecay" x="176" y="412" style="Knob"
+                   middlePosition="-1.0" suffix="" filmstripImage="Use default skin"
+                   linkedTo="" text="Vel" defaultValue="0.1000000014901161" width="48"
+                   height="48" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptSlider" id="knbToneWTPosition" x="276" y="412" style="Knob"
+                   middlePosition="-1.0" suffix="" filmstripImage="Use default skin"
+                   linkedTo="" text="Vel" defaultValue="0.1000000014901161" width="48"
+                   height="48" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptSlider" id="knbToneStiffness" x="376" y="412" style="Knob"
+                   middlePosition="-1.0" suffix="" filmstripImage="Use default skin"
+                   linkedTo="" text="Vel" defaultValue="0.1000000014901161" width="48"
+                   height="48" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptButton" id="btnToneStiffnessTypeA" x="442" y="388"
+                   width="24" height="24" text="A" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptButton" id="btnToneStiffnessTypeB" x="442" y="436"
+                   width="24" height="24" text="B" parentComponent="pnlAdvanced"/>
       </Component>
     </Component>
     <Component type="ScriptPanel" id="pnlStatusBar" x="5.0" y="585.0" text=""

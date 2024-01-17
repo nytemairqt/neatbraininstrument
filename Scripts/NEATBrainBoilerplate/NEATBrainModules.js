@@ -40,10 +40,14 @@ const synthWTRight_fxLowpassAHDSR = Synth.getModulator("synthWTRight_fxLowpassAH
 
 
 // Residue Samplers
-const samplerResidueL = Synth.getChildSynth("samplerResidueL");
-const samplerResidueR = Synth.getChildSynth("samplerResidueR");
+const samplerResidueLeft = Synth.getChildSynth("samplerResidueLeft");
+const samplerResidueRight = Synth.getChildSynth("samplerResidueRight");
 
 // Other Samplers
 
-const samplerReleaseL = Synth.getChildSynth("samplerReleaseL");
-const samplerReleaseR = Synth.getChildSynth("samplerReleaseR");
+const samplerReleaseLeft = Synth.getChildSynth("samplerReleaseLeft");
+const samplerReleaseRight = Synth.getChildSynth("samplerReleaseRight");
+
+// Sampler AHDSRs
+const samplerResidueLeft_gainAHDSR = Synth.getModulator("samplerResidueLeft_gainAHDSR");
+const samplerResidueRight_gainAHDSR = Synth.getModulator("samplerResidueRight_gainAHDSR");
