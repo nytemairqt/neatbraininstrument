@@ -178,8 +178,10 @@
                    height="32" text="Dampen" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblToneDecay" x="137" y="462" width="128"
                    height="32" text="Decay" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblTonePosition" x="137" y="462" width="128"
-                   height="32" text="Decay" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptPanel" id="lblTonePosition" x="237" y="462" width="128"
+                   height="32" text="Position" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptPanel" id="lblToneStiffness" x="337" y="462" width="128"
+                   height="32" text="Stiffness" parentComponent="pnlAdvanced"/>
       </Component>
     </Component>
     <Component type="ScriptPanel" id="pnlStatusBar" x="5.0" y="585.0" text=""

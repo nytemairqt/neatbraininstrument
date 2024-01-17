@@ -215,8 +215,8 @@ const lblPitch = createLabel("lblPitch", -30, lblTone.get("y") - 130, 128, 32, 2
 const lblAmp = createLabel("lblAmp", -30, lblPitch.get("y") - 130, 128, 32, 20, "Amp", "pnlAdvanced", Colours.grey, "centred");
 
 const knbAmpVelocity = createKnob("knbAmpVelocity", lblAmp.get("x") + 106, lblAmp.get("y") + 30, 48, 48, "Vel", true, onknbAmpVelocityControl, 0, 0.2, 0.01, 0.1, "pnlAdvanced");
-const knbAmpLFO = createKnob("knbAmpLFO", knbAmpVelocity.get("x") + 100, lblAmp.get("y") + 30, 48, 48, "Vel", true, onknbAmpVelocityControl, 0, 0.1, 0.01, 0.1, "pnlAdvanced");
-const knbAmpRandom = createKnob("knbAmpRandom", knbAmpLFO.get("x") + 100, lblAmp.get("y") + 30, 48, 48, "Vel", true, onknbAmpVelocityControl, 0, 0.1, 0.01, 0.1, "pnlAdvanced");
+const knbAmpLFO = createKnob("knbAmpLFO", knbAmpVelocity.get("x") + 100, lblAmp.get("y") + 30, 48, 48, "Vel", true, onknbAmpLFOControl, 0, 0.1, 0.01, 0.1, "pnlAdvanced");
+const knbAmpRandom = createKnob("knbAmpRandom", knbAmpLFO.get("x") + 100, lblAmp.get("y") + 30, 48, 48, "Vel", true, onknbAmpRandomControl, 0, 0.1, 0.01, 0.1, "pnlAdvanced");
 
 const knbPitchVelocity = createKnob("knbPitchVelocity", lblPitch.get("x") + 106, lblPitch.get("y") + 30, 48, 48, "Vel", true, onknbPitchVelocityControl, 0, 1.0, 0.01, 0.1, "pnlAdvanced");
 const knbPitchDecay = createKnob("knbPitchDecay", knbPitchVelocity.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "Vel", true, onknbPitchDecayControl, 20, 4000, 1.0, 1000, "pnlAdvanced");
