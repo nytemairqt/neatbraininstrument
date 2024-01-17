@@ -20,22 +20,19 @@ const synthWTLeft_fxLowpassAHDSR = Synth.getModulator("synthWTLeft_fxLowpassAHDS
 
 // Right Wavetable & Modulators
 
-/*
 const synthWTRight = Synth.getChildSynth("synthWTRight");
 
 const synthWTRight_gainAHDSR = Synth.getModulator("synthWTRight_gainAHDSR");
+const synthWTRight_gainVelocity = Synth.getModulator("synthWTRight_gainVelocity");
 const synthWTRight_gainLFO = Synth.getModulator("synthWTRight_gainLFO");
 const synthWTRight_gainRandom = Synth.getModulator("synthWTRight_gainRandom");
-
 const synthWTRight_pitchAHDSR = Synth.getModulator("synthWTRight_pitchAHDSR");
 const synthWTRight_pitchAHDSRVelocity = Synth.getModulator("synthWTRight_pitchAHDSRVelocity");
 const synthWTRight_pitchRandom = Synth.getModulator("synthWTRight_pitchRandom");
 const synthWTRight_pitchLFO = Synth.getModulator("synthWTRight_pitchLFO");
 const synthWTRight_pitchBend = Synth.getModulator("synthWTRight_pitchBend");
-
 const synthWTRight_fxLowpass = Synth.getEffect("synthWTRight_fxLowpass");
 const synthWTRight_fxLowpassAHDSR = Synth.getModulator("synthWTRight_fxLowpassAHDSR");
-*/
 
 
 
