@@ -222,9 +222,9 @@ const btnShowAdvancedPanel = createButton("btnShowAdvancedPanel", 471, 200, 24, 
 const pnlAdvanced = createChildPanel("pnlAdvanced", 498, 20, 480, 490, "pnlBody");
 const lblAdvanced = createLabel("lblAdvanced", -8, -26, 128, 64, 24, "Advanced_", "pnlAdvanced", Colours.grey, "centred");
 
-const lblTone = createLabel("lblTone", -30, 382 , 128, 32, 20, "Tone", "pnlAdvanced", Colours.grey, "centred");
-const lblPitch = createLabel("lblPitch", -30, lblTone.get("y") - 130, 128, 32, 20, "Pitch", "pnlAdvanced", Colours.grey, "centred");
-const lblAmp = createLabel("lblAmp", -30, lblPitch.get("y") - 130, 128, 32, 20, "Amp", "pnlAdvanced", Colours.grey, "centred");
+const lblTone = createLabel("lblTone", -31, 382 , 128, 32, 20, "Tone", "pnlAdvanced", Colours.grey, "centred");
+const lblPitch = createLabel("lblPitch", -31, lblTone.get("y") - 150, 128, 32, 20, "Pitch", "pnlAdvanced", Colours.grey, "centred");
+const lblAmp = createLabel("lblAmp", -31, lblPitch.get("y") - 150, 128, 32, 20, "Amp", "pnlAdvanced", Colours.grey, "centred");
 
 const knbAmpVelocity = createKnob("knbAmpVelocity", lblAmp.get("x") + 106, lblAmp.get("y") + 30, 48, 48, "Vel", true, onknbAmpVelocityControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
 const knbAmpLFO = createKnob("knbAmpLFO", knbAmpVelocity.get("x") + 100, lblAmp.get("y") + 30, 48, 48, "Vel", true, onknbAmpLFOControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");

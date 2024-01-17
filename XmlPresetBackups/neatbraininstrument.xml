@@ -27,7 +27,7 @@
             <Control type="ScriptSlider" id="knbAmpVelocity" value="0.699999988079071"/>
             <Control type="ScriptSlider" id="knbAmpLFO" value="0.449999988079071"/>
             <Control type="ScriptSlider" id="knbAmpRandom" value="0.7400000095367432"/>
-            <Control type="ScriptSlider" id="knbToneDampen" value="6240.0"/>
+            <Control type="ScriptSlider" id="knbToneDampen" value="4000.0"/>
             <Control type="ScriptSlider" id="knbToneDecay" value="0.3600000143051147"/>
             <Control type="ScriptSlider" id="knbToneStiffness" value="0.2000000029802322"/>
             <Control type="ScriptButton" id="btnToneStiffnessTypeA" value="1.0"/>
