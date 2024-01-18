@@ -115,7 +115,7 @@
                  height="510" parentComponent="pnlBody" visible="0"/>
       <Component type="ScriptPanel" id="pnlAdvanced" x="498" y="16" width="480"
                  height="498" parentComponent="pnlBody" visible="0.0">
-        <Component type="ScriptPanel" id="lblAdvanced" x="-8" y="0" width="128"
+        <Component type="ScriptPanel" id="lblAdvanced" x="-8" y="-2" width="128"
                    height="64" text="Advanced_" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="pnlShowInfoPopup" x="436" y="0" width="16"
                    height="16" parentComponent="pnlAdvanced" allowCallbacks="Clicks &amp; Hover"/>
