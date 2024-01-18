@@ -63,3 +63,7 @@ const samplerReleaseRight = Synth.getChildSynth("samplerReleaseRight");
 // Sampler AHDSRs
 const samplerResidueLeft_gainAHDSR = Synth.getModulator("samplerResidueLeft_gainAHDSR");
 const samplerResidueRight_gainAHDSR = Synth.getModulator("samplerResidueRight_gainAHDSR");
+
+
+// FX
+const var eqBrightness = Synth.getEffect("eqBrightness");

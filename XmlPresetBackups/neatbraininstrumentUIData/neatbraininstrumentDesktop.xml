@@ -145,14 +145,6 @@
                    min="4000" max="8000" stepSize="1.0"/>
         <Component type="ScriptSlider" id="knbToneDecay" x="175" y="416" text="Vel"
                    defaultValue="0.5" width="48" height="48" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbToneStiffness" x="375" y="416" text="Vel"
-                   defaultValue="0.5" width="48" height="48" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptButton" id="btnToneStiffnessTypeA" x="441" y="402"
-                   width="24" height="24" text="A" parentComponent="pnlAdvanced"
-                   radioGroup="1"/>
-        <Component type="ScriptButton" id="btnToneStiffnessTypeB" x="441" y="450"
-                   width="24" height="24" text="B" parentComponent="pnlAdvanced"
-                   radioGroup="1"/>
         <Component type="ScriptPanel" id="lblAmpVelocity" x="36" y="166" width="128"
                    height="32" text="Vel" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblAmpLFO" x="136" y="166" width="128"
@@ -175,8 +167,10 @@
                    height="32" text="Decay" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblTonePosition" x="236" y="466" width="128"
                    height="32" text="Position" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblToneStiffness" x="336" y="466" width="128"
-                   height="32" text="Stiffness" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptSlider" id="knbToneBrightness" x="375" y="416" text="Vel"
+                   defaultValue="0.5" width="48" height="48" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptPanel" id="lblToneBrightness" x="336" y="466" width="128"
+                   height="32" text="Brightness" parentComponent="pnlAdvanced"/>
       </Component>
     </Component>
     <Component type="ScriptPanel" id="pnlStatusBar" x="5.0" y="585.0" text=""

@@ -243,9 +243,11 @@ inline function onknbTonePositionControl(component, value) // rename this later?
 }
 
 // Tone Stiffness Intensity
-inline function onknbToneStiffnessControl(component, value)
+inline function onknbToneBrightnessControl(component, value)
 {
-	Console.print("Need to implement Stiffness Functionality");
+	//Console.print("Need to implement Stiffness Functionality");
+	//EQTop.getAttribute((i * EQTop.BandOffset) + 1);
+	eqBrightness.setAttribute(0, value * 6);
 }
 
 // Tone Stiffness Type (Buttons)
@@ -277,15 +279,7 @@ const knbPitchRandom = createKnob("knbPitchRandom", knbPitchLFO.get("x") + 100, 
 const knbToneDampen = createKnob("knbToneDampen", lblTone.get("x") + 106, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneDampenControl, 4000, 8000, 1.0, 6000, "pnlAdvanced");
 const knbToneDecay = createKnob("knbToneDecay", knbToneDampen.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneDecayControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
 const knbTonePosition = createKnob("knbTonePosition", knbToneDecay.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbTonePositionControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
-const knbToneStiffness = createKnob("knbToneStiffness", knbTonePosition.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneStiffnessControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
-const btnToneStiffnessTypeA = createButton("btnToneStiffnessTypeA", knbToneStiffness.get("x") + 66, knbToneStiffness.get("y") - 14, 24, 24, "A", true, onbtnToneStiffnessTypeAControl, false, true, "pnlAdvanced");
-const btnToneStiffnessTypeB = createButton("btnToneStiffnessTypeB", knbToneStiffness.get("x") + 66, knbToneStiffness.get("y") + 34, 24, 24, "B", true, onbtnToneStiffnessTypeBControl, false, true, "pnlAdvanced");
-
-btnToneStiffnessTypeA.setLocalLookAndFeel(LAFButtonStiffness);
-btnToneStiffnessTypeB.setLocalLookAndFeel(LAFButtonStiffness);
-
-btnToneStiffnessTypeA.set("radioGroup", 1);
-btnToneStiffnessTypeB.set("radioGroup", 1);
+const knbToneBrightness = createKnob("knbToneBrightness", knbTonePosition.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneBrightnessControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
 
 const lblAmpVelocity = createLabel("lblAmpVelocity", knbAmpVelocity.get("x") - 39, knbAmpVelocity.get("y") + 50, 128, 32, 16, "Vel", "pnlAdvanced", Colours.grey, "centred");
 const lblAmpLFO = createLabel("lblAmpLFO", knbAmpLFO.get("x") - 39, knbAmpLFO.get("y") + 50, 128, 32, 16, "Drift", "pnlAdvanced", Colours.grey, "centred");
@@ -299,7 +293,7 @@ const lblPitchLFO = createLabel("lblPitchLFO", knbPitchLFO.get("x") - 39, knbPit
 const lblToneDampen = createLabel("lblToneDampen", knbToneDampen.get("x") - 39, knbToneDampen.get("y") + 50, 128, 32, 16, "Dampen", "pnlAdvanced", Colours.grey, "centred");
 const lblToneDecay = createLabel("lblToneDecay", knbToneDecay.get("x") - 39, knbToneDecay.get("y") + 50, 128, 32, 16, "Decay", "pnlAdvanced", Colours.grey, "centred");
 const lblTonePosition = createLabel("lblTonePosition", knbTonePosition.get("x") - 39, knbTonePosition.get("y") + 50, 128, 32, 16, "Position", "pnlAdvanced", Colours.grey, "centred");
-const lblToneStiffness = createLabel("lblToneStiffness", knbToneStiffness.get("x") - 39, knbToneStiffness.get("y") + 50, 128, 32, 16, "Stiffness", "pnlAdvanced", Colours.grey, "centred");
+const lblToneBrightness = createLabel("lblToneBrightness", knbToneBrightness.get("x") - 39, knbToneBrightness.get("y") + 50, 128, 32, 16, "Brightness", "pnlAdvanced", Colours.grey, "centred");
 	
 /* Horizontal Sliders */
 

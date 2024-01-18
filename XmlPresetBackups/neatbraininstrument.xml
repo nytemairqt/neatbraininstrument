@@ -22,17 +22,15 @@
             <Control type="ScriptSlider" id="knbResidueGain" value="1.0"/>
             <Control type="ScriptSlider" id="knbPitchVelocity" value="0.5"/>
             <Control type="ScriptSlider" id="knbPitchDecay" value="1485.0"/>
-            <Control type="ScriptSlider" id="knbPitchRandom" value="0.5"/>
+            <Control type="ScriptSlider" id="knbPitchRandom" value="0.1700000017881393"/>
             <Control type="ScriptSlider" id="knbPitchLFO" value="0.5"/>
             <Control type="ScriptSlider" id="knbAmpVelocity" value="0.5"/>
             <Control type="ScriptSlider" id="knbAmpLFO" value="0.5"/>
             <Control type="ScriptSlider" id="knbAmpRandom" value="0.5"/>
             <Control type="ScriptSlider" id="knbToneDampen" value="6000.0"/>
             <Control type="ScriptSlider" id="knbToneDecay" value="0.5"/>
-            <Control type="ScriptSlider" id="knbToneStiffness" value="0.5"/>
-            <Control type="ScriptButton" id="btnToneStiffnessTypeA" value="1.0"/>
-            <Control type="ScriptButton" id="btnToneStiffnessTypeB" value="0.0"/>
             <Control type="ScriptSlider" id="knbTonePosition" value="0.5"/>
+            <Control type="ScriptSlider" id="knbToneBrightness" value="0.25"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-6.0"/>
             <Control type="ScriptSlider" id="knbMasterPan" value="0.0"/>
             <Control type="ScriptSlider" id="knbCoarseDetune" value="0.0"/>
@@ -67,6 +65,12 @@
               <ChildProcessors/>
             </Processor>
           </ChildProcessors>
+          <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+        </Processor>
+        <Processor Type="CurveEq" ID="eqBrightness" Bypassed="0" NumFilters="1"
+                   Band0="1.499999761581421" Band1="2494.0" Band2="0.3899999856948853"
+                   Band3="1.0" Band4="3.0" FFTEnabled="0">
+          <ChildProcessors/>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
       </ChildProcessors>
@@ -536,7 +540,7 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="Random" ID="synthWTLeftA_pitchRandom" Bypassed="0" Intensity="0.02083333395421505"
+            <Processor Type="Random" ID="synthWTLeftA_pitchRandom" Bypassed="0" Intensity="0.007083333563059568"
                        Bipolar="1" UseTable="0.0" RandomTableData="">
               <ChildProcessors/>
             </Processor>
@@ -564,7 +568,7 @@
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="synthWTLeftA_fxLowpass" Bypassed="0"
                        Gain="0.0" Frequency="5368.7099609375" Q="0.5899999737739563"
-                       Mode="6.0" Quality="0.0" BipolarIntensity="0.0">
+                       Mode="6.0" Quality="-1.7124928e7" BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1.0">
@@ -765,7 +769,7 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="Random" ID="synthWTRightA_pitchRandom" Bypassed="0" Intensity="0.02083333395421505"
+            <Processor Type="Random" ID="synthWTRightA_pitchRandom" Bypassed="0" Intensity="0.007083333563059568"
                        Bipolar="1" UseTable="0.0" RandomTableData="">
               <ChildProcessors/>
             </Processor>
@@ -996,7 +1000,7 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="Random" ID="synthWTLeftB_pitchRandom" Bypassed="0" Intensity="0.02083333395421505"
+            <Processor Type="Random" ID="synthWTLeftB_pitchRandom" Bypassed="0" Intensity="0.007083333563059568"
                        Bipolar="1" UseTable="0.0" RandomTableData="">
               <ChildProcessors/>
             </Processor>
@@ -1024,7 +1028,7 @@
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="synthWTLeftB_fxLowpass" Bypassed="0"
                        Gain="0.0" Frequency="5368.7099609375" Q="0.5899999737739563"
-                       Mode="6.0" Quality="0.0" BipolarIntensity="0.0">
+                       Mode="6.0" Quality="1.701406336e9" BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1.0">
@@ -1132,7 +1136,7 @@
     </Processor>
     <Processor Type="WavetableSynth" ID="synthWTRightB" Bypassed="0" Gain="1.0"
                Balance="1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               HqMode="1.0" LoadedBankIndex="21.0" TableIndexValue="0.4699999988079071"
+               HqMode="1.0" LoadedBankIndex="20.0" TableIndexValue="0.4799999892711639"
                RefreshMipMap="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -1225,7 +1229,7 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="Random" ID="synthWTRightB_pitchRandom" Bypassed="0" Intensity="0.02083333395421505"
+            <Processor Type="Random" ID="synthWTRightB_pitchRandom" Bypassed="0" Intensity="0.007083333563059568"
                        Bipolar="1" UseTable="0.0" RandomTableData="">
               <ChildProcessors/>
             </Processor>
@@ -1257,7 +1261,7 @@
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="synthWTRightB_fxLowpass" Bypassed="0"
                        Gain="0.0" Frequency="5368.7099609375" Q="0.5899999737739563"
-                       Mode="6.0" Quality="0.0" BipolarIntensity="0.0">
+                       Mode="6.0" Quality="1.026940672e9" BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1.0">
@@ -1366,22 +1370,22 @@
   </ChildProcessors>
   <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
   <macro_controls>
-    <macro name="Macro 1" value="0.0" midi_cc="-1"/>
-    <macro name="Macro 2" value="0.0" midi_cc="-1"/>
-    <macro name="Macro 3" value="0.0" midi_cc="-1"/>
-    <macro name="Macro 4" value="0.0" midi_cc="-1"/>
-    <macro name="Macro 5" value="0.0" midi_cc="-1"/>
-    <macro name="Macro 6" value="0.0" midi_cc="-1"/>
-    <macro name="Macro 7" value="0.0" midi_cc="-1"/>
-    <macro name="Macro 8" value="0.0" midi_cc="-1"/>
+    <macro name="" value="0.5" midi_cc="-1"/>
+    <macro name="" value="0.0" midi_cc="-1"/>
+    <macro name="" value="0.0" midi_cc="-1"/>
+    <macro name="" value="0.0" midi_cc="-1"/>
+    <macro name="" value="0.0" midi_cc="-1"/>
+    <macro name="" value="0.0" midi_cc="-1"/>
+    <macro name="" value="0.0" midi_cc="-1"/>
+    <macro name="" value="0.0" midi_cc="-1"/>
   </macro_controls>
   <MidiAutomation>
     <Controller Controller="7" Processor="Interface" MacroIndex="-1" Start="-100.0"
                 End="0.0" FullStart="-100.0" FullEnd="0.0" Skew="3.492788620791155"
-                Interval="0.01" Attribute="lblAmpLFO" Inverted="0"/>
+                Interval="0.01" Attribute="lblPitchDecay" Inverted="0"/>
     <Controller Controller="10" Processor="Interface" MacroIndex="-1" Start="-100.0"
                 End="100.0" FullStart="-100.0" FullEnd="100.0" Skew="1.0" Interval="0.01"
-                Attribute="knbTonePosition" Inverted="0"/>
+                Attribute="lblTonePosition" Inverted="0"/>
   </MidiAutomation>
   <MPEData Enabled="0"/>
 </Processor>

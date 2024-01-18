@@ -25,6 +25,7 @@ const subfolder = audioFiles.createDirectory(MEMORYNAME);
 
 reg rr = 0;
 var RR = 0;
+reg m = 0;
 
 /*
 	on load, check for wavetables in "subfolder"
@@ -36,9 +37,20 @@ var RR = 0;
 */
 function onNoteOn()
 {
-	RR = 1-RR;
 
-	Console.print(RR);
+
+	m = Message.getNoteNumber();
+	
+	Console.print(m);
+	
+	if (m < 24)
+		Message.ignoreEvent(1);
+	
+	if (m > 96)
+		Message.ignoreEvent(1);
+	
+	// need to implement fx-keys ignore events specifically inside the WT synths
+	// need to then adjust Residue samplemaps to include them
 }
  function onNoteOff()
 {
