@@ -3,8 +3,6 @@
 	Message.ignoreEvent(rr);
 	
 	rr = 1-rr;
-	
-	Console.print(rr);
 }
  function onNoteOff()
 {

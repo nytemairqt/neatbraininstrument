@@ -41,8 +41,6 @@ function onNoteOn()
 
 	m = Message.getNoteNumber();
 	
-	Console.print(m);
-	
 	if (m < 24)
 		Message.ignoreEvent(1);
 	

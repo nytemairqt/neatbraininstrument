@@ -575,7 +575,7 @@
                   <ChildProcessors>
                     <Processor Type="AHDSR" ID="synthWTLeftA_fxLowpassAHDSR" Bypassed="0" Monophonic="0.0"
                                Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                               Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="300.0" Sustain="0.0"
+                               Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="150.0" Sustain="0.0"
                                Release="20.0" EcoMode="1.0">
                       <ChildProcessors>
                         <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -588,7 +588,12 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
-                          <ChildProcessors/>
+                          <ChildProcessors>
+                            <Processor Type="Velocity" ID="synthWTLeftA_palmMute" Bypassed="0" Intensity="1.0"
+                                       UseTable="1.0" Inverted="0.0" DecibelMode="1.0" VelocityTableData="60......3c2c7C...vO....+3c2c7C...vOFFF.+....9C...vOLLL.+....9C...vO...f+....9CgqGwO">
+                              <ChildProcessors/>
+                            </Processor>
+                          </ChildProcessors>
                         </Processor>
                         <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
                           <ChildProcessors/>
@@ -808,7 +813,7 @@
                   <ChildProcessors>
                     <Processor Type="AHDSR" ID="synthWTRightA_fxLowpassAHDSR" Bypassed="0" Monophonic="0.0"
                                Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                               Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="300.0" Sustain="0.0"
+                               Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="150.0" Sustain="0.0"
                                Release="20.0" EcoMode="1.0">
                       <ChildProcessors>
                         <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -821,7 +826,12 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
-                          <ChildProcessors/>
+                          <ChildProcessors>
+                            <Processor Type="Velocity" ID="synthWTRightA_palmMute" Bypassed="0" Intensity="1.0"
+                                       UseTable="1.0" Inverted="0.0" DecibelMode="1.0" VelocityTableData="60......3c2c7C...vO....+3c2c7C...vOFFF.+....9C...vOLLL.+....9C...vO...f+....9CgqGwO">
+                              <ChildProcessors/>
+                            </Processor>
+                          </ChildProcessors>
                         </Processor>
                         <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
                           <ChildProcessors/>
@@ -1035,7 +1045,7 @@
                   <ChildProcessors>
                     <Processor Type="AHDSR" ID="synthWTLeftB_fxLowpassAHDSR" Bypassed="0" Monophonic="0.0"
                                Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                               Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="300.0" Sustain="0.0"
+                               Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="150.0" Sustain="0.0"
                                Release="20.0" EcoMode="1.0">
                       <ChildProcessors>
                         <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -1048,7 +1058,12 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
-                          <ChildProcessors/>
+                          <ChildProcessors>
+                            <Processor Type="Velocity" ID="synthWTLeftB_palmMute" Bypassed="0" Intensity="1.0"
+                                       UseTable="1.0" Inverted="0.0" DecibelMode="1.0" VelocityTableData="60......3c2c7C...vO....+3c2c7C...vOFFF.+....9C...vOLLL.+....9C...vO...f+....9CgqGwO">
+                              <ChildProcessors/>
+                            </Processor>
+                          </ChildProcessors>
                         </Processor>
                         <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
                           <ChildProcessors/>
@@ -1268,7 +1283,7 @@
                   <ChildProcessors>
                     <Processor Type="AHDSR" ID="synthWTRightB_fxLowpassAHDSR" Bypassed="0" Monophonic="0.0"
                                Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                               Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="300.0" Sustain="0.0"
+                               Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="150.0" Sustain="0.0"
                                Release="20.0" EcoMode="1.0">
                       <ChildProcessors>
                         <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -1281,7 +1296,12 @@
                           <ChildProcessors/>
                         </Processor>
                         <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
-                          <ChildProcessors/>
+                          <ChildProcessors>
+                            <Processor Type="Velocity" ID="synthWTRightB_palmMute" Bypassed="0" Intensity="1.0"
+                                       UseTable="1.0" Inverted="0.0" DecibelMode="1.0" VelocityTableData="60......3c2c7C...vO....+3c2c7C...vOFFF.+....9C...vOLLL.+....9C...vO...f+....9CgqGwO">
+                              <ChildProcessors/>
+                            </Processor>
+                          </ChildProcessors>
                         </Processor>
                         <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
                           <ChildProcessors/>
