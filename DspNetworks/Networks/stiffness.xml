@@ -42,7 +42,7 @@
                   </SwitchTarget>
                 </SwitchTargets>
                 <Parameters>
-                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Value="0.0"/>
+                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
                 </Parameters>
               </Node>
               <Node ID="sb_container" FactoryPath="container.split" Bypassed="0">
