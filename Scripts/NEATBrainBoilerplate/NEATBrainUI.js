@@ -11,36 +11,51 @@ include("NEATBRAINBoilerplate/NEATBrainUIConstructors.js");
 // Partial Gain
 inline function onknbPartialGainControl(component, value)
 {
-	synthWTLeft.setAttribute(synthWTLeft.Gain, value);
-	synthWTRight.setAttribute(synthWTRight.Gain, value);
+	synthWTLeftA.setAttribute(synthWTLeftA.Gain, value);
+	synthWTRightA.setAttribute(synthWTRightA.Gain, value);
+	
+	synthWTLeftB.setAttribute(synthWTLeftB.Gain, value);
+	synthWTRightB.setAttribute(synthWTRightB.Gain, value);
 }		
 
 // AHDSR Attack
 inline function onknbPartialAttackControl(component, value)
 {
-	synthWTLeft_gainAHDSR.setAttribute(synthWTLeft_gainAHDSR.Attack, value);
-	synthWTRight_gainAHDSR.setAttribute(synthWTRight_gainAHDSR.Attack, value);
+	synthWTLeftA_gainAHDSR.setAttribute(synthWTLeftA_gainAHDSR.Attack, value);
+	synthWTRightA_gainAHDSR.setAttribute(synthWTRightA_gainAHDSR.Attack, value);
+	
+	synthWTLeftB_gainAHDSR.setAttribute(synthWTLeftB_gainAHDSR.Attack, value);
+	synthWTRightB_gainAHDSR.setAttribute(synthWTRightB_gainAHDSR.Attack, value);
 }
 
 // AHDSR Decay
 inline function onknbPartialDecayControl(component, value)
 {
-	synthWTLeft_gainAHDSR.setAttribute(synthWTLeft_gainAHDSR.Decay, value);
-	synthWTRight_gainAHDSR.setAttribute(synthWTRight_gainAHDSR.Decay, value);
+	synthWTLeftA_gainAHDSR.setAttribute(synthWTLeftA_gainAHDSR.Decay, value);
+	synthWTRightA_gainAHDSR.setAttribute(synthWTRightA_gainAHDSR.Decay, value);
+	
+	synthWTLeftB_gainAHDSR2.setAttribute(synthWTLeftB_gainAHDSR.Decay, value);
+	synthWTRightB_gainAHDSR2.setAttribute(synthWTRightB_gainAHDSR.Decay, value);
 }
 
 // AHDSR Sustain
 inline function onknbPartialSustainControl(component, value)
 {
-	synthWTLeft_gainAHDSR.setAttribute(synthWTLeft_gainAHDSR.Sustain, value);
-	synthWTRight_gainAHDSR.setAttribute(synthWTRight_gainAHDSR.Sustain, value);
+	synthWTLeftA_gainAHDSR.setAttribute(synthWTLeftA_gainAHDSR.Sustain, value);
+	synthWTRightA_gainAHDSR.setAttribute(synthWTRightA_gainAHDSR.Sustain, value);
+	
+	synthWTLeftB_gainAHDSR2.setAttribute(synthWTLeftB_gainAHDSR.Sustain, value);
+	synthWTRightB_gainAHDSR2.setAttribute(synthWTRightB_gainAHDSR.Sustain, value);
 }
 
 // AHDSR Release
 inline function onknbPartialReleaseControl(component, value)
 {
-	synthWTLeft_gainAHDSR.setAttribute(synthWTLeft_gainAHDSR.Release, value);
-	synthWTRight_gainAHDSR.setAttribute(synthWTRight_gainAHDSR.Release, value);
+	synthWTLeftA_gainAHDSR.setAttribute(synthWTLeftA_gainAHDSR.Release, value);
+	synthWTRightA_gainAHDSR.setAttribute(synthWTRightA_gainAHDSR.Release, value);
+	
+	synthWTLeftB_gainAHDSR2.setAttribute(synthWTLeftB_gainAHDSR.Release, value);
+	synthWTRightB_gainAHDSR2.setAttribute(synthWTRightB_gainAHDSR.Release, value);
 }
 
 // Create UI Elements
@@ -140,51 +155,72 @@ inline function onbtnShowAdvancedPanelControl(component, value)
 // Amp Velocity
 inline function onknbAmpVelocityControl(component, value) 
 {
-	synthWTLeft_gainVelocity.setIntensity(value * .1);
-	synthWTRight_gainVelocity.setIntensity(value * .1);
+	synthWTLeftA_gainVelocity.setIntensity(value * .1);
+	synthWTRightA_gainVelocity.setIntensity(value * .1);
+	
+	synthWTLeftB_gainVelocity.setIntensity(value * .1);
+	synthWTRightB_gainVelocity.setIntensity(value * .1);
 }
 
 
 // Amp LFO
 inline function onknbAmpLFOControl(component, value)
 {
-	synthWTLeft_gainLFO.setIntensity(value * .1);
-	synthWTRight_gainLFO.setIntensity(value * .1);
+	synthWTLeftA_gainLFO.setIntensity(value * .1);
+	synthWTRightA_gainLFO.setIntensity(value * .1);
+	
+	synthWTLeftB_gainLFO.setIntensity(value * .1);
+	synthWTRightB_gainLFO.setIntensity(value * .1);
 }
 
 // Amp Random
 inline function onknbAmpRandomControl(component, value)
 {
-	synthWTLeft_gainRandom.setIntensity(value * .1);
-	synthWTRight_gainRandom.setIntensity(value * .1);
+	synthWTLeftA_gainRandom.setIntensity(value * .1);
+	synthWTRightA_gainRandom.setIntensity(value * .1);
+	
+	synthWTLeftB_gainRandom.setIntensity(value * .1);
+	synthWTRightB_gainRandom.setIntensity(value * .1);
 }
 
 // Pitch Velocity
 inline function onknbPitchVelocityControl(component, value)
 {
-	synthWTLeft_pitchAHDSR.setIntensity(value * .6);
-	synthWTRight_pitchAHDSR.setIntensity(value * .6);
+	synthWTLeftA_pitchAHDSR.setIntensity(value * .6);
+	synthWTRightA_pitchAHDSR.setIntensity(value * .6);
+	
+	synthWTLeftB_pitchAHDSR.setIntensity(value * .6);
+	synthWTRightB_pitchAHDSR.setIntensity(value * .6);
 }
 
 // Pitch Decay
 inline function onknbPitchDecayControl(component, value)
 {
-	synthWTLeft_pitchAHDSR.setAttribute(synthWTLeft_pitchAHDSR.Decay, value);
-	synthWTRight_pitchAHDSR.setAttribute(synthWTLeft_pitchAHDSR.Decay, value);
+	synthWTLeftA_pitchAHDSR.setAttribute(synthWTLeftA_pitchAHDSR.Decay, value);
+	synthWTRightA_pitchAHDSR.setAttribute(synthWTLeftA_pitchAHDSR.Decay, value);
+	
+	synthWTLeftB_pitchAHDSR.setAttribute(synthWTLeftB_pitchAHDSR.Decay, value);
+	synthWTRightB_pitchAHDSR.setAttribute(synthWTLeftB_pitchAHDSR.Decay, value);
 }
 
 // Pitch Random
 inline function onknbPitchRandomControl(component, value)
 {
-	synthWTLeft_pitchRandom.setIntensity(value * .5);
-	synthWTRight_pitchRandom.setIntensity(value * .5);
+	synthWTLeftA_pitchRandom.setIntensity(value * .5);
+	synthWTRightA_pitchRandom.setIntensity(value * .5);
+	
+	synthWTLeftB_pitchRandom.setIntensity(value * .5);
+	synthWTRightB_pitchRandom.setIntensity(value * .5);
 }
 
 // Pitch LFO 
 inline function onknbPitchLFOControl(component, value)
 {
-	synthWTLeft_pitchLFO.setIntensity(value * .2);
+	synthWTLeftA_pitchLFO.setIntensity(value * .2);
 	synthWTRight_pitchLFO.setIntensity(value * .2);
+	
+	synthWTLeftB_pitchLFO.setIntensity(value * .2);
+	synthWTRightB_pitchLFO.setIntensity(value * .2);
 }
 
 // Tone Dampen
@@ -225,7 +261,7 @@ const lblAdvanced = createLabel("lblAdvanced", -8, -2, 128, 64, 24, "Advanced_",
 pnlAdvanced.set("visible", false);
 btnShowAdvancedPanel.setValue(0);
 
-const lblTone = createLabel("lblTone", -31, 382 , 128, 32, 20, "Tone", "pnlAdvanced", Colours.grey, "centred");
+const lblTone = createLabel("lblTone", -31, 386, 128, 32, 20, "Tone", "pnlAdvanced", Colours.grey, "centred");
 const lblPitch = createLabel("lblPitch", -31, lblTone.get("y") - 150, 128, 32, 20, "Pitch", "pnlAdvanced", Colours.grey, "centred");
 const lblAmp = createLabel("lblAmp", -31, lblPitch.get("y") - 150, 128, 32, 20, "Amp", "pnlAdvanced", Colours.grey, "centred");
 
@@ -237,7 +273,6 @@ const knbPitchVelocity = createKnob("knbPitchVelocity", lblPitch.get("x") + 106,
 const knbPitchDecay = createKnob("knbPitchDecay", knbPitchVelocity.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "Vel", true, onknbPitchDecayControl, 20, 4000, 1.0, 1000, "pnlAdvanced");
 const knbPitchLFO = createKnob("knbPitchLFO", knbPitchDecay.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "Vel", true, onknbPitchLFOControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
 const knbPitchRandom = createKnob("knbPitchRandom", knbPitchLFO.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "Vel", true, onknbPitchRandomControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
-
 
 const knbToneDampen = createKnob("knbToneDampen", lblTone.get("x") + 106, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneDampenControl, 4000, 8000, 1.0, 6000, "pnlAdvanced");
 const knbToneDecay = createKnob("knbToneDecay", knbToneDampen.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneDecayControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
@@ -297,18 +332,16 @@ pnlInfoPopup.set("visible", 0);
 
 // need to include text as a JSON object and iterate through the lines
 
-const jsonInfoSubtitles = ["RATIOS", "GLOBAL", "INTER", "FALLOFF", "DECAY", "DRIFT", "FILTER", "DAMPEN", "STIFFNESS"];
+const jsonInfoSubtitles = ["VEL", "DRIFT", "RANDOM", "DECAY", "DAMPEN", "POSITION", "STIFFNESS"];
 
 const jsonInfoPopup = [
-"Control Individual Partial Frequencies.",
-"The amount of Global pitch randomization per note.",
-"The amount of frequency randomization for each Partial.",
-"The amount of upward pitch drift when playing harder velocities.",
-"The time it takes for the Falloff to return to the base value.",
-"The amount of time-varying pitch-drift applied to the Partials.",
-"The cutoff frequency of a lowpass SVF filter.",
-"Softens high frequencies over time, creating a dampening effect.",
-"The amount and type of additional overtones added to Partialss"
+"The amount of Upward Drift Modulation when playing harder velocities.",
+"The amount of Time-Varying LFO Modulation applied to the signal.",
+"The amount of randomization applied when a note is played.",
+"The time it takes for the relevant \"Upward\" Modulator to return to zero.",
+"The amount of Upward Clamping of the frequency spectrum (harshness)",
+"undocumented",
+"The amount and type of additional overtones added to the Tonal Signal."
  ];
 
 pnlInfoPopup.setPaintRoutine(function(g)
@@ -328,11 +361,11 @@ pnlInfoPopup.setPaintRoutine(function(g)
     
     g.drawAlignedText("Welcome to", [0, 40, this.getWidth(), this.getHeight()], "topLeft");
     g.setColour(0xFFE2E3F3);
-    g.drawAlignedText("NEATBrain!", [70, 40, this.getWidth(), this.getHeight()], "topLeft");
+    g.drawAlignedText("NEATBrain.", [70, 40, this.getWidth(), this.getHeight()], "topLeft");
     g.setColour(Colours.grey);
     g.drawAlignedText("Select a Partial and Residue Profile from the main window, then tweak and sculpt your ", [0, 75, this.getWidth(), this.getHeight()], "topLeft");
     g.drawAlignedText("sound with the Advanced controls.", [0, 95, this.getWidth(), this.getHeight()], "topLeft");
-    g.drawAlignedText("Have fun!", [0, 125, this.getWidth(), this.getHeight()], "topLeft");
+    g.drawAlignedText("Advanced controls are separated by function (Amplitude, Pitch & Tone)", [0, 125, this.getWidth(), this.getHeight()], "topLeft");
 
 	g.setColour(0xFFE2E3F3);
     for (i=0; i<jsonInfoSubtitles.length; i++)

@@ -114,68 +114,68 @@
       <Component type="ScriptPanel" id="pnlInfoPopup" x="10" y="10" width="485"
                  height="510" parentComponent="pnlBody" visible="0"/>
       <Component type="ScriptPanel" id="pnlAdvanced" x="498" y="16" width="480"
-                 height="498" parentComponent="pnlBody" visible="0.0">
+                 height="498" parentComponent="pnlBody" visible="0">
         <Component type="ScriptPanel" id="lblAdvanced" x="-8" y="-2" width="128"
                    height="64" text="Advanced_" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="pnlShowInfoPopup" x="436" y="0" width="16"
                    height="16" parentComponent="pnlAdvanced" allowCallbacks="Clicks &amp; Hover"/>
-        <Component type="ScriptPanel" id="lblTone" x="-31" y="382" width="128" height="32"
+        <Component type="ScriptPanel" id="lblTone" x="-31" y="386" width="128" height="32"
                    text="Tone" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblPitch" x="-31" y="232" width="128"
+        <Component type="ScriptPanel" id="lblPitch" x="-31" y="236" width="128"
                    height="32" text="Pitch" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblAmp" x="-31" y="82" width="128" height="32"
+        <Component type="ScriptPanel" id="lblAmp" x="-31" y="86" width="128" height="32"
                    text="Amp" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbPitchVelocity" x="75" y="262" text="Vel"
+        <Component type="ScriptSlider" id="knbPitchVelocity" x="75" y="266" text="Vel"
                    defaultValue="0.5" width="48" height="48" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbPitchDecay" x="175" y="262" text="Vel"
+        <Component type="ScriptSlider" id="knbPitchDecay" x="175" y="266" text="Vel"
                    defaultValue="1000.0" width="48" height="48" parentComponent="pnlAdvanced"
                    min="20" max="4000" stepSize="1.0"/>
-        <Component type="ScriptSlider" id="knbPitchRandom" x="375" y="262" text="Vel"
+        <Component type="ScriptSlider" id="knbPitchRandom" x="375" y="266" text="Vel"
                    defaultValue="0.5" width="48" height="48" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbPitchLFO" x="275" y="262" text="Vel"
+        <Component type="ScriptSlider" id="knbPitchLFO" x="275" y="266" text="Vel"
                    defaultValue="0.5" width="48" height="48" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbAmpVelocity" x="75" y="112" text="Vel"
+        <Component type="ScriptSlider" id="knbAmpVelocity" x="75" y="116" text="Vel"
                    defaultValue="0.5" width="48" height="48" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbAmpLFO" x="175" y="112" text="Vel"
+        <Component type="ScriptSlider" id="knbAmpLFO" x="175" y="116" text="Vel"
                    defaultValue="0.5" width="48" height="48" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbAmpRandom" x="275" y="112" text="Vel"
+        <Component type="ScriptSlider" id="knbAmpRandom" x="275" y="116" text="Vel"
                    defaultValue="0.5" width="48" height="48" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbToneDampen" x="75" y="412" text="Vel"
+        <Component type="ScriptSlider" id="knbToneDampen" x="75" y="416" text="Vel"
                    defaultValue="6000.0" width="48" height="48" parentComponent="pnlAdvanced"
                    min="4000" max="8000" stepSize="1.0"/>
-        <Component type="ScriptSlider" id="knbToneDecay" x="175" y="412" text="Vel"
+        <Component type="ScriptSlider" id="knbToneDecay" x="175" y="416" text="Vel"
                    defaultValue="0.5" width="48" height="48" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbToneStiffness" x="375" y="412" text="Vel"
+        <Component type="ScriptSlider" id="knbToneStiffness" x="375" y="416" text="Vel"
                    defaultValue="0.5" width="48" height="48" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptButton" id="btnToneStiffnessTypeA" x="441" y="398"
+        <Component type="ScriptButton" id="btnToneStiffnessTypeA" x="441" y="402"
                    width="24" height="24" text="A" parentComponent="pnlAdvanced"
                    radioGroup="1"/>
-        <Component type="ScriptButton" id="btnToneStiffnessTypeB" x="441" y="446"
+        <Component type="ScriptButton" id="btnToneStiffnessTypeB" x="441" y="450"
                    width="24" height="24" text="B" parentComponent="pnlAdvanced"
                    radioGroup="1"/>
-        <Component type="ScriptPanel" id="lblAmpVelocity" x="36" y="162" width="128"
+        <Component type="ScriptPanel" id="lblAmpVelocity" x="36" y="166" width="128"
                    height="32" text="Vel" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblAmpLFO" x="136" y="162" width="128"
+        <Component type="ScriptPanel" id="lblAmpLFO" x="136" y="166" width="128"
                    height="32" text="Drift" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblAmpRandom" x="236" y="162" width="128"
+        <Component type="ScriptPanel" id="lblAmpRandom" x="236" y="166" width="128"
                    height="32" text="Random" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblPitchVelocity" x="36" y="312" width="128"
+        <Component type="ScriptPanel" id="lblPitchVelocity" x="36" y="316" width="128"
                    height="32" text="Vel" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblPitchDecay" x="136" y="312" width="128"
+        <Component type="ScriptPanel" id="lblPitchDecay" x="136" y="316" width="128"
                    height="32" text="Decay" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblPitchRandom" x="336" y="312" width="128"
+        <Component type="ScriptPanel" id="lblPitchRandom" x="336" y="316" width="128"
                    height="32" text="Random" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblPitchLFO" x="236" y="312" width="128"
+        <Component type="ScriptPanel" id="lblPitchLFO" x="236" y="316" width="128"
                    height="32" text="Drift" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbTonePosition" x="275" y="412" text="Vel"
+        <Component type="ScriptSlider" id="knbTonePosition" x="275" y="416" text="Vel"
                    defaultValue="0.5" width="48" height="48" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblToneDampen" x="36" y="462" width="128"
+        <Component type="ScriptPanel" id="lblToneDampen" x="36" y="466" width="128"
                    height="32" text="Dampen" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblToneDecay" x="136" y="462" width="128"
+        <Component type="ScriptPanel" id="lblToneDecay" x="136" y="466" width="128"
                    height="32" text="Decay" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblTonePosition" x="236" y="462" width="128"
+        <Component type="ScriptPanel" id="lblTonePosition" x="236" y="466" width="128"
                    height="32" text="Position" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblToneStiffness" x="336" y="462" width="128"
+        <Component type="ScriptPanel" id="lblToneStiffness" x="336" y="466" width="128"
                    height="32" text="Stiffness" parentComponent="pnlAdvanced"/>
       </Component>
     </Component>
@@ -345,5 +345,4 @@
                  parentComponent="pnlSpinnerContainer" borderSize="0.0" borderRadius="0.0"/>
     </Component>
   </Component>
-  <Component type="ScriptLabel" id="Label1" x="685" y="187" alignment="centredTop"/>
 </ContentProperties>

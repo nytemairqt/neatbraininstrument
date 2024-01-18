@@ -1,38 +1,52 @@
 // NEATBrain Modules
 
-// Left Wavetable & Modulators
+// Left Wavetables & Modulators
 
-const synthWTLeft = Synth.getChildSynth("synthWTLeft");
+const synthWTLeftA = Synth.getChildSynth("synthWTLeftA");
+const synthWTLeftA_gainAHDSR = Synth.getModulator("synthWTLeftA_gainAHDSR");
+const synthWTLeftA_gainVelocity = Synth.getModulator("synthWTLeftA_gainVelocity");
+const synthWTLeftA_gainLFO = Synth.getModulator("synthWTLeftA_gainLFO");
+const synthWTLeftA_gainRandom = Synth.getModulator("synthWTLeftA_gainRandom");
+const synthWTLeftA_pitchAHDSR = Synth.getModulator("synthWTLeftA_pitchAHDSR");
+const synthWTLeftA_pitchRandom = Synth.getModulator("synthWTLeftA_pitchRandom");
+const synthWTLeftA_pitchLFO = Synth.getModulator("synthWTLeftA_pitchLFO");
+const synthWTLeftA_fxLowpass = Synth.getEffect("synthWTLeftA_fxLowpass");
+const synthWTLeftA_fxLowpassAHDSR = Synth.getModulator("synthWTLeftA_fxLowpassAHDSR");
 
-const synthWTLeft_gainAHDSR = Synth.getModulator("synthWTLeft_gainAHDSR");
-const synthWTLeft_gainVelocity = Synth.getModulator("synthWTLeft_gainVelocity");
-const synthWTLeft_gainLFO = Synth.getModulator("synthWTLeft_gainLFO");
-const synthWTLeft_gainRandom = Synth.getModulator("synthWTLeft_gainRandom");
+const synthWTLeftB = Synth.getChildSynth("synthWTLeftB");
+const synthWTLeftB_gainAHDSR = Synth.getModulator("synthWTLeftB_gainAHDSR");
+const synthWTLeftB_gainVelocity = Synth.getModulator("synthWTLeftB_gainVelocity");
+const synthWTLeftB_gainLFO = Synth.getModulator("synthWTLeftB_gainLFO");
+const synthWTLeftB_gainRandom = Synth.getModulator("synthWTLeftB_gainRandom");
+const synthWTLeftB_pitchAHDSR = Synth.getModulator("synthWTLeftB_pitchAHDSR");
+const synthWTLeftB_pitchRandom = Synth.getModulator("synthWTLeftB_pitchRandom");
+const synthWTLeftB_pitchLFO = Synth.getModulator("synthWTLeftB_pitchLFO");
+const synthWTLeftB_fxLowpass = Synth.getEffect("synthWTLeftB_fxLowpass"); // maybe move these to group
+const synthWTLeftB_fxLowpassAHDSR = Synth.getModulator("synthWTLeftB_fxLowpassAHDSR"); // maybe move these to group
 
-const synthWTLeft_pitchAHDSR = Synth.getModulator("synthWTLeft_pitchAHDSR");
-const synthWTLeft_pitchAHDSRVelocity = Synth.getModulator("synthWTLeft_pitchAHDSRVelocity");
-const synthWTLeft_pitchRandom = Synth.getModulator("synthWTLeft_pitchRandom");
-const synthWTLeft_pitchLFO = Synth.getModulator("synthWTLeft_pitchLFO");
-const synthWTLeft_pitchBend = Synth.getModulator("synthWTLeft_pitchBend");
+// Right Wavetables & Modulators
 
-const synthWTLeft_fxLowpass = Synth.getEffect("synthWTLeft_fxLowpass");
-const synthWTLeft_fxLowpassAHDSR = Synth.getModulator("synthWTLeft_fxLowpassAHDSR");
+const synthWTRightA = Synth.getChildSynth("synthWTRightA");
+const synthWTRightA_gainAHDSR = Synth.getModulator("synthWTRightA_gainAHDSR");
+const synthWTRightA_gainVelocity = Synth.getModulator("synthWTRightA_gainVelocity");
+const synthWTRightA_gainLFO = Synth.getModulator("synthWTRightA_gainLFO");
+const synthWTRightA_gainRandom = Synth.getModulator("synthWTRightA_gainRandom");
+const synthWTRightA_pitchAHDSR = Synth.getModulator("synthWTRightA_pitchAHDSR");
+const synthWTRightA_pitchRandom = Synth.getModulator("synthWTRightA_pitchRandom");
+const synthWTRightA_pitchLFO = Synth.getModulator("synthWTRightA_pitchLFO");
+const synthWTRightA_fxLowpass = Synth.getEffect("synthWTRightA_fxLowpass");
+const synthWTRightA_fxLowpassAHDSR = Synth.getModulator("synthWTRightA_fxLowpassAHDSR");
 
-// Right Wavetable & Modulators
-
-const synthWTRight = Synth.getChildSynth("synthWTRight");
-
-const synthWTRight_gainAHDSR = Synth.getModulator("synthWTRight_gainAHDSR");
-const synthWTRight_gainVelocity = Synth.getModulator("synthWTRight_gainVelocity");
-const synthWTRight_gainLFO = Synth.getModulator("synthWTRight_gainLFO");
-const synthWTRight_gainRandom = Synth.getModulator("synthWTRight_gainRandom");
-const synthWTRight_pitchAHDSR = Synth.getModulator("synthWTRight_pitchAHDSR");
-const synthWTRight_pitchAHDSRVelocity = Synth.getModulator("synthWTRight_pitchAHDSRVelocity");
-const synthWTRight_pitchRandom = Synth.getModulator("synthWTRight_pitchRandom");
-const synthWTRight_pitchLFO = Synth.getModulator("synthWTRight_pitchLFO");
-const synthWTRight_pitchBend = Synth.getModulator("synthWTRight_pitchBend");
-const synthWTRight_fxLowpass = Synth.getEffect("synthWTRight_fxLowpass");
-const synthWTRight_fxLowpassAHDSR = Synth.getModulator("synthWTRight_fxLowpassAHDSR");
+const synthWTRightB = Synth.getChildSynth("synthWTRightB");
+const synthWTRightB_gainAHDSR = Synth.getModulator("synthWTRightB_gainAHDSR");
+const synthWTRightB_gainVelocity = Synth.getModulator("synthWTRightB_gainVelocity");
+const synthWTRightB_gainLFO2 = Synth.getModulator("synthWTRightB_gainLFO");
+const synthWTRightB_gainRandom = Synth.getModulator("synthWTRightB_gainRandom");
+const synthWTRightB_pitchAHDSR = Synth.getModulator("synthWTRightB_pitchAHDSR");
+const synthWTRightB_pitchRandom = Synth.getModulator("synthWTRightB_pitchRandom");
+const synthWTRightB_pitchLFO = Synth.getModulator("synthWTRightB_pitchLFO");
+const synthWTRightB_fxLowpass = Synth.getEffect("synthWTRightB_fxLowpass");
+const synthWTRightB_fxLowpassAHDSR = Synth.getModulator("synthWTRightB_fxLowpassAHDSR");
 
 
 
