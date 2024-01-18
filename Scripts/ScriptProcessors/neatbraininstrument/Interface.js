@@ -24,6 +24,7 @@ const audioFiles = FileSystem.getFolder(FileSystem.AudioFiles);
 const subfolder = audioFiles.createDirectory(MEMORYNAME);
 
 reg rr = 0;
+var RR = 0;
 
 /*
 	on load, check for wavetables in "subfolder"
@@ -35,7 +36,9 @@ reg rr = 0;
 */
 function onNoteOn()
 {
-	
+	RR = 1-RR;
+
+	Console.print(RR);
 }
  function onNoteOff()
 {

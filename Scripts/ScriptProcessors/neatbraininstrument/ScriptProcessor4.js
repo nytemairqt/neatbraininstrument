@@ -1,7 +1,9 @@
-reg rrRightB = 0;function onNoteOn()
+reg rrRightB = 0;
+
+function onNoteOn()
 {
-	Message.ignoreEvent(1-rrRightB);
-	rrRightB = 1-rrRightB;
+	
+	//rrRightB = 1-rrRightB;
 }
  function onNoteOff()
 {
