@@ -113,9 +113,9 @@
                  textColour="4281611319" dragDirection="Horizontal" showTextBox="0"/>
       <Component type="ScriptPanel" id="pnlInfoPopup" x="10" y="10" width="485"
                  height="510" parentComponent="pnlBody" visible="0"/>
-      <Component type="ScriptPanel" id="pnlAdvanced" x="498" y="20" width="480"
-                 height="490" parentComponent="pnlBody">
-        <Component type="ScriptPanel" id="lblAdvanced" x="-8" y="-26" width="128"
+      <Component type="ScriptPanel" id="pnlAdvanced" x="498" y="16" width="480"
+                 height="498" parentComponent="pnlBody" visible="0.0">
+        <Component type="ScriptPanel" id="lblAdvanced" x="-8" y="0" width="128"
                    height="64" text="Advanced_" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="pnlShowInfoPopup" x="436" y="0" width="16"
                    height="16" parentComponent="pnlAdvanced" allowCallbacks="Clicks &amp; Hover"/>
@@ -345,4 +345,5 @@
                  parentComponent="pnlSpinnerContainer" borderSize="0.0" borderRadius="0.0"/>
     </Component>
   </Component>
+  <Component type="ScriptLabel" id="Label1" x="685" y="187" alignment="centredTop"/>
 </ContentProperties>

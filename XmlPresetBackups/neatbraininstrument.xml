@@ -22,7 +22,7 @@
             <Control type="ScriptSlider" id="knbResidueGain" value="1.0"/>
             <Control type="ScriptSlider" id="knbPitchVelocity" value="0.3300000131130219"/>
             <Control type="ScriptSlider" id="knbPitchDecay" value="1453.0"/>
-            <Control type="ScriptSlider" id="knbPitchRandom" value="0.300000011920929"/>
+            <Control type="ScriptSlider" id="knbPitchRandom" value="0.1599999964237213"/>
             <Control type="ScriptSlider" id="knbPitchLFO" value="0.6600000262260437"/>
             <Control type="ScriptSlider" id="knbAmpVelocity" value="0.0"/>
             <Control type="ScriptSlider" id="knbAmpLFO" value="0.0"/>
@@ -108,7 +108,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="StreamingSampler" ID="samplerResidueLeft" Bypassed="1"
+    <Processor Type="StreamingSampler" ID="samplerResidueLeft" Bypassed="0"
                Gain="1.0" Balance="-1.0" VoiceLimit="256.0" KillFadeTime="20.0"
                IconColour="0" PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
                SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="0.0"
@@ -237,7 +237,7 @@
         <channelData enabled="1" level="0.0" suffix=""/>
       </channels>
     </Processor>
-    <Processor Type="StreamingSampler" ID="samplerResidueRight" Bypassed="1"
+    <Processor Type="StreamingSampler" ID="samplerResidueRight" Bypassed="0"
                Gain="1.0" Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0"
                IconColour="0" PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
                SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="0.0"
@@ -496,7 +496,7 @@
             </Processor>
             <Processor Type="CurveEq" ID="partialsGroupToneAdjust" Bypassed="0" NumFilters="2"
                        Band0="1.324138641357422" Band1="147.9295043945312" Band2="0.4699999988079071"
-                       Band3="1.0" Band4="1.0" Band5="5.296550750732422" Band6="1995.601928710938"
+                       Band3="1.0" Band4="1.0" Band5="9.103449821472168" Band6="2022.134887695312"
                        Band7="1.0" Band8="1.0" Band9="3.0" FFTEnabled="1">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
@@ -522,7 +522,7 @@
         </Processor>
         <Processor Type="WavetableSynth" ID="synthWTLeft" Bypassed="0" Gain="1.0"
                    Balance="-1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-                   HqMode="1.0" LoadedBankIndex="1.0" TableIndexValue="0.3799999952316284"
+                   HqMode="1.0" LoadedBankIndex="5.0" TableIndexValue="0.3799999952316284"
                    RefreshMipMap="0.0">
           <ChildProcessors>
             <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -605,7 +605,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="synthWTLeft_pitchRandom" Bypassed="0" Intensity="0.01250000018626451"
+                <Processor Type="Random" ID="synthWTLeft_pitchRandom" Bypassed="0" Intensity="0.006666666362434626"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -714,7 +714,7 @@
         </Processor>
         <Processor Type="WavetableSynth" ID="synthWTRight" Bypassed="0" Gain="1.0"
                    Balance="1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-                   HqMode="1.0" LoadedBankIndex="4.0" TableIndexValue="0.4699999988079071"
+                   HqMode="1.0" LoadedBankIndex="17.0" TableIndexValue="0.4699999988079071"
                    RefreshMipMap="0.0">
           <ChildProcessors>
             <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -798,7 +798,7 @@
                     </Processor>
                   </ChildProcessors>
                 </Processor>
-                <Processor Type="Random" ID="synthWTRight_pitchRandom" Bypassed="0" Intensity="0.01250000018626451"
+                <Processor Type="Random" ID="synthWTRight_pitchRandom" Bypassed="0" Intensity="0.006666666362434626"
                            Bipolar="1" UseTable="0.0" RandomTableData="">
                   <ChildProcessors/>
                 </Processor>
@@ -818,6 +818,10 @@
                 </Processor>
                 <Processor Type="PitchWheel" ID="synthWTRight_pitchBend" Bypassed="0" Intensity="1.0"
                            Bipolar="1" UseTable="0.0" Inverted="0.0" SmoothTime="200.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="Constant" ID="synthWTRight_HaasEffect" Bypassed="0" Intensity="0.008333333767950535"
+                           Bipolar="1">
                   <ChildProcessors/>
                 </Processor>
               </ChildProcessors>

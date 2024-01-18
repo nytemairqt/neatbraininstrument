@@ -219,8 +219,11 @@ inline function onbtnToneStiffnessTypeBControl(component, value){Console.print("
 // Instantiate UI Elements
 
 const btnShowAdvancedPanel = createButton("btnShowAdvancedPanel", 471, 200, 24, 100, "open", false, onbtnShowAdvancedPanelControl, false, true, "pnlBody");
-const pnlAdvanced = createChildPanel("pnlAdvanced", 498, 20, 480, 490, "pnlBody");
-const lblAdvanced = createLabel("lblAdvanced", -8, -26, 128, 64, 24, "Advanced_", "pnlAdvanced", Colours.grey, "centred");
+const pnlAdvanced = createChildPanel("pnlAdvanced", 498, 16, 480, 498, "pnlBody");
+const lblAdvanced = createLabel("lblAdvanced", -8, -2, 128, 64, 24, "Advanced_", "pnlAdvanced", Colours.grey, "centredTop");
+
+pnlAdvanced.set("visible", false);
+btnShowAdvancedPanel.setValue(0);
 
 const lblTone = createLabel("lblTone", -31, 382 , 128, 32, 20, "Tone", "pnlAdvanced", Colours.grey, "centred");
 const lblPitch = createLabel("lblPitch", -31, lblTone.get("y") - 150, 128, 32, 20, "Pitch", "pnlAdvanced", Colours.grey, "centred");
