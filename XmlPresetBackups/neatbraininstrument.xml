@@ -568,7 +568,7 @@
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="synthWTLeftA_fxLowpass" Bypassed="0"
                        Gain="0.0" Frequency="5368.7099609375" Q="0.5899999737739563"
-                       Mode="6.0" Quality="-1.7124928e7" BipolarIntensity="0.0">
+                       Mode="6.0" Quality="0.0" BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1.0">
@@ -614,6 +614,26 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
+            <Processor Type="PolyphonicFilter" ID="synthWTLeftA_harshAdjust" Bypassed="0"
+                       Gain="0.0" Frequency="7000.0" Q="0.300000011920929" Mode="8.0"
+                       Quality="0.0" BipolarIntensity="0.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Bipolar Freq Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Q Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
             <Processor Type="SimpleGain" ID="synthWTLeftA_levelAdjust" Bypassed="0"
                        Gain="10.0" Delay="0.0" Width="100.0" Balance="0.0" InvertPolarity="0.0">
               <ChildProcessors>
@@ -638,6 +658,11 @@
                        Band7="1.0" Band8="1.0" Band9="4.0" Band10="6.124138355255127"
                        Band11="2531.1884765625" Band12="1.0" Band13="1.0" Band14="3.0"
                        FFTEnabled="0">
+              <ChildProcessors/>
+              <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+            </Processor>
+            <Processor Type="Chorus" ID="Chorus1" Bypassed="0" Rate="0.05000000074505806"
+                       Width="0.05000000074505806" Feedback="0.5" Delay="1.0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
@@ -806,7 +831,7 @@
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="synthWTRightA_fxLowpass" Bypassed="0"
                        Gain="0.0" Frequency="5368.7099609375" Q="0.5899999737739563"
-                       Mode="6.0" Quality="0.0" BipolarIntensity="0.0">
+                       Mode="6.0" Quality="1.033995136e9" BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1.0">
@@ -852,6 +877,26 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
+            <Processor Type="PolyphonicFilter" ID="synthWTRightA_harshAdjust" Bypassed="0"
+                       Gain="0.0" Frequency="7000.0" Q="0.300000011920929" Mode="8.0"
+                       Quality="0.0" BipolarIntensity="0.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Bipolar Freq Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Q Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
             <Processor Type="SimpleGain" ID="synthWTRightA_levelAdjust" Bypassed="0"
                        Gain="10.0" Delay="0.0" Width="100.0" Balance="0.0" InvertPolarity="0.0">
               <ChildProcessors>
@@ -876,6 +921,11 @@
                        Band7="1.0" Band8="1.0" Band9="4.0" Band10="6.124138355255127"
                        Band11="2531.1884765625" Band12="1.0" Band13="1.0" Band14="3.0"
                        FFTEnabled="0">
+              <ChildProcessors/>
+              <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+            </Processor>
+            <Processor Type="Chorus" ID="Chorus2" Bypassed="0" Rate="0.05000000074505806"
+                       Width="0.05000000074505806" Feedback="0.5" Delay="1.0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
@@ -1038,7 +1088,7 @@
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="synthWTLeftB_fxLowpass" Bypassed="0"
                        Gain="0.0" Frequency="5368.7099609375" Q="0.5899999737739563"
-                       Mode="6.0" Quality="1.701406336e9" BipolarIntensity="0.0">
+                       Mode="6.0" Quality="9.79724416e8" BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1.0">
@@ -1084,6 +1134,26 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
+            <Processor Type="PolyphonicFilter" ID="synthWTLeftB_harshAdjust" Bypassed="0"
+                       Gain="0.0" Frequency="7000.0" Q="0.300000011920929" Mode="8.0"
+                       Quality="398795.0" BipolarIntensity="0.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Bipolar Freq Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Q Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
             <Processor Type="SimpleGain" ID="synthWTLeftB_levelAdjust" Bypassed="0"
                        Gain="10.0" Delay="0.0" Width="100.0" Balance="0.0" InvertPolarity="0.0">
               <ChildProcessors>
@@ -1108,6 +1178,11 @@
                        Band7="1.0" Band8="1.0" Band9="4.0" Band10="6.124138355255127"
                        Band11="2531.1884765625" Band12="1.0" Band13="1.0" Band14="3.0"
                        FFTEnabled="0">
+              <ChildProcessors/>
+              <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+            </Processor>
+            <Processor Type="Chorus" ID="Chorus3" Bypassed="0" Rate="0.05000000074505806"
+                       Width="0.05000000074505806" Feedback="0.5" Delay="1.0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
@@ -1276,7 +1351,7 @@
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="synthWTRightB_fxLowpass" Bypassed="0"
                        Gain="0.0" Frequency="5368.7099609375" Q="0.5899999737739563"
-                       Mode="6.0" Quality="1.026940672e9" BipolarIntensity="0.0">
+                       Mode="6.0" Quality="-1.153614208e9" BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1.0">
@@ -1322,6 +1397,26 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
+            <Processor Type="PolyphonicFilter" ID="synthWTRightB_harshAdjust" Bypassed="0"
+                       Gain="0.0" Frequency="7000.0" Q="0.300000011920929" Mode="8.0"
+                       Quality="0.0" BipolarIntensity="0.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Bipolar Freq Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Q Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
             <Processor Type="SimpleGain" ID="synthWTRightB_levelAdjust" Bypassed="0"
                        Gain="10.0" Delay="0.0" Width="100.0" Balance="0.0" InvertPolarity="0.0">
               <ChildProcessors>
@@ -1346,6 +1441,11 @@
                        Band7="1.0" Band8="1.0" Band9="4.0" Band10="6.124138355255127"
                        Band11="2531.1884765625" Band12="1.0" Band13="1.0" Band14="3.0"
                        FFTEnabled="0">
+              <ChildProcessors/>
+              <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+            </Processor>
+            <Processor Type="Chorus" ID="Chorus4" Bypassed="0" Rate="0.05000000074505806"
+                       Width="0.05000000074505806" Feedback="0.5" Delay="1.0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
