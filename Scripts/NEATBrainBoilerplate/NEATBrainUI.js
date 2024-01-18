@@ -34,8 +34,8 @@ inline function onknbPartialDecayControl(component, value)
 	synthWTLeftA_gainAHDSR.setAttribute(synthWTLeftA_gainAHDSR.Decay, value);
 	synthWTRightA_gainAHDSR.setAttribute(synthWTRightA_gainAHDSR.Decay, value);
 	
-	synthWTLeftB_gainAHDSR2.setAttribute(synthWTLeftB_gainAHDSR.Decay, value);
-	synthWTRightB_gainAHDSR2.setAttribute(synthWTRightB_gainAHDSR.Decay, value);
+	synthWTLeftB_gainAHDSR.setAttribute(synthWTLeftB_gainAHDSR.Decay, value);
+	synthWTRightB_gainAHDSR.setAttribute(synthWTRightB_gainAHDSR.Decay, value);
 }
 
 // AHDSR Sustain
@@ -44,8 +44,8 @@ inline function onknbPartialSustainControl(component, value)
 	synthWTLeftA_gainAHDSR.setAttribute(synthWTLeftA_gainAHDSR.Sustain, value);
 	synthWTRightA_gainAHDSR.setAttribute(synthWTRightA_gainAHDSR.Sustain, value);
 	
-	synthWTLeftB_gainAHDSR2.setAttribute(synthWTLeftB_gainAHDSR.Sustain, value);
-	synthWTRightB_gainAHDSR2.setAttribute(synthWTRightB_gainAHDSR.Sustain, value);
+	synthWTLeftB_gainAHDSR.setAttribute(synthWTLeftB_gainAHDSR.Sustain, value);
+	synthWTRightB_gainAHDSR.setAttribute(synthWTRightB_gainAHDSR.Sustain, value);
 }
 
 // AHDSR Release
@@ -54,8 +54,8 @@ inline function onknbPartialReleaseControl(component, value)
 	synthWTLeftA_gainAHDSR.setAttribute(synthWTLeftA_gainAHDSR.Release, value);
 	synthWTRightA_gainAHDSR.setAttribute(synthWTRightA_gainAHDSR.Release, value);
 	
-	synthWTLeftB_gainAHDSR2.setAttribute(synthWTLeftB_gainAHDSR.Release, value);
-	synthWTRightB_gainAHDSR2.setAttribute(synthWTRightB_gainAHDSR.Release, value);
+	synthWTLeftB_gainAHDSR.setAttribute(synthWTLeftB_gainAHDSR.Release, value);
+	synthWTRightB_gainAHDSR.setAttribute(synthWTRightB_gainAHDSR.Release, value);
 }
 
 // Create UI Elements
@@ -217,7 +217,7 @@ inline function onknbPitchRandomControl(component, value)
 inline function onknbPitchLFOControl(component, value)
 {
 	synthWTLeftA_pitchLFO.setIntensity(value * .2);
-	synthWTRight_pitchLFO.setIntensity(value * .2);
+	synthWTRightA_pitchLFO.setIntensity(value * .2);
 	
 	synthWTLeftB_pitchLFO.setIntensity(value * .2);
 	synthWTRightB_pitchLFO.setIntensity(value * .2);
