@@ -225,14 +225,31 @@ inline function onknbPitchLFOControl(component, value)
 
 // Tone Dampen
 inline function onknbToneDampenControl(component, value)
-{
-	Console.print("Need to implement Dampen Functionality");
+{	
+		// Low Pass Frequency
+		local min = 7000;
+		local max = 10000;
+		
+		local f = Math.round(max - (value * (max-min)));
+			
+		synthWTLeftA_fxDampen.setAttribute(synthWTLeftA_fxDampen.Frequency, f);		
+		synthWTRightA_fxDampen.setAttribute(synthWTRightA_fxDampen.Frequency, f);		
+		synthWTLeftB_fxDampen.setAttribute(synthWTLeftB_fxDampen.Frequency, f);		
+		synthWTRightB_fxDampen.setAttribute(synthWTRightB_fxDampen.Frequency, f);		
 }
 
 // Tone Decay 
-inline function onknbToneDecayControl(component, value)
+inline function onknbToneClampControl(component, value)
 {
-	Console.print("Need to implement Dampen Decay Functionality");
+	local min = 200;
+	local max = 2000;
+	
+	local d = Math.round(max - (value * (max-min)));
+	
+	synthWTLeftA_fxDampenAHDSR.setAttribute(synthWTLeftA_fxDampenAHDSR.Decay, d);
+	synthWTRightA_fxDampenAHDSR.setAttribute(synthWTRightA_fxDampenAHDSR.Decay, d);
+	synthWTLeftB_fxDampenAHDSR.setAttribute(synthWTLeftB_fxDampenAHDSR.Decay, d);
+	synthWTRightB_fxDampenAHDSR.setAttribute(synthWTRightB_fxDampenAHDSR.Decay, d);
 }
 
 
@@ -299,9 +316,9 @@ const knbPitchDecay = createKnob("knbPitchDecay", knbPitchVelocity.get("x") + 10
 const knbPitchLFO = createKnob("knbPitchLFO", knbPitchDecay.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "Vel", true, onknbPitchLFOControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
 const knbPitchRandom = createKnob("knbPitchRandom", knbPitchLFO.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "Vel", true, onknbPitchRandomControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
 
-const knbToneDampen = createKnob("knbToneDampen", lblTone.get("x") + 106, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneDampenControl, 4000, 8000, 1.0, 6000, "pnlAdvanced");
-const knbToneDecay = createKnob("knbToneDecay", knbToneDampen.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneDecayControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
-const knbToneChorus = createKnob("knbToneChorus", knbToneDecay.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneChorusControl, 0, 1.0, 0.01, 0.2, "pnlAdvanced");
+const knbToneDampen = createKnob("knbToneDampen", lblTone.get("x") + 106, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneDampenControl, 0, 1, 0.01, 1, "pnlAdvanced");
+const knbToneClamp = createKnob("knbToneClamp", knbToneDampen.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneClampControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
+const knbToneChorus = createKnob("knbToneChorus", knbToneClamp.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneChorusControl, 0, 1.0, 0.01, 0.2, "pnlAdvanced");
 const knbToneBrightness = createKnob("knbToneBrightness", knbToneChorus.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneBrightnessControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
 
 const lblAmpVelocity = createLabel("lblAmpVelocity", knbAmpVelocity.get("x") - 39, knbAmpVelocity.get("y") + 50, 128, 32, 16, "Vel", "pnlAdvanced", Colours.grey, "centred");
@@ -314,7 +331,7 @@ const lblPitchRandom = createLabel("lblPitchRandom", knbPitchRandom.get("x") - 3
 const lblPitchLFO = createLabel("lblPitchLFO", knbPitchLFO.get("x") - 39, knbPitchLFO.get("y") + 50, 128, 32, 16, "Drift", "pnlAdvanced", Colours.grey, "centred");
 
 const lblToneDampen = createLabel("lblToneDampen", knbToneDampen.get("x") - 39, knbToneDampen.get("y") + 50, 128, 32, 16, "Dampen", "pnlAdvanced", Colours.grey, "centred");
-const lblToneDecay = createLabel("lblToneDecay", knbToneDecay.get("x") - 39, knbToneDecay.get("y") + 50, 128, 32, 16, "Decay", "pnlAdvanced", Colours.grey, "centred");
+const lblToneClamp = createLabel("lblToneClamp", knbToneClamp.get("x") - 39, knbToneClamp.get("y") + 50, 128, 32, 16, "Clamp", "pnlAdvanced", Colours.grey, "centred");
 const lblToneChorus = createLabel("lblToneChorus", knbToneChorus.get("x") - 39, knbToneChorus.get("y") + 50, 128, 32, 16, "Chorus", "pnlAdvanced", Colours.grey, "centred");
 const lblToneBrightness = createLabel("lblToneBrightness", knbToneBrightness.get("x") - 39, knbToneBrightness.get("y") + 50, 128, 32, 16, "Brightness", "pnlAdvanced", Colours.grey, "centred");
 	
@@ -349,14 +366,15 @@ pnlInfoPopup.set("visible", 0);
 
 // need to include text as a JSON object and iterate through the lines
 
-const jsonInfoSubtitles = ["VEL", "DRIFT", "RANDOM", "DECAY", "DAMPEN", "CHORUS", "BRIGHTNESS"];
+const jsonInfoSubtitles = ["VEL", "DRIFT", "RANDOM", "DECAY", "DAMPEN", "CLAMP", "CHORUS", "BRIGHTNESS"];
 
 const jsonInfoPopup = [
 "The amount of Upward Drift Modulation when playing harder velocities.",
 "The amount of Time-Varying LFO Modulation applied to the signal.",
 "The amount of randomization applied when a note is played.",
 "The time it takes for the relevant \"Upward\" Modulator to return to zero.",
-"The amount of Upward Clamping of the frequency spectrum (harshness)",
+"The amount of Clamping applied to harsh upper frequencies.",
+"The speed of Clamping applied to the Dampen Parameter.",
 "The amount of inter-modal chorusing applied to Partials.",
 "The amount of additional amplitude applied to high frequencies."
  ];
