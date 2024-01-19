@@ -227,7 +227,7 @@ inline function onknbPitchLFOControl(component, value)
 inline function onknbToneDampenControl(component, value)
 {	
 		// Low Pass Frequency
-		local min = 7000;
+		local min = 2000;
 		local max = 10000;
 		
 		local f = Math.round(max - (value * (max-min)));
