@@ -50,8 +50,7 @@ else
 	synthWTRightA_fxPalmMute.setBypassed(true);
 	synthWTLeftB_fxPalmMute.setBypassed(true);
 	synthWTRightB_fxPalmMute.setBypassed(true);
-}
-function onNoteOn()
+}function onNoteOn()
 {
 
 

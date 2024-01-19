@@ -76,10 +76,10 @@ Engine.addModuleStateToUserPreset("synthWTRightA_toneAdjust");
 Engine.addModuleStateToUserPreset("synthWTLeftB_toneAdjust");
 Engine.addModuleStateToUserPreset("synthWTRightB_toneAdjust");
 
-const synthWTLeftA_chorus = Synth.getEffect("synthWTLeftA_chorus");
-const synthWTRightA_chorus = Synth.getEffect("synthWTRightA_chorus");
-const synthWTLeftB_chorus = Synth.getEffect("synthWTLeftB_chorus");
-const synthWTRightB_chorus = Synth.getEffect("synthWTRightB_chorus");
+const synthWTLeftA_chorusJ = Synth.getEffect("synthWTLeftA_chorusJ");
+const synthWTRightA_chorusJ = Synth.getEffect("synthWTRightA_chorusJ");
+const synthWTLeftB_chorusJ = Synth.getEffect("synthWTLeftB_chorusJ");
+const synthWTRightB_chorusJ = Synth.getEffect("synthWTRightB_chorusJ");
 
 // PALM MUTE
 

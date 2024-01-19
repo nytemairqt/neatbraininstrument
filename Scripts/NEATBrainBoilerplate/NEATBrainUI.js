@@ -252,19 +252,13 @@ inline function onknbToneClampControl(component, value)
 	synthWTRightB_fxDampenAHDSR.setAttribute(synthWTRightB_fxDampenAHDSR.Decay, d);
 }
 
-
-inline function onknbToneChorusControl(component, value) // rename this later?
+// Chorus
+inline function onknbToneChorusControl(component, value)
 {
-	synthWTLeftA_chorus.setAttribute(synthWTLeftA_chorus.Rate, value * .3);
-	synthWTRightA_chorus.setAttribute(synthWTRightA_chorus.Rate, value * .3);
-	synthWTLeftB_chorus.setAttribute(synthWTLeftB_chorus.Rate, value * .3);
-	synthWTRightB_chorus.setAttribute(synthWTRightB_chorus.Rate, value * .3);
-	
-	synthWTLeftA_chorus.setAttribute(synthWTLeftA_chorus.Width, value * .3);
-	synthWTRightA_chorus.setAttribute(synthWTRightA_chorus.Width, value * .3);
-	synthWTLeftB_chorus.setAttribute(synthWTLeftB_chorus.Width, value * .3);
-	synthWTRightB_chorus.setAttribute(synthWTRightB_chorus.Width, value * .3);
-	
+	synthWTLeftA_chorusJ.setAttribute(synthWTLeftA_chorusJ.Depth, value * 0.25);
+	synthWTRightA_chorusJ.setAttribute(synthWTRightA_chorusJ.Depth, value * 0.25);
+	synthWTLeftB_chorusJ.setAttribute(synthWTLeftB_chorusJ.Depth, value * 0.25);
+	synthWTRightB_chorusJ.setAttribute(synthWTRightB_chorusJ.Depth, value * 0.25);	
 }
 
 // Tone Stiffness Intensity
