@@ -12,7 +12,7 @@ include("RhapsodyBoilerplate/includes/Spinner.js");
 
 /* NEATBrain External Files */
 
-include("NEATBRAINBoilerplate/NEATBrainUi.js");
+include("NEATBrainBoilerplate/NEATBrainUI.js");
 
 /* Managing WaveTables */
 

@@ -1,6 +1,6 @@
-include("NEATBRAINBoilerplate/NEATBrainLookAndFeel.js");
-include("NEATBRAINBoilerplate/NEATBrainModules.js");
-include("NEATBRAINBoilerplate/NEATBrainUIConstructors.js");
+include("NEATBrainBoilerplate/NEATBrainLookAndFeel.js");
+include("NEATBrainBoilerplate/NEATBrainModules.js");
+include("NEATBrainBoilerplate/NEATBrainUIConstructors.js");
 
 
 

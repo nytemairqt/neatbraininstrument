@@ -8,7 +8,7 @@ const pnlBody = Content.getComponent("pnlBody");
 
 const pnlBodyColour = 0xff2f2f34;
 
-include("NEATBRAINBoilerplate/NEATBrainPathData.js");
+include("NEATBrainBoilerplate/NEATBrainPathData.js");
 
 
 inline function reduced(obj, amount)
