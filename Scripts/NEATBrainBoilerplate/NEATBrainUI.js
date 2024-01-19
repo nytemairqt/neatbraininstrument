@@ -481,6 +481,9 @@ Content.getComponent("knbMasterPan").setControlCallback(onknbMasterPanControl);
 
 /* Key Colours */
 
-for (i = 0; i < 128; i++)
+for (i = 24; i < 90; i++)
    	Engine.setKeyColour(i, Colours.withAlpha(Colours.black, 0.2));
+
+for (i=90; i<100; i++)   	
+	Engine.setKeyColour(i, Colours.withAlpha(Colours.blue, 0.2));
 
