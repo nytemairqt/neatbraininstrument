@@ -21,7 +21,7 @@ const MEMORYTYPE = "Guitar";
 	
 const WAVETABLES = ["L_05", "R_05", "L_08", "R_08"];
 
-Engine.loadAudioFilesIntoPool();
+//Engine.loadAudioFilesIntoPool();
 
 const audioFiles = FileSystem.getFolder(FileSystem.AudioFiles);
 const subfolder = audioFiles.createDirectory(MEMORYNAME);
@@ -52,15 +52,9 @@ else
 	synthWTRightB_fxPalmMute.setBypassed(true);
 }function onNoteOn()
 {
-
-
-	m = Message.getNoteNumber();
 	
-	if (m < 24)
-		Message.ignoreEvent(1);
+
 	
-	if (m > 96)
-		Message.ignoreEvent(1);
 	
 	// need to implement fx-keys ignore events specifically inside the WT synths
 	// need to then adjust Residue samplemaps to include them
