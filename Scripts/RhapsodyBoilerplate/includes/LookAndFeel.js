@@ -19,11 +19,14 @@ namespace LookAndFeel
 {
 	Content.setUseHighResolutionForPanels(true);
 	
+	/*
 	Engine.loadFontAs("{PROJECT_FOLDER}fonts/Inter-Regular.ttf", "regular");
 	Engine.loadFontAs("{PROJECT_FOLDER}fonts/Inter-Medium.ttf", "medium");
 	Engine.loadFontAs("{PROJECT_FOLDER}fonts/Inter-SemiBold.ttf", "semibold");
 	Engine.loadFontAs("{PROJECT_FOLDER}fonts/Inter-Bold.ttf", "bold");
 	Engine.loadFontAs("{PROJECT_FOLDER}fonts/JosefinSans-Bold.ttf", "title");
+	*/
+	
 	
 	// Automation handler
 	const automationHandler = Engine.createMidiAutomationHandler();

@@ -1,49 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ContentProperties DeviceType="Desktop">
-  <Component type="ScriptPanel" id="pnlContainer" x="0.0" y="0.0" text=""
-             width="1000.0" height="710.0" bgColour="0" itemColour="4280098081"
-             itemColour2="4280098081" textColour="0" borderSize="0.0" borderRadius="0.0">
-    <Component type="ScriptPanel" id="pnlHeader" x="0.0" y="0.0" width="1000.0"
-               height="60.0" bgColour="0" itemColour="0" itemColour2="0" textColour="0"
-               parentComponent="pnlContainer" borderSize="0.0" borderRadius="0.0">
-      <Component type="ScriptButton" id="btnTitle" x="20.0" y="0.0" text="RHAPSODY"
-                 width="200.0" height="60.0" bgColour="0" itemColour="0" itemColour2="0"
+  <Component type="ScriptPanel" id="pnlContainer" x="0" y="0" text="" width="1000"
+             height="710" bgColour="0" itemColour="4280098081" itemColour2="4280098081"
+             textColour="0" borderSize="0" borderRadius="0">
+    <Component type="ScriptPanel" id="pnlHeader" x="0" y="0" width="1000" height="60"
+               bgColour="0" itemColour="0" itemColour2="0" textColour="0" parentComponent="pnlContainer"
+               borderSize="0" borderRadius="0">
+      <Component type="ScriptButton" id="btnTitle" x="20" y="0" text="neatbraininstrument"
+                 width="200" height="60" bgColour="0" itemColour="0" itemColour2="0"
                  textColour="4293059298" saveInPreset="0" parentComponent="pnlHeader"
                  isMomentary="1" enableMidiLearn="0"/>
-      <Component type="ScriptButton" id="btnSettings" x="600.0" y="19.0" text="settings"
-                 width="22.0" height="22.0" bgColour="0" itemColour="4291809231"
-                 itemColour2="4293321983" textColour="0" saveInPreset="0" parentComponent="pnlHeader"
-                 enableMidiLearn="0"/>
-      <Component type="ScriptPanel" id="pnlPresetDisplay" x="635.0" y="15.0" text=""
-                 width="350.0" height="30.0" bgColour="4281282356" itemColour="0"
-                 itemColour2="0" textColour="0" parentComponent="pnlHeader" borderSize="0.0"
-                 borderRadius="5.0">
-        <Component type="ScriptButton" id="btnPresetBrowser" x="0.0" y="0.0" text=""
-                   width="285.0" height="29.0" bgColour="0" itemColour="0" itemColour2="0"
-                   parentComponent="pnlPresetDisplay" enableMidiLearn="0"/>
-        <Component type="ScriptButton" id="btnPreset0" x="292.0" y="9.0" text="triangleLeft"
-                   width="8.0" height="12.0" bgColour="0" itemColour="4292927712"
-                   itemColour2="4291216837" textColour="0" saveInPreset="0" parentComponent="pnlPresetDisplay"
+      <Component type="ScriptButton" id="btnSettings" x="576" y="21" text="settings"
+                 width="18" height="18" bgColour="0" itemColour="4291809231" itemColour2="4293321983"
+                 textColour="0" saveInPreset="0" parentComponent="pnlHeader" enableMidiLearn="0"/>
+      <Component type="ScriptPanel" id="pnlPresetDisplay" x="635" y="12" text=""
+                 width="350" height="36" bgColour="4279637529" itemColour="4281216563"
+                 itemColour2="0" textColour="0" parentComponent="pnlHeader" borderSize="0"
+                 borderRadius="5">
+        <Component type="ScriptButton" id="btnPresetBrowser" x="5" y="0" text=""
+                   width="273" height="36" bgColour="0" itemColour="0" itemColour2="0"
+                   parentComponent="pnlPresetDisplay" enableMidiLearn="0" saveInPreset="0"/>
+        <Component type="ScriptButton" id="btnPreset0" x="286" y="11" text="arrowLeft"
+                   width="9" height="14" bgColour="0" itemColour="4292927712" itemColour2="4291216837"
+                   textColour="0" saveInPreset="0" parentComponent="pnlPresetDisplay"
                    isMomentary="1" enableMidiLearn="0"/>
-        <Component type="ScriptButton" id="btnPreset1" x="310.0" y="9.0" text="triangleRight"
-                   width="8.0" height="12.0" bgColour="0" itemColour="4292927712"
-                   itemColour2="4291216837" textColour="0" saveInPreset="0" parentComponent="pnlPresetDisplay"
+        <Component type="ScriptButton" id="btnPreset1" x="304" y="11" text="arrowRight"
+                   width="9" height="14" bgColour="0" itemColour="4292927712" itemColour2="4291216837"
+                   textColour="0" saveInPreset="0" parentComponent="pnlPresetDisplay"
                    isMomentary="1" enableMidiLearn="0"/>
-        <Component type="ScriptButton" id="btnPresetSave" x="328.0" y="9.0" text="save"
-                   width="12.0" height="12.0" bgColour="0" itemColour="4292927712"
-                   itemColour2="4291216837" textColour="0" saveInPreset="0" parentComponent="pnlPresetDisplay"
+        <Component type="ScriptButton" id="btnPresetSave" x="326" y="11" text="save"
+                   width="14" height="14" bgColour="0" itemColour="4292927712" itemColour2="4291216837"
+                   textColour="0" saveInPreset="0" parentComponent="pnlPresetDisplay"
                    isMomentary="1" enableMidiLearn="0"/>
       </Component>
-      <Component type="ScriptButton" id="btnUnload" x="566.0" y="19.0" text="rhapsodyLogo"
-                 width="22.0" height="22.0" bgColour="0" itemColour="4291809231"
-                 itemColour2="4293321983" textColour="0" saveInPreset="0" parentComponent="pnlHeader"
-                 isMomentary="1" enableMidiLearn="0"/>
+      <Component type="ScriptButton" id="btnUnload" x="606" y="21" text="widgets"
+                 width="18" height="18" bgColour="0" itemColour="4291809231" itemColour2="4293321983"
+                 textColour="0" saveInPreset="0" parentComponent="pnlHeader" isMomentary="1"
+                 enableMidiLearn="0"/>
     </Component>
-    <Component type="ScriptPanel" id="pnlBody" x="5.0" y="60.0" text="" width="990.0"
-               height="565.0" bgColour="0" itemColour="4281282356" itemColour2="4281282356"
-               textColour="0" parentComponent="pnlContainer" borderSize="0.0"
-               borderRadius="12.0">
+    <Component type="ScriptPanel" id="pnlBody" x="5" y="60" text="" width="990"
+               height="565" bgColour="0" itemColour="4281282356" itemColour2="4281282356"
+               textColour="0" parentComponent="pnlContainer" borderSize="0"
+               borderRadius="12">
       <Component type="ScriptPanel" id="lblResidue" x="483" y="-6" width="128"
                  height="64" text="Residue_" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblModes" x="-10" y="-6" width="128" height="64"
@@ -185,161 +184,159 @@
                    height="32" text="Clamp" parentComponent="pnlAdvanced"/>
       </Component>
     </Component>
-    <Component type="ScriptPanel" id="pnlStatusBar" x="5.0" y="585.0" text=""
-               width="990.0" height="39.0" bgColour="0" itemColour="4281282356"
-               itemColour2="4293978318" textColour="4293059571" parentComponent="pnlContainer"
-               borderSize="0.0" borderRadius="0.0">
-      <Component type="ScriptFloatingTile" id="fltStats" x="15.0" y="10.0" ContentType="PerformanceLabel"
-                 width="225.0" height="20.0" bgColour="0" itemColour="0" itemColour2="0"
+    <Component type="ScriptPanel" id="pnlStatusBar" x="5" y="585" text="" width="990"
+               height="39" bgColour="0" itemColour="4281282356" itemColour2="4293978318"
+               textColour="4293059571" parentComponent="pnlContainer" borderSize="0"
+               borderRadius="0">
+      <Component type="ScriptFloatingTile" id="fltStats" x="15" y="10" ContentType="PerformanceLabel"
+                 width="225" height="20" bgColour="0" itemColour="0" itemColour2="0"
                  textColour="1828716543" parentComponent="pnlStatusBar" Font="medium"/>
-      <Component type="ScriptButton" id="btnLogo" x="437.5" y="12.0" text="logo"
-                 width="125.0" height="15.0" tooltip="Visit the developer's website."
+      <Component type="ScriptButton" id="btnLogo" x="437.5" y="12" text="logo"
+                 width="125" height="15" tooltip="Visit the developer's website."
                  bgColour="0" itemColour="4293059571" itemColour2="4291875295"
                  textColour="0" saveInPreset="0" parentComponent="pnlStatusBar"
                  isMomentary="1" enableMidiLearn="0"/>
-      <Component type="ScriptFloatingTile" id="fltPeakMeter" x="730.0" y="13.0"
-                 ContentType="MatrixPeakMeter" width="100.0" height="16.0" bgColour="0"
-                 itemColour="4280361253" itemColour2="4284112748" textColour="0"
-                 parentComponent="pnlStatusBar" Data="{&#10;  &quot;ProcessorId&quot;: &quot;template&quot;,&#10;  &quot;Index&quot;: -1,&#10;  &quot;FollowWorkspace&quot;: false,&#10;  &quot;SegmentLedSize&quot;: 0.0,&#10;  &quot;UpDecayTime&quot;: 200.0,&#10;  &quot;DownDecayTime&quot;: 500.0,&#10;  &quot;UseSourceChannels&quot;: true,&#10;  &quot;SkewFactor&quot;: 0.3,&#10;  &quot;PaddingSize&quot;: 0.5,&#10;  &quot;ShowMaxPeak&quot;: 1.0,&#10;  &quot;ChannelIndexes&quot;: [&#10;    0,&#10;    1,&#10; ]&#10;}"/>
-      <Component type="ScriptSlider" id="knbMasterGain" x="730.0" y="13.0" style="Horizontal"
+      <Component type="ScriptFloatingTile" id="fltPeakMeter" x="730" y="13" ContentType="MatrixPeakMeter"
+                 width="100" height="16" bgColour="0" itemColour="4280361253"
+                 itemColour2="4284112748" textColour="0" parentComponent="pnlStatusBar"
+                 Data="{&#10;  &quot;ProcessorId&quot;: &quot;neatbraininstrument&quot;,&#10;  &quot;Index&quot;: -1,&#10;  &quot;FollowWorkspace&quot;: false,&#10;  &quot;SegmentLedSize&quot;: 0.0,&#10;  &quot;UpDecayTime&quot;: 200.0,&#10;  &quot;DownDecayTime&quot;: 500.0,&#10;  &quot;UseSourceChannels&quot;: true,&#10;  &quot;SkewFactor&quot;: 0.3,&#10;  &quot;PaddingSize&quot;: 0.5,&#10;  &quot;ShowMaxPeak&quot;: 1.0,&#10;  &quot;ChannelIndexes&quot;: [&#10;    0,&#10;    1,&#10; ]&#10;}"/>
+      <Component type="ScriptSlider" id="knbMasterGain" x="730" y="13" style="Horizontal"
                  middlePosition="-18.0" stepSize="0.1000000014901161" min="-100.0"
-                 max="0.0" suffix=" dB" mode="Decibel" text="Gain" width="100.0"
-                 height="16.0" defaultValue="-6.0" tooltip="Master volume." bgColour="0"
-                 itemColour="4285493103" itemColour2="4291217094" textColour="4281611319"
-                 isPluginParameter="1" pluginParameterName="Master Volume" parentComponent="pnlStatusBar"
+                 max="0.0" suffix=" dB" mode="Decibel" text="Gain" width="100"
+                 height="16" defaultValue="-6.0" tooltip="Master volume." bgColour="0"
+                 itemColour="4279571482" itemColour2="4292333756" isPluginParameter="1"
+                 pluginParameterName="Master Volume" parentComponent="pnlStatusBar"
                  processorId="masterGain" parameterId="Gain" dragDirection="Horizontal"
                  showValuePopup="Below" showTextBox="0"/>
-      <Component type="ScriptSlider" id="knbMasterPan" x="890.0" y="13.0" style="Horizontal"
+      <Component type="ScriptSlider" id="knbMasterPan" x="890" y="13" style="Horizontal"
                  middlePosition="0.0" stepSize="1.0" min="-100.0" max="100.0"
-                 suffix="L" mode="Pan" text="pan-bipolar" width="80.0" height="16.0"
-                 tooltip="Master pan." bgColour="4280361253" itemColour="4285493103"
-                 itemColour2="4291217094" textColour="4281611319" isPluginParameter="1"
-                 pluginParameterName="Master Pan" parentComponent="pnlStatusBar"
-                 processorId="masterGain" parameterId="Balance" dragDirection="Horizontal"
-                 showValuePopup="Below" showTextBox="0"/>
+                 suffix="L" mode="Pan" text="Master Pan" width="80" height="16"
+                 tooltip="Master pan." bgColour="4280361253" itemColour="4279571482"
+                 itemColour2="4292333756" isPluginParameter="1" pluginParameterName="Master Pan"
+                 parentComponent="pnlStatusBar" processorId="masterGain" parameterId="Balance"
+                 dragDirection="Horizontal" showValuePopup="Below" showTextBox="0"/>
     </Component>
-    <Component type="ScriptPanel" id="pnlFooter" x="0.0" y="625.0" text="" width="1000.0"
-               height="85.0" bgColour="0" itemColour="0" itemColour2="0" textColour="0"
-               parentComponent="pnlContainer" borderSize="0.0" borderRadius="0.0">
-      <Component type="ScriptButton" id="btnPanic" x="27.0" y="35.0" text="warningCircle"
-                 width="18.0" height="18.0" tooltip="MIDI Panic - All notes off."
+    <Component type="ScriptPanel" id="pnlFooter" x="0" y="625" text="" width="1000"
+               height="85" bgColour="0" itemColour="0" itemColour2="0" textColour="0"
+               parentComponent="pnlContainer" borderSize="0" borderRadius="0">
+      <Component type="ScriptButton" id="btnPanic" x="27" y="35" text="warningCircle"
+                 width="18" height="18" tooltip="MIDI Panic - All notes off."
                  itemColour="1720750224" itemColour2="4218713204" saveInPreset="0"
                  parentComponent="pnlFooter" isMomentary="1" enableMidiLearn="0"/>
-      <Component type="ScriptFloatingTile" id="fltKeyboard" x="72.5" y="10.0"
-                 ContentType="Keyboard" width="855.0" height="66.0" bgColour="4284769380"
-                 parentComponent="pnlFooter" Data="{&#10;  &quot;KeyWidth&quot;: 15.0,&#10;  &quot;DisplayOctaveNumber&quot;: false,&#10;  &quot;LowKey&quot;: 12,&#10;  &quot;HiKey&quot;: 108,&#10;  &quot;CustomGraphics&quot;: false,&#10;  &quot;DefaultAppearance&quot;: true,&#10;  &quot;BlackKeyRatio&quot;: 0.699999988079071,&#10;  &quot;ToggleMode&quot;: false,&#10;  &quot;MidiChannel&quot;: 1,&#10;  &quot;UseVectorGraphics&quot;: true,&#10;  &quot;UseFlatStyle&quot;: false,&#10;  &quot;MPEKeyboard&quot;: false,&#10;  &quot;MPEStartChannel&quot;: 2,&#10;  &quot;MPEEndChannel&quot;: 16&#10;}"/>
+      <Component type="ScriptFloatingTile" id="fltKeyboard" x="72.5" y="10" ContentType="Keyboard"
+                 width="855" height="66" bgColour="4284769380" parentComponent="pnlFooter"
+                 Data="{&#10;  &quot;KeyWidth&quot;: 15.0,&#10;  &quot;DisplayOctaveNumber&quot;: false,&#10;  &quot;LowKey&quot;: 12,&#10;  &quot;HiKey&quot;: 108,&#10;  &quot;CustomGraphics&quot;: false,&#10;  &quot;DefaultAppearance&quot;: true,&#10;  &quot;BlackKeyRatio&quot;: 0.699999988079071,&#10;  &quot;ToggleMode&quot;: false,&#10;  &quot;MidiChannel&quot;: 1,&#10;  &quot;UseVectorGraphics&quot;: true,&#10;  &quot;UseFlatStyle&quot;: false,&#10;  &quot;MPEKeyboard&quot;: false,&#10;  &quot;MPEStartChannel&quot;: 2,&#10;  &quot;MPEEndChannel&quot;: 16&#10;}"/>
     </Component>
-    <Component type="ScriptPanel" id="pnlSettingsContainer" x="0.0" y="0.0"
-               text="" width="1000.0" height="710.0" bgColour="2013265920" itemColour="0"
+    <Component type="ScriptPanel" id="pnlSettingsContainer" x="0" y="0" text=""
+               width="1000" height="710" bgColour="2013265920" itemColour="0"
                itemColour2="0" textColour="0" parentComponent="pnlContainer"
-               borderSize="0.0" borderRadius="0.0" allowCallbacks="Clicks Only"
+               borderSize="0" borderRadius="0" allowCallbacks="Clicks Only"
                visible="0">
-      <Component type="ScriptPanel" id="pnlSettings" x="130.0" y="100.0" text="SETTINGS"
-                 width="740.0" height="460.0" bgColour="4281282356" itemColour="4280098081"
-                 itemColour2="0" textColour="4294504388" parentComponent="pnlSettingsContainer"
-                 borderSize="0.0" borderRadius="12.0">
-        <Component type="ScriptPanel" id="pnlSettingsMenu" x="10.0" y="75.0" text=""
-                   width="155.0" height="250.0" bgColour="4280953134" itemColour="4292467161"
+      <Component type="ScriptPanel" id="pnlSettings" x="130" y="100" text="SETTINGS"
+                 width="740" height="460" bgColour="4281282356" itemColour="4280098081"
+                 itemColour2="0" textColour="4292730333" parentComponent="pnlSettingsContainer"
+                 borderSize="0" borderRadius="12">
+        <Component type="ScriptPanel" id="pnlSettingsMenu" x="10" y="75" text=""
+                   width="155" height="240" bgColour="4280953134" itemColour="4294498201"
                    itemColour2="0" textColour="4293519849" parentComponent="pnlSettings"
-                   borderSize="0.0" borderRadius="5.0" allowCallbacks="All Callbacks"/>
-        <Component type="ScriptPanel" id="pnlSettingsTab0" x="175.0" y="30.0" text="ENGINE"
-                   width="565.0" height="420.0" bgColour="4280098081" itemColour="4279637529"
-                   itemColour2="0" textColour="4293059298" parentComponent="pnlSettings"
-                   borderSize="0.0" borderRadius="12.0">
-          <Component type="ScriptFloatingTile" id="fltEngineSettings" x="-25.0" y="0.0"
-                     ContentType="CustomSettings" width="400.0" height="420.0" bgColour="0"
+                   borderSize="0" borderRadius="5" allowCallbacks="All Callbacks"/>
+        <Component type="ScriptPanel" id="pnlSettingsTab0" x="175" y="30" text="ENGINE"
+                   width="565" height="420" bgColour="4280098081" itemColour="4279637529"
+                   itemColour2="0" textColour="4292730333" parentComponent="pnlSettings"
+                   borderSize="0" borderRadius="12">
+          <Component type="ScriptFloatingTile" id="fltEngineSettings" x="-25" y="0"
+                     ContentType="CustomSettings" width="400" height="420" bgColour="0"
                      itemColour="0" itemColour2="0" textColour="4293059298" parentComponent="pnlSettingsTab0"
-                     Font="medium" FontSize="16.0" Data="{&#10;  &quot;Driver&quot;: false,&#10;  &quot;Device&quot;: false,&#10;  &quot;Output&quot;: false,&#10;  &quot;BufferSize&quot;: false,&#10;  &quot;SampleRate&quot;: false,&#10;  &quot;GlobalBPM&quot;: true,&#10;  &quot;StreamingMode&quot;: true,&#10;  &quot;ScaleFactor&quot;: true,&#10;  &quot;VoiceAmountMultiplier&quot;: true,&#10;  &quot;ClearMidiCC&quot;: false,&#10;  &quot;SampleLocation&quot;: false,&#10;  &quot;DebugMode&quot;: false,&#10;  &quot;UseOpenGL&quot;: true,&#10;  &quot;ScaleFactorList&quot;: [&#10;    0.5,&#10;    0.75,&#10;    1.0,&#10;    1.25,&#10;    1.5,&#10;    2.0,&#10;    2.5,&#10;    3.0,&#10;    4.0&#10;  ]&#10;}"/>
-          <Component type="ScriptButton" id="btnLazyLoad" x="150.0" y="218.0" text=""
-                     width="40.0" height="20.0" tooltip="Enable or disable the purge until played feature."
+                     Font="medium" FontSize="16.0" Data="{&#10;  &quot;Driver&quot;: false,&#10;  &quot;Device&quot;: false,&#10;  &quot;Output&quot;: false,&#10;  &quot;BufferSize&quot;: false,&#10;  &quot;SampleRate&quot;: false,&#10;  &quot;GlobalBPM&quot;: true,&#10;  &quot;StreamingMode&quot;: true,&#10;  &quot;ScaleFactor&quot;: false,&#10;  &quot;VoiceAmountMultiplier&quot;: true,&#10;  &quot;ClearMidiCC&quot;: false,&#10;  &quot;SampleLocation&quot;: false,&#10;  &quot;DebugMode&quot;: false,&#10;  &quot;UseOpenGL&quot;: true,&#10;  &quot;ScaleFactorList&quot;: [&#10;    0.5,&#10;    0.75,&#10;    1.0,&#10;    1.25,&#10;    1.5,&#10;    2.0,&#10;    2.5,&#10;    3.0,&#10;    4.0&#10;  ]&#10;}"/>
+          <Component type="ScriptButton" id="btnLazyLoad" x="150" y="175" text=""
+                     width="40" height="20" tooltip="Enable or disable the purge until played feature."
                      bgColour="4279637529" itemColour="4281425703" itemColour2="4227200501"
                      saveInPreset="0" parentComponent="pnlSettingsTab0" enableMidiLearn="0"/>
-          <Component type="ScriptSlider" id="knbCoarseDetune" x="153.0" y="257.0"
-                     middlePosition="0.0" text="" width="40.0" height="40.0" min="-12.0"
-                     max="12.0" tooltip="Coarse tuning." bgColour="4279637529" itemColour="4294967295"
-                     itemColour2="4289967027" textColour="4292138196" isPluginParameter="1"
-                     pluginParameterName="Coarse Tuning" parentComponent="pnlSettingsTab0"
-                     processorId="coarseFineTune" parameterId="Coarse" stepSize="1.0"
-                     suffix="st" showValuePopup="Below"/>
-          <Component type="ScriptSlider" id="knbFineDetune" x="251.0" y="257.0" middlePosition="0.0"
-                     text="" width="40.0" height="40.0" min="-100.0" max="100.0" tooltip="Fine tuning."
-                     bgColour="4279637529" itemColour="4294967295" itemColour2="4289967027"
-                     textColour="4292138196" isPluginParameter="1" pluginParameterName="Fine Tuning"
+          <Component type="ScriptSlider" id="knbCoarseDetune" x="153" y="214" middlePosition="0.0"
+                     text="Coarse" width="60" height="74" min="-12.0" max="12.0" tooltip="Coarse tuning."
+                     bgColour="4282992969" itemColour="4279571482" itemColour2="4289835441"
+                     textColour="4290559164" isPluginParameter="1" pluginParameterName="Coarse Tuning"
                      parentComponent="pnlSettingsTab0" processorId="coarseFineTune"
-                     parameterId="Fine" stepSize="1.0" suffix="ct" showValuePopup="Below"/>
-          <Component type="ScriptSlider" id="knbTranspose" x="153.0" y="329.0" middlePosition="0.0"
-                     text="" width="40.0" height="40.0" min="-2.0" max="2.0" tooltip="Transpose."
-                     bgColour="4279637529" itemColour="4294967295" itemColour2="4289967027"
-                     textColour="4292138196" isPluginParameter="1" pluginParameterName="Transpose"
-                     parentComponent="pnlSettingsTab0" processorId="transposer" parameterId="SemiTone"
-                     stepSize="1.0" suffix="st" showValuePopup="Below"/>
+                     parameterId="Coarse" stepSize="1.0" suffix="st"/>
+          <Component type="ScriptSlider" id="knbFineDetune" x="236" y="214" middlePosition="0.0"
+                     text="Fine" width="60" height="74" min="-100.0" max="100.0" tooltip="Fine tuning."
+                     bgColour="4282992969" itemColour="4279571482" itemColour2="4289835441"
+                     textColour="4290559164" isPluginParameter="1" pluginParameterName="Fine Tuning"
+                     parentComponent="pnlSettingsTab0" processorId="coarseFineTune"
+                     parameterId="Fine" stepSize="1.0" suffix="ct"/>
+          <Component type="ScriptSlider" id="knbTranspose" x="320" y="214" middlePosition="0.0"
+                     text="Transpose" width="60" height="74" min="-2.0" max="2.0"
+                     tooltip="Transpose." bgColour="4282992969" itemColour="4279571482"
+                     itemColour2="4289835441" textColour="4290559164" isPluginParameter="1"
+                     pluginParameterName="Transpose" parentComponent="pnlSettingsTab0"
+                     processorId="transposer" parameterId="SemiTone" stepSize="1.0"
+                     suffix="st"/>
         </Component>
-        <Component type="ScriptPanel" id="pnlSettingsTab1" x="175.0" y="30.0" text="AUDIO"
-                   width="565.0" height="420.0" bgColour="4280098081" itemColour="4279637529"
-                   itemColour2="0" textColour="4293059298" parentComponent="pnlSettings"
-                   borderSize="0.0" borderRadius="12.0" visible="0">
-          <Component type="ScriptFloatingTile" id="fltAudioSettings" x="-25.0" y="0.0"
-                     ContentType="CustomSettings" width="400.0" height="420.0" bgColour="0"
+        <Component type="ScriptPanel" id="pnlSettingsTab1" x="175" y="30" text="AUDIO"
+                   width="565" height="420" bgColour="4280098081" itemColour="4279637529"
+                   itemColour2="0" textColour="4292730333" parentComponent="pnlSettings"
+                   borderSize="0" borderRadius="12" visible="0">
+          <Component type="ScriptFloatingTile" id="fltAudioSettings" x="-25" y="0"
+                     ContentType="CustomSettings" width="400" height="420" bgColour="0"
                      itemColour="0" itemColour2="0" textColour="4293059298" parentComponent="pnlSettingsTab1"
                      Font="medium" FontSize="16.0" Data="{&#10;  &quot;Driver&quot;: true,&#10;  &quot;Device&quot;: true,&#10;  &quot;Output&quot;: true,&#10;  &quot;BufferSize&quot;: true,&#10;  &quot;SampleRate&quot;: true,&#10;  &quot;GlobalBPM&quot;: false,&#10;  &quot;StreamingMode&quot;: false,&#10;  &quot;ScaleFactor&quot;: false,&#10;  &quot;VoiceAmountMultiplier&quot;: false,&#10;  &quot;ClearMidiCC&quot;: false,&#10;  &quot;SampleLocation&quot;: false,&#10;  &quot;DebugMode&quot;: false,&#10;  &quot;UseOpenGL&quot;: false,&#10;  &quot;ScaleFactorList&quot;: [&#10;    0.5,&#10;    0.75,&#10;    1.0,&#10;    1.25,&#10;    1.5,&#10;    2.0,&#10;    2.5,&#10;    3.0,&#10;    4.0&#10;  ]&#10;}"/>
         </Component>
-        <Component type="ScriptPanel" id="pnlSettingsTab2" x="175.0" y="30.0" text="MIDI"
-                   width="565.0" height="420.0" bgColour="4280098081" itemColour="4279637529"
-                   itemColour2="0" textColour="4294504388" parentComponent="pnlSettings"
-                   borderSize="0.0" borderRadius="12.0" visible="0">
-          <Component type="ScriptFloatingTile" id="fltMidiChannels" x="22.0" y="35.0"
-                     ContentType="MidiChannelList" width="175.0" height="360.0" parentComponent="pnlSettingsTab2"
+        <Component type="ScriptPanel" id="pnlSettingsTab2" x="175" y="30" text="MIDI"
+                   width="565" height="420" bgColour="4280098081" itemColour="4279637529"
+                   itemColour2="0" textColour="4292730333" parentComponent="pnlSettings"
+                   borderSize="0" borderRadius="12" visible="0">
+          <Component type="ScriptFloatingTile" id="fltMidiChannels" x="22" y="35"
+                     ContentType="MidiChannelList" width="175" height="360" parentComponent="pnlSettingsTab2"
                      Font="medium" Data="{&#13;&#10;}"/>
-          <Component type="ScriptFloatingTile" id="fltMidiSources" x="235.0" y="35.0"
-                     ContentType="MidiSources" width="310.0" height="360.0" parentComponent="pnlSettingsTab2"
+          <Component type="ScriptFloatingTile" id="fltMidiSources" x="235" y="35"
+                     ContentType="MidiSources" width="310" height="360" parentComponent="pnlSettingsTab2"
                      Font="medium" Data="{&#13;&#10;}"/>
         </Component>
-        <Component type="ScriptPanel" id="pnlSettingsTab3" x="175.0" y="30.0" text="AUTOMATION"
-                   width="565.0" height="420.0" bgColour="4280098081" itemColour="4279637529"
-                   itemColour2="0" textColour="4293059298" parentComponent="pnlSettings"
-                   borderSize="0.0" borderRadius="12.0" visible="0">
-          <Component type="ScriptFloatingTile" id="fltMidiLearn" x="30.0" y="35.0"
-                     ContentType="MidiLearnPanel" width="506.0" height="367.0" bgColour="0"
-                     itemColour="1485934993" itemColour2="0" textColour="4293852671"
-                     parentComponent="pnlSettingsTab3" Font="medium" FontSize="16.0"
-                     Data="{&#13;&#10;}"/>
+        <Component type="ScriptPanel" id="pnlSettingsTab3" x="175" y="30" text="AUTOMATION"
+                   width="565" height="420" bgColour="4280098081" itemColour="4279637529"
+                   itemColour2="0" textColour="4292730333" parentComponent="pnlSettings"
+                   borderSize="0" borderRadius="12" visible="0">
+          <Component type="ScriptFloatingTile" id="fltMidiLearn" x="30" y="35" ContentType="MidiLearnPanel"
+                     width="506" height="367" bgColour="0" itemColour="1485934993"
+                     itemColour2="0" textColour="4293852671" parentComponent="pnlSettingsTab3"
+                     Font="medium" FontSize="16.0" Data="{&#13;&#10;}"/>
         </Component>
-        <Component type="ScriptPanel" id="pnlSettingsTab4" x="175.0" y="56.0" text="MPE"
-                   width="565.0" height="404.0" bgColour="0" itemColour="0" itemColour2="0"
-                   textColour="4293059298" parentComponent="pnlSettings" borderSize="0.0"
-                   borderRadius="12.0" visible="0">
-          <Component type="ScriptFloatingTile" id="fltMpe" x="20.0" y="0.0" ContentType="MPEPanel"
-                     width="526.0" height="367.0" bgColour="0" itemColour="2164260863"
+        <Component type="ScriptPanel" id="pnlSettingsTab4" x="175" y="56" text="MPE"
+                   width="565" height="404" bgColour="0" itemColour="0" itemColour2="0"
+                   textColour="4292730333" parentComponent="pnlSettings" borderSize="0"
+                   borderRadius="12" visible="0">
+          <Component type="ScriptFloatingTile" id="fltMpe" x="20" y="0" ContentType="MPEPanel"
+                     width="526" height="367" bgColour="0" itemColour="2164260863"
                      itemColour2="452984831" parentComponent="pnlSettingsTab4" Font="regular"
                      FontSize="16.0" Data="{&#13;&#10;}"/>
         </Component>
-        <Component type="ScriptButton" id="btnSettingsClose" x="690.0" y="10.0"
-                   text="x" width="40.0" height="36.0" bgColour="4279637529" itemColour="4288651185"
+        <Component type="ScriptButton" id="btnSettingsClose" x="690" y="10" text="x"
+                   width="40" height="36" bgColour="4279637529" itemColour="4288651185"
                    itemColour2="4294967295" saveInPreset="0" parentComponent="pnlSettings"
                    enableMidiLearn="0"/>
       </Component>
     </Component>
-    <Component type="ScriptPanel" id="pnlPresetBrowserContainer" x="0.0" y="0.0"
-               text="" width="1000.0" height="710.0" bgColour="2013265920" itemColour="0"
+    <Component type="ScriptPanel" id="pnlPresetBrowserContainer" x="0" y="0"
+               text="" width="1000" height="710" bgColour="2013265920" itemColour="0"
                itemColour2="0" textColour="0" parentComponent="pnlContainer"
                borderSize="0.0" borderRadius="0.0" allowCallbacks="Clicks Only"
                visible="0">
-      <Component type="ScriptPanel" id="pnlPresetBrowser" x="5.0" y="60.0" text=""
-                 width="990.0" height="565.0" bgColour="4281282356" itemColour="0"
+      <Component type="ScriptPanel" id="pnlPresetBrowser" x="5" y="60" text=""
+                 width="990" height="565" bgColour="4281282356" itemColour="0"
                  itemColour2="0" textColour="0" parentComponent="pnlPresetBrowserContainer"
                  borderSize="0.0" borderRadius="12.0">
-        <Component type="ScriptFloatingTile" id="fltPresetBrowser" x="5.0" y="10.0"
-                   ContentType="PresetBrowser" width="980.0" height="550.0" bgColour="0"
+        <Component type="ScriptFloatingTile" id="fltPresetBrowser" x="5" y="10"
+                   ContentType="PresetBrowser" width="980" height="550" bgColour="0"
                    itemColour="4290690772" itemColour2="0" parentComponent="pnlPresetBrowser"
                    Font="bold" Data="{&#10;  &quot;ShowSaveButton&quot;: true,&#10;  &quot;ShowExpansionsAsColumn&quot;: false,&#10;  &quot;ShowFolderButton&quot;: false,&#10;  &quot;ShowNotes&quot;: true,&#10;  &quot;ShowEditButtons&quot;: true,&#10;  &quot;EditButtonOffset&quot;: 15,&#10;  &quot;ShowAddButton&quot;: true,&#10;  &quot;ShowRenameButton&quot;: true,&#10;  &quot;ShowDeleteButton&quot;: true,&#10;  &quot;ShowFavoriteIcon&quot;: true,&#10;  &quot;ButtonsInsideBorder&quot;: true,&#10;  &quot;NumColumns&quot;: 3,&#10;  &quot;ColumnWidthRatio&quot;: [&#10;    0.3333333333333333,&#10;    0.3333333333333333,&#10;    0.3333333333333333&#10;  ],&#10;  &quot;ListAreaOffset&quot;: [&#10;    0,&#10;    5,&#10;    0,&#10;    -15&#10;  ],&#10;  &quot;ColumnRowPadding&quot;: [&#10;    65,&#10;    15,&#10;    15,&#10;    15&#10;  ],&#10;  &quot;SearchBarBounds&quot;: [&#10;    230,&#10;    0,&#10;    506,&#10;    36&#10;  ],&#10;  &quot;SaveButtonBounds&quot;: [&#10;    740,&#10;    0,&#10;    191,&#10;    36&#10;  ],&#10;  &quot;FavoriteButtonBounds&quot;: [&#10;    5,&#10;    0,&#10;    241,&#10;    36&#10;  ]&#10;}"/>
-        <Component type="ScriptButton" id="btnPresetBrowserClose" x="940.0" y="10.0"
-                   text="x" width="40.0" height="36.0" tooltip="Close the preset browser."
-                   bgColour="4279637529" itemColour="4288651185" itemColour2="4294967295"
+        <Component type="ScriptButton" id="btnPresetBrowserClose" x="940" y="10"
+                   text="x" width="40" height="36" tooltip="Close the preset browser."
+                   bgColour="4279637529" itemColour="4291809231" itemColour2="4294967295"
                    saveInPreset="0" parentComponent="pnlPresetBrowser" enableMidiLearn="0"/>
-        <Component type="ScriptPanel" id="pnlPresetNotesBlocker" x="10.0" y="55.0"
-                   text="" width="970.0" height="36.0" bgColour="4281282356" itemColour="0"
+        <Component type="ScriptPanel" id="pnlPresetNotesBlocker" x="10" y="55" text=""
+                   width="970" height="36" bgColour="4281282356" itemColour="0"
                    itemColour2="0" textColour="4291480266" parentComponent="pnlPresetBrowser"
-                   borderSize="0.0" borderRadius="0.0"/>
+                   borderSize="0" borderRadius="0"/>
       </Component>
     </Component>
     <Component type="ScriptPanel" id="pnlSpinnerContainer" x="0.0" y="0.0" text=""
@@ -350,5 +347,7 @@
                  height="710.0" bgColour="0" itemColour="0" itemColour2="0" textColour="4286611584"
                  parentComponent="pnlSpinnerContainer" borderSize="0.0" borderRadius="0.0"/>
     </Component>
+    <Component type="ScriptPanel" id="pnlZoom" x="990" y="700" text="Resize Interface"
+               width="10" height="10" parentComponent="pnlContainer" allowCallbacks="Clicks, Hover &amp; Dragging"/>
   </Component>
 </ContentProperties>
