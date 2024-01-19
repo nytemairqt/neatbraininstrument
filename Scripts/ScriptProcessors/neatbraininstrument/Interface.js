@@ -18,21 +18,31 @@ include("NEATBRAINBoilerplate/NEATBrainUi.js");
 
 const MEMORYNAME = "Achromic";
 
+const WAVETABLES = ["L_05", "R_05", "L_08", "R_08"];
+
 Engine.loadAudioFilesIntoPool();
 
 const audioFiles = FileSystem.getFolder(FileSystem.AudioFiles);
 const subfolder = audioFiles.createDirectory(MEMORYNAME);
 
-reg rr = 0;
-var RR = 0;
+// check for wavetables
+
+const sf = FileSystem.findFiles(subfolder, "*.hwt", false);
+const af = FileSystem.findFiles(audioFiles, "*.hwt", false);
+
+
 reg m = 0;
 
 /*
-	on load, check for wavetables in "subfolder"
-	if they don't exist, prompt user to "build wavetables" with a popup panel
-	when user builds wavetables, extract them from a zip in the samples zip
+	RHAPSODY EXTRACTS ALL FILES FROM SAMPLES FOLDER AGNOSTICALLY
 	
-	NEED TO SHIP .hwt files along with either the Samples or the .HXI
+	therefore:
+	
+	1. manually drag WT's into samples.lwz
+	2. init check for missing .hwt files from AudioFiles folder
+	3. if missing: copy them from Samples folder 
+	4. maybe give a nice popup "Initial Setup" or something
+	5. manually populate synths with the appropriate WT's
 
 */
 function onNoteOn()

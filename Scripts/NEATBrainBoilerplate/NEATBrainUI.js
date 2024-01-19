@@ -244,10 +244,29 @@ inline function onknbTonePositionControl(component, value) // rename this later?
 
 // Tone Stiffness Intensity
 inline function onknbToneBrightnessControl(component, value)
-{
-	//Console.print("Need to implement Stiffness Functionality");
-	//EQTop.getAttribute((i * EQTop.BandOffset) + 1);
-	eqBrightness.setAttribute(0, value * 6);
+{	
+	local lpf = 1;
+	local highshelf = 3;
+	
+	// Low Pass Frequency
+	local idx = (lpf * synthWTLeftA_toneAdjust.BandOffset) + 1; // Low Pass Frequency
+	local min = 7000;
+	local max = 10000;
+	
+	local f = Math.round(min + (value * (max-min)));	
+		
+	synthWTLeftA_toneAdjust.setAttribute(idx, f);
+	synthWTRightA_toneAdjust.setAttribute(idx, f);
+	synthWTLeftB_toneAdjust.setAttribute(idx, f);
+	synthWTRightB_toneAdjust.setAttribute(idx, f);
+	
+	// High Shelf Gain
+	idx = (highshelf * synthWTLeftA_toneAdjust.BandOffset) + 0;
+	
+	synthWTLeftA_toneAdjust.setAttribute(idx, value * 6);
+	synthWTRightA_toneAdjust.setAttribute(idx, value * 6);
+	synthWTLeftB_toneAdjust.setAttribute(idx, value * 6);
+	synthWTRightB_toneAdjust.setAttribute(idx, value * 6);
 }
 
 // Tone Stiffness Type (Buttons)
