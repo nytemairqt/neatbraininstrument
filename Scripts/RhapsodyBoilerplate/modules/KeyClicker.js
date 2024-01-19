@@ -1,5 +1,5 @@
 /*
-    Copyright 2021, 2022 David Healey
+    Copyright 2021, 2022, 2023 David Healey
 
     This file is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -15,27 +15,29 @@
     along with This file. If not, see <http://www.gnu.org/licenses/>.
 */
 
-namespace Header
-{    
-    // pnlHeader
-	const pnlHeader = Content.getComponent("pnlHeader");
-	
-	pnlHeader.setPaintRoutine(function(g)
-	{
-	});
-	
-	// btnTitle
-	const btnTitle = Content.getComponent("btnTitle");
-
-	const lafbtnTitle = Content.createLocalLookAndFeel();
-	btnTitle.setLocalLookAndFeel(lafbtnTitle);
-	
-	lafbtnTitle.registerFunction("drawToggleButton", function(g, obj)
-	{
-		var a = obj.area;
-
-		g.setColour(obj.textColour);
-		g.setFont("bold", 32);
-		g.drawAlignedText(obj.text, [a[0], a[1], a[2], a[3]], "left");
-	});
+reg lastNote = -1;
+reg lastVelocity = 1;function onNoteOn()
+{
+	lastNote = Message.getNoteNumber();
+	lastVelocity = Message.getVelocity();
 }
+ function onNoteOff()
+{
+	local n = Message.getNoteNumber();
+	
+	if (n == lastNote)
+		Synth.playNote(n, Math.max(1, lastVelocity / 4));
+}
+ function onController()
+{
+	
+}
+ function onTimer()
+{
+	
+}
+ function onControl(number, value)
+{
+	
+}
+ 

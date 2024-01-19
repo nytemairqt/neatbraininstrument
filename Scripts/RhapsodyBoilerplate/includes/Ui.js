@@ -25,11 +25,10 @@ namespace Ui
 		createHeader(name);
 		createBody();
 		createStatusBar();
-		createFooter();		
+		createFooter();
 		createSettingsPanel();
 		createPresetPanel();
-		createFilePicker();
-		createSpinner();
+		createZoomPanel();
 	}
 	
 	inline function createContainer(a)
@@ -44,36 +43,6 @@ namespace Ui
 			"textColour": 0x0,
 		    "borderSize": 0,
 		    "borderRadius": 0
-		});
-	}
-
-	inline function createSpinner()
-	{
-		Content.addPanel("pnlSpinnerContainer", 0, 0);
-		Content.setPropertiesFromJSON("pnlSpinnerContainer", {
-			"x": 0, "y": 0, "width": 1000, "height": 710,
-			"parentComponent": "pnlContainer",
-			"text": "",
-		    "visible": false,
-		    "bgColour": 0x0,
-		    "itemColour": 0x78000000,
-		    "itemColour2": 0x78000000,
-		    "textColour": 0x0,
-			"borderSize": 0,
-			"borderRadius": 0
-		});
-		
-		Content.addPanel("pnlSpinner", 0, 0);
-		Content.setPropertiesFromJSON("pnlSpinner", {
-			"x": 0, "y": 0, "width": 1000, "height": 710,
-		    "parentComponent": "pnlSpinnerContainer",
-		    "text": "",
-		    "bgColour": 0x0,
-		    "itemColour": 0x0,
-		    "itemColour2": 0x0,
-		    "textColour": 0xff808080,
-			"borderSize": 0,
-			"borderRadius": 0
 		});
 	}
 
@@ -130,7 +99,7 @@ namespace Ui
 
 		Content.addButton("btnSettings", 0, 0);
 		Content.setPropertiesFromJSON("btnSettings", {
-			"x": 600 , "y": 19, "width": 22, "height": 22,
+			"x": 576 , "y": 21, "width": 18, "height": 18,
 		    "parentComponent": "pnlHeader",
 		    "text": "settings",
 		    "saveInPreset": false,
@@ -143,9 +112,9 @@ namespace Ui
 		
 		Content.addButton("btnUnload", 0, 0);
 		Content.setPropertiesFromJSON("btnUnload", {
-			"x": 566 , "y": 19, "width": 22, "height": 22,
+			"x": 606 , "y": 21, "width": 18, "height": 18,
 		    "parentComponent": "pnlHeader",
-		    "text": "rhapsodyLogo",
+		    "text": "widgets",
 		    "saveInPreset": false,
 		    "bgColour": 0x0,
 		    "itemColour": 0xffcfcfcf,
@@ -157,11 +126,11 @@ namespace Ui
 
 		Content.addPanel("pnlPresetDisplay", 0, 0);
 		Content.setPropertiesFromJSON("pnlPresetDisplay", {
-			"x": 635, "y": 15, "width": 350, "height": 30,
+			"x": 635, "y": 12, "width": 350, "height": 36,
 		    "parentComponent": "pnlHeader",
 		    "text": "",
-		    "bgColour": 0xff2f2f34,
-		    "itemColour": 0x0,
+		    "bgColour": 0xff161619,
+		    "itemColour": 0xff2e2e33,
 		    "itemColour2": 0x0,
 		    "textColour": 0x0,
 		    "borderSize": 0,
@@ -170,22 +139,22 @@ namespace Ui
 		
 		Content.addButton("btnPresetBrowser", 0, 0);
 		Content.setPropertiesFromJSON("btnPresetBrowser", {
-			"x": 0, "y": 0, "width": 285, "height": 29,
+			"x": 5, "y": 0, "width": 273, "height": 36,
 		    "parentComponent": "pnlPresetDisplay",
 		    "text": "",
 		    "bgColour": 0x0,
 		    "itemColour": 0x0,
 		    "itemColour2": 0x0,
 		    "textColour": Colours.white,
-		    "saveInPreset": true,
+		    "saveInPreset": false,
 		    "enableMidiLearn": false
 		});
 				
 		Content.addButton("btnPreset0", 0, 0);
 		Content.setPropertiesFromJSON("btnPreset0", {
-			"x": 292, "y": 9, "width": 8, "height": 12,
+			"x": 286, "y": 11, "width": 9, "height": 14,
 		    "parentComponent": "pnlPresetDisplay",
-		    "text": "triangleLeft",
+		    "text": "arrowLeft",
 		    "saveInPreset": false,
 		    "bgColour": 0x0,
 		    "itemColour": 0xffe0e0e0,
@@ -197,9 +166,9 @@ namespace Ui
 		
 		Content.addButton("btnPreset1", 0, 0);
 		Content.setPropertiesFromJSON("btnPreset1", {
-			"x": 310, "y": 9, "width": 8, "height": 12,
+			"x": 304, "y": 11, "width": 9, "height": 14,
 		    "parentComponent": "pnlPresetDisplay",
-		    "text": "triangleRight",
+		    "text": "arrowRight",
 		    "saveInPreset": false,
 		    "bgColour": 0x0,
 		    "itemColour": 0xffe0e0e0,
@@ -211,7 +180,7 @@ namespace Ui
 		
 		Content.addButton("btnPresetSave", 0, 0);
 		Content.setPropertiesFromJSON("btnPresetSave", {
-			"x": 328, "y": 9, "width": 12, "height": 12,
+			"x": 326, "y": 11, "width": 14, "height": 14,
 		    "parentComponent": "pnlPresetDisplay",
 		    "text": "save",
 		    "saveInPreset": false,
@@ -237,6 +206,17 @@ namespace Ui
 			"textColour": 0x0,
 			"borderSize": 0,
 			"borderRadius": 12
+		});
+	}
+	
+	inline function createZoomPanel()
+	{
+		Content.addPanel("pnlZoom", 0, 0);
+		Content.setPropertiesFromJSON("pnlZoom", {
+			"x": 990, "y": 700, "width": 10, "height": 10,
+			"parentComponent": "pnlContainer",
+			"allowCallbacks": "Clicks, Hover & Dragging",
+			"text": "Resize Interface"
 		});
 	}
 	
@@ -286,7 +266,7 @@ namespace Ui
 		    "isMomentary": true,
 		    "enableMidiLearn": false
 		});
-		
+
 		Content.addFloatingTile("fltPeakMeter", 0, 0);
 		Content.setPropertiesFromJSON("fltPeakMeter", {
 			"x": 730, "y": 13, "width": 100, "height": 16,
@@ -314,9 +294,9 @@ namespace Ui
 		    "parameterId": "Gain",
 		    "defaultValue": -6.0,
 		    "bgColour": 0x0,
-		    "itemColour": 0xffF8d799,
+		    "itemColour": 0xff15141a,
 		    "itemColour2": 0xffd7d0bc,
-		    "textColour": 0xff343437,
+		    "textColour": Colours.white,
 		    "mode": "Decibel",
 		    "style": "Horizontal",
 		    "dragDirection": "Horizontal",
@@ -328,15 +308,15 @@ namespace Ui
 		Content.setPropertiesFromJSON("knbMasterPan", {
 			"x": 890, "y": 13, "width": 80, "height": 16,
 		    "parentComponent": "pnlStatusBar",
-		    "text": "pan-bipolar",
+		    "text": "Master Pan",
 		    "tooltip": "Master pan.",
 		    "saveInPreset": true,
 		    "isPluginParameter": true,
 		    "pluginParameterName": "Master Pan",
 		    "bgColour": 0xff212125,
-		    "itemColour": 0xffF8d799,
+		    "itemColour": 0xff15141a,
 		    "itemColour2": 0xffd7d0bc,
-		    "textColour": 0xff343437,
+		    "textColour": Colours.white,
 		    "processorId": "masterGain",
 		    "parameterId": "Balance",
 		    "mode": "Pan",
@@ -361,7 +341,7 @@ namespace Ui
 			"borderSize": 0,
 			"borderRadius": 0
 		});
-		
+
 		Content.addButton("btnPanic", 0, 0);
 		Content.setPropertiesFromJSON("btnPanic", {
 			"x": 27, "y": 35, "width": 18, "height": 18,
@@ -457,7 +437,7 @@ namespace Ui
 		    "tooltip": "Close the preset browser.",
 		    "saveInPreset": false,
 		    "bgColour": 0xff161619,
-		    "itemColour": 0xff9f9fb1,
+		    "itemColour": 0xffcfcfcf,
 		    "itemColour2": 0xffffffff,
 		    "textColour": 0xffffffff,
 		    "enableMidiLearn": false
@@ -502,7 +482,7 @@ namespace Ui
 			"bgColour": 0xff2f2f34,
 		    "itemColour": 0xff1d1d21,
 		    "itemColour2": 0x0,
-		    "textColour": 0xfff8efc4,
+		    "textColour": 0xffdddddd,
 		    "borderSize": 0,
 		    "borderRadius": 12
 		});
@@ -534,7 +514,7 @@ namespace Ui
 			    "bgColour": 0xff1d1d21,
 				"itemColour": 0xff161619,
 				"itemColour2": 0x0,
-				"textColour": i == 2 ? 0xfff8efc4 : 0xffe2e2e2,
+				"textColour": 0xffdddddd,
 				"borderSize": 0,
 				"borderRadius": 12
 			});
@@ -550,14 +530,14 @@ namespace Ui
 			"itemColour3": 0x0,
 			"textColour": 0xffe2e2e2,
 		    "ContentType": "CustomSettings",
-			"Data": "{\n  \"Driver\": false,\n  \"Device\": false,\n  \"Output\": false,\n  \"BufferSize\": false,\n  \"SampleRate\": false,\n  \"GlobalBPM\": true,\n  \"StreamingMode\": true,\n  \"ScaleFactor\": true,\n  \"VoiceAmountMultiplier\": true,\n  \"ClearMidiCC\": false,\n  \"SampleLocation\": false,\n  \"DebugMode\": false,\n  \"UseOpenGL\": true,\n  \"ScaleFactorList\": [\n    0.5,\n    0.75,\n    1.0,\n    1.25,\n    1.5,\n    2.0,\n    2.5,\n    3.0,\n    4.0\n  ]\n}",
+			"Data": "{\n  \"Driver\": false,\n  \"Device\": false,\n  \"Output\": false,\n  \"BufferSize\": false,\n  \"SampleRate\": false,\n  \"GlobalBPM\": true,\n  \"StreamingMode\": true,\n  \"ScaleFactor\": false,\n  \"VoiceAmountMultiplier\": true,\n  \"ClearMidiCC\": false,\n  \"SampleLocation\": false,\n  \"DebugMode\": false,\n  \"UseOpenGL\": true,\n  \"ScaleFactorList\": [\n    0.5,\n    0.75,\n    1.0,\n    1.25,\n    1.5,\n    2.0,\n    2.5,\n    3.0,\n    4.0\n  ]\n}",
 		    "Font": "medium",
 		    "FontSize": 16.0
 		});
 		
 		Content.addButton("btnLazyLoad", 0, 0);
 		Content.setPropertiesFromJSON("btnLazyLoad", {
-		    "x": 150, "y": 218, "width": 40, "height": 20,
+		    "x": 150, "y": 175, "width": 40, "height": 20,
 		    "parentComponent": "pnlSettingsTab0",
 		    "text": "",
 		    "tooltip": "Enable or disable the purge until played feature.",
@@ -572,18 +552,18 @@ namespace Ui
 		
 		Content.addKnob("knbCoarseDetune", 0, 0);
 		Content.setPropertiesFromJSON("knbCoarseDetune", {
-		    "x": 153, "y": 257, "width": 40, "height": 40,
+		    "x": 153, "y": 214, "width": 60, "height": 74,
 		    "parentComponent": "pnlSettingsTab0",
-		    "text": "",
+		    "text": "Coarse",
 		    "tooltip": "Coarse tuning.",
 		    "isPluginParameter": true,
 		    "pluginParameterName": "Coarse Tuning",
 		    "processorId": "coarseFineTune",
 		    "parameterId": "Coarse",
-		    "bgColour": 0xff161619,
-			"itemColour": 0xffffffff,
-			"itemColour2": 0xffb3b3b3,
-			"textColour": 0xffd4d4d4,
+		    "bgColour": 0xff494949,
+			"itemColour": 0xff15141a,
+			"itemColour2": 0xffb1b1b1,
+			"textColour": 0xffbcbcbc,
 		    "min": -12.0,
 		    "max": 12.0,
 			"mode": "Linear",
@@ -591,23 +571,23 @@ namespace Ui
 		    "stepSize": 1.0,
 		    "middlePosition": 0.0,
 		    "suffix": "st",
-		    "showValuePopup": "Below"
+		    "showValuePopup": "No"
 		});
 		
 		Content.addKnob("knbFineDetune", 0, 0);
 		Content.setPropertiesFromJSON("knbFineDetune", {
-		    "x": 251, "y": 257, "width": 40, "height": 40,
+		    "x": 236, "y": 214, "width": 60, "height": 74,
 		    "parentComponent": "pnlSettingsTab0",
-		    "text": "",
+		    "text": "Fine",
 		    "tooltip": "Fine tuning.",
 		    "isPluginParameter": true,
 		    "pluginParameterName": "Fine Tuning",
 		    "processorId": "coarseFineTune",
 		    "parameterId": "Fine",
-		    "bgColour": 0xff161619,
-			"itemColour": 0xffffffff,
-			"itemColour2": 0xffb3b3b3,
-			"textColour": 0xffd4d4d4,
+		    "bgColour": 0xff494949,
+			"itemColour": 0xff15141a,
+			"itemColour2": 0xffb1b1b1,
+			"textColour": 0xffbcbcbc,
 		    "min": -100.0,
 		    "max": 100.0,
 		    "mode": "Linear",
@@ -615,23 +595,23 @@ namespace Ui
 		    "stepSize": 1.0,
 		    "middlePosition": 0.0,
 		    "suffix": "ct",
-		    "showValuePopup": "Below"
+		    "showValuePopup": "No"
 		});
-		
+
 		Content.addKnob("knbTranspose", 0, 0);
 		Content.setPropertiesFromJSON("knbTranspose", {
-		    "x": 153, "y": 329, "width": 40, "height": 40,
+		    "x": 320, "y": 214, "width": 60, "height": 74,
 		    "parentComponent": "pnlSettingsTab0",
-		    "text": "",
+		    "text": "Transpose",
 		    "tooltip": "Transpose.",
 		    "isPluginParameter": true,
 		    "pluginParameterName": "Transpose",
 		    "processorId": "transposer",
 		    "parameterId": "SemiTone",
-		    "bgColour": 0xff161619,
-			"itemColour": 0xffffffff,
-			"itemColour2": 0xffb3b3b3,
-			"textColour": 0xffd4d4d4,
+		    "bgColour": 0xff494949,
+			"itemColour": 0xff15141a,
+			"itemColour2": 0xffb1b1b1,
+			"textColour": 0xffbcbcbc,
 		    "min": -2.0,
 		    "max": 2.0,
 		    "mode": "Linear",
@@ -639,7 +619,7 @@ namespace Ui
 		    "stepSize": 1.0,
 		    "middlePosition": 0.0,
 		    "suffix": "st",
-		    "showValuePopup": "Below"
+		    "showValuePopup": "No"
 		});
 		
 		Content.addFloatingTile("fltAudioSettings", 0, 0);
@@ -729,308 +709,29 @@ namespace Ui
 		    "enableMidiLearn": false
 		});
 	}
-	
-	inline function createFilePicker()
-	{
-		Content.addPanel("pnlFilePicker", 0, 0);
-		Content.setPropertiesFromJSON("pnlFilePicker", {
-			"x": 0, "y": 0, "width": 1000, "height": 710,
-			"parentComponent": "pnlContainer",
-			"text": "",
-		    "visible": false,
-		    "bgColour": 0xff2f2f34,
-   			"itemColour": 0x0,
-   			"itemColour2": 0x0,
-   			"textColour": 0xffffffff
-		});
 		
-		Content.addLabel("lblFilePicker", 0, 0);
-		Content.setPropertiesFromJSON("lblFilePicker", {
-			"x": 277, "y": 340, "width": 400, "height": 30,
-			"parentComponent": "pnlFilePicker",
-			"saveInPreset": false,
-			"bgColour": 0xff161619,
-			"itemColour": 0x0,
-			"itemColour2": 0x0,
-			"textColour": 0xffffffff,
-			"fontName": "regular",
-			"fontSize": 18,
-			"alignment": "left",
-			"editable": false
-		});
-		
-		Content.addButton("btnFilePicker", 0, 0);
-		Content.setPropertiesFromJSON("btnFilePicker", {
-			"x": 682, "y": 346, "width": 23, "height": 18,
-			"parentComponent": "pnlFilePicker",
-			"text": "folder",
-			"saveInPreset": false,
-			"bgColour": 0x0,
-			"itemColour": 0xffeaeaef,
-			"itemColour2": 0xffc4c4c7,
-			"textColour": 0x0,
-			"isMomentary": true,
-			"enableMidiLearn": false
-		});
-		
-		Content.addButton("btnFilePickerSubmit", 0, 0);
-		Content.setPropertiesFromJSON("btnFilePickerSubmit", {
-			"x": 622, "y": 414, "width": 90, "height": 30,
-			"parentComponent": "pnlFilePicker",
-			"text": "Ok",
-			"saveInPreset": false,
-			"bgColour": 0xffbebed4,
-			"itemColour": 0xff9191a1,
-			"itemColour2": 0x0,
-			"textColour": 0xff000000,
-			"isMomentary": true,
-			"enableMidiLearn": false
-		});
-		
-		Content.addButton("btnFilePickerCancel", 0, 0);
-		Content.setPropertiesFromJSON("btnFilePickerCancel", {
-			"x": 503, "y": 414, "width": 90, "height": 30,
-			"parentComponent": "pnlFilePicker",
-			"text": "Cancel",
-			"saveInPreset": false,
-			"bgColour": 0xffd4bebe,
-			"itemColour": 0xffa19191,
-			"itemColour2": 0x0,
-			"textColour": 0xff000000,
-			"isMomentary": true,
-			"enableMidiLearn": false
-		});
-	}
-		
-	inline function createKnobPanel(parentId, size, data)
+	inline function createTablePanel(parentId, id, processorId, area)
 	{
 		local parent = Content.getComponent(parentId);
-		local a = parent.getLocalBounds(0);
-		local numCols = data.length  == 1 ? 1 : Math.floor(a[2] / (size + 60));
-		local numRows = Math.floor(data.length / numCols);
-		local colWidth = a[2] / numCols;
-		local rowHeight = a[3] / numRows + 25;
-
-		for (i = 0; i < data.length; i++)
-		{
-			local id = data[i].id;
-
-			local x = (i % numCols) * colWidth + colWidth / 2 - size / 2;
-			local y = Math.floor(i / numCols) * rowHeight + rowHeight / 2 - size / 2;
-
-			if (!isDefined(data[i].properties))
-				data[i].properties = {};
-
-			data[i].properties.x = x;
-			data[i].properties.y = y;
-			data[i].properties.width = size;
-			data[i].properties.height = size;
-			data[i].properties.parentComponent = parentId;
-			data[i].properties.showValuePopup = "Below";
-			
-			if (!isDefined(data[i].properties.bgColour))
-				data[i].properties.bgColour = 0xff2f2f34;
-
-			if (!isDefined(data[i].properties.itemColour))
-				data[i].properties.itemColour = 0xffffffff;
-
-			if (!isDefined(data[i].properties.itemColour2))
-				data[i].properties.itemColour2 = 0xffb3b3b3;
-
-			if (!isDefined(data[i].properties.textColour))
-				data[i].properties.textColour = 0xfff8d799;
-			
-			Content.addKnob(data[i].id, 0, 0);
-			Content.setPropertiesFromJSON(data[i].id,  data[i].properties);
-		}
-	}
-	
-	inline function spaceControlsHorizontally(panelId, controlIds)
-	{
-		local panel = Content.getAllComponents(panelId)[0];
-
-		local a = [0, 0, panel.getWidth(), panel.getHeight()];
-		local col = a[2] / controlIds.length;
-	
-		for (i = 0; i < controlIds.length; i++)
-		{
-			local id = controlIds[i];
-			local c = Content.getAllComponents(id)[0];
-			
-			c.set("x", col * i + col / 2 - c.getWidth() / 2);			
-		}
-	}
-	
-	inline function createDynamicsPanel(parentId)
-	{
-		local data = [
-			{
-				"id": "knbExpression",
-				"properties": {
-					"text": "EXPRESSION",
-				    "isPluginParameter": true,
-				    "pluginParameterName": "Expression",
-				    "processorId": "ccExpression",
-				    "parameterId": "DefaultValue",
-				    "defaultValue": 64.0,
-				    "max": 127.0,
-				    "middlePosition": 64.0,
-				    "stepSize": 1.0,
-				    "showTextBox": false,
-				    "showValuePopup": "Below"
-				}
-			},
-			{
-				"id": "knbDynamics",
-				"properties": {
-				    "text": "DYNAMICS[r]SOFT,LOUD[/r]",
-				    "isPluginParameter": true,
-				    "pluginParameterName": "Dynamics",
-				    "processorId": "dynamicsController",
-				    "parameterId": "knbValue",
-				    "defaultValue": 64.0,
-				    "max": 127.0,
-				    "middlePosition": 64.0,
-				    "stepSize": 1.0,
-				    "showTextBox": false,
-				    "showValuePopup": "Below"
-				}
-			}
-		];
-		
-		createKnobPanel(parentId, 55, data);
-	}
-	
-	inline function createVibratoPanel(parentId)
-	{
-		local data = [
-			{
-				"id": "knbVibratoRate",
-				"properties": {
-				    "text": "RATE[r]SLOW,FAST[/r]",
-				    "tooltip": "Controls the speed of vibrato.",
-				    "macroControl": "Macro 1",
-				    "isPluginParameter": true,
-				    "pluginParameterName": "Vibrato Rate",
-				    "processorId": "LFO0",
-				    "parameterId": "Frequency",
-				    "defaultValue": 64,
-				    "bgColour": 0xff2f2f34,
-				    "itemColour": 0xffffffff,
-				    "itemColour2": 0xffb3b3b3,
-				    "textColour": 0xfff8d799,
-				    "mode": "Linear",
-				    "min": 0,
-				    "max": 127,
-				    "middlePosition": 64,
-				    "stepSize": 1.0,
-				    "showValuePopup": "Right"				    
-				}
-			},
-			{
-				"id": "knbVibratoDepth",
-				"properties": {
-				    "text": "DEPTH[r]0,100[/r]",
-				    "tooltip": "Controls the amount of vibrato.",
-				    "macroControl": "Macro 2",
-				    "isPluginParameter": true,
-				    "pluginParameterName": "Vibrato Depth",
-				    "processorId": "LFO0",
-				    "parameterId": "Value",
-				    "defaultValue": 50,
-				    "bgColour": 0xff2f2f34,
-				    "itemColour": 0xffffffff,
-				    "itemColour2": 0xffb3b3b3,
-				    "textColour": 0xfff8d799,
-					"mode": "Linear",
-				    "min": 0,
-				    "max": 127,
-				    "middlePosition": 64,
-				    "stepSize": 1.0,
-				    "showValuePopup": "Right"
-				}
-			}
-		];	
-
-		createKnobPanel(parentId, 55, data);
-	}
-	
-	inline function createGrowlFlutterPanel(parentId)
-	{
-		local data = [
-			{
-				"id": "knbGrowl",
-				"properties": {
-				    "text": "GROWL",
-				    "tooltip": "Controls the speed of growl.",
-				    "isPluginParameter": true,
-				    "pluginParameterName": "Growl",
-				    "processorId": "growlPitchIntensityCC",
-				    "parameterId": "DefaultValue",
-				    "bgColour": 0xff2f2f34,
-				    "itemColour": 0xffffffff,
-				    "itemColour2": 0xffb3b3b3,
-				    "textColour": 0xfff8d799,
-					"mode": "Linear",
-				    "min": 0,
-				    "max": 127,
-				    "middlePosition": 64,
-				    "stepSize": 1.0,
-				    "showValuePopup": "Right"
-				}
-			},
-			{
-				"id": "knbFlutter",
-				"properties": {
-				    "text": "FLUTTER",
-				    "tooltip": "Controls the speed of flutter tongue.",
-				    "isPluginParameter": true,
-				    "pluginParameterName": "Flutter",
-				    "processorId": "LFO2",
-				    "parameterId": "Value",
-				    "bgColour": 0xff2f2f34,
-				    "itemColour": 0xffffffff,
-				    "itemColour2": 0xffb3b3b3,
-				    "textColour": 0xfff8d799,
-					"mode": "Linear",
-				    "min": 0,
-				    "max": 127,
-				    "middlePosition": 64,
-				    "stepSize": 1.0,
-				    "showValuePopup": "Right"
-				}
-			}
-		];
-
-		createKnobPanel(parentId, 55, data);
-	}
-		
-	inline function createTablePanel(parentId, processorId, width, height)
-	{
-		local parent = Content.getComponent(parentId);
-		local a = parent.getLocalBounds(0);
-		local id = parentId.replace("pnl", "tbl");
 
 		Content.addTable(id, 0, 0);
 		Content.setPropertiesFromJSON(id, {
-			"x": a[2] / 2 - width / 2,
-			"y": a[3] / 2 - height / 2,
+			"x": area[0] , "y": area[1], "width": area[2], "height": area[3],
 			"parentComponent": parentId,
 			"processorId": processorId,
-			"width": width,
-			"height": height - 2,
 			"bgColour": 0xff15141a,
 			"itemColour": 0xe95b5a4d,
 			"itemColour2": 0xfff8d799,
 		    "customColours": true
 		});
 	}
-		
-	inline function createVelocityPanel(parentId)
+
+	inline function createVelocityPanels(parentId, count)
 	{
-		createTablePanel(parentId, "velocity", 200, 181);
+		for (i = 0; i < count; i++)
+			createTablePanel(parentId, "tblVelocity" + i, "", [0, 0, 200, 179]);
 	}
-		
+
 	inline function createMixerPanel(parentId, numChannels)
 	{
 		local parent = Content.getComponent(parentId);
@@ -1222,9 +923,9 @@ namespace Ui
 		fltEnvelope.setContentData(tileData);
 
 		Content.setPropertiesFromJSON("fltEnvelope",  {
-			"x": 15, "y": 12, "width": 290, "height": 125,
+			"x": 15, "y": 10, "width": 290, "height": 120,
 			"parentComponent": parentId,
-			"bgColour": 0xff15141a,
+			"bgColour": 0x0,
 			"itemColour": 0xe95b5a4d,
 			"itemColour2": 0xfff8d799,
 			"itemColour3": 0x0,
@@ -1237,13 +938,13 @@ namespace Ui
 		local mode = ["NormalizedPercentage", "Time", "Time", "Time", "Decibel", "Time"];
 		local defaultValue = [0.5, 2.0, 10.0, 1000, -2.0, 600];
 		local middlePosition = [0.5, 1000, 1000, 1000, -18.0, 1000];
-		local x = [20, 72, 121, 170, 219, 268];
+		local x = [10, 61, 112, 163, 214, 265];
 
 		for (i = 0; i < 6; i++)
 		{
 			Content.addKnob("knbAHDSR" + i, 0, 0);
 			Content.setPropertiesFromJSON("knbAHDSR" + i, {
-				"x": x[i], "y": 172, "width": 32, "height": 32,
+				"x": x[i], "y": 130, "width": 45, "height": 75,
 				"parentComponent": parentId,
 				"text": text[i],
 				"tooltip": tooltip[i],
@@ -1251,14 +952,14 @@ namespace Ui
 				"isPluginParameter": true,
 				"pluginParameterName": parameterName[i],
 				"defaultValue": defaultValue[i],
-				"bgColour": 0xff2f2f34,
-				"itemColour": 0xffffffff,
+				"bgColour": 0xff353535,
+				"itemColour": 0xff15141a,
 				"itemColour2": 0xffb3b3b3,
-				"textColour": 0xfff8d799,
+				"textColour": Colours.white,
 				"style": "Knob",
 				"mode": mode[i],
 				"middlePosition": middlePosition[i],
-				"showValuePopup": "Below",
+				"showValuePopup": "No",
 			});
 		}
 
@@ -1316,4 +1017,3 @@ namespace Ui
 		}		
 	}
 }
-

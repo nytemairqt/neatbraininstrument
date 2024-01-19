@@ -40,10 +40,17 @@ namespace Presets
 		currentPresetFile = presetFile;
 		updatePresetLabel();
 	});
+	
+	uph.setPostSaveCallback(function(presetFile)
+	{
+		currentPresetFile = presetFile;
+		updatePresetLabel();
+	});
     
     // pnlPresetDisplay
     const pnlPresetDisplay = Content.getComponent("pnlPresetDisplay");
-    
+    pnlPresetDisplay.setValue(0);
+
     pnlPresetDisplay.setPaintRoutine(function(g)
     {
 		var a = this.getLocalBounds(0);
@@ -51,6 +58,32 @@ namespace Presets
 		
 		g.setColour(this.get("bgColour"));
 		g.fillRoundedRectangle(a, radius);
+		
+		if (this.getValue() > 0)
+		{
+			g.setColour(this.get("itemColour"));
+			g.fillRoundedRectangle([a[0], a[1], (a[2] - 50) * this.getValue(), a[3]], radius);
+		}
+    });
+    
+    pnlPresetDisplay.setLoadingCallback(function(isPreloading)
+    {
+		if (isPreloading)
+		{
+			this.startTimer(50);
+		}    		
+    	else
+    	{
+	    	this.stopTimer();
+	    	this.setValue(0);
+	    	this.repaint();
+    	}
+    });
+
+    pnlPresetDisplay.setTimerCallback(function()
+    {
+	   this.setValue(Engine.getPreloadProgress());
+	   this.repaint();
     });
 
 	// pnlPresetBrowserContainer
@@ -92,7 +125,7 @@ namespace Presets
         g.fillAll(this.get("bgColour"));
 
         g.setColour(this.get("textColour"));
-        g.setFont("bold", 16 + 3 * (Engine.getOS() == "WIN"));
+        g.setFont("bold", 16);
 
 		for (i = 0; i < titles.length; i++)
 		{
@@ -170,8 +203,8 @@ namespace Presets
 		var a = obj.area;
 
 		g.fillAll(0x0);
-				
-		g.setFont("bold", 18 + 2 * (Engine.getOS() == "WIN"));
+
+		g.setFont("bold", 18);
 		g.setColour(Colours.withAlpha(obj.textColour, obj.over ? 1.0 : 0.8));
 		g.drawAlignedText(obj.text, [a[0] + 10, a[1], a[2], a[3]], "left");
     });
@@ -298,4 +331,3 @@ namespace Presets
     // Function calls
     setTitles(false);
 }
-

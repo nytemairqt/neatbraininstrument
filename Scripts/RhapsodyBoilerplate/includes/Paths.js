@@ -20,8 +20,8 @@ namespace Paths
     reg pathData;
     const icons = {};    
       
-    // X - Reza
-    pathData = "277.t0lP.73PWjOVCwFhFC4PLxVUCI1UND4PvzMUCckCQNTuzO0PHZLjCEVYSMjXZ6GjCUf0RMTnJ.4PEXsTCIuvONTXkM0PrwJ+MND6wa0PrYlMLNTXkM0Phco6KNTAVK0Pdo2hCUf0RMDzxr3PgU1TCIV.qq3P+S+TCEv5JNTbcS0PPKyhCwHaUMDaVjOiCcQ9XMDaPKyhCIZgbMjXArthC4OEcMT.qq3Pw0eWCAsLKNTyL50Ph4mdKNTJb70P259hCkBGeMjY1v3PMynWCwFq723PBAvVCwl7B+3PMynWCIVvJ.4PovwWCouePNTJb70PHZLjC0LidMjXW4PjC8R+cMzUND4P8RQWCgnwPNjnEx0PiUF...";
+    // X - Material (1:1)
+    pathData = "356.t0F..ZBQVNypCwFtk8.QlfV1CE2xY3.Q+++1CIMFLPz++u8Pwk8EJPz++u8PruLBDYBZYOTb..3AD0DzVOD..d.Qa4rzCEG..d.QnwryCw9xHPDjzv7PrQi4ePz++24Prw9xHPj2V90PwA.fGPDKmo0P..3ADgzXRMTb..3ADI1WJMD6Ki.Qv9RQCEW1Wn.Q9++OCIMFLPj+++yPwsbFNPj+++yP3V1CDA6KEMDa..nIDgFyPNDaHoYODA6KEMTbzXtOD4+++LjKmCDQ9++OCE2InKDQ9++OCQAMDQDruTzPwA.fEQjXeozP..XQDgzXRMTb..XQDwxYZMDEzPDQda4WCw1xYzBQ++emCwFEzPDQPRCyCEG..VDQnwryCA.fEQzVNK8PwA.fEQTSPa8PTPCQDYBZYOTbmftPD8++aOjKmCDQ+++1CEGMl6CQ+++1Cgjl8PjInk8PrA.flPjkyr5PiUF";
   
     icons.x = Content.createPath();
     icons.x.loadFromData(pathData);
@@ -32,59 +32,53 @@ namespace Paths
     icons.check = Content.createPath();
     icons.check.loadFromData(pathData);    
     
-    // Add - Reza
-    pathData = "286.t0VIFPaPkX.pBwVFDnXPkX.pBwVFDnXPhVXmBIVFDnXPx18lBc8nDFjnEpoPxf.eAIZgZJjXbRraAIZgZJjLHPVPx18lBICBjEjnE1oPrICBjETIFfpPrICBPDTIFfpPhwIwBDTIFfpPjAA7.UiWoJDYP.OPkXvpBIFYP.OPU3JqBUKxBDTIF3pPxf.DAUhAtJDaxf.YAUhAtJDaxf.YAgpg3JjXxf.YAgoK5JTsH6VPnZ3tBICB7EDpFtqPhc8nDFDpFtqPYPfhAgoK5JTFDnXPnZHtBwVFDnXPkXfqBwVIFPaPkXfqBI13kpaPkXfqBUhA.GTEtxpPkX.vAUhAqJjXkX.vAUiWoJD7mpaPkX.pBUhAzFTIFfpPiUF...";
-        
-    icons.add = Content.createPath();
-    icons.add.loadFromData(pathData);
+	// Add - Material (1:1)
+	pathData = "356.t0lRRHBQsssoCw1ssu.QsssoCE23Kn.QsssoCIewHPjhOQ5PwA.fGPDpCG5P..3ADA..dNTb..3ADcEOZNj7Ei.QzA6kCE23Kn.QRRRkCca6KPjjjT4ProjDhPjjjT4ProjDhPj11F0PwojDhPjhunzP6f0HDQ7EEMTbr3IID4+++LD..ZBQ9++OCEG0ggBQ9++OCY7ooPDwWTzPwca6pPjhunzP21tJDossQMDa21tJDIIIUNDaJIQPDIIIUNTbdPuPDIIIUNzC5PDQzA6kCEG..VDQWwilCA.fEQD..34PwA.fEQDpCG5POnCQDo3SjNTbdPuPD011lNjRRDDQsssoCw1ssqBQsssoCw1ssqBQRRxzCE2ssqBQ5ft0CY7ooPTGzk8PwQcXnPD..v8P..nIDA..bOTbr3IIDA..bOzNXMBQcPW1CEmRRHBQ5ft0CojDhPjjjL8ProjDhPTaaa5PiUF";
+
+	icons.add = Content.createPath();
+	icons.add.loadFromData(pathData);
     
-    // Edit - Reza
-    pathData = "190.t0F.UAnP.rmlBIVeo5mP.rmlB45o7IjocqoP..xdBAfnaJDa.zcgBAP9iJjXqP1gBk7ahJzJjcnPwH+mBAP2EJD.p4oPrAPFCJD.htoPhkRUBJjocqoPBUUfBAvdZJD.UAnP.rmlBMVa.H2cBA.ecJDa.HjUBAfJtJDa.nsYBAPf1JDa.T.gBAvzkJDa.H2cBA.ecJzXsA.VRID.l+pPrA..LID.KtqPrAfJiID.agqPrA.VRID.l+pPiUF...";
+    // Edit - Material (1:1)
+    pathData = "424.t0lii4.QjiiyCw1B1LAQjiiyCwFd2SCQhHthCwlK3ICQNNdgCw16N.CQQDQfCwlii4.QpOIwCwlii4.QjiiyCMVaGGuBDA..bOTbFrWBDA..bOzf8g.Q6Sf1CEG..d.Q0m.1CA.fGPjbbT8PrA.fGPzzmQ7PwA.fGPzYlF7PDQ.BD0wI+NTbHhHBDM8o7NjA6k.QXKrtCwFd2SCQVv9QCEG8oWCQhHBQC8IM2PjDQHzPwoze3PD...zP..dNDA...MTb1BzNDA...MzV.xCQRDgPCEG..2CQhHBQCgHx9PDQDgzProOgCQjNNt0PwMXiDQjKX80PBaPQDIrUjMTb..XQDYUUoMD..VDQtfsaCEG..VDQXK.cCIrAEQzfsj2PwMXiDQjKX42P5S3PDgROANDaT5AFDUeBXOTbWvxED8t6YOjbrWAQ3cu1CEWyrRAQ...2CcASSPD..v8Prcb7JPD..v8Pi0lbb5CQtfsaCwF8ImCQ533VCwlbb5CQtfsaCMVa3cOMDIh3JNDatfmLD433ENDau6.LDEQDANDa3cOMDIh3JNzXkA";
     
     icons.edit = Content.createPath();
     icons.edit.loadFromData(pathData);
     
-    // Trash - Reza (17x19)
-    pathData = "652.t0F.M+rP.PmkBwF.aGrP.DnmBwF.hOrP.LfnBwF.2XrP.LfnBwF.eRrP.3ymBwF.P7rP.bSlBwF.iPsP.LfnBwF.4YsP.LfnBwF.M+rP.PmkBMVa.TluBAfAkJjXFXVuBAfAkJD.XxqPBLaoBA.l7JD.HZpPhA.l7Jj+bcpPFXVuBAPBnJD.k4qP.j.pBwF.8+qP.j.pBIF.8+qPCl.pBAP++JTeJfpP.z+uBAvBnJDa.LaxBAvBnJDa.HaxBAPBnJDa.DXyBAPBnJDa.3WyBAvBnJDa.Dw1BAvBnJDa.Dw1BAPBnJDa.jJ2BAPBnJjX8gZ2BAPBnJD.24sP9y0oBAvcdKD.HZpPhAvcdKj.yVpP8gZ2BAfAkJD.oxsP.XPoBwF.k4qP.XPoBMVa.vGvBAvBqJDa.z0vBAfM5JjX.z0vB0rv6JT21QrP.XPuBAfzEKD.FzqPrAPOUKD.FzqPhMBlVKD.FzqP.D60B0rv6JD.wdsP.XitBwF.SpsP.rvpBwF.DQsP.rvpBIVhEQsPkuwpBAPSTKzFqrpP.zD0BA.OqJDa.zD0BAvg1JjX.zD0B4oc2JTHLNsP.jCtBA.mRKD.4fqPhYNqQKD.4fqP.nNzB4oc2JD.pCsP.bnsBwF.pCsP.vypBIF.pCsParxpBMe7PKjXarpP.POzBAvBqJDa.ngxBAvBqJjXLvgxBI1FqJD.jnrParxpBA.IJKD.7rpPrA.IJKD.GZqPhA.IJKjm1cqPaHVxBAPN3JD.ygrP.jCtBI12BdrP.jCtBAPvFKjm1cqP.DrwBAvg1JDa.DrwBA.OqJjX.DrwBswJqJTbHarPhswpBAvxFKD.KrpPrA.e.KD.KrpPiUF...";
-    
-    icons.trash = Content.createPath();
-    icons.trash.loadFromData(pathData);
-    
-    // Star - Reza
-    pathData = "389.t0lShR6PQK1qBI1CcM6PjsuqBkAcwNTuz4pPYPWrC0KctJjXYPWrC0KctJjiWC6PYPDpB0hXvNjPfNpPhQ1FvNzaREpPLc5qCMvZgJTci85PjB6nBIlUt65PuIEpBQ0TtNTuz4pPTMkqC0KctJjXTMkqC0KctJjmuw5PirwqBAVIqNjkC9pPh02upNDMy+pPqbnpCUMdwJzOUq5P3jnrBIFxVu5PpaZsBc9VsNzoaoqPmuUqCc5V5JjXmuUqCc5V5JjsSy5P98ivBYmerNjGZcrPhoGUrNTirlrPIwLqCoqGJKT.az5Pc8TxBIlfv35PdnkwBY83uNjx1FrPVO9qCorsAKjXVO9qCorsAKz9oE6P87cwBkuexNjcSirPhAB3xNTsHnrPxL1rCE.vIKDE9L6PGYuwBIVTnK6P1McvBU5ZxNzoaoqPktlrCc5V5JjXktlrCc5V5JD4fO6PKbcsBwh3zNzW5JqPhkFO0NTWOFqPQgSsCckiuJTShR6PRK1qBMVY...";
+	// Trash - Material (0.8:1)
+	pathData = "504.t0F.fLAQ..73CEmls+.Q..73C0roMPjYx78PwA.XKPTyjp8P..1BDA.PTODa..1BDA..eMTbloaBDA..eMzLch.QzrnVCEG..d.QlYgUCA.fGPD..9zPwA.fGPjloizPyzIBD4LcDMTbloaBDA...MD.fs.Q...PCwF.fqAQ...PCEG.fqAQZlVNCMS+aPjyzSyPwYlFcPD..ByP..rGDA.fvLDa..jKDA.fvLTbZV9KDA.fvLTyBDCQNSOMCEG.fHCQZlVNCA.HxPD...zPrA.nAQD...zPwoYQCQD...zPLKFQD4LcDMTb..XQDoY5HMD..VDQ..3SCEG..VDQlYgUCwrXDQDMKp0PwoYQCQD..70P..ZPDA..eMDa..ZPDA.PTOTb..ZPD0LoZOzLY8CQlIy2CEmYRzCQ..73CA.34PD..O9PrA.HSPD..O9Pi0F.fmCQ..vWCwF.fLAQ..vWCwF.fLAQ..D0CwF.fmCQ..D0CwF.fmCQ..vWCMVa..tFDA.vDODa..pHDA.vDODa..pHDA..9MDa..tFDA..9MDa..tFDA.vDOzXsA.XpPD..S7PrA.HxPD..S7PrA.HxPD..32PrA.XpPD..32PrA.XpPD..S7Pi0F.fLAQ..vWCwF.fLAQ..D0CwF.fLAQ..vWCMVY";
 
-    icons.star = Content.createPath();
-    icons.star.loadFromData(pathData);
-
-	// Star Outline - Reza
-	pathData = "195.t0F.pkoP..BKBwF.TioP.3kKBwF.3ZoP.XmMBwF.PEoP.XJNBwF.RToP.HRPBwF.hQoP.PLSBwF.pkoP.f7QBwF.x4oP.PLSBwF.B2oP.HRPBwF.DFpP.XJNBwF.bvoP.XmMBMVa.nVlBAf0wHDa.rylBA.y3HDa.DvmBA.U5HDa.7EmBA.Q.IDa.fMmBAfNHIDa.nVlBA.0DIDa.vekBAfNHIDa.TmkBA.Q.IDa.P8jBA.U5HDa.j4kBA.y3HzXkA..";
+	icons.trash = Content.createPath();
+	icons.trash.loadFromData(pathData);
     
-    icons.starOutline = Content.createPath();
-    icons.starOutline.loadFromData(pathData);
+    // Heart - Material (33x29)
+    pathData = "662.t0F..ZBQ4cR0CEG5UVBQ4cR0CI2njPj+9Q8PwsOriPzfVO8PKjuHDw8XRODaDcmGDsOFJOTblHUEDI8L4NzDo4.QLgWpCEG..d.QHyalCA.fGPDCDf3PwA.fGPDuuN2PYCDCDQFrfMTb2FPDD4PrMMzgHfAQNDaSCEmlIvAQNDaSCMb0ePDbTT0PwwdniPz42w0P..nIDUkDrMTb5.ZJDc9cbMTsD0BQvQQUCEGLoCCQNDaSCk28zPjCw1zPwoj+6PjCw1zPn7KPDQFrfMTb..XQDw6qyMD..VDQLP.hCEG..VDQHyalC4il9PT69k5PwsGs2PjDAk6PgHnKDIiIJODanMfJDImZROTbI1TJDUZ1SOzycgBQJBH0CEWEtcBQ4cR0CA.flPTdmT8Pi0VyrPBQ7zOfCEG5GHBQl04bC454dPjj7q1Pwk2waPzpaI1PGh.FDs5VhMTbDKwDDs5VhMDtd+.QbYzaCEGppx.QMDCeCgppLPTYOf3PwgppLPDHxB4PhF5CDA7RZNTbXhoDD4U4iNj+3ZAQ4uNqCEGXYqAQTJesCYOPePzx+16PwcHpiPj.MV7P..nIDoNwJOTb5cUJDk2oEOjB+1BQBzbuCEGnlHCQUJesCEWQ1PDqZy5PwYDY5PDwBO5PMyUOD4AJZNTbYUEPDAXiPNTVUADQLP.hCEWVUADQMDCeCwpF8PDWF81PwA.34PzpaI1P4cOMDs5VhMTbPsRLDs5VhMzsQ3BQQHtZCEGF3qBQKh1bCwKtnPDO8C3PwIERnPjFUI3PVa6IDI87BNTbTUxIDonjCNDwxYBQJJ4fCEWM.WBQJJ4fC0AJkPjzyK3PwA.jjPjFUI3PMyBIDwS+.NzXsA.flPDY424PiUF";
+    
+    icons.heart = Content.createPath();
+    icons.heart.loadFromData(pathData);
+    
+    // Heart Filled - Material
+    pathData = "205.t0FKcpBQVrrzCIlDJgBQpNv0C4dsjPjpCb8PSKlHDw1tRODawxfHDEsGROjXJ2eDDo.D0ND..d.QZlfnCsb4GPzRMo3PhYLEHPT+M+2PC3qBDMJ2qMTEN7.QN2AXCI1QgbAQ+egRCQeFgPT9dQ0PVvmIDIxjsMjX238JDkuWTMD4VWCQrheRCYg58Pjyc.1PhghNBQznbu1PkMNQD0ey+MDXRTDQK0jhCIF..VDQZlfnCIl95PjBPT6P5stJDQhORODarzoJDYwxROzXkA";
+    
+    icons.heartFilled = Content.createPath();
+    icons.heartFilled.loadFromData(pathData);
         
-    // Settings - Reza
-    pathData = "868.t01M4e7PCBv.Cw17cc7PCBv.CI13Ec7PcSj.CYRHGOjsSFvPGEuwCQJ7.LDaAA1wCAqD.LjXGZ7wCkDi9KTTHe7Psy+9BsIYGOTjsouPhQL.GOTMdiuPLykwCMd43Kzo1W7P46m9Bw1jHV7PKcC+BIFx1T7P+T29BMe2DOTPfquPc9GwCYme5KDac9GwCsdD3KjXc9GwCw0y0KjKMP7Pdo+7B8+eCOjW5OuPhAs7BOjW5OuPAAnvCw0y0KTP.J7PqGA9BwVP.J7P46m9BIFChH7PAAt9BcSxAOzO0suPtdWvC47M7KDa4kPvCkue5KjXyLJvCId43KDW++6Pz3M9BU3l+NTjsouPh45M+NT67uuPYlyuCwLi9Kz2e96PvJA.Cw1NO.7PnEO.CIFWe+6P4PY.CArt+NjGEIvPvJ5uCMH.CLDabRvuCMH.CLjX3OmuCMH.CLTt926PhV9.Ckq+8Nju+SvPhkq+8NjWZXvP3OmuCsy+FLDmD76P67uACwFrh96P67uACIFv596Pep6ACw02+NjwqgvP67.vCcoCILDaIF5uCse5ILjXCsyuCYnsJLDV476Pz3+BC8Rm+Nj3EyvPhUN..ODjM1vPcSJvCkahMLj.KD7PtzKCCwF72E7PSM9BCIVdIG7PYQDCC4jHBOD1NxvPiAnvC06uLLDaiAnvC0l7MLjXiAnvCU6DOLj7xK7Pz3+CCEBfCODM9+vPhAUCDODM9+vP+9GwCU6DOLzu+Q7PsIeCCw1u+Q7P.ALCCIF8cS7Pb9HCCkrMEOTGEwvPygXwCcA4KLDaeTewC8VuLLjXEtkwCoehMLDO+a7PQ2XCCMwXGOzHFyvPhotwGOTc9uvP+S7wCUnsJLTtdc7P7ndBCwFRwa7Pa8PBCI1Igb7PJxFBCQdQGOzX6dvPz20wCw2+FLDaXk+wCw2+FLjXcnHxCw2+FLzN+i7PcogACsy+HOz++SvPhow+HOzWkOvP7mHxCIH.CLzM4e7PBBv.CMVac92vCEW+ILjXQ1gvCEW+ILzk9C7PFD7ACco+.Oj99SvPhco+.Oj67HvPQ1gvCUL..LTm+M7PEC..CIVpgS7PEC..CMJ.FOj67HvPiBfwCou+DLjXiBfwCYPvGLTpgS7Pw0eBC04eCOTb8mvPiUF...";
+    // Settings - Material (1:1)
+    pathData = "950.t0lnQBBQqOT2CEm8g8AQqOT2CQzfdPTAut8PwIIocPzGZn8PUvWGDYrtWODakjHGDkSAIOTb1G3FDYrNHOTIYpAQY8wwCEGUvlAQqOfwCIZzXPD..S7PrQE7QPjnwo7PwYN0PPjjjs7P3k6CD4kqJOTbJ3oCDoB9IOTE72.QLm9wCwl8gf.QcJ3rCEG..d.Q9PWrCwKuGPj4T75PwgW9GPTi0x5PowNBDQRRqNDaGqsCDoSQhNTbHZrCDwbJgNDhF6.QbJBnCwFhF6.Qi08lCEGhF6.QzXslCcr1NPjw5l4PrkF6HPD21B4PwgW9GPzbJ83P7x6ADow5LNTb..3ADE7hJNj8gf.Qi0GhCwVE72.QnwBZCEmBd5.Qr9.YCgWtOPDQiJ1PwYN0PPz11D1PTAeDDwKGiMDahFMFDA.ftMTbTAaFDoB9qMDQipAQNEbZCEGMVtAQyo3YCURhbPTi0W1PrUAecPjbJhzPwIIocPjvKOzPDMnGDYen.MTb1G1GDoBd8LjnQBBQpfWOCwlWtwBQpfWOCEmBd1BQpfWOCwKetPj8gBzPw41VuPjvKOzPqO3KDImhHMDabaGLD0X8kMTbJ3WLDMmhmMD2lICQNEbZCEGqOMCQpf+ZC4kKzPD..51Prw5C6PDubL1PwowJ7Pz11D1PHZTODQznhMTb1GlODw5CjMz5C7CQnwBZCwlBdSDQi0GhCEG..VDQAunhCQzPEQjFqy3PwgnAEQzbJ83PXNAQDwssPNDa5ThODYrtYNTb3kiODQi0ZNDd43CQi08lCwFd43CQbJBnCEGd43CQLmRnCsOD9PjNEI5Prk0+CQDIIs5Pwkj7DQTi0x5PF7RQDYNEuNTbBuVQD4CcwNDyISDQcJ3rCwFqu6CQNE7wCE2sM4CQr9bxCoBJ8PzGZp7Pw0o.7Pjjjs7PubtNDIZbJODad4BMDA.vDOTbr9zLDs9.FODubICQY8wwCEGyoECQFqCxCwscvPTNEj7Prs9fuPjw5d8Pw41VuPzGZn8P7xmKDUvqaOTbJ3YKDs9PcOjWtwBQqOT2CwlnQBBQqOT2CMVa9gpIDIIIzNTbx5yJDIIIzNDu74BQ8gZqCEmw5FCQnwxoCYrtwPD..34PwYrtwPDlSS4P7xmKDI3UNNTbx5yJD411GNjenZBQts8gCEmB9GBQts8gC8gxdPjfW43PwQikaPDlSS4PzX4FDA..dNTbzX4FDgFKmNzGJ6AQ8gZqCEmB9GBQRRBsC4GplPjjjP6PiUF";
     
     icons.settings = Content.createPath();
     icons.settings.loadFromData(pathData);
     
-    // Eject - Reza
-    pathData = "362.t01wKSgPP0.CBwlPfYaPP0.CBI1ep4ZPP0.CB878mFDV45fPOe+oAUhARHjXOe+oAIuTUHzhr4ZP...FBIDX1FD..fgPrc7xTHD..fgPhIZwXHD..fgP...GBIuTUHD..vgPkXfDBIF..vgPXkqCBIZwXHDTMvfPGuLEBAUCLHzXsswK7FTdoeePrQKxQHTdoeePhAVYWHTdoeePvJ+FBU1NxGDrxugPLcy5AwFrxugPoEY5AIFrxugPCWu4AUNTaHDKGRdPjsiFBMwfhGjXkCcFBYiWgGDY6jgPT2D3AEtdXHjJb8cPrYRL7GTmDyZPh4mZ0Gz.qXZPW5l5AMvJlFz6mNdPcRLqAwVmu2ZPDW+2AIVpwuZPAUS3AMzhpFjHvJdPQgapA42OjGjXpbHpAAS2kGjHaeZPIv54AIx1mFTWOldPrIx1mFDP0rdPhMx1mFDY6HePCWOrAkW52GzFuvaP4k98AMVY...";
-    
-    icons.eject = Content.createPath();
-    icons.eject.loadFromData(pathData);
-
-	// Caret up - Reza
-	pathData = "293.t0FxW.lPFdkXBw1+0zkPFdkXBwFAMfkPYk8VBIVeYekP9f4VBYijWIDbyskPCjzUBA2baIjXLAvUBA2baITA4ZkP8f4VB0WgVITVYukPrMHWQIjgWIlProqdNIjgWIlPhUnBNIjgWIlPdWZSBoo.hIj.60jPgAXXBIVIP0jPo3OXB86YMITlnAlP0baSBwPAfIDa5WnUBk46TIjXAlqUB4mqTIDx.bkPvlHUBAXRWIDrIRkPhUqjWIDrIRkP5m8UB0mqTITfMfkPY9NUBwVQbClPLT.XBIlOQDlPSdDXBIKKgIjufBlPxxRXBws9fIjXxxRXB45IgID7kDlP4SUXBI3EgIjX.FlPhUJ6fIjlBHlPCdHXBc3UhIjxW.lPGdkXBMVY...";
+	// Keyboard Arrow Up - Material (1:0.58)
+	pathData = "218.t0F..ZBQKEBkCwFWPCAQSB3uCEm4H8.Q.9nvCk95LPDfOJ7PwwtiJPDfOJ7P1cPBDMIf+NTb..3ADYZb7ND..d.Qtd6sCEG..d.Qz1urCY2AIPDxt+5Pr03lhPDMMl2PwooQjPj.gK2P..nIDIP3xMTblkKJDIP3xMzbjoBQzzXdCwlh3ODQH69qCEG..VDQz1urCA.fEQjq2d6PwA.fEQjoww6PJh+PDMIf+NTbTDmPDA3iBOzET.DQ.9nvCEmF21CQ.9nvCQ5K7Pzj.96PrA.flPzRgP4PiUF";
 	
-	icons.caretUp = Content.createPath();
-	icons.caretUp.loadFromData(pathData);
+	icons.keyboardArrowUp = Content.createPath();
+	icons.keyboardArrowUp.loadFromData(pathData);
     
-    // Caret down - Reza
-    pathData = "293.t0FxW.lPvlHUBw1+0zkPvlHUBwFAMfkPcevVBIVeYekP3izVBYijWIjwsskPCjzUBYbaaIjXLAvUBYbaaITA4ZkP4izVB0WgVIT2GrkPrMHWQIDrIRkProqdNIDrIRkPhUnBNIDrIRkPdWZSBwo2TIj.60jPUCVUBIVIP0jPMLdUB86YMITm3YkP0baSBoB2VIDa5WnUB0Y7gIjXAlqUBgqLhIDx.bkPFdkXBAXRWIjgWIlPhUqjWIjgWIlP5m8UBkqLhITfMfkPcFeXBwVQbClPpvsUBIlOQDlPiloUBIKKgIDd.YkPxxRXBok4UIjXxxRXBgXtUID7kDlP8vXUBI3EgID0fUkPhUJ6fIDmdSkPCdHXB8ZhTIjxW.lPulHUBMVY...";
+    // Keyboard Arrow Down - Material (1:0.58)
+    pathData = "252.t0F..ZBQpulvCEWSiUBQpulvCAiZjPj94F7PwQQbiPjBHD7PMtoHD0OW+NDa1cPBD8LMLNTb..3ADMdIIND..d.QouFgCEG..d.QfO1eCY2AIPDBFk2PwwtiJPjKnL2PouNCD4BJyMTblizCD4BJyMDWPCAQHXTdCwF..ZBQLI.pCwFouvCQHXTdCEmF21CQtfxbCcAE.QjKnL2PwQQbBQjKnL2PJh+PDgfQ4MTb..XQDA9X+MD..VDQouFgCEG..VDQiWRhCoH9CQzyzv3PrMGYpPT+b86PwwtioPjBHD7PPWIJDoetAOTbyx4IDo9ZBOD..ZBQpulvCMVY";
 
-    icons.caretDown = Content.createPath();
-    icons.caretDown.loadFromData(pathData);
+    icons.keyboardArrowDown = Content.createPath();
+    icons.keyboardArrowDown.loadFromData(pathData);
 
 	// Caret left - Reza
 	pathData = "293.t0FbNlcPPhEzAwFbNlcP9SoxAwVERxbPHLDvAI12OvbP5u8uAQjwKGTaM8aPDY7xAYvt9FjXDY7xAgYJ9Fz2OvbPJrYuAUgjLGz9yzaPrAmiYGjAhKaPrAmiYGDcdzZPhAmiYGTB9vZPYRN1AsKcqFzIfecPC7wpAI1saacPHkrpAYIrUGTe3qZP7kN0Ao1kqFDaV5quAQOM8FjXfwiuAI.m8FTwx2aPOphuAUr78Fz+65aPhUr78FDZN8aPfwiuAIO2+Fjk95aPAPDvAwFeoScPJFdzAI1htUcP6sjzAANHVGDYBJcPaTs0AQlfRGjX+5x0AQlfRGDUIdcPfSmzAYB3WGDAXIcPhYI4XGTRBHcPu4X1Ac.NQGzaNlcPShEzAMVY...";
@@ -98,29 +92,17 @@ namespace Paths
 	icons.caretRight = Content.createPath();
 	icons.caretRight.loadFromData(pathData);
 
-	// Triangle up - Reza
-	pathData = "216.t0FW+QSPyVeFBIlUmTSPICWFBksxzDzFXigP4M4LAwmbXHDa18PDAYbHMHjXGVDDAE02LHDNt7PPAmKCB4SDNDTv4xfPhkD8LDTv4xfP1y8BAY02LHzASrPPFGRCBwVBdDMP7IGFBIV298LPfYKFBQ9nNCj6PjgPjOpy.UVaYHjXjOpy.sxlYHzHY6LPVibFBEeROCTM0mgPhUdlPCDo4ogP555z.4LzZHzYZbMPNCsFBwlUSBSPNCsFBIl7LISPNCsFBQT1yDTk5ogPX8GMAMa8YHzXkA..";
+    // Arrow Left - Material (0.63:1)
+    pathData = "175.t0lPV5BQeSu8CwVHKt.Qb5MrCEGjEl.Q5MMqCgrfHPD0af5PwA.fGPDKjM5P..3ADA..dNTb..3ADQ8lXNDxBh.QrP9jCEGjEl.QFxxiCExhKPDYgr3PrIjktPDQVnvPwcS+zPD3zCtPa5SODgrP8KTb..XQDgExLLD..VDQDxRLCwF..VDQ8l13CEG..VDQTuY8CsoO8PjSux+PwcS+zPDYgG.QBYoKD8M81OzXkA";
 
-	icons.triangleUp = Content.createPath();
-	icons.triangleUp.loadFromData(pathData);
-
-	// Triangle down - Reza
-	pathData = "216.t01JDwXPYhlFBwVKF1YPiewCBIF6f3YPNIqCBwATdFDGZ3fPevemAQKkMHjXSjZmAUDDMHT6hyYPajKCBAwAbFzF4xfPrI.ByEzF4xfPhwhTwEzF4xfP9d7aA8CDMHzwe7VPzRYCBIFKm6VPKDbCBALytEjNu2fP.yraAQHGNHjX.yraAwOdNHjL57VP+OsCBIcBvEDZW7fProtQIFzHnogPhE9pIFDlppgPJdihAUBzZHjAFqXPk.sFBIFjSsXPk.sFBgy2KFDjppgPvPDiAkIZZHzXkA..";
-
-	icons.triangleDown = Content.createPath();
-	icons.triangleDown.loadFromData(pathData);
-
-    // Triangle left - Reza
-    pathData = "216.t0Vh5RxPvLcTBIlSYRxPwjZTBMxbjLTT.GkP6lEICkhCRIDaMVXHCoxqZIjXvSWHCYZ3ZIDiqExP5cxVBw3ZgLDttskPhw3ZgLT80tkPwSWHCo79aITiEFxPF4BWBw1tYQxPG8LYBIFspQxPrLPYBcUfjLDidTlP0gIICwnGkIjXlOJICwnGkITTuRxPjeQYBkltjLjxITlPhU31jLzxeSlPOEOICESejIzSwSxP69.YBw1SwSxPy3rTBI1SwSxPL+kTBE71jLzs7GkPHpKICMyzQIzXkA..";
-
-    icons.triangleLeft = Content.createPath();
-    icons.triangleLeft.loadFromData(pathData);
+    icons.arrowLeft = Content.createPath();
+    icons.arrowLeft.loadFromData(pathData);
     
-    // Triangle right - Reza
-    pathData = "216.t01AO0xPx5pVBwV15oxPw1fTBIFcgoxPQAbTBc1NpLjtnFkPMngJCgqzQIjXwieJC4C+QIzIimxPQ8kTBcx3oLDPMKkPrcx3oLDxNPlPhcx3oLjO7QlPvieJCks2jITCZnxPWiPYBI1HknxP9aQYB4JLpLTlcTlPAviJCkYGkIjXeLkJCkYGkID3ooxP8HPYBoqdpLDUNSlPrktSsLDUsvkPhY3WsLD15ukPoiVKCQPsaIT5n0xPF21VBIV5n0xPAbxVBQ3WsLTKgqkPF7TKCEqqZIzXkA..";
+    // Arrow Right - Material (0.63:1)
+    pathData = "175.t0luo4AQeSu8CEWxBfAQjEd.DQVvOPjSux+PwA.fGPD0aV+P..3AD0aZiODa..3ADQHKwLTb..3ADgExLLDYA+.QHKT+BEWxBfAQfSO3B4aZdPDQVnvPr8McAQDYgr3PwAmdCQjgr73P3zGQDwB4SNTb..XQDQ8lXND..VDQ..fmCEG..VDQrP1nCgSeDQD0af5PwAmdCQjdSy5PeSWPDwo2vNDa9llGD8M81OzXkA";
 
-    icons.triangleRight = Content.createPath();
-    icons.triangleRight.loadFromData(pathData);
+    icons.arrowRight = Content.createPath();
+    icons.arrowRight.loadFromData(pathData);
     
     // Power - Reza
     pathData = "379.t01SmuTPJnmRBIl2iwRPJnmRB0+0RDjz6BkP8esDAA7bXIjX8esDA45JfIjskwRP10lYB8z4KEjcsYlPhUqZqEjcsYlPGwmfA45JfIzQ7IXP.OGVBI1Q7IXPRuKTB0JaqEjB5ojPPc9RAofdJIzXssHoEETle5jPrsg6PETle5jPrsg6PEz3HVkPrsHoEEz3HVkPi01SmuTPadFXBIF31mSPadFXBwxaqDjlWykPr71JAA7bXIjXr71JA4xEUIjm4OSPtqiTBg8++DDvPDkPrg8++DjCEPkPhI1G5Dzf3SkPDliMAUJlVIDg4XSP.OGVBIFg4XSPkI1VBUn6+DzAC2kPOc9RAcvvcIjXZ.9UAcvvcIjFUFVPjI1VBoQkgEDvygkPhoQkgETf4YkPCyQWAMQwTIT1RZUPPr8TBwV1RZUPnjOTBIFy9LVPM7fTB4UXrEjU6SkPdEFaAgCcXIjXdEFaAIA1bIjmW2UPZdFXB4z4KEjlmAlPiUF...";
@@ -176,26 +158,26 @@ namespace Paths
 	icons.errorCircle = Content.createPath();
 	icons.errorCircle.loadFromData(pathData);
 
-    // Search - Reza
-    pathData = "317.t0F.fx.Q...zAIV1Vt.Q...zAA.vJPzHaqdP..rBDA..FHjX..rBDc8HMHDDnq.Qg.6DBErJKPjBWigPrsvIJPDZQjhPhoY.JPDdoshPZFfBD8SMuHzBmn.QO0XLBIFiLo.QeU9LBkUhJPzWkOiPZ6pBD8TiwHDaN96BDsfffHjXPJ.CDM1thHj1Nw.Q+++HBE.nLPz++OhPhgQpMPz++OhPA.nCDcVjVHT..5.Q++eABIV..5.Qgrs5AgQpMPj+++bPA.JCD4++OGzXsA.nLPDvJegPhEr.LPDvJegPTM3BDEuzOHDUCt.Q..fABIFUCt.QPfE9AEr.LPzepgdP..JCD8mZnGjXuzSCD8mZnGDq71.QPfE9AwJuMPD..XfPhwJuMPj7R+fPuzSCDArxWHD.fx.Q.q7EBMVY...";
-    
-    icons.search = Content.createPath();
-    icons.search.loadFromData(pathData);
+	// Search - Material (1:1)
+	pathData = "414.t0FJt4AQfh6tCEWMQSAQfh6tCoIJNPDam45PwA.fGPzMVD5P..3ADAE2MNTb..3ADQMQ0Mjln3.QpIpVCEWMQSAQ...PCghadPD...zPwswBnPD...zP1NqKDolnZMTbPwUMDQMQ0MDTbUCQPwciCEGTbUCQi7YkCoCHzPzK.x4PwQB4xPzNgM5PHYLLDI9pnNDaldHQD0oKPOTb..XQDE0GROD..VDQz6Q0CEG..VDQW5A1CY5gDQDSOn8PwwziCQD..v8P58fPDA..bOTbn9HPDA..bOjSW9CQL8f1CwV7UuBQPxnrCEWmvjBQIgrsCcAvkPTc.k6PwE4ShPDn3t6Pn3lGDAJt6NzXsghadPTNb15Pwg2BkPTNb15PJyZJDUYVjNTbb3jKDIuEaNDGN4BQPwciCEGGN4BQvFJfCoLqoPzE951Pwg2BkPDz3v0Pn3lGDAMNbMTbXC8EDAMNbMjguLAQW3qaCEGMN5.QvFJfCQiiNPDTb23PwQiiNPj7Vr4PF9xDDUYVjNTbXC8EDkCmsNDJt4AQ4vYqCMVY";
 
-	// Hdd - Reza
-	pathData = "556.t0lsyOhPw0CbAw146eYPw0CbAI15QYXPw0CbA8++uEzhrYXP+++aAYkCXFDa+++aAIt9iHjX+++aA4LyrHz5QYXPwJ+LBc99WFTrxOiProZbVHTrxOiPhEXEUHjhAGiPZl4DBQyLuHzHaIgP8mJKBw1zM0fPvzsHBIlPfafPc8fIB88S+GzYlehPOe+6Acl4mHjX1NutAcl4mHzy2+XPqFmDB878OFzpw+dPh878OFTCBraP1NutAQIFPFzy2+dPThAjAIF88IgPThAjAg99mHTCBraPnu+IBoZ7uGjXnu+IBEsH+Gz.qXhPXkqAB8QAiHDnZzfPrwJmtHDsHOgPhQ1tvHTPfSgPmumLBEY6UHjpwOiPAAtEBwlpwOiPV4.lAIlpwOiPKxlgA45wrHTb8.WP1N+HBEWOvEzXsEWuhHjmuUgPrUKREHjNzPfPrMEtTHzCsHhPhwy2VHDeTbhPmtQFBMw.oHzoajgPSLPJBIl030gPFtNKBASWiHzqGyhPTL3IBE.fnHjX2i5JBMENjHDxKuhPVieGBQw.nHDz2kgPhwf.nHT03kgP7mhIB0MoWHTb8JhPd9VEBMVad996AECBPGjXVNj2AECBPGjmu+bP3Ok2A446OGjsy+dPh446OGDvJCfPVNj2A446GHjmu+dPd99ABI1zMCfPd99AB878GHTvJCfPOe+ABc67uGjXOe+ABg+TdGzzMCfPwf.zA446uGTLH.cPiUF...";
-	
-	icons.hdd = Content.createPath();
-	icons.hdd.loadFromData(pathData);
+	icons.search = Content.createPath();
+	icons.search.loadFromData(pathData);
 
-	// Folder - Reza
-	pathData = "209.t0loaJhPrGExAIloaJhPrGExAkW5IHD6QgbPzLC4AwdTHGDaUM90AMamzFjXlY1zAQJbsFj+TibP...pAA...GD..fZPrQKxZFD..fZPhMGZPFD..fZP...hAgoavFD..fXPxKstAwF..fXPNdoFBIF..fXPzh7GBMGZPFD..PhPzhrlAA..jHDarxoHBA..jHjXGu7IBA..jHD..vhPzh7GBA..rHzgVpgPrA..rHT2jrcPhA..rHzf.CcPGu7IBwdTHGjoaJhPrGExAMVY...";
+	// Folder - Material (1:0.8)
+	pathData = "202.t01Ly1.QYl4yCE2djr.QYl4yC4iTIPjG0u7PwA.fGPDoPg7P..3ADMyLCODa..3ADkYlwMTb..3ADcqWmMjORk.QBWAXCE2djr.QLyLVCMyrMPDyLi0Pr0LSfPDyLi0PrA.flPTlYF2Pr0LS+PTlYF2PwY31AQTlYF2PC25PD4n33MTb..XQDIbE.ND..VDQyLSgCwF..VDQyLyvCEG..VDQjBExCMbqCQjG0u7PwY31AQTlY97PMyzODkYlOODayLaCDkYlOOzXkA";
     
     icons.folder = Content.createPath();
     icons.folder.loadFromData(pathData);
+
+    // Widgets - Material (1:1)
+    pathData = "866.t0lpIHCQTgsnCwl0SPBQsxtgCE2rUNBQnAegCURXiPzEJS3PwYIKiPjwiN3PVxxHDo1TBNTbVxxHD4v.ANTIgMBQ5k6eCE2rUNBQYyVeCY8DjPzSzs2ProZBxPD.cNzPww7gxPDcjFzPzqwLDwiz.MTbc35LDI...MzRVQCQB..PCEWd9SCQB..PCIZj0PDORCzPwoLI1PDcjFzPrKpMDAPmCMDa.iIQD8Dc6MTbiaQQDkMa8MTbKUDQ5k6eCEG..VDQNLPfCA.fEQjZSI3PwA.fEQjwiN3PwsTQDcgxDNTbiaQQDgF7ENDvXRDQsxtgCwF6hZCQTgsnCEmxjXCQZR8nCIZj0Pjs8P5Pwkm+zPD0lR5PKYEMDQsojNTbc35LDQsojND8ZLCQ11CoCEGyGJCQZR8nCoZBxPDUXK5Pi0F..d.Qvv6jCwF..d.QBKJVCEG..d.Q5zvTCIbbHPjLF8zPwQ3XIPDJ+szPlirBDgxeKMDaN4mGDgxeKMTbvN9GDgxeKMjbUCBQxXzSCEGMGGBQ5zvTCQywgPjvhh0PrQywgPDL7N4PwQywgPD8FZ4PxUMHDgmZXNTbvN9GD4eSZNjS94AQ92jlCwl4Hq.Q92jlCEGgik.Q92jlCIbbHPDdpg4PwA.fGPD8FZ4P..3ADACuSNzXsEPVnPDMtU8PrEPVnPDYC35PwEPVnPDn3r5PDqTJDwQUoNTbFxiJDgYbmND5gtBQXF2oCwFTW8CQXF2oCEmr7BDQXF2oCQmqAQDGUk5PwYCnBQDn3r5P1.pPDQ1.tNDa1.pPDQiaUOTb1.pPDgONXODctFDQ7wg1CEmr7BDQA..2CA0U+PT..v8PrgdnqPT..v8PwYHOpPT..v8PDqTJDwGGZOTbAjEJDgONXOT.YgBQz3V0CMVa..3ADQiaUODa..3ADQ1.tNTb..3ADAJNqNjvwg.QbTUpCEGgik.QXF2oCYNxJPDlwc5Pr4jedPDlwc5PwA63ePDlwc5PxUMHDwQUoNTbzbbHDAJNqNDMGGBQjMfqCwFMGGBQz3V0CEGMGGBQ3iC1CIW0fPDebn8PwA63ePT..v8PN4mGDE..bODalirBDE..bOTbDNVBDE..bOjvwg.Q7wg1CEG..d.Q3iC1CA.fGPDMtU8PiUF";
+	
+	icons.widgets = Content.createPath();
+	icons.widgets.loadFromData(pathData);
     
-    // Save
-    pathData = "420.t0lT3xXPOJbY.IVEtlXPjBWS.oYlEFD...DPovUfAA...ADa...n.A...AjXBWOd.A...AD...DPZlYd.A...AD...JPrA...AD..fYPhA...ATyLCZPZlYd.A..nFD...JP...pAwF..fYP...pAIVyLCZP...pAA..nFTyLCZP...pAA..XFDa...pAw0i5CjX...pAoYloCD6QYZPtdT1.45QiFDov0LPrIEtLFDjBWFPi0F...TP...lAIFovURP...lAA..PDjqG0XP...DAA...FjX...DAQJbkEDovURP...TAA...ED...UPhw0iZED...UP...bAQJbkED...WP...fAIF...WPtdTiAw0iZED..fYP...PAA..XFzXsA..PED...QPrA..fCD...QPh0Ly7BD...QP...n.oYlADD...JP...3.IF...JPLyLu.0Ly7BD...JP...3.A..fBDa...TAA..fBjXZlYXAA..fBD...WPMyLu.A..vED...NPhA..vEjlYFPPZlYXAA..PDD...UP...DAMVY";
+    // Save - Material (1:1)
+    pathData = "555.t0lii4.Q...2CE2ELt.Q...2CsfgIPj5ye8PwA.fGPzzmO8P..3ADQNNNODa..3ADoiiaMTb..3ADwELPMzBFl.QtfARCE2ELt.Q...PC43XNPD...zPrwV3zPD...zPwIhP1PD...zPGG3MDIQDBMTbrELNDIhHDMT5ylCQVv9QCwl9DNDQaAyaCEGd2QDQPoubCw69DQD43e2PwA.fEQDd2y2P..XQDgROANDa..XQDQNNNOTb..XQDM84SOD84MDQpO+0CEW5yEDQ...2CIGm9PD..v8Pr43XNPD..v8Pi0F..ZBQVU0wCEWNNqBQVU0wCcbzsPTNNE7PwUU0vPTGGs6PUUMLDsppxNTbUUMLDkiCpNzwQ2BQbb.oCEWNNqBQ..fmCA.flPD..34PwcbLhPD..34P43xGDwwAjNTbppBGDkiCpNjppvAQqpprCEmppvAQcbztCkiKePTNNE7PwcbLhPjUUc7P..nIDYUUGOzXswwQUPD43.4Pr43XsPD43.4PwAk1tPD43.4PRe8KD4cONNTbUUMLDgsPLNTUUCCQVUUhCwVUUCCQxwwcCEWUUCCQrETbCI80uPTXK01PwAk1tPjUUk1PNNVKDYUUoMDabbTEDYUUoMTbaA8DDYUUoMD1RKAQgsTaCEWUUGAQrETbCUU0QPjbbb2PrUU0QPjUUk3PwUU0QPD1Bw3PXKsDD4cONNTbaA8DDQNNPNDGGUAQjiCjCMVY";
     
     icons.save = Content.createPath();
     icons.save.loadFromData(pathData);
@@ -278,4 +260,3 @@ namespace Paths
 	icons.rhapsodyLogoWithBg = Content.createPath();
 	icons.rhapsodyLogoWithBg.loadFromData(pathData);
 }
-

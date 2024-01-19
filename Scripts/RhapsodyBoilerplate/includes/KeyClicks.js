@@ -1,5 +1,5 @@
 /*
-    Copyright 2021, 2022 David Healey
+    Copyright 2021, 2022, 2023 David Healey
 
     This file is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -15,27 +15,19 @@
     along with This file. If not, see <http://www.gnu.org/licenses/>.
 */
 
-namespace Header
-{    
-    // pnlHeader
-	const pnlHeader = Content.getComponent("pnlHeader");
-	
-	pnlHeader.setPaintRoutine(function(g)
-	{
-	});
-	
-	// btnTitle
-	const btnTitle = Content.getComponent("btnTitle");
+namespace KeyClicks
+{
+	const NoiseGenerator0 = Synth.getChildSynth("Noise Generator0");
+	const noise0SimpleGain0 = Synth.getEffect("noise0SimpleGain0");
 
-	const lafbtnTitle = Content.createLocalLookAndFeel();
-	btnTitle.setLocalLookAndFeel(lafbtnTitle);
+	// knbKeyClickGain
+	const knbKeyClickGain = Content.getComponent("knbKeyClickGain");
+	knbKeyClickGain.setLocalLookAndFeel(LookAndFeel.knob);
+	knbKeyClickGain.setControlCallback(onknbKeyClickGainControl);
 	
-	lafbtnTitle.registerFunction("drawToggleButton", function(g, obj)
+	inline function onknbKeyClickGainControl(component, value)
 	{
-		var a = obj.area;
-
-		g.setColour(obj.textColour);
-		g.setFont("bold", 32);
-		g.drawAlignedText(obj.text, [a[0], a[1], a[2], a[3]], "left");
-	});
+		noise0SimpleGain0.setAttribute(noise0SimpleGain0.Gain, value);
+		NoiseGenerator0.setBypassed(value == -100);
+	}
 }

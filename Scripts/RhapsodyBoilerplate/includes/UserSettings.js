@@ -90,11 +90,14 @@ namespace UserSettings
 		if (x.get("type") == "ScriptPanel" && x.get("parentComponent") == "pnlSettings")
 		{
 			if (x.getId() == "pnlSettingsMenu") continue;
+			if (x.get("text") == "AUDIO" && Engine.isPlugin()) continue;
 
 			pnlSettingsMenu.data.children.push(x);
 			pnlSettingsMenu.data.tabs.push(x.get("text"));
 		}
 	}
+	
+	pnlSettingsMenu.set("height", pnlSettingsMenu.data.children.length * 48);
 	
 	pnlSettingsMenu.setPaintRoutine(function(g)
 	{
@@ -177,11 +180,6 @@ namespace UserSettings
 
 		g.drawAlignedText("Lazy Load", [18, btnLazyLoad.get("y"), 120, btnLazyLoad.getHeight()], "right");
 		g.drawAlignedText("Tuning", [18, knbCoarseDetune.get("y") - 2, 120, knbCoarseDetune.getHeight() - 2], "right");
-		g.drawAlignedText("Transpose", [18, knbTranspose.get("y") - 2, 120, knbTranspose.getHeight() - 2], "right");
-
-		LookAndFeel.drawKnobRange(g, knbCoarseDetune, this, []);
-		LookAndFeel.drawKnobRange(g, knbFineDetune, this, []);
-		LookAndFeel.drawKnobRange(g, knbTranspose, this, []);
 	});
 
 	// pnlSettingsTab1 - Audio
@@ -235,15 +233,15 @@ namespace UserSettings
 	
 	// knbCoarseDetune
 	const knbCoarseDetune = Content.getComponent("knbCoarseDetune");
-	knbCoarseDetune.setLocalLookAndFeel(LookAndFeel.knob);
+	knbCoarseDetune.setLocalLookAndFeel(LookAndFeel.smallKnob);
 	
 	// knbFineDetune
 	const knbFineDetune = Content.getComponent("knbFineDetune");
-	knbFineDetune.setLocalLookAndFeel(LookAndFeel.knob);
+	knbFineDetune.setLocalLookAndFeel(LookAndFeel.smallKnob);
 	
 	// knbTranspose
 	const knbTranspose = Content.getComponent("knbTranspose");
-	knbTranspose.setLocalLookAndFeel(LookAndFeel.knob);
+	knbTranspose.setLocalLookAndFeel(LookAndFeel.smallKnob);
 
 	// fltMidiSources
 	const fltMidiSources = Content.getComponent("fltMidiSources");
@@ -357,4 +355,3 @@ namespace UserSettings
     // Calls
     init();
 }
-

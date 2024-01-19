@@ -14,59 +14,49 @@
     You should have received a copy of the GNU General Public License
     along with This file. If not, see <http://www.gnu.org/licenses/>.
 */
+
 namespace LookAndFeel
 {
 	Content.setUseHighResolutionForPanels(true);
 	
-	Engine.loadFontAs("{PROJECT_FOLDER}fonts/Asap-Regular.ttf", "regular");
-	Engine.loadFontAs("{PROJECT_FOLDER}fonts/Asap-Medium.ttf", "medium");
-	Engine.loadFontAs("{PROJECT_FOLDER}fonts/Asap-MediumItalic.ttf", "mediumItalic");
-	Engine.loadFontAs("{PROJECT_FOLDER}fonts/Asap-SemiBold.ttf", "semibold");
-	Engine.loadFontAs("{PROJECT_FOLDER}fonts/Asap-Bold.ttf", "bold");
+	Engine.loadFontAs("{PROJECT_FOLDER}fonts/Inter-Regular.ttf", "regular");
+	Engine.loadFontAs("{PROJECT_FOLDER}fonts/Inter-Medium.ttf", "medium");
+	Engine.loadFontAs("{PROJECT_FOLDER}fonts/Inter-SemiBold.ttf", "semibold");
+	Engine.loadFontAs("{PROJECT_FOLDER}fonts/Inter-Bold.ttf", "bold");
 	Engine.loadFontAs("{PROJECT_FOLDER}fonts/JosefinSans-Bold.ttf", "title");
+	
+	// Automation handler
+	const automationHandler = Engine.createMidiAutomationHandler();
+	
+	automationHandler.setUpdateCallback(function(obj)
+	{
+		var excluded = [94];
+	
+		for (x in obj)
+		{
+			if (excluded.contains(x.Controller))
+				Engine.showMessageBox("Internal Controller", "CC #" + x.Controller + " is used internally by the instrument. Assigning it to a control may cause issues. Please use a different controller number.", 4);
+		}
+	});
+	
+	inline function setCcNames()
+	{
+		local controllers = {"1": "Mod Wheel", "2": "Breath", "7": "Main Volume", "11": "Expression", "10": "Pan", "64": "Sustain Pedal", "72": "Release", "73": "Attack", "75": "Hold", "76": "Decay", "77": "Sustain", "78": "Attack Curve", "94": "Do Not Use"};
+		local labels = [];
+	
+		for (i = 0; i < 128; i++)
+		{
+			if (isDefined(controllers[i]))
+				labels.push("CC# " + i + " | " + controllers[i]);
+			else
+				labels.push("CC# " + i);
+		}
+	
+		automationHandler.setControllerNumberNames("MIDI CC", labels);
+	}
 	
     const laf = Engine.createGlobalScriptLookAndFeel();
     
-    reg style = {
-	    "card": 
-	    {
-		  "bg": 0xff1d1d21
-	    },
-	    "presetBrowser":
-	    {
-		    "columnBg": 0xff161619,
-		    "searchBarBg": 0xff161619,
-		    "searchBarIcon": 0xff9f9fb1,
-		    "iconButtonBg": Colours.white,
-		    "itemSelected": 0xff302f34,
-		    "itemHighlight": 0xffe9e9e9,
-		    "itemText": Colours.white,
-	    },
-	    "alertWindow": {
-		    "textButtonBg": 0xff161619,
-		    "textButtonTextColour": Colours.white
-	    },
-	    "comboBox":
-	    {
-		    "bg": 0xff161619,
-		    "itemColour": Colours.lightgrey,
-		    "itemColour1": 0xffa9a9a9,
-		    "textColour": Colours.white 
-	    },
-	    "cell": {
-		    "columnHeader": {text: 0xbbffffff}
-	    }
-    };
-
-	if (isDefined(Theme.style))
-	{
-	    for (x in style)
-	    {
-		    if (isDefined(Theme.style[x]))
-		    	style[x] = Theme.style[x];
-	    }
-    }
-
 	// empty
 	const empty = Content.createLocalLookAndFeel();
 	
@@ -78,27 +68,40 @@ namespace LookAndFeel
 
 	table.registerFunction("drawTableBackground", function(g, obj)
 	{
-		g.setColour(obj.bgColour);
-		g.fillRoundedRectangle(obj.area, 3);
+		var a = obj.area;
+
+		g.setColour(Colours.withAlpha(Colours.grey, 0.5));
+		g.drawVerticalLine(a[2] / 2, a[1], a[3]);
+		g.drawHorizontalLine(a[3] / 2, a[0], a[2]);
+		
+		g.setColour(Colours.withAlpha(Colours.grey, 0.2));
+		g.drawVerticalLine(a[2] / 4, a[1], a[3]);
+		g.drawVerticalLine(a[2] - a[2] / 4, a[1], a[3]);
+		g.drawHorizontalLine(a[3] / 4, a[0], a[2]);
+		g.drawHorizontalLine(a[3] - a[3] / 4, a[0], a[2]);
 	});
 
 	table.registerFunction("drawTablePath", function(g, obj)
 	{
 		var a = obj.area;
 
-		g.setColour(obj.itemColour);
-		g.fillPath(obj.path, a);
-		
-	    g.setColour(obj.itemColour2);
-	    g.drawPath(obj.path, a, 2.0);
+	    g.setGradientFill([obj.itemColour2, a[0], a[1], 0x0, a[2], a[3]]);
+	    g.drawPath(obj.path, [a[0] - 2, a[1], a[2] + 4, a[3] + 2], 2.0);
+
+	    g.setGradientFill([Colours.withAlpha(obj.itemColour, 0.5), a[2] / 2, a[1], 0x0, a[2] / 2, a[3]]);
+	    g.fillPath(obj.path, a);
 	});
 	
 	table.registerFunction("drawTablePoint", function(g, obj)
 	{
 		var a = obj.tablePoint;
+		var inner = 8;
+		
+		g.setColour(Colours.withAlpha(obj.itemColour2, obj.hover ? 0.5 : 0.3));
+		g.fillEllipse([a[0], a[1], a[2], a[3]]);
 
 		g.setColour(Colours.withAlpha(obj.itemColour2, obj.hover ? 1.0 : 0.8));
-		g.fillEllipse(a);
+		g.fillEllipse([a[0] + a[2] / 2 - inner / 2, a[1] + a[3] / 2 - inner / 2, inner, inner]);
 	});
 
 	table.registerFunction("drawTableRuler", function(g, obj)
@@ -108,7 +111,7 @@ namespace LookAndFeel
 	    g.setColour(Colours.withAlpha(obj.itemColour2, 0.1));	       
 	    g.drawLine(x, x, 0, obj.area[3], 10.0);
 
-	    g.setColour(obj.itemColour2);
+	    g.setColour(Colours.withAlpha(Colours.white, 0.8));
 	    g.drawLine(x, x, 0, obj.area[3], 0.6);
 	});
 
@@ -121,7 +124,6 @@ namespace LookAndFeel
 	// AHDSR
 	laf.registerFunction("drawAhdsrBackground", function(g, obj)
 	{
-		g.fillAll(style.card.bg);
 		g.setColour(obj.bgColour);
 		g.fillRoundedRectangle(obj.area, 3);
 	});
@@ -132,90 +134,252 @@ namespace LookAndFeel
 		var p = obj.path;
 		
 		if (obj.enabled)
-			g.setColour(obj.itemColour);
+			g.setGradientFill([Colours.withAlpha(obj.itemColour, 0.5), a[2] / 2, a[1], 0x0, a[2] / 2, a[3]]);
 		else
-			g.setColour(Colours.withAlpha(obj.itemColour, 0.2));
+			g.setGradientFill([Colours.withAlpha(obj.itemColour, 0.5), a[2] / 2, a[1], 0x0, a[2] / 2, a[3]]);
 
 		g.fillPath(p, a);
-		
-		g.setColour(Colours.withAlpha(obj.itemColour2, obj.enabled && obj.isActive ? 0.2 : 0.0));
-		g.fillPath(p, a);
 
-		if (!obj.isActive)
+		if (!obj.isActive && obj.enabled)
 		{
-			g.setColour(Colours.withAlpha(obj.itemColour2, obj.enabled ? 1.0 : 0.5));
+			g.setGradientFill([obj.itemColour2, a[2] / 2, a[1], 0x0, a[2] / 2, a[3]]);
 			g.drawPath(p, a, 2.0);
 		}
 	});
 
 	laf.registerFunction("drawAhdsrBall", function(g, obj)
 	{
+		if (!obj.enabled)
+			return;
+
 		g.setColour(obj.itemColour2);
+		g.fillEllipse([obj.position[0] - 4, obj.position[1] - 4, 8, 8]);
 
-		if (obj.enabled)
-			g.fillEllipse([obj.position[0] - 5, obj.position[1] - 5, 10, 10]);
+		g.setColour(Colours.withAlpha(obj.itemColour2, 0.5));
+		g.fillEllipse([obj.position[0] - 7, obj.position[1] - 7, 14, 14]);
+			
 	});
 
-	// knob
-	const knob = Content.createLocalLookAndFeel();
-	
-	knob.registerFunction("drawRotarySlider", function(g, obj)
+	// smallKnob
+	const smallKnob = Content.createLocalLookAndFeel();
+
+	smallKnob.registerFunction("drawRotarySlider", function(g, obj)
 	{
-		var a = [obj.area[0] + 2, obj.area[1], obj.area[2] - 4, obj.area[3] - 4];
-		var shadow = 4;
+		var a = obj.area.clone();
+		a[1] = 20 * (obj.text != "");
 		
-		if (obj.enabled)
-		{
-			g.setColour(Colours.withAlpha(Colours.black, obj.enabled ? 0.2 : 0.1));
-			g.fillEllipse([a[0], a[1] + shadow, a[2], a[3]]);
-		}
+		var discSize = 24;
+		var disc = [a[2] / 2 - discSize / 2, a[1] + 8, discSize, discSize];
+	
+		// Title
+		g.setFont("bold", 14);
+		g.setColour(Colours.withAlpha(obj.textColour, obj.enabled ? 1.0 : 0.5));
+		g.drawAlignedText(obj.text, [a[0], obj.area[1], a[2], a[3]], "centredTop");
+	
+		// Shadow
+		var shadowPath = Content.createPath();
+		shadowPath.addEllipse(disc);
 		
+		var shadowColour = Colours.withAlpha(Colours.black, obj.enabled ? 0.4 : 0.1);
+		g.drawDropShadowFromPath(shadowPath, disc, shadowColour, 8, [0, 4]);
+	
+		// Body
 		g.setColour(Colours.withAlpha(obj.bgColour, obj.enabled ? 1.0 : 0.5));
-		g.fillEllipse(a);
+		g.fillEllipse(disc);
+	
+		// Arc
+		var offset = 2.4;
+		var endOffset = -offset + 2 * offset * obj.valueNormalized;
+		var thickness = 2;
+		var isBidirectional = -1.0 * obj.min == obj.max;
+		var strokeStyle = {EndCapStyle: "rounded", Thickness: thickness};
+		var diameter = disc[2] + 12;
+	
+		// Background arc
+		var path = Content.createPath();
+		g.setColour(obj.itemColour1);
 		
-        var startOffset = 2.5;
-        var endOffset = startOffset * 2 * obj.valueNormalized - startOffset;
-        var markWidth = obj.area[2] / 12;
-        
-        g.rotate(endOffset, [obj.area[2] / 2, obj.area[2] / 2 - 2]);
-        g.setColour(Colours.withAlpha(obj.itemColour1, obj.enabled ? 1.0 : 0.5));
-        g.fillRoundedRectangle([2 + a[2] / 2 - markWidth / 2, 2, markWidth, a[3] / 3], 2);
+		path.addArc([0, 0, 1, 1], -offset, offset);
+	
+		var pathArea = path.getBounds(diameter);
+		pathArea[0] += a[2] / 2 - diameter / 2;
+		pathArea[1] += a[1] + 2;
+		g.drawPath(path, pathArea, strokeStyle);
+	
+		// Value arc
+		path = Content.createPath();	
+		g.setColour(Colours.withAlpha(obj.itemColour2, obj.enabled ? 1.0 : 0.5));
+		
+		path.addArc([0, 0, 1, 1], (-offset * !isBidirectional), endOffset);
+		
+		pathArea = path.getBounds(diameter);
+		pathArea[0] += a[2] / 2 - diameter / 2;
+		pathArea[1] += a[1] + 2;
+		
+		g.drawPath(path, pathArea, strokeStyle);
+	
+		// Value text
+		g.setColour(Colours.withAlpha(obj.textColour, obj.enabled ? 1.0 : 0.5));
+		g.setFont("semibold", 11);
+		g.drawAlignedText(obj.valueAsText, [a[0], obj.area[1], a[2], a[3]], "centredBottom");
+	
+		// Value indicator
+		g.setColour(Colours.withAlpha(obj.textColour, obj.enabled ? 1.0 : 0.5));
+		g.rotate(endOffset, [obj.area[2] / 2, disc[1] + disc[3] / 2]);
+		g.fillRoundedRectangle([obj.area[2] / 2 - 1, disc[1] + 2, 2, 6], 1);
 	});
+    
+    // bigKnob
+    const bigKnob = Content.createLocalLookAndFeel();
+    
+    bigKnob.registerFunction("drawRotarySlider", function(g, obj)
+    {
+    	var a = obj.area.clone();
+    	a[1] = 35;
+    
+    	var discSize = a[2] - 26;
+    	var disc = [a[2] / 2 - discSize / 2, a[1] + 13, discSize, discSize];
+    
+    	// Title
+    	g.setFont("bold", 16);
+    	g.setColour(Colours.withAlpha(obj.textColour, obj.enabled ? 1.0 : 0.5));
+    	g.drawAlignedText(obj.text, [a[0], obj.area[1], a[2], a[3]], "centredTop");
+    
+    	// Shadow
+    	var shadowPath = Content.createPath();
+    	shadowPath.addEllipse(disc);
+    
+    	var shadowColour = Colours.withAlpha(Colours.black, obj.enabled ? 0.4 : 0.1);
+    	g.drawDropShadowFromPath(shadowPath, disc, shadowColour, 8, [0, 4]);
+
+		// Body
+		var c1 = Colours.withAlpha(0xff4b4b53, obj.enabled ? 1.0 : 0.5);
+		var c2 = Colours.withAlpha(0xff1d1d21, obj.enabled ? 1.0 : 0.5);
+	
+		g.setGradientFill([c1, a[0], disc[1], c2, a[0], disc[1] + disc[3]]);
+		g.fillEllipse(disc);
+
+		c1 = Colours.withAlpha(0xff161619, obj.enabled ? 1.0 : 0.5);
+		c2 = Colours.withAlpha(0xff2f2f34, obj.enabled ? 1.0 : 0.5);
+	
+		g.setGradientFill([c1, a[0], disc[1], c2, a[0], disc[1] + disc[3]]);
+		g.fillEllipse([disc[0] + 5, disc[1] + 5, disc[2] - 10, disc[3] - 10]);
+
+    	// Arc
+    	var offset = 2.4;
+    	var endOffset = -offset + 2 * offset * obj.valueNormalized;
+    	var thickness = 3;
+    	var isBidirectional = -1.0 * obj.min == obj.max;
+    	var strokeStyle = {EndCapStyle: "rounded", Thickness: thickness};
+    	var diameter = disc[2] + 22;
+    	
+    	// Background arc
+    	var path = Content.createPath();
+    	g.setColour(obj.itemColour1);
+    	
+    	path.addArc([0, 0, 1, 1], -offset, offset);
+    	
+    	var pathArea = path.getBounds(diameter);
+    	pathArea[0] += a[2] / 2 - diameter / 2;
+    	pathArea[1] += a[1] + 2;
+    
+    	g.drawPath(path, pathArea, strokeStyle);
+    
+    	// Value arc
+    	path = Content.createPath();	
+    	g.setColour(Colours.withAlpha(obj.itemColour2, obj.enabled ? 1.0 : 0.5));
+    	
+    	path.addArc([0, 0, 1, 1], (-offset * !isBidirectional), endOffset);
+    	
+    	pathArea = path.getBounds(diameter);
+    	pathArea[0] += a[2] / 2 - diameter / 2;
+    	pathArea[1] += a[1] + 2;
+
+    	g.drawPath(path, pathArea, strokeStyle);
+        	
+    	// Value text
+    	g.setColour(Colours.withAlpha(obj.textColour, obj.enabled ? 1.0 : 0.5));
+    	g.setFont("semibold", 14);
+    	g.drawAlignedText(obj.valueAsText, [a[0], obj.area[1], a[2], a[3]], "centredBottom");
+    
+    	// Value indicator
+    	g.setColour(Colours.withAlpha(obj.textColour, obj.enabled ? 1.0 : 0.5));
+    	g.rotate(endOffset, [a[2] / 2, disc[1] + disc[3] / 2]);
+    	g.fillRoundedRectangle([a[2] / 2 - 1.5, disc[1] + 8, 3, 9], 1.5);
+    	g.rotate(-endOffset, [a[2] / 2, disc[1] + disc[3] / 2]);
+    });
     
 	// horizontalSlider
 	const horizontalSlider = Content.createLocalLookAndFeel();
-    
-    horizontalSlider.registerFunction("drawLinearSlider", function(g, obj)
-    {
+
+	horizontalSlider.registerFunction("drawLinearSlider", function(g, obj)
+	{
 		var a = obj.area;
-	    
+		var isBidirectional = -1.0 * obj.min == obj.max;
+	    var shadowPath = Content.createPath();
+		var shadowColour = Colours.withAlpha(Colours.black, obj.enabled ? 0.8 : 0.1);
+		
 		g.setColour(obj.bgColour);
 		g.fillRoundedRectangle(a, 8);
 	    
-		g.setColour(obj.itemColour1);
+		g.setColour(Colours.withAlpha(obj.itemColour1, obj.enabled ? 1.0 : 0.5));
 		g.fillRoundedRectangle([12, a[3] / 2 - 3 / 2, a[2] - 24, 3], 2);
+		
+		g.setColour(Colours.withAlpha(obj.itemColour2, obj.enabled ? 1.0 : 0.5));
+		
+		var x = 12;
+		var fillWidth = (a[2] - 24) * obj.valueNormalized;
+		
+		if (isBidirectional)
+		{
+			var centerX = a[2] / 2;
+		
+		    if (obj.valueNormalized > 0.5)
+		    {
+		        x = centerX;
+		        fillWidth = (a[2] - 12 - centerX) * (obj.valueNormalized - 0.5) * 2;
+		    }
+		    else
+		    {
+		        fillWidth = (centerX - 12) * (0.5 - obj.valueNormalized) * 2;
+		        x = centerX - fillWidth;
+		    }
+		}
+		
+		g.fillRoundedRectangle([x, a[3] / 2 - 3 / 2, fillWidth, 3], 2);		
 		
 		var w = a[2] * 0.2;
 		
-		g.setColour(Colours.withAlpha(obj.itemColour2, obj.enabled ? 1 : 0.5));
-
+		g.setColour(Colours.withAlpha(obj.itemColour2, obj.enabled ? 1.0 : 0.5));
+	
 		if (w >= 30)
 		{
-		    var x = a[2] * obj.valueNormalized - (w + 4) * obj.valueNormalized + 2;
+			var x = a[2] * obj.valueNormalized - (w + 4) * obj.valueNormalized + 2;
+	
+			shadowPath.addRoundedRectangle([x + 2, a[3] / 2 - a[3] / 2 + 2, w - 4, a[3] - 4], 8);
+			g.drawDropShadowFromPath(shadowPath, [x + 2, a[3] / 2 - a[3] / 2 + 2, w - 4, a[3] - 4], shadowColour, 2, [0, 1]);
+		
+			g.setColour(0xff464646);
 		    g.fillRoundedRectangle([x + 1, a[3] / 2 - (a[3] - 4) / 2, w - 2, a[3] - 4], 8);
-		    
-		    g.setColour(obj.textColour);
-		    g.fillEllipse([x + w / 2 - a[3] / 4 / 2, a[3] / 2 - a[3] / 4 / 2, a[3] / 4, a[3] / 4]);
+	
+		    g.setColour(Colours.withAlpha(obj.itemColour2, obj.enabled ? 1.0 : 0.5));
+		    g.fillEllipse([x + w / 2 - a[3] / 6 / 2, a[3] / 2 - a[3] / 6 / 2, a[3] / 6, a[3] / 6]);
 		}                
 		else
 		{
 		    var c = a[3] - 4;
 		    var x = a[2] * obj.valueNormalized - (c + 4) * obj.valueNormalized + 2;
-		    g.fillEllipse([x, a[3] / 2 - c / 2, c, c]);
-		    g.setColour(obj.textColour);
-		    g.fillEllipse([x + c / 2 - a[3] / 4 / 2, a[3] / 2 - a[3] / 4 / 2, a[3] / 4, a[3] / 4]);
+		    
+		    shadowPath.addEllipse([x + 2, a[3] / 2 - c / 2 + 2, c - 4, c - 4]);
+		    g.drawDropShadowFromPath(shadowPath, [x + 2, a[3] / 2 - c / 2 + 2, c - 4, c - 4], shadowColour, 3, [0, 2]);
+		
+			g.setColour(0xff464646);
+	    	g.fillEllipse([x, a[3] / 2 - c / 2, c, c]);
+		    
+		    g.setColour(Colours.withAlpha(obj.itemColour2, obj.enabled ? 1.0 : 0.5));
+		    g.fillEllipse([x + c / 2 - a[3] / 6 / 2, a[3] / 2 - a[3] / 6 / 2, a[3] / 6, a[3] / 6]);
 		}
-    });
+	});
     
     // verticalSlider
     const verticalSlider = Content.createLocalLookAndFeel();
@@ -223,35 +387,34 @@ namespace LookAndFeel
     verticalSlider.registerFunction("drawLinearSlider", function(g, obj)
     {
 		var a = obj.area;
-	    
-		g.setColour(obj.bgColour);
-		g.fillRoundedRectangle(a, 10);
-
-		g.setColour(obj.itemColour1);
-		g.fillRoundedRectangle([a[2] / 2 - 3 / 2, 12, 3, a[3] - 24], 2);
-		
 		var h = a[3] * 0.2;
+		var v = obj.valueNormalized;
+
+		g.setColour(obj.bgColour);
+		g.fillRoundedRectangle(a, 10);		
+
+		g.setColour(Colours.black);
+		g.fillRoundedRectangle([a[2] / 2 - 3 / 2, 0, 3, a[3]], 2);
+
+		var y = a[3] - a[3] * v;
+		g.setColour(Colours.withAlpha(obj.itemColour2, obj.enabled ? 1.0 : 0.2));
+		g.fillRoundedRectangle([a[2] / 2 - 3 / 2, y, 3, a[3] - y], 2);
+
+		y = a[3] - a[3] * obj.valueNormalized - h + h * obj.valueNormalized;
+		var area = [a[2] / 2 - (a[2] - 4) / 2, y, a[2] - 4, h];
 		
-		obj.enabled == 1 ? g.setColour(obj.itemColour2) : g.setColour(Colours.withAlpha(obj.itemColour2, 0.5));
+		// Shadow
+		var shadowPath = Content.createPath();
+		shadowPath.addRoundedRectangle(area, 8);
 		
-		if (h > 30)
-		{
-		    var y = a[3] - a[3] * obj.valueNormalized - (h + 2) + (h + 4) * obj.valueNormalized;
-		    
-		    g.fillRoundedRectangle([a[2] / 2 - (a[2] - 4) / 2, y + 1, a[2] - 4, h - 2], 8);
+		var shadowColour = Colours.withAlpha(Colours.black, obj.enabled ? 0.8 : 0.4);
+		g.drawDropShadowFromPath(shadowPath, [area[0] + 2, area[1], area[2] - 4, area[3]], shadowColour, 6, [0, 3]);
 		
-		    g.setColour(obj.textColour);
-		    g.fillEllipse([a[2] / 2 - a[2] / 4 / 2, y + h / 2 - a[2] / 4 / 2, a[2] / 4, a[2] / 4]);
-		}
-		else
-		{
-		    var c = a[2] - 4;
-		    var y = a[3] - a[3] * obj.valueNormalized - (c + 2) + (c + 4) * obj.valueNormalized;
-		    
-		    g.fillEllipse([a[2] / 2 - c / 2, y, c, c]);
-		    g.setColour(obj.textColour);
-		    g.fillEllipse([a[2] / 2 - a[2] / 4 / 2, y + c / 2 - a[2] / 4 / 2, a[2] / 4, a[2] / 4]);
-		}	    
+		g.setColour(Colours.withAlpha(obj.itemColour1, 1.0));
+		g.fillRoundedRectangle(area, 8);
+	
+		g.setColour(Colours.withAlpha(obj.itemColour2, obj.enabled ? 0.8 + (0.2 * obj.hover) : 0.2));
+		g.fillEllipse([a[2] / 2 - a[2] / 4 / 2, y + h / 2 - a[2] / 4 / 2, a[2] / 4, a[2] / 4]); 
     });
 
 	// midiInputButtons
@@ -279,9 +442,9 @@ namespace LookAndFeel
 
 		if (obj.text != "")
 		{
-			g.setFont("semibold", 16 + 3 * (Engine.getOS() == "WIN"));
+			g.setFont("semibold", 16);
 			g.setColour(Colours.white);
-			g.drawFittedText(obj.text, [a[3] + 8, a[1], a[2] - a[3] - 8, a[3] - 2 * (Engine.getOS() == "WIN")], "left", 1, 1.0);
+			g.drawFittedText(obj.text, [a[3] + 8, a[1], a[2] - a[3] - 8, a[3]], "left", 1, 1.0);
 		}
 	});
 
@@ -295,7 +458,7 @@ namespace LookAndFeel
     
     textButton.registerFunction("drawToggleButton", function(g, obj)
     {
-		drawTextButton(obj.text, obj.area, [obj.bgColour, Colours.withAlpha(obj.bgColour, 0.8), Colours.withAlpha(obj.bgColour, 0.5), obj.textColour], 18);	
+		drawTextButton(obj, obj.text, obj.area);
     });
     
     // linkButton
@@ -326,10 +489,10 @@ namespace LookAndFeel
 		g.setColour(Colours.withAlpha(colour, obj.over ? 1.0 : 0.8));
 		g.fillRoundedRectangle(a, 3);
 		
-    	g.setFont("medium", 18 + 3 * (Engine.getOS() == "WIN"));
+    	g.setFont("medium", 18);
     	g.setColour(Colours.withAlpha(obj.textColour, obj.value ? 1.0 : 0.6));
 
-    	g.drawAlignedText(text, [a[0], a[1], a[2], a[3] - 2 * (Engine.getOS() == "WIN")], alignment);
+    	g.drawAlignedText(text, [a[0], a[1], a[2], a[3]], alignment);
     });
 
     // iconButton
@@ -362,7 +525,7 @@ namespace LookAndFeel
 
 		var colour = obj.value == 0 ? obj.itemColour1 : obj.itemColour2;
 		g.setColour(Colours.withAlpha(colour, obj.over && obj.enabled ? 1.0 - (0.2 * obj.down) : 0.8 - (0.2 * (obj.down + !obj.enabled))));
-		
+
 		g.fillPath(Paths.icons[icon], a);  
     });
     
@@ -396,7 +559,7 @@ namespace LookAndFeel
         
     // toggleButton
     const toggleButton = Content.createLocalLookAndFeel();
-    
+
     toggleButton.registerFunction("drawToggleButton", function(g, obj)
     {
 		var a = obj.area;
@@ -407,6 +570,30 @@ namespace LookAndFeel
 	    g.setColour(Colours.withAlpha(obj.itemColour2, obj.over ? 0.8 : 1.0));
 	    var x = obj.value ? a[2] - a[3] / 1.2 - 2 : 2;
 	    g.fillEllipse([x, a[3] / 2 - a[3] / 1.2 / 2, a[3] / 1.2, a[3] / 1.2]);	    
+    });
+    
+    // ledButton
+    const ledButton = Content.createLocalLookAndFeel();
+    
+    ledButton.registerFunction("drawToggleButton", function(g, obj)
+    {
+    	var a = obj.area;
+    	
+    	g.setColour(obj.bgColour);
+    	g.fillEllipse(a);
+
+		if (!obj.enabled)
+		{
+			g.setColour(Colours.withAlpha(obj.value ? obj.itemColour2 : obj.itemColour1, 0.5));
+			return g.fillEllipse([a[2] / 4, a[3] / 4, a[2] / 2, a[3] / 2]);
+		}
+		
+		if (obj.value)
+			g.setColour(Colours.withAlpha(obj.itemColour2, obj.over ? 1.0 - (0.2 * obj.down) : 0.8));
+		else
+			g.setColour(Colours.withAlpha(obj.over ? obj.itemColour2 : obj.itemColour1, obj.over ? 0.2 - (0.1 * obj.down) : 1.0));
+
+    	g.fillEllipse([a[2] / 4, a[3] / 4, a[2] / 2, a[3] / 2]);
     });
     
     // checkBox
@@ -431,9 +618,9 @@ namespace LookAndFeel
 
 		if (obj.text != "")
 		{
-			g.setFont("semibold", 16 + 3 * (Engine.getOS() == "WIN"));
+			g.setFont("semibold", 16);
 			g.setColour(obj.textColour);
-			g.drawAlignedText(obj.text, [a[3] + 10, a[1], a[2] - a[3], a[3] - 2 * (Engine.getOS() == "WIN")], "left");
+			g.drawAlignedText(obj.text, [a[3] + 10, a[1], a[2] - a[3], a[3]], "left");
 		}
     });
     
@@ -491,7 +678,7 @@ namespace LookAndFeel
 		var a = obj.area;
 	
 		g.setColour(Colours.withAlpha(obj.textColour, obj.hover ? 1.0 : 0.8));
-		g.setFont("medium", 14 + 3 * (Engine.getOS() == "WIN"));
+		g.setFont("medium", 14);
 		g.drawAlignedText(obj.text, a, "left");
 	});
 	
@@ -522,17 +709,18 @@ namespace LookAndFeel
 	
 	laf.registerFunction("getIdealPopupMenuItemSize", function(obj)
 	{
-		return [250, 25];
+		return [150, 25];
 	});
-	
+
 	// Preset browser
 	const presetBrowser = Content.createLocalLookAndFeel();
+	const fltPresetBrowser = Content.getComponent("fltPresetBrowser");
     
     presetBrowser.registerFunction("drawPresetBrowserBackground", function(g, obj)
 	{
 		g.fillAll(obj.bgColour);
 	});
-	        
+
     presetBrowser.registerFunction("drawPresetBrowserDialog", function(g, obj)
     {
         var a = obj.area;
@@ -547,20 +735,20 @@ namespace LookAndFeel
         g.setColour(0xff161619);
         g.fillRect([a[0] - 50, a[1] - 50, a[2] + 100, h]);
         
-        g.setFont("semibold", 20 + 3 * (Engine.getOS() == "WIN"));
+        g.setFont("semibold", 20);
         g.setColour(Colours.white);
         g.drawAlignedText(obj.title, [a[0] - 35, a[1] - 50, a[2] + 100, h], "left");
         
         g.setColour(Colours.withAlpha(Colours.white, 0.3));
         g.drawRect([a[0] - 50, a[1] - 50, a[2] + 100, a[3] + 100], 1);
 
-        g.setFont("medium", 18 + 3 * (Engine.getOS() == "WIN"));
+        g.setFont("medium", 18);
         g.setColour(Colours.white);
-        
+
         if (obj.labelArea[2] != 0)
         {
             g.drawAlignedText(obj.text, [a[0], a[1] + 15, a[2], 20], "centred");
-            g.setColour(style.presetBrowser.searchBarBg);
+            g.setColour(0xff161619);
             g.fillRoundedRectangle([la[0] - 5, la[1], la[2] + 10, la[3]], 5);
         }
         else
@@ -579,84 +767,57 @@ namespace LookAndFeel
 	    if (obj.text == "Select a Column")
 	        obj.text = "Select a Category";
 	        
-	    if (a[2] > 300 && obj.text != "")
+	    if (a[2] > 400 && obj.text != "")
 	        obj.text = "No Results";
 
-		g.setColour(style.presetBrowser.columnBg);
+		g.setColour(0xff161619);
 	    g.fillRoundedRectangle([a[0], a[1], a[2], a[3]], 5);
 	    
 	    g.setColour(obj.textColour);
-	    g.setFont("medium", 18 + 3 * (Engine.getOS() == "WIN"));
+	    g.setFont("medium", 18);
 	    g.drawAlignedText(obj.text, [a[0], a[1] - 10, a[2], a[3]], "centred");
     });
-
+	
     presetBrowser.registerFunction("drawPresetBrowserListItem", function(g, obj)
     {
         var a = [obj.area[0] + 5, obj.area[1], obj.area[2] - 10, obj.area[3]];
         var col = obj.columnIndex;
-        
-        if (col == -1)
-        {
-			var alpha = 0.6;
-			
-			if (obj.selected)
-				alpha += 0.3;
 
-			if (obj.hover)
-				alpha += 0.1;
-
-			g.setColour(Colours.withAlpha(Colours.white, alpha));
-
-			if (this.isImageLoaded(obj.text))
-				g.drawImage(obj.text, [a[0], a[1], a[2], a[3] - 30], 0, 0);
-			else
-				drawExpansionPlaceholder();
-
-			g.setColour(style.presetBrowser.itemSelected);
-			g.fillRoundedRectangle([a[0], a[1] + a[3] - 30, a[2], 25], {CornerSize: 5, Rounded:[0, 0, 1, 1]});
-	    	
-	    	g.setFont("regular", 18 + 3 * (Engine.getOS() == "WIN"));
-	    	g.setColour(Colours.withAlpha(Colours.white, alpha));
-	    	g.drawAlignedText(obj.text, [a[0], a[1] + a[3] - 30, a[2], 25], "centred");
-        }
-		else
+		if (obj.selected)
 		{
-			if (obj.selected)
-			{
-				g.setColour(style.presetBrowser.itemHighlight);
-				g.fillRoundedRectangle([a[0] - 5, a[1], 5, a[3]], {CornerSize: 5, Rounded:[1, 0, 1, 0]});
-			}
-
-			g.setColour(Colours.withAlpha(style.presetBrowser.itemSelected, obj.hover && !obj.selected ? 0.5 : 0.8));
-			
-			if (obj.selected)
-				g.fillRoundedRectangle([a[0], a[1], a[2] + 5, a[3]], {CornerSize: 5, Rounded:[0, 1, 0, 1]});
-			else if (obj.hover)
-				g.fillRoundedRectangle([a[0] - 5, a[1], a[2] + 10, a[3]], 5);
-
-			g.setColour(style.presetBrowser.itemText);
-
-			g.setFont("medium", 20 + 3 * (Engine.getOS() == "WIN"));
-			
-			if (col == 2) a[0] += 10;
-			
-			var t = obj.text;
-
-			if (t.indexOf(" (") != -1)
-				t = t.substring(0, t.indexOf(" ("));
-			
-			g.drawFittedText(t, [a[0] + 8 + (8 * (col == 2)), a[1], a[2] - 16, a[3]], "left", 1, 1.0);
+			g.setColour(fltPresetBrowser.get("itemColour2"));
+			g.fillRoundedRectangle([a[0] - 5, a[1], 5, a[3]], {CornerSize: 5, Rounded:[1, 0, 1, 0]});		
 		}
-    });
 
-	inline function drawExpansionPlaceholder()
-	{
-		g.setColour(0x882F2F34);
-		g.fillRoundedRectangle([a[0], a[1], a[2], a[3] - 30], {CornerSize: 5, Rounded: [1, 1, 0, 0]});
+		g.setColour(Colours.withAlpha(0xff302f34, obj.hover && !obj.selected ? 0.5 : 0.8));
 		
-		g.setColour(0xffe2e2e2);
-		g.fillPath(Paths.rhapsodyLogoWithBg, [a[0] + a[2] / 2 - a[2] / 5 / 2, a[1] + (a[3] - 35) / 2 - a[2] / 5 / 2, a[2] / 5, a[2] / 5]);
-	}
+		if (obj.selected)
+			g.fillRoundedRectangle([a[0], a[1], a[2] + 5, a[3]], {CornerSize: 5, Rounded:[0, 1, 0, 1]});
+		else if (obj.hover)
+			g.fillRoundedRectangle([a[0] - 5, a[1], a[2] + 10, a[3]], 5);
+
+		// Preload Progress
+		if (obj.selected && col == 2)
+		{
+			if (Engine.getPreloadProgress() > 0 && Engine.getPreloadProgress() < 1)
+			{
+				g.setColour(0xff524f56);
+				g.fillRoundedRectangle([a[0], a[1], (a[2] + 5) * Engine.getPreloadProgress(), a[3]], {CornerSize: 5, Rounded:[0, 1, 0, 1]});
+			}
+		}
+
+		g.setColour(Colours.white);
+		g.setFont("medium", 20);
+		
+		if (col == 2) a[0] += 10;
+		
+		var t = obj.text;
+
+		if (t.indexOf(" (") != -1)
+			t = t.substring(0, t.indexOf(" ("));
+
+		g.drawFittedText(t, [a[0] + 8 + (8 * (col == 2)), a[1], a[2] - 16, a[3]], "left", 1, 1.0);
+    });
 
 	presetBrowser.registerFunction("drawScrollbar", function(g, obj)
 	{
@@ -668,11 +829,11 @@ namespace LookAndFeel
         var a = obj.area;
         var wh = a[3] / 2.0;
 
-        g.setColour(style.presetBrowser.searchBarBg);
+        g.setColour(0xff161619);
         g.fillRoundedRectangle([a[0] + 20, a[1], a[2] - 20, a[3]], 5);
 
-        g.setColour(style.presetBrowser.searchBarIcon);
-        g.fillPath(obj.icon, [a[0] + a[2] - 30, a[1] + a[3] / 2 - wh / 2 - 1, wh, wh]);      
+        g.setColour(Colours.withAlpha(Colours.white, 0.7));
+        g.fillPath(Paths.icons.search, [a[0] + a[2] - 30, a[1] + a[3] / 2 - wh / 2 - 1, wh, wh]);      
     });
     
     presetBrowser.registerFunction("drawDialogButton", function(g, obj)
@@ -684,7 +845,7 @@ namespace LookAndFeel
 		{
 			var icons = ["add", "edit", "trash"];
 			var path = Paths.icons[icons[editButtons.indexOf(obj.text)]];
-			var bgColour = style.presetBrowser.iconButtonBg;
+			var bgColour = Colours.white;
 
 			if (obj.text == "Delete")
 				a = [a[0] + a[2] / 2 - 10, a[1] + a[3] / 2 - 11, 20, 22];
@@ -695,28 +856,28 @@ namespace LookAndFeel
 		}
 		else if (obj.text == "Show Favorites" || obj.text == "Save Preset")
 		{
-			var icon = obj.text == "Show Favorites" ? "star" : "save";
+			var icon = obj.text == "Show Favorites" ? "heartFilled" : "save";
 			var text = obj.text == "Show Favorites" ? "Favourites" : "Save Preset";
 			
-			drawIconTextButton([a[0], a[1], a[2], a[3] - 1], icon, text, [0xff161619, Colours.white, 0xff9F9FB1]);
+			drawIconTextButton([a[0], a[1], a[2], a[3] - 1], icon, text, [0xff161619, Colours.white, Colours.withAlpha(Colours.white, 0.7)]);
 		}
 		else
 		{
 			var text = obj.text;
-			var bgColour = style.alertWindow.textButtonBg;
-			var textColour = style.alertWindow.textButtonTextColour;
-			
-			drawTextButton(text, a, [bgColour, Colours.withAlpha(bgColour, 0.7), Colours.withAlpha(bgColour, 0.5), textColour], 18);
+			obj.bgColour = 0xff161619;
+			obj.textColour = Colours.white;
+
+			drawTextButton(obj, text, a);
 		}
     });
     
     presetBrowser.registerFunction("createPresetBrowserIcons", function(id)
     {
         if (id == "favorite_on")
-            return Paths.icons.star;
+            return Paths.icons.heartFilled;
     
         if (id == "favorite_off")
-            return Paths.icons.starOutline;
+            return Paths.icons.heart;
     });
 
     // Alert window    
@@ -730,7 +891,7 @@ namespace LookAndFeel
         g.setColour(0xff161619);
         g.fillRect([a[0], a[1], a[2], h]);
 
-        g.setFont("semibold", 20 + 3 * (Engine.getOS() == "WIN"));
+        g.setFont("semibold", 20);
         g.setColour(Colours.white);
         g.drawAlignedText(obj.title, [a[0] + 15, a[1], a[2], h], "left");        
         
@@ -768,17 +929,17 @@ namespace LookAndFeel
     });
         
     laf.registerFunction("drawDialogButton", function(g, obj)
-    {
+    {   		
     	var a = obj.area;
-    	
-    	var bgColour = style.alertWindow.textButtonBg;
-    	var textColour = style.alertWindow.textButtonTextColour;
+
+    	obj.bgColour = 0xff161619;
+    	obj.textColour = Colours.white;
     	var text = obj.text;
 
 		if (["Update Available", "Exit", "Open Website", "Overwrite Preset"].contains(obj.parentName))
 			text = obj.text == "OK" ? "Yes" : "No";
 
-   		drawTextButton(text, a, [Colours.withAlpha(bgColour, 1.0), Colours.withAlpha(bgColour, 0.7), Colours.withAlpha(bgColour, 0.5), textColour], 16);
+   		drawTextButton(obj, text, a);
     });
     
     // Peak meter floating tile
@@ -802,7 +963,7 @@ namespace LookAndFeel
     	g.setColour(obj.itemColour);
     	g.fillRoundedRectangle(a, 8);
 
-    	g.setColour(Colours.withAlpha(obj.itemColour2, 0.2 + value));
+    	g.setColour(Colours.withAlpha(obj.itemColour2, 0.2 + value / 4));
 
 		if (a[2] > a[3])
 		{
@@ -824,80 +985,58 @@ namespace LookAndFeel
 	{
 		var a = [obj.area[0], obj.area[1], obj.area[2], 66];
 		var radius = 2;
+		var isDisabled = obj.keyColour == 0;
 
 		if (obj.down)
 			a[3] += 1;
-	
-		g.setColour(Colours.white);
-		g.fillRoundedRectangle(a, radius);
-		
-		g.setColour(0xff161619);
-		g.fillRect([a[0], a[1], a[2], 1]);
-		
-		if (obj.down)
-		{
-			g.setGradientFill([0x00, a[0], a[1], Colours.withAlpha(Colours.black, 0.2), a[0], a[3]]);
-			g.fillRect(a);
-		}
-		
-		if (obj.keyColour != 0)
-		{
-			g.setColour(obj.keyColour);
-			g.fillRoundedRectangle(a, radius);
-		}
 
-		if (obj.hover)
-		{
-			g.setColour(Colours.withAlpha(Colours.coral, 0.3));
-			obj.down ? g.fillRect(a) : g.fillRoundedRectangle(a, radius);
-		}
-	
-		g.setColour(Colours.withAlpha(0xff161619, 1.0));
-		g.drawRoundedRectangle([a[0], a[1] - 1, a[2], a[3] + 1], radius - (radius * obj.down), 1);
+		// Undercoat
+		g.setColour(Colours.withAlpha(Colours.white, (obj.hover || obj.down) && !isDisabled ? 0.8 : 1.0));
+		g.fillRoundedRectangle(a, obj.down ? 0.0 : {CornerSize: radius, Rounded:[0, 0, 1, 1]});
+
+		// Base colour
+		if (obj.down && !isDisabled)
+			g.setGradientFill([Colours.withAlpha(obj.keyColour, 0.4), 0, 0, Colours.withAlpha(obj.keyColour, 0.5), 0, a[3]]);
+		else
+			g.setColour(Colours.withAlpha(obj.keyColour, 0.4 + (0.2 * isDisabled)));
+
+		g.fillRoundedRectangle(a, obj.down ? 0.0 : {CornerSize: radius, Rounded:[0, 0, 1, 1]});
 		
+		// Outline
+		g.setColour(Colours.withAlpha(Colours.black, 0.8));
+		g.drawRoundedRectangle([a[0], a[1] - 1, a[2], a[3] + 1], obj.down ? 0.0 : {CornerSize: radius, Rounded:[0, 0, 1, 1]}, 1);
+			
+		// Text
 		var noteName = Engine.getMidiNoteName(obj.noteNumber);
 		
 		if (noteName.indexOf("C") != -1)
 		{
 			g.setColour(Colours.black);
-			g.setFont("semibold", 10);
-			g.drawAlignedText(noteName, [a[0], a[1] + a[3] - 20, a[2], 20], "centred");
+			g.setFont("semibold", 9);
+			g.drawAlignedText(noteName, [a[0], a[1], a[2], a[3] - 5], "centredBottom");
 		}
-		
-		g.setGradientFill([Colours.withAlpha(Colours.black, 0.2), a[2] / 2, 0, 0x00, a[2] / 2, a[3] / 4]);
-		g.fillRoundedRectangle(a, radius);
 	});
 	
 	keyboard.registerFunction("drawBlackNote", function(g, obj)
 	{
 		var a = [obj.area[0] + 0.5, obj.area[1], obj.area[2] - 1, obj.area[3] - 11];
-	
-		g.setColour(0xff454545);
-		g.fillRoundedRectangle(a, 1);
-
-		g.setColour(0xff161619);
-		g.fillRect([a[0], a[1], a[2], 1]);
-	
-		if (obj.down)
-		{
-			g.setGradientFill([0x00, a[0], a[1], Colours.withAlpha(Colours.grey, 0.7), a[0], a[3]]);
-			g.fillRect(a);
-		}
-	
-		if (obj.keyColour != 0)
-		{
-			g.setColour(obj.keyColour);
-			g.fillRoundedRectangle(a, 1);
-		}
-			
-		if (obj.hover)
-		{
-			g.setColour(Colours.withAlpha(Colours.coral, 0.3));
-			obj.down ? g.fillRect(a) : g.fillRoundedRectangle(a, 1);
-		}
+		var radius = 2;
+		var isDisabled = obj.keyColour == 0;
 		
-		g.setGradientFill([Colours.withAlpha(Colours.black, 0.5), a[2] / 2, 0, 0x00, a[2] / 2, a[3] / 4]);
-		g.fillRoundedRectangle(a, 3);
+		// Undercoat
+		g.setColour(isDisabled ? 0xff333333 : obj.hover || obj.down ? 0xff444444: 0xff222222);
+		g.fillRoundedRectangle(a, {CornerSize: radius, Rounded:[0, 0, 1, 1]});
+		
+		if (isDisabled)
+			return;
+
+		// Base colour
+		if (obj.down)
+			g.setGradientFill([Colours.withAlpha(obj.keyColour, 0.5), 0, a[3] / 4, Colours.withAlpha(obj.keyColour, 0.5), 0, a[3]]);
+		else
+			g.setColour(Colours.withAlpha(obj.keyColour, 0.5 - (0.1 * obj.hover)));
+
+		g.fillRoundedRectangle(a, {CornerSize: radius, Rounded:[0, 0, 1, 1]});
 	});
     
     // Mpe
@@ -911,10 +1050,10 @@ namespace LookAndFeel
 		if (text == "Enable MPE Mode" && Engine.isMpeEnabled())
 			text = "Disable MPE Mode";
 			
-		var bgColour = style.alertWindow.textButtonBg;
-		var textColour = style.alertWindow.textButtonTextColour;
-		
-		drawTextButton(text, a, [bgColour, Colours.withAlpha(bgColour, 0.7), Colours.withAlpha(bgColour, 0.5), textColour], 16);
+    	obj.bgColour = 0xff161619;
+    	obj.textColour = Colours.white;
+
+		drawTextButton(obj, text, a);
     });
     
     mpe.registerFunction("drawScrollbar", function(g, obj)
@@ -931,7 +1070,7 @@ namespace LookAndFeel
     {
 		var a = obj.area;
 
-    	g.setColour(style.cell.columnHeader.text);
+    	g.setColour(0xbbffffff);
     	g.setFont("bold", 16);
     	
    		g.drawAlignedText(obj.text.toUpperCase(), a, "left");
@@ -958,55 +1097,11 @@ namespace LookAndFeel
     });
 
     // Helper functions
-    inline function drawKnobRange(g, c, pnl, range)
-    {
-        local a = [c.get("x"), c.get("y"), c.getWidth(), c.getHeight()];
-    
-        g.setColour(c.get("textColour"));
-       
-       	if (a[3] > 50)
-       	{
-			g.fillEllipse([a[0] - 4, a[1] + a[3] - 1, 10, 10]);
-			g.fillEllipse([a[0] + a[2] - 6, a[1] + a[3] - 1, 10, 10]);
-
-	        local p = Content.createPath();
-	        p.addArc([a[0] - 15, a[1] - 17, a[2] + 30, a[3] + 30], -2.5, 2.5);
-	    
-	        local pathArea = p.getBounds(1);
-	        g.drawPath(p, pathArea, 3);	       	
-       	}
-    
-    	local knobRange = range;
-    	
-    	if (!isDefined(range) || !range.length)
-    		knobRange = getKnobRange(c);
-    
-    	local suffix = c.get("text").contains("[no_suffix]") ? "" : c.get("suffix");
-
-       	g.setFont("regular", 14 + 3 * (Engine.getOS() == "WIN"));
-       	g.setColour(c.get("itemColour2"));
-       	g.drawAlignedText(knobRange[0], [a[0] - a[2] / 2 + 1, a[1] + a[3] + (16 * (a[3] > 50)), a[2], 20], "centred");
-       	g.drawAlignedText(knobRange[1] + suffix, [a[0] + a[2] - a[2] / 2 - 1, a[1] + a[3] + (16 * (a[3] > 50)), a[2], 20], "centred");
-    }
-
-    inline function drawKnobTitles(g, text, a, range)
-    {
-    	g.setFont("bold", 16 + 3 * (Engine.getOS() == "WIN"));
-    	g.setColour(this.get("textColour"));
-
-    	local y = a[1] - 30;
-
-    	if (a[2] == 55)
-	    	y = (isDefined(range) && !range) ? a[1] - 35 : a[1] - 72;    		
-
-    	g.drawAlignedText(text, [a[0] - 20, y, a[2] + 40, 25], "centred");
-    }
-
     inline function drawComboBoxTitles(g, c, a)
     {
 		local text = c.get("text");
 		
-	    g.setFont("bold", 16 + 3 * (Engine.getOS() == "WIN"));
+	    g.setFont("bold", 16);
 	    g.setColour(this.get("textColour"));
 
 	    g.drawAlignedText(text, [a[0] + 2, a[1] - 33, a[2], 25], "left");
@@ -1062,17 +1157,6 @@ namespace LookAndFeel
         }
     }
     
-    inline function setKnobPopupFunction(c)
-    {	
-    	if (c.get("min") == 0 && c.get("max") == 127 && c.get("suffix") == "%")
-    	{
-    		c.setValuePopupFunction(function(value)
-    		{
-    			return Engine.doubleToString(Math.floor(value / 127 * 100), 0) + "%";
-    		});
-    	}
-    }
-    
     /**
     * title		String		Title to display at top centre
     * text		String		Text to display below icon/above content
@@ -1084,11 +1168,11 @@ namespace LookAndFeel
     	
     	g.fillAll(this.get("bgColour"));
     	
-    	g.setFont("semibold", 26 + 3 * (Engine.getOS() == "WIN"));
+    	g.setFont("semibold", 26);
     	g.setColour(this.get("textColour"));
     	g.drawAlignedText(title, [0, 70, area[2], 50], "centred");
     	
-    	g.setFont("regular", 20 + 3 * (Engine.getOS() == "WIN"));
+    	g.setFont("regular", 20);
     	g.setColour(this.get("textColour"));
     	g.drawAlignedText(text, [0, 265, this.getWidth(), 30], "centred");
     	
@@ -1133,31 +1217,18 @@ namespace LookAndFeel
             
         g.fillPath(path, area);
     }
-    
-    /*
-    colours = [background, over, down, text]
-    */
-    inline function drawTextButton(text, area, colours, fontSize)
+        
+    inline function drawTextButton(obj, text, area)
     {
 		local alignment = "centred";
-		local c = colours[0];
-
-        if (obj.over)
-            c = colours[1];
-
-        if (obj.down)
-            c = colours[2];
-
-		if (!obj.enabled)
-			c = Colours.withAlpha(colours[0], 0.5);
-
-		g.setColour(c);
-
+		local down = obj.down || obj.value;
+    
+		g.setColour(Colours.withAlpha(obj.bgColour, obj.over && obj.enabled ? 0.7 + 0.3 * down: 0.9 - (0.3 * !obj.enabled)));
         g.fillRoundedRectangle(area, 5);
-
-        g.setColour(colours[3]);
-        g.setFont("semibold", fontSize + 3 * (Engine.getOS() == "WIN"));
-        g.drawAlignedText(text, area, alignment);
+    
+        g.setColour(Colours.withAlpha(obj.textColour, obj.over && obj.enabled ? 0.8 + 0.2 * down: 0.9 - (0.3 * !obj.enabled)));
+        g.setFont("semibold", 16);
+        g.drawAlignedText(text, [area[0], area[1], area[2], area[3]], alignment);
     }
         
     /*
@@ -1170,9 +1241,9 @@ namespace LookAndFeel
    	    g.setColour(Colours.withAlpha(colours[0], obj.over ? 0.8 - (0.3 * obj.down) : 1.0));
    	    g.fillRoundedRectangle(a, 5);
    	    
-   	    g.setFont("medium", 18 + 3 * (Engine.getOS() == "WIN"));
+   	    g.setFont("medium", 18);
    	    g.setColour(colours[1]);
-   	    g.drawAlignedText(text, [a[0], a[1], a[2], a[3] - 2 * (Engine.getOS() == "WIN")], "centred");
+   	    g.drawAlignedText(text, [a[0], a[1], a[2], a[3]], "centred");
    	    
    	    local wh = a[3] / 2.6;
    	    g.setColour(colours[2]);
@@ -1209,9 +1280,9 @@ namespace LookAndFeel
     	if (!obj.isSeparator)
     	{
 	    	if (obj.isHighlighted)
-	    		g.fillAll(style.comboBox.itemColour1);
+	    		g.fillAll(0xffa9a9a9);
 
-	    	g.setFont("medium", 16 + 3 * (Engine.getOS() == "WIN"));
+	    	g.setFont("medium", 16);
 	    	obj.isHighlighted ? g.setColour(Colours.black): g.setColour(Colours.lightgrey);
 	    	g.drawFittedText(obj.text, [a[0] + 10, a[1], a[2] - 20, a[3]], "left", 1, 1.0);
     	}
@@ -1244,7 +1315,7 @@ namespace LookAndFeel
     {
 		local a = obj.area;
 
-		g.setColour(style.comboBox.bg);
+		g.setColour(0xff161619);
 		g.fillRoundedRectangle(a, 3);
 	    		
 		g.setColour(Colours.black);
@@ -1255,23 +1326,23 @@ namespace LookAndFeel
 			if (!["CustomSettings"].contains(obj.parentType))
 		    	g.setColour(Colours.withAlpha(obj.itemColour1, obj.hover ? 1.0 : 0.8));
 		    else
-		    	g.setColour(Colours.withAlpha(style.comboBox.itemColour, obj.hover ? 1.0 : 0.8));
+		    	g.setColour(Colours.withAlpha(Colours.lightgrey, obj.hover ? 1.0 : 0.8));
 
-		    g.fillPath(Paths.icons.caretDown, [a[0] + a[2] - 20, a[3] / 2 - 4, 12, 8]);
+		    g.fillPath(Paths.icons.keyboardArrowDown, [a[0] + a[2] - 20, a[3] / 2 - 4, 12, 7]);
 		}
 		
 		// Text
-		g.setFont("medium", 18 + 3 * (Engine.getOS() == "WIN"));
+		g.setFont("medium", 18);
 
 		if (!["CustomSettings"].contains(obj.parentType))
 			g.setColour(obj.textColour);
 		else
-			g.setColour(style.comboBox.textColour);
+			g.setColour(Colours.white);
 
 		if (a[2] <= 55 && !["CustomSettings"].contains(obj.parentType))
-		    g.drawFittedText(obj.text, [a[0], a[1] - (Engine.getOS() == "WIN") - 1, a[2], a[3]], "centred", 1, 1);
+		    g.drawFittedText(obj.text, [a[0], a[1], a[2], a[3]], "centred", 1, 1);
 		else
-			g.drawFittedText(obj.text, [a[0] + 10, a[1] - 1, a[2] - a[2] / 4, a[3]], "left", 1, 1);		
+			g.drawFittedText(obj.text, [a[0] + 10, a[1], a[2] - a[2] / 4, a[3]], "left", 1, 1);		
     }
 
 	inline function drawFloatingPanelBg()
@@ -1287,57 +1358,82 @@ namespace LookAndFeel
 				
 		g.setColour(this.get("textColour"));
 		
-		local fontSizeModifier = Engine.getOS() == "WIN" ? 3 : 0;
-		g.setFont("medium", 20 + (3 * (Engine.getOS() == "WIN")));
-		g.drawAlignedText(this.get("text"), [0, a[1] - (Engine.getOS() == "WIN"), a[2], 40], "centred");		
+		g.setFont("medium", 20);
+		g.drawAlignedText(this.get("text"), [0, a[1], a[2], 40], "centred");		
 	}
 	
-	inline function drawRadialLabels(g, c, labels)
+	inline function textButtonGridPanel(panel, numCols, numRows, labels)
 	{
-		local a = [(this.getWidth() - this.getHeight()) / 2, 0, this.getHeight(), this.getHeight()];		
-		local start = -Math.PI/4.0;
-		local arc = 3.0 * Math.PI / 2.0;
-		local step = arc / (labels.length-1);
-		local reversePoint = Math.floor(labels.length / 2.0);
-		local indent = 170;
-
-		g.rotate(start, [a[0] + a[2] / 2, a[3] / 2]);
-
-		for (i = 0; i < labels.length; i++)
+		panel.data.numCols = numCols;
+		panel.data.numRows = numRows;
+		panel.data.labels = labels;
+		panel.data.hover = -1;
+	
+		panel.setPaintRoutine(function(g)
 		{
-			g.setFont("bold", 16 + 3 * (Engine.getOS() == "WIN"));
-			g.setColour((c.getValue() == i ) ? this.get("itemColour") : this.get("textColour"));
-			
-			if (!c.get("enabled"))
-				g.setColour(Colours.withAlpha(this.get("textColour"), 0.3));
+			var a = this.getLocalBounds(0);
+			var w = a[2] / this.data.numCols;
+			var h = a[3] / this.data.numRows;
 
-			if (i < reversePoint)
+			for (i = 0; i < this.data.labels.length; i++)
 			{
-				g.drawAlignedText(labels[i], [a[0] - indent, a[1], a[2], a[3]], "right");
-				g.rotate(step, [a[0] + a[2] / 2, a[3] / 2]);
-				continue;
+				var x = (i % 4) * w;
+				var y = Math.floor(i / 4) * h;
+				var active = this.getValue() == i && this.get("enabled");
+	
+				if (active)
+					g.setColour(this.get("itemColour"));
+				else
+					g.setColour(Colours.withAlpha(this.get("bgColour"), this.data.hover == i ? 1.0 : 0.6 - (0.2 * !this.get("enabled"))));
+				
+				g.fillRoundedRectangle([x, y, w - 5, h - 5], this.get("borderRadius"));
+				
+				g.setColour(active ? this.get("itemColour2") : this.get("itemColour"));				
+				g.fillEllipse([x + 5, y + 5, 5, 5]);
+	
+				g.setFont("medium", 15);
+				g.setColour(Colours.withAlpha(this.get("textColour"), active ? 1.0 : 0.7));
+				g.drawFittedText(this.data.labels[i], [x + 5, y + 5, w - 15, h - 15], "centred", 2, 1.0);
+			}		
+		});
+		
+		panel.setMouseCallback(function(event)
+		{
+			var col = Math.floor(event.x / this.getWidth() * this.data.numCols);
+			var row = Math.floor(event.y / this.getHeight() * this.data.numRows);
+			var value = 1 * row * this.data.numCols + col;
+			
+			this.data.hover = event.hover ? value : -1;
+			
+			if (value >= this.data.labels.length)
+				return this.repaint();
+	
+			if (event.clicked && !event.rightClick)
+			{
+				this.setValue(value);
+				this.changed();
 			}
-			
-			if (i == reversePoint)
-				g.rotate(Math.PI, [a[0] + a[2] / 2, a[3] / 2]);
-			
-			g.drawAlignedText(labels[i], [a[0] + indent, a[1], a[2], a[3]], "left");
-			g.rotate(step, [a[0] + a[2] / 2, a[3] / 2]);
-		}
+			else
+			{
+				this.repaint();
+			}
+		});
 	}
 
     // Value Popups
     Content.setValuePopupData(
     {
-        "fontName": "bold",
-        "fontSize": 20,
-        "borderSize": 2,
-        "borderRadius": 5,
-        "margin": 10,
-        "bgColour": Colours.lightgrey,
-        "itemColour": 0xa8000000,
-        "itemColour2": 0xa8000000,
+        "fontName": "medium",
+        "fontSize": 16,
+        "borderSize": 1,
+        "borderRadius": 3,
+        "margin": 5,
+        "bgColour": Colours.withAlpha(Colours.white, 0.5),
+        "itemColour": 0x88000000,
+        "itemColour2": 0x88000000,
         "textColour": Colours.white
     });
+    
+    // Calls
+    setCcNames();
 }
-

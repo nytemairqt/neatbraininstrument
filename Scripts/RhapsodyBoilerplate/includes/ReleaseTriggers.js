@@ -8,34 +8,29 @@
 
     This file is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
     along with This file. If not, see <http://www.gnu.org/licenses/>.
 */
 
-namespace Header
-{    
-    // pnlHeader
-	const pnlHeader = Content.getComponent("pnlHeader");
+namespace ReleaseTriggers
+{
+	// knbReleaseGain
+	const knbReleaseGain = Content.getComponent("knbReleaseGain");
+	knbReleaseGain.setLocalLookAndFeel(LookAndFeel.knob);
+	knbReleaseGain.setControlCallback(onknbReleaseGainControl);
 	
-	pnlHeader.setPaintRoutine(function(g)
+	inline function onknbReleaseGainControl(component, value)
 	{
-	});
-	
-	// btnTitle
-	const btnTitle = Content.getComponent("btnTitle");
+      	local gf = Engine.getGainFactorForDecibels(value);
+      	local s = Configuration.samplers;
+      	local index = 3;
+      	
+      	if (isDefined(Manifest.releaseSampler))
+      		index = Manifest.releaseSampler;
 
-	const lafbtnTitle = Content.createLocalLookAndFeel();
-	btnTitle.setLocalLookAndFeel(lafbtnTitle);
-	
-	lafbtnTitle.registerFunction("drawToggleButton", function(g, obj)
-	{
-		var a = obj.area;
-
-		g.setColour(obj.textColour);
-		g.setFont("bold", 32);
-		g.drawAlignedText(obj.text, [a[0], a[1], a[2], a[3]], "left");
-	});
+        s[index].setAttribute(s[0].Gain, gf);
+	}
 }
