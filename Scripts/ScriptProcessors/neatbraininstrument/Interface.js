@@ -17,7 +17,8 @@ include("NEATBRAINBoilerplate/NEATBrainUi.js");
 /* Managing WaveTables */
 
 const MEMORYNAME = "Achromic";
-
+const MEMORYTYPE = "Guitar";
+	
 const WAVETABLES = ["L_05", "R_05", "L_08", "R_08"];
 
 Engine.loadAudioFilesIntoPool();
@@ -33,18 +34,23 @@ const af = FileSystem.findFiles(audioFiles, "*.hwt", false);
 
 reg m = 0;
 
-/*
-	RHAPSODY EXTRACTS ALL FILES FROM SAMPLES FOLDER AGNOSTICALLY
-	
-	therefore:
-	
-	1. manually drag WT's into samples.lwz
-	2. init check for missing .hwt files from AudioFiles folder
-	3. if missing: copy them from Samples folder 
-	4. maybe give a nice popup "Initial Setup" or something
-	5. manually populate synths with the appropriate WT's
-
-*/
+// GUITAR 
+if (MEMORYTYPE == "Guitar")
+{
+	Console.print("Guitar Memory Detected: Activating Palm Mute Logic");
+	synthWTLeftA_fxPalmMute.setBypassed(false);
+	synthWTRightA_fxPalmMute.setBypassed(false);
+	synthWTLeftB_fxPalmMute.setBypassed(false);
+	synthWTRightB_fxPalmMute.setBypassed(false);
+}
+else
+{
+	Console.print("Deactivating Palm Mute Logic");
+	synthWTLeftA_fxPalmMute.setBypassed(true);
+	synthWTRightA_fxPalmMute.setBypassed(true);
+	synthWTLeftB_fxPalmMute.setBypassed(true);
+	synthWTRightB_fxPalmMute.setBypassed(true);
+}
 function onNoteOn()
 {
 

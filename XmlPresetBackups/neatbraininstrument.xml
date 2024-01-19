@@ -569,7 +569,7 @@
                   <ChildProcessors>
                     <Processor Type="AHDSR" ID="synthWTLeftA_fxDampenAHDSR" Bypassed="0" Monophonic="0.0"
                                Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                               Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="200.0" Sustain="0.0"
+                               Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="200.0" Sustain="-12.0"
                                Release="20.0" EcoMode="1.0">
                       <ChildProcessors>
                         <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -583,6 +583,55 @@
                         </Processor>
                         <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
                           <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                      </ChildProcessors>
+                    </Processor>
+                  </ChildProcessors>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Bipolar Freq Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Q Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="PolyphonicFilter" ID="synthWTLeftA_fxPalmMute" Bypassed="0"
+                       Gain="0.0" Frequency="20000.0" Q="0.5" Mode="6.0" Quality="555.0"
+                       BipolarIntensity="0.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors>
+                    <Processor Type="AHDSR" ID="synthWTLeftA_fxPalmMuteAHDSR" Bypassed="0" Monophonic="0.0"
+                               Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
+                               Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="250.0" Sustain="0.0"
+                               Release="20.0" EcoMode="1.0">
+                      <ChildProcessors>
+                        <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors>
+                            <Processor Type="Velocity" ID="synthWTLeftA_fxPalmMuteVel" Bypassed="0"
+                                       Intensity="1.0" UseTable="1.0" Inverted="0.0" DecibelMode="1.0"
+                                       VelocityTableData="48..........7C...vO.Up+9....7C...vO....+....9C...vO...f+....9C...vO">
+                              <ChildProcessors/>
+                            </Processor>
+                          </ChildProcessors>
                         </Processor>
                         <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
                           <ChildProcessors/>
@@ -789,7 +838,7 @@
                   <ChildProcessors>
                     <Processor Type="AHDSR" ID="synthWTRightA_fxDampenAHDSR" Bypassed="0" Monophonic="0.0"
                                Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                               Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="150.0" Sustain="0.0"
+                               Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="200.0" Sustain="-12.0"
                                Release="20.0" EcoMode="1.0">
                       <ChildProcessors>
                         <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -803,6 +852,55 @@
                         </Processor>
                         <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
                           <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                      </ChildProcessors>
+                    </Processor>
+                  </ChildProcessors>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Bipolar Freq Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Q Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="PolyphonicFilter" ID="synthWTRightA_fxPalmMute" Bypassed="0"
+                       Gain="0.0" Frequency="20000.0" Q="0.5" Mode="6.0" Quality="5.39780928e8"
+                       BipolarIntensity="0.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors>
+                    <Processor Type="AHDSR" ID="synthWTRightA_fxPalmMuteAHDSR" Bypassed="0"
+                               Monophonic="0.0" Retrigger="1.0" Intensity="1.0" AttackCurve="0.0"
+                               DecayCurve="0.0" Attack="20.0" AttackLevel="0.0" Hold="10.0"
+                               Decay="250.0" Sustain="0.0" Release="20.0" EcoMode="1.0">
+                      <ChildProcessors>
+                        <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors>
+                            <Processor Type="Velocity" ID="synthWTRightA_fxPalmMuteVel" Bypassed="0"
+                                       Intensity="1.0" UseTable="1.0" Inverted="0.0" DecibelMode="1.0"
+                                       VelocityTableData="48..........7C...vO.Up+9....7C...vO....+....9C...vO...f+....9C...vO">
+                              <ChildProcessors/>
+                            </Processor>
+                          </ChildProcessors>
                         </Processor>
                         <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
                           <ChildProcessors/>
@@ -1021,7 +1119,7 @@
                   <ChildProcessors>
                     <Processor Type="AHDSR" ID="synthWTLeftB_fxDampenAHDSR" Bypassed="0" Monophonic="0.0"
                                Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                               Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="150.0" Sustain="0.0"
+                               Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="200.0" Sustain="-12.0"
                                Release="20.0" EcoMode="1.0">
                       <ChildProcessors>
                         <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -1035,6 +1133,55 @@
                         </Processor>
                         <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
                           <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                      </ChildProcessors>
+                    </Processor>
+                  </ChildProcessors>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Bipolar Freq Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Q Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="PolyphonicFilter" ID="synthWTLeftB_fxPalmMute" Bypassed="0"
+                       Gain="0.0" Frequency="20000.0" Q="0.5" Mode="6.0" Quality="6.0"
+                       BipolarIntensity="0.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors>
+                    <Processor Type="AHDSR" ID="synthWTLeftB_fxPalmMuteAHDSR" Bypassed="0" Monophonic="0.0"
+                               Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
+                               Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="250.0" Sustain="0.0"
+                               Release="20.0" EcoMode="1.0">
+                      <ChildProcessors>
+                        <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors>
+                            <Processor Type="Velocity" ID="synthWTLeftB_fxPalmMuteVel" Bypassed="0"
+                                       Intensity="1.0" UseTable="1.0" Inverted="0.0" DecibelMode="1.0"
+                                       VelocityTableData="48..........7C...vO.Up+9....7C...vO....+....9C...vO...f+....9C...vO">
+                              <ChildProcessors/>
+                            </Processor>
+                          </ChildProcessors>
                         </Processor>
                         <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
                           <ChildProcessors/>
@@ -1259,7 +1406,7 @@
                   <ChildProcessors>
                     <Processor Type="AHDSR" ID="synthWTRightB_fxDampenAHDSR" Bypassed="0" Monophonic="0.0"
                                Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                               Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="150.0" Sustain="0.0"
+                               Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="200.0" Sustain="-12.0"
                                Release="20.0" EcoMode="1.0">
                       <ChildProcessors>
                         <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -1273,6 +1420,55 @@
                         </Processor>
                         <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
                           <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                      </ChildProcessors>
+                    </Processor>
+                  </ChildProcessors>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Bipolar Freq Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Q Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="PolyphonicFilter" ID="synthWTRightB_fxPalmMute" Bypassed="0"
+                       Gain="0.0" Frequency="20000.0" Q="0.5" Mode="6.0" Quality="138752.0"
+                       BipolarIntensity="0.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors>
+                    <Processor Type="AHDSR" ID="synthWTRightB_fxPalmMuteAHDSR" Bypassed="0"
+                               Monophonic="0.0" Retrigger="1.0" Intensity="1.0" AttackCurve="0.0"
+                               DecayCurve="0.0" Attack="20.0" AttackLevel="0.0" Hold="10.0"
+                               Decay="250.0" Sustain="0.0" Release="20.0" EcoMode="1.0">
+                      <ChildProcessors>
+                        <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors>
+                            <Processor Type="Velocity" ID="synthWTRightB_fxPalmMuteVel" Bypassed="0"
+                                       Intensity="1.0" UseTable="1.0" Inverted="0.0" DecibelMode="1.0"
+                                       VelocityTableData="48..........7C...vO.Up+9....7C...vO....+....9C...vO...f+....9C...vO">
+                              <ChildProcessors/>
+                            </Processor>
+                          </ChildProcessors>
                         </Processor>
                         <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
                           <ChildProcessors/>
