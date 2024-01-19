@@ -19,7 +19,7 @@ inline function createButton(id, x, y, width, height, text, saveInPreset, callba
 	return b;
 }
 
-inline function createKnob(id, x, y, width, height, text, saveInPreset, callback, minValue, maxValue, stepSize, defaultValue, parent)
+inline function createKnob(id, x, y, width, height, text, saveInPreset, callback, minValue, maxValue, stepSize, defaultValue, parent, isParameter)
 {
 	local k = Content.addKnob(id, x, y);
 	
@@ -32,6 +32,9 @@ inline function createKnob(id, x, y, width, height, text, saveInPreset, callback
 	k.set("height", height);
 	
 	k.set("saveInPreset", saveInPreset);
+	k.set("isPluginParameter", isParameter);
+	if (isParameter)
+		k.set("pluginParameterName", text);
 	k.setControlCallback(callback);
 
 	Content.setPropertiesFromJSON(id, {
