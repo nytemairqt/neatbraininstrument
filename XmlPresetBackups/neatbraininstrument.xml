@@ -29,7 +29,7 @@
             <Control type="ScriptSlider" id="knbAmpRandom" value="0.0"/>
             <Control type="ScriptSlider" id="knbToneDampen" value="0.0"/>
             <Control type="ScriptSlider" id="knbToneBrightness" value="0.0"/>
-            <Control type="ScriptSlider" id="knbToneChorus" value="0.2199999988079071"/>
+            <Control type="ScriptSlider" id="knbToneChorus" value="0.2000000029802322"/>
             <Control type="ScriptSlider" id="knbToneClamp" value="0.0"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-6.0"/>
             <Control type="ScriptSlider" id="knbMasterPan" value="0.0"/>

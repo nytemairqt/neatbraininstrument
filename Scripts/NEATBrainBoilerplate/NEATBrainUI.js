@@ -255,6 +255,21 @@ inline function onknbToneClampControl(component, value)
 // Chorus
 inline function onknbToneChorusControl(component, value)
 {
+	if (value == 0)
+	{
+		synthWTLeftA_chorusJ.setBypassed(1);
+		synthWTRightA_chorusJ.setBypassed(1);
+		synthWTLeftB_chorusJ.setBypassed(1);
+		synthWTRightB_chorusJ.setBypassed(1);
+	}
+	else
+	{
+		synthWTLeftA_chorusJ.setBypassed(0);
+		synthWTRightA_chorusJ.setBypassed(0);
+		synthWTLeftB_chorusJ.setBypassed(0);
+		synthWTRightB_chorusJ.setBypassed(0);
+	}
+
 	synthWTLeftA_chorusJ.setAttribute(synthWTLeftA_chorusJ.Depth, value * 0.25);
 	synthWTRightA_chorusJ.setAttribute(synthWTRightA_chorusJ.Depth, value * 0.25);
 	synthWTLeftB_chorusJ.setAttribute(synthWTLeftB_chorusJ.Depth, value * 0.25);
@@ -312,7 +327,7 @@ const knbPitchRandom = createKnob("knbPitchRandom", knbPitchLFO.get("x") + 100, 
 
 const knbToneDampen = createKnob("knbToneDampen", lblTone.get("x") + 106, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneDampenControl, 0, 1, 0.01, 1, "pnlAdvanced");
 const knbToneClamp = createKnob("knbToneClamp", knbToneDampen.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneClampControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
-const knbToneChorus = createKnob("knbToneChorus", knbToneClamp.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneChorusControl, 0, 1.0, 0.01, 0.2, "pnlAdvanced");
+const knbToneChorus = createKnob("knbToneChorus", knbToneClamp.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneChorusControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
 const knbToneBrightness = createKnob("knbToneBrightness", knbToneChorus.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneBrightnessControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
 
 const lblAmpVelocity = createLabel("lblAmpVelocity", knbAmpVelocity.get("x") - 39, knbAmpVelocity.get("y") + 50, 128, 32, 16, "Vel", "pnlAdvanced", Colours.grey, "centred");
