@@ -114,7 +114,7 @@
       <Component type="ScriptPanel" id="pnlInfoPopup" x="10" y="10" width="485"
                  height="510" parentComponent="pnlBody" visible="0"/>
       <Component type="ScriptPanel" id="pnlAdvanced" x="498" y="16" width="480"
-                 height="498" parentComponent="pnlBody">
+                 height="498" parentComponent="pnlBody" visible="0">
         <Component type="ScriptPanel" id="lblAdvanced" x="-8" y="-2" width="128"
                    height="64" text="Advanced_" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="pnlShowInfoPopup" x="436" y="0" width="16"
@@ -163,7 +163,7 @@
         <Component type="ScriptPanel" id="lblToneBrightness" x="336" y="466" width="128"
                    height="32" text="Brightness" parentComponent="pnlAdvanced"/>
         <Component type="ScriptSlider" id="knbToneChorus" x="275" y="416" text="Vel"
-                   defaultValue="0.2000000029802322" width="48" height="48" parentComponent="pnlAdvanced"/>
+                   defaultValue="0.5" width="48" height="48" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblToneChorus" x="236" y="466" width="128"
                    height="32" text="Chorus" parentComponent="pnlAdvanced"/>
         <Component type="ScriptSlider" id="knbToneClamp" x="175" y="416" text="Vel"
