@@ -235,11 +235,19 @@ inline function onknbToneDecayControl(component, value)
 	Console.print("Need to implement Dampen Decay Functionality");
 }
 
-// Tone WT Position
-// no idea what to do here
-inline function onknbTonePositionControl(component, value) // rename this later?
+
+inline function onknbToneChorusControl(component, value) // rename this later?
 {
-	Console.print("Need to implement WT Position Functionality");
+	synthWTLeftA_chorus.setAttribute(synthWTLeftA_chorus.Rate, value * .3);
+	synthWTRightA_chorus.setAttribute(synthWTRightA_chorus.Rate, value * .3);
+	synthWTLeftB_chorus.setAttribute(synthWTLeftB_chorus.Rate, value * .3);
+	synthWTRightB_chorus.setAttribute(synthWTRightB_chorus.Rate, value * .3);
+	
+	synthWTLeftA_chorus.setAttribute(synthWTLeftA_chorus.Width, value * .3);
+	synthWTRightA_chorus.setAttribute(synthWTRightA_chorus.Width, value * .3);
+	synthWTLeftB_chorus.setAttribute(synthWTLeftB_chorus.Width, value * .3);
+	synthWTRightB_chorus.setAttribute(synthWTRightB_chorus.Width, value * .3);
+	
 }
 
 // Tone Stiffness Intensity
@@ -269,10 +277,6 @@ inline function onknbToneBrightnessControl(component, value)
 	synthWTRightB_toneAdjust.setAttribute(idx, value * 6);
 }
 
-// Tone Stiffness Type (Buttons)
-inline function onbtnToneStiffnessTypeAControl(component, value){ Console.print("Need to implement Stiffness Type Functionality");}
-inline function onbtnToneStiffnessTypeBControl(component, value){Console.print("Need to implement Stiffness Type Functionality");}
-
 // Instantiate UI Elements
 
 const btnShowAdvancedPanel = createButton("btnShowAdvancedPanel", 471, 200, 24, 100, "open", false, onbtnShowAdvancedPanelControl, false, true, "pnlBody");
@@ -297,8 +301,8 @@ const knbPitchRandom = createKnob("knbPitchRandom", knbPitchLFO.get("x") + 100, 
 
 const knbToneDampen = createKnob("knbToneDampen", lblTone.get("x") + 106, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneDampenControl, 4000, 8000, 1.0, 6000, "pnlAdvanced");
 const knbToneDecay = createKnob("knbToneDecay", knbToneDampen.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneDecayControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
-const knbTonePosition = createKnob("knbTonePosition", knbToneDecay.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbTonePositionControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
-const knbToneBrightness = createKnob("knbToneBrightness", knbTonePosition.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneBrightnessControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
+const knbToneChorus = createKnob("knbToneChorus", knbToneDecay.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneChorusControl, 0, 1.0, 0.01, 0.2, "pnlAdvanced");
+const knbToneBrightness = createKnob("knbToneBrightness", knbToneChorus.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Vel", true, onknbToneBrightnessControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced");
 
 const lblAmpVelocity = createLabel("lblAmpVelocity", knbAmpVelocity.get("x") - 39, knbAmpVelocity.get("y") + 50, 128, 32, 16, "Vel", "pnlAdvanced", Colours.grey, "centred");
 const lblAmpLFO = createLabel("lblAmpLFO", knbAmpLFO.get("x") - 39, knbAmpLFO.get("y") + 50, 128, 32, 16, "Drift", "pnlAdvanced", Colours.grey, "centred");
@@ -311,7 +315,7 @@ const lblPitchLFO = createLabel("lblPitchLFO", knbPitchLFO.get("x") - 39, knbPit
 
 const lblToneDampen = createLabel("lblToneDampen", knbToneDampen.get("x") - 39, knbToneDampen.get("y") + 50, 128, 32, 16, "Dampen", "pnlAdvanced", Colours.grey, "centred");
 const lblToneDecay = createLabel("lblToneDecay", knbToneDecay.get("x") - 39, knbToneDecay.get("y") + 50, 128, 32, 16, "Decay", "pnlAdvanced", Colours.grey, "centred");
-const lblTonePosition = createLabel("lblTonePosition", knbTonePosition.get("x") - 39, knbTonePosition.get("y") + 50, 128, 32, 16, "Position", "pnlAdvanced", Colours.grey, "centred");
+const lblToneChorus = createLabel("lblToneChorus", knbToneChorus.get("x") - 39, knbToneChorus.get("y") + 50, 128, 32, 16, "Chorus", "pnlAdvanced", Colours.grey, "centred");
 const lblToneBrightness = createLabel("lblToneBrightness", knbToneBrightness.get("x") - 39, knbToneBrightness.get("y") + 50, 128, 32, 16, "Brightness", "pnlAdvanced", Colours.grey, "centred");
 	
 /* Horizontal Sliders */
@@ -345,7 +349,7 @@ pnlInfoPopup.set("visible", 0);
 
 // need to include text as a JSON object and iterate through the lines
 
-const jsonInfoSubtitles = ["VEL", "DRIFT", "RANDOM", "DECAY", "DAMPEN", "POSITION", "STIFFNESS"];
+const jsonInfoSubtitles = ["VEL", "DRIFT", "RANDOM", "DECAY", "DAMPEN", "CHORUS", "BRIGHTNESS"];
 
 const jsonInfoPopup = [
 "The amount of Upward Drift Modulation when playing harder velocities.",
@@ -353,8 +357,8 @@ const jsonInfoPopup = [
 "The amount of randomization applied when a note is played.",
 "The time it takes for the relevant \"Upward\" Modulator to return to zero.",
 "The amount of Upward Clamping of the frequency spectrum (harshness)",
-"undocumented",
-"The amount and type of additional overtones added to the Tonal Signal."
+"The amount of inter-modal chorusing applied to Partials.",
+"The amount of additional amplitude applied to high frequencies."
  ];
 
 pnlInfoPopup.setPaintRoutine(function(g)
