@@ -1,8 +1,14 @@
 Content.makeFrontInterface(1000, 710);
 
-include("RhapsodyBoilerplate/includes/Ui.js");
-//Ui.createTemplate("neatbraininstrument");
+/* Instantiate NEATBrain */
 
+const MEMORYNAME = "Achromic";
+const MEMORYTYPE = "Guitar";
+
+/* Instantiate Rhapsody UI */
+
+include("RhapsodyBoilerplate/includes/Ui.js");
+Ui.createTemplate(MEMORYNAME);
 
 include("RhapsodyBoilerplate/includes/LookAndFeel.js");
 include("RhapsodyBoilerplate/includes/Paths.js");
@@ -19,8 +25,7 @@ include("NEATBrainBoilerplate/NEATBrainUI.js");
 
 /* Managing WaveTables */
 
-const MEMORYNAME = "Achromic";
-const MEMORYTYPE = "Guitar";
+
 	
 const WAVETABLES = ["L_05", "R_05", "L_08", "R_08"];
 

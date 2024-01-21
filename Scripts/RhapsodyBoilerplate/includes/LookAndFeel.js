@@ -20,12 +20,19 @@ namespace LookAndFeel
 	Content.setUseHighResolutionForPanels(true);
 	
 	/*
-	Engine.loadFontAs("{PROJECT_FOLDER}fonts/Inter-Regular.ttf", "regular");
-	Engine.loadFontAs("{PROJECT_FOLDER}fonts/Inter-Medium.ttf", "medium");
-	Engine.loadFontAs("{PROJECT_FOLDER}fonts/Inter-SemiBold.ttf", "semibold");
-	Engine.loadFontAs("{PROJECT_FOLDER}fonts/Inter-Bold.ttf", "bold");
-	Engine.loadFontAs("{PROJECT_FOLDER}fonts/JosefinSans-Bold.ttf", "title");
+	Engine.loadFontAs("{PROJECT_FOLDER}/images/fonts/Inter-Regular.ttf", "regular");
+	Engine.loadFontAs("{PROJECT_FOLDER}/images/fonts/Inter-Medium.ttf", "medium");
+	Engine.loadFontAs("{PROJECT_FOLDER}/images/fonts/Inter-SemiBold.ttf", "semibold");
+	Engine.loadFontAs("{PROJECT_FOLDER}/images/fonts/Inter-Bold.ttf", "bold");
+	Engine.loadFontAs("{PROJECT_FOLDER}/images/fonts/JosefinSans-Bold.ttf", "title");
 	*/
+	
+	Engine.loadFontAs("{PROJECT_FOLDER}fonts/Asap-Regular.ttf", "regular");
+	Engine.loadFontAs("{PROJECT_FOLDER}fonts/Asap-Medium.ttf", "medium");
+	Engine.loadFontAs("{PROJECT_FOLDER}fonts/Asap-SemiBold.ttf", "semibold");
+	Engine.loadFontAs("{PROJECT_FOLDER}fonts/Asap-Bold.ttf", "bold");
+	Engine.loadFontAs("{PROJECT_FOLDER}fonts/JosefinSans-Bold.ttf", "title");
+	
 	
 	
 	// Automation handler
