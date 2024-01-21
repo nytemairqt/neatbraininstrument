@@ -8,7 +8,7 @@ const MEMORYTYPE = "Guitar";
 /* Instantiate Rhapsody UI */
 
 include("RhapsodyBoilerplate/includes/Ui.js");
-Ui.createTemplate(MEMORYNAME);
+//Ui.createTemplate(MEMORYNAME); // Run this after updating Rhapsody Boilerplate
 
 include("RhapsodyBoilerplate/includes/LookAndFeel.js");
 include("RhapsodyBoilerplate/includes/Paths.js");
@@ -23,24 +23,11 @@ include("RhapsodyBoilerplate/includes/Spinner.js");
 
 include("NEATBrainBoilerplate/NEATBrainUI.js");
 
-/* Managing WaveTables */
-
-
-	
-const WAVETABLES = ["L_05", "R_05", "L_08", "R_08"];
-
-//Engine.loadAudioFilesIntoPool();
-
-const audioFiles = FileSystem.getFolder(FileSystem.AudioFiles);
-const subfolder = audioFiles.createDirectory(MEMORYNAME);
-
-// check for wavetables
-
-const sf = FileSystem.findFiles(subfolder, "*.hwt", false);
-const af = FileSystem.findFiles(audioFiles, "*.hwt", false);
-
+/* Global Vars */
 
 reg m = 0;
+
+/* NEATBrain Specific Init Funcs */
 
 // GUITAR 
 if (MEMORYTYPE == "Guitar")
@@ -60,7 +47,7 @@ else
 	synthWTRightB_fxPalmMute.setBypassed(true);
 }function onNoteOn()
 {
-	
+	Console.print(Message.getNoteNumber());
 
 	
 	

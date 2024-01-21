@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <samplemap ID="profileALeft" RRGroupAmount="15.0" MicPositions=";" CrossfadeGamma="1.0"
-           SaveMode="2">
+           SaveMode="1">
   <sample Root="60" LoKey="24" HiKey="88" LoVel="0" HiVel="63" RRGroup="1"
           FileName="{PROJECT_FOLDER}profileA/muteL/01.wav" Duplicate="0"
           SampleEnd="31183" MonolithOffset="0" MonolithLength="32768" SampleRate="44100.0"/>

@@ -835,7 +835,7 @@
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="synthWTRightA_fxDampen" Bypassed="0"
                        Gain="0.0" Frequency="10000.0" Q="0.5899999737739563" Mode="6.0"
-                       Quality="0.0" BipolarIntensity="0.0">
+                       Quality="1.011305792e9" BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1.0">
@@ -877,7 +877,7 @@
               </ChildProcessors>
             </Processor>
             <Processor Type="PolyphonicFilter" ID="synthWTRightA_fxPalmMute" Bypassed="0"
-                       Gain="0.0" Frequency="20000.0" Q="0.5" Mode="6.0" Quality="0.0"
+                       Gain="0.0" Frequency="20000.0" Q="0.5" Mode="6.0" Quality="9.99863296e8"
                        BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
@@ -1122,7 +1122,7 @@
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="synthWTLeftB_fxDampen" Bypassed="0"
                        Gain="0.0" Frequency="10000.0" Q="0.5899999737739563" Mode="6.0"
-                       Quality="0.0" BipolarIntensity="0.0">
+                       Quality="-1.142407424e9" BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1.0">
@@ -1164,7 +1164,7 @@
               </ChildProcessors>
             </Processor>
             <Processor Type="PolyphonicFilter" ID="synthWTLeftB_fxPalmMute" Bypassed="0"
-                       Gain="0.0" Frequency="20000.0" Q="0.5" Mode="6.0" Quality="0.0"
+                       Gain="0.0" Frequency="20000.0" Q="0.5" Mode="6.0" Quality="-1.159215744e9"
                        BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
@@ -1456,7 +1456,7 @@
               </ChildProcessors>
             </Processor>
             <Processor Type="PolyphonicFilter" ID="synthWTRightB_fxPalmMute" Bypassed="0"
-                       Gain="0.0" Frequency="20000.0" Q="0.5" Mode="6.0" Quality="0.0"
+                       Gain="0.0" Frequency="20000.0" Q="0.5" Mode="6.0" Quality="1.024082048e9"
                        BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
