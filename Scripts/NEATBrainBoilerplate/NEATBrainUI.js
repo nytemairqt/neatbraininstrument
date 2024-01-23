@@ -67,7 +67,7 @@ inline function oncmbPartialProfileControl(component, value)
 	synthWTRightA.setAttribute(synthWTRightA.LoadedBankIndex, value + offset); 
 	synthWTLeftB.setAttribute(synthWTLeftB.LoadedBankIndex, value + 1); 
 	synthWTRightB.setAttribute(synthWTRightB.LoadedBankIndex, value + offset + 1); 
-	pnlProfileModes.repaintImmediately();	
+	pnlProfileModes.repaint();	
 }
 
 // Profile Previous
