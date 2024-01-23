@@ -117,3 +117,37 @@ pnlBody.setPaintRoutine(function(g)
 	g.drawLine(this.getWidth() / 2, this.getWidth() - 10, this.getHeight() - 44, this.getHeight() - 44, 1.5);
 	g.drawLine(this.getWidth() - 10, this.getWidth() - 10, this.getHeight() - 44, this.getHeight() - 54, 1.5);
 });
+
+
+
+
+// Panel Images
+
+const var pnlProfileModes = Content.getComponent("pnlProfileModes");
+const var pnlProfilePartials = Content.getComponent("pnlProfilePartials");
+
+const TESTVALUE = 1;
+
+//const pnlPath = Content.createPath();
+
+pnlProfileModes.setPaintRoutine(function(g)
+{
+	var p = Content.createPath();
+	var xOffset = 90;
+	g.setColour(Colours.lightgrey);
+	
+	switch (TESTVALUE) // replace with combobox value
+	{
+		case 1:
+			p.loadFromData(pathProfileA);
+			break;
+		case 2:
+			p.loadFromData(pathProfileB);
+			break;		
+		case 3:
+			p.loadFromData(pathProfileC);
+			break;
+	}
+	
+	g.drawPath(p, [xOffset, 0, this.getWidth() - (2 * xOffset), this.getHeight()], 1.0);
+});

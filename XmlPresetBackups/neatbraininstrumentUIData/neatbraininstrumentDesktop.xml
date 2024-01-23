@@ -184,6 +184,10 @@
         <Component type="ScriptPanel" id="lblToneClamp" x="136" y="466" width="128"
                    height="32" text="Clamp" parentComponent="pnlAdvanced"/>
       </Component>
+      <Component type="ScriptPanel" id="pnlProfileModes" x="95.0" y="60.0" parentComponent="pnlBody"
+                 width="300.0" height="340.0"/>
+      <Component type="ScriptPanel" id="pnlProfilePartials" x="595.0" y="60.0"
+                 parentComponent="pnlBody" width="300.0" height="340.0"/>
     </Component>
     <Component type="ScriptPanel" id="pnlStatusBar" x="5.0" y="585.0" text=""
                width="990.0" height="39.0" bgColour="0" itemColour="4281282356"
