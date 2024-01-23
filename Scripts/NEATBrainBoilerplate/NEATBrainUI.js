@@ -227,7 +227,7 @@ inline function onknbPitchLFOControl(component, value)
 inline function onknbToneDampenControl(component, value)
 {	
 		// Low Pass Frequency
-		local min = 2000;
+		local min = 4000;
 		local max = 10000;
 		
 		local f = Math.round(max - (value * (max-min)));
@@ -316,19 +316,19 @@ const lblTone = createLabel("lblTone", -31, 386, 128, 32, 20, "Tone", "pnlAdvanc
 const lblPitch = createLabel("lblPitch", -31, lblTone.get("y") - 150, 128, 32, 20, "Pitch", "pnlAdvanced", Colours.grey, "centred");
 const lblAmp = createLabel("lblAmp", -31, lblPitch.get("y") - 150, 128, 32, 20, "Amp", "pnlAdvanced", Colours.grey, "centred");
 
-const knbAmpVelocity = createKnob("knbAmpVelocity", lblAmp.get("x") + 106, lblAmp.get("y") + 30, 48, 48, "Amp Vel", true, onknbAmpVelocityControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced", true);
-const knbAmpLFO = createKnob("knbAmpLFO", knbAmpVelocity.get("x") + 100, lblAmp.get("y") + 30, 48, 48, "Amp LFO", true, onknbAmpLFOControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced", true);
-const knbAmpRandom = createKnob("knbAmpRandom", knbAmpLFO.get("x") + 100, lblAmp.get("y") + 30, 48, 48, "Amp Rand", true, onknbAmpRandomControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced", true);
+const knbAmpVelocity = createKnob("knbAmpVelocity", lblAmp.get("x") + 106, lblAmp.get("y") + 30, 48, 48, "Amp Vel", true, onknbAmpVelocityControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
+const knbAmpLFO = createKnob("knbAmpLFO", knbAmpVelocity.get("x") + 100, lblAmp.get("y") + 30, 48, 48, "Amp LFO", true, onknbAmpLFOControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
+const knbAmpRandom = createKnob("knbAmpRandom", knbAmpLFO.get("x") + 100, lblAmp.get("y") + 30, 48, 48, "Amp Rand", true, onknbAmpRandomControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
 
-const knbPitchVelocity = createKnob("knbPitchVelocity", lblPitch.get("x") + 106, lblPitch.get("y") + 30, 48, 48, "Pitch Vel", true, onknbPitchVelocityControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced", true);
+const knbPitchVelocity = createKnob("knbPitchVelocity", lblPitch.get("x") + 106, lblPitch.get("y") + 30, 48, 48, "Pitch Vel", true, onknbPitchVelocityControl, 0, 1.0, 0.01, 0.2, "pnlAdvanced", true);
 const knbPitchDecay = createKnob("knbPitchDecay", knbPitchVelocity.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "Pitch Dec", true, onknbPitchDecayControl, 20, 4000, 1.0, 1000, "pnlAdvanced", true);
-const knbPitchLFO = createKnob("knbPitchLFO", knbPitchDecay.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "Pitch LFO", true, onknbPitchLFOControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced", true);
-const knbPitchRandom = createKnob("knbPitchRandom", knbPitchLFO.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "Pitch Rand", true, onknbPitchRandomControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced", true);
+const knbPitchLFO = createKnob("knbPitchLFO", knbPitchDecay.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "Pitch LFO", true, onknbPitchLFOControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
+const knbPitchRandom = createKnob("knbPitchRandom", knbPitchLFO.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "Pitch Rand", true, onknbPitchRandomControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
 
-const knbToneDampen = createKnob("knbToneDampen", lblTone.get("x") + 106, lblTone.get("y") + 30, 48, 48, "Tone Damp", true, onknbToneDampenControl, 0, 1, 0.01, 1, "pnlAdvanced", true);
-const knbToneClamp = createKnob("knbToneClamp", knbToneDampen.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Tone Clamp", true, onknbToneClampControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced", true);
-const knbToneChorus = createKnob("knbToneChorus", knbToneClamp.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Tone Chorus", true, onknbToneChorusControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced", true);
-const knbToneBrightness = createKnob("knbToneBrightness", knbToneChorus.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Tone Bright", true, onknbToneBrightnessControl, 0, 1.0, 0.01, 0.5, "pnlAdvanced", true);
+const knbToneDampen = createKnob("knbToneDampen", lblTone.get("x") + 106, lblTone.get("y") + 30, 48, 48, "Tone Damp", true, onknbToneDampenControl, 0, 1, 0.01, 0.4, "pnlAdvanced", true);
+const knbToneClamp = createKnob("knbToneClamp", knbToneDampen.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Tone Clamp", true, onknbToneClampControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
+const knbToneChorus = createKnob("knbToneChorus", knbToneClamp.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Tone Chorus", true, onknbToneChorusControl, 0, 1.0, 0.01, 0.25, "pnlAdvanced", true);
+const knbToneBrightness = createKnob("knbToneBrightness", knbToneChorus.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Tone Bright", true, onknbToneBrightnessControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
 
 const lblAmpVelocity = createLabel("lblAmpVelocity", knbAmpVelocity.get("x") - 39, knbAmpVelocity.get("y") + 50, 128, 32, 16, "Vel", "pnlAdvanced", Colours.grey, "centred");
 const lblAmpLFO = createLabel("lblAmpLFO", knbAmpLFO.get("x") - 39, knbAmpLFO.get("y") + 50, 128, 32, 16, "Drift", "pnlAdvanced", Colours.grey, "centred");
