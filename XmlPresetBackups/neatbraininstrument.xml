@@ -651,12 +651,14 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="CurveEq" ID="synthWTLeftA_toneAdjust" Bypassed="0" NumFilters="4"
-                       Band0="0.0" Band1="20.0" Band2="0.75" Band3="1.0" Band4="1.0"
+            <Processor Type="CurveEq" ID="synthWTLeftA_toneAdjust" Bypassed="0" NumFilters="6"
+                       Band0="0.0" Band1="60.0" Band2="0.75" Band3="1.0" Band4="1.0"
                        Band5="6.0" Band6="7900.0" Band7="0.300000011920929" Band8="1.0"
                        Band9="0.0" Band10="0.0" Band11="100.0" Band12="0.4000000059604645"
                        Band13="1.0" Band14="2.0" Band15="1.800000548362732" Band16="5165.0654296875"
-                       Band17="0.4000000059604645" Band18="1.0" Band19="3.0" FFTEnabled="0">
+                       Band17="0.4000000059604645" Band18="1.0" Band19="3.0" Band20="0.0"
+                       Band21="60.0" Band22="0.75" Band23="1.0" Band24="1.0" Band25="-2.000000238418579"
+                       Band26="120.0" Band27="1.0" Band28="1.0" Band29="4.0" FFTEnabled="0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
@@ -944,12 +946,14 @@
               </ChildProcessors>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="synthWTRightA_toneAdjust" Bypassed="0" NumFilters="4"
-                       Band0="2.039999723434448" Band1="28.00925254821777" Band2="0.75"
-                       Band3="1.0" Band4="1.0" Band5="6.0" Band6="7900.0" Band7="0.300000011920929"
-                       Band8="1.0" Band9="0.0" Band10="0.0" Band11="100.0" Band12="0.4000000059604645"
+            <Processor Type="CurveEq" ID="synthWTRightA_toneAdjust" Bypassed="0" NumFilters="6"
+                       Band0="0.0" Band1="60.0" Band2="0.75" Band3="1.0" Band4="1.0"
+                       Band5="6.0" Band6="7900.0" Band7="0.300000011920929" Band8="1.0"
+                       Band9="0.0" Band10="0.0" Band11="100.0" Band12="0.4000000059604645"
                        Band13="1.0" Band14="2.0" Band15="1.800000548362732" Band16="5165.0654296875"
-                       Band17="0.4000000059604645" Band18="1.0" Band19="3.0" FFTEnabled="0">
+                       Band17="0.4000000059604645" Band18="1.0" Band19="3.0" Band20="0.0"
+                       Band21="60.0" Band22="0.75" Band23="1.0" Band24="1.0" Band25="-2.000000238418579"
+                       Band26="120.0" Band27="1.0" Band28="1.0" Band29="4.0" FFTEnabled="0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
@@ -1231,12 +1235,14 @@
               </ChildProcessors>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="synthWTLeftB_toneAdjust" Bypassed="0" NumFilters="4"
-                       Band0="2.039999723434448" Band1="28.00925254821777" Band2="0.75"
-                       Band3="1.0" Band4="1.0" Band5="6.0" Band6="7900.0" Band7="0.300000011920929"
+            <Processor Type="CurveEq" ID="synthWTLeftB_toneAdjust" Bypassed="0" NumFilters="6"
+                       Band0="2.039999723434448" Band1="60.0" Band2="0.75" Band3="1.0"
+                       Band4="1.0" Band5="6.0" Band6="7900.0" Band7="0.300000011920929"
                        Band8="1.0" Band9="0.0" Band10="0.0" Band11="100.0" Band12="0.4000000059604645"
                        Band13="1.0" Band14="2.0" Band15="1.800000548362732" Band16="5165.0654296875"
-                       Band17="0.4000000059604645" Band18="1.0" Band19="3.0" FFTEnabled="0">
+                       Band17="0.4000000059604645" Band18="1.0" Band19="3.0" Band20="0.0"
+                       Band21="60.0" Band22="0.75" Band23="1.0" Band24="1.0" Band25="-2.000000238418579"
+                       Band26="120.0" Band27="1.0" Band28="1.0" Band29="4.0" FFTEnabled="0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
@@ -1524,12 +1530,14 @@
               </ChildProcessors>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="synthWTRightB_toneAdjust" Bypassed="0" NumFilters="4"
-                       Band0="2.039999723434448" Band1="28.00925254821777" Band2="0.75"
-                       Band3="1.0" Band4="1.0" Band5="6.0" Band6="7900.0" Band7="0.300000011920929"
-                       Band8="1.0" Band9="0.0" Band10="0.0" Band11="100.0" Band12="0.4000000059604645"
+            <Processor Type="CurveEq" ID="synthWTRightB_toneAdjust" Bypassed="0" NumFilters="6"
+                       Band0="0.0" Band1="60.0" Band2="0.75" Band3="1.0" Band4="1.0"
+                       Band5="6.0" Band6="7900.0" Band7="0.300000011920929" Band8="1.0"
+                       Band9="0.0" Band10="0.0" Band11="100.0" Band12="0.4000000059604645"
                        Band13="1.0" Band14="2.0" Band15="1.800000548362732" Band16="5165.0654296875"
-                       Band17="0.4000000059604645" Band18="1.0" Band19="3.0" FFTEnabled="0">
+                       Band17="0.4000000059604645" Band18="1.0" Band19="3.0" Band20="0.0"
+                       Band21="60.0" Band22="0.75" Band23="1.0" Band24="1.0" Band25="-2.000000238418579"
+                       Band26="120.0" Band27="1.0" Band28="1.0" Band29="4.0" FFTEnabled="0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
