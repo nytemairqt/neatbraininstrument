@@ -19,6 +19,31 @@ inline function createButton(id, x, y, width, height, text, saveInPreset, callba
 	return b;
 }
 
+inline function createComboBox(id, x, y, width, height, text, saveInPreset, callback, items, visible, parent)
+{
+	local c = Content.addComboBox(id, x, y);
+	
+	c.set("width", width);
+	c.set("height", height);
+	c.set("text", text);
+	c.set("saveInPreset", saveInPreset);
+	c.set("visible", visible);
+	c.setControlCallback(callback);
+	
+	c.set("items", "");
+	
+	for (item in items)
+		c.addItem(item);
+	
+	
+	
+	Content.setPropertiesFromJSON(id, {
+	          parentComponent: parent,
+		});
+	
+	return c;
+}
+
 inline function createKnob(id, x, y, width, height, text, saveInPreset, callback, minValue, maxValue, stepSize, defaultValue, parent, isParameter)
 {
 	local k = Content.addKnob(id, x, y);

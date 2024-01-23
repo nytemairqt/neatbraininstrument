@@ -2,7 +2,7 @@ include("NEATBrainBoilerplate/NEATBrainLookAndFeel.js");
 include("NEATBrainBoilerplate/NEATBrainModules.js");
 include("NEATBrainBoilerplate/NEATBrainUIConstructors.js");
 
-
+const PARTIAL_PROFILES = ["A", "B", "C"];
 
 
 /* Partials */
@@ -58,6 +58,45 @@ inline function onknbPartialReleaseControl(component, value)
 	synthWTRightB_gainAHDSR.setAttribute(synthWTRightB_gainAHDSR.Release, value);
 }
 
+// Hidden Combo Box
+inline function oncmbPartialProfileControl(component, value)
+{
+	local offset = 4;
+
+	synthWTLeftA.setAttribute(synthWTLeftA.LoadedBankIndex, value); 
+	synthWTRightA.setAttribute(synthWTRightA.LoadedBankIndex, value + offset); 
+	synthWTLeftB.setAttribute(synthWTLeftB.LoadedBankIndex, value + 1); 
+	synthWTRightB.setAttribute(synthWTRightB.LoadedBankIndex, value + offset + 1); 
+	pnlProfileModes.repaintImmediately();	
+}
+
+// Profile Previous
+inline function onbtnPartialPrevControl(component, value)
+{	
+	if (value)
+	{
+		if (cmbPartialProfile.getValue() == 1)
+			cmbPartialProfile.setValue(PARTIAL_PROFILES.length);
+		else
+			cmbPartialProfile.setValue(cmbPartialProfile.getValue() - 1);			
+		cmbPartialProfile.changed();
+	}
+	
+}
+
+// Profile Next
+inline function onbtnPartialNextControl(component, value)
+{
+	if (value)
+	{
+		if (cmbPartialProfile.getValue() < PARTIAL_PROFILES.length)
+			cmbPartialProfile.setValue(cmbPartialProfile.getValue() + 1);
+		else
+			cmbPartialProfile.setValue(1);			
+		cmbPartialProfile.changed();
+	}
+}
+
 // Create UI Elements
 
 const lblModes = createLabel("lblModes", -10, -6, 128, 64, 24, "Modes_", "pnlBody", Colours.grey, "centred");
@@ -67,6 +106,12 @@ const lblPartialGain = createLabel("lblPartialGain", 240, 0, 128, 64, 14, "VOL",
 const knbPartialGain = createKnob("knbPartialGain", lblPartialGain.get("x") + 140, lblPartialGain.get("y") + 25, 100, 16, "Partial Gain", true, onknbPartialGainControl, 0, 1, 0.01, .75, "pnlBody", true);
 
 knbPartialGain.setLocalLookAndFeel(LookAndFeel.horizontalSlider);
+
+
+const cmbPartialProfile = createComboBox("cmbPartialProfiel", 0, 0, 10, 10, "profile", true, oncmbPartialProfileControl, PARTIAL_PROFILES, false, "pnlBody");
+
+const btnPartialProfilePrev = createButton("btnPartialProfilePrev", 86, 205, 40, 40, "Prev", false, onbtnPartialPrevControl, true, true, "pnlBody");
+const btnPartialProfileNext = createButton("btnPartialProfileNext", btnPartialProfilePrev.get("x") + 280, 205, 40, 40, "Prev", false, onbtnPartialNextControl, true, true, "pnlBody");
 
 const knbPartialAttack = createKnob("knbPartialAttack", 75, lblPartialADSR.get("y") + 30, 48, 48, "P Attack", true, onknbPartialAttackControl, 5, 1000, 1.0, 5, "pnlBody", true);
 const knbPartialDecay = createKnob("knbPartialDecay", knbPartialAttack.get("x") + 100, lblPartialADSR.get("y") + 30, 48, 48, "P Decay", true, onknbPartialDecayControl, 500, 20000, 1.0, 15000, "pnlBody", true);
@@ -452,6 +497,8 @@ pnlShowInfoPopup.setPaintRoutine(function(g)
 /* Custom LAF */
 
 btnShowAdvancedPanel.setLocalLookAndFeel(LAFButtonShowAdvancedPanel);
+btnPartialProfilePrev.setLocalLookAndFeel(LAFButtonPrev);
+btnPartialProfileNext.setLocalLookAndFeel(LAFButtonNext);
 
 pnlAdvanced.setPaintRoutine(function(g)
 {

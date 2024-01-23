@@ -4,6 +4,7 @@ Content.makeFrontInterface(1000, 710);
 
 const MEMORYNAME = "Achromic";
 const MEMORYTYPE = "Guitar";
+const NUMPROFILES = 3;
 
 /* Instantiate Rhapsody UI */
 

@@ -3,6 +3,8 @@ const LAFButtonShowAdvancedPanel = Content.createLocalLookAndFeel();
 const LAFButtonStiffness = Content.createLocalLookAndFeel();
 const LAFButtonRandomRatios = Content.createLocalLookAndFeel();
 const LAFButtonResetRatios = Content.createLocalLookAndFeel();
+const LAFButtonPrev = Content.createLocalLookAndFeel();
+const LAFButtonNext = Content.createLocalLookAndFeel();
 
 const pnlBody = Content.getComponent("pnlBody");
 
@@ -61,8 +63,6 @@ const miscTextAdvanced = ["A", "d", "v", "a", "n", "c", "e", "d"];
 const miscTextAdvancedOffset = 10;
 
 // Button Show Advanced Panel
-
-
 LAFButtonShowAdvancedPanel.registerFunction("drawToggleButton", function(g, obj)
 {
 	g.setFont("bold", 22);
@@ -118,7 +118,23 @@ pnlBody.setPaintRoutine(function(g)
 	g.drawLine(this.getWidth() - 10, this.getWidth() - 10, this.getHeight() - 44, this.getHeight() - 54, 1.5);
 });
 
+// Prev Profile
+LAFButtonPrev.registerFunction("drawToggleButton", function(g, obj)
+{	
+	var offset = 10;
+	g.setColour(obj.over ? 0xFFE2E3F3 : Colours.grey);
+	g.drawLine(obj.area[2], offset, obj.area[3] / 2, obj.area[3] / 2, 8.0);
+	g.fillTriangle([0, offset, offset * 2, offset * 2], Math.toRadians(270));
+});
 
+// Next Profile
+LAFButtonNext.registerFunction("drawToggleButton", function(g, obj)
+{	
+	var offset = 10;
+	g.setColour(obj.over ? 0xFFE2E3F3 : Colours.grey);
+	g.drawLine(obj.area[2] - offset, 0, obj.area[3] / 2, obj.area[3] / 2, 8.0);
+	g.fillTriangle([obj.area[2] - (offset * 2), offset, offset * 2, offset * 2], Math.toRadians(90));
+});
 
 
 // Panel Images
@@ -136,7 +152,7 @@ pnlProfileModes.setPaintRoutine(function(g)
 	var xOffset = 90;
 	g.setColour(Colours.lightgrey);
 	
-	switch (TESTVALUE) // replace with combobox value
+	switch (cmbPartialProfile.getValue()) // replace with combobox value
 	{
 		case 1:
 			p.loadFromData(pathProfileA);

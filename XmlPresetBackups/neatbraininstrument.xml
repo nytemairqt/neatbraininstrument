@@ -30,6 +30,7 @@
             <Control type="ScriptSlider" id="knbToneBrightness" value="0.300000011920929"/>
             <Control type="ScriptSlider" id="knbToneChorus" value="0.25"/>
             <Control type="ScriptSlider" id="knbToneClamp" value="0.300000011920929"/>
+            <Control type="ScriptComboBox" id="cmbPartialProfiel" value="3"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-6.0"/>
             <Control type="ScriptSlider" id="knbMasterPan" value="0.0"/>
             <Control type="ScriptSlider" id="knbCoarseDetune" value="0.0"/>
@@ -713,7 +714,7 @@
     </Processor>
     <Processor Type="WavetableSynth" ID="synthWTRightA" Bypassed="0" Gain="1.0"
                Balance="1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               HqMode="1.0" LoadedBankIndex="5.0" TableIndexValue="0.4699999988079071"
+               HqMode="1.0" LoadedBankIndex="7.0" TableIndexValue="0.4699999988079071"
                RefreshMipMap="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -1297,7 +1298,7 @@
     </Processor>
     <Processor Type="WavetableSynth" ID="synthWTRightB" Bypassed="0" Gain="1.0"
                Balance="1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               HqMode="1.0" LoadedBankIndex="6.0" TableIndexValue="0.4799999892711639"
+               HqMode="1.0" LoadedBankIndex="8.0" TableIndexValue="0.4799999892711639"
                RefreshMipMap="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">

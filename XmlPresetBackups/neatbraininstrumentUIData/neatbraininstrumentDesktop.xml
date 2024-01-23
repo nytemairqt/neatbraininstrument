@@ -188,6 +188,15 @@
                  width="300.0" height="340.0"/>
       <Component type="ScriptPanel" id="pnlProfilePartials" x="595.0" y="60.0"
                  parentComponent="pnlBody" width="300.0" height="340.0"/>
+      <Component type="ScriptButton" id="btnPartialProfilePrev" x="86" y="205"
+                 width="40" height="40" text="Prev" saveInPreset="0" isMomentary="1"
+                 parentComponent="pnlBody"/>
+      <Component type="ScriptButton" id="btnPartialProfileNext" x="366" y="205"
+                 width="40" height="40" text="Prev" saveInPreset="0" isMomentary="1"
+                 parentComponent="pnlBody"/>
+      <Component type="ScriptComboBox" id="cmbPartialProfiel" x="0" y="0" width="10"
+                 height="10" text="profile" visible="0" parentComponent="pnlBody"
+                 items="&#10;A&#10;B&#10;C" max="3"/>
     </Component>
     <Component type="ScriptPanel" id="pnlStatusBar" x="5.0" y="585.0" text=""
                width="990.0" height="39.0" bgColour="0" itemColour="4281282356"
