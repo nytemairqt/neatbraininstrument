@@ -67,7 +67,7 @@ inline function oncmbPartialProfileControl(component, value)
 	synthWTRightA.setAttribute(synthWTRightA.LoadedBankIndex, value + offset); 
 	synthWTLeftB.setAttribute(synthWTLeftB.LoadedBankIndex, value + 1); 
 	synthWTRightB.setAttribute(synthWTRightB.LoadedBankIndex, value + offset + 1); 
-	pnlProfileModes.repaintImmediately();	
+	pnlProfilePartial.repaintImmediately();	
 }
 
 // Profile Previous
@@ -108,7 +108,7 @@ const knbPartialGain = createKnob("knbPartialGain", lblPartialGain.get("x") + 14
 knbPartialGain.setLocalLookAndFeel(LookAndFeel.horizontalSlider);
 
 
-const cmbPartialProfile = createComboBox("cmbPartialProfiel", 0, 0, 10, 10, "profile", true, oncmbPartialProfileControl, PARTIAL_PROFILES, false, "pnlBody");
+const cmbPartialProfile = createComboBox("cmbPartialProfile", 0, 0, 10, 10, "profile", true, oncmbPartialProfileControl, PARTIAL_PROFILES, false, "pnlBody");
 
 const btnPartialProfilePrev = createButton("btnPartialProfilePrev", 86, 205, 40, 40, "Prev", false, onbtnPartialPrevControl, true, true, "pnlBody");
 const btnPartialProfileNext = createButton("btnPartialProfileNext", btnPartialProfilePrev.get("x") + 280, 205, 40, 40, "Prev", false, onbtnPartialNextControl, true, true, "pnlBody");
@@ -162,6 +162,48 @@ inline function onknbResidueReleaseControl(component, value)
 	samplerResidueRight_gainAHDSR.setAttribute(samplerResidueRight_gainAHDSR.Release, value);
 }
 
+// Hidden Combo Box
+inline function oncmbResidueProfileControl(component, value)
+{
+	local offset = 4;
+	
+	pnlProfileResidue.repaintImmediately();
+
+	/*
+	synthWTLeftA.setAttribute(synthWTLeftA.LoadedBankIndex, value); 
+	synthWTRightA.setAttribute(synthWTRightA.LoadedBankIndex, value + offset); 
+	synthWTLeftB.setAttribute(synthWTLeftB.LoadedBankIndex, value + 1); 
+	synthWTRightB.setAttribute(synthWTRightB.LoadedBankIndex, value + offset + 1); 
+	*/
+	//pnlProfileModes.repaintImmediately();	
+}
+
+// Profile Previous
+inline function onbtnResiduePrevControl(component, value)
+{	
+	if (value)
+	{
+		if (cmbResidueProfile.getValue() == 1)
+			cmbResidueProfile.setValue(PARTIAL_PROFILES.length);
+		else
+			cmbResidueProfile.setValue(cmbResidueProfile.getValue() - 1);			
+		cmbResidueProfile.changed();
+	}	
+}
+
+// Profile Next
+inline function onbtnResidueNextControl(component, value)
+{
+	if (value)
+	{
+		if (cmbResidueProfile.getValue() < PARTIAL_PROFILES.length)
+			cmbResidueProfile.setValue(cmbResidueProfile.getValue() + 1);
+		else
+			cmbResidueProfile.setValue(1);			
+		cmbResidueProfile.changed();
+	}
+}
+
 // Create UI Elements
 
 const lblResidue = createLabel("lblResidue", 483, -6, 128, 64, 24, "Residue_", "pnlBody", Colours.grey, "centred");
@@ -169,6 +211,11 @@ const lblResidueGain = createLabel("lblResidueGain", 740, 0, 128, 64, 14, "VOL",
 const knbResidueGain = createKnob("knbResidueGain", lblResidueGain.get("x") + 140, lblResidueGain.get("y") + 25, 100, 16, "Residue Gain", true, onknbResidueGainControl, 0, 1, 0.01, .75, "pnlBody", true);
 
 knbResidueGain.setLocalLookAndFeel(LookAndFeel.horizontalSlider);
+
+const cmbResidueProfile = createComboBox("cmbResidueProfile", 0, 0, 10, 10, "profile", true, oncmbResidueProfileControl, PARTIAL_PROFILES, false, "pnlBody");
+
+const btnResidueProfilePrev = createButton("btnResidueProfilePrev", 586, 205, 40, 40, "Prev", false, onbtnResiduePrevControl, true, true, "pnlBody");
+const btnResidueProfileNext = createButton("btnResidueProfileNext", btnResidueProfilePrev.get("x") + 280, 205, 40, 40, "Prev", false, onbtnResidueNextControl, true, true, "pnlBody");
 
 const lblResidueADSR = createLabel("lblResidueADSR", 467, lblPartialADSR.get("y"), 128, 32, 20, "Env", "pnlBody", Colours.grey, "centred");
 

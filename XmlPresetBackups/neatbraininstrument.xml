@@ -30,7 +30,8 @@
             <Control type="ScriptSlider" id="knbToneBrightness" value="0.8999999761581421"/>
             <Control type="ScriptSlider" id="knbToneChorus" value="0.119999997317791"/>
             <Control type="ScriptSlider" id="knbToneClamp" value="0.0"/>
-            <Control type="ScriptComboBox" id="cmbPartialProfiel" value="2.0"/>
+            <Control type="ScriptComboBox" id="cmbResidueProfile" value="1"/>
+            <Control type="ScriptComboBox" id="cmbPartialProfile" value="1.0"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-6.0"/>
             <Control type="ScriptSlider" id="knbMasterPan" value="0.0"/>
             <Control type="ScriptSlider" id="knbCoarseDetune" value="0.0"/>
@@ -443,7 +444,7 @@
     </Processor>
     <Processor Type="WavetableSynth" ID="synthWTLeftA" Bypassed="0" Gain="1.0"
                Balance="-1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               HqMode="1.0" LoadedBankIndex="2.0" TableIndexValue="0.3799999952316284"
+               HqMode="1.0" LoadedBankIndex="1.0" TableIndexValue="0.3799999952316284"
                RefreshMipMap="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -700,7 +701,7 @@
     </Processor>
     <Processor Type="WavetableSynth" ID="synthWTRightA" Bypassed="0" Gain="1.0"
                Balance="1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               HqMode="1.0" LoadedBankIndex="6.0" TableIndexValue="0.4699999988079071"
+               HqMode="1.0" LoadedBankIndex="5.0" TableIndexValue="0.4699999988079071"
                RefreshMipMap="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -823,7 +824,7 @@
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="synthWTRightA_fxPalmMute" Bypassed="0"
-                       Gain="0.0" Frequency="20000.0" Q="0.5" Mode="6.0" Quality="1.016143872e9"
+                       Gain="0.0" Frequency="20000.0" Q="0.5" Mode="6.0" Quality="0.0"
                        BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
@@ -962,7 +963,7 @@
     </Processor>
     <Processor Type="WavetableSynth" ID="synthWTLeftB" Bypassed="0" Gain="1.0"
                Balance="-1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               HqMode="1.0" LoadedBankIndex="3.0" TableIndexValue="0.4000000059604645"
+               HqMode="1.0" LoadedBankIndex="2.0" TableIndexValue="0.4000000059604645"
                RefreshMipMap="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -1080,7 +1081,7 @@
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="synthWTLeftB_fxPalmMute" Bypassed="0"
-                       Gain="0.0" Frequency="20000.0" Q="0.5" Mode="6.0" Quality="-1.143614336e9"
+                       Gain="0.0" Frequency="20000.0" Q="0.5" Mode="6.0" Quality="5.2626208e7"
                        BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
@@ -1219,7 +1220,7 @@
     </Processor>
     <Processor Type="WavetableSynth" ID="synthWTRightB" Bypassed="0" Gain="1.0"
                Balance="1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               HqMode="1.0" LoadedBankIndex="7.0" TableIndexValue="0.4799999892711639"
+               HqMode="1.0" LoadedBankIndex="6.0" TableIndexValue="0.4799999892711639"
                RefreshMipMap="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -1342,7 +1343,7 @@
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
             <Processor Type="PolyphonicFilter" ID="synthWTRightB_fxPalmMute" Bypassed="0"
-                       Gain="0.0" Frequency="20000.0" Q="0.5" Mode="6.0" Quality="0.0"
+                       Gain="0.0" Frequency="20000.0" Q="0.5" Mode="6.0" Quality="-1.131345408e9"
                        BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"

@@ -139,20 +139,20 @@ LAFButtonNext.registerFunction("drawToggleButton", function(g, obj)
 
 // Panel Images
 
-const var pnlProfileModes = Content.getComponent("pnlProfileModes");
-const var pnlProfilePartials = Content.getComponent("pnlProfilePartials");
+const var pnlProfilePartial = Content.getComponent("pnlProfilePartial");
+const var pnlProfileResidue = Content.getComponent("pnlProfileResidue");
 
 const TESTVALUE = 1;
 
 //const pnlPath = Content.createPath();
 
-pnlProfileModes.setPaintRoutine(function(g)
+pnlProfilePartial.setPaintRoutine(function(g)
 {
 	var p = Content.createPath();
-	var xOffset = 90;
+	var x = 90;
 	g.setColour(Colours.grey);
 	
-	switch (cmbPartialProfile.getValue()) // replace with combobox value
+	switch (cmbPartialProfile.getValue())
 	{
 		case 1:
 			p.loadFromData(pathProfileA);
@@ -165,5 +165,28 @@ pnlProfileModes.setPaintRoutine(function(g)
 			break;
 	}
 	
-	g.drawPath(p, [xOffset, 0, this.getWidth() - (2 * xOffset), this.getHeight()], 1.0);
+	g.drawPath(p, [x, 0, this.getWidth() - (2 * x), this.getHeight()], 1.0);
+});
+
+pnlProfileResidue.setPaintRoutine(function(g)
+{
+	var p = Content.createPath();
+	var x = 50;
+	var y = 130;
+	g.setColour(Colours.grey);
+	
+	switch (cmbResidueProfile.getValue())
+	{
+		case 1:
+			p.loadFromData(pathProfileAPkp);
+			break;
+		case 2:
+			p.loadFromData(pathProfileBPkp);
+			break;		
+		case 3:
+			p.loadFromData(pathProfileCPkp);
+			break;
+	}
+	
+	g.drawPath(p, [x, y, this.getWidth() - (2 * x), this.getHeight() - (2 * y)], 1.0);
 });
