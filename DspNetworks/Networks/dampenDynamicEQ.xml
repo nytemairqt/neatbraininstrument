@@ -6,7 +6,7 @@
     <Nodes>
       <Node ID="split" FactoryPath="container.split" Bypassed="0">
         <Nodes>
-          <Node ID="dry" FactoryPath="container.chain" Bypassed="0" Folded="1">
+          <Node ID="dry" FactoryPath="container.chain" Bypassed="0">
             <Nodes>
               <Node ID="linkwitzriley" FactoryPath="filters.linkwitzriley" Bypassed="0">
                 <ComplexData>
@@ -16,7 +16,7 @@
                 </ComplexData>
                 <Parameters>
                   <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
-                             ID="Frequency" Value="1500.0"/>
+                             ID="Frequency" Automated="1"/>
                   <Parameter MinValue="0.300000011920929" MaxValue="9.899999618530273" SkewFactor="0.2647178173065186"
                              ID="Q" Value="1.0"/>
                   <Parameter MinValue="-18.0" MaxValue="18.0" ID="Gain" Value="0.0"/>
@@ -49,7 +49,7 @@
                 </ComplexData>
                 <Parameters>
                   <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
-                             ID="Frequency" Value="1500.0"/>
+                             ID="Frequency" Automated="1"/>
                   <Parameter MinValue="0.300000011920929" MaxValue="9.899999618530273" SkewFactor="0.2647178173065186"
                              ID="Q" Value="0.9586220580334008"/>
                   <Parameter MinValue="-18.0" MaxValue="18.0" ID="Gain" Value="0.0"/>
@@ -94,7 +94,7 @@
                 </ModulationTargets>
                 <Parameters>
                   <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
-                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Automated="1"/>
+                  <Parameter MinValue="0.0" MaxValue="3.0" ID="Multiply" Automated="1"/>
                   <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Value="0.0"/>
                 </Parameters>
               </Node>
@@ -111,9 +111,15 @@
       </Node>
     </Nodes>
     <Parameters>
-      <Parameter ID="Dampen" MinValue="0.0" MaxValue="1.0" Value="0.0">
+      <Parameter ID="Dampen" MinValue="0.0" MaxValue="1.0" Value="0.432">
         <Connections>
           <Connection NodeId="pma" ParameterId="Multiply"/>
+        </Connections>
+      </Parameter>
+      <Parameter ID="Crossover" MinValue="0.0" MaxValue="1.0" Value="0.66">
+        <Connections>
+          <Connection NodeId="linkwitzriley" ParameterId="Frequency"/>
+          <Connection NodeId="linkwitzriley1" ParameterId="Frequency"/>
         </Connections>
       </Parameter>
     </Parameters>

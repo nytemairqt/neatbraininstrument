@@ -699,7 +699,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="WavetableSynth" ID="synthWTRightA" Bypassed="1" Gain="1.0"
+    <Processor Type="WavetableSynth" ID="synthWTRightA" Bypassed="0" Gain="1.0"
                Balance="1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                HqMode="1.0" LoadedBankIndex="5.0" TableIndexValue="0.4699999988079071"
                RefreshMipMap="0.0">
@@ -961,7 +961,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="WavetableSynth" ID="synthWTLeftB" Bypassed="1" Gain="1.0"
+    <Processor Type="WavetableSynth" ID="synthWTLeftB" Bypassed="0" Gain="1.0"
                Balance="-1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                HqMode="1.0" LoadedBankIndex="2.0" TableIndexValue="0.4000000059604645"
                RefreshMipMap="0.0">
@@ -1218,7 +1218,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="WavetableSynth" ID="synthWTRightB" Bypassed="1" Gain="1.0"
+    <Processor Type="WavetableSynth" ID="synthWTRightB" Bypassed="0" Gain="1.0"
                Balance="1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                HqMode="1.0" LoadedBankIndex="6.0" TableIndexValue="0.4799999892711639"
                RefreshMipMap="0.0">
