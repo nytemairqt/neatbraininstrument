@@ -11,7 +11,7 @@ const synthWTLeftA_pitchAHDSR = Synth.getModulator("synthWTLeftA_pitchAHDSR");
 const synthWTLeftA_pitchRandom = Synth.getModulator("synthWTLeftA_pitchRandom");
 const synthWTLeftA_pitchLFO = Synth.getModulator("synthWTLeftA_pitchLFO");
 const synthWTLeftA_fxDampen = Synth.getEffect("synthWTLeftA_fxDampen");
-const synthWTLeftA_fxDampenAHDSR = Synth.getModulator("synthWTLeftA_fxDampenAHDSR");
+//const synthWTLeftA_fxDampenAHDSR = Synth.getModulator("synthWTLeftA_fxDampenAHDSR");
 
 const synthWTLeftB = Synth.getChildSynth("synthWTLeftB");
 const synthWTLeftB_gainAHDSR = Synth.getModulator("synthWTLeftB_gainAHDSR");
@@ -22,7 +22,7 @@ const synthWTLeftB_pitchAHDSR = Synth.getModulator("synthWTLeftB_pitchAHDSR");
 const synthWTLeftB_pitchRandom = Synth.getModulator("synthWTLeftB_pitchRandom");
 const synthWTLeftB_pitchLFO = Synth.getModulator("synthWTLeftB_pitchLFO");
 const synthWTLeftB_fxDampen = Synth.getEffect("synthWTLeftB_fxDampen"); 
-const synthWTLeftB_fxDampenAHDSR = Synth.getModulator("synthWTLeftB_fxDampenAHDSR");
+//const synthWTLeftB_fxDampenAHDSR = Synth.getModulator("synthWTLeftB_fxDampenAHDSR");
 
 // Right Wavetables & Modulators
 
@@ -35,7 +35,7 @@ const synthWTRightA_pitchAHDSR = Synth.getModulator("synthWTRightA_pitchAHDSR");
 const synthWTRightA_pitchRandom = Synth.getModulator("synthWTRightA_pitchRandom");
 const synthWTRightA_pitchLFO = Synth.getModulator("synthWTRightA_pitchLFO");
 const synthWTRightA_fxDampen = Synth.getEffect("synthWTRightA_fxDampen");
-const synthWTRightA_fxDampenAHDSR = Synth.getModulator("synthWTRightA_fxDampenAHDSR");
+//const synthWTRightA_fxDampenAHDSR = Synth.getModulator("synthWTRightA_fxDampenAHDSR");
 
 const synthWTRightB = Synth.getChildSynth("synthWTRightB");
 const synthWTRightB_gainAHDSR = Synth.getModulator("synthWTRightB_gainAHDSR");
@@ -46,7 +46,7 @@ const synthWTRightB_pitchAHDSR = Synth.getModulator("synthWTRightB_pitchAHDSR");
 const synthWTRightB_pitchRandom = Synth.getModulator("synthWTRightB_pitchRandom");
 const synthWTRightB_pitchLFO = Synth.getModulator("synthWTRightB_pitchLFO");
 const synthWTRightB_fxDampen = Synth.getEffect("synthWTRightB_fxDampen");
-const synthWTRightB_fxDampenAHDSR = Synth.getModulator("synthWTRightB_fxDampenAHDSR");
+//const synthWTRightB_fxDampenAHDSR = Synth.getModulator("synthWTRightB_fxDampenAHDSR");
 
 
 

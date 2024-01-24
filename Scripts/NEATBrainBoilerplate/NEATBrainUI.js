@@ -67,7 +67,7 @@ inline function oncmbPartialProfileControl(component, value)
 	synthWTRightA.setAttribute(synthWTRightA.LoadedBankIndex, value + offset); 
 	synthWTLeftB.setAttribute(synthWTLeftB.LoadedBankIndex, value + 1); 
 	synthWTRightB.setAttribute(synthWTRightB.LoadedBankIndex, value + offset + 1); 
-	pnlProfileModes.repaint();	
+	pnlProfileModes.repaintImmediately();	
 }
 
 // Profile Previous
@@ -271,6 +271,7 @@ inline function onknbPitchLFOControl(component, value)
 // Tone Dampen
 inline function onknbToneDampenControl(component, value)
 {	
+	/*
 		// Low Pass Frequency
 		local min = 4000;
 		local max = 10000;
@@ -281,11 +282,19 @@ inline function onknbToneDampenControl(component, value)
 		synthWTRightA_fxDampen.setAttribute(synthWTRightA_fxDampen.Frequency, f);		
 		synthWTLeftB_fxDampen.setAttribute(synthWTLeftB_fxDampen.Frequency, f);		
 		synthWTRightB_fxDampen.setAttribute(synthWTRightB_fxDampen.Frequency, f);		
+	*/
+	
+	synthWTLeftA_fxDampen.setAttribute(synthWTLeftA_fxDampen.Dampen, value);
+	synthWTRightA_fxDampen.setAttribute(synthWTRightA_fxDampen.Dampen, value);
+	synthWTLeftB_fxDampen.setAttribute(synthWTLeftB_fxDampen.Dampen, value);
+	synthWTRightB_fxDampen.setAttribute(synthWTRightB_fxDampen.Dampen, value);
 }
 
 // Tone Decay 
 inline function onknbToneClampControl(component, value)
 {
+	/*
+
 	local min = 200;
 	local max = 2000;
 	
@@ -295,6 +304,7 @@ inline function onknbToneClampControl(component, value)
 	synthWTRightA_fxDampenAHDSR.setAttribute(synthWTRightA_fxDampenAHDSR.Decay, d);
 	synthWTLeftB_fxDampenAHDSR.setAttribute(synthWTLeftB_fxDampenAHDSR.Decay, d);
 	synthWTRightB_fxDampenAHDSR.setAttribute(synthWTRightB_fxDampenAHDSR.Decay, d);
+	*/
 }
 
 // Chorus

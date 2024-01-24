@@ -150,7 +150,7 @@ pnlProfileModes.setPaintRoutine(function(g)
 {
 	var p = Content.createPath();
 	var xOffset = 90;
-	g.setColour(Colours.lightgrey);
+	g.setColour(Colours.grey);
 	
 	switch (cmbPartialProfile.getValue()) // replace with combobox value
 	{
@@ -161,7 +161,7 @@ pnlProfileModes.setPaintRoutine(function(g)
 			p.loadFromData(pathProfileB);
 			break;		
 		case 3:
-			p.loadFromData(pathProfileC);
+			p.loadFromData(pathProfileD);
 			break;
 	}
 	
