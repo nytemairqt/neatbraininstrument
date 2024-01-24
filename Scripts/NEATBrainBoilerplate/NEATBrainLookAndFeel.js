@@ -121,18 +121,24 @@ pnlBody.setPaintRoutine(function(g)
 // Prev Profile
 LAFButtonPrev.registerFunction("drawToggleButton", function(g, obj)
 {	
-	var offset = 10;
+	var offset = obj.area[2] / 4;
+	var lineThickness = 5;
+	
 	g.setColour(obj.over ? 0xFFE2E3F3 : Colours.grey);
-	g.drawLine(obj.area[2], offset, obj.area[3] / 2, obj.area[3] / 2, 8.0);
+	
+	g.drawLine(obj.area[2], offset, obj.area[3] / 2, obj.area[3] / 2, lineThickness);
+	
 	g.fillTriangle([0, offset, offset * 2, offset * 2], Math.toRadians(270));
 });
 
 // Next Profile
 LAFButtonNext.registerFunction("drawToggleButton", function(g, obj)
 {	
-	var offset = 10;
+	var offset = obj.area[2] / 4;
+	var lineThickness = 5;
+	
 	g.setColour(obj.over ? 0xFFE2E3F3 : Colours.grey);
-	g.drawLine(obj.area[2] - offset, 0, obj.area[3] / 2, obj.area[3] / 2, 8.0);
+	g.drawLine(obj.area[2] - offset, 0, obj.area[3] / 2, obj.area[3] / 2, lineThickness);
 	g.fillTriangle([obj.area[2] - (offset * 2), offset, offset * 2, offset * 2], Math.toRadians(90));
 });
 

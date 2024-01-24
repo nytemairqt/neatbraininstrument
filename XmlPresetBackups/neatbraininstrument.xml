@@ -30,7 +30,7 @@
             <Control type="ScriptSlider" id="knbToneBrightness" value="0.8999999761581421"/>
             <Control type="ScriptSlider" id="knbToneChorus" value="0.119999997317791"/>
             <Control type="ScriptSlider" id="knbToneClamp" value="0.0"/>
-            <Control type="ScriptComboBox" id="cmbResidueProfile" value="1"/>
+            <Control type="ScriptComboBox" id="cmbResidueProfile" value="1.0"/>
             <Control type="ScriptComboBox" id="cmbPartialProfile" value="1.0"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-6.0"/>
             <Control type="ScriptSlider" id="knbMasterPan" value="0.0"/>

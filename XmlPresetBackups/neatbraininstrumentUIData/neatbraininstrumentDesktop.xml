@@ -188,20 +188,20 @@
         <Component type="ScriptPanel" id="lblToneClamp" x="136" y="466" width="128"
                    height="32" text="Clamp" parentComponent="pnlAdvanced"/>
       </Component>
-      <Component type="ScriptButton" id="btnPartialProfilePrev" x="86" y="205"
-                 width="40" height="40" text="Prev" saveInPreset="0" isMomentary="1"
+      <Component type="ScriptButton" id="btnPartialProfilePrev" x="66" y="205"
+                 width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
                  parentComponent="pnlBody"/>
-      <Component type="ScriptButton" id="btnPartialProfileNext" x="366" y="205"
-                 width="40" height="40" text="Prev" saveInPreset="0" isMomentary="1"
+      <Component type="ScriptButton" id="btnPartialProfileNext" x="386" y="205"
+                 width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
                  parentComponent="pnlBody"/>
       <Component type="ScriptComboBox" id="cmbResidueProfile" x="0" y="0" width="10"
                  height="10" text="profile" visible="0" parentComponent="pnlBody"
                  items="&#10;A&#10;B&#10;C" max="3"/>
-      <Component type="ScriptButton" id="btnResidueProfilePrev" x="586" y="205"
-                 width="40" height="40" text="Prev" saveInPreset="0" isMomentary="1"
+      <Component type="ScriptButton" id="btnResidueProfilePrev" x="566" y="205"
+                 width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
                  parentComponent="pnlBody"/>
-      <Component type="ScriptButton" id="btnResidueProfileNext" x="866" y="205"
-                 width="40" height="40" text="Prev" saveInPreset="0" isMomentary="1"
+      <Component type="ScriptButton" id="btnResidueProfileNext" x="846" y="205"
+                 width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
                  parentComponent="pnlBody"/>
       <Component type="ScriptComboBox" id="cmbPartialProfile" x="0" y="0" width="10"
                  height="10" text="profile" visible="0" parentComponent="pnlBody"

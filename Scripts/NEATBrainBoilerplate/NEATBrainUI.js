@@ -110,8 +110,8 @@ knbPartialGain.setLocalLookAndFeel(LookAndFeel.horizontalSlider);
 
 const cmbPartialProfile = createComboBox("cmbPartialProfile", 0, 0, 10, 10, "profile", true, oncmbPartialProfileControl, PARTIAL_PROFILES, false, "pnlBody");
 
-const btnPartialProfilePrev = createButton("btnPartialProfilePrev", 86, 205, 40, 40, "Prev", false, onbtnPartialPrevControl, true, true, "pnlBody");
-const btnPartialProfileNext = createButton("btnPartialProfileNext", btnPartialProfilePrev.get("x") + 280, 205, 40, 40, "Prev", false, onbtnPartialNextControl, true, true, "pnlBody");
+const btnPartialProfilePrev = createButton("btnPartialProfilePrev", 66, 205, 30, 30, "Prev", false, onbtnPartialPrevControl, true, true, "pnlBody");
+const btnPartialProfileNext = createButton("btnPartialProfileNext", btnPartialProfilePrev.get("x") + 320, 205, 30, 30, "Prev", false, onbtnPartialNextControl, true, true, "pnlBody");
 
 const knbPartialAttack = createKnob("knbPartialAttack", 75, lblPartialADSR.get("y") + 30, 48, 48, "P Attack", true, onknbPartialAttackControl, 5, 1000, 1.0, 5, "pnlBody", true);
 const knbPartialDecay = createKnob("knbPartialDecay", knbPartialAttack.get("x") + 100, lblPartialADSR.get("y") + 30, 48, 48, "P Decay", true, onknbPartialDecayControl, 500, 20000, 1.0, 15000, "pnlBody", true);
@@ -214,8 +214,8 @@ knbResidueGain.setLocalLookAndFeel(LookAndFeel.horizontalSlider);
 
 const cmbResidueProfile = createComboBox("cmbResidueProfile", 0, 0, 10, 10, "profile", true, oncmbResidueProfileControl, PARTIAL_PROFILES, false, "pnlBody");
 
-const btnResidueProfilePrev = createButton("btnResidueProfilePrev", 586, 205, 40, 40, "Prev", false, onbtnResiduePrevControl, true, true, "pnlBody");
-const btnResidueProfileNext = createButton("btnResidueProfileNext", btnResidueProfilePrev.get("x") + 280, 205, 40, 40, "Prev", false, onbtnResidueNextControl, true, true, "pnlBody");
+const btnResidueProfilePrev = createButton("btnResidueProfilePrev", 500 + btnPartialProfilePrev.get("x"), 205, 30, 30, "Prev", false, onbtnResiduePrevControl, true, true, "pnlBody");
+const btnResidueProfileNext = createButton("btnResidueProfileNext", btnResidueProfilePrev.get("x") + 320, 205, 30, 30, "Prev", false, onbtnResidueNextControl, true, true, "pnlBody");
 
 const lblResidueADSR = createLabel("lblResidueADSR", 467, lblPartialADSR.get("y"), 128, 32, 20, "Env", "pnlBody", Colours.grey, "centred");
 
@@ -554,8 +554,12 @@ pnlShowInfoPopup.setPaintRoutine(function(g)
 /* Custom LAF */
 
 btnShowAdvancedPanel.setLocalLookAndFeel(LAFButtonShowAdvancedPanel);
+
 btnPartialProfilePrev.setLocalLookAndFeel(LAFButtonPrev);
 btnPartialProfileNext.setLocalLookAndFeel(LAFButtonNext);
+
+btnResidueProfilePrev.setLocalLookAndFeel(LAFButtonPrev);
+btnResidueProfileNext.setLocalLookAndFeel(LAFButtonNext);
 
 pnlAdvanced.setPaintRoutine(function(g)
 {
