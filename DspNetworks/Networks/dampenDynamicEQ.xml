@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Network ID="dampenDynamicEQ" Version="0.0.0">
+<Network ID="dampenDynamicEQ" Version="0.0.0" AllowPolyphonic="1">
   <Node FactoryPath="container.chain" ID="dampenDynamicEQ" Bypassed="0"
         ShowParameters="1">
     <Nodes>
       <Node ID="split" FactoryPath="container.split" Bypassed="0">
         <Nodes>
-          <Node ID="dry" FactoryPath="container.chain" Bypassed="0">
+          <Node ID="dry" FactoryPath="container.chain" Bypassed="0" Folded="1">
             <Nodes>
               <Node ID="linkwitzriley" FactoryPath="filters.linkwitzriley" Bypassed="0">
                 <ComplexData>
@@ -74,39 +74,29 @@
           </Node>
           <Node ID="MOD" FactoryPath="container.chain" Bypassed="0">
             <Nodes>
-              <Node ID="linkwitzriley2" FactoryPath="filters.linkwitzriley" Bypassed="0">
-                <ComplexData>
-                  <Filters>
-                    <Filter Index="-1"/>
-                  </Filters>
-                </ComplexData>
-                <Parameters>
-                  <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
-                             ID="Frequency" Value="5000.0"/>
-                  <Parameter MinValue="0.300000011920929" MaxValue="9.899999618530273" SkewFactor="0.2647178173065186"
-                             ID="Q" Value="1.0"/>
-                  <Parameter MinValue="-18.0" MaxValue="18.0" ID="Gain" Value="0.0"/>
-                  <Parameter MinValue="0.0" MaxValue="1.0" SkewFactor="0.3010300099849701"
-                             ID="Smoothing" Value="0.009999999776482582"/>
-                  <Parameter MinValue="0.0" MaxValue="2.0" StepSize="1.0" ID="Mode" Value="1.0"/>
-                  <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Enabled" Value="1.0"/>
-                </Parameters>
+              <Node ID="midichain" FactoryPath="container.midichain" Bypassed="0">
+                <Nodes>
+                  <Node ID="midi" FactoryPath="control.midi" Bypassed="0">
+                    <Properties>
+                      <Property ID="Mode" Value="NoteNumber"/>
+                    </Properties>
+                    <ModulationTargets>
+                      <Connection NodeId="pma" ParameterId="Value"/>
+                    </ModulationTargets>
+                    <Parameters/>
+                  </Node>
+                </Nodes>
+                <Parameters/>
               </Node>
-              <Node ID="mul" FactoryPath="math.mul" Bypassed="0">
-                <Parameters>
-                  <Parameter MinValue="0.0" MaxValue="50.0" ID="Value" Automated="1"/>
-                </Parameters>
-              </Node>
-              <Node ID="peak" FactoryPath="core.peak" Bypassed="0">
+              <Node ID="pma" FactoryPath="control.pma" Bypassed="0">
                 <ModulationTargets>
                   <Connection NodeId="gain1" ParameterId="Gain"/>
                 </ModulationTargets>
-                <ComplexData>
-                  <DisplayBuffers>
-                    <DisplayBuffer Index="-1"/>
-                  </DisplayBuffers>
-                </ComplexData>
-                <Parameters/>
+                <Parameters>
+                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Value" Automated="1"/>
+                  <Parameter MinValue="0.0" MaxValue="1.0" ID="Multiply" Automated="1"/>
+                  <Parameter MinValue="-1.0" MaxValue="1.0" ID="Add" Value="0.0"/>
+                </Parameters>
               </Node>
               <Node ID="clear" FactoryPath="math.clear" Bypassed="0">
                 <Parameters>
@@ -121,9 +111,9 @@
       </Node>
     </Nodes>
     <Parameters>
-      <Parameter ID="Dampen" MinValue="0.0" MaxValue="1.0" Value="0.4249999389648438">
+      <Parameter ID="Dampen" MinValue="0.0" MaxValue="1.0" Value="0.0">
         <Connections>
-          <Connection NodeId="mul" ParameterId="Value"/>
+          <Connection NodeId="pma" ParameterId="Multiply"/>
         </Connections>
       </Parameter>
     </Parameters>

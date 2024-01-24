@@ -200,7 +200,7 @@
       <Component type="ScriptButton" id="btnResidueProfilePrev" x="566" y="205"
                  width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
                  parentComponent="pnlBody"/>
-      <Component type="ScriptButton" id="btnResidueProfileNext" x="846" y="205"
+      <Component type="ScriptButton" id="btnResidueProfileNext" x="886" y="205"
                  width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
                  parentComponent="pnlBody"/>
       <Component type="ScriptComboBox" id="cmbPartialProfile" x="0" y="0" width="10"
