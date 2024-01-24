@@ -116,8 +116,12 @@
                  isPluginParameter="1" pluginParameterName="Residue Gain"/>
       <Component type="ScriptPanel" id="pnlInfoPopup" x="10" y="10" width="485"
                  height="510" parentComponent="pnlBody" visible="0"/>
+      <Component type="ScriptPanel" id="pnlProfileModes" x="95.0" y="60.0" parentComponent="pnlBody"
+                 width="300.0" height="340.0"/>
+      <Component type="ScriptPanel" id="pnlProfilePartials" x="595.0" y="60.0"
+                 parentComponent="pnlBody" width="300.0" height="340.0"/>
       <Component type="ScriptPanel" id="pnlAdvanced" x="498" y="16" width="480"
-                 height="498" parentComponent="pnlBody">
+                 height="498" parentComponent="pnlBody" visible="0.0">
         <Component type="ScriptPanel" id="lblAdvanced" x="-8" y="-2" width="128"
                    height="64" text="Advanced_" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="pnlShowInfoPopup" x="436" y="0" width="16"
@@ -184,10 +188,6 @@
         <Component type="ScriptPanel" id="lblToneClamp" x="136" y="466" width="128"
                    height="32" text="Clamp" parentComponent="pnlAdvanced"/>
       </Component>
-      <Component type="ScriptPanel" id="pnlProfileModes" x="95.0" y="60.0" parentComponent="pnlBody"
-                 width="300.0" height="340.0"/>
-      <Component type="ScriptPanel" id="pnlProfilePartials" x="595.0" y="60.0"
-                 parentComponent="pnlBody" width="300.0" height="340.0" visible="0"/>
       <Component type="ScriptButton" id="btnPartialProfilePrev" x="86" y="205"
                  width="40" height="40" text="Prev" saveInPreset="0" isMomentary="1"
                  parentComponent="pnlBody"/>

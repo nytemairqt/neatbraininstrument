@@ -12,7 +12,7 @@
             <Control type="ScriptSlider" id="knbPartialAttack" value="132.0"/>
             <Control type="ScriptSlider" id="knbPartialDecay" value="20000.0"/>
             <Control type="ScriptSlider" id="knbPartialSustain" value="-100.0"/>
-            <Control type="ScriptSlider" id="knbPartialRelease" value="725.0"/>
+            <Control type="ScriptSlider" id="knbPartialRelease" value="15000.0"/>
             <Control type="ScriptSlider" id="knbResidueAttack" value="5.0"/>
             <Control type="ScriptSlider" id="knbResidueDecay" value="20000.0"/>
             <Control type="ScriptSlider" id="knbResidueSustain" value="-100.0"/>
@@ -28,9 +28,9 @@
             <Control type="ScriptSlider" id="knbAmpRandom" value="0.0"/>
             <Control type="ScriptSlider" id="knbToneDampen" value="1.0"/>
             <Control type="ScriptSlider" id="knbToneBrightness" value="0.8999999761581421"/>
-            <Control type="ScriptSlider" id="knbToneChorus" value="0.0"/>
+            <Control type="ScriptSlider" id="knbToneChorus" value="0.119999997317791"/>
             <Control type="ScriptSlider" id="knbToneClamp" value="0.0"/>
-            <Control type="ScriptComboBox" id="cmbPartialProfiel" value="3.0"/>
+            <Control type="ScriptComboBox" id="cmbPartialProfiel" value="2.0"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-6.0"/>
             <Control type="ScriptSlider" id="knbMasterPan" value="0.0"/>
             <Control type="ScriptSlider" id="knbCoarseDetune" value="0.0"/>
@@ -443,7 +443,7 @@
     </Processor>
     <Processor Type="WavetableSynth" ID="synthWTLeftA" Bypassed="0" Gain="1.0"
                Balance="-1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               HqMode="1.0" LoadedBankIndex="3.0" TableIndexValue="0.3799999952316284"
+               HqMode="1.0" LoadedBankIndex="2.0" TableIndexValue="0.3799999952316284"
                RefreshMipMap="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -462,7 +462,7 @@
             <Processor Type="AHDSR" ID="synthWTLeftA_gainAHDSR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
                        Attack="132.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0"
-                       Sustain="-100.0" Release="725.0" EcoMode="1.0">
+                       Sustain="-100.0" Release="15000.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -649,7 +649,7 @@
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="ScriptFX" ID="synthWTLeftA_chorusJ" Bypassed="1">
+            <Processor Type="ScriptFX" ID="synthWTLeftA_chorusJ" Bypassed="0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
               <Content/>
@@ -700,7 +700,7 @@
     </Processor>
     <Processor Type="WavetableSynth" ID="synthWTRightA" Bypassed="0" Gain="1.0"
                Balance="1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               HqMode="1.0" LoadedBankIndex="7.0" TableIndexValue="0.4699999988079071"
+               HqMode="1.0" LoadedBankIndex="6.0" TableIndexValue="0.4699999988079071"
                RefreshMipMap="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -719,7 +719,7 @@
             <Processor Type="AHDSR" ID="synthWTRightA_gainAHDSR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
                        Attack="132.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0"
-                       Sustain="-100.0" Release="725.0" EcoMode="1.0">
+                       Sustain="-100.0" Release="15000.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -911,7 +911,7 @@
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="ScriptFX" ID="synthWTRightA_chorusJ" Bypassed="1">
+            <Processor Type="ScriptFX" ID="synthWTRightA_chorusJ" Bypassed="0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
               <Content/>
@@ -962,7 +962,7 @@
     </Processor>
     <Processor Type="WavetableSynth" ID="synthWTLeftB" Bypassed="0" Gain="1.0"
                Balance="-1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               HqMode="1.0" LoadedBankIndex="4.0" TableIndexValue="0.4000000059604645"
+               HqMode="1.0" LoadedBankIndex="3.0" TableIndexValue="0.4000000059604645"
                RefreshMipMap="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -981,7 +981,7 @@
             <Processor Type="AHDSR" ID="synthWTLeftB_gainAHDSR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
                        Attack="132.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0"
-                       Sustain="-100.0" Release="725.0" EcoMode="1.0">
+                       Sustain="-100.0" Release="15000.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -1168,7 +1168,7 @@
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="ScriptFX" ID="synthWTLeftB_chorusJ" Bypassed="1">
+            <Processor Type="ScriptFX" ID="synthWTLeftB_chorusJ" Bypassed="0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
               <Content/>
@@ -1219,7 +1219,7 @@
     </Processor>
     <Processor Type="WavetableSynth" ID="synthWTRightB" Bypassed="0" Gain="1.0"
                Balance="1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               HqMode="1.0" LoadedBankIndex="8.0" TableIndexValue="0.4799999892711639"
+               HqMode="1.0" LoadedBankIndex="7.0" TableIndexValue="0.4799999892711639"
                RefreshMipMap="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -1238,7 +1238,7 @@
             <Processor Type="AHDSR" ID="synthWTRightB_gainAHDSR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
                        Attack="132.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0"
-                       Sustain="-100.0" Release="725.0" EcoMode="1.0">
+                       Sustain="-100.0" Release="15000.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -1430,7 +1430,7 @@
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="ScriptFX" ID="synthWTRightB_chorusJ" Bypassed="1">
+            <Processor Type="ScriptFX" ID="synthWTRightB_chorusJ" Bypassed="0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
               <Content/>
@@ -1494,10 +1494,10 @@
   <MidiAutomation>
     <Controller Controller="7" Processor="Interface" MacroIndex="-1" Start="-100.0"
                 End="0.0" FullStart="-100.0" FullEnd="0.0" Skew="3.492788620791155"
-                Interval="0.01" Attribute="lblPitchRandom" Inverted="0"/>
+                Interval="0.01" Attribute="lblPitchVelocity" Inverted="0"/>
     <Controller Controller="10" Processor="Interface" MacroIndex="-1" Start="-100.0"
                 End="100.0" FullStart="-100.0" FullEnd="100.0" Skew="1.0" Interval="0.01"
-                Attribute="lblToneChorus" Inverted="0"/>
+                Attribute="lblToneBrightness" Inverted="0"/>
   </MidiAutomation>
   <MPEData Enabled="0"/>
 </Processor>
