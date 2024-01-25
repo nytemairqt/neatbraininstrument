@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<samplemap CrossfadeGamma="1.0" ID="partialTestLeft" RRGroupAmount="1.0"
-           MicPositions=";">
+<samplemap CrossfadeGamma="1.0" ID="partialsLeft" RRGroupAmount="15.0" MicPositions=";">
   <sample Root="50" LoKey="0" HiKey="127" LoVel="0" HiVel="30" RRGroup="1"
           FileName="{PROJECT_FOLDER}TEST/01.wav" Duplicate="1"/>
   <sample Root="50" LoKey="0" HiKey="127" LoVel="31" HiVel="62" RRGroup="1"

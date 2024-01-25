@@ -46,7 +46,7 @@ inline function onknbPartialReleaseControl(component, value)
 // Hidden Combo Box
 inline function oncmbPartialProfileControl(component, value)
 {
-	local offset = 4;
+	local offset = 1;
 
 	synthWTLeftA.setAttribute(synthWTLeftA.LoadedBankIndex, value); 
 	synthWTRightA.setAttribute(synthWTRightA.LoadedBankIndex, value + offset); 
