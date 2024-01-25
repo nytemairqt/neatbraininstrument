@@ -172,21 +172,16 @@
                    height="32" text="Drift" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblToneDampen" x="36" y="466" width="128"
                    height="32" text="Dampen" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbToneBrightness" x="375" y="416" text="Tone Bright"
+        <Component type="ScriptSlider" id="knbToneBrightness" x="275" y="416" text="Tone Bright"
                    defaultValue="0.300000011920929" width="48" height="48" parentComponent="pnlAdvanced"
                    isPluginParameter="1" pluginParameterName="Tone Bright"/>
-        <Component type="ScriptPanel" id="lblToneBrightness" x="336" y="466" width="128"
+        <Component type="ScriptPanel" id="lblToneBrightness" x="236" y="466" width="128"
                    height="32" text="Brightness" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbToneChorus" x="275" y="416" text="Tone Chorus"
+        <Component type="ScriptSlider" id="knbToneChorus" x="175" y="416" text="Tone Chorus"
                    defaultValue="0.25" width="48" height="48" parentComponent="pnlAdvanced"
                    isPluginParameter="1" pluginParameterName="Tone Chorus"/>
-        <Component type="ScriptPanel" id="lblToneChorus" x="236" y="466" width="128"
+        <Component type="ScriptPanel" id="lblToneChorus" x="-3" y="516" width="128"
                    height="32" text="Chorus" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbToneClamp" x="175" y="416" text="Tone Clamp"
-                   defaultValue="0.300000011920929" width="48" height="48" parentComponent="pnlAdvanced"
-                   isPluginParameter="1" pluginParameterName="Tone Clamp"/>
-        <Component type="ScriptPanel" id="lblToneClamp" x="136" y="466" width="128"
-                   height="32" text="Clamp" parentComponent="pnlAdvanced"/>
       </Component>
       <Component type="ScriptButton" id="btnPartialProfilePrev" x="66" y="205"
                  width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"

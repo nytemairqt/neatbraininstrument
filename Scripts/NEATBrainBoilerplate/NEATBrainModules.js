@@ -11,7 +11,6 @@ const synthWTLeftA_pitchAHDSR = Synth.getModulator("synthWTLeftA_pitchAHDSR");
 const synthWTLeftA_pitchRandom = Synth.getModulator("synthWTLeftA_pitchRandom");
 const synthWTLeftA_pitchLFO = Synth.getModulator("synthWTLeftA_pitchLFO");
 const synthWTLeftA_fxDampen = Synth.getEffect("synthWTLeftA_fxDampen");
-//const synthWTLeftA_fxDampenAHDSR = Synth.getModulator("synthWTLeftA_fxDampenAHDSR");
 
 const synthWTLeftB = Synth.getChildSynth("synthWTLeftB");
 const synthWTLeftB_gainAHDSR = Synth.getModulator("synthWTLeftB_gainAHDSR");
@@ -22,7 +21,6 @@ const synthWTLeftB_pitchAHDSR = Synth.getModulator("synthWTLeftB_pitchAHDSR");
 const synthWTLeftB_pitchRandom = Synth.getModulator("synthWTLeftB_pitchRandom");
 const synthWTLeftB_pitchLFO = Synth.getModulator("synthWTLeftB_pitchLFO");
 const synthWTLeftB_fxDampen = Synth.getEffect("synthWTLeftB_fxDampen"); 
-//const synthWTLeftB_fxDampenAHDSR = Synth.getModulator("synthWTLeftB_fxDampenAHDSR");
 
 // Right Wavetables & Modulators
 
@@ -35,7 +33,6 @@ const synthWTRightA_pitchAHDSR = Synth.getModulator("synthWTRightA_pitchAHDSR");
 const synthWTRightA_pitchRandom = Synth.getModulator("synthWTRightA_pitchRandom");
 const synthWTRightA_pitchLFO = Synth.getModulator("synthWTRightA_pitchLFO");
 const synthWTRightA_fxDampen = Synth.getEffect("synthWTRightA_fxDampen");
-//const synthWTRightA_fxDampenAHDSR = Synth.getModulator("synthWTRightA_fxDampenAHDSR");
 
 const synthWTRightB = Synth.getChildSynth("synthWTRightB");
 const synthWTRightB_gainAHDSR = Synth.getModulator("synthWTRightB_gainAHDSR");
@@ -66,6 +63,10 @@ const samplerResidueRight_gainAHDSR = Synth.getModulator("samplerResidueRight_ga
 
 // FX
 
+const residueProfileA = Synth.getEffect("residueProfileA");
+const residueProfileB = Synth.getEffect("residueProfileB");
+const residueProfileC = Synth.getEffect("residueProfileC");
+
 const synthWTLeftA_toneAdjust = Synth.getEffect("synthWTLeftA_toneAdjust");
 const synthWTRightA_toneAdjust = Synth.getEffect("synthWTRightA_toneAdjust");
 const synthWTLeftB_toneAdjust = Synth.getEffect("synthWTLeftB_toneAdjust");
@@ -87,3 +88,9 @@ const synthWTLeftA_fxPalmMute = Synth.getEffect("synthWTLeftA_fxPalmMute");
 const synthWTRightA_fxPalmMute = Synth.getEffect("synthWTRightA_fxPalmMute");
 const synthWTLeftB_fxPalmMute = Synth.getEffect("synthWTLeftB_fxPalmMute");
 const synthWTRightB_fxPalmMute = Synth.getEffect("synthWTRightB_fxPalmMute");
+
+// MODULE STATES
+
+Engine.addModuleStateToUserPreset("residueProfileA");
+Engine.addModuleStateToUserPreset("residueProfileB");
+Engine.addModuleStateToUserPreset("residueProfileC");

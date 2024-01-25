@@ -318,19 +318,6 @@ inline function onknbPitchLFOControl(component, value)
 // Tone Dampen
 inline function onknbToneDampenControl(component, value)
 {	
-	/*
-		// Low Pass Frequency
-		local min = 4000;
-		local max = 10000;
-		
-		local f = Math.round(max - (value * (max-min)));
-			
-		synthWTLeftA_fxDampen.setAttribute(synthWTLeftA_fxDampen.Frequency, f);		
-		synthWTRightA_fxDampen.setAttribute(synthWTRightA_fxDampen.Frequency, f);		
-		synthWTLeftB_fxDampen.setAttribute(synthWTLeftB_fxDampen.Frequency, f);		
-		synthWTRightB_fxDampen.setAttribute(synthWTRightB_fxDampen.Frequency, f);		
-	*/
-	
 	synthWTLeftA_fxDampen.setAttribute(synthWTLeftA_fxDampen.Dampen, value);
 	synthWTRightA_fxDampen.setAttribute(synthWTRightA_fxDampen.Dampen, value);
 	synthWTLeftB_fxDampen.setAttribute(synthWTLeftB_fxDampen.Dampen, value);
@@ -340,18 +327,6 @@ inline function onknbToneDampenControl(component, value)
 // Tone Decay 
 inline function onknbToneClampControl(component, value)
 {
-	/*
-
-	local min = 200;
-	local max = 2000;
-	
-	local d = Math.round(max - (value * (max-min)));
-	
-	synthWTLeftA_fxDampenAHDSR.setAttribute(synthWTLeftA_fxDampenAHDSR.Decay, d);
-	synthWTRightA_fxDampenAHDSR.setAttribute(synthWTRightA_fxDampenAHDSR.Decay, d);
-	synthWTLeftB_fxDampenAHDSR.setAttribute(synthWTLeftB_fxDampenAHDSR.Decay, d);
-	synthWTRightB_fxDampenAHDSR.setAttribute(synthWTRightB_fxDampenAHDSR.Decay, d);
-	*/
 }
 
 // Chorus
@@ -428,8 +403,7 @@ const knbPitchLFO = createKnob("knbPitchLFO", knbPitchDecay.get("x") + 100, lblP
 const knbPitchRandom = createKnob("knbPitchRandom", knbPitchLFO.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "Pitch Rand", true, onknbPitchRandomControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
 
 const knbToneDampen = createKnob("knbToneDampen", lblTone.get("x") + 106, lblTone.get("y") + 30, 48, 48, "Tone Damp", true, onknbToneDampenControl, 0, 1, 0.01, 0.4, "pnlAdvanced", true);
-const knbToneClamp = createKnob("knbToneClamp", knbToneDampen.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Tone Clamp", true, onknbToneClampControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
-const knbToneChorus = createKnob("knbToneChorus", knbToneClamp.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Tone Chorus", true, onknbToneChorusControl, 0, 1.0, 0.01, 0.25, "pnlAdvanced", true);
+const knbToneChorus = createKnob("knbToneChorus", knbToneDampen.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Tone Chorus", true, onknbToneChorusControl, 0, 1.0, 0.01, 0.25, "pnlAdvanced", true);
 const knbToneBrightness = createKnob("knbToneBrightness", knbToneChorus.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Tone Bright", true, onknbToneBrightnessControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
 
 const lblAmpVelocity = createLabel("lblAmpVelocity", knbAmpVelocity.get("x") - 39, knbAmpVelocity.get("y") + 50, 128, 32, 16, "Vel", "pnlAdvanced", Colours.grey, "centred");
@@ -442,8 +416,7 @@ const lblPitchRandom = createLabel("lblPitchRandom", knbPitchRandom.get("x") - 3
 const lblPitchLFO = createLabel("lblPitchLFO", knbPitchLFO.get("x") - 39, knbPitchLFO.get("y") + 50, 128, 32, 16, "Drift", "pnlAdvanced", Colours.grey, "centred");
 
 const lblToneDampen = createLabel("lblToneDampen", knbToneDampen.get("x") - 39, knbToneDampen.get("y") + 50, 128, 32, 16, "Dampen", "pnlAdvanced", Colours.grey, "centred");
-const lblToneClamp = createLabel("lblToneClamp", knbToneClamp.get("x") - 39, knbToneClamp.get("y") + 50, 128, 32, 16, "Clamp", "pnlAdvanced", Colours.grey, "centred");
-const lblToneChorus = createLabel("lblToneChorus", knbToneChorus.get("x") - 39, knbToneChorus.get("y") + 50, 128, 32, 16, "Chorus", "pnlAdvanced", Colours.grey, "centred");
+const lblToneChorus = createLabel("lblToneChorus", lblToneDampen.get("x") - 39, lblToneDampen.get("y") + 50, 128, 32, 16, "Chorus", "pnlAdvanced", Colours.grey, "centred");
 const lblToneBrightness = createLabel("lblToneBrightness", knbToneBrightness.get("x") - 39, knbToneBrightness.get("y") + 50, 128, 32, 16, "Brightness", "pnlAdvanced", Colours.grey, "centred");
 	
 /* Horizontal Sliders */
