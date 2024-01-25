@@ -48,12 +48,7 @@ else
 	synthWTRightB_fxPalmMute.setBypassed(true);
 }function onNoteOn()
 {
-	Console.print(Message.getNoteNumber());
-
-	
-	
-	// need to implement fx-keys ignore events specifically inside the WT synths
-	// need to then adjust Residue samplemaps to include them
+	//Console.print(Message.getNoteNumber());
 }
  function onNoteOff()
 {

@@ -165,9 +165,30 @@ inline function onknbResidueReleaseControl(component, value)
 // Hidden Combo Box
 inline function oncmbResidueProfileControl(component, value)
 {
-	local offset = 4;
-	
 	pnlProfileResidue.repaintImmediately();
+	
+	residueProfileA.setBypassed(1);
+	residueProfileB.setBypassed(1);
+	residueProfileC.setBypassed(1);
+	
+	switch (value)
+	{
+		case 1:
+			samplerResidueLeft_sampleOffset.setIntensity(1.0);
+			samplerResidueRight_sampleOffset.setIntensity(1.0);
+			residueProfileA.setBypassed(0);
+			break;
+		case 2:
+			samplerResidueLeft_sampleOffset.setIntensity(.5);
+			samplerResidueRight_sampleOffset.setIntensity(.5);
+			residueProfileB.setBypassed(0);
+			break;
+		case 3:
+			samplerResidueLeft_sampleOffset.setIntensity(.5);
+			samplerResidueRight_sampleOffset.setIntensity(.5);
+			residueProfileC.setBypassed(0);
+			break;		
+	}
 
 	/*
 	synthWTLeftA.setAttribute(synthWTLeftA.LoadedBankIndex, value); 

@@ -43,14 +43,14 @@ const synthWTRightB_pitchAHDSR = Synth.getModulator("synthWTRightB_pitchAHDSR");
 const synthWTRightB_pitchRandom = Synth.getModulator("synthWTRightB_pitchRandom");
 const synthWTRightB_pitchLFO = Synth.getModulator("synthWTRightB_pitchLFO");
 const synthWTRightB_fxDampen = Synth.getEffect("synthWTRightB_fxDampen");
-//const synthWTRightB_fxDampenAHDSR = Synth.getModulator("synthWTRightB_fxDampenAHDSR");
-
-
 
 
 // Residue Samplers
 const samplerResidueLeft = Synth.getChildSynth("samplerResidueLeft");
 const samplerResidueRight = Synth.getChildSynth("samplerResidueRight");
+
+const samplerResidueLeft_sampleOffset = Synth.getModulator("samplerResidueLeft_sampleOffset");
+const samplerResidueRight_sampleOffset = Synth.getModulator("samplerResidueRight_sampleOffset");
 
 // Other Samplers
 

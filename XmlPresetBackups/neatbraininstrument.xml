@@ -29,7 +29,7 @@
             <Control type="ScriptSlider" id="knbToneDampen" value="1.0"/>
             <Control type="ScriptSlider" id="knbToneBrightness" value="0.8999999761581421"/>
             <Control type="ScriptSlider" id="knbToneChorus" value="0.119999997317791"/>
-            <Control type="ScriptComboBox" id="cmbResidueProfile" value="2.0"/>
+            <Control type="ScriptComboBox" id="cmbResidueProfile" value="1.0"/>
             <Control type="ScriptComboBox" id="cmbPartialProfile" value="1.0"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-6.0"/>
             <Control type="ScriptSlider" id="knbMasterPan" value="0.0"/>
@@ -150,18 +150,25 @@
               </ChildProcessors>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="residueProfileA" Bypassed="0" NumFilters="0"
-                       FFTEnabled="0">
+            <Processor Type="CurveEq" ID="residueProfileA" Bypassed="0" NumFilters="1"
+                       Band0="-2.110000133514404" Band1="1703.10107421875" Band2="0.5199999809265137"
+                       Band3="1.0" Band4="3.0" FFTEnabled="0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="residueProfileB" Bypassed="0" NumFilters="0"
-                       FFTEnabled="0">
+            <Processor Type="CurveEq" ID="residueProfileB" Bypassed="1" NumFilters="2"
+                       Band0="-1.986207962036133" Band1="203.105712890625" Band2="0.6899999976158142"
+                       Band3="1.0" Band4="1.0" Band5="6.455173015594482" Band6="2668.510986328125"
+                       Band7="0.3799999952316284" Band8="1.0" Band9="3.0" FFTEnabled="0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="residueProfileC" Bypassed="0" NumFilters="0"
-                       FFTEnabled="0">
+            <Processor Type="CurveEq" ID="residueProfileC" Bypassed="1" NumFilters="3"
+                       Band0="0.0" Band1="250.0" Band2="0.6700000166893005" Band3="1.0"
+                       Band4="1.0" Band5="6.78620433807373" Band6="845.717041015625"
+                       Band7="0.4000000059604645" Band8="1.0" Band9="4.0" Band10="-3.806895971298218"
+                       Band11="4899.26953125" Band12="0.4900000095367432" Band13="1.0"
+                       Band14="3.0" FFTEnabled="0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
@@ -226,7 +233,7 @@
             <Processor Type="ModulatorChain" ID="Sample Start" Bypassed="0" Intensity="1.0">
               <ChildProcessors>
                 <Processor Type="Constant" ID="samplerResidueLeft_sampleOffset" Bypassed="0"
-                           Intensity="0.0">
+                           Intensity="1.0">
                   <ChildProcessors/>
                 </Processor>
               </ChildProcessors>
