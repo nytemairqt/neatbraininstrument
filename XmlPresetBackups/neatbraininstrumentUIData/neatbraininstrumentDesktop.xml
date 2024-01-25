@@ -114,14 +114,30 @@
                  bgColour="0" itemColour="4285493103" itemColour2="4292333756"
                  textColour="4281611319" dragDirection="Horizontal" showTextBox="0"
                  isPluginParameter="1" pluginParameterName="Residue Gain"/>
-      <Component type="ScriptPanel" id="pnlInfoPopup" x="10" y="10" width="485"
-                 height="510" parentComponent="pnlBody" visible="0"/>
       <Component type="ScriptPanel" id="pnlProfilePartial" x="95.0" y="60.0" parentComponent="pnlBody"
                  width="300.0" height="340.0"/>
       <Component type="ScriptPanel" id="pnlProfileResidue" x="595.0" y="60.0"
                  parentComponent="pnlBody" width="300.0" height="340.0"/>
+      <Component type="ScriptButton" id="btnPartialProfilePrev" x="66" y="205"
+                 width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
+                 parentComponent="pnlBody"/>
+      <Component type="ScriptButton" id="btnPartialProfileNext" x="386" y="205"
+                 width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
+                 parentComponent="pnlBody"/>
+      <Component type="ScriptComboBox" id="cmbResidueProfile" x="0" y="0" width="10"
+                 height="10" text="profile" visible="0" parentComponent="pnlBody"
+                 items="&#10;A&#10;B&#10;C" max="3"/>
+      <Component type="ScriptButton" id="btnResidueProfilePrev" x="566" y="205"
+                 width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
+                 parentComponent="pnlBody"/>
+      <Component type="ScriptButton" id="btnResidueProfileNext" x="886" y="205"
+                 width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
+                 parentComponent="pnlBody"/>
+      <Component type="ScriptComboBox" id="cmbPartialProfile" x="0" y="0" width="10"
+                 height="10" text="profile" visible="0" parentComponent="pnlBody"
+                 items="&#10;A&#10;B&#10;C" max="3"/>
       <Component type="ScriptPanel" id="pnlAdvanced" x="498" y="16" width="480"
-                 height="498" parentComponent="pnlBody" visible="0">
+                 height="498" parentComponent="pnlBody" visible="0.0">
         <Component type="ScriptPanel" id="lblAdvanced" x="-8" y="-2" width="128"
                    height="64" text="Advanced_" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="pnlShowInfoPopup" x="436" y="0" width="16"
@@ -180,27 +196,11 @@
         <Component type="ScriptSlider" id="knbToneChorus" x="175" y="416" text="Tone Chorus"
                    defaultValue="0.25" width="48" height="48" parentComponent="pnlAdvanced"
                    isPluginParameter="1" pluginParameterName="Tone Chorus"/>
-        <Component type="ScriptPanel" id="lblToneChorus" x="-3" y="516" width="128"
+        <Component type="ScriptPanel" id="lblToneChorus" x="136" y="466" width="128"
                    height="32" text="Chorus" parentComponent="pnlAdvanced"/>
       </Component>
-      <Component type="ScriptButton" id="btnPartialProfilePrev" x="66" y="205"
-                 width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
-                 parentComponent="pnlBody"/>
-      <Component type="ScriptButton" id="btnPartialProfileNext" x="386" y="205"
-                 width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
-                 parentComponent="pnlBody"/>
-      <Component type="ScriptComboBox" id="cmbResidueProfile" x="0" y="0" width="10"
-                 height="10" text="profile" visible="0" parentComponent="pnlBody"
-                 items="&#10;A&#10;B&#10;C" max="3"/>
-      <Component type="ScriptButton" id="btnResidueProfilePrev" x="566" y="205"
-                 width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
-                 parentComponent="pnlBody"/>
-      <Component type="ScriptButton" id="btnResidueProfileNext" x="886" y="205"
-                 width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
-                 parentComponent="pnlBody"/>
-      <Component type="ScriptComboBox" id="cmbPartialProfile" x="0" y="0" width="10"
-                 height="10" text="profile" visible="0" parentComponent="pnlBody"
-                 items="&#10;A&#10;B&#10;C" max="3"/>
+      <Component type="ScriptPanel" id="pnlInfoPopup" x="10" y="10" width="485"
+                 height="510" parentComponent="pnlBody" visible="0"/>
     </Component>
     <Component type="ScriptPanel" id="pnlStatusBar" x="5.0" y="585.0" text=""
                width="990.0" height="39.0" bgColour="0" itemColour="4281282356"
