@@ -13,9 +13,6 @@ inline function onknbPartialGainControl(component, value)
 {
 	synthWTLeftA.setAttribute(synthWTLeftA.Gain, value);
 	synthWTRightA.setAttribute(synthWTRightA.Gain, value);
-	
-	synthWTLeftB.setAttribute(synthWTLeftB.Gain, value);
-	synthWTRightB.setAttribute(synthWTRightB.Gain, value);
 }		
 
 // AHDSR Attack
@@ -23,9 +20,6 @@ inline function onknbPartialAttackControl(component, value)
 {
 	synthWTLeftA_gainAHDSR.setAttribute(synthWTLeftA_gainAHDSR.Attack, value);
 	synthWTRightA_gainAHDSR.setAttribute(synthWTRightA_gainAHDSR.Attack, value);
-	
-	synthWTLeftB_gainAHDSR.setAttribute(synthWTLeftB_gainAHDSR.Attack, value);
-	synthWTRightB_gainAHDSR.setAttribute(synthWTRightB_gainAHDSR.Attack, value);
 }
 
 // AHDSR Decay
@@ -33,9 +27,6 @@ inline function onknbPartialDecayControl(component, value)
 {
 	synthWTLeftA_gainAHDSR.setAttribute(synthWTLeftA_gainAHDSR.Decay, value);
 	synthWTRightA_gainAHDSR.setAttribute(synthWTRightA_gainAHDSR.Decay, value);
-	
-	synthWTLeftB_gainAHDSR.setAttribute(synthWTLeftB_gainAHDSR.Decay, value);
-	synthWTRightB_gainAHDSR.setAttribute(synthWTRightB_gainAHDSR.Decay, value);
 }
 
 // AHDSR Sustain
@@ -43,9 +34,6 @@ inline function onknbPartialSustainControl(component, value)
 {
 	synthWTLeftA_gainAHDSR.setAttribute(synthWTLeftA_gainAHDSR.Sustain, value);
 	synthWTRightA_gainAHDSR.setAttribute(synthWTRightA_gainAHDSR.Sustain, value);
-	
-	synthWTLeftB_gainAHDSR.setAttribute(synthWTLeftB_gainAHDSR.Sustain, value);
-	synthWTRightB_gainAHDSR.setAttribute(synthWTRightB_gainAHDSR.Sustain, value);
 }
 
 // AHDSR Release
@@ -53,9 +41,6 @@ inline function onknbPartialReleaseControl(component, value)
 {
 	synthWTLeftA_gainAHDSR.setAttribute(synthWTLeftA_gainAHDSR.Release, value);
 	synthWTRightA_gainAHDSR.setAttribute(synthWTRightA_gainAHDSR.Release, value);
-	
-	synthWTLeftB_gainAHDSR.setAttribute(synthWTLeftB_gainAHDSR.Release, value);
-	synthWTRightB_gainAHDSR.setAttribute(synthWTRightB_gainAHDSR.Release, value);
 }
 
 // Hidden Combo Box
@@ -65,8 +50,6 @@ inline function oncmbPartialProfileControl(component, value)
 
 	synthWTLeftA.setAttribute(synthWTLeftA.LoadedBankIndex, value); 
 	synthWTRightA.setAttribute(synthWTRightA.LoadedBankIndex, value + offset); 
-	synthWTLeftB.setAttribute(synthWTLeftB.LoadedBankIndex, value + 1); 
-	synthWTRightB.setAttribute(synthWTRightB.LoadedBankIndex, value + offset + 1); 
 	pnlProfilePartial.repaintImmediately();	
 }
 
@@ -270,9 +253,6 @@ inline function onknbAmpVelocityControl(component, value)
 {
 	synthWTLeftA_gainVelocity.setIntensity(value * .1);
 	synthWTRightA_gainVelocity.setIntensity(value * .1);
-	
-	synthWTLeftB_gainVelocity.setIntensity(value * .1);
-	synthWTRightB_gainVelocity.setIntensity(value * .1);
 }
 
 
@@ -281,9 +261,6 @@ inline function onknbAmpLFOControl(component, value)
 {
 	synthWTLeftA_gainLFO.setIntensity(value * .1);
 	synthWTRightA_gainLFO.setIntensity(value * .1);
-	
-	synthWTLeftB_gainLFO.setIntensity(value * .1);
-	synthWTRightB_gainLFO.setIntensity(value * .1);
 }
 
 // Amp Random
@@ -291,9 +268,6 @@ inline function onknbAmpRandomControl(component, value)
 {
 	synthWTLeftA_gainRandom.setIntensity(value * .1);
 	synthWTRightA_gainRandom.setIntensity(value * .1);
-	
-	synthWTLeftB_gainRandom.setIntensity(value * .1);
-	synthWTRightB_gainRandom.setIntensity(value * .1);
 }
 
 // Pitch Velocity
@@ -301,9 +275,6 @@ inline function onknbPitchVelocityControl(component, value)
 {
 	synthWTLeftA_pitchAHDSR.setIntensity(value * .6);
 	synthWTRightA_pitchAHDSR.setIntensity(value * .6);
-	
-	synthWTLeftB_pitchAHDSR.setIntensity(value * .6);
-	synthWTRightB_pitchAHDSR.setIntensity(value * .6);
 }
 
 // Pitch Decay
@@ -311,9 +282,6 @@ inline function onknbPitchDecayControl(component, value)
 {
 	synthWTLeftA_pitchAHDSR.setAttribute(synthWTLeftA_pitchAHDSR.Decay, value);
 	synthWTRightA_pitchAHDSR.setAttribute(synthWTLeftA_pitchAHDSR.Decay, value);
-	
-	synthWTLeftB_pitchAHDSR.setAttribute(synthWTLeftB_pitchAHDSR.Decay, value);
-	synthWTRightB_pitchAHDSR.setAttribute(synthWTLeftB_pitchAHDSR.Decay, value);
 }
 
 // Pitch Random
@@ -321,9 +289,6 @@ inline function onknbPitchRandomControl(component, value)
 {
 	synthWTLeftA_pitchRandom.setIntensity(value * .5);
 	synthWTRightA_pitchRandom.setIntensity(value * .5);
-	
-	synthWTLeftB_pitchRandom.setIntensity(value * .5);
-	synthWTRightB_pitchRandom.setIntensity(value * .5);
 }
 
 // Pitch LFO 
@@ -331,9 +296,6 @@ inline function onknbPitchLFOControl(component, value)
 {
 	synthWTLeftA_pitchLFO.setIntensity(value * .2);
 	synthWTRightA_pitchLFO.setIntensity(value * .2);
-	
-	synthWTLeftB_pitchLFO.setIntensity(value * .2);
-	synthWTRightB_pitchLFO.setIntensity(value * .2);
 }
 
 // Tone Dampen
@@ -341,8 +303,6 @@ inline function onknbToneDampenControl(component, value)
 {	
 	synthWTLeftA_fxDampen.setAttribute(synthWTLeftA_fxDampen.Dampen, value);
 	synthWTRightA_fxDampen.setAttribute(synthWTRightA_fxDampen.Dampen, value);
-	synthWTLeftB_fxDampen.setAttribute(synthWTLeftB_fxDampen.Dampen, value);
-	synthWTRightB_fxDampen.setAttribute(synthWTRightB_fxDampen.Dampen, value);
 }
 
 // Tone Decay 
@@ -357,21 +317,15 @@ inline function onknbToneChorusControl(component, value)
 	{
 		synthWTLeftA_chorusJ.setBypassed(1);
 		synthWTRightA_chorusJ.setBypassed(1);
-		synthWTLeftB_chorusJ.setBypassed(1);
-		synthWTRightB_chorusJ.setBypassed(1);
 	}
 	else
 	{
 		synthWTLeftA_chorusJ.setBypassed(0);
 		synthWTRightA_chorusJ.setBypassed(0);
-		synthWTLeftB_chorusJ.setBypassed(0);
-		synthWTRightB_chorusJ.setBypassed(0);
 	}
 
 	synthWTLeftA_chorusJ.setAttribute(synthWTLeftA_chorusJ.Depth, value * 0.25);
-	synthWTRightA_chorusJ.setAttribute(synthWTRightA_chorusJ.Depth, value * 0.25);
-	synthWTLeftB_chorusJ.setAttribute(synthWTLeftB_chorusJ.Depth, value * 0.25);
-	synthWTRightB_chorusJ.setAttribute(synthWTRightB_chorusJ.Depth, value * 0.25);	
+	synthWTRightA_chorusJ.setAttribute(synthWTRightA_chorusJ.Depth, value * 0.25);	
 }
 
 // Tone Stiffness Intensity
@@ -389,16 +343,12 @@ inline function onknbToneBrightnessControl(component, value)
 		
 	synthWTLeftA_toneAdjust.setAttribute(idx, f);
 	synthWTRightA_toneAdjust.setAttribute(idx, f);
-	synthWTLeftB_toneAdjust.setAttribute(idx, f);
-	synthWTRightB_toneAdjust.setAttribute(idx, f);
 	
 	// High Shelf Gain
 	idx = (highshelf * synthWTLeftA_toneAdjust.BandOffset) + 0;
 	
 	synthWTLeftA_toneAdjust.setAttribute(idx, value * 6);
 	synthWTRightA_toneAdjust.setAttribute(idx, value * 6);
-	synthWTLeftB_toneAdjust.setAttribute(idx, value * 6);
-	synthWTRightB_toneAdjust.setAttribute(idx, value * 6);
 }
 
 // Instantiate UI Elements
