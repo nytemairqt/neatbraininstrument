@@ -106,7 +106,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SynthGroup" ID="residuesGroup" Bypassed="0" Gain="1.0"
+    <Processor Type="SynthGroup" ID="residuesGroup" Bypassed="1" Gain="1.0"
                Balance="0.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                EnableFM="0.0" CarrierIndex="-1.0" ModulatorIndex="-1.0" UnisonoVoiceAmount="1.0"
                UnisonoDetune="0.0" UnisonoSpread="1.0" KillSecondVoices="1.0">
@@ -453,11 +453,24 @@
         </Processor>
         <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
           <ChildProcessors>
-            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope1" Bypassed="0" Monophonic="0.0"
-                       Retrigger="1.0" Intensity="1.0" Attack="5.0" Release="10.0" LinearMode="1.0">
+            <Processor Type="AHDSR" ID="AHDSR Envelope1" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
+                       Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="12833.0" Sustain="-100.0"
+                       Release="20000.0" EcoMode="1.0">
               <ChildProcessors>
-                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
-                           Intensity="1.0">
+                <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
                 </Processor>
               </ChildProcessors>
@@ -602,7 +615,7 @@
                     <Processor Type="AHDSR" ID="synthWTLeftA_fxPalmMuteAHDSR" Bypassed="0" Monophonic="0.0"
                                Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
                                Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="250.0" Sustain="0.0"
-                               Release="20.0" EcoMode="1.0">
+                               Release="15000.0" EcoMode="1.0">
                       <ChildProcessors>
                         <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                           <ChildProcessors/>
@@ -696,13 +709,13 @@
         </Processor>
         <Processor Type="ModulatorChain" ID="Table Index" Bypassed="0" Intensity="1.0">
           <ChildProcessors>
-            <Processor Type="Random" ID="Random Modulator5" Bypassed="0" Intensity="1.0"
+            <Processor Type="Random" ID="synthWTLeftA_tableRandom" Bypassed="0" Intensity="1.0"
                        UseTable="1.0" RandomTableData="24.......QDQ3C...vO...f+TUUU8C...vO">
               <ChildProcessors/>
             </Processor>
-            <Processor Type="TableEnvelope" ID="Table Envelope1" Bypassed="0" Monophonic="0.0"
-                       Retrigger="1.0" Intensity="1.0" Attack="306.2200012207031" Release="20.0"
-                       AttackTableData="" ReleaseTableData="24..........9C...vO...f+.........vO">
+            <Processor Type="TableEnvelope" ID="synthWTLeftA_tableEnv" Bypassed="0"
+                       Monophonic="0.0" Retrigger="1.0" Intensity="1.0" Attack="132.0"
+                       Release="15000.0" AttackTableData="" ReleaseTableData="24..........9C...vO...f+.........vO">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="AttackTime Modulation" Bypassed="0"
                            Intensity="1.0">
@@ -856,7 +869,7 @@
                     <Processor Type="AHDSR" ID="synthWTRightA_fxPalmMuteAHDSR" Bypassed="0"
                                Monophonic="0.0" Retrigger="1.0" Intensity="1.0" AttackCurve="0.0"
                                DecayCurve="0.0" Attack="20.0" AttackLevel="0.0" Hold="10.0"
-                               Decay="250.0" Sustain="0.0" Release="20.0" EcoMode="1.0">
+                               Decay="250.0" Sustain="0.0" Release="15000.0" EcoMode="1.0">
                       <ChildProcessors>
                         <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                           <ChildProcessors/>
@@ -950,13 +963,13 @@
         </Processor>
         <Processor Type="ModulatorChain" ID="Table Index" Bypassed="0" Intensity="1.0">
           <ChildProcessors>
-            <Processor Type="Random" ID="Random Modulator5" Bypassed="0" Intensity="1.0"
+            <Processor Type="Random" ID="synthWTRightA_tableRandom" Bypassed="1" Intensity="1.0"
                        UseTable="1.0" RandomTableData="24.......u6t2C...vO...f+v6ta8C...vO">
               <ChildProcessors/>
             </Processor>
-            <Processor Type="TableEnvelope" ID="Table Envelope2" Bypassed="0" Monophonic="0.0"
-                       Retrigger="1.0" Intensity="1.0" Attack="489.1900024414062" Release="20.0"
-                       AttackTableData="" ReleaseTableData="24..........9C...vO...f+.........vO">
+            <Processor Type="TableEnvelope" ID="synthWTRightA_tableEnv" Bypassed="0"
+                       Monophonic="0.0" Retrigger="1.0" Intensity="1.0" Attack="132.0"
+                       Release="15000.0" AttackTableData="" ReleaseTableData="24..........9C...vO...f+.........vO">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="AttackTime Modulation" Bypassed="0"
                            Intensity="1.0">

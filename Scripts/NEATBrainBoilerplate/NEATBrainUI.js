@@ -20,6 +20,10 @@ inline function onknbPartialAttackControl(component, value)
 {
 	synthWTLeftA_gainAHDSR.setAttribute(synthWTLeftA_gainAHDSR.Attack, value);
 	synthWTRightA_gainAHDSR.setAttribute(synthWTRightA_gainAHDSR.Attack, value);
+	
+	synthWTLeftA_tableEnv.setAttribute(synthWTLeftA_tableEnv.Attack, value);
+	synthWTRightA_tableEnv.setAttribute(synthWTRightA_tableEnv.Attack, value);
+
 }
 
 // AHDSR Decay
@@ -41,6 +45,12 @@ inline function onknbPartialReleaseControl(component, value)
 {
 	synthWTLeftA_gainAHDSR.setAttribute(synthWTLeftA_gainAHDSR.Release, value);
 	synthWTRightA_gainAHDSR.setAttribute(synthWTRightA_gainAHDSR.Release, value);
+	
+	synthWTLeftA_tableEnv.setAttribute(synthWTLeftA_tableEnv.Release, value);
+	synthWTRightA_tableEnv.setAttribute(synthWTRightA_tableEnv.Release, value);
+	
+	synthWTLeftA_fxPalmMuteAHDSR.setAttribute(synthWTLeftA_fxPalmMuteAHDSR.Release, value);
+	synthWTRightA_fxPalmMuteAHDSR.setAttribute(synthWTRightA_fxPalmMuteAHDSR.Release, value);
 }
 
 // Hidden Combo Box

@@ -11,6 +11,9 @@ const synthWTLeftA_pitchAHDSR = Synth.getModulator("synthWTLeftA_pitchAHDSR");
 const synthWTLeftA_pitchRandom = Synth.getModulator("synthWTLeftA_pitchRandom");
 const synthWTLeftA_pitchLFO = Synth.getModulator("synthWTLeftA_pitchLFO");
 const synthWTLeftA_fxDampen = Synth.getEffect("synthWTLeftA_fxDampen");
+const synthWTLeftA_tableRandom = Synth.getModulator("synthWTLeftA_tableRandom");
+const synthWTLeftA_tableEnv = Synth.getModulator("synthWTLeftA_tableEnv");
+
 
 
 // Right Wavetables & Modulators
@@ -23,7 +26,10 @@ const synthWTRightA_gainRandom = Synth.getModulator("synthWTRightA_gainRandom");
 const synthWTRightA_pitchAHDSR = Synth.getModulator("synthWTRightA_pitchAHDSR");
 const synthWTRightA_pitchRandom = Synth.getModulator("synthWTRightA_pitchRandom");
 const synthWTRightA_pitchLFO = Synth.getModulator("synthWTRightA_pitchLFO");
-const synthWTRightA_fxDampen = Synth.getEffect("synthWTRightA_fxDampen");
+const synthWTRightA_fxDampen = Synth.getEffect("synthWTRightA_fxDampen");;
+const synthWTRightA_tableRandom = Synth.getModulator("synthWTRightA_tableRandom");
+const synthWTRightA_tableEnv = Synth.getModulator("synthWTRightA_tableEnv");
+
 
 // Residue Samplers
 const samplerResidueLeft = Synth.getChildSynth("samplerResidueLeft");
@@ -60,6 +66,10 @@ const synthWTRightA_chorusJ = Synth.getEffect("synthWTRightA_chorusJ");
 
 const synthWTLeftA_fxPalmMute = Synth.getEffect("synthWTLeftA_fxPalmMute");
 const synthWTRightA_fxPalmMute = Synth.getEffect("synthWTRightA_fxPalmMute");
+
+const var synthWTLeftA_fxPalmMuteAHDSR = Synth.getModulator("synthWTLeftA_fxPalmMuteAHDSR");
+const var synthWTRightA_fxPalmMuteAHDSR = Synth.getModulator("synthWTRightA_fxPalmMuteAHDSR");
+
 
 // MODULE STATES
 
