@@ -18,7 +18,7 @@
                   <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
                              ID="Frequency" Automated="1"/>
                   <Parameter MinValue="0.300000011920929" MaxValue="9.899999618530273" SkewFactor="0.2647178173065186"
-                             ID="Q" Value="1.0"/>
+                             ID="Q" Value="0.951905825791433"/>
                   <Parameter MinValue="-18.0" MaxValue="18.0" ID="Gain" Value="0.0"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" SkewFactor="0.3010300099849701"
                              ID="Smoothing" Value="0.009999999776482582"/>
@@ -51,7 +51,7 @@
                   <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
                              ID="Frequency" Automated="1"/>
                   <Parameter MinValue="0.300000011920929" MaxValue="9.899999618530273" SkewFactor="0.2647178173065186"
-                             ID="Q" Value="0.9586220580334008"/>
+                             ID="Q" Value="1.01420698545841"/>
                   <Parameter MinValue="-18.0" MaxValue="18.0" ID="Gain" Value="0.0"/>
                   <Parameter MinValue="0.0" MaxValue="1.0" SkewFactor="0.3010300099849701"
                              ID="Smoothing" Value="0.009999999776482582"/>
@@ -62,7 +62,7 @@
               <Node ID="gain1" FactoryPath="core.gain" Bypassed="0">
                 <Parameters>
                   <Parameter MinValue="0.0" MaxValue="-100.0" StepSize="0.1000000014901161"
-                             SkewFactor="5.422270774841309" ID="Gain" Automated="1"/>
+                             SkewFactor="5.267909053686394" ID="Gain" Automated="1"/>
                   <Parameter MinValue="0.0" MaxValue="1000.0" StepSize="0.1000000014901161"
                              SkewFactor="0.3010300099849701" ID="Smoothing" Value="20.0"/>
                   <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
@@ -116,7 +116,7 @@
           <Connection NodeId="pma" ParameterId="Multiply"/>
         </Connections>
       </Parameter>
-      <Parameter ID="Crossover" MinValue="0.0" MaxValue="1.0" Value="0.66">
+      <Parameter ID="Crossover" MinValue="0.0" MaxValue="1.0" Value="0.6482667541503905">
         <Connections>
           <Connection NodeId="linkwitzriley" ParameterId="Frequency"/>
           <Connection NodeId="linkwitzriley1" ParameterId="Frequency"/>
