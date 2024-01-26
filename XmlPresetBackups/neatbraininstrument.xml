@@ -106,7 +106,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SynthGroup" ID="residuesGroup" Bypassed="0" Gain="1.0"
+    <Processor Type="SynthGroup" ID="residuesGroup" Bypassed="1" Gain="1.0"
                Balance="0.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                EnableFM="0.0" CarrierIndex="-1.0" ModulatorIndex="-1.0" UnisonoVoiceAmount="1.0"
                UnisonoDetune="0.0" UnisonoSpread="1.0" KillSecondVoices="1.0">
@@ -189,11 +189,11 @@
         <Processor Type="StreamingSampler" ID="samplerResidueLeft" Bypassed="0"
                    Gain="1.0" Balance="-1.0" VoiceLimit="256.0" KillFadeTime="20.0"
                    IconColour="0" PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
-                   SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="0.0"
+                   SamplerRepeatMode="3.0" RRGroupAmount="1.0" PitchTracking="0.0"
                    OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0" Reversed="0.0"
                    NumChannels="1" UseStaticMatrix="0.0" Group0Table="" Group1Table=""
                    Group2Table="" Group3Table="" Group4Table="" Group5Table="" Group6Table=""
-                   Group7Table="" SampleMapID="profileALeft">
+                   Group7Table="" SampleMapID="partialsRightC">
           <ChildProcessors>
             <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
               <ChildProcessors/>
@@ -254,7 +254,7 @@
                    OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0" Reversed="0.0"
                    NumChannels="1" UseStaticMatrix="0.0" Group0Table="" Group1Table=""
                    Group2Table="" Group3Table="" Group4Table="" Group5Table="" Group6Table=""
-                   Group7Table="" SampleMapID="profileARight">
+                   Group7Table="" SampleMapID="">
           <ChildProcessors>
             <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
               <ChildProcessors/>
@@ -488,7 +488,7 @@
     </Processor>
     <Processor Type="WavetableSynth" ID="synthWTLeftA" Bypassed="0" Gain="0.8799999952316284"
                Balance="-1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               HqMode="1.0" LoadedBankIndex="1.0" TableIndexValue="0.3799999952316284"
+               HqMode="1.0" LoadedBankIndex="2.0" TableIndexValue="0.3799999952316284"
                RefreshMipMap="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -731,7 +731,7 @@
     </Processor>
     <Processor Type="WavetableSynth" ID="synthWTRightA" Bypassed="0" Gain="0.8799999952316284"
                Balance="1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               HqMode="1.0" LoadedBankIndex="2.0" TableIndexValue="0.4699999988079071"
+               HqMode="1.0" LoadedBankIndex="1.0" TableIndexValue="0.4699999988079071"
                RefreshMipMap="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">

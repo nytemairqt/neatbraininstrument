@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<samplemap CrossfadeGamma="1.0" ID="profileLeftA" RRGroupAmount="1.0" MicPositions=";">
+  <sample Root="52" LoKey="0" HiKey="127" LoVel="1" HiVel="1" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\03 mute\01.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="52" LoKey="0" HiKey="127" LoVel="2" HiVel="2" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\03 mute\02.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="52" LoKey="0" HiKey="127" LoVel="3" HiVel="3" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\03 mute\03.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="52" LoKey="0" HiKey="127" LoVel="4" HiVel="4" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\03 mute\04.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="52" LoKey="0" HiKey="127" LoVel="5" HiVel="5" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\03 mute\05.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="52" LoKey="0" HiKey="127" LoVel="6" HiVel="6" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\03 mute\06.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="52" LoKey="0" HiKey="127" LoVel="7" HiVel="7" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\03 mute\07.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="52" LoKey="0" HiKey="127" LoVel="8" HiVel="8" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\03 mute\08.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="52" LoKey="0" HiKey="61" LoVel="9" HiVel="9" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\01 open\01.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="52" LoKey="0" HiKey="61" LoVel="10" HiVel="10" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\01 open\02.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="52" LoKey="0" HiKey="61" LoVel="11" HiVel="11" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\01 open\03.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="52" LoKey="0" HiKey="61" LoVel="12" HiVel="12" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\01 open\04.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="52" LoKey="0" HiKey="61" LoVel="13" HiVel="13" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\01 open\05.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="52" LoKey="0" HiKey="61" LoVel="14" HiVel="14" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\01 open\06.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="52" LoKey="0" HiKey="61" LoVel="15" HiVel="15" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\01 open\07.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="52" LoKey="0" HiKey="61" LoVel="16" HiVel="16" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\01 open\08.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="74" LoKey="0" HiKey="127" LoVel="17" HiVel="17" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\04 harmonic\01.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="74" LoKey="0" HiKey="127" LoVel="18" HiVel="18" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\04 harmonic\02.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="74" LoKey="0" HiKey="127" LoVel="19" HiVel="19" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\04 harmonic\03.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="74" LoKey="0" HiKey="127" LoVel="20" HiVel="20" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\04 harmonic\04.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="74" LoKey="0" HiKey="127" LoVel="21" HiVel="21" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\04 harmonic\05.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="74" LoKey="0" HiKey="127" LoVel="22" HiVel="22" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\04 harmonic\06.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="74" LoKey="0" HiKey="127" LoVel="23" HiVel="23" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\04 harmonic\07.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="74" LoKey="0" HiKey="127" LoVel="24" HiVel="24" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\04 harmonic\08.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="74" LoKey="62" HiKey="127" LoVel="9" HiVel="9" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\02 fret\01.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="74" LoKey="62" HiKey="127" LoVel="10" HiVel="10" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\02 fret\02.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="74" LoKey="62" HiKey="127" LoVel="11" HiVel="11" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\02 fret\03.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="74" LoKey="62" HiKey="127" LoVel="12" HiVel="12" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\02 fret\04.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="74" LoKey="62" HiKey="127" LoVel="13" HiVel="13" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\02 fret\05.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="74" LoKey="62" HiKey="127" LoVel="14" HiVel="14" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\02 fret\06.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="74" LoKey="62" HiKey="127" LoVel="15" HiVel="15" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\02 fret\07.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+  <sample Root="74" LoKey="62" HiKey="127" LoVel="16" HiVel="16" RRGroup="1"
+          FileName="{PROJECT_FOLDER}partialProfiles\RIGHT\01 BRIDGE\02 fret\08.wav"
+          Duplicate="0" LoopEnd="14477" SampleEnd="18593"/>
+</samplemap>

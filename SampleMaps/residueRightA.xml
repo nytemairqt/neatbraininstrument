@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <samplemap CrossfadeGamma="1.0" ID="profileARight" RRGroupAmount="15.0"
-           MicPositions=";" SaveMode="2">
+           MicPositions=";" SaveMode="1">
   <sample Root="60" LoKey="24" HiKey="88" LoVel="0" HiVel="63" RRGroup="1"
           FileName="{PROJECT_FOLDER}profileA/muteR/01.wav" Duplicate="1"
           SampleEnd="21492" MonolithOffset="0" MonolithLength="24576" SampleRate="44100.0"

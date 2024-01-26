@@ -44,7 +44,7 @@ else
 	synthWTRightA_fxPalmMute.setBypassed(true);
 }function onNoteOn()
 {
-	//Console.print(Message.getNoteNumber());
+	Console.print(Message.getNoteNumber());
 }
  function onNoteOff()
 {
