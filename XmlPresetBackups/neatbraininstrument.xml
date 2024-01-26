@@ -30,7 +30,7 @@
             <Control type="ScriptSlider" id="knbAmpRandom" value="0.0"/>
             <Control type="ScriptSlider" id="knbToneDampen" value="0.6299999952316284"/>
             <Control type="ScriptSlider" id="knbToneBrightness" value="0.8999999761581421"/>
-            <Control type="ScriptSlider" id="knbToneChorus" value="0.1800000071525574"/>
+            <Control type="ScriptSlider" id="knbToneChorus" value="0.1500000059604645"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-6.0"/>
             <Control type="ScriptSlider" id="knbMasterPan" value="0.0"/>
             <Control type="ScriptSlider" id="knbCoarseDetune" value="0.0"/>
@@ -694,16 +694,10 @@
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="ScriptFX" ID="synthWTLeftA_chorusJ" Bypassed="0">
+            <Processor Type="Chorus" ID="synthWTLeftA_fxChorus" Bypassed="0" Rate="0.009999999776482582"
+                       Width="0.03750000149011612" Feedback="0.9300000071525574" Delay="1.0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
-              <Content/>
-              <Networks>
-                <Network ID="chorus" Version="0.0.0"/>
-              </Networks>
-              <UIData>
-                <ContentProperties DeviceType="Desktop"/>
-              </UIData>
             </Processor>
           </ChildProcessors>
         </Processor>
@@ -948,16 +942,10 @@
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="ScriptFX" ID="synthWTRightA_chorusJ" Bypassed="0">
+            <Processor Type="Chorus" ID="synthWTRightA_fxChorus" Bypassed="0" Rate="0.009999999776482582"
+                       Width="0.03750000149011612" Feedback="0.9300000071525574" Delay="1.0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
-              <Content/>
-              <Networks>
-                <Network ID="chorus" Version="0.0.0"/>
-              </Networks>
-              <UIData>
-                <ContentProperties DeviceType="Desktop"/>
-              </UIData>
             </Processor>
           </ChildProcessors>
         </Processor>

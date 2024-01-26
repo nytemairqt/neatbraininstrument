@@ -137,7 +137,7 @@
                  height="10" text="profile" visible="0" parentComponent="pnlBody"
                  items="&#10;A&#10;B&#10;C" max="3"/>
       <Component type="ScriptPanel" id="pnlAdvanced" x="498" y="16" width="480"
-                 height="498" parentComponent="pnlBody" visible="0">
+                 height="498" parentComponent="pnlBody">
         <Component type="ScriptPanel" id="lblAdvanced" x="-8" y="-2" width="128"
                    height="64" text="Advanced_" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="pnlShowInfoPopup" x="436" y="0" width="16"

@@ -59,8 +59,8 @@ const synthWTRightA_toneAdjust = Synth.getEffect("synthWTRightA_toneAdjust");
 Engine.addModuleStateToUserPreset("synthWTLeftA_toneAdjust");
 Engine.addModuleStateToUserPreset("synthWTRightA_toneAdjust");
 
-const synthWTLeftA_chorusJ = Synth.getEffect("synthWTLeftA_chorusJ");
-const synthWTRightA_chorusJ = Synth.getEffect("synthWTRightA_chorusJ");
+const synthWTLeftA_fxChorus = Synth.getEffect("synthWTLeftA_fxChorus");
+const synthWTRightA_fxChorus = Synth.getEffect("synthWTRightA_fxChorus");
 
 // PALM MUTE
 

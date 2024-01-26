@@ -325,17 +325,17 @@ inline function onknbToneChorusControl(component, value)
 {
 	if (value == 0)
 	{
-		synthWTLeftA_chorusJ.setBypassed(1);
-		synthWTRightA_chorusJ.setBypassed(1);
+		synthWTLeftA_fxChorus.setBypassed(1);
+		synthWTRightA_fxChorus.setBypassed(1);
 	}
 	else
 	{
-		synthWTLeftA_chorusJ.setBypassed(0);
-		synthWTRightA_chorusJ.setBypassed(0);
+		synthWTLeftA_fxChorus.setBypassed(0);
+		synthWTRightA_fxChorus.setBypassed(0);
 	}
-
-	synthWTLeftA_chorusJ.setAttribute(synthWTLeftA_chorusJ.Depth, value * 0.25);
-	synthWTRightA_chorusJ.setAttribute(synthWTRightA_chorusJ.Depth, value * 0.25);	
+	
+	synthWTLeftA_fxChorus.setAttribute(synthWTLeftA_fxChorus.Width, value * .5);
+	synthWTRightA_fxChorus.setAttribute(synthWTRightA_fxChorus.Width, value * .5);	
 }
 
 // Tone Stiffness Intensity
