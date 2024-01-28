@@ -24,7 +24,7 @@
               <Node ID="cable_table" FactoryPath="control.cable_table" Bypassed="0">
                 <ComplexData>
                   <Tables>
-                    <Table Index="-1" EmbeddedData="48......n1Ta5C...vO..v+9n1Ta5y0pNxO..H.+....9yuuDqO...f+....9C...vO"/>
+                    <Table Index="-1" EmbeddedData="72......PBEg3C...vO..H.+PBEg3y0pNxO..H.+....9yuuDqO...d+....9C...vO...d+n1Ta5C...vO...f+n1Ta5C...vO"/>
                   </Tables>
                 </ComplexData>
                 <Parameters>
@@ -120,33 +120,23 @@
         </Nodes>
         <Parameters/>
       </Node>
-      <Node ID="split" FactoryPath="container.split" Bypassed="0">
-        <Nodes>
-          <Node ID="Filter" FactoryPath="container.chain" Bypassed="0">
-            <Nodes>
-              <Node ID="one_pole" FactoryPath="filters.one_pole" Bypassed="0">
-                <ComplexData>
-                  <Filters>
-                    <Filter Index="-1"/>
-                  </Filters>
-                </ComplexData>
-                <Parameters>
-                  <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
-                             ID="Frequency" Automated="1"/>
-                  <Parameter MinValue="0.300000011920929" MaxValue="9.899999618530273" SkewFactor="0.2647178173065186"
-                             ID="Q" Value="0.4122578167622484"/>
-                  <Parameter MinValue="-18.0" MaxValue="18.0" ID="Gain" Value="0.0"/>
-                  <Parameter MinValue="0.0" MaxValue="1.0" SkewFactor="0.3010300099849701"
-                             ID="Smoothing" Value="0.009999999776482582"/>
-                  <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Mode" Value="0.0"/>
-                  <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Enabled" Value="1.0"/>
-                </Parameters>
-              </Node>
-            </Nodes>
-            <Parameters/>
-          </Node>
-        </Nodes>
-        <Parameters/>
+      <Node ID="one_pole" FactoryPath="filters.one_pole" Bypassed="0">
+        <ComplexData>
+          <Filters>
+            <Filter Index="-1"/>
+          </Filters>
+        </ComplexData>
+        <Parameters>
+          <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
+                     ID="Frequency" Automated="1"/>
+          <Parameter MinValue="0.300000011920929" MaxValue="9.899999618530273" SkewFactor="0.2647178173065186"
+                     ID="Q" Value="0.4122578167622484"/>
+          <Parameter MinValue="-18.0" MaxValue="18.0" ID="Gain" Value="0.0"/>
+          <Parameter MinValue="0.0" MaxValue="1.0" SkewFactor="0.3010300099849701"
+                     ID="Smoothing" Value="0.009999999776482582"/>
+          <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Mode" Value="0.0"/>
+          <Parameter MinValue="0.0" MaxValue="1.0" StepSize="1.0" ID="Enabled" Value="1.0"/>
+        </Parameters>
       </Node>
     </Nodes>
     <Parameters/>

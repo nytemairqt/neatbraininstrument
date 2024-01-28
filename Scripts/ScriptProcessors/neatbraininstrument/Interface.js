@@ -34,17 +34,20 @@ reg m = 0;
 if (MEMORYTYPE == "Guitar")
 {
 	Console.print("Guitar Memory Detected: Activating Palm Mute Logic");
-	//synthWTLeftA_fxPalmMute.setBypassed(false);
-	//synthWTRightA_fxPalmMute.setBypassed(false);	
+	synthWTLeftA_muteLogic.setBypassed(false);
+	synthWTRightA_muteLogic.setBypassed(false);	
 }
 else
 {
 	Console.print("Deactivating Palm Mute Logic");
-	synthWTLeftA_fxPalmMute.setBypassed(true);
-	synthWTRightA_fxPalmMute.setBypassed(true);
+	synthWTLeftA_muteLogic.setBypassed(true);
+	synthWTRightA_muteLogic.setBypassed(true);
 }function onNoteOn()
 {
-	Console.print(Message.getNoteNumber());
+	//Console.print(Message.getNoteNumber());
+	
+	Console.print(Message.getVelocity());
+
 }
  function onNoteOff()
 {

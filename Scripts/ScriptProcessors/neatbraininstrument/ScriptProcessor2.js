@@ -11,29 +11,6 @@ reg v = 0;function onNoteOn()
 	if (m > 88)
 		Message.ignoreEvent(1);
 	
-	// Mute
-	if (v < 64)
-	{
-		Message.ignoreEvent(1);
-		Synth.playNote(m, Math.randInt(1, 8));
-	}
-		
-	// Sustain
-	if (v > 64 && v < 120)
-	{
-		Message.ignoreEvent(1);
-		Synth.playNote(m, Math.randInt(9, 16));
-	}
-	
-	// Harmonics
-	
-	if (v > 120)
-	{
-		Message.ignoreEvent(1);
-		Synth.playNote(m, Math.randInt(17, 24));
-	}
-	
-	
 }
  function onNoteOff()
 {
