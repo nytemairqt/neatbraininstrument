@@ -47,10 +47,7 @@ inline function onknbPartialReleaseControl(component, value)
 	synthWTRightA_gainAHDSR.setAttribute(synthWTRightA_gainAHDSR.Release, value);
 	
 	synthWTLeftA_tableEnv.setAttribute(synthWTLeftA_tableEnv.Release, value);
-	synthWTRightA_tableEnv.setAttribute(synthWTRightA_tableEnv.Release, value);
-	
-	synthWTLeftA_fxPalmMuteAHDSR.setAttribute(synthWTLeftA_fxPalmMuteAHDSR.Release, value);
-	synthWTRightA_fxPalmMuteAHDSR.setAttribute(synthWTRightA_fxPalmMuteAHDSR.Release, value);
+	synthWTRightA_tableEnv.setAttribute(synthWTRightA_tableEnv.Release, value);		
 }
 
 // Hidden Combo Box
@@ -92,7 +89,7 @@ inline function onbtnPartialNextControl(component, value)
 
 // Create UI Elements
 
-const lblModes = createLabel("lblModes", -6, -6, 128, 64, 20, "medium", "PARTIALS", "pnlBody", Colours.grey, "centred");
+const lblModes = createLabel("lblModes", -6, -6, 128, 64, 20, "medium", "PARTIAL", "pnlBody", Colours.grey, "centred");
 const lblPartialADSR = createLabel("lblPartialADSR", -30, 402 , 128, 32, 20, "regular", "Env", "pnlBody", Colours.grey, "centred");
 
 const lblPartialGain = createLabel("lblPartialGain", 240, 0, 128, 64, 16, "regular", "VOL", "pnlBody", Colours.grey, "right");

@@ -64,12 +64,6 @@ const synthWTRightA_fxChorus = Synth.getEffect("synthWTRightA_fxChorus");
 
 // PALM MUTE
 
-const synthWTLeftA_fxPalmMute = Synth.getEffect("synthWTLeftA_fxPalmMute");
-const synthWTRightA_fxPalmMute = Synth.getEffect("synthWTRightA_fxPalmMute");
-
-const var synthWTLeftA_fxPalmMuteAHDSR = Synth.getModulator("synthWTLeftA_fxPalmMuteAHDSR");
-const var synthWTRightA_fxPalmMuteAHDSR = Synth.getModulator("synthWTRightA_fxPalmMuteAHDSR");
-
 
 // MODULE STATES
 

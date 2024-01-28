@@ -17,8 +17,8 @@
             <Control type="ScriptSlider" id="knbResidueDecay" value="20000.0"/>
             <Control type="ScriptSlider" id="knbResidueSustain" value="-100.0"/>
             <Control type="ScriptSlider" id="knbResidueRelease" value="725.0"/>
-            <Control type="ScriptSlider" id="knbPartialGain" value="0.5199999809265137"/>
-            <Control type="ScriptSlider" id="knbResidueGain" value="1.0"/>
+            <Control type="ScriptSlider" id="knbPartialGain" value="1.0"/>
+            <Control type="ScriptSlider" id="knbResidueGain" value="0.7400000095367432"/>
             <Control type="ScriptComboBox" id="cmbResidueProfile" value="1.0"/>
             <Control type="ScriptComboBox" id="cmbPartialProfile" value="1.0"/>
             <Control type="ScriptSlider" id="knbPitchVelocity" value="0.2000000029802322"/>
@@ -28,7 +28,7 @@
             <Control type="ScriptSlider" id="knbAmpVelocity" value="0.25"/>
             <Control type="ScriptSlider" id="knbAmpLFO" value="0.300000011920929"/>
             <Control type="ScriptSlider" id="knbAmpRandom" value="0.300000011920929"/>
-            <Control type="ScriptSlider" id="knbToneDampen" value="0.0"/>
+            <Control type="ScriptSlider" id="knbToneDampen" value="0.5699999928474426"/>
             <Control type="ScriptSlider" id="knbToneBrightness" value="0.3100000023841858"/>
             <Control type="ScriptSlider" id="knbToneChorus" value="0.2800000011920929"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-6.0"/>
@@ -106,7 +106,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="SynthGroup" ID="residuesGroup" Bypassed="0" Gain="1.0"
+    <Processor Type="SynthGroup" ID="residuesGroup" Bypassed="1" Gain="1.0"
                Balance="0.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                EnableFM="0.0" CarrierIndex="-1.0" ModulatorIndex="-1.0" UnisonoVoiceAmount="1.0"
                UnisonoDetune="0.0" UnisonoSpread="1.0" KillSecondVoices="1.0">
@@ -187,7 +187,7 @@
           <ChildProcessors/>
         </Processor>
         <Processor Type="StreamingSampler" ID="samplerResidueLeft" Bypassed="0"
-                   Gain="1.0" Balance="-1.0" VoiceLimit="256.0" KillFadeTime="20.0"
+                   Gain="0.7400000095367432" Balance="-1.0" VoiceLimit="256.0" KillFadeTime="20.0"
                    IconColour="0" PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
                    SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="0.0"
                    OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0" Reversed="0.0"
@@ -248,13 +248,13 @@
           </channels>
         </Processor>
         <Processor Type="StreamingSampler" ID="samplerResidueRight" Bypassed="0"
-                   Gain="1.0" Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0"
-                   IconColour="0" PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
-                   SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="0.0"
-                   OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0" Reversed="0.0"
-                   NumChannels="1" UseStaticMatrix="0.0" Group0Table="" Group1Table=""
-                   Group2Table="" Group3Table="" Group4Table="" Group5Table="" Group6Table=""
-                   Group7Table="" SampleMapID="">
+                   Gain="0.7400000095367432" Balance="100.0" VoiceLimit="256.0"
+                   KillFadeTime="20.0" IconColour="0" PreloadSize="8192.0" BufferSize="4096.0"
+                   VoiceAmount="256.0" SamplerRepeatMode="3.0" RRGroupAmount="15.0"
+                   PitchTracking="0.0" OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0"
+                   Reversed="0.0" NumChannels="1" UseStaticMatrix="0.0" Group0Table=""
+                   Group1Table="" Group2Table="" Group3Table="" Group4Table="" Group5Table=""
+                   Group6Table="" Group7Table="" SampleMapID="residueRightA">
           <ChildProcessors>
             <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
               <ChildProcessors/>
@@ -309,13 +309,13 @@
           </channels>
         </Processor>
         <Processor Type="StreamingSampler" ID="samplerReleaseLeft" Bypassed="0"
-                   Gain="1.0" Balance="-100.0" VoiceLimit="256.0" KillFadeTime="20.0"
-                   IconColour="0" PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
-                   SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="0.0"
-                   OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0" Reversed="0.0"
-                   NumChannels="1" UseStaticMatrix="0.0" Group0Table="" Group1Table=""
-                   Group2Table="" Group3Table="" Group4Table="" Group5Table="" Group6Table=""
-                   Group7Table="" SampleMapID="">
+                   Gain="0.7400000095367432" Balance="-100.0" VoiceLimit="256.0"
+                   KillFadeTime="20.0" IconColour="0" PreloadSize="8192.0" BufferSize="4096.0"
+                   VoiceAmount="256.0" SamplerRepeatMode="3.0" RRGroupAmount="15.0"
+                   PitchTracking="0.0" OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0"
+                   Reversed="0.0" NumChannels="1" UseStaticMatrix="0.0" Group0Table=""
+                   Group1Table="" Group2Table="" Group3Table="" Group4Table="" Group5Table=""
+                   Group6Table="" Group7Table="" SampleMapID="">
           <ChildProcessors>
             <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
               <ChildProcessors>
@@ -375,13 +375,13 @@
           </channels>
         </Processor>
         <Processor Type="StreamingSampler" ID="samplerReleaseRight" Bypassed="0"
-                   Gain="1.0" Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0"
-                   IconColour="0" PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
-                   SamplerRepeatMode="3.0" RRGroupAmount="1.0" PitchTracking="0.0"
-                   OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0" Reversed="0.0"
-                   NumChannels="1" UseStaticMatrix="0.0" Group0Table="" Group1Table=""
-                   Group2Table="" Group3Table="" Group4Table="" Group5Table="" Group6Table=""
-                   Group7Table="" SampleMapID="">
+                   Gain="0.7400000095367432" Balance="100.0" VoiceLimit="256.0"
+                   KillFadeTime="20.0" IconColour="0" PreloadSize="8192.0" BufferSize="4096.0"
+                   VoiceAmount="256.0" SamplerRepeatMode="3.0" RRGroupAmount="1.0"
+                   PitchTracking="0.0" OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0"
+                   Reversed="0.0" NumChannels="1" UseStaticMatrix="0.0" Group0Table=""
+                   Group1Table="" Group2Table="" Group3Table="" Group4Table="" Group5Table=""
+                   Group6Table="" Group7Table="" SampleMapID="">
           <ChildProcessors>
             <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
               <ChildProcessors>
@@ -486,9 +486,9 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="WavetableSynth" ID="synthWTLeftA" Bypassed="0" Gain="0.5199999809265137"
+    <Processor Type="WavetableSynth" ID="synthWTLeftA" Bypassed="0" Gain="1.0"
                Balance="-1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
-               HqMode="1.0" LoadedBankIndex="1.0" TableIndexValue="0.3799999952316284"
+               HqMode="1.0" LoadedBankIndex="1.0" TableIndexValue="0.1000000014901161"
                RefreshMipMap="0.0">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
@@ -605,56 +605,17 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="PolyphonicFilter" ID="synthWTLeftA_fxPalmMute" Bypassed="0"
-                       Gain="0.0" Frequency="20000.0" Q="0.5" Mode="6.0" Quality="0.0"
-                       BipolarIntensity="0.0">
-              <ChildProcessors>
-                <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
-                           Intensity="1.0">
-                  <ChildProcessors>
-                    <Processor Type="AHDSR" ID="synthWTLeftA_fxPalmMuteAHDSR" Bypassed="0" Monophonic="0.0"
-                               Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                               Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="250.0" Sustain="0.0"
-                               Release="15000.0" EcoMode="1.0">
-                      <ChildProcessors>
-                        <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
-                          <ChildProcessors/>
-                        </Processor>
-                        <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
-                          <ChildProcessors/>
-                        </Processor>
-                        <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
-                          <ChildProcessors/>
-                        </Processor>
-                        <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
-                          <ChildProcessors>
-                            <Processor Type="Velocity" ID="synthWTLeftA_fxPalmMuteVel" Bypassed="0"
-                                       Intensity="1.0" UseTable="1.0" Inverted="0.0" DecibelMode="1.0"
-                                       VelocityTableData="48..........7C...vO.Up+9....7C...vO....+....9C...vO...f+....9C...vO">
-                              <ChildProcessors/>
-                            </Processor>
-                          </ChildProcessors>
-                        </Processor>
-                        <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
-                          <ChildProcessors/>
-                        </Processor>
-                      </ChildProcessors>
-                    </Processor>
-                  </ChildProcessors>
-                </Processor>
-                <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
-                  <ChildProcessors/>
-                </Processor>
-                <Processor Type="ModulatorChain" ID="Bipolar Freq Modulation" Bypassed="0"
-                           Intensity="1.0">
-                  <ChildProcessors/>
-                </Processor>
-                <Processor Type="ModulatorChain" ID="Q Modulation" Bypassed="0" Intensity="1.0">
-                  <ChildProcessors/>
-                </Processor>
-              </ChildProcessors>
+            <Processor Type="PolyScriptFX" ID="Polyphonic Script FX1" Bypassed="0">
+              <ChildProcessors/>
+              <Content/>
+              <Networks>
+                <Network ID="palmMute" AllowPolyphonic="1" Version="0.0.0"/>
+              </Networks>
+              <UIData>
+                <ContentProperties DeviceType="Desktop"/>
+              </UIData>
             </Processor>
-            <Processor Type="ScriptFX" ID="synthWTLeftA_fxDampen" Bypassed="1">
+            <Processor Type="ScriptFX" ID="synthWTLeftA_fxDampen" Bypassed="0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
               <Content/>
@@ -704,12 +665,13 @@
         <Processor Type="ModulatorChain" ID="Table Index" Bypassed="0" Intensity="1.0">
           <ChildProcessors>
             <Processor Type="Random" ID="synthWTLeftA_tableRandom" Bypassed="1" Intensity="1.0"
-                       UseTable="1.0" RandomTableData="24.......QDQ3C...vO...f+TUUU8C...vO">
+                       UseTable="1.0" RandomTableData="24......LyLS7C...vO...f+TUUU8C...vO">
               <ChildProcessors/>
             </Processor>
             <Processor Type="TableEnvelope" ID="synthWTLeftA_tableEnv" Bypassed="0"
                        Monophonic="0.0" Retrigger="1.0" Intensity="1.0" Attack="132.0"
-                       Release="15000.0" AttackTableData="" ReleaseTableData="24..........9C...vO...f+.........vO">
+                       Release="15000.0" AttackTableData="24......vLyL6C...vO...f+....9C...vO"
+                       ReleaseTableData="24..........9C...vO...f+fHhH6C...vO">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="AttackTime Modulation" Bypassed="0"
                            Intensity="1.0">
@@ -721,7 +683,7 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="Velocity" ID="Velocity Modulator1" Bypassed="0" Intensity="1.0"
+            <Processor Type="Velocity" ID="Velocity Modulator1" Bypassed="1" Intensity="1.0"
                        UseTable="1.0" Inverted="1.0" DecibelMode="0.0" VelocityTableData="24.......QDQ3C...vO...f+PDQj8C...vO">
               <ChildProcessors/>
             </Processor>
@@ -733,7 +695,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="WavetableSynth" ID="synthWTRightA" Bypassed="1" Gain="0.5199999809265137"
+    <Processor Type="WavetableSynth" ID="synthWTRightA" Bypassed="1" Gain="1.0"
                Balance="1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                HqMode="1.0" LoadedBankIndex="2.0" TableIndexValue="0.4699999988079071"
                RefreshMipMap="0.0">
@@ -858,56 +820,7 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="PolyphonicFilter" ID="synthWTRightA_fxPalmMute" Bypassed="0"
-                       Gain="0.0" Frequency="20000.0" Q="0.5" Mode="6.0" Quality="0.0"
-                       BipolarIntensity="0.0">
-              <ChildProcessors>
-                <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
-                           Intensity="1.0">
-                  <ChildProcessors>
-                    <Processor Type="AHDSR" ID="synthWTRightA_fxPalmMuteAHDSR" Bypassed="0"
-                               Monophonic="0.0" Retrigger="1.0" Intensity="1.0" AttackCurve="0.0"
-                               DecayCurve="0.0" Attack="20.0" AttackLevel="0.0" Hold="10.0"
-                               Decay="250.0" Sustain="0.0" Release="15000.0" EcoMode="1.0">
-                      <ChildProcessors>
-                        <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
-                          <ChildProcessors/>
-                        </Processor>
-                        <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
-                          <ChildProcessors/>
-                        </Processor>
-                        <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
-                          <ChildProcessors/>
-                        </Processor>
-                        <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
-                          <ChildProcessors>
-                            <Processor Type="Velocity" ID="synthWTRightA_fxPalmMuteVel" Bypassed="0"
-                                       Intensity="1.0" UseTable="1.0" Inverted="0.0" DecibelMode="1.0"
-                                       VelocityTableData="48..........7C...vO.Up+9....7C...vO....+....9C...vO...f+....9C...vO">
-                              <ChildProcessors/>
-                            </Processor>
-                          </ChildProcessors>
-                        </Processor>
-                        <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
-                          <ChildProcessors/>
-                        </Processor>
-                      </ChildProcessors>
-                    </Processor>
-                  </ChildProcessors>
-                </Processor>
-                <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
-                  <ChildProcessors/>
-                </Processor>
-                <Processor Type="ModulatorChain" ID="Bipolar Freq Modulation" Bypassed="0"
-                           Intensity="1.0">
-                  <ChildProcessors/>
-                </Processor>
-                <Processor Type="ModulatorChain" ID="Q Modulation" Bypassed="0" Intensity="1.0">
-                  <ChildProcessors/>
-                </Processor>
-              </ChildProcessors>
-            </Processor>
-            <Processor Type="ScriptFX" ID="synthWTRightA_fxDampen" Bypassed="0">
+            <Processor Type="ScriptFX" ID="synthWTRightA_fxDampen" Bypassed="1">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
               <Content/>
@@ -918,7 +831,7 @@
                 <ContentProperties DeviceType="Desktop"/>
               </UIData>
             </Processor>
-            <Processor Type="SimpleGain" ID="synthWTRightA_levelAdjust" Bypassed="0"
+            <Processor Type="SimpleGain" ID="synthWTRightA_levelAdjust" Bypassed="1"
                        Gain="10.0" Delay="0.0" Width="100.0" Balance="0.0" InvertPolarity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
@@ -936,7 +849,7 @@
               </ChildProcessors>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="synthWTRightA_toneAdjust" Bypassed="0" NumFilters="6"
+            <Processor Type="CurveEq" ID="synthWTRightA_toneAdjust" Bypassed="1" NumFilters="6"
                        Band0="0.0" Band1="60.0" Band2="0.75" Band3="1.0" Band4="1.0"
                        Band5="6.0" Band6="7930.0" Band7="0.300000011920929" Band8="1.0"
                        Band9="0.0" Band10="0.0" Band11="100.0" Band12="0.4000000059604645"
@@ -956,11 +869,11 @@
         </Processor>
         <Processor Type="ModulatorChain" ID="Table Index" Bypassed="0" Intensity="1.0">
           <ChildProcessors>
-            <Processor Type="Random" ID="synthWTRightA_tableRandom" Bypassed="1" Intensity="1.0"
-                       UseTable="1.0" RandomTableData="24.......u6t2C...vO...f+v6ta8C...vO">
+            <Processor Type="Random" ID="synthWTRightA_tableRandom" Bypassed="0" Intensity="1.0"
+                       UseTable="1.0" RandomTableData="24......XlYF7C...vO...f+3c2c8C...vO">
               <ChildProcessors/>
             </Processor>
-            <Processor Type="TableEnvelope" ID="synthWTRightA_tableEnv" Bypassed="0"
+            <Processor Type="TableEnvelope" ID="synthWTRightA_tableEnv" Bypassed="1"
                        Monophonic="0.0" Retrigger="1.0" Intensity="1.0" Attack="132.0"
                        Release="15000.0" AttackTableData="" ReleaseTableData="24..........9C...vO...f+.........vO">
               <ChildProcessors>

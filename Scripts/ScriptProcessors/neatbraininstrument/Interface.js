@@ -34,8 +34,8 @@ reg m = 0;
 if (MEMORYTYPE == "Guitar")
 {
 	Console.print("Guitar Memory Detected: Activating Palm Mute Logic");
-	synthWTLeftA_fxPalmMute.setBypassed(false);
-	synthWTRightA_fxPalmMute.setBypassed(false);	
+	//synthWTLeftA_fxPalmMute.setBypassed(false);
+	//synthWTRightA_fxPalmMute.setBypassed(false);	
 }
 else
 {
