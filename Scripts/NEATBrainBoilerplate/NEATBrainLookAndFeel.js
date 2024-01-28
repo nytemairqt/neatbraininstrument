@@ -9,6 +9,8 @@ const LAFButtonNext = Content.createLocalLookAndFeel();
 const pnlBody = Content.getComponent("pnlBody");
 
 const pnlBodyColour = 0xff2f2f34;
+const pnlBodyColourTop = 0xFF37373C;
+const pnlBodyColourDark = 0xFF2C2C30;
 
 include("NEATBrainBoilerplate/NEATBrainPathData.js");
 
@@ -106,16 +108,28 @@ LAFButtonResetRatios.registerFunction("drawToggleButton", function(g, obj)
 });
 
 
-// Main Panel
+// Panel Body
 pnlBody.setPaintRoutine(function(g)
 {
-	g.fillAll(pnlBodyColour);
-	g.setColour(Colours.withAlpha(0xFFB1C1C1, .3));
-	g.drawLine(10, 10, 20, 10, 1.5);
-	g.drawLine(10, this.getWidth() / 2, 10, 10, 1.5);
+	// Fill Gradient	
+	var gradientData = [pnlBodyColourTop, 0, 0, pnlBodyColour, 0, this.getHeight(), false];
+	g.setGradientFill(gradientData);
+	g.fillRoundedRectangle([0, 0, this.getWidth(), this.getHeight()], 1.0);
+	
+	// Right Side
+	
+	gradientData = [pnlBodyColour, 0, 0, pnlBodyColourTop, 0, this.getHeight(), false];	
+	g.setGradientFill(gradientData);
+	g.fillRoundedRectangle([this.getWidth() / 2, 9, (this.getWidth() / 2), this.getHeight() - 52], 1.0);
+	
+	// Lines	
+	g.setColour(Colours.withAlpha(0xFFB1C1C1, .2));
+	//g.drawLine(10, 10, 20, 10, 1.5);
+	//g.drawLine(10, this.getWidth() / 2, 10, 10, 1.5);
+	g.drawLine(this.getWidth() / 2, this.getWidth(), 10, 10, 1.5);
 	g.drawLine(this.getWidth() / 2, this.getWidth() / 2, 10, this.getHeight() - 44, 1.5);
-	g.drawLine(this.getWidth() / 2, this.getWidth() - 10, this.getHeight() - 44, this.getHeight() - 44, 1.5);
-	g.drawLine(this.getWidth() - 10, this.getWidth() - 10, this.getHeight() - 44, this.getHeight() - 54, 1.5);
+	g.drawLine(this.getWidth() / 2, this.getWidth(), this.getHeight() - 44, this.getHeight() - 44, 1.5);
+	//g.drawLine(this.getWidth() - 10, this.getWidth() - 10, this.getHeight() - 44, this.getHeight() - 54, 1.5);
 });
 
 // Prev Profile
@@ -148,12 +162,9 @@ LAFButtonNext.registerFunction("drawToggleButton", function(g, obj)
 const var pnlProfilePartial = Content.getComponent("pnlProfilePartial");
 const var pnlProfileResidue = Content.getComponent("pnlProfileResidue");
 
-const TESTVALUE = 1;
-
-//const pnlPath = Content.createPath();
-
 pnlProfilePartial.setPaintRoutine(function(g)
 {
+	// Draw Paths
 	var p = Content.createPath();
 	var x = 90;
 	g.setColour(Colours.grey);
@@ -176,6 +187,7 @@ pnlProfilePartial.setPaintRoutine(function(g)
 
 pnlProfileResidue.setPaintRoutine(function(g)
 {
+	
 	var p = Content.createPath();
 	var x = 50;
 	var y = 130;

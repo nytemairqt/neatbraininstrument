@@ -11,6 +11,7 @@ reg v = 0;function onNoteOn()
 	if (m > 88)
 		Message.ignoreEvent(1);
 	
+	/*
 	// Mute
 	if (v < 64)
 	{
@@ -38,6 +39,9 @@ reg v = 0;function onNoteOn()
 		Message.ignoreEvent(1);
 		Synth.playNote(m, Math.randInt(17, 24));
 	}
+	*/
+	
+	//Message.setVelocity(5);
 	
 	
 }

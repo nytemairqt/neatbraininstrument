@@ -92,10 +92,10 @@ inline function onbtnPartialNextControl(component, value)
 
 // Create UI Elements
 
-const lblModes = createLabel("lblModes", -10, -6, 128, 64, 24, "Modes_", "pnlBody", Colours.grey, "centred");
-const lblPartialADSR = createLabel("lblPartialADSR", -30, 402 , 128, 32, 20, "Env", "pnlBody", Colours.grey, "centred");
+const lblModes = createLabel("lblModes", -6, -6, 128, 64, 20, "medium", "PARTIALS", "pnlBody", Colours.grey, "centred");
+const lblPartialADSR = createLabel("lblPartialADSR", -30, 402 , 128, 32, 20, "regular", "Env", "pnlBody", Colours.grey, "centred");
 
-const lblPartialGain = createLabel("lblPartialGain", 240, 0, 128, 64, 14, "VOL", "pnlBody", Colours.grey, "right");
+const lblPartialGain = createLabel("lblPartialGain", 240, 0, 128, 64, 16, "regular", "VOL", "pnlBody", Colours.grey, "right");
 const knbPartialGain = createKnob("knbPartialGain", lblPartialGain.get("x") + 140, lblPartialGain.get("y") + 25, 100, 16, "Partial Gain", true, onknbPartialGainControl, 0, 1, 0.01, .75, "pnlBody", true);
 
 knbPartialGain.setLocalLookAndFeel(LookAndFeel.horizontalSlider);
@@ -111,10 +111,10 @@ const knbPartialDecay = createKnob("knbPartialDecay", knbPartialAttack.get("x") 
 const knbPartialSustain = createKnob("knbPartialSustain", knbPartialAttack.get("x") + 200, lblPartialADSR.get("y") + 30, 48, 48, "P Sustain", true, onknbPartialSustainControl, -100, 0, 1.0, -100, "pnlBody", true);
 const knbPartialRelease = createKnob("knbPartialRelease", knbPartialAttack.get("x") + 300, lblPartialADSR.get("y") + 30, 48, 48, "P Release", true, onknbPartialReleaseControl, 5, 15000, 1.0, 200, "pnlBody", true);
 
-const lblPartialAttack = createLabel("lblPartialAttack", knbPartialAttack.get("x") - 39, knbPartialAttack.get("y") + 50, 128, 32, 16, "Attack", "pnlBody", Colours.grey, "centred");
-const lblPartialDecay = createLabel("lblPartialDecay", knbPartialDecay.get("x") - 40, knbPartialDecay.get("y") + 50, 128, 32, 16, "Decay", "pnlBody", Colours.grey, "centred");
-const lblPartialSustain = createLabel("lblPartialSustain", knbPartialSustain.get("x") - 40, knbPartialSustain.get("y") + 50, 128, 32, 16, "Sustain", "pnlBody", Colours.grey, "centred");
-const lblPartialRelease = createLabel("lblPartialRelease", knbPartialRelease.get("x") - 38, knbPartialRelease.get("y") + 50, 128, 32, 16, "Release", "pnlBody", Colours.grey, "centred");
+const lblPartialAttack = createLabel("lblPartialAttack", knbPartialAttack.get("x") - 39, knbPartialAttack.get("y") + 50, 128, 32, 16, "regular", "Attack", "pnlBody", Colours.grey, "centred");
+const lblPartialDecay = createLabel("lblPartialDecay", knbPartialDecay.get("x") - 40, knbPartialDecay.get("y") + 50, 128, 32, 16, "regular", "Decay", "pnlBody", Colours.grey, "centred");
+const lblPartialSustain = createLabel("lblPartialSustain", knbPartialSustain.get("x") - 40, knbPartialSustain.get("y") + 50, 128, 32, 16, "regular", "Sustain", "pnlBody", Colours.grey, "centred");
+const lblPartialRelease = createLabel("lblPartialRelease", knbPartialRelease.get("x") - 38, knbPartialRelease.get("y") + 50, 128, 32, 16, "regular", "Release", "pnlBody", Colours.grey, "centred");
 
 /* Residue */
 
@@ -220,8 +220,8 @@ inline function onbtnResidueNextControl(component, value)
 
 // Create UI Elements
 
-const lblResidue = createLabel("lblResidue", 483, -6, 128, 64, 24, "Residue_", "pnlBody", Colours.grey, "centred");
-const lblResidueGain = createLabel("lblResidueGain", 740, 0, 128, 64, 14, "VOL", "pnlBody", Colours.grey, "right");
+const lblResidue = createLabel("lblResidue", 478, -6, 128, 64, 20, "medium", "RESIDUE", "pnlBody", Colours.grey, "centred");
+const lblResidueGain = createLabel("lblResidueGain", 740, 0, 128, 64, 16, "regular", "VOL", "pnlBody", Colours.grey, "right");
 const knbResidueGain = createKnob("knbResidueGain", lblResidueGain.get("x") + 140, lblResidueGain.get("y") + 25, 100, 16, "Residue Gain", true, onknbResidueGainControl, 0, 1, 0.01, .75, "pnlBody", true);
 
 knbResidueGain.setLocalLookAndFeel(LookAndFeel.horizontalSlider);
@@ -231,17 +231,17 @@ const cmbResidueProfile = createComboBox("cmbResidueProfile", 0, 0, 10, 10, "pro
 const btnResidueProfilePrev = createButton("btnResidueProfilePrev", 500 + btnPartialProfilePrev.get("x"), 205, 30, 30, "Prev", false, onbtnResiduePrevControl, true, true, "pnlBody");
 const btnResidueProfileNext = createButton("btnResidueProfileNext", btnResidueProfilePrev.get("x") + 320, 205, 30, 30, "Prev", false, onbtnResidueNextControl, true, true, "pnlBody");
 
-const lblResidueADSR = createLabel("lblResidueADSR", 467, lblPartialADSR.get("y"), 128, 32, 20, "Env", "pnlBody", Colours.grey, "centred");
+const lblResidueADSR = createLabel("lblResidueADSR", 467, lblPartialADSR.get("y"), 128, 32, 20, "regular", "Env", "pnlBody", Colours.grey, "centred");
 
 const knbResidueAttack = createKnob("knbResidueAttack", lblResidueADSR.get("x") + 106, lblResidueADSR.get("y") + 30, 48, 48, "R Attack", true, onknbResidueAttackControl, 5, 1000, 1.0, 5, "pnlBody", true);
 const knbResidueDecay = createKnob("knbResidueDecay", knbResidueAttack.get("x") + 100, lblResidueADSR.get("y") + 30, 48, 48, "R Decay", true, onknbResidueDecayControl, 500, 20000, 1.0, 15000, "pnlBody", true);
 const knbResidueSustain = createKnob("knbResidueSustain", knbResidueAttack.get("x") + 200, lblResidueADSR.get("y") + 30, 48, 48, "R Sustain", true, onknbResidueSustainControl, -100, 0, 1.0, -100, "pnlBody", true);
 const knbResidueRelease = createKnob("knbResidueRelease", knbResidueAttack.get("x") + 300, lblResidueADSR.get("y") + 30, 48, 48, "R Release", true, onknbResidueReleaseControl, 5, 15000, 1.0, 200, "pnlBody", true);
 
-const lblResidueAttack = createLabel("lblResidueAttack", knbResidueAttack.get("x") - 39, knbResidueAttack.get("y") + 50, 128, 32, 16, "Attack", "pnlBody", Colours.grey, "centred");
-const lblResidueDecay = createLabel("lblResidueDecay", knbResidueDecay.get("x") - 40, knbResidueDecay.get("y") + 50, 128, 32, 16, "Decay", "pnlBody", Colours.grey, "centred");
-const lblResidueSustain = createLabel("lblResidueSustain", knbResidueSustain.get("x") - 40, knbResidueSustain.get("y") + 50, 128, 32, 16, "Sustain", "pnlBody", Colours.grey, "centred");
-const lblResidueRelease = createLabel("lblResidueRelease", knbResidueRelease.get("x") - 38, knbResidueRelease.get("y") + 50, 128, 32, 16, "Release", "pnlBody", Colours.grey, "centred");
+const lblResidueAttack = createLabel("lblResidueAttack", knbResidueAttack.get("x") - 39, knbResidueAttack.get("y") + 50, 128, 32, 16, "regular", "Attack", "pnlBody", Colours.grey, "centred");
+const lblResidueDecay = createLabel("lblResidueDecay", knbResidueDecay.get("x") - 40, knbResidueDecay.get("y") + 50, 128, 32, 16, "regular", "Decay", "pnlBody", Colours.grey, "centred");
+const lblResidueSustain = createLabel("lblResidueSustain", knbResidueSustain.get("x") - 40, knbResidueSustain.get("y") + 50, 128, 32, 16, "regular", "Sustain", "pnlBody", Colours.grey, "centred");
+const lblResidueRelease = createLabel("lblResidueRelease", knbResidueRelease.get("x") - 38, knbResidueRelease.get("y") + 50, 128, 32, 16, "regular", "Release", "pnlBody", Colours.grey, "centred");
 
 /* Advanced Panel */
 
@@ -364,15 +364,15 @@ inline function onknbToneBrightnessControl(component, value)
 // Instantiate UI Elements
 
 const btnShowAdvancedPanel = createButton("btnShowAdvancedPanel", 471, 200, 24, 100, "open", false, onbtnShowAdvancedPanelControl, false, true, "pnlBody");
-const pnlAdvanced = createChildPanel("pnlAdvanced", 498, 16, 480, 498, "pnlBody");
-const lblAdvanced = createLabel("lblAdvanced", -8, -2, 128, 64, 24, "Advanced_", "pnlAdvanced", Colours.grey, "centredTop");
+const pnlAdvanced = createChildPanel("pnlAdvanced", 496, 0, 500, 522, "pnlBody");
+const lblAdvanced = createLabel("lblAdvanced", -11, 16, 128, 64, 20, "medium", "ADVANCED", "pnlAdvanced", Colours.grey, "centredTop");
 
 pnlAdvanced.set("visible", false);
 btnShowAdvancedPanel.setValue(0);
 
-const lblTone = createLabel("lblTone", -31, 386, 128, 32, 20, "Tone", "pnlAdvanced", Colours.grey, "centred");
-const lblPitch = createLabel("lblPitch", -31, lblTone.get("y") - 150, 128, 32, 20, "Pitch", "pnlAdvanced", Colours.grey, "centred");
-const lblAmp = createLabel("lblAmp", -31, lblPitch.get("y") - 150, 128, 32, 20, "Amp", "pnlAdvanced", Colours.grey, "centred");
+const lblTone = createLabel("lblTone", -29, 402, 128, 32, 20, "regular", "Tone", "pnlAdvanced", Colours.grey, "centred");
+const lblPitch = createLabel("lblPitch", -29, lblTone.get("y") - 150, 128, 32, 20, "regular", "Pitch", "pnlAdvanced", Colours.grey, "centred");
+const lblAmp = createLabel("lblAmp", -29, lblPitch.get("y") - 150, 128, 32, 20, "regular", "Amp", "pnlAdvanced", Colours.grey, "centred");
 
 const knbAmpVelocity = createKnob("knbAmpVelocity", lblAmp.get("x") + 106, lblAmp.get("y") + 30, 48, 48, "Amp Vel", true, onknbAmpVelocityControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
 const knbAmpLFO = createKnob("knbAmpLFO", knbAmpVelocity.get("x") + 100, lblAmp.get("y") + 30, 48, 48, "Amp LFO", true, onknbAmpLFOControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
@@ -387,18 +387,18 @@ const knbToneDampen = createKnob("knbToneDampen", lblTone.get("x") + 106, lblTon
 const knbToneChorus = createKnob("knbToneChorus", knbToneDampen.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Tone Chorus", true, onknbToneChorusControl, 0, 1.0, 0.01, 0.25, "pnlAdvanced", true);
 const knbToneBrightness = createKnob("knbToneBrightness", knbToneChorus.get("x") + 100, lblTone.get("y") + 30, 48, 48, "Tone Bright", true, onknbToneBrightnessControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
 
-const lblAmpVelocity = createLabel("lblAmpVelocity", knbAmpVelocity.get("x") - 39, knbAmpVelocity.get("y") + 50, 128, 32, 16, "Vel", "pnlAdvanced", Colours.grey, "centred");
-const lblAmpLFO = createLabel("lblAmpLFO", knbAmpLFO.get("x") - 39, knbAmpLFO.get("y") + 50, 128, 32, 16, "Drift", "pnlAdvanced", Colours.grey, "centred");
-const lblAmpRandom = createLabel("lblAmpRandom", knbAmpRandom.get("x") - 39, knbAmpRandom.get("y") + 50, 128, 32, 16, "Random", "pnlAdvanced", Colours.grey, "centred");
+const lblAmpVelocity = createLabel("lblAmpVelocity", knbAmpVelocity.get("x") - 39, knbAmpVelocity.get("y") + 50, 128, 32, 16, "regular", "Vel", "pnlAdvanced", Colours.grey, "centred");
+const lblAmpLFO = createLabel("lblAmpLFO", knbAmpLFO.get("x") - 39, knbAmpLFO.get("y") + 50, 128, 32, 16, "regular", "Drift", "pnlAdvanced", Colours.grey, "centred");
+const lblAmpRandom = createLabel("lblAmpRandom", knbAmpRandom.get("x") - 39, knbAmpRandom.get("y") + 50, 128, 32, 16, "regular", "Random", "pnlAdvanced", Colours.grey, "centred");
 
-const lblPitchVelocity = createLabel("lblPitchVelocity", knbPitchVelocity.get("x") - 39, knbPitchVelocity.get("y") + 50, 128, 32, 16, "Vel", "pnlAdvanced", Colours.grey, "centred");
-const lblPitchDecay = createLabel("lblPitchDecay", knbPitchDecay.get("x") - 39, knbPitchDecay.get("y") + 50, 128, 32, 16, "Decay", "pnlAdvanced", Colours.grey, "centred");
-const lblPitchRandom = createLabel("lblPitchRandom", knbPitchRandom.get("x") - 39, knbPitchRandom.get("y") + 50, 128, 32, 16, "Random", "pnlAdvanced", Colours.grey, "centred");
-const lblPitchLFO = createLabel("lblPitchLFO", knbPitchLFO.get("x") - 39, knbPitchLFO.get("y") + 50, 128, 32, 16, "Drift", "pnlAdvanced", Colours.grey, "centred");
+const lblPitchVelocity = createLabel("lblPitchVelocity", knbPitchVelocity.get("x") - 39, knbPitchVelocity.get("y") + 50, 128, 32, 16, "regular", "Vel", "pnlAdvanced", Colours.grey, "centred");
+const lblPitchDecay = createLabel("lblPitchDecay", knbPitchDecay.get("x") - 39, knbPitchDecay.get("y") + 50, 128, 32, 16, "regular", "Decay", "pnlAdvanced", Colours.grey, "centred");
+const lblPitchRandom = createLabel("lblPitchRandom", knbPitchRandom.get("x") - 39, knbPitchRandom.get("y") + 50, 128, 32, 16, "regular", "Random", "pnlAdvanced", Colours.grey, "centred");
+const lblPitchLFO = createLabel("lblPitchLFO", knbPitchLFO.get("x") - 39, knbPitchLFO.get("y") + 50, 128, 32, 16, "regular", "Drift", "pnlAdvanced", Colours.grey, "centred");
 
-const lblToneDampen = createLabel("lblToneDampen", knbToneDampen.get("x") - 39, knbToneDampen.get("y") + 50, 128, 32, 16, "Dampen", "pnlAdvanced", Colours.grey, "centred");
-const lblToneChorus = createLabel("lblToneChorus", knbToneChorus.get("x") - 39, knbToneChorus.get("y") + 50, 128, 32, 16, "Chorus", "pnlAdvanced", Colours.grey, "centred");
-const lblToneBrightness = createLabel("lblToneBrightness", knbToneBrightness.get("x") - 39, knbToneBrightness.get("y") + 50, 128, 32, 16, "Brightness", "pnlAdvanced", Colours.grey, "centred");
+const lblToneDampen = createLabel("lblToneDampen", knbToneDampen.get("x") - 39, knbToneDampen.get("y") + 50, 128, 32, 16, "regular", "Dampen", "pnlAdvanced", Colours.grey, "centred");
+const lblToneChorus = createLabel("lblToneChorus", knbToneChorus.get("x") - 39, knbToneChorus.get("y") + 50, 128, 32, 16, "regular", "Chorus", "pnlAdvanced", Colours.grey, "centred");
+const lblToneBrightness = createLabel("lblToneBrightness", knbToneBrightness.get("x") - 39, knbToneBrightness.get("y") + 50, 128, 32, 16, "regular", "Brightness", "pnlAdvanced", Colours.grey, "centred");
 	
 /* Horizontal Sliders */
 
@@ -426,7 +426,7 @@ Content.setPropertiesFromJSON("knbResidueGain", {
 
 /* Info Popup Panel */
 
-const pnlInfoPopup = createChildPanel("pnlInfoPopup", 10, 10, 485, 510, "pnlBody");
+const pnlInfoPopup = createChildPanel("pnlInfoPopup", 0, 10, 494, 510, "pnlBody");
 pnlInfoPopup.set("visible", 0);
 
 // need to include text as a JSON object and iterate through the lines
@@ -452,32 +452,33 @@ pnlInfoPopup.setPaintRoutine(function(g)
     g.setColour(0xFFE2E3F3);
     g.drawAlignedText("Memory Journal", [0, 0, this.getWidth(), this.getHeight()], "centredTop");
     
-    var baseVerticalOffset = 180;
-    var verticalOffset = 24;
+    var baseYOffset = 180;
+    var yOffset = 24;
+    var xOffset = 10;
     
     g.setFont("bold", 16);
     
     g.setColour(Colours.grey);
     
-    g.drawAlignedText("Welcome to", [0, 40, this.getWidth(), this.getHeight()], "topLeft");
+    g.drawAlignedText("Welcome to", [0 + xOffset, 40, this.getWidth(), this.getHeight()], "topLeft");
     g.setColour(0xFFE2E3F3);
-    g.drawAlignedText("NEATBrain.", [70, 40, this.getWidth(), this.getHeight()], "topLeft");
+    g.drawAlignedText("NEATBrain.", [70 + xOffset, 40, this.getWidth(), this.getHeight()], "topLeft");
     g.setColour(Colours.grey);
-    g.drawAlignedText("Select a Partial and Residue Profile from the main window, then tweak and sculpt your ", [0, 75, this.getWidth(), this.getHeight()], "topLeft");
-    g.drawAlignedText("sound with the Advanced controls.", [0, 95, this.getWidth(), this.getHeight()], "topLeft");
-    g.drawAlignedText("Advanced controls are separated by function (Amplitude, Pitch & Tone)", [0, 125, this.getWidth(), this.getHeight()], "topLeft");
+    g.drawAlignedText("Select a Partial and Residue Profile from the main window, then tweak and sculpt your ", [0 + xOffset, 75, this.getWidth(), this.getHeight()], "topLeft");
+    g.drawAlignedText("sound with the Advanced controls.", [0 + xOffset, 95, this.getWidth(), this.getHeight()], "topLeft");
+    g.drawAlignedText("Advanced controls are separated by function (Amplitude, Pitch & Tone)", [0 + xOffset, 125, this.getWidth(), this.getHeight()], "topLeft");
 
 	g.setColour(0xFFE2E3F3);
     for (i=0; i<jsonInfoSubtitles.length; i++)
     {
-    	g.drawAlignedText(jsonInfoSubtitles[i] + ":", [-410, baseVerticalOffset + verticalOffset * i, this.getWidth(), this.getHeight()], "topRight");
+    	g.drawAlignedText(jsonInfoSubtitles[i] + ":", [-410 + xOffset, baseYOffset + yOffset * i, this.getWidth(), this.getHeight()], "topRight");
     }
 
     g.setColour(Colours.grey);
 
     for (i=0; i<jsonInfoPopup.length; i++)
     {
-	    g.drawAlignedText(jsonInfoPopup[i], [90, baseVerticalOffset + verticalOffset * i, this.getWidth(), this.getHeight()], "topLeft");
+	    g.drawAlignedText(jsonInfoPopup[i], [90 + xOffset, baseYOffset + yOffset * i, this.getWidth(), this.getHeight()], "topLeft");
     }    
 });
 
@@ -485,7 +486,7 @@ pnlInfoPopup.setPaintRoutine(function(g)
 	
 /* Info Mouseover Panel */
 
-const pnlShowInfoPopup = createChildPanel("pnlShowInfoPopup", 436, 0, 16, 16, "pnlAdvanced");
+const pnlShowInfoPopup = createChildPanel("pnlShowInfoPopup", 436, 16, 16, 16, "pnlAdvanced");
 
 pnlShowInfoPopup.set("allowCallbacks", "Clicks & Hover");
 
@@ -517,7 +518,10 @@ btnResidueProfileNext.setLocalLookAndFeel(LAFButtonNext);
 
 pnlAdvanced.setPaintRoutine(function(g)
 {
-	g.fillAll(pnlBodyColour);
+	// Internal Gradient
+	var gradientData = [pnlBodyColour, 0, 0, pnlBodyColourTop, 0, this.getHeight(), false];
+	g.setGradientFill(gradientData);
+	g.fillRoundedRectangle([0, 13, this.getWidth(), this.getHeight() - 16], 1.0);
 });
 
 /* Rhapsody Stuff */
