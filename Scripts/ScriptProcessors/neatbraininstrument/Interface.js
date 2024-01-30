@@ -46,7 +46,9 @@ else
 {
 	//Console.print(Message.getNoteNumber());
 	
-	Console.print(Message.getVelocity());
+	//Console.print(Message.getVelocity());
+	
+	//Console.print(Engine.getMidiNoteName(Message.getNoteNumber()));
 
 }
  function onNoteOff()
