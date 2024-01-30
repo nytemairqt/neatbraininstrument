@@ -1,6 +1,7 @@
 reg m;
 reg v;
 reg note;
+reg prevNote;
 reg chance = .1; // 10% Chance
 reg roll;function onNoteOn()
 {
@@ -10,7 +11,7 @@ reg roll;function onNoteOn()
 {
 	m = Message.getNoteNumber();
 	
-	if (m > 24 && m < 88)
+	if (m > 24 && m < 88 && prevNote != m)
 	{
 		roll = Math.random();
 			
@@ -22,7 +23,7 @@ reg roll;function onNoteOn()
 		}
 	}
 
-	
+	prevNote = m;
 
 	
 }
