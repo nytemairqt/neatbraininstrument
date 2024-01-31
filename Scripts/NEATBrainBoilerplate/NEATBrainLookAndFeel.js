@@ -11,6 +11,7 @@ const pnlBody = Content.getComponent("pnlBody");
 const pnlBodyColour = 0xff2f2f34;
 const pnlBodyColourTop = 0xFF37373C;
 const pnlBodyColourDark = 0xFF2C2C30;
+const offWhite = 0xFFEDEDED;
 
 include("NEATBrainBoilerplate/NEATBrainPathData.js");
 
@@ -45,8 +46,10 @@ LAFSliderNEATBrain.registerFunction("drawRotarySlider", function(g, obj)
     sliderRing3.addArc([0.0, 0.0, 1.0, 1.0], start, Math.max(start, start + Math.PI * 1.5 * obj.valueNormalized));
     g.setColour(obj.hover ? 0xFF292929 : 0xFF262626);
     g.drawPath(sliderRing2, reduced(obj, ringWidth), ringWidth * 2);
-   
-    g.setColour(obj.hover ? 0xFFD0E6E6 : 0xFFB1C1C1);
+   	
+   	
+    //g.setColour(obj.hover ? 0xFFD0E6E6 : 0xFFB1C1C1);
+    g.setColour(obj.hover ? offWhite : Colours.lightgrey);
     g.drawPath(sliderRing3, reduced(obj, ringWidth), ringWidth * (1.6));
     
     g.rotate((1.0 - (obj.valueNormalized - 0.02)) * -1.5 * Math.PI, [obj.area[2] / 2, obj.area[3] / 2]);  
@@ -56,7 +59,7 @@ LAFSliderNEATBrain.registerFunction("drawRotarySlider", function(g, obj)
     g.fillEllipse(reduced(obj, obj.area[2] * .86));
 
     // Value line
-    g.setColour(Colours.lightgrey);    
+    g.setColour(Colours.lightgrey);        
     g.drawLine(obj.area[2] * .65, obj.area[2] * .83, obj.area[3] * .65, obj.area[3] * .83, 3);     
 });
 
