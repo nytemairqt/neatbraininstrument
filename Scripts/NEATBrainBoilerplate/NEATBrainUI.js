@@ -103,7 +103,7 @@ const cmbPartialProfile = createComboBox("cmbPartialProfile", 0, 0, 10, 10, "pro
 const btnPartialProfilePrev = createButton("btnPartialProfilePrev", 66, 205, 30, 30, "Prev", false, onbtnPartialPrevControl, true, true, "pnlBody");
 const btnPartialProfileNext = createButton("btnPartialProfileNext", btnPartialProfilePrev.get("x") + 320, 205, 30, 30, "Prev", false, onbtnPartialNextControl, true, true, "pnlBody");
 
-const knbPartialAttack = createKnob("knbPartialAttack", 75, lblPartialADSR.get("y") + 30, 48, 48, "P_Attack", true, onknbPartialAttackControl, 5, 1000, 1.0, 5, "pnlBody", true);
+const knbPartialAttack = createKnob("knbPartialAttack", lblPartialADSR.get("x") + 120, lblPartialADSR.get("y") + 30, 48, 48, "P_Attack", true, onknbPartialAttackControl, 5, 1000, 1.0, 5, "pnlBody", true);
 const knbPartialDecay = createKnob("knbPartialDecay", knbPartialAttack.get("x") + 100, lblPartialADSR.get("y") + 30, 48, 48, "P_Decay", true, onknbPartialDecayControl, 500, 20000, 1.0, 15000, "pnlBody", true);
 const knbPartialSustain = createKnob("knbPartialSustain", knbPartialAttack.get("x") + 200, lblPartialADSR.get("y") + 30, 48, 48, "P_Sustain", true, onknbPartialSustainControl, -100, 0, 1.0, -100, "pnlBody", true);
 const knbPartialRelease = createKnob("knbPartialRelease", knbPartialAttack.get("x") + 300, lblPartialADSR.get("y") + 30, 48, 48, "P_Release", true, onknbPartialReleaseControl, 5, 15000, 1.0, 200, "pnlBody", true);
@@ -223,7 +223,7 @@ const btnResidueProfileNext = createButton("btnResidueProfileNext", btnResiduePr
 
 const lblResidueADSR = createLabel("lblResidueADSR", 467, lblPartialADSR.get("y"), 128, 32, 20, "regular", "Env", "pnlBody", Colours.grey, "centred");
 
-const knbResidueAttack = createKnob("knbResidueAttack", lblResidueADSR.get("x") + 106, lblResidueADSR.get("y") + 30, 48, 48, "R_Attack", true, onknbResidueAttackControl, 5, 1000, 1.0, 5, "pnlBody", true);
+const knbResidueAttack = createKnob("knbResidueAttack", lblResidueADSR.get("x") + 120, lblResidueADSR.get("y") + 30, 48, 48, "R_Attack", true, onknbResidueAttackControl, 5, 1000, 1.0, 5, "pnlBody", true);
 const knbResidueDecay = createKnob("knbResidueDecay", knbResidueAttack.get("x") + 100, lblResidueADSR.get("y") + 30, 48, 48, "R_Decay", true, onknbResidueDecayControl, 500, 20000, 1.0, 15000, "pnlBody", true);
 const knbResidueSustain = createKnob("knbResidueSustain", knbResidueAttack.get("x") + 200, lblResidueADSR.get("y") + 30, 48, 48, "R_Sustain", true, onknbResidueSustainControl, -100, 0, 1.0, -100, "pnlBody", true);
 const knbResidueRelease = createKnob("knbResidueRelease", knbResidueAttack.get("x") + 300, lblResidueADSR.get("y") + 30, 48, 48, "R_Release", true, onknbResidueReleaseControl, 5, 15000, 1.0, 200, "pnlBody", true);
@@ -356,21 +356,21 @@ pnlAdvanced.set("visible", false);
 btnShowAdvancedPanel.setValue(0);
 
 const lblTone = createLabel("lblTone", -29, 402, 128, 32, 20, "regular", "Tone", "pnlAdvanced", Colours.grey, "centred");
-const lblPitch = createLabel("lblPitch", -29, lblTone.get("y") - 150, 128, 32, 20, "regular", "Pitch", "pnlAdvanced", Colours.grey, "centred");
-const lblAmp = createLabel("lblAmp", -29, lblPitch.get("y") - 150, 128, 32, 20, "regular", "Amp", "pnlAdvanced", Colours.grey, "centred");
+const lblPitch = createLabel("lblPitch", -29, lblTone.get("y") - 140, 128, 32, 20, "regular", "Pitch", "pnlAdvanced", Colours.grey, "centred");
+const lblAmp = createLabel("lblAmp", -29, lblPitch.get("y") - 140, 128, 32, 20, "regular", "Amp", "pnlAdvanced", Colours.grey, "centred");
 
-const knbAmpVelocity = createKnob("knbAmpVelocity", lblAmp.get("x") + 106, lblAmp.get("y") + 30, 48, 48, "AmpVel", true, onknbAmpVelocityControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
-const knbAmpLFO = createKnob("knbAmpLFO", knbAmpVelocity.get("x") + 100, lblAmp.get("y") + 30, 48, 48, "AmpLFO", true, onknbAmpLFOControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
-const knbAmpRandom = createKnob("knbAmpRandom", knbAmpLFO.get("x") + 100, lblAmp.get("y") + 30, 48, 48, "AmpRand", true, onknbAmpRandomControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
+const knbAmpVelocity = createKnob("knbAmpVelocity", lblAmp.get("x") + 120, lblAmp.get("y") + 30, 48, 48, "AmpVel", true, onknbAmpVelocityControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
+const knbAmpLFO = createKnob("knbAmpLFO", knbAmpVelocity.get("x") + 120, lblAmp.get("y") + 30, 48, 48, "AmpLFO", true, onknbAmpLFOControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
+const knbAmpRandom = createKnob("knbAmpRandom", knbAmpLFO.get("x") + 120, lblAmp.get("y") + 30, 48, 48, "AmpRand", true, onknbAmpRandomControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
 
-const knbPitchVelocity = createKnob("knbPitchVelocity", lblPitch.get("x") + 106, lblPitch.get("y") + 30, 48, 48, "PitchVel", true, onknbPitchVelocityControl, 0, 1.0, 0.01, 0.2, "pnlAdvanced", true);
+const knbPitchVelocity = createKnob("knbPitchVelocity", lblPitch.get("x") + 120, lblPitch.get("y") + 30, 48, 48, "PitchVel", true, onknbPitchVelocityControl, 0, 1.0, 0.01, 0.2, "pnlAdvanced", true);
 const knbPitchDecay = createKnob("knbPitchDecay", knbPitchVelocity.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "PitchDec", true, onknbPitchDecayControl, 20, 4000, 1.0, 1000, "pnlAdvanced", true);
 const knbPitchLFO = createKnob("knbPitchLFO", knbPitchDecay.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "PitchLFO", true, onknbPitchLFOControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
 const knbPitchRandom = createKnob("knbPitchRandom", knbPitchLFO.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "PitchRand", true, onknbPitchRandomControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
 
-const knbToneDampen = createKnob("knbToneDampen", lblTone.get("x") + 106, lblTone.get("y") + 30, 48, 48, "ToneDamp", true, onknbToneDampenControl, 0, 1, 0.01, 0.4, "pnlAdvanced", true);
-const knbToneChorus = createKnob("knbToneChorus", knbToneDampen.get("x") + 100, lblTone.get("y") + 30, 48, 48, "ToneChorus", true, onknbToneChorusControl, 0, 1.0, 0.01, 0.25, "pnlAdvanced", true);
-const knbToneBrightness = createKnob("knbToneBrightness", knbToneChorus.get("x") + 100, lblTone.get("y") + 30, 48, 48, "ToneBright", true, onknbToneBrightnessControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
+const knbToneDampen = createKnob("knbToneDampen", lblTone.get("x") + 120, lblTone.get("y") + 30, 48, 48, "ToneDamp", true, onknbToneDampenControl, 0, 1, 0.01, 0.4, "pnlAdvanced", true);
+const knbToneChorus = createKnob("knbToneChorus", knbToneDampen.get("x") + 120, lblTone.get("y") + 30, 48, 48, "ToneChorus", true, onknbToneChorusControl, 0, 1.0, 0.01, 0.25, "pnlAdvanced", true);
+const knbToneBrightness = createKnob("knbToneBrightness", knbToneChorus.get("x") + 120, lblTone.get("y") + 30, 48, 48, "ToneBright", true, onknbToneBrightnessControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
 
 const lblAmpVelocity = createLabel("lblAmpVelocity", knbAmpVelocity.get("x") - 39, knbAmpVelocity.get("y") + 50, 128, 32, 16, "regular", "Vel", "pnlAdvanced", Colours.grey, "centred");
 const lblAmpLFO = createLabel("lblAmpLFO", knbAmpLFO.get("x") - 39, knbAmpLFO.get("y") + 50, 128, 32, 16, "regular", "Drift", "pnlAdvanced", Colours.grey, "centred");
