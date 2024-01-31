@@ -51,18 +51,18 @@
       <Component type="ScriptButton" id="btnShowAdvancedPanel" x="471" y="200"
                  width="24" height="100" text="open" saveInPreset="0" parentComponent="pnlBody"/>
       <Component type="ScriptSlider" id="knbPartialAttack" x="75" y="432" stepSize="1.0"
-                 min="5" max="1000" text="P Attack" defaultValue="5.0" width="48"
-                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="P Attack"/>
+                 min="5" max="1000" text="P_Attack" defaultValue="5.0" width="48"
+                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="P_Attack"/>
       <Component type="ScriptSlider" id="knbPartialDecay" x="175" y="432" stepSize="1.0"
-                 min="500" max="20000" text="P Decay" defaultValue="15000.0" width="48"
-                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="P Decay"/>
+                 min="500" max="20000" text="P_Decay" defaultValue="15000.0" width="48"
+                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="P_Decay"/>
       <Component type="ScriptSlider" id="knbPartialSustain" x="275" y="432" middlePosition="-12.0"
-                 stepSize="1.0" min="-100" max="0" text="P Sustain" defaultValue="-100.0"
+                 stepSize="1.0" min="-100" max="0" text="P_Sustain" defaultValue="-100.0"
                  width="48" height="48" parentComponent="pnlBody" isPluginParameter="1"
-                 pluginParameterName="P Sustain"/>
+                 pluginParameterName="P_Sustain"/>
       <Component type="ScriptSlider" id="knbPartialRelease" x="375" y="432" stepSize="1.0"
-                 min="5" max="15000" text="P Release" defaultValue="200.0" width="48"
-                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="P Release"/>
+                 min="5" max="15000" text="P_Release" defaultValue="200.0" width="48"
+                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="P_Release"/>
       <Component type="ScriptPanel" id="lblPartialAttack" x="36" y="482" width="128"
                  height="32" text="Attack" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblPartialDecay" x="135" y="482" width="128"
@@ -72,17 +72,17 @@
       <Component type="ScriptPanel" id="lblPartialRelease" x="337" y="482" width="128"
                  height="32" text="Release" parentComponent="pnlBody"/>
       <Component type="ScriptSlider" id="knbResidueAttack" x="573" y="432" stepSize="1.0"
-                 min="5" max="1000" text="R Attack" defaultValue="5.0" width="48"
-                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="R Attack"/>
+                 min="5" max="1000" text="R_Attack" defaultValue="5.0" width="48"
+                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="R_Attack"/>
       <Component type="ScriptSlider" id="knbResidueDecay" x="673" y="432" stepSize="1.0"
-                 min="500" max="20000" text="R Decay" defaultValue="15000.0" width="48"
-                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="R Decay"/>
+                 min="500" max="20000" text="R_Decay" defaultValue="15000.0" width="48"
+                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="R_Decay"/>
       <Component type="ScriptSlider" id="knbResidueSustain" x="773" y="432" stepSize="1.0"
-                 min="-100" max="0" text="R Sustain" defaultValue="-100.0" width="48"
-                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="R Sustain"/>
+                 min="-100" max="0" text="R_Sustain" defaultValue="-100.0" width="48"
+                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="R_Sustain"/>
       <Component type="ScriptSlider" id="knbResidueRelease" x="873" y="432" stepSize="1.0"
-                 min="5" max="15000" text="R Release" defaultValue="200.0" width="48"
-                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="R Release"/>
+                 min="5" max="15000" text="R_Release" defaultValue="200.0" width="48"
+                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="R_Release"/>
       <Component type="ScriptPanel" id="lblResidueAttack" x="534" y="482" width="128"
                  height="32" text="Attack" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblResidueDecay" x="633" y="482" width="128"
@@ -95,11 +95,11 @@
                  y="20.0" width="459.0" height="482.0" parentComponent="pnlBody"
                  visible="0.0"/>
       <Component type="ScriptSlider" id="knbPartialGain" x="380" y="25" style="Horizontal"
-                 middlePosition="0.5" suffix=" dB" text="Partial Gain" width="100"
+                 middlePosition="0.5" suffix=" dB" text="PartialGain" width="100"
                  height="16" parentComponent="pnlBody" defaultValue="0.75" mode="Decibel"
                  bgColour="0" itemColour="4285493103" itemColour2="4292333756"
                  textColour="4281611319" dragDirection="Horizontal" showTextBox="0"
-                 isPluginParameter="1" pluginParameterName="Partial Gain"/>
+                 isPluginParameter="1" pluginParameterName="PartialGain"/>
       <Component type="ScriptPanel" id="lblPartialADSR" x="-30" y="402" width="128"
                  height="32" text="Env" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblResidueADSR" x="467" y="402" width="128"
@@ -109,11 +109,11 @@
       <Component type="ScriptPanel" id="lblResidueGain" x="740" y="0" width="128"
                  height="64" text="VOL" parentComponent="pnlBody"/>
       <Component type="ScriptSlider" id="knbResidueGain" x="880" y="25" style="Horizontal"
-                 middlePosition="0.5" suffix=" dB" text="Residue Gain" defaultValue="0.75"
+                 middlePosition="0.5" suffix=" dB" text="Residue_Gain" defaultValue="0.75"
                  width="100" height="16" parentComponent="pnlBody" mode="Decibel"
                  bgColour="0" itemColour="4285493103" itemColour2="4292333756"
                  textColour="4281611319" dragDirection="Horizontal" showTextBox="0"
-                 isPluginParameter="1" pluginParameterName="Residue Gain"/>
+                 isPluginParameter="1" pluginParameterName="Residue_Gain"/>
       <Component type="ScriptPanel" id="pnlProfilePartial" x="95.0" y="60.0" parentComponent="pnlBody"
                  width="300.0" height="340.0"/>
       <Component type="ScriptPanel" id="pnlProfileResidue" x="595.0" y="60.0"
@@ -148,30 +148,30 @@
                    height="32" text="Pitch" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblAmp" x="-29" y="102" width="128" height="32"
                    text="Amp" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbPitchVelocity" x="77" y="282" text="Pitch Vel"
+        <Component type="ScriptSlider" id="knbPitchVelocity" x="77" y="282" text="PitchVel"
                    defaultValue="0.2000000029802322" width="48" height="48" parentComponent="pnlAdvanced"
-                   isPluginParameter="1" pluginParameterName="Pitch Vel"/>
-        <Component type="ScriptSlider" id="knbPitchDecay" x="177" y="282" text="Pitch Dec"
+                   isPluginParameter="1" pluginParameterName="PitchVel"/>
+        <Component type="ScriptSlider" id="knbPitchDecay" x="177" y="282" text="PitchDec"
                    defaultValue="1000.0" width="48" height="48" parentComponent="pnlAdvanced"
-                   min="20" max="4000" stepSize="1.0" isPluginParameter="1" pluginParameterName="Pitch Dec"/>
-        <Component type="ScriptSlider" id="knbPitchRandom" x="377" y="282" text="Pitch Rand"
+                   min="20" max="4000" stepSize="1.0" isPluginParameter="1" pluginParameterName="PitchDec"/>
+        <Component type="ScriptSlider" id="knbPitchRandom" x="377" y="282" text="PitchRand"
                    defaultValue="0.300000011920929" width="48" height="48" parentComponent="pnlAdvanced"
-                   isPluginParameter="1" pluginParameterName="Pitch Rand"/>
-        <Component type="ScriptSlider" id="knbPitchLFO" x="277" y="282" text="Pitch LFO"
+                   isPluginParameter="1" pluginParameterName="PitchRand"/>
+        <Component type="ScriptSlider" id="knbPitchLFO" x="277" y="282" text="PitchLFO"
                    defaultValue="0.300000011920929" width="48" height="48" parentComponent="pnlAdvanced"
-                   isPluginParameter="1" pluginParameterName="Pitch LFO"/>
-        <Component type="ScriptSlider" id="knbAmpVelocity" x="77" y="132" text="Amp Vel"
+                   isPluginParameter="1" pluginParameterName="PitchLFO"/>
+        <Component type="ScriptSlider" id="knbAmpVelocity" x="77" y="132" text="AmpVel"
                    defaultValue="0.300000011920929" width="48" height="48" parentComponent="pnlAdvanced"
-                   isPluginParameter="1" pluginParameterName="Amp Vel"/>
-        <Component type="ScriptSlider" id="knbAmpLFO" x="177" y="132" text="Amp LFO"
+                   isPluginParameter="1" pluginParameterName="AmpVel"/>
+        <Component type="ScriptSlider" id="knbAmpLFO" x="177" y="132" text="AmpLFO"
                    defaultValue="0.300000011920929" width="48" height="48" parentComponent="pnlAdvanced"
-                   isPluginParameter="1" pluginParameterName="Amp LFO"/>
-        <Component type="ScriptSlider" id="knbAmpRandom" x="277" y="132" text="Amp Rand"
+                   isPluginParameter="1" pluginParameterName="AmpLFO"/>
+        <Component type="ScriptSlider" id="knbAmpRandom" x="277" y="132" text="AmpRand"
                    defaultValue="0.300000011920929" width="48" height="48" parentComponent="pnlAdvanced"
-                   isPluginParameter="1" pluginParameterName="Amp Rand"/>
-        <Component type="ScriptSlider" id="knbToneDampen" x="77" y="432" text="Tone Damp"
+                   isPluginParameter="1" pluginParameterName="AmpRand"/>
+        <Component type="ScriptSlider" id="knbToneDampen" x="77" y="432" text="ToneDamp"
                    defaultValue="0.4000000059604645" width="48" height="48" parentComponent="pnlAdvanced"
-                   isPluginParameter="1" pluginParameterName="Tone Damp"/>
+                   isPluginParameter="1" pluginParameterName="ToneDamp"/>
         <Component type="ScriptPanel" id="lblAmpVelocity" x="38" y="182" width="128"
                    height="32" text="Vel" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblAmpLFO" x="138" y="182" width="128"
@@ -188,14 +188,14 @@
                    height="32" text="Drift" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblToneDampen" x="38" y="482" width="128"
                    height="32" text="Dampen" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbToneBrightness" x="277" y="432" text="Tone Bright"
+        <Component type="ScriptSlider" id="knbToneBrightness" x="277" y="432" text="ToneBright"
                    defaultValue="0.300000011920929" width="48" height="48" parentComponent="pnlAdvanced"
-                   isPluginParameter="1" pluginParameterName="Tone Bright"/>
+                   isPluginParameter="1" pluginParameterName="ToneBright"/>
         <Component type="ScriptPanel" id="lblToneBrightness" x="238" y="482" width="128"
                    height="32" text="Brightness" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbToneChorus" x="177" y="432" text="Tone Chorus"
+        <Component type="ScriptSlider" id="knbToneChorus" x="177" y="432" text="ToneChorus"
                    defaultValue="0.25" width="48" height="48" parentComponent="pnlAdvanced"
-                   isPluginParameter="1" pluginParameterName="Tone Chorus"/>
+                   isPluginParameter="1" pluginParameterName="ToneChorus"/>
         <Component type="ScriptPanel" id="lblToneChorus" x="138" y="482" width="128"
                    height="32" text="Chorus" parentComponent="pnlAdvanced"/>
       </Component>

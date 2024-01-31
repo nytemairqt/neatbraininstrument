@@ -186,7 +186,7 @@
         <Processor Type="ModulatorChain" ID="Spread Mod" Bypassed="1" Intensity="1.0">
           <ChildProcessors/>
         </Processor>
-        <Processor Type="StreamingSampler" ID="samplerResidueLeft" Bypassed="1"
+        <Processor Type="StreamingSampler" ID="samplerResidueLeft" Bypassed="0"
                    Gain="0.75" Balance="-1.0" VoiceLimit="256.0" KillFadeTime="20.0"
                    IconColour="0" PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
                    SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="0.0"
@@ -247,7 +247,7 @@
             <channelData enabled="1" level="0.0" suffix=""/>
           </channels>
         </Processor>
-        <Processor Type="StreamingSampler" ID="samplerResidueRight" Bypassed="1"
+        <Processor Type="StreamingSampler" ID="samplerResidueRight" Bypassed="0"
                    Gain="0.75" Balance="100.0" VoiceLimit="256.0" KillFadeTime="20.0"
                    IconColour="0" PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
                    SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="0.0"
@@ -482,7 +482,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="WavetableSynth" ID="synthWTLeftA" Bypassed="1" Gain="0.75"
+    <Processor Type="WavetableSynth" ID="synthWTLeftA" Bypassed="0" Gain="0.75"
                Balance="-1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                HqMode="1.0" LoadedBankIndex="3.0" TableIndexValue="0.02999999932944775"
                RefreshMipMap="0.0">
@@ -936,7 +936,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="WavetableSynth" ID="synthWTRightA" Bypassed="1" Gain="0.75"
+    <Processor Type="WavetableSynth" ID="synthWTRightA" Bypassed="0" Gain="0.75"
                Balance="1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                HqMode="1.0" LoadedBankIndex="4.0" TableIndexValue="0.02999999932944775"
                RefreshMipMap="0.0">
