@@ -20,10 +20,6 @@ inline function onknbPartialAttackControl(component, value)
 {
 	synthWTLeftA_gainAHDSR.setAttribute(synthWTLeftA_gainAHDSR.Attack, value);
 	synthWTRightA_gainAHDSR.setAttribute(synthWTRightA_gainAHDSR.Attack, value);
-	
-	synthWTLeftA_tableEnv.setAttribute(synthWTLeftA_tableEnv.Attack, value);
-	synthWTRightA_tableEnv.setAttribute(synthWTRightA_tableEnv.Attack, value);
-
 }
 
 // AHDSR Decay
@@ -44,10 +40,7 @@ inline function onknbPartialSustainControl(component, value)
 inline function onknbPartialReleaseControl(component, value)
 {
 	synthWTLeftA_gainAHDSR.setAttribute(synthWTLeftA_gainAHDSR.Release, value);
-	synthWTRightA_gainAHDSR.setAttribute(synthWTRightA_gainAHDSR.Release, value);
-	
-	synthWTLeftA_tableEnv.setAttribute(synthWTLeftA_tableEnv.Release, value);
-	synthWTRightA_tableEnv.setAttribute(synthWTRightA_tableEnv.Release, value);		
+	synthWTRightA_gainAHDSR.setAttribute(synthWTRightA_gainAHDSR.Release, value);	
 }
 
 // Hidden Combo Box
@@ -296,8 +289,8 @@ inline function onknbPitchLFOControl(component, value)
 // Tone Dampen
 inline function onknbToneDampenControl(component, value)
 {	
-	synthWTLeftA_fxDampen.setAttribute(synthWTLeftA_fxDampen.Dampen, value);
-	synthWTRightA_fxDampen.setAttribute(synthWTRightA_fxDampen.Dampen, value);
+	synthWTLeftA_dampen.setAttribute(synthWTLeftA_dampen.Dampen, value);
+	synthWTRightA_dampen.setAttribute(synthWTRightA_dampen.Dampen, value);
 }
 
 // Tone Decay 

@@ -10,7 +10,7 @@ const synthWTLeftA_gainRandom = Synth.getModulator("synthWTLeftA_gainRandom");
 const synthWTLeftA_pitchAHDSR = Synth.getModulator("synthWTLeftA_pitchAHDSR");
 const synthWTLeftA_pitchRandom = Synth.getModulator("synthWTLeftA_pitchRandom");
 const synthWTLeftA_pitchLFO = Synth.getModulator("synthWTLeftA_pitchLFO");
-const synthWTLeftA_fxDampen = Synth.getEffect("synthWTLeftA_fxDampen");
+const synthWTLeftA_dampen = Synth.getEffect("synthWTLeftA_dampen");
 const synthWTLeftA_tableRandom = Synth.getModulator("synthWTLeftA_tableRandom");
 const synthWTLeftA_tableEnv = Synth.getModulator("synthWTLeftA_tableEnv");
 
@@ -26,7 +26,7 @@ const synthWTRightA_gainRandom = Synth.getModulator("synthWTRightA_gainRandom");
 const synthWTRightA_pitchAHDSR = Synth.getModulator("synthWTRightA_pitchAHDSR");
 const synthWTRightA_pitchRandom = Synth.getModulator("synthWTRightA_pitchRandom");
 const synthWTRightA_pitchLFO = Synth.getModulator("synthWTRightA_pitchLFO");
-const synthWTRightA_fxDampen = Synth.getEffect("synthWTRightA_fxDampen");;
+const synthWTRightA_dampen = Synth.getEffect("synthWTRightA_dampen");
 const synthWTRightA_tableRandom = Synth.getModulator("synthWTRightA_tableRandom");
 const synthWTRightA_tableEnv = Synth.getModulator("synthWTRightA_tableEnv");
 
