@@ -44,12 +44,10 @@ else
 	synthWTRightA_muteLogic.setBypassed(true);
 }function onNoteOn()
 {
-	//Console.print(Message.getNoteNumber());
-	
-	//Console.print(Message.getVelocity());
-	
+	//Console.print(Message.getNoteNumber());	
+	//Console.print(Message.getVelocity());	
 	//Console.print(Engine.getMidiNoteName(Message.getNoteNumber()));
-
+	//Console.print(Engine.getFrequencyForMidiNoteNumber(Message.getNoteNumber()));
 }
  function onNoteOff()
 {
