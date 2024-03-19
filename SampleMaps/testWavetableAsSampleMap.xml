@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<samplemap ID="testWavetableAsSampleMap" RRGroupAmount="1.0" MicPositions=";">
-  <sample Root="40" LoKey="40" HiKey="40" LoVel="0" HiVel="127" RRGroup="1"
-          FileName="{PROJECT_FOLDER}partialProfiles/02_bridgeRight.wav"
-          Duplicate="0"/>
-</samplemap>

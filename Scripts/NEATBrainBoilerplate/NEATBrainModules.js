@@ -1,6 +1,39 @@
 // NEATBrain Modules
 
-// Left Wavetables & Modulators
+// Left Sampler Wavetables & Modulators
+
+const samplerWTLeft = Synth.getChildSynth("samplerWTLeft");
+
+const samplerWTLeft_gainAHDSR = Synth.getModulator("samplerWTLeft_gainAHDSR");
+const samplerWTLeft_gainVelocity = Synth.getModulator("samplerWTLeft_gainVelocity");
+const samplerWTLeft_gainLFO = Synth.getModulator("samplerWTLeft_gainLFO");
+const samplerWTLeft_gainRandom = Synth.getModulator("samplerWTLeft_gainRandom");
+
+const samplerWTLeft_pitchAHDSR = Synth.getModulator("samplerWTLeft_pitchAHDSR");
+const samplerWTLeft_pitchAHDSRVelocity = Synth.getModulator("samplerWTLeft_pitchAHDSRVelocity");
+const samplerWTLeft_pitchLFO = Synth.getModulator("samplerWTLeft_pitchLFO");
+const samplerWTLeft_pitchRandom = Synth.getModulator("samplerWTLeft_pitchRandom");
+const samplerWTLeft_pitchBend = Synth.getModulator("samplerWTLeft_pitchBend");
+
+const samplerWTLeft_fxMuteLogic = Synth.getEffect("samplerWTLeft_fxMuteLogic");
+const samplerWTLeft_fxDampen = Synth.getEffect("samplerWTLeft_fxDampen");
+const samplerWTLeft_fxKarplus = Synth.getEffect("samplerWTLeft_fxKarplus");
+const samplerWTLeft_fxKarplusAHDSR = Synth.getModulator("samplerWTLeft_fxKarplusAHDSR");
+const samplerWTLeft_fxLevelAdjust = Synth.getEffect("samplerWTLeft_fxLevelAdjust");
+const samplerWTLeft_fxProfileA = Synth.getEffect("samplerWTLeft_fxProfileA");
+const samplerWTLeft_fxProfileB = Synth.getEffect("samplerWTLeft_fxProfileB");
+const samplerWTLeft_fxProfileC = Synth.getEffect("samplerWTLeft_fxProfileC");
+const samplerWTLeft_fxToneAdjust = Synth.getEffect("samplerWTLeft_fxToneAdjust");
+
+Engine.addModuleStateToUserPreset("samplerWTLeft_fxProfileA");
+Engine.addModuleStateToUserPreset("samplerWTLeft_fxProfileB");
+Engine.addModuleStateToUserPreset("samplerWTLeft_fxProfileC");
+
+
+
+
+
+// OLD Left Wavetables & Modulators
 
 const synthWTLeftA = Synth.getChildSynth("synthWTLeftA");
 const synthWTLeftA_gainAHDSR = Synth.getModulator("synthWTLeftA_gainAHDSR");
@@ -13,6 +46,7 @@ const synthWTLeftA_pitchLFO = Synth.getModulator("synthWTLeftA_pitchLFO");
 const synthWTLeftA_dampen = Synth.getEffect("synthWTLeftA_dampen");
 const synthWTLeftA_tableRandom = Synth.getModulator("synthWTLeftA_tableRandom");
 const synthWTLeftA_tableEnv = Synth.getModulator("synthWTLeftA_tableEnv");
+
 
 
 
@@ -71,3 +105,5 @@ const var synthWTRightA_muteLogic = Synth.getEffect("synthWTRightA_muteLogic");
 Engine.addModuleStateToUserPreset("residueProfileA");
 Engine.addModuleStateToUserPreset("residueProfileB");
 Engine.addModuleStateToUserPreset("residueProfileC");
+
+

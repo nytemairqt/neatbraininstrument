@@ -9,26 +9,26 @@
         <Processor Type="ScriptProcessor" ID="Interface" Bypassed="0">
           <ChildProcessors/>
           <Content>
-            <Control type="ScriptSlider" id="knbPartialAttack" value="172.0"/>
-            <Control type="ScriptSlider" id="knbPartialDecay" value="20000.0"/>
+            <Control type="ScriptSlider" id="knbPartialAttack" value="164.0"/>
+            <Control type="ScriptSlider" id="knbPartialDecay" value="18206.0"/>
             <Control type="ScriptSlider" id="knbPartialSustain" value="0.0"/>
-            <Control type="ScriptSlider" id="knbPartialRelease" value="5.0"/>
+            <Control type="ScriptSlider" id="knbPartialRelease" value="305.0"/>
             <Control type="ScriptSlider" id="knbResidueAttack" value="5.0"/>
             <Control type="ScriptSlider" id="knbResidueDecay" value="20000.0"/>
             <Control type="ScriptSlider" id="knbResidueSustain" value="-100.0"/>
             <Control type="ScriptSlider" id="knbResidueRelease" value="5.0"/>
-            <Control type="ScriptSlider" id="knbPartialGain" value="0.75"/>
+            <Control type="ScriptSlider" id="knbPartialGain" value="0.7099999785423279"/>
             <Control type="ScriptSlider" id="knbResidueGain" value="1.0"/>
             <Control type="ScriptComboBox" id="cmbResidueProfile" value="3.0"/>
             <Control type="ScriptComboBox" id="cmbPartialProfile" value="1.0"/>
-            <Control type="ScriptSlider" id="knbPitchVelocity" value="0.2000000029802322"/>
-            <Control type="ScriptSlider" id="knbPitchDecay" value="1000.0"/>
-            <Control type="ScriptSlider" id="knbPitchRandom" value="0.300000011920929"/>
-            <Control type="ScriptSlider" id="knbPitchLFO" value="0.300000011920929"/>
-            <Control type="ScriptSlider" id="knbAmpVelocity" value="0.2300000041723251"/>
-            <Control type="ScriptSlider" id="knbAmpLFO" value="0.300000011920929"/>
-            <Control type="ScriptSlider" id="knbAmpRandom" value="0.300000011920929"/>
-            <Control type="ScriptSlider" id="knbToneDampen" value="0.2599999904632568"/>
+            <Control type="ScriptSlider" id="knbPitchVelocity" value="0.0"/>
+            <Control type="ScriptSlider" id="knbPitchDecay" value="124.0"/>
+            <Control type="ScriptSlider" id="knbPitchRandom" value="0.1400000005960464"/>
+            <Control type="ScriptSlider" id="knbPitchLFO" value="0.1599999964237213"/>
+            <Control type="ScriptSlider" id="knbAmpVelocity" value="0.2099999934434891"/>
+            <Control type="ScriptSlider" id="knbAmpLFO" value="0.1800000071525574"/>
+            <Control type="ScriptSlider" id="knbAmpRandom" value="0.2599999904632568"/>
+            <Control type="ScriptSlider" id="knbToneDampen" value="0.300000011920929"/>
             <Control type="ScriptSlider" id="knbToneBrightness" value="0.9599999785423279"/>
             <Control type="ScriptSlider" id="knbToneChorus" value="0.25"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-6.0"/>
@@ -1426,18 +1426,18 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="StreamingSampler" ID="samplerWTLeft" Bypassed="0" Gain="1.0"
+    <Processor Type="StreamingSampler" ID="samplerWTLeft" Bypassed="0" Gain="0.7099999785423279"
                Balance="0.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
-               SamplerRepeatMode="3.0" RRGroupAmount="6.0" PitchTracking="1.0"
+               SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="1.0"
                OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0" Reversed="0.0"
                NumChannels="1" UseStaticMatrix="0.0" Group0Table="" Group1Table=""
                Group2Table="" Group3Table="" Group4Table="" Group5Table="" Group6Table=""
-               Group7Table="" SampleMapID="wavetables">
+               Group7Table="" SampleMapID="wtLeft">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="ScriptProcessor" ID="synthWTLeftA_midiProcessor2" Bypassed="0">
+            <Processor Type="ScriptProcessor" ID="samplerWTLeft_midiProcessor" Bypassed="0">
               <ChildProcessors/>
               <Content/>
               <UIData>
@@ -1448,10 +1448,10 @@
         </Processor>
         <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
           <ChildProcessors>
-            <Processor Type="AHDSR" ID="samplerWTLeftA_gainAHDSR" Bypassed="0" Monophonic="0.0"
+            <Processor Type="AHDSR" ID="samplerWTLeft_gainAHDSR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                       Attack="172.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0"
-                       Sustain="0.0" Release="5.0" EcoMode="1.0">
+                       Attack="164.0" AttackLevel="0.0" Hold="10.0" Decay="18206.0"
+                       Sustain="0.0" Release="305.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -1470,12 +1470,12 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="Velocity" ID="samplerWTLeftA_gainVelocity" Bypassed="0"
-                       Intensity="0.02300000004470348" UseTable="0.0" Inverted="0.0"
+            <Processor Type="Velocity" ID="samplerWTLeft_gainVelocity" Bypassed="0"
+                       Intensity="0.02099999971687794" UseTable="0.0" Inverted="0.0"
                        DecibelMode="0.0">
               <ChildProcessors/>
             </Processor>
-            <Processor Type="LFO" ID="samplerWTLeftA_gainLFO" Bypassed="0" Intensity="0.0300000011920929"
+            <Processor Type="LFO" ID="samplerWTLeft_gainLFO" Bypassed="0" Intensity="0.01800000108778477"
                        Frequency="0.6800000071525574" FadeIn="1000.0" WaveformType="1.0"
                        Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
                        PhaseOffset="0.300000011920929" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
@@ -1489,7 +1489,7 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="Random" ID="samplerWTLeftA_gainRandom" Bypassed="0" Intensity="0.0300000011920929"
+            <Processor Type="Random" ID="samplerWTLeft_gainRandom" Bypassed="0" Intensity="0.02599999867379665"
                        UseTable="0.0" RandomTableData="">
               <ChildProcessors/>
             </Processor>
@@ -1497,17 +1497,17 @@
         </Processor>
         <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
           <ChildProcessors>
-            <Processor Type="AHDSR" ID="samplerWTLeftA_pitchAHDSR" Bypassed="0" Monophonic="0.0"
-                       Retrigger="1.0" Bipolar="1" Intensity="0.01000000070780516" AttackCurve="0.0"
+            <Processor Type="AHDSR" ID="samplerWTLeft_pitchAHDSR" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Bipolar="1" Intensity="0.0" AttackCurve="0.0"
                        DecayCurve="0.0" Attack="20.0" AttackLevel="0.0" Hold="10.0"
-                       Decay="1000.0" Sustain="0.0" Release="20.0" EcoMode="1.0">
+                       Decay="124.0" Sustain="-100.0" Release="20.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
                 </Processor>
                 <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
                   <ChildProcessors>
-                    <Processor Type="Velocity" ID="samplerWTLeftA_pitchAHDSRVelocity" Bypassed="0"
+                    <Processor Type="Velocity" ID="samplerWTLeft_pitchAHDSRVelocity" Bypassed="0"
                                Intensity="1.0" UseTable="0.0" Inverted="0.0" DecibelMode="0.0">
                       <ChildProcessors/>
                     </Processor>
@@ -1524,11 +1524,7 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="Random" ID="samplerWTLeftA_pitchRandom" Bypassed="0" Intensity="0.01250000018626451"
-                       Bipolar="1" UseTable="0.0" RandomTableData="">
-              <ChildProcessors/>
-            </Processor>
-            <Processor Type="LFO" ID="samplerWTLeftA_pitchLFO" Bypassed="0" Intensity="0.005000000353902578"
+            <Processor Type="LFO" ID="samplerWTLeft_pitchLFO" Bypassed="0" Intensity="0.002666666405275464"
                        Bipolar="1" Frequency="3.0" FadeIn="1000.0" WaveformType="1.0"
                        Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
                        PhaseOffset="0.2300000041723251" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
@@ -1542,15 +1538,19 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="PitchWheel" ID="samplerWTLeftA_pitchBend" Bypassed="0"
-                       Intensity="1.0" Bipolar="1" UseTable="0.0" Inverted="0.0" SmoothTime="200.0">
+            <Processor Type="Random" ID="samplerWTLeft_pitchRandom" Bypassed="0" Intensity="0.005833333358168602"
+                       Bipolar="1" UseTable="0.0" RandomTableData="">
+              <ChildProcessors/>
+            </Processor>
+            <Processor Type="PitchWheel" ID="samplerWTLeft_pitchBend" Bypassed="0" Intensity="1.0"
+                       Bipolar="1" UseTable="0.0" Inverted="0.0" SmoothTime="200.0">
               <ChildProcessors/>
             </Processor>
           </ChildProcessors>
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="PolyScriptFX" ID="samplerWTLeftA_muteLogic" Bypassed="0">
+            <Processor Type="PolyScriptFX" ID="samplerWTLeft_fxMuteLogic" Bypassed="0">
               <ChildProcessors/>
               <Content/>
               <Networks>
@@ -1808,7 +1808,7 @@
                 <ContentProperties DeviceType="Desktop"/>
               </UIData>
             </Processor>
-            <Processor Type="PolyScriptFX" ID="samplerWTLeftA_dampen" Bypassed="0">
+            <Processor Type="PolyScriptFX" ID="samplerWTLeft_fxDampen" Bypassed="0">
               <ChildProcessors/>
               <Content/>
               <Networks>
@@ -1818,7 +1818,50 @@
                 <ContentProperties DeviceType="Desktop"/>
               </UIData>
             </Processor>
-            <Processor Type="SimpleGain" ID="samplerWTLeftA_levelAdjust" Bypassed="0"
+            <Processor Type="PolyphonicFilter" ID="samplerWTLeft_fxKarplus" Bypassed="0"
+                       Gain="0.0" Frequency="3587.080078125" Q="1.0" Mode="6.0" Quality="0.0"
+                       BipolarIntensity="0.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors>
+                    <Processor Type="AHDSR" ID="samplerWTLeft_fxKarplusAHDSR" Bypassed="0" Monophonic="0.0"
+                               Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
+                               Attack="36.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0" Sustain="-100.0"
+                               Release="19170.0" EcoMode="1.0">
+                      <ChildProcessors>
+                        <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="Attack Level" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="Decay Time" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="Sustain Level" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                        <Processor Type="ModulatorChain" ID="Release Time" Bypassed="0" Intensity="1.0">
+                          <ChildProcessors/>
+                        </Processor>
+                      </ChildProcessors>
+                    </Processor>
+                  </ChildProcessors>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Bipolar Freq Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Q Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+            <Processor Type="SimpleGain" ID="samplerWTLeft_fxLevelAdjust" Bypassed="0"
                        Gain="3.0" Delay="0.0" Width="100.0" Balance="0.0" InvertPolarity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
@@ -1836,13 +1879,13 @@
               </ChildProcessors>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="samplerWTLeftA_profileA" Bypassed="1" NumFilters="1"
+            <Processor Type="CurveEq" ID="samplerWTLeft_fxProfileA" Bypassed="0" NumFilters="1"
                        Band0="-2.110000133514404" Band1="1703.10107421875" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" FFTEnabled="0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="samplerWTLeftA_profileB" Bypassed="1" NumFilters="8"
+            <Processor Type="CurveEq" ID="samplerWTLeft_fxProfileB" Bypassed="1" NumFilters="8"
                        Band0="-4.468967437744141" Band1="4126.3076171875" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" Band5="3.4758620262146" Band6="79.51634216308594"
                        Band7="1.730000019073486" Band8="1.0" Band9="2.0" Band10="6.455173015594482"
@@ -1858,7 +1901,7 @@
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="samplerWTLeftA_profileC" Bypassed="1" NumFilters="9"
+            <Processor Type="CurveEq" ID="samplerWTLeft_fxProfileC" Bypassed="1" NumFilters="9"
                        Band0="-4.634483337402344" Band1="3568.322509765625" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" Band5="16.55172348022461" Band6="48.13745880126953"
                        Band7="0.5299999713897705" Band8="1.0" Band9="2.0" Band10="5.462069034576416"
@@ -1875,7 +1918,7 @@
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="samplerWTLeftA_toneAdjust" Bypassed="0" NumFilters="6"
+            <Processor Type="CurveEq" ID="samplerWTLeft_fxToneAdjust" Bypassed="0" NumFilters="6"
                        Band0="0.0" Band1="60.0" Band2="0.75" Band3="1.0" Band4="1.0"
                        Band5="6.0" Band6="9880.0" Band7="0.300000011920929" Band8="1.0"
                        Band9="0.0" Band10="-9.0" Band11="200.0" Band12="0.300000011920929"
