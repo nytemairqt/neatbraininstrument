@@ -10,19 +10,11 @@ reg v = 0;function onNoteOn()
 	
 	if (m > 88)
 		Message.ignoreEvent(1);	
-		
-	// Transient Offset
-	
-	Message.delayEvent(700);
-	
-	// Humanization
-	Message.delayEvent(humanizationRight);
 	
 }
  function onNoteOff()
 {
-	// Humanization FIX
-	Message.delayEvent(humanizationRight + 1);
+	
 }
  function onController()
 {

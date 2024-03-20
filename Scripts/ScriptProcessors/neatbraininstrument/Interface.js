@@ -6,9 +6,6 @@ const MEMORYNAME = "Achromic";
 const MEMORYTYPE = "Guitar";
 const NUMPROFILES = 3;
 
-global humanizationLeft = 0;
-global humanizationRight = 0;
-
 /* Instantiate Rhapsody UI */
 
 include("RhapsodyBoilerplate/includes/Ui.js");
@@ -51,10 +48,7 @@ else
 	//Console.print(Message.getNoteNumber());	
 	//Console.print(Message.getVelocity());	
 	//Console.print(Engine.getMidiNoteName(Message.getNoteNumber()));
-	//Console.print(Engine.getFrequencyForMidiNoteNumber(Message.getNoteNumber()));
-	
-	humanizationLeft = Math.randInt(0, 2000);
-	humanizationRight = Math.randInt(0, 2000);
+	//Console.print(Engine.getFrequencyForMidiNoteNumber(Message.getNoteNumber()));	
 }
  function onNoteOff()
 {

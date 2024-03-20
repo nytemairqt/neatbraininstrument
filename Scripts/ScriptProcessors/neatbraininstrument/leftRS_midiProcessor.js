@@ -3,16 +3,11 @@ reg m = 0;
 reg v = 0;function onNoteOn()
 {
 	m = Message.getNoteNumber();
-	v = Message.getVelocity();
-	
-	// Humanization
-	Message.delayEvent(humanizationLeft);
-	
+	v = Message.getVelocity();		
 }
  function onNoteOff()
 {
-	// Humanization FIX
-	Message.delayEvent(humanizationLeft + 1);
+	
 }
  function onController()
 {
