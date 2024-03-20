@@ -1,8 +1,5 @@
 Content.makeFrontInterface(1000, 710);
 
-
-
-
 /* Instantiate NEATBrain */
 
 const MEMORYNAME = "Achromic";
@@ -17,6 +14,7 @@ global humanizationRight = 0;
 include("RhapsodyBoilerplate/includes/Ui.js");
 //Ui.createTemplate(MEMORYNAME); // Run this after updating Rhapsody Boilerplate
 
+// Hide Button
 const btnLogo = Content.getComponent("btnLogo");
 btnLogo.set("visible", false);
 
@@ -33,9 +31,6 @@ include("RhapsodyBoilerplate/includes/Spinner.js");
 
 include("NEATBrainBoilerplate/NEATBrainUI.js");
 
-/* Global Vars */
-
-reg m = 0;
 
 /* NEATBrain Specific Init Funcs */
 
