@@ -6,7 +6,7 @@ reg v = 0;function onNoteOn()
 	v = Message.getVelocity();
 	
 	// Humanization
-	Message.delayEvent(humanizationLeft);
+	Message.delayEvent(humanizationRight);
 	
 }
  function onNoteOff()

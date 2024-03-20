@@ -12,30 +12,35 @@ const PARTIAL_PROFILES = ["A", "B", "C"];
 inline function onknbPartialGainControl(component, value)
 {
 	leftWG.setAttribute(leftWG.Gain, value);
+	rightWG.setAttribute(rightWG.Gain, value);
 }		
 
 // AHDSR Attack
 inline function onknbPartialAttackControl(component, value)
 {
 	leftWG_gainAHDSR.setAttribute(leftWG_gainAHDSR.Attack, value);
+	rightWG_gainAHDSR.setAttribute(rightWG_gainAHDSR.Attack, value);
 }
 
 // AHDSR Decay
 inline function onknbPartialDecayControl(component, value)
 {
 	leftWG_gainAHDSR.setAttribute(leftWG_gainAHDSR.Decay, value);
+	rightWG_gainAHDSR.setAttribute(rightWG_gainAHDSR.Decay, value);
 }
 
 // AHDSR Sustain
 inline function onknbPartialSustainControl(component, value)
 {
 	leftWG_gainAHDSR.setAttribute(leftWG_gainAHDSR.Sustain, value);
+	rightWG_gainAHDSR.setAttribute(rightWG_gainAHDSR.Sustain, value);
 }
 
 // AHDSR Release
 inline function onknbPartialReleaseControl(component, value)
 {
 	leftWG_gainAHDSR.setAttribute(leftWG_gainAHDSR.Release, value);
+	rightWG_gainAHDSR.setAttribute(rightWG_gainAHDSR.Release, value);
 }
 
 // Hidden Combo Box
@@ -44,26 +49,27 @@ inline function oncmbPartialProfileControl(component, value)
 	leftWG_fxProfileA.setBypassed(1);
 	leftWG_fxProfileB.setBypassed(1);
 	leftWG_fxProfileC.setBypassed(1);
+	
+	rightWG_fxProfileA.setBypassed(1);
+	rightWG_fxProfileB.setBypassed(1);
+	rightWG_fxProfileC.setBypassed(1);
 
 	switch(value)
 	{
 		case 1:
 			leftWG_fxProfileA.setBypassed(0);
-			//samplerWTLeft_fxProfileA.setBypassed(0);
+			rightWG_fxProfileA.setBypassed(0);
 			break;
 		case 2:
 			leftWG_fxProfileB.setBypassed(0);
-			//samplerWTLeft_fxProfileB.setBypassed(0);
+			rightWG_fxProfileB.setBypassed(0);
 			break;
 		case 3:
 			leftWG_fxProfileC.setBypassed(0);
-			//samplerWTLeft_fxProfileC.setBypassed(0);
+			rightWG_fxProfileC.setBypassed(0);
+		break;
 	}
 
-	//local offset = 1; // keep
-
-	//synthWTLeftA.setAttribute(synthWTLeftA.LoadedBankIndex, value); 
-	//synthWTRightA.setAttribute(synthWTRightA.LoadedBankIndex, value + offset); 
 	pnlProfilePartial.repaintImmediately();	
 }
 
@@ -126,6 +132,7 @@ const lblPartialRelease = createLabel("lblPartialRelease", knbPartialRelease.get
 inline function onknbResidueGainControl(component, value)
 {
 	leftRS.setAttribute(leftRS.Gain, value);
+	rightRS.setAttribute(rightRS.Gain, value);
 }
 
 // AHDSR Attack
@@ -163,16 +170,23 @@ inline function oncmbResidueProfileControl(component, value)
 	leftRS_fxProfileB.setBypassed(1);
 	leftRS_fxProfileC.setBypassed(1);
 	
+	rightRS_fxProfileA.setBypassed(1);
+	rightRS_fxProfileB.setBypassed(1);
+	rightRS_fxProfileC.setBypassed(1);
+	
 	switch (value)
 	{
 		case 1:
 			leftRS_fxProfileA.setBypassed(0);
+			rightRS_fxProfileA.setBypassed(0);
 			break;
 		case 2:
 			leftRS_fxProfileB.setBypassed(0);
+			rightRS_fxProfileB.setBypassed(0);
 			break;
 		case 3:
 			leftRS_fxProfileC.setBypassed(0);
+			rightRS_fxProfileC.setBypassed(0);
 			break;		
 	}
 
@@ -244,6 +258,8 @@ inline function onknbAmpVelocityControl(component, value)
 {
 	leftRS_gainVelocity.setIntensity(value * .1);
 	leftWG_gainVelocity.setIntensity(value * .1);
+	rightRS_gainVelocity.setIntensity(value * .1);
+	rightWG_gainVelocity.setIntensity(value * .1);
 }
 
 
@@ -252,6 +268,8 @@ inline function onknbAmpLFOControl(component, value)
 {	
 	leftRS_gainLFO.setIntensity(value * .1);
 	leftWG_gainLFO.setIntensity(value * .1);
+	rightRS_gainLFO.setIntensity(value * .1);
+	rightWG_gainLFO.setIntensity(value * .1);
 }
 
 // Amp Random
@@ -259,96 +277,49 @@ inline function onknbAmpRandomControl(component, value)
 {
 	leftRS_gainRandom.setIntensity(value * .1);
 	leftWG_gainRandom.setIntensity(value * .1);
+	rightRS_gainRandom.setIntensity(value * .1);
+	rightWG_gainRandom.setIntensity(value * .1);
 }
 
 // Pitch Velocity
 inline function onknbPitchVelocityControl(component, value)
 {
 	leftWG_pitchAHDSR.setIntensity(value * .6);
+	rightWG_pitchAHDSR.setIntensity(value * .6);
 }
 
 // Pitch Decay
 inline function onknbPitchDecayControl(component, value)
 {
 	leftWG_pitchAHDSR.setAttribute(leftWG_pitchAHDSR.Decay, value);
+	rightWG_pitchAHDSR.setAttribute(rightWG_pitchAHDSR.Decay, value);
 }
 
 // Pitch Random
 inline function onknbPitchRandomControl(component, value)
 {
 	leftWG_pitchRandom.setIntensity(value * .5);
+	rightWG_pitchRandom.setIntensity(value * .5);
 }
 
 // Pitch LFO 
 inline function onknbPitchLFOControl(component, value)
 {
 	leftWG_pitchLFO.setIntensity(value * .2);
+	rightWG_pitchLFO.setIntensity(value * .2);
 }
 
 // Tone Dampen
 inline function onknbToneDampenControl(component, value)
 {	
 	leftWG_fxDampen.setAttribute(leftWG_fxDampen.Dampen, value);
+	rightWG_fxDampen.setAttribute(rightWG_fxDampen.Dampen, value);
 }
 
-// Tone Decay 
-inline function onknbToneClampControl(component, value)
-{
-	// what is this
-
-}
-
-// Chorus
-inline function onknbToneChorusControl(component, value)
-{
-	// probably removing Chorusing
-
-	/*
-
-	if (value == 0)
-	{
-		synthWTLeftA_fxChorus.setBypassed(1);
-		synthWTRightA_fxChorus.setBypassed(1);
-	}
-	else
-	{
-		synthWTLeftA_fxChorus.setBypassed(0);
-		synthWTRightA_fxChorus.setBypassed(0);
-	}
-	
-	synthWTLeftA_fxChorus.setAttribute(synthWTLeftA_fxChorus.Width, value * .5);
-	synthWTRightA_fxChorus.setAttribute(synthWTRightA_fxChorus.Width, value * .5);	
-	*/
-}
-
-// Tone Stiffness Intensity
-inline function onknbToneBrightnessControl(component, value)
-{	
-	// move to separate effect, keep toneAdjust static & hidden from end-user
-	
-	// might deprecate
-	
-	/*
-	local lpf = 1;
-	local highshelf = 3;
-	
-	// Low Pass Frequency
-	local idx = (lpf * synthWTLeftA_toneAdjust.BandOffset) + 1; // Low Pass Frequency
-	local min = 7000;
-	local max = 10000;
-	
-	local f = Math.round(min + (value * (max-min)));	
-		
-	synthWTLeftA_toneAdjust.setAttribute(idx, f);
-	synthWTRightA_toneAdjust.setAttribute(idx, f);
-	
-	// High Shelf Gain
-	idx = (highshelf * synthWTLeftA_toneAdjust.BandOffset) + 0;
-	
-	synthWTLeftA_toneAdjust.setAttribute(idx, value * 6);
-	synthWTRightA_toneAdjust.setAttribute(idx, value * 6);
-	*/
-}
+// LEAVE ME HERE FOR NOW
+inline function onknbToneClampControl(component, value){}
+inline function onknbToneChorusControl(component, value){}
+inline function onknbToneBrightnessControl(component, value){}
 
 // Instantiate UI Elements
 

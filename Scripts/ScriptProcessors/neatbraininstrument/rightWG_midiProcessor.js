@@ -16,7 +16,7 @@ reg v = 0;function onNoteOn()
 	Message.delayEvent(700);
 	
 	// Humanization
-	Message.delayEvent(humanizationLeft);
+	Message.delayEvent(humanizationRight);
 	
 }
  function onNoteOff()
