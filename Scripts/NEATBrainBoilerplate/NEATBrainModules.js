@@ -27,15 +27,44 @@ const leftWG_pitchRandom = Synth.getModulator("leftWG_pitchRandom");
 const leftWG_pitchBend = Synth.getModulator("leftWG_pitchBend");
 const leftWG_fxMuteLogic = Synth.getEffect("leftWG_fxMuteLogic");
 const leftWG_fxDampen = Synth.getEffect("leftWG_fxDampen");
-const leftWG_fxKarplus = Synth.getEffect("leftWG_fxKarplus");
-const leftWG_fxKarplusAHDSR = Synth.getModulator("leftWG_fxKarplusAHDSR");
 const leftWG_fxLevelAdjust = Synth.getEffect("leftWG_fxLevelAdjust");
 const leftWG_fxProfileA = Synth.getEffect("leftWG_fxProfileA");
 const leftWG_fxProfileB = Synth.getEffect("leftWG_fxProfileB");
 const leftWG_fxProfileC = Synth.getEffect("leftWG_fxProfileC");
 const leftWG_fxToneAdjust = Synth.getEffect("leftWG_fxToneAdjust");
 
+// Right Residue
+const rightRS = Synth.getChildSynth("rightRS");
+const rightRS_midiProcessor = Synth.getMidiProcessor("rightRS_midiProcessor");
+const rightRS_gainAHDSR = Synth.getModulator("rightRS_gainAHDSR");
+const rightRS_gainVelocity = Synth.getModulator("rightRS_gainVelocity");
+const rightRS_gainLFO = Synth.getModulator("rightRS_gainLFO");
+const rightRS_gainRandom = Synth.getModulator("rightRS_gainRandom");
+const rightRS_fxLevelAdjust = Synth.getEffect("rightRS_fxLevelAdjust");
+const rightRS_fxProfileA = Synth.getEffect("rightRS_fxProfileA");
+const rightRS_fxProfileB = Synth.getEffect("rightRS_fxProfileB");
+const rightRS_fxProfileC = Synth.getEffect("rightRS_fxProfileC");
+const rightRS_fxToneAdjust = Synth.getEffect("rightRS_fxToneAdjust");
 
+// Right Waveguide
+const rightWG = Synth.getChildSynth("rightWG");
+const rightWG_midiProcessor = Synth.getMidiProcessor("rightWG_midiProcessor");
+const rightWG_gainAHDSR = Synth.getModulator("rightWG_gainAHDSR");
+const rightWG_gainVelocity = Synth.getModulator("rightWG_gainVelocity");
+const rightWG_gainLFO = Synth.getModulator("rightWG_gainLFO");
+const rightWG_gainRandom = Synth.getModulator("rightWG_gainRandom");
+const rightWG_pitchAHDSR = Synth.getModulator("rightWG_pitchAHDSR");
+const rightWG_pitchAHDSRVelocity = Synth.getModulator("rightWG_pitchAHDSRVelocity");
+const rightWG_pitchLFO = Synth.getModulator("rightWG_pitchLFO");
+const rightWG_pitchRandom = Synth.getModulator("rightWG_pitchRandom");
+const rightWG_pitchBend = Synth.getModulator("rightWG_pitchBend");
+const rightWG_fxMuteLogic = Synth.getEffect("rightWG_fxMuteLogic");
+const rightWG_fxDampen = Synth.getEffect("rightWG_fxDampen");
+const rightWG_fxLevelAdjust = Synth.getEffect("rightWG_fxLevelAdjust");
+const rightWG_fxProfileA = Synth.getEffect("rightWG_fxProfileA");
+const rightWG_fxProfileB = Synth.getEffect("rightWG_fxProfileB");
+const rightWG_fxProfileC = Synth.getEffect("rightWG_fxProfileC");
+const rightWG_fxToneAdjust = Synth.getEffect("rightWG_fxToneAdjust");
 
 
 /*
