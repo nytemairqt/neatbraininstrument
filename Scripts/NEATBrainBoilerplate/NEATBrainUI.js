@@ -11,86 +11,52 @@ const PARTIAL_PROFILES = ["A", "B", "C"];
 // Partial Gain
 inline function onknbPartialGainControl(component, value)
 {
-	left_WG.setAttribute(left_WG.Gain, value);
-	
-	//samplerWTLeft.setAttribute(samplerWTLeft.Gain, value);
-	//samplerWTRight.setAttribute(samplerWTRight.Gain, value);
-
-	//synthWTLeftA.setAttribute(synthWTLeftA.Gain, value);
-	//synthWTRightA.setAttribute(synthWTRightA.Gain, value);
+	leftWG.setAttribute(leftWG.Gain, value);
 }		
 
 // AHDSR Attack
 inline function onknbPartialAttackControl(component, value)
 {
-	left_gainAHDSR.setAttribute(left_gainAHDSR.Attack, value);
-
-	//samplerWTLeft_gainAHDSR.setAttribute(samplerWTLeft_gainAHDSR.Attack, value);
-	//samplerWTRight_gainAHDSR.setAttribute(samplerWTRight_gainAHDSR.Attack, value);
-
-	//synthWTLeftA_gainAHDSR.setAttribute(synthWTLeftA_gainAHDSR.Attack, value);
-	//synthWTRightA_gainAHDSR.setAttribute(synthWTRightA_gainAHDSR.Attack, value);
+	leftWG_gainAHDSR.setAttribute(leftWG_gainAHDSR.Attack, value);
 }
 
 // AHDSR Decay
 inline function onknbPartialDecayControl(component, value)
 {
-	left_gainAHDSR.setAttribute(left_gainAHDSR.Decay, value);
-
-	//samplerWTLeft_gainAHDSR.setAttribute(samplerWTLeft_gainAHDSR.Decay, value);
-	//samplerWTRight_gainAHDSR.setAttribute(samplerWTRight_gainAHDSR.Decay, value);
-
-	//synthWTLeftA_gainAHDSR.setAttribute(synthWTLeftA_gainAHDSR.Decay, value);
-	//synthWTRightA_gainAHDSR.setAttribute(synthWTRightA_gainAHDSR.Decay, value);
+	leftWG_gainAHDSR.setAttribute(leftWG_gainAHDSR.Decay, value);
 }
 
 // AHDSR Sustain
 inline function onknbPartialSustainControl(component, value)
 {
-	left_gainAHDSR.setAttribute(left_gainAHDSR.Sustain, value);
-
-	//samplerWTLeft_gainAHDSR.setAttribute(samplerWTLeft_gainAHDSR.Sustain, value);
-	//samplerWTRight_gainAHDSR.setAttribute(samplerWTRight_gainAHDSR.Sustain, value);
-
-	//synthWTLeftA_gainAHDSR.setAttribute(synthWTLeftA_gainAHDSR.Sustain, value);
-	//synthWTRightA_gainAHDSR.setAttribute(synthWTRightA_gainAHDSR.Sustain, value);
+	leftWG_gainAHDSR.setAttribute(leftWG_gainAHDSR.Sustain, value);
 }
 
 // AHDSR Release
 inline function onknbPartialReleaseControl(component, value)
 {
-	left_gainAHDSR.setAttribute(left_gainAHDSR.Release, value);
-
-	//samplerWTLeft_gainAHDSR.setAttribute(samplerWTLeft_gainAHDSR.Release, value);
-	//samplerWTRight_gainAHDSR.setAttribute(samplerWTRight_gainAHDSR.Release, value);
-
-	//synthWTLeftA_gainAHDSR.setAttribute(synthWTLeftA_gainAHDSR.Release, value);
-	//synthWTRightA_gainAHDSR.setAttribute(synthWTRightA_gainAHDSR.Release, value);	
+	leftWG_gainAHDSR.setAttribute(leftWG_gainAHDSR.Release, value);
 }
 
 // Hidden Combo Box
 inline function oncmbPartialProfileControl(component, value)
-{
-	//samplerWTLeft_fxProfileA.setBypassed(1);
-	//samplerWTLeft_fxProfileB.setBypassed(1);
-	//samplerWTLeft_fxProfileC.setBypassed(1);
-	
-	left_fxProfileA.setBypassed(1);
-	left_fxProfileB.setBypassed(1);
-	left_fxProfileC.setBypassed(1);
+{	
+	leftWG_fxProfileA.setBypassed(1);
+	leftWG_fxProfileB.setBypassed(1);
+	leftWG_fxProfileC.setBypassed(1);
 
 	switch(value)
 	{
 		case 1:
-			left_fxProfileA.setBypassed(0);
+			leftWG_fxProfileA.setBypassed(0);
 			//samplerWTLeft_fxProfileA.setBypassed(0);
 			break;
 		case 2:
-			left_fxProfileB.setBypassed(0);
+			leftWG_fxProfileB.setBypassed(0);
 			//samplerWTLeft_fxProfileB.setBypassed(0);
 			break;
 		case 3:
-			left_fxProfileC.setBypassed(0);
+			leftWG_fxProfileC.setBypassed(0);
 			//samplerWTLeft_fxProfileC.setBypassed(0);
 	}
 
@@ -159,42 +125,31 @@ const lblPartialRelease = createLabel("lblPartialRelease", knbPartialRelease.get
 // Residue Gain
 inline function onknbResidueGainControl(component, value)
 {
-	left_RS.setAttribute(left_RS.Gain, value);
-
-	//samplerResidueLeft.setAttribute(samplerResidueLeft.Gain, value);	
-	//samplerResidueRight.setAttribute(samplerResidueRight.Gain, value);	
-	//samplerReleaseLeft.setAttribute(samplerReleaseLeft.Gain, value);
-	//samplerReleaseRight.setAttribute(samplerReleaseRight.Gain, value);
+	leftRS.setAttribute(leftRS.Gain, value);
 }
 
 // AHDSR Attack
 inline function onknbResidueAttackControl(component, value)
 {
 	
-
-	//samplerResidueLeft_gainAHDSR.setAttribute(samplerResidueLeft_gainAHDSR.Attack, value);
-	//samplerResidueRight_gainAHDSR.setAttribute(samplerResidueRight_gainAHDSR.Attack, value);
 }
 
 // AHDSR Decay
 inline function onknbResidueDecayControl(component, value)
 {
-	//samplerResidueLeft_gainAHDSR.setAttribute(samplerResidueLeft_gainAHDSR.Decay, value);
-	//samplerResidueRight_gainAHDSR.setAttribute(samplerResidueRight_gainAHDSR.Decay, value);
+	
 }
 
 // AHDSR Sustain
 inline function onknbResidueSustainControl(component, value)
 {		
-	//samplerResidueLeft_gainAHDSR.setAttribute(samplerResidueLeft_gainAHDSR.Sustain, value);
-	//samplerResidueRight_gainAHDSR.setAttribute(samplerResidueRight_gainAHDSR.Sustain, value);
+
 }
 
 // AHDSR Release
 inline function onknbResidueReleaseControl(component, value)
 {
-	//samplerResidueLeft_gainAHDSR.setAttribute(samplerResidueLeft_gainAHDSR.Release, value);
-	//samplerResidueRight_gainAHDSR.setAttribute(samplerResidueRight_gainAHDSR.Release, value);
+	
 }
 
 // Hidden Combo Box
@@ -204,26 +159,20 @@ inline function oncmbResidueProfileControl(component, value)
 
 	pnlProfileResidue.repaintImmediately();
 	
-	//residueProfileA.setBypassed(1);
-	//residueProfileB.setBypassed(1);
-	//residueProfileC.setBypassed(1);
+	leftRS_fxProfileA.setBypassed(1);
+	leftRS_fxProfileB.setBypassed(1);
+	leftRS_fxProfileC.setBypassed(1);
 	
 	switch (value)
 	{
 		case 1:
-			//samplerResidueLeft_sampleOffset.setIntensity(1.0);
-			//samplerResidueRight_sampleOffset.setIntensity(1.0);			
-			//residueProfileA.setBypassed(0);
+			leftRS_fxProfileA.setBypassed(0);
 			break;
 		case 2:
-			//samplerResidueLeft_sampleOffset.setIntensity(.5);
-			//samplerResidueRight_sampleOffset.setIntensity(.5);
-			//residueProfileB.setBypassed(0);
+			leftRS_fxProfileB.setBypassed(0);
 			break;
 		case 3:
-			//samplerResidueLeft_sampleOffset.setIntensity(.5);
-			//samplerResidueRight_sampleOffset.setIntensity(.5);
-			//residueProfileC.setBypassed(0);
+			leftRS_fxProfileC.setBypassed(0);
 			break;		
 	}
 
@@ -293,97 +242,53 @@ inline function onbtnShowAdvancedPanelControl(component, value)
 // Amp Velocity
 inline function onknbAmpVelocityControl(component, value) 
 {
-	left_gainVelocity.setIntensity(value * .1);
-
-	//samplerWTLeft_gainVelocity.setIntensity(value * .1);
-	//samplerWTRight_gainVelocity.setIntensity(value * .1);
-
-	//synthWTLeftA_gainVelocity.setIntensity(value * .1);
-	//synthWTRightA_gainVelocity.setIntensity(value * .1);
+	leftRS_gainVelocity.setIntensity(value * .1);
+	leftWG_gainVelocity.setIntensity(value * .1);
 }
 
 
 // Amp LFO
 inline function onknbAmpLFOControl(component, value)
-{
-	left_gainLFO.setIntensity(value * .1);
-
-	//samplerWTLeft_gainLFO.setIntensity(value * .1);
-	//samplerWTRight_gainLFO.setIntensity(value * .1);
-
-	//synthWTLeftA_gainLFO.setIntensity(value * .1);
-	//synthWTRightA_gainLFO.setIntensity(value * .1);
+{	
+	leftRS_gainLFO.setIntensity(value * .1);
+	leftWG_gainLFO.setIntensity(value * .1);
 }
 
 // Amp Random
 inline function onknbAmpRandomControl(component, value)
 {
-	left_gainRandom.setIntensity(value * .1);
-
-	//samplerWTLeft_gainRandom.setIntensity(value * .1);
-	//samplerWTRight_gainRandom.setIntensity(value * .1);
-
-	//synthWTLeftA_gainRandom.setIntensity(value * .1);
-	//synthWTRightA_gainRandom.setIntensity(value * .1);
+	leftRS_gainRandom.setIntensity(value * .1);
+	leftWG_gainRandom.setIntensity(value * .1);
 }
 
 // Pitch Velocity
 inline function onknbPitchVelocityControl(component, value)
 {
-	left_pitchAHDSR.setIntensity(value * .6);
-
-	//samplerWTLeft_pitchAHDSR.setIntensity(value * .6);
-	//samplerWTRight_pitchAHDSR.setIntensity(value * .6);
-
-	//synthWTLeftA_pitchAHDSR.setIntensity(value * .6);
-	//synthWTRightA_pitchAHDSR.setIntensity(value * .6);
+	leftWG_pitchAHDSR.setIntensity(value * .6);
 }
 
 // Pitch Decay
 inline function onknbPitchDecayControl(component, value)
 {
-	left_pitchAHDSR.setAttribute(left_pitchAHDSR.Decay, value);
-
-	//samplerWTLeft_pitchAHDSR.setAttribute(samplerWTLeft_pitchAHDSR.Decay, value);
-	//samplerWTRight_pitchAHDSR.setAttribute(samplerWTRight_pitchAHDSR.Decay, value);
-
-	//synthWTLeftA_pitchAHDSR.setAttribute(synthWTLeftA_pitchAHDSR.Decay, value);
-	//synthWTRightA_pitchAHDSR.setAttribute(synthWTLeftA_pitchAHDSR.Decay, value);
+	leftWG_pitchAHDSR.setAttribute(leftWG_pitchAHDSR.Decay, value);
 }
 
 // Pitch Random
 inline function onknbPitchRandomControl(component, value)
 {
-	left_pitchRandom.setIntensity(value * .5);
-
-	//samplerWTLeft_pitchRandom.setIntensity(value * .5);
-	//samplerWTRight_pitchRandom.setIntensity(value * .5);
-
-	//synthWTLeftA_pitchRandom.setIntensity(value * .5);
-	//synthWTRightA_pitchRandom.setIntensity(value * .5);
+	leftWG_pitchRandom.setIntensity(value * .5);
 }
 
 // Pitch LFO 
 inline function onknbPitchLFOControl(component, value)
 {
-	left_pitchLFO.setIntensity(value * .2);
-
-	//samplerWTLeft_pitchLFO.setIntensity(value * .2);
-	//samplerWTRight_pitchLFO.setIntensity(value * .2);
-
-	//synthWTLeftA_pitchLFO.setIntensity(value * .2);
-	//synthWTRightA_pitchLFO.setIntensity(value * .2);
+	leftWG_pitchLFO.setIntensity(value * .2);
 }
 
 // Tone Dampen
 inline function onknbToneDampenControl(component, value)
 {	
-	left_WGDampen.setAttribute(left_WGDampen.Dampen, value);
-	//samplerWTLeft_fxDampen.setAttribute(samplerWTLeft_fxDampen.Dampen, value);
-	//samplerWTRight_fxDampen.setAttribute(samplerWTRight_fxDampen.Dampen, value);
-	
-	//synthWTLeftA_dampen.setAttribute(synthWTLeftA_dampen.Dampen, value);
-	//synthWTRightA_dampen.setAttribute(synthWTRightA_dampen.Dampen, value);
+	leftWG_fxDampen.setAttribute(leftWG_fxDampen.Dampen, value);
 }
 
 // Tone Decay 

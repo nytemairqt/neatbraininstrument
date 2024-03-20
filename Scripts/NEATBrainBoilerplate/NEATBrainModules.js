@@ -1,36 +1,41 @@
 // NEATBrain Modules
 
-// Left
+// Left Residue
+const leftRS = Synth.getChildSynth("leftRS");
+const leftRS_midiProcessor = Synth.getMidiProcessor("leftRS_midiProcessor");
+const leftRS_gainAHDSR = Synth.getModulator("leftRS_gainAHDSR");
+const leftRS_gainVelocity = Synth.getModulator("leftRS_gainVelocity");
+const leftRS_gainLFO = Synth.getModulator("leftRS_gainLFO");
+const leftRS_gainRandom = Synth.getModulator("leftRS_gainRandom");
+const leftRS_fxLevelAdjust = Synth.getEffect("leftRS_fxLevelAdjust");
+const leftRS_fxProfileA = Synth.getEffect("leftRS_fxProfileA");
+const leftRS_fxProfileB = Synth.getEffect("leftRS_fxProfileB");
+const leftRS_fxProfileC = Synth.getEffect("leftRS_fxProfileC");
+const leftRS_fxToneAdjust = Synth.getEffect("leftRS_fxToneAdjust");
 
-const left = Synth.getChildSynth("left");
-const left_RS = Synth.getChildSynth("left_RS");
-const left_WG = Synth.getChildSynth("left_WG");
+// Left Waveguide
+const leftWG = Synth.getChildSynth("leftWG");
+const leftWG_midiProcessor = Synth.getMidiProcessor("leftWG_midiProcessor");
+const leftWG_gainAHDSR = Synth.getModulator("leftWG_gainAHDSR");
+const leftWG_gainVelocity = Synth.getModulator("leftWG_gainVelocity");
+const leftWG_gainLFO = Synth.getModulator("leftWG_gainLFO");
+const leftWG_gainRandom = Synth.getModulator("leftWG_gainRandom");
+const leftWG_pitchAHDSR = Synth.getModulator("leftWG_pitchAHDSR");
+const leftWG_pitchAHDSRVelocity = Synth.getModulator("leftWG_pitchAHDSRVelocity");
+const leftWG_pitchLFO = Synth.getModulator("leftWG_pitchLFO");
+const leftWG_pitchRandom = Synth.getModulator("leftWG_pitchRandom");
+const leftWG_pitchBend = Synth.getModulator("leftWG_pitchBend");
+const leftWG_fxMuteLogic = Synth.getEffect("leftWG_fxMuteLogic");
+const leftWG_fxDampen = Synth.getEffect("leftWG_fxDampen");
+const leftWG_fxKarplus = Synth.getEffect("leftWG_fxKarplus");
+const leftWG_fxKarplusAHDSR = Synth.getModulator("leftWG_fxKarplusAHDSR");
+const leftWG_fxLevelAdjust = Synth.getEffect("leftWG_fxLevelAdjust");
+const leftWG_fxProfileA = Synth.getEffect("leftWG_fxProfileA");
+const leftWG_fxProfileB = Synth.getEffect("leftWG_fxProfileB");
+const leftWG_fxProfileC = Synth.getEffect("leftWG_fxProfileC");
+const leftWG_fxToneAdjust = Synth.getEffect("leftWG_fxToneAdjust");
 
-const left_midiProcessor = Synth.getMidiProcessor("left_midiProcessor");
-const left_gainAHDSR = Synth.getModulator("left_gainAHDSR");
-const left_gainVelocity = Synth.getModulator("left_gainVelocity");
-const left_gainLFO = Synth.getModulator("left_gainLFO");
-const left_gainRandom = Synth.getModulator("left_gainRandom");
 
-const left_pitchAHDSR = Synth.getModulator("left_pitchAHDSR");
-const left_pitchLFO = Synth.getModulator("left_pitchLFO");
-const left_pitchRandom = Synth.getModulator("left_pitchRandom");
-const left_pitchBend = Synth.getModulator("left_pitchBend");
-
-const left_fxLevelAdjust = Synth.getEffect("left_fxLevelAdjust");
-const left_fxProfileA = Synth.getEffect("left_fxProfileA");
-const left_fxProfileB = Synth.getEffect("left_fxProfileB");
-const left_fxProfileC = Synth.getEffect("left_fxProfileC");
-const left_fxToneAdjust = Synth.getEffect("left_fxToneAdjust");
-
-const left_WGMuteLogic = Synth.getEffect("left_WGMuteLogic");
-const left_WGDampen = Synth.getEffect("left_WGDampen");
-const left_WGKarplus = Synth.getEffect("left_WGKarplus");
-const left_WGKarplusAHDSR = Synth.getEffect("left_WGKarplus");
-
-Engine.addModuleStateToUserPreset("left_fxProfileA");
-Engine.addModuleStateToUserPreset("left_fxProfileB");
-Engine.addModuleStateToUserPreset("left_fxProfileC");
 
 
 /*
