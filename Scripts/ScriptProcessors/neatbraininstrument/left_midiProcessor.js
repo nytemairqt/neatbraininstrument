@@ -11,12 +11,7 @@ reg v = 0;function onNoteOn()
 	if (m > 88)
 		Message.ignoreEvent(1);	
 		
-	// Transient Offset
-	
-	Message.delayEvent(700);
-	
 	// Humanization
-	Message.delayEvent(humanizeLeftAmount);
 	
 }
  function onNoteOff()

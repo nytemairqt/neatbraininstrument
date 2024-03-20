@@ -1,5 +1,8 @@
 Content.makeFrontInterface(1000, 710);
 
+
+
+
 /* Instantiate NEATBrain */
 
 const MEMORYNAME = "Achromic";
@@ -10,6 +13,9 @@ const NUMPROFILES = 3;
 
 include("RhapsodyBoilerplate/includes/Ui.js");
 //Ui.createTemplate(MEMORYNAME); // Run this after updating Rhapsody Boilerplate
+
+const btnLogo = Content.getComponent("btnLogo");
+btnLogo.set("visible", false);
 
 include("RhapsodyBoilerplate/includes/LookAndFeel.js");
 include("RhapsodyBoilerplate/includes/Paths.js");

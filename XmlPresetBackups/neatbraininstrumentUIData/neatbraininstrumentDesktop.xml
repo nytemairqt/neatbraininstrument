@@ -137,7 +137,7 @@
                  height="10" text="profile" visible="0" parentComponent="pnlBody"
                  items="&#10;A&#10;B&#10;C" max="3"/>
       <Component type="ScriptPanel" id="pnlAdvanced" x="496" y="0" width="500"
-                 height="522" parentComponent="pnlBody">
+                 height="522" parentComponent="pnlBody" visible="0">
         <Component type="ScriptPanel" id="lblAdvanced" x="-11" y="16" width="128"
                    height="64" text="ADVANCED" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="pnlShowInfoPopup" x="436" y="16" width="16"
@@ -213,7 +213,7 @@
                  width="125.0" height="15.0" tooltip="Visit the developer's website."
                  bgColour="0" itemColour="4293059571" itemColour2="4291875295"
                  textColour="0" saveInPreset="0" parentComponent="pnlStatusBar"
-                 isMomentary="1" enableMidiLearn="0"/>
+                 isMomentary="1" enableMidiLearn="0" visible="0"/>
       <Component type="ScriptFloatingTile" id="fltPeakMeter" x="730.0" y="13.0"
                  ContentType="MatrixPeakMeter" width="100.0" height="16.0" bgColour="0"
                  itemColour="4280361253" itemColour2="4284112748" textColour="0"

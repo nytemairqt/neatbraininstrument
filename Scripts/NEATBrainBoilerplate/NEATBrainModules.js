@@ -1,6 +1,39 @@
 // NEATBrain Modules
 
-// Left Sampler Wavetables & Modulators
+// Left
+
+const left = Synth.getChildSynth("left");
+const left_RS = Synth.getChildSynth("left_RS");
+const left_WG = Synth.getChildSynth("left_WG");
+
+const left_midiProcessor = Synth.getMidiProcessor("left_midiProcessor");
+const left_gainAHDSR = Synth.getModulator("left_gainAHDSR");
+const left_gainVelocity = Synth.getModulator("left_gainVelocity");
+const left_gainLFO = Synth.getModulator("left_gainLFO");
+const left_gainRandom = Synth.getModulator("left_gainRandom");
+
+const left_pitchAHDSR = Synth.getModulator("left_pitchAHDSR");
+const left_pitchLFO = Synth.getModulator("left_pitchLFO");
+const left_pitchRandom = Synth.getModulator("left_pitchRandom");
+const left_pitchBend = Synth.getModulator("left_pitchBend");
+
+const left_fxLevelAdjust = Synth.getEffect("left_fxLevelAdjust");
+const left_fxProfileA = Synth.getEffect("left_fxProfileA");
+const left_fxProfileB = Synth.getEffect("left_fxProfileB");
+const left_fxProfileC = Synth.getEffect("left_fxProfileC");
+const left_fxToneAdjust = Synth.getEffect("left_fxToneAdjust");
+
+const left_WGMuteLogic = Synth.getEffect("left_WGMuteLogic");
+const left_WGDampen = Synth.getEffect("left_WGDampen");
+const left_WGKarplus = Synth.getEffect("left_WGKarplus");
+const left_WGKarplusAHDSR = Synth.getEffect("left_WGKarplus");
+
+Engine.addModuleStateToUserPreset("left_fxProfileA");
+Engine.addModuleStateToUserPreset("left_fxProfileB");
+Engine.addModuleStateToUserPreset("left_fxProfileC");
+
+
+/*
 
 const samplerWTLeft = Synth.getChildSynth("samplerWTLeft");
 
@@ -28,6 +61,8 @@ const samplerWTLeft_fxToneAdjust = Synth.getEffect("samplerWTLeft_fxToneAdjust")
 Engine.addModuleStateToUserPreset("samplerWTLeft_fxProfileA");
 Engine.addModuleStateToUserPreset("samplerWTLeft_fxProfileB");
 Engine.addModuleStateToUserPreset("samplerWTLeft_fxProfileC");
+
+*/
 
 
 
@@ -66,11 +101,11 @@ const synthWTRightA_tableEnv = Synth.getModulator("synthWTRightA_tableEnv");
 
 
 // Residue Samplers
-const samplerResidueLeft = Synth.getChildSynth("samplerResidueLeft");
-const samplerResidueRight = Synth.getChildSynth("samplerResidueRight");
+//const samplerResidueLeft = Synth.getChildSynth("samplerResidueLeft");
+//const samplerResidueRight = Synth.getChildSynth("samplerResidueRight");
 
-const samplerResidueLeft_sampleOffset = Synth.getModulator("samplerResidueLeft_sampleOffset");
-const samplerResidueRight_sampleOffset = Synth.getModulator("samplerResidueRight_sampleOffset");
+//const samplerResidueLeft_sampleOffset = Synth.getModulator("samplerResidueLeft_sampleOffset");
+//const samplerResidueRight_sampleOffset = Synth.getModulator("samplerResidueRight_sampleOffset");
 
 // Other Samplers
 
@@ -78,8 +113,8 @@ const samplerReleaseLeft = Synth.getChildSynth("samplerReleaseLeft");
 const samplerReleaseRight = Synth.getChildSynth("samplerReleaseRight");
 
 // Sampler AHDSRs
-const samplerResidueLeft_gainAHDSR = Synth.getModulator("samplerResidueLeft_gainAHDSR");
-const samplerResidueRight_gainAHDSR = Synth.getModulator("samplerResidueRight_gainAHDSR");
+//const samplerResidueLeft_gainAHDSR = Synth.getModulator("samplerResidueLeft_gainAHDSR");
+//const samplerResidueRight_gainAHDSR = Synth.getModulator("samplerResidueRight_gainAHDSR");
 
 // FX
 

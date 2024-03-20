@@ -4,962 +4,962 @@
            SaveMode="1">
   <sample Root="47" LoKey="45" HiKey="49" LoVel="1" HiVel="127" RRGroup="10"
           FileName="{PROJECT_FOLDER}wtLeft/hz123_root47_rr10_vl1_vh127_10.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="47" LoKey="45" HiKey="49" LoVel="1" HiVel="127" RRGroup="11"
           FileName="{PROJECT_FOLDER}wtLeft/hz123_root47_rr11_vl1_vh127_11.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="47" LoKey="45" HiKey="49" LoVel="1" HiVel="127" RRGroup="12"
           FileName="{PROJECT_FOLDER}wtLeft/hz123_root47_rr12_vl1_vh127_12.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="47" LoKey="45" HiKey="49" LoVel="1" HiVel="127" RRGroup="13"
           FileName="{PROJECT_FOLDER}wtLeft/hz123_root47_rr13_vl1_vh127_13.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="47" LoKey="45" HiKey="49" LoVel="1" HiVel="127" RRGroup="14"
           FileName="{PROJECT_FOLDER}wtLeft/hz123_root47_rr14_vl1_vh127_14.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="47" LoKey="45" HiKey="49" LoVel="1" HiVel="127" RRGroup="15"
           FileName="{PROJECT_FOLDER}wtLeft/hz123_root47_rr15_vl1_vh127_15.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="47" LoKey="45" HiKey="49" LoVel="1" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}wtLeft/hz123_root47_rr1_vl1_vh127_01.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="47" LoKey="45" HiKey="49" LoVel="1" HiVel="127" RRGroup="2"
           FileName="{PROJECT_FOLDER}wtLeft/hz123_root47_rr2_vl1_vh127_02.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="47" LoKey="45" HiKey="49" LoVel="1" HiVel="127" RRGroup="3"
           FileName="{PROJECT_FOLDER}wtLeft/hz123_root47_rr3_vl1_vh127_03.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="47" LoKey="45" HiKey="49" LoVel="1" HiVel="127" RRGroup="4"
           FileName="{PROJECT_FOLDER}wtLeft/hz123_root47_rr4_vl1_vh127_04.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="47" LoKey="45" HiKey="49" LoVel="1" HiVel="127" RRGroup="5"
           FileName="{PROJECT_FOLDER}wtLeft/hz123_root47_rr5_vl1_vh127_05.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="47" LoKey="45" HiKey="49" LoVel="1" HiVel="127" RRGroup="6"
           FileName="{PROJECT_FOLDER}wtLeft/hz123_root47_rr6_vl1_vh127_06.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="47" LoKey="45" HiKey="49" LoVel="1" HiVel="127" RRGroup="7"
           FileName="{PROJECT_FOLDER}wtLeft/hz123_root47_rr7_vl1_vh127_07.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="47" LoKey="45" HiKey="49" LoVel="1" HiVel="127" RRGroup="8"
           FileName="{PROJECT_FOLDER}wtLeft/hz123_root47_rr8_vl1_vh127_08.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="47" LoKey="45" HiKey="49" LoVel="1" HiVel="127" RRGroup="9"
           FileName="{PROJECT_FOLDER}wtLeft/hz123_root47_rr9_vl1_vh127_09.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13587" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="88" LoKey="85" HiKey="88" LoVel="1" HiVel="127" RRGroup="10"
           FileName="{PROJECT_FOLDER}wtLeft/hz1319_root88_rr10_vl1_vh127_10.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="88" LoKey="85" HiKey="88" LoVel="1" HiVel="127" RRGroup="11"
           FileName="{PROJECT_FOLDER}wtLeft/hz1319_root88_rr11_vl1_vh127_11.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="88" LoKey="85" HiKey="88" LoVel="1" HiVel="127" RRGroup="12"
           FileName="{PROJECT_FOLDER}wtLeft/hz1319_root88_rr12_vl1_vh127_12.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="88" LoKey="85" HiKey="88" LoVel="1" HiVel="127" RRGroup="13"
           FileName="{PROJECT_FOLDER}wtLeft/hz1319_root88_rr13_vl1_vh127_13.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="88" LoKey="85" HiKey="88" LoVel="1" HiVel="127" RRGroup="14"
           FileName="{PROJECT_FOLDER}wtLeft/hz1319_root88_rr14_vl1_vh127_14.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="88" LoKey="85" HiKey="88" LoVel="1" HiVel="127" RRGroup="15"
           FileName="{PROJECT_FOLDER}wtLeft/hz1319_root88_rr15_vl1_vh127_15.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="88" LoKey="85" HiKey="88" LoVel="1" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}wtLeft/hz1319_root88_rr1_vl1_vh127_01.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="88" LoKey="85" HiKey="88" LoVel="1" HiVel="127" RRGroup="2"
           FileName="{PROJECT_FOLDER}wtLeft/hz1319_root88_rr2_vl1_vh127_02.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="88" LoKey="85" HiKey="88" LoVel="1" HiVel="127" RRGroup="3"
           FileName="{PROJECT_FOLDER}wtLeft/hz1319_root88_rr3_vl1_vh127_03.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="88" LoKey="85" HiKey="88" LoVel="1" HiVel="127" RRGroup="4"
           FileName="{PROJECT_FOLDER}wtLeft/hz1319_root88_rr4_vl1_vh127_04.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="88" LoKey="85" HiKey="88" LoVel="1" HiVel="127" RRGroup="5"
           FileName="{PROJECT_FOLDER}wtLeft/hz1319_root88_rr5_vl1_vh127_05.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="88" LoKey="85" HiKey="88" LoVel="1" HiVel="127" RRGroup="6"
           FileName="{PROJECT_FOLDER}wtLeft/hz1319_root88_rr6_vl1_vh127_06.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="88" LoKey="85" HiKey="88" LoVel="1" HiVel="127" RRGroup="7"
           FileName="{PROJECT_FOLDER}wtLeft/hz1319_root88_rr7_vl1_vh127_07.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="88" LoKey="85" HiKey="88" LoVel="1" HiVel="127" RRGroup="8"
           FileName="{PROJECT_FOLDER}wtLeft/hz1319_root88_rr8_vl1_vh127_08.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="88" LoKey="85" HiKey="88" LoVel="1" HiVel="127" RRGroup="9"
           FileName="{PROJECT_FOLDER}wtLeft/hz1319_root88_rr9_vl1_vh127_09.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13263" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="52" LoKey="50" HiKey="54" LoVel="1" HiVel="127" RRGroup="10"
           FileName="{PROJECT_FOLDER}wtLeft/hz165_root52_rr10_vl1_vh127_10.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="52" LoKey="50" HiKey="54" LoVel="1" HiVel="127" RRGroup="11"
           FileName="{PROJECT_FOLDER}wtLeft/hz165_root52_rr11_vl1_vh127_11.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="52" LoKey="50" HiKey="54" LoVel="1" HiVel="127" RRGroup="12"
           FileName="{PROJECT_FOLDER}wtLeft/hz165_root52_rr12_vl1_vh127_12.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="52" LoKey="50" HiKey="54" LoVel="1" HiVel="127" RRGroup="13"
           FileName="{PROJECT_FOLDER}wtLeft/hz165_root52_rr13_vl1_vh127_13.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="52" LoKey="50" HiKey="54" LoVel="1" HiVel="127" RRGroup="14"
           FileName="{PROJECT_FOLDER}wtLeft/hz165_root52_rr14_vl1_vh127_14.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="52" LoKey="50" HiKey="54" LoVel="1" HiVel="127" RRGroup="15"
           FileName="{PROJECT_FOLDER}wtLeft/hz165_root52_rr15_vl1_vh127_15.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="52" LoKey="50" HiKey="54" LoVel="1" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}wtLeft/hz165_root52_rr1_vl1_vh127_01.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="52" LoKey="50" HiKey="54" LoVel="1" HiVel="127" RRGroup="2"
           FileName="{PROJECT_FOLDER}wtLeft/hz165_root52_rr2_vl1_vh127_02.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="52" LoKey="50" HiKey="54" LoVel="1" HiVel="127" RRGroup="3"
           FileName="{PROJECT_FOLDER}wtLeft/hz165_root52_rr3_vl1_vh127_03.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="52" LoKey="50" HiKey="54" LoVel="1" HiVel="127" RRGroup="4"
           FileName="{PROJECT_FOLDER}wtLeft/hz165_root52_rr4_vl1_vh127_04.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="52" LoKey="50" HiKey="54" LoVel="1" HiVel="127" RRGroup="5"
           FileName="{PROJECT_FOLDER}wtLeft/hz165_root52_rr5_vl1_vh127_05.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="52" LoKey="50" HiKey="54" LoVel="1" HiVel="127" RRGroup="6"
           FileName="{PROJECT_FOLDER}wtLeft/hz165_root52_rr6_vl1_vh127_06.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="52" LoKey="50" HiKey="54" LoVel="1" HiVel="127" RRGroup="7"
           FileName="{PROJECT_FOLDER}wtLeft/hz165_root52_rr7_vl1_vh127_07.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="52" LoKey="50" HiKey="54" LoVel="1" HiVel="127" RRGroup="8"
           FileName="{PROJECT_FOLDER}wtLeft/hz165_root52_rr8_vl1_vh127_08.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="52" LoKey="50" HiKey="54" LoVel="1" HiVel="127" RRGroup="9"
           FileName="{PROJECT_FOLDER}wtLeft/hz165_root52_rr9_vl1_vh127_09.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13498" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="12" LoKey="10" HiKey="14" LoVel="1" HiVel="127" RRGroup="10"
           FileName="{PROJECT_FOLDER}wtLeft/hz16_root12_rr10_vl1_vh127_10.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="12" LoKey="10" HiKey="14" LoVel="1" HiVel="127" RRGroup="11"
           FileName="{PROJECT_FOLDER}wtLeft/hz16_root12_rr11_vl1_vh127_11.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="12" LoKey="10" HiKey="14" LoVel="1" HiVel="127" RRGroup="12"
           FileName="{PROJECT_FOLDER}wtLeft/hz16_root12_rr12_vl1_vh127_12.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="12" LoKey="10" HiKey="14" LoVel="1" HiVel="127" RRGroup="13"
           FileName="{PROJECT_FOLDER}wtLeft/hz16_root12_rr13_vl1_vh127_13.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="12" LoKey="10" HiKey="14" LoVel="1" HiVel="127" RRGroup="14"
           FileName="{PROJECT_FOLDER}wtLeft/hz16_root12_rr14_vl1_vh127_14.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="12" LoKey="10" HiKey="14" LoVel="1" HiVel="127" RRGroup="15"
           FileName="{PROJECT_FOLDER}wtLeft/hz16_root12_rr15_vl1_vh127_15.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="12" LoKey="10" HiKey="14" LoVel="1" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}wtLeft/hz16_root12_rr1_vl1_vh127_01.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="12" LoKey="10" HiKey="14" LoVel="1" HiVel="127" RRGroup="2"
           FileName="{PROJECT_FOLDER}wtLeft/hz16_root12_rr2_vl1_vh127_02.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="12" LoKey="10" HiKey="14" LoVel="1" HiVel="127" RRGroup="3"
           FileName="{PROJECT_FOLDER}wtLeft/hz16_root12_rr3_vl1_vh127_03.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="12" LoKey="10" HiKey="14" LoVel="1" HiVel="127" RRGroup="4"
           FileName="{PROJECT_FOLDER}wtLeft/hz16_root12_rr4_vl1_vh127_04.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="12" LoKey="10" HiKey="14" LoVel="1" HiVel="127" RRGroup="5"
           FileName="{PROJECT_FOLDER}wtLeft/hz16_root12_rr5_vl1_vh127_05.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="12" LoKey="10" HiKey="14" LoVel="1" HiVel="127" RRGroup="6"
           FileName="{PROJECT_FOLDER}wtLeft/hz16_root12_rr6_vl1_vh127_06.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="12" LoKey="10" HiKey="14" LoVel="1" HiVel="127" RRGroup="7"
           FileName="{PROJECT_FOLDER}wtLeft/hz16_root12_rr7_vl1_vh127_07.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="12" LoKey="10" HiKey="14" LoVel="1" HiVel="127" RRGroup="8"
           FileName="{PROJECT_FOLDER}wtLeft/hz16_root12_rr8_vl1_vh127_08.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="12" LoKey="10" HiKey="14" LoVel="1" HiVel="127" RRGroup="9"
           FileName="{PROJECT_FOLDER}wtLeft/hz16_root12_rr9_vl1_vh127_09.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15927" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="57" LoKey="55" HiKey="59" LoVel="1" HiVel="127" RRGroup="10"
           FileName="{PROJECT_FOLDER}wtLeft/hz220_root57_rr10_vl1_vh127_10.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="57" LoKey="55" HiKey="59" LoVel="1" HiVel="127" RRGroup="11"
           FileName="{PROJECT_FOLDER}wtLeft/hz220_root57_rr11_vl1_vh127_11.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="57" LoKey="55" HiKey="59" LoVel="1" HiVel="127" RRGroup="12"
           FileName="{PROJECT_FOLDER}wtLeft/hz220_root57_rr12_vl1_vh127_12.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="57" LoKey="55" HiKey="59" LoVel="1" HiVel="127" RRGroup="13"
           FileName="{PROJECT_FOLDER}wtLeft/hz220_root57_rr13_vl1_vh127_13.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="57" LoKey="55" HiKey="59" LoVel="1" HiVel="127" RRGroup="14"
           FileName="{PROJECT_FOLDER}wtLeft/hz220_root57_rr14_vl1_vh127_14.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="57" LoKey="55" HiKey="59" LoVel="1" HiVel="127" RRGroup="15"
           FileName="{PROJECT_FOLDER}wtLeft/hz220_root57_rr15_vl1_vh127_15.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="57" LoKey="55" HiKey="59" LoVel="1" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}wtLeft/hz220_root57_rr1_vl1_vh127_01.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="57" LoKey="55" HiKey="59" LoVel="1" HiVel="127" RRGroup="2"
           FileName="{PROJECT_FOLDER}wtLeft/hz220_root57_rr2_vl1_vh127_02.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="57" LoKey="55" HiKey="59" LoVel="1" HiVel="127" RRGroup="3"
           FileName="{PROJECT_FOLDER}wtLeft/hz220_root57_rr3_vl1_vh127_03.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="57" LoKey="55" HiKey="59" LoVel="1" HiVel="127" RRGroup="4"
           FileName="{PROJECT_FOLDER}wtLeft/hz220_root57_rr4_vl1_vh127_04.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="57" LoKey="55" HiKey="59" LoVel="1" HiVel="127" RRGroup="5"
           FileName="{PROJECT_FOLDER}wtLeft/hz220_root57_rr5_vl1_vh127_05.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="57" LoKey="55" HiKey="59" LoVel="1" HiVel="127" RRGroup="6"
           FileName="{PROJECT_FOLDER}wtLeft/hz220_root57_rr6_vl1_vh127_06.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="57" LoKey="55" HiKey="59" LoVel="1" HiVel="127" RRGroup="7"
           FileName="{PROJECT_FOLDER}wtLeft/hz220_root57_rr7_vl1_vh127_07.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="57" LoKey="55" HiKey="59" LoVel="1" HiVel="127" RRGroup="8"
           FileName="{PROJECT_FOLDER}wtLeft/hz220_root57_rr8_vl1_vh127_08.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="57" LoKey="55" HiKey="59" LoVel="1" HiVel="127" RRGroup="9"
           FileName="{PROJECT_FOLDER}wtLeft/hz220_root57_rr9_vl1_vh127_09.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13430" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="17" LoKey="15" HiKey="19" LoVel="1" HiVel="127" RRGroup="10"
           FileName="{PROJECT_FOLDER}wtLeft/hz22_root17_rr10_vl1_vh127_10.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="17" LoKey="15" HiKey="19" LoVel="1" HiVel="127" RRGroup="11"
           FileName="{PROJECT_FOLDER}wtLeft/hz22_root17_rr11_vl1_vh127_11.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="17" LoKey="15" HiKey="19" LoVel="1" HiVel="127" RRGroup="12"
           FileName="{PROJECT_FOLDER}wtLeft/hz22_root17_rr12_vl1_vh127_12.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="17" LoKey="15" HiKey="19" LoVel="1" HiVel="127" RRGroup="13"
           FileName="{PROJECT_FOLDER}wtLeft/hz22_root17_rr13_vl1_vh127_13.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="17" LoKey="15" HiKey="19" LoVel="1" HiVel="127" RRGroup="14"
           FileName="{PROJECT_FOLDER}wtLeft/hz22_root17_rr14_vl1_vh127_14.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="17" LoKey="15" HiKey="19" LoVel="1" HiVel="127" RRGroup="15"
           FileName="{PROJECT_FOLDER}wtLeft/hz22_root17_rr15_vl1_vh127_15.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="17" LoKey="15" HiKey="19" LoVel="1" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}wtLeft/hz22_root17_rr1_vl1_vh127_01.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="17" LoKey="15" HiKey="19" LoVel="1" HiVel="127" RRGroup="2"
           FileName="{PROJECT_FOLDER}wtLeft/hz22_root17_rr2_vl1_vh127_02.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="17" LoKey="15" HiKey="19" LoVel="1" HiVel="127" RRGroup="3"
           FileName="{PROJECT_FOLDER}wtLeft/hz22_root17_rr3_vl1_vh127_03.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="17" LoKey="15" HiKey="19" LoVel="1" HiVel="127" RRGroup="4"
           FileName="{PROJECT_FOLDER}wtLeft/hz22_root17_rr4_vl1_vh127_04.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="17" LoKey="15" HiKey="19" LoVel="1" HiVel="127" RRGroup="5"
           FileName="{PROJECT_FOLDER}wtLeft/hz22_root17_rr5_vl1_vh127_05.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="17" LoKey="15" HiKey="19" LoVel="1" HiVel="127" RRGroup="6"
           FileName="{PROJECT_FOLDER}wtLeft/hz22_root17_rr6_vl1_vh127_06.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="17" LoKey="15" HiKey="19" LoVel="1" HiVel="127" RRGroup="7"
           FileName="{PROJECT_FOLDER}wtLeft/hz22_root17_rr7_vl1_vh127_07.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="17" LoKey="15" HiKey="19" LoVel="1" HiVel="127" RRGroup="8"
           FileName="{PROJECT_FOLDER}wtLeft/hz22_root17_rr8_vl1_vh127_08.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="17" LoKey="15" HiKey="19" LoVel="1" HiVel="127" RRGroup="9"
           FileName="{PROJECT_FOLDER}wtLeft/hz22_root17_rr9_vl1_vh127_09.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="15250" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="62" LoKey="60" HiKey="64" LoVel="1" HiVel="127" RRGroup="10"
           FileName="{PROJECT_FOLDER}wtLeft/hz294_root62_rr10_vl1_vh127_10.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="62" LoKey="60" HiKey="64" LoVel="1" HiVel="127" RRGroup="11"
           FileName="{PROJECT_FOLDER}wtLeft/hz294_root62_rr11_vl1_vh127_11.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="62" LoKey="60" HiKey="64" LoVel="1" HiVel="127" RRGroup="12"
           FileName="{PROJECT_FOLDER}wtLeft/hz294_root62_rr12_vl1_vh127_12.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="62" LoKey="60" HiKey="64" LoVel="1" HiVel="127" RRGroup="13"
           FileName="{PROJECT_FOLDER}wtLeft/hz294_root62_rr13_vl1_vh127_13.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="62" LoKey="60" HiKey="64" LoVel="1" HiVel="127" RRGroup="14"
           FileName="{PROJECT_FOLDER}wtLeft/hz294_root62_rr14_vl1_vh127_14.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="62" LoKey="60" HiKey="64" LoVel="1" HiVel="127" RRGroup="15"
           FileName="{PROJECT_FOLDER}wtLeft/hz294_root62_rr15_vl1_vh127_15.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="62" LoKey="60" HiKey="64" LoVel="1" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}wtLeft/hz294_root62_rr1_vl1_vh127_01.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="62" LoKey="60" HiKey="64" LoVel="1" HiVel="127" RRGroup="2"
           FileName="{PROJECT_FOLDER}wtLeft/hz294_root62_rr2_vl1_vh127_02.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="62" LoKey="60" HiKey="64" LoVel="1" HiVel="127" RRGroup="3"
           FileName="{PROJECT_FOLDER}wtLeft/hz294_root62_rr3_vl1_vh127_03.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="62" LoKey="60" HiKey="64" LoVel="1" HiVel="127" RRGroup="4"
           FileName="{PROJECT_FOLDER}wtLeft/hz294_root62_rr4_vl1_vh127_04.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="62" LoKey="60" HiKey="64" LoVel="1" HiVel="127" RRGroup="5"
           FileName="{PROJECT_FOLDER}wtLeft/hz294_root62_rr5_vl1_vh127_05.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="62" LoKey="60" HiKey="64" LoVel="1" HiVel="127" RRGroup="6"
           FileName="{PROJECT_FOLDER}wtLeft/hz294_root62_rr6_vl1_vh127_06.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="62" LoKey="60" HiKey="64" LoVel="1" HiVel="127" RRGroup="7"
           FileName="{PROJECT_FOLDER}wtLeft/hz294_root62_rr7_vl1_vh127_07.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="62" LoKey="60" HiKey="64" LoVel="1" HiVel="127" RRGroup="8"
           FileName="{PROJECT_FOLDER}wtLeft/hz294_root62_rr8_vl1_vh127_08.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="62" LoKey="60" HiKey="64" LoVel="1" HiVel="127" RRGroup="9"
           FileName="{PROJECT_FOLDER}wtLeft/hz294_root62_rr9_vl1_vh127_09.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13380" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="22" LoKey="20" HiKey="24" LoVel="1" HiVel="127" RRGroup="10"
           FileName="{PROJECT_FOLDER}wtLeft/hz29_root22_rr10_vl1_vh127_10.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="22" LoKey="20" HiKey="24" LoVel="1" HiVel="127" RRGroup="11"
           FileName="{PROJECT_FOLDER}wtLeft/hz29_root22_rr11_vl1_vh127_11.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="22" LoKey="20" HiKey="24" LoVel="1" HiVel="127" RRGroup="12"
           FileName="{PROJECT_FOLDER}wtLeft/hz29_root22_rr12_vl1_vh127_12.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="22" LoKey="20" HiKey="24" LoVel="1" HiVel="127" RRGroup="13"
           FileName="{PROJECT_FOLDER}wtLeft/hz29_root22_rr13_vl1_vh127_13.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="22" LoKey="20" HiKey="24" LoVel="1" HiVel="127" RRGroup="14"
           FileName="{PROJECT_FOLDER}wtLeft/hz29_root22_rr14_vl1_vh127_14.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="22" LoKey="20" HiKey="24" LoVel="1" HiVel="127" RRGroup="15"
           FileName="{PROJECT_FOLDER}wtLeft/hz29_root22_rr15_vl1_vh127_15.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="22" LoKey="20" HiKey="24" LoVel="1" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}wtLeft/hz29_root22_rr1_vl1_vh127_01.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="22" LoKey="20" HiKey="24" LoVel="1" HiVel="127" RRGroup="2"
           FileName="{PROJECT_FOLDER}wtLeft/hz29_root22_rr2_vl1_vh127_02.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="22" LoKey="20" HiKey="24" LoVel="1" HiVel="127" RRGroup="3"
           FileName="{PROJECT_FOLDER}wtLeft/hz29_root22_rr3_vl1_vh127_03.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="22" LoKey="20" HiKey="24" LoVel="1" HiVel="127" RRGroup="4"
           FileName="{PROJECT_FOLDER}wtLeft/hz29_root22_rr4_vl1_vh127_04.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="22" LoKey="20" HiKey="24" LoVel="1" HiVel="127" RRGroup="5"
           FileName="{PROJECT_FOLDER}wtLeft/hz29_root22_rr5_vl1_vh127_05.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="22" LoKey="20" HiKey="24" LoVel="1" HiVel="127" RRGroup="6"
           FileName="{PROJECT_FOLDER}wtLeft/hz29_root22_rr6_vl1_vh127_06.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="22" LoKey="20" HiKey="24" LoVel="1" HiVel="127" RRGroup="7"
           FileName="{PROJECT_FOLDER}wtLeft/hz29_root22_rr7_vl1_vh127_07.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="22" LoKey="20" HiKey="24" LoVel="1" HiVel="127" RRGroup="8"
           FileName="{PROJECT_FOLDER}wtLeft/hz29_root22_rr8_vl1_vh127_08.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="22" LoKey="20" HiKey="24" LoVel="1" HiVel="127" RRGroup="9"
           FileName="{PROJECT_FOLDER}wtLeft/hz29_root22_rr9_vl1_vh127_09.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14744" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="67" LoKey="65" HiKey="69" LoVel="1" HiVel="127" RRGroup="10"
           FileName="{PROJECT_FOLDER}wtLeft/hz392_root67_rr10_vl1_vh127_10.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="67" LoKey="65" HiKey="69" LoVel="1" HiVel="127" RRGroup="11"
           FileName="{PROJECT_FOLDER}wtLeft/hz392_root67_rr11_vl1_vh127_11.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="67" LoKey="65" HiKey="69" LoVel="1" HiVel="127" RRGroup="12"
           FileName="{PROJECT_FOLDER}wtLeft/hz392_root67_rr12_vl1_vh127_12.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="67" LoKey="65" HiKey="69" LoVel="1" HiVel="127" RRGroup="13"
           FileName="{PROJECT_FOLDER}wtLeft/hz392_root67_rr13_vl1_vh127_13.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="67" LoKey="65" HiKey="69" LoVel="1" HiVel="127" RRGroup="14"
           FileName="{PROJECT_FOLDER}wtLeft/hz392_root67_rr14_vl1_vh127_14.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="67" LoKey="65" HiKey="69" LoVel="1" HiVel="127" RRGroup="15"
           FileName="{PROJECT_FOLDER}wtLeft/hz392_root67_rr15_vl1_vh127_15.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="67" LoKey="65" HiKey="69" LoVel="1" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}wtLeft/hz392_root67_rr1_vl1_vh127_01.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="67" LoKey="65" HiKey="69" LoVel="1" HiVel="127" RRGroup="2"
           FileName="{PROJECT_FOLDER}wtLeft/hz392_root67_rr2_vl1_vh127_02.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="67" LoKey="65" HiKey="69" LoVel="1" HiVel="127" RRGroup="3"
           FileName="{PROJECT_FOLDER}wtLeft/hz392_root67_rr3_vl1_vh127_03.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="67" LoKey="65" HiKey="69" LoVel="1" HiVel="127" RRGroup="4"
           FileName="{PROJECT_FOLDER}wtLeft/hz392_root67_rr4_vl1_vh127_04.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="67" LoKey="65" HiKey="69" LoVel="1" HiVel="127" RRGroup="5"
           FileName="{PROJECT_FOLDER}wtLeft/hz392_root67_rr5_vl1_vh127_05.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="67" LoKey="65" HiKey="69" LoVel="1" HiVel="127" RRGroup="6"
           FileName="{PROJECT_FOLDER}wtLeft/hz392_root67_rr6_vl1_vh127_06.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="67" LoKey="65" HiKey="69" LoVel="1" HiVel="127" RRGroup="7"
           FileName="{PROJECT_FOLDER}wtLeft/hz392_root67_rr7_vl1_vh127_07.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="67" LoKey="65" HiKey="69" LoVel="1" HiVel="127" RRGroup="8"
           FileName="{PROJECT_FOLDER}wtLeft/hz392_root67_rr8_vl1_vh127_08.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="67" LoKey="65" HiKey="69" LoVel="1" HiVel="127" RRGroup="9"
           FileName="{PROJECT_FOLDER}wtLeft/hz392_root67_rr9_vl1_vh127_09.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13343" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="27" LoKey="25" HiKey="29" LoVel="1" HiVel="127" RRGroup="10"
           FileName="{PROJECT_FOLDER}wtLeft/hz39_root27_rr10_vl1_vh127_10.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="27" LoKey="25" HiKey="29" LoVel="1" HiVel="127" RRGroup="11"
           FileName="{PROJECT_FOLDER}wtLeft/hz39_root27_rr11_vl1_vh127_11.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="27" LoKey="25" HiKey="29" LoVel="1" HiVel="127" RRGroup="12"
           FileName="{PROJECT_FOLDER}wtLeft/hz39_root27_rr12_vl1_vh127_12.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="27" LoKey="25" HiKey="29" LoVel="1" HiVel="127" RRGroup="13"
           FileName="{PROJECT_FOLDER}wtLeft/hz39_root27_rr13_vl1_vh127_13.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="27" LoKey="25" HiKey="29" LoVel="1" HiVel="127" RRGroup="14"
           FileName="{PROJECT_FOLDER}wtLeft/hz39_root27_rr14_vl1_vh127_14.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="27" LoKey="25" HiKey="29" LoVel="1" HiVel="127" RRGroup="15"
           FileName="{PROJECT_FOLDER}wtLeft/hz39_root27_rr15_vl1_vh127_15.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="27" LoKey="25" HiKey="29" LoVel="1" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}wtLeft/hz39_root27_rr1_vl1_vh127_01.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="27" LoKey="25" HiKey="29" LoVel="1" HiVel="127" RRGroup="2"
           FileName="{PROJECT_FOLDER}wtLeft/hz39_root27_rr2_vl1_vh127_02.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="27" LoKey="25" HiKey="29" LoVel="1" HiVel="127" RRGroup="3"
           FileName="{PROJECT_FOLDER}wtLeft/hz39_root27_rr3_vl1_vh127_03.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="27" LoKey="25" HiKey="29" LoVel="1" HiVel="127" RRGroup="4"
           FileName="{PROJECT_FOLDER}wtLeft/hz39_root27_rr4_vl1_vh127_04.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="27" LoKey="25" HiKey="29" LoVel="1" HiVel="127" RRGroup="5"
           FileName="{PROJECT_FOLDER}wtLeft/hz39_root27_rr5_vl1_vh127_05.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="27" LoKey="25" HiKey="29" LoVel="1" HiVel="127" RRGroup="6"
           FileName="{PROJECT_FOLDER}wtLeft/hz39_root27_rr6_vl1_vh127_06.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="27" LoKey="25" HiKey="29" LoVel="1" HiVel="127" RRGroup="7"
           FileName="{PROJECT_FOLDER}wtLeft/hz39_root27_rr7_vl1_vh127_07.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="27" LoKey="25" HiKey="29" LoVel="1" HiVel="127" RRGroup="8"
           FileName="{PROJECT_FOLDER}wtLeft/hz39_root27_rr8_vl1_vh127_08.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="27" LoKey="25" HiKey="29" LoVel="1" HiVel="127" RRGroup="9"
           FileName="{PROJECT_FOLDER}wtLeft/hz39_root27_rr9_vl1_vh127_09.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14364" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="72" LoKey="70" HiKey="74" LoVel="1" HiVel="127" RRGroup="10"
           FileName="{PROJECT_FOLDER}wtLeft/hz523_root72_rr10_vl1_vh127_10.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="72" LoKey="70" HiKey="74" LoVel="1" HiVel="127" RRGroup="11"
           FileName="{PROJECT_FOLDER}wtLeft/hz523_root72_rr11_vl1_vh127_11.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="72" LoKey="70" HiKey="74" LoVel="1" HiVel="127" RRGroup="12"
           FileName="{PROJECT_FOLDER}wtLeft/hz523_root72_rr12_vl1_vh127_12.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="72" LoKey="70" HiKey="74" LoVel="1" HiVel="127" RRGroup="13"
           FileName="{PROJECT_FOLDER}wtLeft/hz523_root72_rr13_vl1_vh127_13.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="72" LoKey="70" HiKey="74" LoVel="1" HiVel="127" RRGroup="14"
           FileName="{PROJECT_FOLDER}wtLeft/hz523_root72_rr14_vl1_vh127_14.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="72" LoKey="70" HiKey="74" LoVel="1" HiVel="127" RRGroup="15"
           FileName="{PROJECT_FOLDER}wtLeft/hz523_root72_rr15_vl1_vh127_15.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="72" LoKey="70" HiKey="74" LoVel="1" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}wtLeft/hz523_root72_rr1_vl1_vh127_01.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="72" LoKey="70" HiKey="74" LoVel="1" HiVel="127" RRGroup="2"
           FileName="{PROJECT_FOLDER}wtLeft/hz523_root72_rr2_vl1_vh127_02.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="72" LoKey="70" HiKey="74" LoVel="1" HiVel="127" RRGroup="3"
           FileName="{PROJECT_FOLDER}wtLeft/hz523_root72_rr3_vl1_vh127_03.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="72" LoKey="70" HiKey="74" LoVel="1" HiVel="127" RRGroup="4"
           FileName="{PROJECT_FOLDER}wtLeft/hz523_root72_rr4_vl1_vh127_04.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="72" LoKey="70" HiKey="74" LoVel="1" HiVel="127" RRGroup="5"
           FileName="{PROJECT_FOLDER}wtLeft/hz523_root72_rr5_vl1_vh127_05.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="72" LoKey="70" HiKey="74" LoVel="1" HiVel="127" RRGroup="6"
           FileName="{PROJECT_FOLDER}wtLeft/hz523_root72_rr6_vl1_vh127_06.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="72" LoKey="70" HiKey="74" LoVel="1" HiVel="127" RRGroup="7"
           FileName="{PROJECT_FOLDER}wtLeft/hz523_root72_rr7_vl1_vh127_07.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="72" LoKey="70" HiKey="74" LoVel="1" HiVel="127" RRGroup="8"
           FileName="{PROJECT_FOLDER}wtLeft/hz523_root72_rr8_vl1_vh127_08.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="72" LoKey="70" HiKey="74" LoVel="1" HiVel="127" RRGroup="9"
           FileName="{PROJECT_FOLDER}wtLeft/hz523_root72_rr9_vl1_vh127_09.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13314" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="32" LoKey="30" HiKey="34" LoVel="1" HiVel="127" RRGroup="10"
           FileName="{PROJECT_FOLDER}wtLeft/hz52_root32_rr10_vl1_vh127_10.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="32" LoKey="30" HiKey="34" LoVel="1" HiVel="127" RRGroup="11"
           FileName="{PROJECT_FOLDER}wtLeft/hz52_root32_rr11_vl1_vh127_11.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="32" LoKey="30" HiKey="34" LoVel="1" HiVel="127" RRGroup="12"
           FileName="{PROJECT_FOLDER}wtLeft/hz52_root32_rr12_vl1_vh127_12.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="32" LoKey="30" HiKey="34" LoVel="1" HiVel="127" RRGroup="13"
           FileName="{PROJECT_FOLDER}wtLeft/hz52_root32_rr13_vl1_vh127_13.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="32" LoKey="30" HiKey="34" LoVel="1" HiVel="127" RRGroup="14"
           FileName="{PROJECT_FOLDER}wtLeft/hz52_root32_rr14_vl1_vh127_14.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="32" LoKey="30" HiKey="34" LoVel="1" HiVel="127" RRGroup="15"
           FileName="{PROJECT_FOLDER}wtLeft/hz52_root32_rr15_vl1_vh127_15.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="32" LoKey="30" HiKey="34" LoVel="1" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}wtLeft/hz52_root32_rr1_vl1_vh127_01.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="32" LoKey="30" HiKey="34" LoVel="1" HiVel="127" RRGroup="2"
           FileName="{PROJECT_FOLDER}wtLeft/hz52_root32_rr2_vl1_vh127_02.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="32" LoKey="30" HiKey="34" LoVel="1" HiVel="127" RRGroup="3"
           FileName="{PROJECT_FOLDER}wtLeft/hz52_root32_rr3_vl1_vh127_03.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="32" LoKey="30" HiKey="34" LoVel="1" HiVel="127" RRGroup="4"
           FileName="{PROJECT_FOLDER}wtLeft/hz52_root32_rr4_vl1_vh127_04.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="32" LoKey="30" HiKey="34" LoVel="1" HiVel="127" RRGroup="5"
           FileName="{PROJECT_FOLDER}wtLeft/hz52_root32_rr5_vl1_vh127_05.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="32" LoKey="30" HiKey="34" LoVel="1" HiVel="127" RRGroup="6"
           FileName="{PROJECT_FOLDER}wtLeft/hz52_root32_rr6_vl1_vh127_06.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="32" LoKey="30" HiKey="34" LoVel="1" HiVel="127" RRGroup="7"
           FileName="{PROJECT_FOLDER}wtLeft/hz52_root32_rr7_vl1_vh127_07.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="32" LoKey="30" HiKey="34" LoVel="1" HiVel="127" RRGroup="8"
           FileName="{PROJECT_FOLDER}wtLeft/hz52_root32_rr8_vl1_vh127_08.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="32" LoKey="30" HiKey="34" LoVel="1" HiVel="127" RRGroup="9"
           FileName="{PROJECT_FOLDER}wtLeft/hz52_root32_rr9_vl1_vh127_09.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="14079" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="77" LoKey="75" HiKey="79" LoVel="1" HiVel="127" RRGroup="10"
           FileName="{PROJECT_FOLDER}wtLeft/hz698_root77_rr10_vl1_vh127_10.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="77" LoKey="75" HiKey="79" LoVel="1" HiVel="127" RRGroup="11"
           FileName="{PROJECT_FOLDER}wtLeft/hz698_root77_rr11_vl1_vh127_11.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="77" LoKey="75" HiKey="79" LoVel="1" HiVel="127" RRGroup="12"
           FileName="{PROJECT_FOLDER}wtLeft/hz698_root77_rr12_vl1_vh127_12.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="77" LoKey="75" HiKey="79" LoVel="1" HiVel="127" RRGroup="13"
           FileName="{PROJECT_FOLDER}wtLeft/hz698_root77_rr13_vl1_vh127_13.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="77" LoKey="75" HiKey="79" LoVel="1" HiVel="127" RRGroup="14"
           FileName="{PROJECT_FOLDER}wtLeft/hz698_root77_rr14_vl1_vh127_14.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="77" LoKey="75" HiKey="79" LoVel="1" HiVel="127" RRGroup="15"
           FileName="{PROJECT_FOLDER}wtLeft/hz698_root77_rr15_vl1_vh127_15.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="77" LoKey="75" HiKey="79" LoVel="1" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}wtLeft/hz698_root77_rr1_vl1_vh127_01.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="77" LoKey="75" HiKey="79" LoVel="1" HiVel="127" RRGroup="2"
           FileName="{PROJECT_FOLDER}wtLeft/hz698_root77_rr2_vl1_vh127_02.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="77" LoKey="75" HiKey="79" LoVel="1" HiVel="127" RRGroup="3"
           FileName="{PROJECT_FOLDER}wtLeft/hz698_root77_rr3_vl1_vh127_03.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="77" LoKey="75" HiKey="79" LoVel="1" HiVel="127" RRGroup="4"
           FileName="{PROJECT_FOLDER}wtLeft/hz698_root77_rr4_vl1_vh127_04.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="77" LoKey="75" HiKey="79" LoVel="1" HiVel="127" RRGroup="5"
           FileName="{PROJECT_FOLDER}wtLeft/hz698_root77_rr5_vl1_vh127_05.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="77" LoKey="75" HiKey="79" LoVel="1" HiVel="127" RRGroup="6"
           FileName="{PROJECT_FOLDER}wtLeft/hz698_root77_rr6_vl1_vh127_06.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="77" LoKey="75" HiKey="79" LoVel="1" HiVel="127" RRGroup="7"
           FileName="{PROJECT_FOLDER}wtLeft/hz698_root77_rr7_vl1_vh127_07.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="77" LoKey="75" HiKey="79" LoVel="1" HiVel="127" RRGroup="8"
           FileName="{PROJECT_FOLDER}wtLeft/hz698_root77_rr8_vl1_vh127_08.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="77" LoKey="75" HiKey="79" LoVel="1" HiVel="127" RRGroup="9"
           FileName="{PROJECT_FOLDER}wtLeft/hz698_root77_rr9_vl1_vh127_09.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13293" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="37" LoKey="35" HiKey="39" LoVel="1" HiVel="127" RRGroup="10"
           FileName="{PROJECT_FOLDER}wtLeft/hz69_root37_rr10_vl1_vh127_10.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="37" LoKey="35" HiKey="39" LoVel="1" HiVel="127" RRGroup="11"
           FileName="{PROJECT_FOLDER}wtLeft/hz69_root37_rr11_vl1_vh127_11.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="37" LoKey="35" HiKey="39" LoVel="1" HiVel="127" RRGroup="12"
           FileName="{PROJECT_FOLDER}wtLeft/hz69_root37_rr12_vl1_vh127_12.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="37" LoKey="35" HiKey="39" LoVel="1" HiVel="127" RRGroup="13"
           FileName="{PROJECT_FOLDER}wtLeft/hz69_root37_rr13_vl1_vh127_13.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="37" LoKey="35" HiKey="39" LoVel="1" HiVel="127" RRGroup="14"
           FileName="{PROJECT_FOLDER}wtLeft/hz69_root37_rr14_vl1_vh127_14.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="37" LoKey="35" HiKey="39" LoVel="1" HiVel="127" RRGroup="15"
           FileName="{PROJECT_FOLDER}wtLeft/hz69_root37_rr15_vl1_vh127_15.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="37" LoKey="35" HiKey="39" LoVel="1" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}wtLeft/hz69_root37_rr1_vl1_vh127_01.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="37" LoKey="35" HiKey="39" LoVel="1" HiVel="127" RRGroup="2"
           FileName="{PROJECT_FOLDER}wtLeft/hz69_root37_rr2_vl1_vh127_02.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="37" LoKey="35" HiKey="39" LoVel="1" HiVel="127" RRGroup="3"
           FileName="{PROJECT_FOLDER}wtLeft/hz69_root37_rr3_vl1_vh127_03.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="37" LoKey="35" HiKey="39" LoVel="1" HiVel="127" RRGroup="4"
           FileName="{PROJECT_FOLDER}wtLeft/hz69_root37_rr4_vl1_vh127_04.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="37" LoKey="35" HiKey="39" LoVel="1" HiVel="127" RRGroup="5"
           FileName="{PROJECT_FOLDER}wtLeft/hz69_root37_rr5_vl1_vh127_05.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="37" LoKey="35" HiKey="39" LoVel="1" HiVel="127" RRGroup="6"
           FileName="{PROJECT_FOLDER}wtLeft/hz69_root37_rr6_vl1_vh127_06.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="37" LoKey="35" HiKey="39" LoVel="1" HiVel="127" RRGroup="7"
           FileName="{PROJECT_FOLDER}wtLeft/hz69_root37_rr7_vl1_vh127_07.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="37" LoKey="35" HiKey="39" LoVel="1" HiVel="127" RRGroup="8"
           FileName="{PROJECT_FOLDER}wtLeft/hz69_root37_rr8_vl1_vh127_08.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="37" LoKey="35" HiKey="39" LoVel="1" HiVel="127" RRGroup="9"
           FileName="{PROJECT_FOLDER}wtLeft/hz69_root37_rr9_vl1_vh127_09.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13866" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="42" LoKey="40" HiKey="44" LoVel="1" HiVel="127" RRGroup="10"
           FileName="{PROJECT_FOLDER}wtLeft/hz92_root42_rr10_vl1_vh127_10.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="42" LoKey="40" HiKey="44" LoVel="1" HiVel="127" RRGroup="11"
           FileName="{PROJECT_FOLDER}wtLeft/hz92_root42_rr11_vl1_vh127_11.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="42" LoKey="40" HiKey="44" LoVel="1" HiVel="127" RRGroup="12"
           FileName="{PROJECT_FOLDER}wtLeft/hz92_root42_rr12_vl1_vh127_12.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="42" LoKey="40" HiKey="44" LoVel="1" HiVel="127" RRGroup="13"
           FileName="{PROJECT_FOLDER}wtLeft/hz92_root42_rr13_vl1_vh127_13.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="42" LoKey="40" HiKey="44" LoVel="1" HiVel="127" RRGroup="14"
           FileName="{PROJECT_FOLDER}wtLeft/hz92_root42_rr14_vl1_vh127_14.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="42" LoKey="40" HiKey="44" LoVel="1" HiVel="127" RRGroup="15"
           FileName="{PROJECT_FOLDER}wtLeft/hz92_root42_rr15_vl1_vh127_15.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="42" LoKey="40" HiKey="44" LoVel="1" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}wtLeft/hz92_root42_rr1_vl1_vh127_01.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="42" LoKey="40" HiKey="44" LoVel="1" HiVel="127" RRGroup="2"
           FileName="{PROJECT_FOLDER}wtLeft/hz92_root42_rr2_vl1_vh127_02.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="42" LoKey="40" HiKey="44" LoVel="1" HiVel="127" RRGroup="3"
           FileName="{PROJECT_FOLDER}wtLeft/hz92_root42_rr3_vl1_vh127_03.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="42" LoKey="40" HiKey="44" LoVel="1" HiVel="127" RRGroup="4"
           FileName="{PROJECT_FOLDER}wtLeft/hz92_root42_rr4_vl1_vh127_04.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="42" LoKey="40" HiKey="44" LoVel="1" HiVel="127" RRGroup="5"
           FileName="{PROJECT_FOLDER}wtLeft/hz92_root42_rr5_vl1_vh127_05.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="42" LoKey="40" HiKey="44" LoVel="1" HiVel="127" RRGroup="6"
           FileName="{PROJECT_FOLDER}wtLeft/hz92_root42_rr6_vl1_vh127_06.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="42" LoKey="40" HiKey="44" LoVel="1" HiVel="127" RRGroup="7"
           FileName="{PROJECT_FOLDER}wtLeft/hz92_root42_rr7_vl1_vh127_07.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="42" LoKey="40" HiKey="44" LoVel="1" HiVel="127" RRGroup="8"
           FileName="{PROJECT_FOLDER}wtLeft/hz92_root42_rr8_vl1_vh127_08.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="42" LoKey="40" HiKey="44" LoVel="1" HiVel="127" RRGroup="9"
           FileName="{PROJECT_FOLDER}wtLeft/hz92_root42_rr9_vl1_vh127_09.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13707" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="82" LoKey="80" HiKey="84" LoVel="1" HiVel="127" RRGroup="10"
           FileName="{PROJECT_FOLDER}wtLeft/hz932_root82_rr10_vl1_vh127_10.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="82" LoKey="80" HiKey="84" LoVel="1" HiVel="127" RRGroup="11"
           FileName="{PROJECT_FOLDER}wtLeft/hz932_root82_rr11_vl1_vh127_11.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="82" LoKey="80" HiKey="84" LoVel="1" HiVel="127" RRGroup="12"
           FileName="{PROJECT_FOLDER}wtLeft/hz932_root82_rr12_vl1_vh127_12.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="82" LoKey="80" HiKey="84" LoVel="1" HiVel="127" RRGroup="13"
           FileName="{PROJECT_FOLDER}wtLeft/hz932_root82_rr13_vl1_vh127_13.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="82" LoKey="80" HiKey="84" LoVel="1" HiVel="127" RRGroup="14"
           FileName="{PROJECT_FOLDER}wtLeft/hz932_root82_rr14_vl1_vh127_14.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="82" LoKey="80" HiKey="84" LoVel="1" HiVel="127" RRGroup="15"
           FileName="{PROJECT_FOLDER}wtLeft/hz932_root82_rr15_vl1_vh127_15.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="82" LoKey="80" HiKey="84" LoVel="1" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}wtLeft/hz932_root82_rr1_vl1_vh127_01.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="82" LoKey="80" HiKey="84" LoVel="1" HiVel="127" RRGroup="2"
           FileName="{PROJECT_FOLDER}wtLeft/hz932_root82_rr2_vl1_vh127_02.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="82" LoKey="80" HiKey="84" LoVel="1" HiVel="127" RRGroup="3"
           FileName="{PROJECT_FOLDER}wtLeft/hz932_root82_rr3_vl1_vh127_03.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="82" LoKey="80" HiKey="84" LoVel="1" HiVel="127" RRGroup="4"
           FileName="{PROJECT_FOLDER}wtLeft/hz932_root82_rr4_vl1_vh127_04.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="82" LoKey="80" HiKey="84" LoVel="1" HiVel="127" RRGroup="5"
           FileName="{PROJECT_FOLDER}wtLeft/hz932_root82_rr5_vl1_vh127_05.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="82" LoKey="80" HiKey="84" LoVel="1" HiVel="127" RRGroup="6"
           FileName="{PROJECT_FOLDER}wtLeft/hz932_root82_rr6_vl1_vh127_06.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="82" LoKey="80" HiKey="84" LoVel="1" HiVel="127" RRGroup="7"
           FileName="{PROJECT_FOLDER}wtLeft/hz932_root82_rr7_vl1_vh127_07.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="82" LoKey="80" HiKey="84" LoVel="1" HiVel="127" RRGroup="8"
           FileName="{PROJECT_FOLDER}wtLeft/hz932_root82_rr8_vl1_vh127_08.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
           LoopEnabled="1"/>
   <sample Root="82" LoKey="80" HiKey="84" LoVel="1" HiVel="127" RRGroup="9"
           FileName="{PROJECT_FOLDER}wtLeft/hz932_root82_rr9_vl1_vh127_09.wav"
-          Duplicate="0" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
+          Duplicate="1" LoopStart="13230" LoopEnd="13277" LoopXFade="0"
           LoopEnabled="1"/>
 </samplemap>
