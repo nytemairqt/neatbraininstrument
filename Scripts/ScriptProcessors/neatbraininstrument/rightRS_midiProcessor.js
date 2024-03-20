@@ -11,7 +11,8 @@ reg v = 0;function onNoteOn()
 }
  function onNoteOff()
 {
-	
+	// Humanization FIX
+	Message.delayEvent(humanizationRight + 1);
 }
  function onController()
 {

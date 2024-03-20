@@ -9,26 +9,26 @@
         <Processor Type="ScriptProcessor" ID="Interface" Bypassed="0">
           <ChildProcessors/>
           <Content>
-            <Control type="ScriptSlider" id="knbPartialAttack" value="148.0"/>
-            <Control type="ScriptSlider" id="knbPartialDecay" value="20000.0"/>
-            <Control type="ScriptSlider" id="knbPartialSustain" value="-36.0"/>
-            <Control type="ScriptSlider" id="knbPartialRelease" value="5.0"/>
+            <Control type="ScriptSlider" id="knbPartialAttack" value="5.0"/>
+            <Control type="ScriptSlider" id="knbPartialDecay" value="15000.0"/>
+            <Control type="ScriptSlider" id="knbPartialSustain" value="-100.0"/>
+            <Control type="ScriptSlider" id="knbPartialRelease" value="200.0"/>
             <Control type="ScriptSlider" id="knbResidueAttack" value="5.0"/>
-            <Control type="ScriptSlider" id="knbResidueDecay" value="19524.0"/>
-            <Control type="ScriptSlider" id="knbResidueSustain" value="0.0"/>
-            <Control type="ScriptSlider" id="knbResidueRelease" value="5.0"/>
-            <Control type="ScriptSlider" id="knbPartialGain" value="0.8600000143051147"/>
-            <Control type="ScriptSlider" id="knbResidueGain" value="0.9100000262260437"/>
+            <Control type="ScriptSlider" id="knbResidueDecay" value="15000.0"/>
+            <Control type="ScriptSlider" id="knbResidueSustain" value="-100.0"/>
+            <Control type="ScriptSlider" id="knbResidueRelease" value="200.0"/>
+            <Control type="ScriptSlider" id="knbPartialGain" value="0.75"/>
+            <Control type="ScriptSlider" id="knbResidueGain" value="0.75"/>
             <Control type="ScriptComboBox" id="cmbResidueProfile" value="2"/>
             <Control type="ScriptComboBox" id="cmbPartialProfile" value="1"/>
-            <Control type="ScriptSlider" id="knbPitchVelocity" value="0.4799999892711639"/>
-            <Control type="ScriptSlider" id="knbPitchDecay" value="953.0"/>
-            <Control type="ScriptSlider" id="knbPitchRandom" value="0.3799999952316284"/>
-            <Control type="ScriptSlider" id="knbPitchLFO" value="0.3600000143051147"/>
+            <Control type="ScriptSlider" id="knbPitchVelocity" value="0.2000000029802322"/>
+            <Control type="ScriptSlider" id="knbPitchDecay" value="1000.0"/>
+            <Control type="ScriptSlider" id="knbPitchRandom" value="0.300000011920929"/>
+            <Control type="ScriptSlider" id="knbPitchLFO" value="0.300000011920929"/>
             <Control type="ScriptSlider" id="knbAmpVelocity" value="0.4199999868869781"/>
-            <Control type="ScriptSlider" id="knbAmpLFO" value="0.3199999928474426"/>
-            <Control type="ScriptSlider" id="knbAmpRandom" value="0.3499999940395355"/>
-            <Control type="ScriptSlider" id="knbToneDampen" value="0.6499999761581421"/>
+            <Control type="ScriptSlider" id="knbAmpLFO" value="0.3300000131130219"/>
+            <Control type="ScriptSlider" id="knbAmpRandom" value="0.300000011920929"/>
+            <Control type="ScriptSlider" id="knbToneDampen" value="0.4000000059604645"/>
             <Control type="ScriptSlider" id="knbToneBrightness" value="0.300000011920929"/>
             <Control type="ScriptSlider" id="knbToneChorus" value="0.25"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-6.0"/>
@@ -277,7 +277,7 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="StreamingSampler" ID="leftRS" Bypassed="0" Gain="0.9100000262260437"
+    <Processor Type="StreamingSampler" ID="leftRS" Bypassed="0" Gain="0.75"
                Balance="-1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
                SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="0.0"
@@ -325,7 +325,7 @@
                        UseTable="0.0" Inverted="0.0" DecibelMode="0.0">
               <ChildProcessors/>
             </Processor>
-            <Processor Type="LFO" ID="leftRS_gainLFO" Bypassed="0" Intensity="0.03199999779462814"
+            <Processor Type="LFO" ID="leftRS_gainLFO" Bypassed="0" Intensity="0.03299999982118607"
                        Frequency="0.6800000071525574" FadeIn="1000.0" WaveformType="1.0"
                        Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
                        PhaseOffset="0.300000011920929" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
@@ -339,7 +339,7 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="Random" ID="leftRS_gainRandom" Bypassed="0" Intensity="0.03500000014901161"
+            <Processor Type="Random" ID="leftRS_gainRandom" Bypassed="0" Intensity="0.0300000011920929"
                        UseTable="0.0" RandomTableData="">
               <ChildProcessors/>
             </Processor>
@@ -434,7 +434,7 @@
         <channelData enabled="1" level="0.0" suffix=""/>
       </channels>
     </Processor>
-    <Processor Type="StreamingSampler" ID="leftWG" Bypassed="0" Gain="0.8600000143051147"
+    <Processor Type="StreamingSampler" ID="leftWG" Bypassed="0" Gain="0.75"
                Balance="-1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
                SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="1.0"
@@ -458,8 +458,8 @@
           <ChildProcessors>
             <Processor Type="AHDSR" ID="leftWG_gainAHDSR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                       Attack="148.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0"
-                       Sustain="-36.0" Release="5.0" EcoMode="1.0">
+                       Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                       Release="200.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -482,7 +482,7 @@
                        UseTable="0.0" Inverted="0.0" DecibelMode="0.0">
               <ChildProcessors/>
             </Processor>
-            <Processor Type="LFO" ID="leftWG_gainLFO" Bypassed="0" Intensity="0.03199999779462814"
+            <Processor Type="LFO" ID="leftWG_gainLFO" Bypassed="0" Intensity="0.03299999982118607"
                        Frequency="0.6800000071525574" FadeIn="1000.0" WaveformType="1.0"
                        Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
                        PhaseOffset="0.300000011920929" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
@@ -496,7 +496,7 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="Random" ID="leftWG_gainRandom" Bypassed="0" Intensity="0.03500000014901161"
+            <Processor Type="Random" ID="leftWG_gainRandom" Bypassed="0" Intensity="0.0300000011920929"
                        UseTable="0.0" RandomTableData="">
               <ChildProcessors/>
             </Processor>
@@ -505,9 +505,9 @@
         <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
           <ChildProcessors>
             <Processor Type="AHDSR" ID="leftWG_pitchAHDSR" Bypassed="0" Monophonic="0.0"
-                       Retrigger="1.0" Bipolar="1" Intensity="0.02399999834597111" AttackCurve="0.0"
+                       Retrigger="1.0" Bipolar="1" Intensity="0.01000000070780516" AttackCurve="0.0"
                        DecayCurve="0.0" Attack="20.0" AttackLevel="0.0" Hold="10.0"
-                       Decay="953.0" Sustain="-100.0" Release="20.0" EcoMode="1.0">
+                       Decay="1000.0" Sustain="-100.0" Release="20.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -531,7 +531,7 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="LFO" ID="leftWG_pitchLFO" Bypassed="0" Intensity="0.006000000517815351"
+            <Processor Type="LFO" ID="leftWG_pitchLFO" Bypassed="0" Intensity="0.005000000353902578"
                        Bipolar="1" Frequency="3.0" FadeIn="1000.0" WaveformType="1.0"
                        Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
                        PhaseOffset="0.2300000041723251" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
@@ -545,7 +545,7 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="Random" ID="leftWG_pitchRandom" Bypassed="0" Intensity="0.01583333313465118"
+            <Processor Type="Random" ID="leftWG_pitchRandom" Bypassed="0" Intensity="0.01250000018626451"
                        Bipolar="1" UseTable="0.0" RandomTableData="">
               <ChildProcessors/>
             </Processor>
@@ -908,7 +908,7 @@
         <channelData enabled="1" level="0.0" suffix=""/>
       </channels>
     </Processor>
-    <Processor Type="StreamingSampler" ID="rightRS" Bypassed="0" Gain="0.9100000262260437"
+    <Processor Type="StreamingSampler" ID="rightRS" Bypassed="0" Gain="0.75"
                Balance="1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
                SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="0.0"
@@ -956,7 +956,7 @@
                        UseTable="0.0" Inverted="0.0" DecibelMode="0.0">
               <ChildProcessors/>
             </Processor>
-            <Processor Type="LFO" ID="rightRS_gainLFO" Bypassed="0" Intensity="0.03199999779462814"
+            <Processor Type="LFO" ID="rightRS_gainLFO" Bypassed="0" Intensity="0.03299999982118607"
                        Frequency="0.6800000071525574" FadeIn="1000.0" WaveformType="1.0"
                        Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
                        PhaseOffset="0.300000011920929" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
@@ -970,7 +970,7 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="Random" ID="rightRS_gainRandom" Bypassed="0" Intensity="0.03500000014901161"
+            <Processor Type="Random" ID="rightRS_gainRandom" Bypassed="0" Intensity="0.0300000011920929"
                        UseTable="0.0" RandomTableData="">
               <ChildProcessors/>
             </Processor>
@@ -1065,7 +1065,7 @@
         <channelData enabled="1" level="0.0" suffix=""/>
       </channels>
     </Processor>
-    <Processor Type="StreamingSampler" ID="rightWG" Bypassed="0" Gain="0.8600000143051147"
+    <Processor Type="StreamingSampler" ID="rightWG" Bypassed="0" Gain="0.75"
                Balance="1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
                SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="1.0"
@@ -1089,8 +1089,8 @@
           <ChildProcessors>
             <Processor Type="AHDSR" ID="rightWG_gainAHDSR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                       Attack="148.0" AttackLevel="0.0" Hold="10.0" Decay="20000.0"
-                       Sustain="-36.0" Release="5.0" EcoMode="1.0">
+                       Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                       Release="200.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -1113,7 +1113,7 @@
                        UseTable="0.0" Inverted="0.0" DecibelMode="0.0">
               <ChildProcessors/>
             </Processor>
-            <Processor Type="LFO" ID="rightWG_gainLFO" Bypassed="0" Intensity="0.03199999779462814"
+            <Processor Type="LFO" ID="rightWG_gainLFO" Bypassed="0" Intensity="0.03299999982118607"
                        Frequency="0.6800000071525574" FadeIn="1000.0" WaveformType="1.0"
                        Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
                        PhaseOffset="0.300000011920929" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
@@ -1127,7 +1127,7 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="Random" ID="rightWG_gainRandom" Bypassed="0" Intensity="0.03500000014901161"
+            <Processor Type="Random" ID="rightWG_gainRandom" Bypassed="0" Intensity="0.0300000011920929"
                        UseTable="0.0" RandomTableData="">
               <ChildProcessors/>
             </Processor>
@@ -1136,9 +1136,9 @@
         <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
           <ChildProcessors>
             <Processor Type="AHDSR" ID="rightWG_pitchAHDSR" Bypassed="0" Monophonic="0.0"
-                       Retrigger="1.0" Bipolar="1" Intensity="0.02399999834597111" AttackCurve="0.0"
+                       Retrigger="1.0" Bipolar="1" Intensity="0.01000000070780516" AttackCurve="0.0"
                        DecayCurve="0.0" Attack="20.0" AttackLevel="0.0" Hold="10.0"
-                       Decay="953.0" Sustain="-100.0" Release="20.0" EcoMode="1.0">
+                       Decay="1000.0" Sustain="-100.0" Release="20.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -1162,7 +1162,7 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="LFO" ID="rightWG_pitchLFO" Bypassed="0" Intensity="0.006000000517815351"
+            <Processor Type="LFO" ID="rightWG_pitchLFO" Bypassed="0" Intensity="0.005000000353902578"
                        Bipolar="1" Frequency="0.5" FadeIn="1000.0" WaveformType="1.0"
                        Legato="1.0" TempoSync="0.0" SmoothingTime="5.0" LoopEnabled="1.0"
                        PhaseOffset="0.2300000041723251" SyncToMasterClock="0.0" IgnoreNoteOn="0.0"
@@ -1176,7 +1176,7 @@
                 </Processor>
               </ChildProcessors>
             </Processor>
-            <Processor Type="Random" ID="rightWG_pitchRandom" Bypassed="0" Intensity="0.01583333313465118"
+            <Processor Type="Random" ID="rightWG_pitchRandom" Bypassed="0" Intensity="0.01250000018626451"
                        Bipolar="1" UseTable="0.0" RandomTableData="">
               <ChildProcessors/>
             </Processor>
