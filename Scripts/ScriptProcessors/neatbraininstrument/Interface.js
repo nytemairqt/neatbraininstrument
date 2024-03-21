@@ -6,14 +6,6 @@ const MEMORYNAME = "Achromic";
 const MEMORYTYPE = "Guitar";
 const NUMPROFILES = 3;
 
-/*
-const var VelocityModulator1 = Synth.getModulator("Velocity Modulator1");
-const var VelocityModulator2 = Synth.getModulator("Velocity Modulator2");
-
-VelocityModulator1.setIntensity(0.999);
-VelocityModulator2.setIntensity(0.999);
-*/
-
 /* Instantiate Rhapsody UI */
 
 include("RhapsodyBoilerplate/includes/Ui.js");
