@@ -36,11 +36,13 @@ const leftWG_fxLevelAdjust = Synth.getEffect("leftWG_fxLevelAdjust");
 const leftWG_fxProfileA = Synth.getEffect("leftWG_fxProfileA");
 const leftWG_fxProfileB = Synth.getEffect("leftWG_fxProfileB");
 const leftWG_fxProfileC = Synth.getEffect("leftWG_fxProfileC");
+const leftWG_fxToneControl = Synth.getEffect("leftWG_fxToneControl");
 const leftWG_fxToneAdjust = Synth.getEffect("leftWG_fxToneAdjust");
 
 Engine.addModuleStateToUserPreset("leftWG_fxProfileA");
 Engine.addModuleStateToUserPreset("leftWG_fxProfileB");
 Engine.addModuleStateToUserPreset("leftWG_fxProfileC");
+Engine.addModuleStateToUserPreset("leftWG_fxToneControl");
 Engine.addModuleStateToUserPreset("leftWG_fxToneAdjust");
 
 // Left Release
@@ -83,20 +85,15 @@ const rightWG_fxLevelAdjust = Synth.getEffect("rightWG_fxLevelAdjust");
 const rightWG_fxProfileA = Synth.getEffect("rightWG_fxProfileA");
 const rightWG_fxProfileB = Synth.getEffect("rightWG_fxProfileB");
 const rightWG_fxProfileC = Synth.getEffect("rightWG_fxProfileC");
+const rightWG_fxToneControl = Synth.getEffect("rightWG_fxToneControl");
 const rightWG_fxToneAdjust = Synth.getEffect("rightWG_fxToneAdjust");
 
 Engine.addModuleStateToUserPreset("rightWG_fxProfileA");
 Engine.addModuleStateToUserPreset("rightWG_fxProfileB");
 Engine.addModuleStateToUserPreset("rightWG_fxProfileC");
+Engine.addModuleStateToUserPreset("rightWG_fxToneControl");
 Engine.addModuleStateToUserPreset("rightWG_fxToneAdjust");
 
 // Right Release
 const rightRLS = Synth.getChildSynth("rightRLS");
-
-
-// Other Samplers // fix later
-
-//const samplerReleaseLeft = Synth.getChildSynth("samplerReleaseLeft");
-//const samplerReleaseRight = Synth.getChildSynth("samplerReleaseRight");
-
 

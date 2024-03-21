@@ -137,7 +137,7 @@
                  height="10" text="profile" visible="0" parentComponent="pnlBody"
                  items="&#10;A&#10;B&#10;C" max="3"/>
       <Component type="ScriptPanel" id="pnlAdvanced" x="496" y="0" width="500"
-                 height="522" parentComponent="pnlBody" visible="0">
+                 height="522" parentComponent="pnlBody" visible="0.0">
         <Component type="ScriptPanel" id="lblAdvanced" x="-11" y="16" width="128"
                    height="64" text="ADVANCED" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="pnlShowInfoPopup" x="436" y="16" width="16"
@@ -169,7 +169,16 @@
         <Component type="ScriptSlider" id="knbAmpRandom" x="331" y="152" text="AmpRand"
                    defaultValue="0.300000011920929" width="48" height="48" parentComponent="pnlAdvanced"
                    isPluginParameter="1" pluginParameterName="AmpRand"/>
-        <Component type="ScriptSlider" id="knbToneDampen" x="91" y="432" text="ToneDamp"
+        <Component type="ScriptSlider" id="knbToneBody" x="91" y="432" text="ToneBody"
+                   width="48" height="48" isPluginParameter="1" pluginParameterName="ToneBody"
+                   parentComponent="pnlAdvanced" min="-1.0"/>
+        <Component type="ScriptSlider" id="knbToneBite" x="191" y="432" text="ToneBite"
+                   width="48" height="48" isPluginParameter="1" pluginParameterName="ToneBite"
+                   parentComponent="pnlAdvanced" min="-1.0"/>
+        <Component type="ScriptSlider" id="knbToneShimmer" x="291" y="432" text="ToneBright"
+                   width="48" height="48" isPluginParameter="1" pluginParameterName="ToneBright"
+                   parentComponent="pnlAdvanced" min="-1.0"/>
+        <Component type="ScriptSlider" id="knbToneDampen" x="391" y="432" text="ToneDamp"
                    defaultValue="0.4000000059604645" width="48" height="48" parentComponent="pnlAdvanced"
                    isPluginParameter="1" pluginParameterName="ToneDamp"/>
         <Component type="ScriptPanel" id="lblAmpVelocity" x="52" y="202" width="128"
@@ -186,18 +195,14 @@
                    height="32" text="Random" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblPitchLFO" x="252" y="342" width="128"
                    height="32" text="Drift" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblToneDampen" x="52" y="482" width="128"
+        <Component type="ScriptPanel" id="lblToneBody" x="52" y="482" width="128"
+                   height="32" text="Body" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptPanel" id="lblToneBite" x="152" y="482" width="128"
+                   height="32" text="Bite" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptPanel" id="lblToneShimmer" x="252" y="482" width="128"
+                   height="32" text="Shimmer" parentComponent="pnlAdvanced"/>
+        <Component type="ScriptPanel" id="lblToneDampen" x="352" y="482" width="128"
                    height="32" text="Dampen" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbToneBrightness" x="331" y="432" text="ToneBright"
-                   defaultValue="0.300000011920929" width="48" height="48" parentComponent="pnlAdvanced"
-                   isPluginParameter="1" pluginParameterName="ToneBright"/>
-        <Component type="ScriptPanel" id="lblToneBrightness" x="292" y="482" width="128"
-                   height="32" text="Brightness" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptSlider" id="knbToneChorus" x="211" y="432" text="ToneChorus"
-                   defaultValue="0.25" width="48" height="48" parentComponent="pnlAdvanced"
-                   isPluginParameter="1" pluginParameterName="ToneChorus"/>
-        <Component type="ScriptPanel" id="lblToneChorus" x="172" y="482" width="128"
-                   height="32" text="Chorus" parentComponent="pnlAdvanced"/>
       </Component>
       <Component type="ScriptPanel" id="pnlInfoPopup" x="0" y="10" width="494"
                  height="510" parentComponent="pnlBody" visible="0"/>

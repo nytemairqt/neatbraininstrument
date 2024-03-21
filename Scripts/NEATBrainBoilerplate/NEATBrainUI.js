@@ -312,17 +312,37 @@ inline function onknbPitchLFOControl(component, value)
 	rightWG_pitchLFO.setIntensity(value * .2);
 }
 
+
+// Tone Body
+inline function onknbToneBodyControl(component, value)
+{
+	local idx = 0 * leftWG_fxToneControl.BandOffset + leftWG_fxToneControl.Gain;
+	leftWG_fxToneControl.setAttribute(idx, 6.0 * value);
+	rightWG_fxToneControl.setAttribute(idx, 6.0 * value);
+}
+
+// Tone Bite
+inline function onknbToneBiteControl(component, value)
+{
+	local idx = 1 * leftWG_fxToneControl.BandOffset + leftWG_fxToneControl.Gain;
+	leftWG_fxToneControl.setAttribute(idx, 6.0 * value);
+	rightWG_fxToneControl.setAttribute(idx, 6.0 * value);
+}
+
+// Tone Shimmer
+inline function onknbToneShimmerControl(component, value)
+{
+	local idx = 2 * leftWG_fxToneControl.BandOffset + leftWG_fxToneControl.Gain;
+	leftWG_fxToneControl.setAttribute(idx, 6.0 * value);
+	rightWG_fxToneControl.setAttribute(idx, 6.0 * value);
+}
+
 // Tone Dampen
 inline function onknbToneDampenControl(component, value)
 {	
 	leftWG_fxDampen.setAttribute(leftWG_fxDampen.Dampen, value);
 	rightWG_fxDampen.setAttribute(rightWG_fxDampen.Dampen, value);
 }
-
-// LEAVE ME HERE FOR NOW
-inline function onknbToneClampControl(component, value){}
-inline function onknbToneChorusControl(component, value){}
-inline function onknbToneBrightnessControl(component, value){}
 
 // Instantiate UI Elements
 
@@ -346,9 +366,13 @@ const knbPitchDecay = createKnob("knbPitchDecay", knbPitchVelocity.get("x") + 10
 const knbPitchLFO = createKnob("knbPitchLFO", knbPitchDecay.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "PitchLFO", true, onknbPitchLFOControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
 const knbPitchRandom = createKnob("knbPitchRandom", knbPitchLFO.get("x") + 100, lblPitch.get("y") + 30, 48, 48, "PitchRand", true, onknbPitchRandomControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
 
-const knbToneDampen = createKnob("knbToneDampen", lblTone.get("x") + 120, lblTone.get("y") + 30, 48, 48, "ToneDamp", true, onknbToneDampenControl, 0, 1, 0.01, 0.4, "pnlAdvanced", true);
-const knbToneChorus = createKnob("knbToneChorus", knbToneDampen.get("x") + 120, lblTone.get("y") + 30, 48, 48, "ToneChorus", true, onknbToneChorusControl, 0, 1.0, 0.01, 0.25, "pnlAdvanced", true);
-const knbToneBrightness = createKnob("knbToneBrightness", knbToneChorus.get("x") + 120, lblTone.get("y") + 30, 48, 48, "ToneBright", true, onknbToneBrightnessControl, 0, 1.0, 0.01, 0.3, "pnlAdvanced", true);
+const knbToneBody = createKnob("knbToneBody", lblTone.get("x") + 120, lblTone.get("y") + 30, 48, 48, "ToneBody", true, onknbToneBodyControl, -1.0, 1.0, 0.01, 0.0, "pnlAdvanced", true);
+const knbToneBite = createKnob("knbToneBite", knbToneBody.get("x") + 100, lblTone.get("y") + 30, 48, 48, "ToneBite", true, onknbToneBiteControl, -1.0, 1.0, 0.01, 0.0, "pnlAdvanced", true);
+const knbToneShimmer = createKnob("knbToneShimmer", knbToneBite.get("x") + 100, lblTone.get("y") + 30, 48, 48, "ToneBright", true, onknbToneShimmerControl, -1.0, 1.0, 0.01, 0.0, "pnlAdvanced", true);
+const knbToneDampen = createKnob("knbToneDampen", knbToneShimmer.get("x") + 100, lblTone.get("y") + 30, 48, 48, "ToneDamp", true, onknbToneDampenControl, 0, 1, 0.01, 0.4, "pnlAdvanced", true);
+
+
+
 
 const lblAmpVelocity = createLabel("lblAmpVelocity", knbAmpVelocity.get("x") - 39, knbAmpVelocity.get("y") + 50, 128, 32, 16, "regular", "Vel", "pnlAdvanced", Colours.grey, "centred");
 const lblAmpLFO = createLabel("lblAmpLFO", knbAmpLFO.get("x") - 39, knbAmpLFO.get("y") + 50, 128, 32, 16, "regular", "Drift", "pnlAdvanced", Colours.grey, "centred");
@@ -359,9 +383,10 @@ const lblPitchDecay = createLabel("lblPitchDecay", knbPitchDecay.get("x") - 39, 
 const lblPitchRandom = createLabel("lblPitchRandom", knbPitchRandom.get("x") - 39, knbPitchRandom.get("y") + 50, 128, 32, 16, "regular", "Random", "pnlAdvanced", Colours.grey, "centred");
 const lblPitchLFO = createLabel("lblPitchLFO", knbPitchLFO.get("x") - 39, knbPitchLFO.get("y") + 50, 128, 32, 16, "regular", "Drift", "pnlAdvanced", Colours.grey, "centred");
 
+const lblToneBody = createLabel("lblToneBody", knbToneBody.get("x") - 39, knbToneBody.get("y") + 50, 128, 32, 16, "regular", "Body", "pnlAdvanced", Colours.grey, "centred");
+const lblToneBite = createLabel("lblToneBite", knbToneBite.get("x") - 39, knbToneBite.get("y") + 50, 128, 32, 16, "regular", "Bite", "pnlAdvanced", Colours.grey, "centred");
+const lblToneShimmer = createLabel("lblToneShimmer", knbToneShimmer.get("x") - 39, knbToneShimmer.get("y") + 50, 128, 32, 16, "regular", "Shimmer", "pnlAdvanced", Colours.grey, "centred");
 const lblToneDampen = createLabel("lblToneDampen", knbToneDampen.get("x") - 39, knbToneDampen.get("y") + 50, 128, 32, 16, "regular", "Dampen", "pnlAdvanced", Colours.grey, "centred");
-const lblToneChorus = createLabel("lblToneChorus", knbToneChorus.get("x") - 39, knbToneChorus.get("y") + 50, 128, 32, 16, "regular", "Chorus", "pnlAdvanced", Colours.grey, "centred");
-const lblToneBrightness = createLabel("lblToneBrightness", knbToneBrightness.get("x") - 39, knbToneBrightness.get("y") + 50, 128, 32, 16, "regular", "Brightness", "pnlAdvanced", Colours.grey, "centred");
 	
 /* Horizontal Sliders */
 
