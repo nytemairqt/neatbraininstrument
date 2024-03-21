@@ -430,16 +430,6 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="PolyScriptFX" ID="leftWG_fxMuteLogic" Bypassed="0">
-              <ChildProcessors/>
-              <Content/>
-              <Networks>
-                <Network ID="palmMute" AllowPolyphonic="1" Version="0.0.0"/>
-              </Networks>
-              <UIData>
-                <ContentProperties DeviceType="Desktop"/>
-              </UIData>
-            </Processor>
             <Processor Type="PolyScriptFX" ID="leftWG_fxDampen" Bypassed="0">
               <ChildProcessors/>
               <Content/>
@@ -449,6 +439,30 @@
               <UIData>
                 <ContentProperties DeviceType="Desktop"/>
               </UIData>
+            </Processor>
+            <Processor Type="PolyphonicFilter" ID="leftWG_fxMute" Bypassed="0" Gain="0.0"
+                       Frequency="20000.0" Q="1.0" Mode="6.0" Quality="0.0" BipolarIntensity="0.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors>
+                    <Processor Type="Velocity" ID="leftWG_fxMuteVelocity" Bypassed="0" Intensity="0.9990000128746033"
+                               UseTable="1.0" Inverted="0.0" DecibelMode="0.0" VelocityTableData="48...............vOPPP.+......vXIuOPPP.+....9yaZCvO...f+....9C1iBuO">
+                      <ChildProcessors/>
+                    </Processor>
+                  </ChildProcessors>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Bipolar Freq Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Q Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
             </Processor>
             <Processor Type="CurveEq" ID="leftWG_fxProfileA" Bypassed="0" NumFilters="1"
                        Band0="9.434482574462891" Band1="1795.497924804688" Band2="0.5199999809265137"
@@ -497,10 +511,12 @@
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="leftWG_fxToneAdjust" Bypassed="0" NumFilters="2"
+            <Processor Type="CurveEq" ID="leftWG_fxToneAdjust" Bypassed="0" NumFilters="3"
                        Band0="-0.1655158251523972" Band1="120.0" Band2="0.6899999976158142"
                        Band3="1.0" Band4="1.0" Band5="10.0965518951416" Band6="3429.6953125"
-                       Band7="0.300000011920929" Band8="1.0" Band9="4.0" FFTEnabled="0">
+                       Band7="0.300000011920929" Band8="1.0" Band9="4.0" Band10="-12.0"
+                       Band11="80.0" Band12="0.8999999761581421" Band13="1.0" Band14="4.0"
+                       FFTEnabled="0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
@@ -880,16 +896,6 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="PolyScriptFX" ID="rightWG_fxMuteLogic" Bypassed="0">
-              <ChildProcessors/>
-              <Content/>
-              <Networks>
-                <Network ID="palmMute" AllowPolyphonic="1" Version="0.0.0"/>
-              </Networks>
-              <UIData>
-                <ContentProperties DeviceType="Desktop"/>
-              </UIData>
-            </Processor>
             <Processor Type="PolyScriptFX" ID="rightWG_fxDampen" Bypassed="0">
               <ChildProcessors/>
               <Content/>
@@ -899,6 +905,30 @@
               <UIData>
                 <ContentProperties DeviceType="Desktop"/>
               </UIData>
+            </Processor>
+            <Processor Type="PolyphonicFilter" ID="rightWG_fxMute" Bypassed="0" Gain="0.0"
+                       Frequency="20000.0" Q="1.0" Mode="6.0" Quality="0.0" BipolarIntensity="0.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors>
+                    <Processor Type="Velocity" ID="rightWG_fxMuteVelocity" Bypassed="0" Intensity="0.9990000128746033"
+                               UseTable="1.0" Inverted="0.0" DecibelMode="0.0" VelocityTableData="48...............vOf0J.+.........vOgK1.+....9C...vO...f+....9C...vO">
+                      <ChildProcessors/>
+                    </Processor>
+                  </ChildProcessors>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Bipolar Freq Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+                <Processor Type="ModulatorChain" ID="Q Modulation" Bypassed="0" Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
             </Processor>
             <Processor Type="SimpleGain" ID="rightWG_fxLevelAdjust" Bypassed="0" Gain="3.0"
                        Delay="0.0" Width="100.0" Balance="0.0" InvertPolarity="0.0">
@@ -965,10 +995,12 @@
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="rightWG_fxToneAdjust" Bypassed="0" NumFilters="2"
+            <Processor Type="CurveEq" ID="rightWG_fxToneAdjust" Bypassed="0" NumFilters="3"
                        Band0="-0.1655158251523972" Band1="120.0" Band2="0.6899999976158142"
                        Band3="1.0" Band4="1.0" Band5="10.0965518951416" Band6="3429.6953125"
-                       Band7="0.300000011920929" Band8="1.0" Band9="4.0" FFTEnabled="0">
+                       Band7="0.300000011920929" Band8="1.0" Band9="4.0" Band10="-12.0"
+                       Band11="80.0" Band12="0.8999999761581421" Band13="1.0" Band14="4.0"
+                       FFTEnabled="0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>

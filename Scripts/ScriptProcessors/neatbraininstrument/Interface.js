@@ -6,6 +6,14 @@ const MEMORYNAME = "Achromic";
 const MEMORYTYPE = "Guitar";
 const NUMPROFILES = 3;
 
+/*
+const var VelocityModulator1 = Synth.getModulator("Velocity Modulator1");
+const var VelocityModulator2 = Synth.getModulator("Velocity Modulator2");
+
+VelocityModulator1.setIntensity(0.999);
+VelocityModulator2.setIntensity(0.999);
+*/
+
 /* Instantiate Rhapsody UI */
 
 include("RhapsodyBoilerplate/includes/Ui.js");
@@ -35,14 +43,15 @@ include("NEATBrainBoilerplate/NEATBrainUI.js");
 if (MEMORYTYPE == "Guitar")
 {
 	Console.print("Guitar Memory Detected: Activating Palm Mute Logic");
-	leftWG_fxMuteLogic.setBypassed(false);
-	rightWG_fxMuteLogic.setBypassed(false);
+	leftWG_fxMute.setBypassed(0);
+	rightWG_fxMute.setBypassed(0);
 }
 else
 {
 	Console.print("Deactivating Palm Mute Logic");
-	leftWG_fxMuteLogic.setBypassed(true);
-	rightWG_fxMuteLogic.setBypassed(true);
+	leftWG_fxMute.setBypassed(1);
+	rightWG_fxMute.setBypassed(1);
+	
 }function onNoteOn()
 {
 	//Console.print(Message.getNoteNumber());	
