@@ -43,6 +43,10 @@ Engine.addModuleStateToUserPreset("leftWG_fxProfileB");
 Engine.addModuleStateToUserPreset("leftWG_fxProfileC");
 Engine.addModuleStateToUserPreset("leftWG_fxToneAdjust");
 
+// Left Release
+const leftRLS = Synth.getChildSynth("leftRLS");
+//const samplerReleaseLeft = Synth.getChildSynth("samplerReleaseLeft");
+
 // Right Residue
 const rightRS = Synth.getChildSynth("rightRS");
 const rightRS_midiProcessor = Synth.getMidiProcessor("rightRS_midiProcessor");
@@ -86,10 +90,13 @@ Engine.addModuleStateToUserPreset("rightWG_fxProfileB");
 Engine.addModuleStateToUserPreset("rightWG_fxProfileC");
 Engine.addModuleStateToUserPreset("rightWG_fxToneAdjust");
 
+// Right Release
+const rightRLS = Synth.getChildSynth("rightRLS");
+
 
 // Other Samplers // fix later
 
-const samplerReleaseLeft = Synth.getChildSynth("samplerReleaseLeft");
-const samplerReleaseRight = Synth.getChildSynth("samplerReleaseRight");
+//const samplerReleaseLeft = Synth.getChildSynth("samplerReleaseLeft");
+//const samplerReleaseRight = Synth.getChildSynth("samplerReleaseRight");
 
 

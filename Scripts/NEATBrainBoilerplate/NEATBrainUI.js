@@ -133,6 +133,9 @@ inline function onknbResidueGainControl(component, value)
 {
 	leftRS.setAttribute(leftRS.Gain, value);
 	rightRS.setAttribute(rightRS.Gain, value);
+	
+	leftRLS.setAttribute(leftRLS.Gain, value);
+	rightRLS.setAttribute(rightRLS.Gain, value);
 }
 
 // AHDSR Attack
