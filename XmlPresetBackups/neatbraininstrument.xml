@@ -20,7 +20,7 @@
             <Control type="ScriptSlider" id="knbPartialGain" value="0.75"/>
             <Control type="ScriptSlider" id="knbResidueGain" value="0.0"/>
             <Control type="ScriptComboBox" id="cmbResidueProfile" value="3.0"/>
-            <Control type="ScriptComboBox" id="cmbPartialProfile" value="1"/>
+            <Control type="ScriptComboBox" id="cmbPartialProfile" value="1.0"/>
             <Control type="ScriptSlider" id="knbPitchVelocity" value="0.2000000029802322"/>
             <Control type="ScriptSlider" id="knbPitchDecay" value="1000.0"/>
             <Control type="ScriptSlider" id="knbPitchRandom" value="0.300000011920929"/>
@@ -156,7 +156,7 @@
                RRGroupAmount="15.0" PitchTracking="0.0" OneShot="0.0" CrossfadeGroups="0.0"
                Purged="0.0" Reversed="0.0" NumChannels="1" UseStaticMatrix="0.0"
                Group0Table="" Group1Table="" Group2Table="" Group3Table="" Group4Table=""
-               Group5Table="" Group6Table="" Group7Table="" SampleMapID="rsLeft">
+               Group5Table="" Group6Table="" Group7Table="" SampleMapID="leftRS">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors>
@@ -313,7 +313,7 @@
                OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0" Reversed="0.0"
                NumChannels="1" UseStaticMatrix="0.0" Group0Table="" Group1Table=""
                Group2Table="" Group3Table="" Group4Table="" Group5Table="" Group6Table=""
-               Group7Table="" SampleMapID="wtLeft">
+               Group7Table="" SampleMapID="leftWG">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors>
@@ -795,7 +795,7 @@
                OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0" Reversed="0.0"
                NumChannels="1" UseStaticMatrix="0.0" Group0Table="" Group1Table=""
                Group2Table="" Group3Table="" Group4Table="" Group5Table="" Group6Table=""
-               Group7Table="" SampleMapID="releaseLeft">
+               Group7Table="" SampleMapID="leftRLS">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors>
@@ -859,7 +859,7 @@
                OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0" Reversed="0.0"
                NumChannels="1" UseStaticMatrix="0.0" Group0Table="" Group1Table=""
                Group2Table="" Group3Table="" Group4Table="" Group5Table="" Group6Table=""
-               Group7Table="" SampleMapID="rsRight">
+               Group7Table="" SampleMapID="rightRS">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors>
@@ -1016,7 +1016,7 @@
                OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0" Reversed="0.0"
                NumChannels="1" UseStaticMatrix="0.0" Group0Table="" Group1Table=""
                Group2Table="" Group3Table="" Group4Table="" Group5Table="" Group6Table=""
-               Group7Table="" SampleMapID="wtRight">
+               Group7Table="" SampleMapID="rightWG">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors>
@@ -1500,7 +1500,7 @@
                OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0" Reversed="0.0"
                NumChannels="1" UseStaticMatrix="0.0" Group0Table="" Group1Table=""
                Group2Table="" Group3Table="" Group4Table="" Group5Table="" Group6Table=""
-               Group7Table="" SampleMapID="releaseRight">
+               Group7Table="" SampleMapID="rightRLS">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors>

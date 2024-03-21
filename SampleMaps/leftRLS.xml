@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <samplemap ID="releaseLeft" RRGroupAmount="1.0" MicPositions=";" CrossfadeGamma="1.0"
-           SaveMode="2">
+           SaveMode="1">
   <sample Root="0" LoKey="0" HiKey="0" LoVel="0" HiVel="127" RRGroup="1"
           FileName="{PROJECT_FOLDER}fxKeys/12 releaseTriggers/LEFT/01.wav"
           Duplicate="0" Volume="-5" SampleEnd="8279" MonolithOffset="0"
