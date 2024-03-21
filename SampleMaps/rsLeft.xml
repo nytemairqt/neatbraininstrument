@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<samplemap CrossfadeGamma="1.0" ID="rsLeft" RRGroupAmount="15.0" MicPositions=";">
+  <sample Root="24" LoKey="24" HiKey="88" LoVel="0" HiVel="127" RRGroup="1"
+          FileName="{PROJECT_FOLDER}rsLeft/01.wav" Duplicate="0"/>
+  <sample Root="24" LoKey="24" HiKey="88" LoVel="0" HiVel="127" RRGroup="2"
+          FileName="{PROJECT_FOLDER}rsLeft/02.wav" Duplicate="0"/>
+  <sample Root="24" LoKey="24" HiKey="88" LoVel="0" HiVel="127" RRGroup="3"
+          FileName="{PROJECT_FOLDER}rsLeft/03.wav" Duplicate="0"/>
+  <sample Root="24" LoKey="24" HiKey="88" LoVel="0" HiVel="127" RRGroup="4"
+          FileName="{PROJECT_FOLDER}rsLeft/04.wav" Duplicate="0"/>
+  <sample Root="24" LoKey="24" HiKey="88" LoVel="0" HiVel="127" RRGroup="5"
+          FileName="{PROJECT_FOLDER}rsLeft/05.wav" Duplicate="0"/>
+  <sample Root="24" LoKey="24" HiKey="88" LoVel="0" HiVel="127" RRGroup="6"
+          FileName="{PROJECT_FOLDER}rsLeft/06.wav" Duplicate="0"/>
+  <sample Root="24" LoKey="24" HiKey="88" LoVel="0" HiVel="127" RRGroup="7"
+          FileName="{PROJECT_FOLDER}rsLeft/07.wav" Duplicate="0"/>
+  <sample Root="24" LoKey="24" HiKey="88" LoVel="0" HiVel="127" RRGroup="8"
+          FileName="{PROJECT_FOLDER}rsLeft/08.wav" Duplicate="0"/>
+  <sample Root="24" LoKey="24" HiKey="88" LoVel="0" HiVel="127" RRGroup="9"
+          FileName="{PROJECT_FOLDER}rsLeft/09.wav" Duplicate="0"/>
+  <sample Root="24" LoKey="24" HiKey="88" LoVel="0" HiVel="127" RRGroup="10"
+          FileName="{PROJECT_FOLDER}rsLeft/10.wav" Duplicate="0"/>
+  <sample Root="24" LoKey="24" HiKey="88" LoVel="0" HiVel="127" RRGroup="11"
+          FileName="{PROJECT_FOLDER}rsLeft/11.wav" Duplicate="0"/>
+  <sample Root="24" LoKey="24" HiKey="88" LoVel="0" HiVel="127" RRGroup="12"
+          FileName="{PROJECT_FOLDER}rsLeft/12.wav" Duplicate="0"/>
+  <sample Root="24" LoKey="24" HiKey="88" LoVel="0" HiVel="127" RRGroup="13"
+          FileName="{PROJECT_FOLDER}rsLeft/13.wav" Duplicate="0"/>
+  <sample Root="24" LoKey="24" HiKey="88" LoVel="0" HiVel="127" RRGroup="14"
+          FileName="{PROJECT_FOLDER}rsLeft/14.wav" Duplicate="0"/>
+  <sample Root="24" LoKey="24" HiKey="88" LoVel="0" HiVel="127" RRGroup="15"
+          FileName="{PROJECT_FOLDER}rsLeft/15.wav" Duplicate="0"/>
+</samplemap>

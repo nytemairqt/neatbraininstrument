@@ -12,15 +12,15 @@
             <Control type="ScriptSlider" id="knbPartialAttack" value="5.0"/>
             <Control type="ScriptSlider" id="knbPartialDecay" value="15000.0"/>
             <Control type="ScriptSlider" id="knbPartialSustain" value="-100.0"/>
-            <Control type="ScriptSlider" id="knbPartialRelease" value="200.0"/>
+            <Control type="ScriptSlider" id="knbPartialRelease" value="12796.0"/>
             <Control type="ScriptSlider" id="knbResidueAttack" value="5.0"/>
             <Control type="ScriptSlider" id="knbResidueDecay" value="15000.0"/>
             <Control type="ScriptSlider" id="knbResidueSustain" value="-100.0"/>
-            <Control type="ScriptSlider" id="knbResidueRelease" value="200.0"/>
-            <Control type="ScriptSlider" id="knbPartialGain" value="0.75"/>
-            <Control type="ScriptSlider" id="knbResidueGain" value="0.75"/>
-            <Control type="ScriptComboBox" id="cmbResidueProfile" value="2.0"/>
-            <Control type="ScriptComboBox" id="cmbPartialProfile" value="1.0"/>
+            <Control type="ScriptSlider" id="knbResidueRelease" value="12076.0"/>
+            <Control type="ScriptSlider" id="knbPartialGain" value="0.7400000095367432"/>
+            <Control type="ScriptSlider" id="knbResidueGain" value="0.8100000023841858"/>
+            <Control type="ScriptComboBox" id="cmbResidueProfile" value="3"/>
+            <Control type="ScriptComboBox" id="cmbPartialProfile" value="3"/>
             <Control type="ScriptSlider" id="knbPitchVelocity" value="0.2000000029802322"/>
             <Control type="ScriptSlider" id="knbPitchDecay" value="1000.0"/>
             <Control type="ScriptSlider" id="knbPitchRandom" value="0.300000011920929"/>
@@ -28,7 +28,7 @@
             <Control type="ScriptSlider" id="knbAmpVelocity" value="0.4199999868869781"/>
             <Control type="ScriptSlider" id="knbAmpLFO" value="0.3300000131130219"/>
             <Control type="ScriptSlider" id="knbAmpRandom" value="0.300000011920929"/>
-            <Control type="ScriptSlider" id="knbToneDampen" value="0.4000000059604645"/>
+            <Control type="ScriptSlider" id="knbToneDampen" value="0.9100000262260437"/>
             <Control type="ScriptSlider" id="knbToneBrightness" value="0.300000011920929"/>
             <Control type="ScriptSlider" id="knbToneChorus" value="0.25"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-6.0"/>
@@ -277,14 +277,14 @@
       </ChildProcessors>
       <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
     </Processor>
-    <Processor Type="StreamingSampler" ID="leftRS" Bypassed="0" Gain="0.75"
+    <Processor Type="StreamingSampler" ID="leftRS" Bypassed="0" Gain="0.8100000023841858"
                Balance="-1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
                SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="0.0"
                OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0" Reversed="0.0"
                NumChannels="1" UseStaticMatrix="0.0" Group0Table="" Group1Table=""
                Group2Table="" Group3Table="" Group4Table="" Group5Table="" Group6Table=""
-               Group7Table="" SampleMapID="residueLeft">
+               Group7Table="" SampleMapID="rsLeft">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors>
@@ -374,7 +374,7 @@
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="leftRS_fxProfileB" Bypassed="0" NumFilters="8"
+            <Processor Type="CurveEq" ID="leftRS_fxProfileB" Bypassed="1" NumFilters="8"
                        Band0="-4.468967437744141" Band1="4126.3076171875" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" Band5="3.4758620262146" Band6="79.51634216308594"
                        Band7="1.730000019073486" Band8="1.0" Band9="2.0" Band10="6.455173015594482"
@@ -390,7 +390,7 @@
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="leftRS_fxProfileC" Bypassed="1" NumFilters="9"
+            <Processor Type="CurveEq" ID="leftRS_fxProfileC" Bypassed="0" NumFilters="9"
                        Band0="-4.634483337402344" Band1="3568.322509765625" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" Band5="16.55172348022461" Band6="48.13745880126953"
                        Band7="0.5299999713897705" Band8="1.0" Band9="2.0" Band10="5.462069034576416"
@@ -434,7 +434,7 @@
         <channelData enabled="1" level="0.0" suffix=""/>
       </channels>
     </Processor>
-    <Processor Type="StreamingSampler" ID="leftWG" Bypassed="0" Gain="0.75"
+    <Processor Type="StreamingSampler" ID="leftWG" Bypassed="0" Gain="0.7400000095367432"
                Balance="-1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
                SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="1.0"
@@ -459,7 +459,7 @@
             <Processor Type="AHDSR" ID="leftWG_gainAHDSR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
                        Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
-                       Release="200.0" EcoMode="1.0">
+                       Release="12796.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -843,7 +843,7 @@
               </ChildProcessors>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="leftWG_fxProfileA" Bypassed="0" NumFilters="1"
+            <Processor Type="CurveEq" ID="leftWG_fxProfileA" Bypassed="1" NumFilters="1"
                        Band0="-2.110000133514404" Band1="1703.10107421875" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" FFTEnabled="0">
               <ChildProcessors/>
@@ -865,7 +865,7 @@
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="leftWG_fxProfileC" Bypassed="1" NumFilters="9"
+            <Processor Type="CurveEq" ID="leftWG_fxProfileC" Bypassed="0" NumFilters="9"
                        Band0="-4.634483337402344" Band1="3568.322509765625" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" Band5="16.55172348022461" Band6="48.13745880126953"
                        Band7="0.5299999713897705" Band8="1.0" Band9="2.0" Band10="5.462069034576416"
@@ -908,14 +908,14 @@
         <channelData enabled="1" level="0.0" suffix=""/>
       </channels>
     </Processor>
-    <Processor Type="StreamingSampler" ID="rightRS" Bypassed="0" Gain="0.75"
+    <Processor Type="StreamingSampler" ID="rightRS" Bypassed="0" Gain="0.8100000023841858"
                Balance="1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
                SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="0.0"
                OneShot="0.0" CrossfadeGroups="0.0" Purged="0.0" Reversed="0.0"
                NumChannels="1" UseStaticMatrix="0.0" Group0Table="" Group1Table=""
                Group2Table="" Group3Table="" Group4Table="" Group5Table="" Group6Table=""
-               Group7Table="" SampleMapID="residueRight">
+               Group7Table="" SampleMapID="rsRight">
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors>
@@ -1005,7 +1005,7 @@
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="rightRS_fxProfileB" Bypassed="0" NumFilters="8"
+            <Processor Type="CurveEq" ID="rightRS_fxProfileB" Bypassed="1" NumFilters="8"
                        Band0="-4.468967437744141" Band1="4126.3076171875" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" Band5="3.4758620262146" Band6="79.51634216308594"
                        Band7="1.730000019073486" Band8="1.0" Band9="2.0" Band10="6.455173015594482"
@@ -1021,7 +1021,7 @@
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="rightRS_fxProfileC" Bypassed="1" NumFilters="9"
+            <Processor Type="CurveEq" ID="rightRS_fxProfileC" Bypassed="0" NumFilters="9"
                        Band0="-4.634483337402344" Band1="3568.322509765625" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" Band5="16.55172348022461" Band6="48.13745880126953"
                        Band7="0.5299999713897705" Band8="1.0" Band9="2.0" Band10="5.462069034576416"
@@ -1065,7 +1065,7 @@
         <channelData enabled="1" level="0.0" suffix=""/>
       </channels>
     </Processor>
-    <Processor Type="StreamingSampler" ID="rightWG" Bypassed="0" Gain="0.75"
+    <Processor Type="StreamingSampler" ID="rightWG" Bypassed="0" Gain="0.7400000095367432"
                Balance="1.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                PreloadSize="8192.0" BufferSize="4096.0" VoiceAmount="256.0"
                SamplerRepeatMode="3.0" RRGroupAmount="15.0" PitchTracking="1.0"
@@ -1090,7 +1090,7 @@
             <Processor Type="AHDSR" ID="rightWG_gainAHDSR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
                        Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
-                       Release="200.0" EcoMode="1.0">
+                       Release="12796.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -1474,7 +1474,7 @@
               </ChildProcessors>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="rightWG_fxProfileA" Bypassed="0" NumFilters="1"
+            <Processor Type="CurveEq" ID="rightWG_fxProfileA" Bypassed="1" NumFilters="1"
                        Band0="-2.110000133514404" Band1="1703.10107421875" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" FFTEnabled="0">
               <ChildProcessors/>
@@ -1496,7 +1496,7 @@
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="rightWG_fxProfileC" Bypassed="1" NumFilters="9"
+            <Processor Type="CurveEq" ID="rightWG_fxProfileC" Bypassed="0" NumFilters="9"
                        Band0="-4.634483337402344" Band1="3568.322509765625" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" Band5="16.55172348022461" Band6="48.13745880126953"
                        Band7="0.5299999713897705" Band8="1.0" Band9="2.0" Band10="5.462069034576416"
@@ -1516,12 +1516,12 @@
             <Processor Type="CurveEq" ID="rightWG_fxToneAdjust" Bypassed="0" NumFilters="6"
                        Band0="0.0" Band1="60.0" Band2="0.75" Band3="1.0" Band4="1.0"
                        Band5="6.0" Band6="9880.0" Band7="0.300000011920929" Band8="1.0"
-                       Band9="0.0" Band10="-9.0" Band11="200.0" Band12="0.300000011920929"
-                       Band13="1.0" Band14="2.0" Band15="5.759999752044678" Band16="5165.0654296875"
-                       Band17="0.4000000059604645" Band18="1.0" Band19="3.0" Band20="0.0"
-                       Band21="60.0" Band22="0.75" Band23="1.0" Band24="1.0" Band25="1.655172824859619"
-                       Band26="112.0975112915039" Band27="0.300000011920929" Band28="1.0"
-                       Band29="4.0" FFTEnabled="0">
+                       Band9="0.0" Band10="-6.620689392089844" Band11="216.9715728759766"
+                       Band12="0.300000011920929" Band13="1.0" Band14="2.0" Band15="5.759999752044678"
+                       Band16="5165.0654296875" Band17="0.4000000059604645" Band18="1.0"
+                       Band19="3.0" Band20="0.0" Band21="60.0" Band22="0.75" Band23="1.0"
+                       Band24="1.0" Band25="1.655172824859619" Band26="112.0975112915039"
+                       Band27="0.300000011920929" Band28="1.0" Band29="4.0" FFTEnabled="0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
