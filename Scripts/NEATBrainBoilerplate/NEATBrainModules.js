@@ -99,6 +99,6 @@ Engine.addModuleStateToUserPreset("rightWG_fxToneAdjust");
 const rightRLS = Synth.getChildSynth("rightRLS");
 
 // Initialize Mute Logic Intensity
-leftWG_fxMuteVelocity.setIntensity(0.999);
-rightWG_fxMuteVelocity.setIntensity(0.999);
+leftWG_fxMuteVelocity.setIntensity(0.996);
+rightWG_fxMuteVelocity.setIntensity(0.996);
 

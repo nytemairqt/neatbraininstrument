@@ -141,25 +141,29 @@ inline function onknbResidueGainControl(component, value)
 // AHDSR Attack
 inline function onknbResidueAttackControl(component, value)
 {
-	
+	leftRS_gainAHDSR.setAttribute(leftRS_gainAHDSR.Attack, value);
+	rightRS_gainAHDSR.setAttribute(rightRS_gainAHDSR.Attack, value);
 }
 
 // AHDSR Decay
 inline function onknbResidueDecayControl(component, value)
 {
-	
+	leftRS_gainAHDSR.setAttribute(leftRS_gainAHDSR.Decay, value);
+	rightRS_gainAHDSR.setAttribute(rightRS_gainAHDSR.Decay, value);
 }
 
 // AHDSR Sustain
 inline function onknbResidueSustainControl(component, value)
 {		
-
+	leftRS_gainAHDSR.setAttribute(leftRS_gainAHDSR.Sustain, value);
+	rightRS_gainAHDSR.setAttribute(rightRS_gainAHDSR.Sustain, value);
 }
 
 // AHDSR Release
 inline function onknbResidueReleaseControl(component, value)
 {
-	
+	leftRS_gainAHDSR.setAttribute(leftRS_gainAHDSR.Release, value);
+	rightRS_gainAHDSR.setAttribute(rightRS_gainAHDSR.Release, value);
 }
 
 // Hidden Combo Box

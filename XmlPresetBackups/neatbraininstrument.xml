@@ -11,11 +11,11 @@
           <Content>
             <Control type="ScriptSlider" id="knbPartialAttack" value="5.0"/>
             <Control type="ScriptSlider" id="knbPartialDecay" value="15000.0"/>
-            <Control type="ScriptSlider" id="knbPartialSustain" value="-100.0"/>
+            <Control type="ScriptSlider" id="knbPartialSustain" value="0.0"/>
             <Control type="ScriptSlider" id="knbPartialRelease" value="200.0"/>
-            <Control type="ScriptSlider" id="knbResidueAttack" value="25.0"/>
+            <Control type="ScriptSlider" id="knbResidueAttack" value="5.0"/>
             <Control type="ScriptSlider" id="knbResidueDecay" value="15000.0"/>
-            <Control type="ScriptSlider" id="knbResidueSustain" value="-100.0"/>
+            <Control type="ScriptSlider" id="knbResidueSustain" value="0.0"/>
             <Control type="ScriptSlider" id="knbResidueRelease" value="200.0"/>
             <Control type="ScriptSlider" id="knbPartialGain" value="0.75"/>
             <Control type="ScriptSlider" id="knbResidueGain" value="0.75"/>
@@ -174,8 +174,8 @@
           <ChildProcessors>
             <Processor Type="AHDSR" ID="leftRS_gainAHDSR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                       Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="18206.0" Sustain="-100.0"
-                       Release="15000.0" EcoMode="1.0">
+                       Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="0.0"
+                       Release="200.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -331,7 +331,7 @@
           <ChildProcessors>
             <Processor Type="AHDSR" ID="leftWG_gainAHDSR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                       Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                       Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="0.0"
                        Release="200.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -446,7 +446,7 @@
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1.0">
                   <ChildProcessors>
-                    <Processor Type="Velocity" ID="leftWG_fxMuteVelocity" Bypassed="0" Intensity="0.9990000128746033"
+                    <Processor Type="Velocity" ID="leftWG_fxMuteVelocity" Bypassed="0" Intensity="0.9959999918937683"
                                UseTable="1.0" Inverted="0.0" DecibelMode="0.0" VelocityTableData="48...............vOPPP.+......vXIuOPPP.+....9yaZCvO...f+....9C1iBuO">
                       <ChildProcessors/>
                     </Processor>
@@ -640,8 +640,8 @@
           <ChildProcessors>
             <Processor Type="AHDSR" ID="rightRS_gainAHDSR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                       Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="18206.0" Sustain="-100.0"
-                       Release="15000.0" EcoMode="1.0">
+                       Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="0.0"
+                       Release="200.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -797,7 +797,7 @@
           <ChildProcessors>
             <Processor Type="AHDSR" ID="rightWG_gainAHDSR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                       Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
+                       Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="0.0"
                        Release="200.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -912,7 +912,7 @@
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1.0">
                   <ChildProcessors>
-                    <Processor Type="Velocity" ID="rightWG_fxMuteVelocity" Bypassed="0" Intensity="0.9990000128746033"
+                    <Processor Type="Velocity" ID="rightWG_fxMuteVelocity" Bypassed="0" Intensity="0.9959999918937683"
                                UseTable="1.0" Inverted="0.0" DecibelMode="0.0" VelocityTableData="48...............vOf0J.+.........vOgK1.+....9C...vO...f+....9C...vO">
                       <ChildProcessors/>
                     </Processor>
