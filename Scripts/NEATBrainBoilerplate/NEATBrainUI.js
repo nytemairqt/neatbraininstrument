@@ -416,98 +416,6 @@ Content.setPropertiesFromJSON("knbResidueGain", {
 	    "showTextBox": false		    
 	});	
 
-/* Info Popup Panel */
-
-const pnlInfoPopup = createChildPanel("pnlInfoPopup", 0, 10, 494, 510, "pnlBody");
-pnlInfoPopup.set("visible", 0);
-
-// need to include text as a JSON object and iterate through the lines
-
-const jsonInfoSubtitles = ["VEL", "DRIFT", "RANDOM", "DECAY", "DAMPEN", "CLAMP", "CHORUS", "BRIGHTNESS"];
-
-const jsonInfoPopup = [
-"The amount of Upward Drift Modulation when playing harder velocities.",
-"The amount of Time-Varying LFO Modulation applied to the signal.",
-"The amount of randomization applied when a note is played.",
-"The time it takes for the relevant \"Upward\" Modulator to return to zero.",
-"The amount of Clamping applied to harsh upper frequencies.",
-"The speed of Clamping applied to the Dampen Parameter.",
-"The amount of inter-modal chorusing applied to Partials.",
-"The amount of additional amplitude applied to high frequencies."
- ];
-
-pnlInfoPopup.setPaintRoutine(function(g)
-{	
-	//g.fillAll(pnlBodyColour);
-	g.setColour(pnlBodyColour);
-	g.fillRoundedRectangle([5, 0, this.getWidth(), this.getHeight()], 1.0);
-	g.setFont("bold", 24);
-	
-	var noiseData = {
-				"alpha" : .1,
-				"monochromatic" : false,
-				"scaleFactor" : 2,
-				"area" : [0, 0, this.getWidth(), this.getHeight()]		
-			};
-			
-		g.addNoise(noiseData);
-    
-    g.setColour(0xFFE2E3F3);
-    g.drawAlignedText("Memory Journal", [0, 0, this.getWidth(), this.getHeight()], "centredTop");
-    
-    var baseYOffset = 180;
-    var yOffset = 24;
-    var xOffset = 10;
-    
-    g.setFont("bold", 16);
-    
-    g.setColour(Colours.grey);
-    
-    g.drawAlignedText("Welcome to", [0 + xOffset, 40, this.getWidth(), this.getHeight()], "topLeft");
-    g.setColour(0xFFE2E3F3);
-    g.drawAlignedText("NEATBrain.", [70 + xOffset, 40, this.getWidth(), this.getHeight()], "topLeft");
-    g.setColour(Colours.grey);
-    g.drawAlignedText("Select a Partial and Residue Profile from the main window, then tweak and sculpt your ", [0 + xOffset, 75, this.getWidth(), this.getHeight()], "topLeft");
-    g.drawAlignedText("sound with the Advanced controls.", [0 + xOffset, 95, this.getWidth(), this.getHeight()], "topLeft");
-    g.drawAlignedText("Advanced controls are separated by function (Amplitude, Pitch & Tone)", [0 + xOffset, 125, this.getWidth(), this.getHeight()], "topLeft");
-
-	g.setColour(0xFFE2E3F3);
-    for (i=0; i<jsonInfoSubtitles.length; i++)
-    {
-    	g.drawAlignedText(jsonInfoSubtitles[i] + ":", [-410 + xOffset, baseYOffset + yOffset * i, this.getWidth(), this.getHeight()], "topRight");
-    }
-
-    g.setColour(Colours.grey);
-
-    for (i=0; i<jsonInfoPopup.length; i++)
-    {
-	    g.drawAlignedText(jsonInfoPopup[i], [90 + xOffset, baseYOffset + yOffset * i, this.getWidth(), this.getHeight()], "topLeft");
-    }    
-});
-
-
-	
-/* Info Mouseover Panel */
-
-const pnlShowInfoPopup = createChildPanel("pnlShowInfoPopup", 436, 16, 16, 16, "pnlAdvanced");
-
-pnlShowInfoPopup.set("allowCallbacks", "Clicks & Hover");
-
-pnlShowInfoPopup.setMouseCallback(function(event)
-{
-	this.data.over = event.hover;
-	this.repaint();
-	
-	pnlInfoPopup.set("visible", event.hover);
-
-});
-
-pnlShowInfoPopup.setPaintRoutine(function(g)
-{
-	g.setFont("bold", 20);
-    g.setColour(this.data.over ? 0xFFE2E3F3 : Colours.grey);
-    g.drawAlignedText("?", [0, 0, this.getWidth(), this.getHeight()], "centred");
-});
 
 /* Custom LAF */
 
@@ -564,4 +472,8 @@ for (i = 24; i < 89; i++)
 
 for (i=89; i<100; i++)   	
 	Engine.setKeyColour(i, Colours.withAlpha(Colours.lightgreen, 1.0));
+	
+	
 
+	
+	

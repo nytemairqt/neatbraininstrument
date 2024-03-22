@@ -27,6 +27,7 @@ include("RhapsodyBoilerplate/includes/Spinner.js");
 /* NEATBrain External Files */
 
 include("NEATBrainBoilerplate/NEATBrainUI.js");
+include("NEATBrainBoilerplate/NEATBrainTooltip.js");
 
 
 /* NEATBrain Specific Init Funcs */

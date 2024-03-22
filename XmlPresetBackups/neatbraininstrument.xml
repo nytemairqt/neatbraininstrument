@@ -19,7 +19,7 @@
             <Control type="ScriptSlider" id="knbResidueRelease" value="200.0"/>
             <Control type="ScriptSlider" id="knbPartialGain" value="0.75"/>
             <Control type="ScriptSlider" id="knbResidueGain" value="0.75"/>
-            <Control type="ScriptComboBox" id="cmbResidueProfile" value="1.0"/>
+            <Control type="ScriptComboBox" id="cmbResidueProfile" value="3.0"/>
             <Control type="ScriptComboBox" id="cmbPartialProfile" value="1.0"/>
             <Control type="ScriptSlider" id="knbPitchVelocity" value="0.2000000029802322"/>
             <Control type="ScriptSlider" id="knbPitchDecay" value="1000.0"/>
@@ -241,7 +241,7 @@
               </ChildProcessors>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="leftRS_fxProfileA" Bypassed="0" NumFilters="1"
+            <Processor Type="CurveEq" ID="leftRS_fxProfileA" Bypassed="1" NumFilters="1"
                        Band0="-2.110000133514404" Band1="1703.10107421875" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" FFTEnabled="0">
               <ChildProcessors/>
@@ -263,7 +263,7 @@
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="leftRS_fxProfileC" Bypassed="1" NumFilters="9"
+            <Processor Type="CurveEq" ID="leftRS_fxProfileC" Bypassed="0" NumFilters="9"
                        Band0="-4.634483337402344" Band1="3568.322509765625" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" Band5="16.55172348022461" Band6="48.13745880126953"
                        Band7="0.5299999713897705" Band8="1.0" Band9="2.0" Band10="5.462069034576416"
@@ -689,7 +689,7 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="CurveEq" ID="rightRS_fxProfileA" Bypassed="0" NumFilters="1"
+            <Processor Type="CurveEq" ID="rightRS_fxProfileA" Bypassed="1" NumFilters="1"
                        Band0="-2.110000133514404" Band1="1703.10107421875" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" FFTEnabled="0">
               <ChildProcessors/>
@@ -711,7 +711,7 @@
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="rightRS_fxProfileC" Bypassed="1" NumFilters="9"
+            <Processor Type="CurveEq" ID="rightRS_fxProfileC" Bypassed="0" NumFilters="9"
                        Band0="-4.634483337402344" Band1="3568.322509765625" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" Band5="16.55172348022461" Band6="48.13745880126953"
                        Band7="0.5299999713897705" Band8="1.0" Band9="2.0" Band10="5.462069034576416"
@@ -1097,10 +1097,10 @@
   <MidiAutomation>
     <Controller Controller="7" Processor="Interface" MacroIndex="-1" Start="-100.0"
                 End="0.0" FullStart="-100.0" FullEnd="0.0" Skew="3.492788620791155"
-                Interval="0.01" Attribute="knbAmpRandom" Inverted="0"/>
+                Interval="0.01" Attribute="knbToneBody" Inverted="0"/>
     <Controller Controller="10" Processor="Interface" MacroIndex="-1" Start="-100.0"
                 End="100.0" FullStart="-100.0" FullEnd="100.0" Skew="1.0" Interval="0.01"
-                Attribute="lblAmpLFO" Inverted="0"/>
+                Attribute="lblAmpRandom" Inverted="0"/>
   </MidiAutomation>
   <MPEData Enabled="0"/>
 </Processor>

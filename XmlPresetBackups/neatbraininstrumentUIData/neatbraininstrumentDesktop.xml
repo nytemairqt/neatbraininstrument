@@ -49,20 +49,24 @@
       <Component type="ScriptPanel" id="lblModes" x="-6" y="-6" width="128" height="64"
                  text="PARTIAL" parentComponent="pnlBody"/>
       <Component type="ScriptButton" id="btnShowAdvancedPanel" x="471" y="200"
-                 width="24" height="100" text="open" saveInPreset="0" parentComponent="pnlBody"/>
+                 width="24" height="100" text="open" saveInPreset="0" parentComponent="pnlBody"
+                 tooltip="Display Advanced settings."/>
       <Component type="ScriptSlider" id="knbPartialAttack" x="90" y="432" stepSize="1.0"
                  min="5" max="1000" text="P_Attack" defaultValue="5.0" width="48"
-                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="P_Attack"/>
+                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="P_Attack"
+                 tooltip="Partial Attack time."/>
       <Component type="ScriptSlider" id="knbPartialDecay" x="190" y="432" stepSize="1.0"
                  min="500" max="20000" text="P_Decay" defaultValue="15000.0" width="48"
-                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="P_Decay"/>
+                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="P_Decay"
+                 tooltip="Partial Decay time."/>
       <Component type="ScriptSlider" id="knbPartialSustain" x="290" y="432" middlePosition="-12.0"
                  stepSize="1.0" min="-100" max="0" text="P_Sustain" defaultValue="-100.0"
                  width="48" height="48" parentComponent="pnlBody" isPluginParameter="1"
-                 pluginParameterName="P_Sustain"/>
+                 pluginParameterName="P_Sustain" tooltip="Partial Sustain level."/>
       <Component type="ScriptSlider" id="knbPartialRelease" x="390" y="432" stepSize="1.0"
                  min="5" max="15000" text="P_Release" defaultValue="200.0" width="48"
-                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="P_Release"/>
+                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="P_Release"
+                 tooltip="Partial Release time."/>
       <Component type="ScriptPanel" id="lblPartialAttack" x="51" y="482" width="128"
                  height="32" text="Attack" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblPartialDecay" x="150" y="482" width="128"
@@ -73,16 +77,20 @@
                  height="32" text="Release" parentComponent="pnlBody"/>
       <Component type="ScriptSlider" id="knbResidueAttack" x="587" y="432" stepSize="1.0"
                  min="5" max="1000" text="R_Attack" defaultValue="5.0" width="48"
-                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="R_Attack"/>
+                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="R_Attack"
+                 tooltip="Residue Attack time."/>
       <Component type="ScriptSlider" id="knbResidueDecay" x="687" y="432" stepSize="1.0"
                  min="500" max="20000" text="R_Decay" defaultValue="15000.0" width="48"
-                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="R_Decay"/>
+                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="R_Decay"
+                 tooltip="Residue Decay time."/>
       <Component type="ScriptSlider" id="knbResidueSustain" x="787" y="432" stepSize="1.0"
                  min="-100" max="0" text="R_Sustain" defaultValue="-100.0" width="48"
-                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="R_Sustain"/>
+                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="R_Sustain"
+                 tooltip="Residue Sustain level."/>
       <Component type="ScriptSlider" id="knbResidueRelease" x="887" y="432" stepSize="1.0"
                  min="5" max="15000" text="R_Release" defaultValue="200.0" width="48"
-                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="R_Release"/>
+                 height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="R_Release"
+                 tooltip="Residue Release time."/>
       <Component type="ScriptPanel" id="lblResidueAttack" x="548" y="482" width="128"
                  height="32" text="Attack" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblResidueDecay" x="647" y="482" width="128"
@@ -99,7 +107,7 @@
                  height="16" parentComponent="pnlBody" defaultValue="0.75" mode="Decibel"
                  bgColour="0" itemColour="4285493103" itemColour2="4292333756"
                  textColour="4281611319" dragDirection="Horizontal" showTextBox="0"
-                 isPluginParameter="1" pluginParameterName="PartialGain"/>
+                 isPluginParameter="1" pluginParameterName="PartialGain" tooltip="Partial Gain."/>
       <Component type="ScriptPanel" id="lblPartialADSR" x="-30" y="402" width="128"
                  height="32" text="Env" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblResidueADSR" x="467" y="402" width="128"
@@ -113,35 +121,33 @@
                  width="100" height="16" parentComponent="pnlBody" mode="Decibel"
                  bgColour="0" itemColour="4285493103" itemColour2="4292333756"
                  textColour="4281611319" dragDirection="Horizontal" showTextBox="0"
-                 isPluginParameter="1" pluginParameterName="Residue_Gain"/>
+                 isPluginParameter="1" pluginParameterName="Residue_Gain" tooltip="Residue Gain."/>
       <Component type="ScriptPanel" id="pnlProfilePartial" x="95.0" y="60.0" parentComponent="pnlBody"
                  width="300.0" height="340.0"/>
       <Component type="ScriptPanel" id="pnlProfileResidue" x="595.0" y="60.0"
                  parentComponent="pnlBody" width="300.0" height="340.0"/>
       <Component type="ScriptButton" id="btnPartialProfilePrev" x="66" y="205"
                  width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
-                 parentComponent="pnlBody"/>
+                 parentComponent="pnlBody" tooltip="Previous Partial Profile."/>
       <Component type="ScriptButton" id="btnPartialProfileNext" x="386" y="205"
                  width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
-                 parentComponent="pnlBody"/>
+                 parentComponent="pnlBody" tooltip="Next Partial Profile."/>
       <Component type="ScriptComboBox" id="cmbResidueProfile" x="0" y="0" width="10"
                  height="10" text="profile" visible="0" parentComponent="pnlBody"
                  items="&#10;A&#10;B&#10;C" max="3"/>
       <Component type="ScriptButton" id="btnResidueProfilePrev" x="566" y="205"
                  width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
-                 parentComponent="pnlBody"/>
+                 parentComponent="pnlBody" tooltip="Previous Residue Profile."/>
       <Component type="ScriptButton" id="btnResidueProfileNext" x="886" y="205"
                  width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
-                 parentComponent="pnlBody"/>
+                 parentComponent="pnlBody" tooltip="Next Residue Profile."/>
       <Component type="ScriptComboBox" id="cmbPartialProfile" x="0" y="0" width="10"
                  height="10" text="profile" visible="0" parentComponent="pnlBody"
                  items="&#10;A&#10;B&#10;C" max="3"/>
       <Component type="ScriptPanel" id="pnlAdvanced" x="496" y="0" width="500"
-                 height="522" parentComponent="pnlBody" visible="0">
+                 height="522" parentComponent="pnlBody" visible="0.0">
         <Component type="ScriptPanel" id="lblAdvanced" x="-11" y="16" width="128"
                    height="64" text="ADVANCED" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="pnlShowInfoPopup" x="436" y="16" width="16"
-                   height="16" parentComponent="pnlAdvanced" allowCallbacks="Clicks &amp; Hover"/>
         <Component type="ScriptPanel" id="lblTone" x="-29" y="402" width="128" height="32"
                    text="Tone" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblPitch" x="-29" y="262" width="128"
@@ -150,37 +156,38 @@
                    text="Amp" parentComponent="pnlAdvanced"/>
         <Component type="ScriptSlider" id="knbPitchVelocity" x="91" y="292" text="PitchVel"
                    defaultValue="0.2000000029802322" width="48" height="48" parentComponent="pnlAdvanced"
-                   isPluginParameter="1" pluginParameterName="PitchVel"/>
+                   isPluginParameter="1" pluginParameterName="PitchVel" tooltip="Adds subtle Pitch-Bend for harder Velocities."/>
         <Component type="ScriptSlider" id="knbPitchDecay" x="191" y="292" text="PitchDec"
                    defaultValue="1000.0" width="48" height="48" parentComponent="pnlAdvanced"
-                   min="20" max="4000" stepSize="1.0" isPluginParameter="1" pluginParameterName="PitchDec"/>
+                   min="20" max="4000" stepSize="1.0" isPluginParameter="1" pluginParameterName="PitchDec"
+                   tooltip="Decay time for the Velocity Pitch-Bend."/>
         <Component type="ScriptSlider" id="knbPitchRandom" x="391" y="292" text="PitchRand"
                    defaultValue="0.300000011920929" width="48" height="48" parentComponent="pnlAdvanced"
-                   isPluginParameter="1" pluginParameterName="PitchRand"/>
+                   isPluginParameter="1" pluginParameterName="PitchRand" tooltip="Per-voice Pitch Randomization."/>
         <Component type="ScriptSlider" id="knbPitchLFO" x="291" y="292" text="PitchLFO"
                    defaultValue="0.300000011920929" width="48" height="48" parentComponent="pnlAdvanced"
-                   isPluginParameter="1" pluginParameterName="PitchLFO"/>
+                   isPluginParameter="1" pluginParameterName="PitchLFO" tooltip="Subtle Pitch Drift over time."/>
         <Component type="ScriptSlider" id="knbAmpVelocity" x="91" y="152" text="AmpVel"
                    defaultValue="0.300000011920929" width="48" height="48" parentComponent="pnlAdvanced"
-                   isPluginParameter="1" pluginParameterName="AmpVel"/>
+                   isPluginParameter="1" pluginParameterName="AmpVel" tooltip="Amplitude-velocity influence."/>
         <Component type="ScriptSlider" id="knbAmpLFO" x="211" y="152" text="AmpLFO"
                    defaultValue="0.300000011920929" width="48" height="48" parentComponent="pnlAdvanced"
-                   isPluginParameter="1" pluginParameterName="AmpLFO"/>
+                   isPluginParameter="1" pluginParameterName="AmpLFO" tooltip="Amplitude drift over time."/>
         <Component type="ScriptSlider" id="knbAmpRandom" x="331" y="152" text="AmpRand"
                    defaultValue="0.300000011920929" width="48" height="48" parentComponent="pnlAdvanced"
-                   isPluginParameter="1" pluginParameterName="AmpRand"/>
+                   isPluginParameter="1" pluginParameterName="AmpRand" tooltip="Per-Note amplitude randomization."/>
         <Component type="ScriptSlider" id="knbToneBody" x="91" y="432" text="ToneBody"
                    width="48" height="48" isPluginParameter="1" pluginParameterName="ToneBody"
-                   parentComponent="pnlAdvanced" min="-1.0"/>
+                   parentComponent="pnlAdvanced" min="-1.0" tooltip="Transparent lower frequency (135Hz) EQ Sculpt."/>
         <Component type="ScriptSlider" id="knbToneBite" x="191" y="432" text="ToneBite"
                    width="48" height="48" isPluginParameter="1" pluginParameterName="ToneBite"
-                   parentComponent="pnlAdvanced" min="-1.0"/>
+                   parentComponent="pnlAdvanced" min="-1.0" tooltip="Transparent upper-mid frequency (2.5kHz) EQ Sculpt."/>
         <Component type="ScriptSlider" id="knbToneShimmer" x="291" y="432" text="ToneBright"
                    width="48" height="48" isPluginParameter="1" pluginParameterName="ToneBright"
-                   parentComponent="pnlAdvanced" min="-1.0"/>
+                   parentComponent="pnlAdvanced" min="-1.0" tooltip="Transparent high (8kHz) frequency EQ Sculpt."/>
         <Component type="ScriptSlider" id="knbToneDampen" x="391" y="432" text="ToneDamp"
                    defaultValue="0.4000000059604645" width="48" height="48" parentComponent="pnlAdvanced"
-                   isPluginParameter="1" pluginParameterName="ToneDamp"/>
+                   isPluginParameter="1" pluginParameterName="ToneDamp" tooltip="Dynamic pitch-based harshness attenuation."/>
         <Component type="ScriptPanel" id="lblAmpVelocity" x="52" y="202" width="128"
                    height="32" text="Vel" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblAmpLFO" x="172" y="202" width="128"
@@ -204,8 +211,6 @@
         <Component type="ScriptPanel" id="lblToneDampen" x="352" y="482" width="128"
                    height="32" text="Dampen" parentComponent="pnlAdvanced"/>
       </Component>
-      <Component type="ScriptPanel" id="pnlInfoPopup" x="0" y="10" width="494"
-                 height="510" parentComponent="pnlBody" visible="0"/>
     </Component>
     <Component type="ScriptPanel" id="pnlStatusBar" x="5.0" y="585.0" text=""
                width="990.0" height="39.0" bgColour="0" itemColour="4281282356"
@@ -238,6 +243,8 @@
                  itemColour2="4292333756" isPluginParameter="1" pluginParameterName="Master Pan"
                  parentComponent="pnlStatusBar" processorId="masterGain" parameterId="Balance"
                  dragDirection="Horizontal" showValuePopup="Below" showTextBox="0"/>
+      <Component type="ScriptPanel" id="pnlTooltip" x="300" y="10" width="350"
+                 height="20" parentComponent="pnlStatusBar"/>
     </Component>
     <Component type="ScriptPanel" id="pnlFooter" x="0.0" y="625.0" text="" width="1000.0"
                height="85.0" bgColour="0" itemColour="0" itemColour2="0" textColour="0"
