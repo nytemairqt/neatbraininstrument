@@ -2,7 +2,7 @@ reg m;
 reg v;
 reg note;
 reg prevNote;
-reg chance = .1; // 10% Chance
+reg chance = .05; // 5% Chance
 reg roll;function onNoteOn()
 {
 	Message.ignoreEvent(1);

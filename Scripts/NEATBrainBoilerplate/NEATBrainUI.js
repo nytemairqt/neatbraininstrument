@@ -156,7 +156,7 @@ inline function onknbResidueDecayControl(component, value)
 inline function onknbResidueSustainControl(component, value)
 {		
 	leftRS_gainAHDSR.setAttribute(leftRS_gainAHDSR.Sustain, value);
-	rightRS_gainAHDSR.setAttribute(rightRS_gainAHDSR.Sustain, value);
+	rightRS_gainAHDSR.setAttribute(rightRS_gainAHDSR.Sustain, value);	
 }
 
 // AHDSR Release

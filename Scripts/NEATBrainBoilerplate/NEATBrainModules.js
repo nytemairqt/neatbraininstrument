@@ -48,6 +48,8 @@ Engine.addModuleStateToUserPreset("leftWG_fxToneAdjust");
 
 // Left Release
 const leftRLS = Synth.getChildSynth("leftRLS");
+const leftRLS_midiProcessor = Synth.getMidiProcessor("leftRLS_midiProcessor");
+const leftRLS_gainAHDSR = Synth.getModulator("leftRLS_gainAHDSR");
 
 // Right Residue
 const rightRS = Synth.getChildSynth("rightRS");
@@ -97,6 +99,8 @@ Engine.addModuleStateToUserPreset("rightWG_fxToneAdjust");
 
 // Right Release
 const rightRLS = Synth.getChildSynth("rightRLS");
+const rightRLS_midiProcessor = Synth.getMidiProcessor("rightRLS_midiProcessor");
+const rightRLS_gainAHDSR = Synth.getModulator("rightRLS_gainAHDSR");
 
 // Initialize Mute Logic Intensity
 leftWG_fxMuteVelocity.setIntensity(0.996);

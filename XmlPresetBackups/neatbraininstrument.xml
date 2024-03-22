@@ -563,7 +563,7 @@
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="ScriptProcessor" ID="samplerReleaseLeft_logic" Bypassed="0">
+            <Processor Type="ScriptProcessor" ID="leftRLS_midiProcessor" Bypassed="0">
               <ChildProcessors/>
               <Content/>
               <UIData>
@@ -574,10 +574,10 @@
         </Processor>
         <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
           <ChildProcessors>
-            <Processor Type="AHDSR" ID="samplerReleaseLeft_ahdsr" Bypassed="0" Monophonic="0.0"
+            <Processor Type="AHDSR" ID="leftRLS_gainAHDSR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                       Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="300.0" Sustain="0.0"
-                       Release="2500.0" EcoMode="1.0">
+                       Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="0.0"
+                       Release="200.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
@@ -1029,7 +1029,7 @@
       <ChildProcessors>
         <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="ScriptProcessor" ID="samplerReleaseRight_logic" Bypassed="0">
+            <Processor Type="ScriptProcessor" ID="rightRLS_midiProcessor" Bypassed="0">
               <ChildProcessors/>
               <Content/>
               <UIData>
@@ -1040,10 +1040,10 @@
         </Processor>
         <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
           <ChildProcessors>
-            <Processor Type="AHDSR" ID="samplerReleaseRight_ahdsr" Bypassed="0" Monophonic="0.0"
+            <Processor Type="AHDSR" ID="rightRLS_gainAHDSR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                       Attack="20.0" AttackLevel="0.0" Hold="10.0" Decay="300.0" Sustain="0.0"
-                       Release="2500.0" EcoMode="1.0">
+                       Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="0.0"
+                       Release="200.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
                   <ChildProcessors/>
