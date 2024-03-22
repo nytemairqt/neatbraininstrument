@@ -36,8 +36,8 @@ include("NEATBrainBoilerplate/NEATBrainTooltip.js");
 if (MEMORYTYPE == "Guitar")
 {
 	Console.print("Guitar Memory Detected: Activating Palm Mute Logic");
-	leftWG_fxMute.setBypassed(0);
-	rightWG_fxMute.setBypassed(0);
+	//leftWG_fxMute.setBypassed(0);
+	//rightWG_fxMute.setBypassed(0);
 }
 else
 {
