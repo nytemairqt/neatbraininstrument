@@ -14,7 +14,7 @@
       <Component type="ScriptButton" id="btnSettings" x="576.0" y="21.0" text="settings"
                  width="18.0" height="18.0" bgColour="0" itemColour="4291809231"
                  itemColour2="4293321983" textColour="0" saveInPreset="0" parentComponent="pnlHeader"
-                 enableMidiLearn="0"/>
+                 enableMidiLearn="0" tooltip="Open Settings."/>
       <Component type="ScriptPanel" id="pnlPresetDisplay" x="635.0" y="12.0" text=""
                  width="350.0" height="36.0" bgColour="4279637529" itemColour="4281216563"
                  itemColour2="0" textColour="0" parentComponent="pnlHeader" borderSize="0.0"
@@ -25,20 +25,20 @@
         <Component type="ScriptButton" id="btnPreset0" x="286.0" y="11.0" text="arrowLeft"
                    width="9.0" height="14.0" bgColour="0" itemColour="4292927712"
                    itemColour2="4291216837" textColour="0" saveInPreset="0" parentComponent="pnlPresetDisplay"
-                   isMomentary="1" enableMidiLearn="0"/>
+                   isMomentary="1" enableMidiLearn="0" tooltip="Previous Preset."/>
         <Component type="ScriptButton" id="btnPreset1" x="304.0" y="11.0" text="arrowRight"
                    width="9.0" height="14.0" bgColour="0" itemColour="4292927712"
                    itemColour2="4291216837" textColour="0" saveInPreset="0" parentComponent="pnlPresetDisplay"
-                   isMomentary="1" enableMidiLearn="0"/>
+                   isMomentary="1" enableMidiLearn="0" tooltip="Next Preset."/>
         <Component type="ScriptButton" id="btnPresetSave" x="326.0" y="11.0" text="save"
                    width="14.0" height="14.0" bgColour="0" itemColour="4292927712"
                    itemColour2="4291216837" textColour="0" saveInPreset="0" parentComponent="pnlPresetDisplay"
-                   isMomentary="1" enableMidiLearn="0"/>
+                   isMomentary="1" enableMidiLearn="0" tooltip="Save as Preset."/>
       </Component>
       <Component type="ScriptButton" id="btnUnload" x="606.0" y="21.0" text="widgets"
                  width="18.0" height="18.0" bgColour="0" itemColour="4291809231"
                  itemColour2="4293321983" textColour="0" saveInPreset="0" parentComponent="pnlHeader"
-                 isMomentary="1" enableMidiLearn="0"/>
+                 isMomentary="1" enableMidiLearn="0" tooltip="Unload this instrument."/>
       <Component type="ScriptPanel" id="pnlPatreon" x="546" y="21" width="18"
                  height="18" parentComponent="pnlHeader" allowCallbacks="Clicks &amp; Hover"
                  tooltip="Support on Patreon."/>
@@ -236,7 +236,7 @@
       <Component type="ScriptSlider" id="knbMasterGain" x="730.0" y="13.0" style="Horizontal"
                  middlePosition="-18.0" stepSize="0.1000000014901161" min="-100.0"
                  max="0.0" suffix=" dB" mode="Decibel" text="Gain" width="100.0"
-                 height="16.0" defaultValue="-6.0" tooltip="Master volume." bgColour="0"
+                 height="16.0" defaultValue="-6.0" tooltip="Master Gain." bgColour="0"
                  itemColour="4279571482" itemColour2="4292333756" isPluginParameter="1"
                  pluginParameterName="Master Volume" parentComponent="pnlStatusBar"
                  processorId="masterGain" parameterId="Gain" dragDirection="Horizontal"
@@ -244,7 +244,7 @@
       <Component type="ScriptSlider" id="knbMasterPan" x="890.0" y="13.0" style="Horizontal"
                  middlePosition="0.0" stepSize="1.0" min="-100.0" max="100.0"
                  suffix="L" mode="Pan" text="Master Pan" width="80.0" height="16.0"
-                 tooltip="Master pan." bgColour="4280361253" itemColour="4279571482"
+                 tooltip="Master Pan." bgColour="4280361253" itemColour="4279571482"
                  itemColour2="4292333756" isPluginParameter="1" pluginParameterName="Master Pan"
                  parentComponent="pnlStatusBar" processorId="masterGain" parameterId="Balance"
                  dragDirection="Horizontal" showValuePopup="Below" showTextBox="0"/>

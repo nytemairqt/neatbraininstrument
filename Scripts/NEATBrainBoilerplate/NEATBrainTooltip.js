@@ -1,3 +1,13 @@
+// Rhapsody UI Elements
+
+const RHAPSbtnUnload = Content.getComponent("btnUnload");
+const RHAPSbtnSettings = Content.getComponent("btnSettings");
+const RHAPSbtnMasterGain = Content.getComponent("knbMasterGain");
+const RHAPSbtnMasterPan = Content.getComponent("knbMasterPan");
+const RHAPSbtnPreset0 = Content.getComponent("btnPreset0");
+const RHAPSbtnPreset1 = Content.getComponent("btnPreset1");
+const RHAPSbtnPresetSave = Content.getComponent("btnPresetSave");
+
 /* Tooltip Descriptions */
 
 const pnlTooltip = createChildPanel("pnlTooltip", 300, 10, 350, 20, "pnlStatusBar");
@@ -47,3 +57,13 @@ knbToneBody.set("tooltip", "Transparent lower frequency (135Hz) EQ Sculpt.");
 knbToneBite.set("tooltip", "Transparent upper-mid frequency (2.5kHz) EQ Sculpt.");
 knbToneShimmer.set("tooltip", "Transparent high (8kHz) frequency EQ Sculpt.");
 knbToneDampen.set("tooltip", "Dynamic pitch-based harshness attenuation.");
+RHAPSbtnUnload.set("tooltip", "Unload this instrument.");
+RHAPSbtnSettings.set("tooltip", "Open Settings.");
+RHAPSbtnMasterGain.set("tooltip", "Master Gain.");
+RHAPSbtnMasterPan.set("tooltip", "Master Pan.");
+RHAPSbtnPreset0.set("tooltip", "Previous Preset.");
+RHAPSbtnPreset1.set("tooltip", "Next Preset.");
+RHAPSbtnPresetSave.set("tooltip", "Save Preset.");
+
+
+
