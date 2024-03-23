@@ -39,6 +39,11 @@
                  width="18.0" height="18.0" bgColour="0" itemColour="4291809231"
                  itemColour2="4293321983" textColour="0" saveInPreset="0" parentComponent="pnlHeader"
                  isMomentary="1" enableMidiLearn="0"/>
+      <Component type="ScriptPanel" id="pnlPatreon" x="546" y="21" width="18"
+                 height="18" parentComponent="pnlHeader" allowCallbacks="Clicks &amp; Hover"
+                 tooltip="Support on Patreon."/>
+      <Component type="ScriptPanel" id="pnlStore" x="516" y="21" width="18" height="18"
+                 parentComponent="pnlHeader" tooltip="Browse Instruments." allowCallbacks="Clicks &amp; Hover"/>
     </Component>
     <Component type="ScriptPanel" id="pnlBody" x="5.0" y="60.0" text="" width="990.0"
                height="565.0" bgColour="0" itemColour="4281282356" itemColour2="4281282356"
