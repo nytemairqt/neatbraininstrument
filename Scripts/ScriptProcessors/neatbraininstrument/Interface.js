@@ -3,7 +3,6 @@ Content.makeFrontInterface(1000, 710);
 /* Instantiate NEATBrain */
 
 const MEMORYNAME = "Achromic";
-const MEMORYTYPE = "Guitar";
 const NUMPROFILES = 3;
 
 /* Instantiate Rhapsody UI */
@@ -28,24 +27,7 @@ include("RhapsodyBoilerplate/includes/Spinner.js");
 
 include("NEATBrainBoilerplate/NEATBrainUI.js");
 include("NEATBrainBoilerplate/NEATBrainTooltip.js");
-include("NEATBrainBoilerplate/NEATBrainPatreon.js");
-
-/* NEATBrain Specific Init Funcs */
-
-// GUITAR 
-if (MEMORYTYPE == "Guitar")
-{
-	Console.print("Guitar Memory Detected: Activating Palm Mute Logic");
-	//leftWG_fxMute.setBypassed(0);
-	//rightWG_fxMute.setBypassed(0);
-}
-else
-{
-	Console.print("Deactivating Palm Mute Logic");
-	leftWG_fxMute.setBypassed(1);
-	rightWG_fxMute.setBypassed(1);
-	
-}function onNoteOn()
+include("NEATBrainBoilerplate/NEATBrainPatreon.js");function onNoteOn()
 {
 	//Console.print(Message.getNoteNumber());	
 	//Console.print(Message.getVelocity());	

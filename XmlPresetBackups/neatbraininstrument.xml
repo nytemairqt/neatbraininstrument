@@ -11,7 +11,7 @@
           <Content>
             <Control type="ScriptSlider" id="knbPartialAttack" value="5.0"/>
             <Control type="ScriptSlider" id="knbPartialDecay" value="15000.0"/>
-            <Control type="ScriptSlider" id="knbPartialSustain" value="0.0"/>
+            <Control type="ScriptSlider" id="knbPartialSustain" value="-100.0"/>
             <Control type="ScriptSlider" id="knbPartialRelease" value="200.0"/>
             <Control type="ScriptSlider" id="knbResidueAttack" value="5.0"/>
             <Control type="ScriptSlider" id="knbResidueDecay" value="15000.0"/>
@@ -19,8 +19,8 @@
             <Control type="ScriptSlider" id="knbResidueRelease" value="200.0"/>
             <Control type="ScriptSlider" id="knbPartialGain" value="0.75"/>
             <Control type="ScriptSlider" id="knbResidueGain" value="0.75"/>
-            <Control type="ScriptComboBox" id="cmbResidueProfile" value="3.0"/>
-            <Control type="ScriptComboBox" id="cmbPartialProfile" value="1.0"/>
+            <Control type="ScriptComboBox" id="cmbResidueProfile" value="3"/>
+            <Control type="ScriptComboBox" id="cmbPartialProfile" value="1"/>
             <Control type="ScriptSlider" id="knbPitchVelocity" value="0.2000000029802322"/>
             <Control type="ScriptSlider" id="knbPitchDecay" value="1000.0"/>
             <Control type="ScriptSlider" id="knbPitchRandom" value="0.300000011920929"/>
@@ -31,7 +31,7 @@
             <Control type="ScriptSlider" id="knbToneBody" value="0.0"/>
             <Control type="ScriptSlider" id="knbToneBite" value="0.0"/>
             <Control type="ScriptSlider" id="knbToneShimmer" value="0.0"/>
-            <Control type="ScriptSlider" id="knbToneDampen" value="0.4000000059604645"/>
+            <Control type="ScriptSlider" id="knbToneDampen" value="0.7099999785423279"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-5.999998569488525"/>
             <Control type="ScriptSlider" id="knbMasterPan" value="0.0"/>
             <Control type="ScriptSlider" id="knbCoarseDetune" value="0.0"/>
@@ -331,7 +331,7 @@
           <ChildProcessors>
             <Processor Type="AHDSR" ID="leftWG_gainAHDSR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                       Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="0.0"
+                       Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
                        Release="200.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
@@ -441,7 +441,8 @@
               </UIData>
             </Processor>
             <Processor Type="PolyphonicFilter" ID="leftWG_fxMute" Bypassed="1" Gain="0.0"
-                       Frequency="20000.0" Q="1.0" Mode="6.0" Quality="0.0" BipolarIntensity="0.0">
+                       Frequency="20000.0" Q="1.0" Mode="6.0" Quality="-1.478752e9"
+                       BipolarIntensity="0.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
                            Intensity="1.0">
@@ -797,7 +798,7 @@
           <ChildProcessors>
             <Processor Type="AHDSR" ID="rightWG_gainAHDSR" Bypassed="0" Monophonic="0.0"
                        Retrigger="1.0" Intensity="1.0" AttackCurve="0.0" DecayCurve="0.0"
-                       Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="0.0"
+                       Attack="5.0" AttackLevel="0.0" Hold="10.0" Decay="15000.0" Sustain="-100.0"
                        Release="200.0" EcoMode="1.0">
               <ChildProcessors>
                 <Processor Type="ModulatorChain" ID="Attack Time" Bypassed="0" Intensity="1.0">
