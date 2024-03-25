@@ -19,8 +19,8 @@
             <Control type="ScriptSlider" id="knbResidueRelease" value="200.0"/>
             <Control type="ScriptSlider" id="knbPartialGain" value="0.75"/>
             <Control type="ScriptSlider" id="knbResidueGain" value="0.75"/>
-            <Control type="ScriptComboBox" id="cmbResidueProfile" value="3"/>
-            <Control type="ScriptComboBox" id="cmbPartialProfile" value="1"/>
+            <Control type="ScriptComboBox" id="cmbResidueProfile" value="3.0"/>
+            <Control type="ScriptComboBox" id="cmbPartialProfile" value="1.0"/>
             <Control type="ScriptSlider" id="knbPitchVelocity" value="0.2000000029802322"/>
             <Control type="ScriptSlider" id="knbPitchDecay" value="1000.0"/>
             <Control type="ScriptSlider" id="knbPitchRandom" value="0.300000011920929"/>
