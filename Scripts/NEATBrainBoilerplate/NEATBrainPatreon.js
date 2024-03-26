@@ -28,7 +28,7 @@ pnlPatreon.setMouseCallback(function(event)
 {
 	if (event.clicked)
 	{
-		Engine.openWebsite("https://www.iamlamprey.com");
+		Engine.openWebsite("https://www.patreon.com/iamlamprey");
 	}
 
 	this.data.hover = event.hover;
@@ -39,7 +39,7 @@ pnlStore.setMouseCallback(function(event)
 {
 	if (event.clicked)
 	{
-		Engine.openWebsite("https://www.iamlamprey.com");
+		Engine.openWebsite("https://www.iamlamprey.com/instruments");
 	}
 
 	this.data.hover = event.hover;
@@ -59,13 +59,9 @@ pnlStore.setPaintRoutine(function(g)
 {
 	g.setColour(Colours.withAlpha(0xFFCFCFCF, this.data.hover ? 1.0 : 0.8));
 	
-
-	// Body
-	g.fillRect([2, 5, 14, 14]);
+	var p = Content.createPath();
 	
-	// Handle
-	g.drawLine(5, 5, 5, 1, 2.0); 
-	g.drawLine(13, 13, 5, 1, 2.0);
-	g.drawLine(6, 12, 2, 2, 2.0);
+	p.loadFromData(pathMindIcon);
 	
+	g.drawPath(p, [0, 0, this.getWidth(), this.getHeight()], 1.5);	
 });
