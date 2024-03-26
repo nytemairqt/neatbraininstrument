@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<ExpansionInfo Name="NEATBrainInstrument" Version="1.0.0" Company="My Company"
-               CompanyURL="http://yourcompany.com" Description="" Tags="" UUID=""
-               HiseVersion="3.6.2" ProjectName="NEATBrainInstrument" ProjectVersion="1.0.0"/>
+<ExpansionInfo Name="NB-00" Version="1.0.0" Company="iamlamprey"
+               CompanyURL="https://iamlamprey.com" Description="" Tags="" UUID=""
+               HiseVersion="3.6.2" ProjectName="NB-00" ProjectVersion="1.0.0"/>
