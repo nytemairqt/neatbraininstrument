@@ -198,13 +198,13 @@ pnlProfilePartial.setPaintRoutine(function(g)
 	switch (cmbPartialProfile.getValue())
 	{
 		case 1:
-			p.loadFromData(pathProfileA);
+			p.loadFromData(path_WGProfileA);
 			break;
 		case 2:
-			p.loadFromData(pathProfileB);
+			p.loadFromData(path_WGProfileB);
 			break;		
 		case 3:
-			p.loadFromData(pathProfileD);
+			p.loadFromData(path_WGProfileC);
 			break;
 	}
 	
@@ -222,13 +222,13 @@ pnlProfileResidue.setPaintRoutine(function(g)
 	switch (cmbResidueProfile.getValue())
 	{
 		case 1:
-			p.loadFromData(pathProfileAPkp);
+			p.loadFromData(path_RSProfileA);
 			break;
 		case 2:
-			p.loadFromData(pathProfileBPkp);
+			p.loadFromData(path_RSProfileB);
 			break;		
 		case 3:
-			p.loadFromData(pathProfileCPkp);
+			p.loadFromData(path_RSProfileC);
 			break;
 	}
 	
