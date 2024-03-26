@@ -47,8 +47,6 @@ const leftWG_pitchAHDSRVelocity = Synth.getModulator("leftWG_pitchAHDSRVelocity"
 const leftWG_pitchLFO = Synth.getModulator("leftWG_pitchLFO");
 const leftWG_pitchRandom = Synth.getModulator("leftWG_pitchRandom");
 const leftWG_pitchBend = Synth.getModulator("leftWG_pitchBend");
-const leftWG_fxMute = Synth.getEffect("leftWG_fxMute");
-const leftWG_fxMuteVelocity = Synth.getModulator("leftWG_fxMuteVelocity");
 const leftWG_fxDampen = Synth.getEffect("leftWG_fxDampen");
 const leftWG_fxLevelAdjust = Synth.getEffect("leftWG_fxLevelAdjust");
 const leftWG_fxProfileA = Synth.getEffect("leftWG_fxProfileA");
@@ -98,8 +96,6 @@ const rightWG_pitchAHDSRVelocity = Synth.getModulator("rightWG_pitchAHDSRVelocit
 const rightWG_pitchLFO = Synth.getModulator("rightWG_pitchLFO");
 const rightWG_pitchRandom = Synth.getModulator("rightWG_pitchRandom");
 const rightWG_pitchBend = Synth.getModulator("rightWG_pitchBend");
-const rightWG_fxMute = Synth.getEffect("rightWG_fxMute");
-const rightWG_fxMuteVelocity = Synth.getModulator("rightWG_fxMuteVelocity");
 const rightWG_fxDampen = Synth.getEffect("rightWG_fxDampen");
 const rightWG_fxLevelAdjust = Synth.getEffect("rightWG_fxLevelAdjust");
 const rightWG_fxProfileA = Synth.getEffect("rightWG_fxProfileA");
@@ -118,8 +114,4 @@ Engine.addModuleStateToUserPreset("rightWG_fxToneAdjust");
 const rightRLS = Synth.getChildSynth("rightRLS");
 const rightRLS_midiProcessor = Synth.getMidiProcessor("rightRLS_midiProcessor");
 const rightRLS_gainAHDSR = Synth.getModulator("rightRLS_gainAHDSR");
-
-// Initialize Mute Logic Intensity
-leftWG_fxMuteVelocity.setIntensity(0.996);
-rightWG_fxMuteVelocity.setIntensity(0.996);
 

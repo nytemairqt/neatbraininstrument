@@ -440,31 +440,6 @@
                 <ContentProperties DeviceType="Desktop"/>
               </UIData>
             </Processor>
-            <Processor Type="PolyphonicFilter" ID="leftWG_fxMute" Bypassed="1" Gain="0.0"
-                       Frequency="20000.0" Q="1.0" Mode="6.0" Quality="-1.478752e9"
-                       BipolarIntensity="0.0">
-              <ChildProcessors>
-                <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
-                           Intensity="1.0">
-                  <ChildProcessors>
-                    <Processor Type="Velocity" ID="leftWG_fxMuteVelocity" Bypassed="0" Intensity="0.9959999918937683"
-                               UseTable="1.0" Inverted="0.0" DecibelMode="0.0" VelocityTableData="48...............vOPPP.+......vXIuOPPP.+....9yaZCvO...f+....9C1iBuO">
-                      <ChildProcessors/>
-                    </Processor>
-                  </ChildProcessors>
-                </Processor>
-                <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
-                  <ChildProcessors/>
-                </Processor>
-                <Processor Type="ModulatorChain" ID="Bipolar Freq Modulation" Bypassed="0"
-                           Intensity="1.0">
-                  <ChildProcessors/>
-                </Processor>
-                <Processor Type="ModulatorChain" ID="Q Modulation" Bypassed="0" Intensity="1.0">
-                  <ChildProcessors/>
-                </Processor>
-              </ChildProcessors>
-            </Processor>
             <Processor Type="CurveEq" ID="leftWG_fxProfileA" Bypassed="0" NumFilters="1"
                        Band0="9.434482574462891" Band1="1795.497924804688" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" FFTEnabled="0">
@@ -906,30 +881,6 @@
               <UIData>
                 <ContentProperties DeviceType="Desktop"/>
               </UIData>
-            </Processor>
-            <Processor Type="PolyphonicFilter" ID="rightWG_fxMute" Bypassed="1" Gain="0.0"
-                       Frequency="20000.0" Q="1.0" Mode="6.0" Quality="0.0" BipolarIntensity="0.0">
-              <ChildProcessors>
-                <Processor Type="ModulatorChain" ID="Frequency Modulation" Bypassed="0"
-                           Intensity="1.0">
-                  <ChildProcessors>
-                    <Processor Type="Velocity" ID="rightWG_fxMuteVelocity" Bypassed="0" Intensity="0.9959999918937683"
-                               UseTable="1.0" Inverted="0.0" DecibelMode="0.0" VelocityTableData="48...............vOf0J.+.........vOgK1.+....9C...vO...f+....9C...vO">
-                      <ChildProcessors/>
-                    </Processor>
-                  </ChildProcessors>
-                </Processor>
-                <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
-                  <ChildProcessors/>
-                </Processor>
-                <Processor Type="ModulatorChain" ID="Bipolar Freq Modulation" Bypassed="0"
-                           Intensity="1.0">
-                  <ChildProcessors/>
-                </Processor>
-                <Processor Type="ModulatorChain" ID="Q Modulation" Bypassed="0" Intensity="1.0">
-                  <ChildProcessors/>
-                </Processor>
-              </ChildProcessors>
             </Processor>
             <Processor Type="SimpleGain" ID="rightWG_fxLevelAdjust" Bypassed="0" Gain="3.0"
                        Delay="0.0" Width="100.0" Balance="0.0" InvertPolarity="0.0">
