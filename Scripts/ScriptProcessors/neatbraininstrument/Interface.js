@@ -19,17 +19,13 @@ Content.makeFrontInterface(1000, 710);
 
 /* Instantiate NEATBrain */
 
-const MEMORYNAME = "Achromic";
+const MEMORYNAME = "NB-00";
 const NUMPROFILES = 3;
 
 /* Instantiate Rhapsody UI */
 
 include("RhapsodyBoilerplate/includes/Ui.js");
 //Ui.createTemplate(MEMORYNAME); // Run this after updating Rhapsody Boilerplate
-
-// Hide Button
-const btnLogo = Content.getComponent("btnLogo");
-btnLogo.set("visible", false);
 
 include("RhapsodyBoilerplate/includes/LookAndFeel.js");
 include("RhapsodyBoilerplate/includes/Paths.js");
@@ -42,9 +38,12 @@ include("RhapsodyBoilerplate/includes/Spinner.js");
 
 /* NEATBrain External Files */
 
+include("NEATBrainBoilerplate/NEATBrainRhapsodyRefs.js");
 include("NEATBrainBoilerplate/NEATBrainUI.js");
 include("NEATBrainBoilerplate/NEATBrainTooltip.js");
-include("NEATBrainBoilerplate/NEATBrainPatreon.js");function onNoteOn()
+include("NEATBrainBoilerplate/NEATBrainPatreon.js");
+
+RHAPSbtnTitle.set("text", MEMORYNAME);function onNoteOn()
 {
 	//Console.print(Message.getNoteNumber());	
 	//Console.print(Message.getVelocity());	

@@ -7,7 +7,7 @@
     <Component type="ScriptPanel" id="pnlHeader" x="0.0" y="0.0" width="1000.0"
                height="60.0" bgColour="0" itemColour="0" itemColour2="0" textColour="0"
                parentComponent="pnlContainer" borderSize="0.0" borderRadius="0.0">
-      <Component type="ScriptButton" id="btnTitle" x="20.0" y="0.0" text="Achromic"
+      <Component type="ScriptButton" id="btnTitle" x="20.0" y="0.0" text="NB-00"
                  width="200.0" height="60.0" bgColour="0" itemColour="0" itemColour2="0"
                  textColour="4293059298" saveInPreset="0" parentComponent="pnlHeader"
                  isMomentary="1" enableMidiLearn="0"/>

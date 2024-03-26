@@ -20,7 +20,7 @@
             <Control type="ScriptSlider" id="knbPartialGain" value="0.75"/>
             <Control type="ScriptSlider" id="knbResidueGain" value="0.75"/>
             <Control type="ScriptComboBox" id="cmbResidueProfile" value="3.0"/>
-            <Control type="ScriptComboBox" id="cmbPartialProfile" value="1.0"/>
+            <Control type="ScriptComboBox" id="cmbPartialProfile" value="2.0"/>
             <Control type="ScriptSlider" id="knbPitchVelocity" value="0.2000000029802322"/>
             <Control type="ScriptSlider" id="knbPitchDecay" value="1000.0"/>
             <Control type="ScriptSlider" id="knbPitchRandom" value="0.300000011920929"/>
@@ -440,13 +440,13 @@
                 <ContentProperties DeviceType="Desktop"/>
               </UIData>
             </Processor>
-            <Processor Type="CurveEq" ID="leftWG_fxProfileA" Bypassed="0" NumFilters="1"
+            <Processor Type="CurveEq" ID="leftWG_fxProfileA" Bypassed="1" NumFilters="1"
                        Band0="9.434482574462891" Band1="1795.497924804688" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" FFTEnabled="0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="leftWG_fxProfileB" Bypassed="1" NumFilters="8"
+            <Processor Type="CurveEq" ID="leftWG_fxProfileB" Bypassed="0" NumFilters="8"
                        Band0="-0.3310355842113495" Band1="4408.00732421875" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" Band5="8.606898307800293" Band6="86.07424926757812"
                        Band7="1.730000019073486" Band8="1.0" Band9="2.0" Band10="6.455173015594482"
@@ -900,13 +900,13 @@
               </ChildProcessors>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="rightWG_fxProfileA" Bypassed="0" NumFilters="1"
+            <Processor Type="CurveEq" ID="rightWG_fxProfileA" Bypassed="1" NumFilters="1"
                        Band0="9.434482574462891" Band1="1795.497924804688" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" FFTEnabled="0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="rightWG_fxProfileB" Bypassed="1" NumFilters="8"
+            <Processor Type="CurveEq" ID="rightWG_fxProfileB" Bypassed="0" NumFilters="8"
                        Band0="-0.3310355842113495" Band1="4408.00732421875" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" Band5="8.606898307800293" Band6="86.07424926757812"
                        Band7="1.730000019073486" Band8="1.0" Band9="2.0" Band10="6.455173015594482"
