@@ -190,47 +190,44 @@ const var pnlProfileResidue = Content.getComponent("pnlProfileResidue");
 
 pnlProfilePartial.setPaintRoutine(function(g)
 {
-	// Draw Paths
-	var p = Content.createPath();
 	var x = 90;
-	g.setColour(Colours.grey);
 	
 	switch (cmbPartialProfile.getValue())
 	{
 		case 1:
-			p.loadFromData(path_WGProfileA);
+			pnlProfilePartial.loadImage("{PROJECT_FOLDER}wgProfileA.png", "wgProfileImage");
 			break;
 		case 2:
-			p.loadFromData(path_WGProfileB);
-			break;		
+			pnlProfilePartial.loadImage("{PROJECT_FOLDER}wgProfileB.png", "wgProfileImage");
+			break;
 		case 3:
-			p.loadFromData(path_WGProfileC);
+			pnlProfilePartial.loadImage("{PROJECT_FOLDER}wgProfileC.png", "wgProfileImage");
 			break;
 	}
 	
-	g.drawPath(p, [x, 0, this.getWidth() - (2 * x), this.getHeight()], 1.0);
+	g.setOpacity(.6);
+	g.drawImage("wgProfileImage", [0, 0, this.getWidth(), this.getHeight()], 0, 0);	
 });
 
 pnlProfileResidue.setPaintRoutine(function(g)
 {
 	
-	var p = Content.createPath();
-	var x = 50;
-	var y = 130;
-	g.setColour(Colours.grey);
+	var x = 20;
+	var y = 20;
 	
 	switch (cmbResidueProfile.getValue())
-	{
-		case 1:
-			p.loadFromData(path_RSProfileA);
-			break;
-		case 2:
-			p.loadFromData(path_RSProfileB);
-			break;		
-		case 3:
-			p.loadFromData(path_RSProfileC);
-			break;
-	}
-	
-	g.drawPath(p, [x, y, this.getWidth() - (2 * x), this.getHeight() - (2 * y)], 1.0);
+		{
+			case 1:
+				pnlProfileResidue.loadImage("{PROJECT_FOLDER}rsProfileA.png", "rsProfileImage");
+				break;
+			case 2:
+				pnlProfileResidue.loadImage("{PROJECT_FOLDER}rsProfileB.png", "rsProfileImage");
+				break;
+			case 3:
+				pnlProfileResidue.loadImage("{PROJECT_FOLDER}rsProfileC.png", "rsProfileImage");
+				break;
+		}
+		
+		g.setOpacity(.6);
+		g.drawImage("rsProfileImage", [x, y, this.getWidth() - (2 * x), this.getHeight() - (2 * y)], 0, 0);	
 });
