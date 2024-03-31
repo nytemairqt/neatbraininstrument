@@ -117,19 +117,38 @@ inline function onbtnPartialNextControl(component, value)
 	}
 }
 
+// Show Custom Curve
+
+inline function onbtnShowWGProfileCustomControl(component, value)
+{
+	pnlWGProfileCustom.set("visible", value);
+}
+
+// Connect Custom Profile
+const wgProfileWatcher = Engine.createBroadcaster({"component" : "fltWGProfileCustom", "event" : "All Callbacks"});
+wgProfileWatcher.attachToComponentMouseEvents("fltWGProfileCustom", "All Callbacks", {"id" : "wgProfileWatcher"});
+wgProfileWatcher.addListener("RefreshFunction", {"id" : "wgProfileWatcher"}, function(component, event)
+{
+	if (event.mouseUp)
+	{
+		var state = leftWG_fxProfileCustom.exportState();
+		rightWG_fxProfileCustom.restoreState(state);
+	}	
+});
+
+
+
 // Create UI Elements
 
-const lblModes = createLabel("lblModes", -6, -6, 128, 64, 20, "medium", "PARTIAL", "pnlBody", Colours.grey, "centred");
+const lblModes = createLabel("lblModes", -6, -6, 128, 64, 20, "medium", "WAVEGUIDE", "pnlBody", Colours.grey, "centred");
 const lblPartialADSR = createLabel("lblPartialADSR", -30, 402 , 128, 32, 20, "regular", "Env", "pnlBody", Colours.grey, "centred");
 
 const lblPartialGain = createLabel("lblPartialGain", 240, 0, 128, 64, 16, "regular", "VOL", "pnlBody", Colours.grey, "right");
 const knbPartialGain = createKnob("knbPartialGain", lblPartialGain.get("x") + 140, lblPartialGain.get("y") + 25, 100, 16, "PartialGain", true, onknbPartialGainControl, 0, 1, 0.01, .75, "pnlBody", true);
 
-knbPartialGain.setLocalLookAndFeel(LookAndFeel.horizontalSlider);
-
-
+const btnShowWGProfileCustom = createButton("btnShowWGProfileCustom", 110, 18, 18, 18, "open", false, onbtnShowWGProfileCustomControl, false, true, "pnlBody");
+const pnlWGProfileCustom = createChildPanel("pnlWGProfileCustom", 10, 60, 460, 342, "pnlBody");
 const cmbPartialProfile = createComboBox("cmbPartialProfile", 0, 0, 10, 10, "profile", true, oncmbPartialProfileControl, PARTIAL_PROFILES, false, "pnlBody");
-
 const btnPartialProfilePrev = createButton("btnPartialProfilePrev", 66, 205, 30, 30, "Prev", false, onbtnPartialPrevControl, true, true, "pnlBody");
 const btnPartialProfileNext = createButton("btnPartialProfileNext", btnPartialProfilePrev.get("x") + 320, 205, 30, 30, "Prev", false, onbtnPartialNextControl, true, true, "pnlBody");
 
@@ -142,6 +161,12 @@ const lblPartialAttack = createLabel("lblPartialAttack", knbPartialAttack.get("x
 const lblPartialDecay = createLabel("lblPartialDecay", knbPartialDecay.get("x") - 40, knbPartialDecay.get("y") + 50, 128, 32, 16, "regular", "Decay", "pnlBody", Colours.grey, "centred");
 const lblPartialSustain = createLabel("lblPartialSustain", knbPartialSustain.get("x") - 40, knbPartialSustain.get("y") + 50, 128, 32, 16, "regular", "Sustain", "pnlBody", Colours.grey, "centred");
 const lblPartialRelease = createLabel("lblPartialRelease", knbPartialRelease.get("x") - 38, knbPartialRelease.get("y") + 50, 128, 32, 16, "regular", "Release", "pnlBody", Colours.grey, "centred");
+
+knbPartialGain.setLocalLookAndFeel(LookAndFeel.horizontalSlider);
+btnShowWGProfileCustom.setLocalLookAndFeel(LAFButtonCustomProfile);
+btnShowWGProfileCustom.set("enableMidiLearn", false);
+btnPartialProfilePrev.set("enableMidiLearn", false);
+btnPartialProfileNext.set("enableMidiLearn", false);
 
 /* Residue */
 
@@ -242,18 +267,38 @@ inline function onbtnResidueNextControl(component, value)
 	}
 }
 
+// Show Custom Curve
+
+inline function onbtnShowRSProfileCustomControl(component, value)
+{
+	pnlRSProfileCustom.set("visible", value);
+}
+
+// Connect Custom Profile
+const rsProfileWatcher = Engine.createBroadcaster({"component" : "fltRSProfileCustom", "event" : "All Callbacks"});
+rsProfileWatcher.attachToComponentMouseEvents("fltRSProfileCustom", "All Callbacks", {"id" : "rsProfileWatcher"});
+rsProfileWatcher.addListener("RefreshFunction", {"id" : "rsProfileWatcher"}, function(component, event)
+{
+	if (event.mouseUp)
+	{
+		var state = leftRS_fxProfileCustom.exportState();
+		rightRS_fxProfileCustom.restoreState(state);
+	}	
+});
+
 // Create UI Elements
 
 const lblResidue = createLabel("lblResidue", 478, -6, 128, 64, 20, "medium", "RESIDUE", "pnlBody", Colours.grey, "centred");
 const lblResidueGain = createLabel("lblResidueGain", 740, 0, 128, 64, 16, "regular", "VOL", "pnlBody", Colours.grey, "right");
 const knbResidueGain = createKnob("knbResidueGain", lblResidueGain.get("x") + 140, lblResidueGain.get("y") + 25, 100, 16, "Residue_Gain", true, onknbResidueGainControl, 0, 1, 0.01, .75, "pnlBody", true);
 
-knbResidueGain.setLocalLookAndFeel(LookAndFeel.horizontalSlider);
+
 
 const cmbResidueProfile = createComboBox("cmbResidueProfile", 0, 0, 10, 10, "profile", true, oncmbResidueProfileControl, PARTIAL_PROFILES, false, "pnlBody");
-
 const btnResidueProfilePrev = createButton("btnResidueProfilePrev", 500 + btnPartialProfilePrev.get("x"), 205, 30, 30, "Prev", false, onbtnResiduePrevControl, true, true, "pnlBody");
 const btnResidueProfileNext = createButton("btnResidueProfileNext", btnResidueProfilePrev.get("x") + 320, 205, 30, 30, "Prev", false, onbtnResidueNextControl, true, true, "pnlBody");
+const btnShowRSProfileCustom = createButton("btnShowRSProfileCustom", 584, 18, 18, 18, "open", false, onbtnShowRSProfileCustomControl, false, true, "pnlBody");
+const pnlRSProfileCustom = createChildPanel("pnlRSProfileCustom", 512, 60, 460, 342, "pnlBody");
 
 const lblResidueADSR = createLabel("lblResidueADSR", 467, lblPartialADSR.get("y"), 128, 32, 20, "regular", "Env", "pnlBody", Colours.grey, "centred");
 
@@ -266,6 +311,12 @@ const lblResidueAttack = createLabel("lblResidueAttack", knbResidueAttack.get("x
 const lblResidueDecay = createLabel("lblResidueDecay", knbResidueDecay.get("x") - 40, knbResidueDecay.get("y") + 50, 128, 32, 16, "regular", "Decay", "pnlBody", Colours.grey, "centred");
 const lblResidueSustain = createLabel("lblResidueSustain", knbResidueSustain.get("x") - 40, knbResidueSustain.get("y") + 50, 128, 32, 16, "regular", "Sustain", "pnlBody", Colours.grey, "centred");
 const lblResidueRelease = createLabel("lblResidueRelease", knbResidueRelease.get("x") - 38, knbResidueRelease.get("y") + 50, 128, 32, 16, "regular", "Release", "pnlBody", Colours.grey, "centred");
+
+knbResidueGain.setLocalLookAndFeel(LookAndFeel.horizontalSlider);
+btnShowRSProfileCustom.setLocalLookAndFeel(LAFButtonCustomProfile);
+btnShowRSProfileCustom.set("enableMidiLearn", false); // UNCOMMENT ME WHEN IMPLEMENTED
+btnResidueProfilePrev.set("enableMidiLearn", false);
+btnResidueProfileNext.set("enableMidiLearn", false);
 
 /* Advanced Panel */
 
@@ -373,6 +424,7 @@ const lblAdvanced = createLabel("lblAdvanced", -11, 16, 128, 64, 20, "medium", "
 
 pnlAdvanced.set("visible", false);
 btnShowAdvancedPanel.setValue(0);
+btnShowAdvancedPanel.set("enableMidiLearn", false);
 
 const lblTone = createLabel("lblTone", -29, 402, 128, 32, 20, "regular", "Tone", "pnlAdvanced", Colours.grey, "centred");
 const lblPitch = createLabel("lblPitch", -29, lblTone.get("y") - 140, 128, 32, 20, "regular", "Pitch", "pnlAdvanced", Colours.grey, "centred");
@@ -391,9 +443,6 @@ const knbToneBody = createKnob("knbToneBody", lblTone.get("x") + 120, lblTone.ge
 const knbToneBite = createKnob("knbToneBite", knbToneBody.get("x") + 100, lblTone.get("y") + 30, 48, 48, "ToneBite", true, onknbToneBiteControl, -1.0, 1.0, 0.01, 0.0, "pnlAdvanced", true);
 const knbToneShimmer = createKnob("knbToneShimmer", knbToneBite.get("x") + 100, lblTone.get("y") + 30, 48, 48, "ToneBright", true, onknbToneShimmerControl, -1.0, 1.0, 0.01, 0.0, "pnlAdvanced", true);
 const knbToneDampen = createKnob("knbToneDampen", knbToneShimmer.get("x") + 100, lblTone.get("y") + 30, 48, 48, "ToneDamp", true, onknbToneDampenControl, 0, 1, 0.01, 0.4, "pnlAdvanced", true);
-
-
-
 
 const lblAmpVelocity = createLabel("lblAmpVelocity", knbAmpVelocity.get("x") - 39, knbAmpVelocity.get("y") + 50, 128, 32, 16, "regular", "Vel", "pnlAdvanced", Colours.grey, "centred");
 const lblAmpLFO = createLabel("lblAmpLFO", knbAmpLFO.get("x") - 39, knbAmpLFO.get("y") + 50, 128, 32, 16, "regular", "Drift", "pnlAdvanced", Colours.grey, "centred");
@@ -436,6 +485,46 @@ Content.setPropertiesFromJSON("knbResidueGain", {
 
 /* Custom LAF */
 
+// pnlWG_fxProfileCustom
+
+pnlWGProfileCustom.setPaintRoutine(function(g)
+{
+	// Internal Gradient
+	var gradientData = [pnlBodyColour, 0, 0, pnlBodyColourTop, 0, this.getHeight(), false];
+	g.setGradientFill(gradientData);
+	g.fillRoundedRectangle([0, 13, this.getWidth(), this.getHeight() - 16], 1.0);
+	
+	var noiseData = {
+			"alpha" : .15,
+			"monochromatic" : false,
+			"scaleFactor" : 2,
+			"area" : [0, 13, this.getWidth(), this.getHeight() - 16]		
+		};
+		
+	g.addNoise(noiseData);
+});
+
+// pnlRS_fxProfileCustom
+
+pnlRSProfileCustom.setPaintRoutine(function(g)
+{
+	// Internal Gradient
+	var gradientData = [pnlBodyColour, 0, 0, pnlBodyColourTop, 0, this.getHeight(), false];
+	g.setGradientFill(gradientData);
+	g.fillRoundedRectangle([0, 13, this.getWidth(), this.getHeight() - 16], 1.0);
+	
+	var noiseData = {
+			"alpha" : .15,
+			"monochromatic" : false,
+			"scaleFactor" : 2,
+			"area" : [0, 13, this.getWidth(), this.getHeight() - 16]		
+		};
+		
+	g.addNoise(noiseData);
+});
+
+
+// Advanced Panel
 btnShowAdvancedPanel.setLocalLookAndFeel(LAFButtonShowAdvancedPanel);
 
 btnPartialProfilePrev.setLocalLookAndFeel(LAFButtonPrev);

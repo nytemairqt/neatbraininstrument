@@ -49,13 +49,19 @@
                height="565.0" bgColour="0" itemColour="4281282356" itemColour2="4281282356"
                textColour="0" parentComponent="pnlContainer" borderSize="0.0"
                borderRadius="12.0">
+      <Component type="ScriptComboBox" id="cmbResidueProfile" x="0" y="0" width="10"
+                 height="10" text="profile" visible="0" parentComponent="pnlBody"
+                 items="&#10;A&#10;B&#10;C" max="3"/>
+      <Component type="ScriptComboBox" id="cmbPartialProfile" x="0" y="0" width="10"
+                 height="10" text="profile" visible="0" parentComponent="pnlBody"
+                 items="&#10;A&#10;B&#10;C" max="3"/>
       <Component type="ScriptPanel" id="lblResidue" x="478" y="-6" width="128"
                  height="64" text="RESIDUE" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblModes" x="-6" y="-6" width="128" height="64"
-                 text="PARTIAL" parentComponent="pnlBody"/>
+                 text="WAVEGUIDE" parentComponent="pnlBody"/>
       <Component type="ScriptButton" id="btnShowAdvancedPanel" x="471" y="200"
                  width="24" height="100" text="open" saveInPreset="0" parentComponent="pnlBody"
-                 tooltip="Display Advanced settings."/>
+                 tooltip="Display Advanced settings." enableMidiLearn="0"/>
       <Component type="ScriptSlider" id="knbPartialAttack" x="90" y="432" stepSize="1.0"
                  min="5" max="1000" text="P_Attack" defaultValue="5.0" width="48"
                  height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="P_Attack"
@@ -72,6 +78,16 @@
                  min="5" max="15000" text="P_Release" defaultValue="200.0" width="48"
                  height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="P_Release"
                  tooltip="Partial Release time."/>
+      <Component type="ScriptPanel" id="lblPartialGain" x="240" y="0" width="128"
+                 height="64" text="VOL" parentComponent="pnlBody"/>
+      <Component type="ScriptSlider" id="knbPartialGain" x="380" y="25" style="Horizontal"
+                 middlePosition="0.5" suffix=" dB" text="PartialGain" width="100"
+                 height="16" parentComponent="pnlBody" defaultValue="0.75" mode="Decibel"
+                 bgColour="0" itemColour="4285493103" itemColour2="4292333756"
+                 textColour="4281611319" dragDirection="Horizontal" showTextBox="0"
+                 isPluginParameter="1" pluginParameterName="PartialGain" tooltip="Partial Gain."/>
+      <Component type="ScriptPanel" id="lblPartialADSR" x="-30" y="402" width="128"
+                 height="32" text="Env" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblPartialAttack" x="51" y="482" width="128"
                  height="32" text="Attack" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblPartialDecay" x="150" y="482" width="128"
@@ -80,6 +96,25 @@
                  height="32" text="Sustain" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblPartialRelease" x="352" y="482" width="128"
                  height="32" text="Release" parentComponent="pnlBody"/>
+      <Component type="ScriptPanel" id="pnlProfilePartial" x="95.0" y="60.0" parentComponent="pnlBody"
+                 width="300.0" height="340.0"/>
+      <Component type="ScriptButton" id="btnPartialProfilePrev" x="66" y="205"
+                 width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
+                 parentComponent="pnlBody" tooltip="Previous Partial Profile."
+                 enableMidiLearn="0"/>
+      <Component type="ScriptButton" id="btnPartialProfileNext" x="386" y="205"
+                 width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
+                 parentComponent="pnlBody" tooltip="Next Partial Profile." enableMidiLearn="0"/>
+      <Component type="ScriptButton" id="btnShowWGProfileCustom" x="110" y="18"
+                 width="18" height="18" text="open" saveInPreset="0" parentComponent="pnlBody"
+                 enableMidiLearn="0"/>
+      <Component type="ScriptPanel" id="pnlWGProfileCustom" x="10" y="60" width="460"
+                 height="342" parentComponent="pnlBody" visible="0.0">
+        <Component type="ScriptFloatingTile" id="fltWGProfileCustom" x="0.0" y="0.0"
+                   parentComponent="pnlWGProfileCustom" width="470.0" height="330.0"
+                   bgColour="0" itemColour="2164260863" itemColour2="855638016"
+                   ContentType="DraggableFilterPanel" Data="{&#10;  &quot;ProcessorId&quot;: &quot;leftWG_fxProfileCustom&quot;,&#10;  &quot;Index&quot;: -1,&#10;  &quot;FollowWorkspace&quot;: false&#10;}"/>
+      </Component>
       <Component type="ScriptSlider" id="knbResidueAttack" x="587" y="432" stepSize="1.0"
                  min="5" max="1000" text="R_Attack" defaultValue="5.0" width="48"
                  height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="R_Attack"
@@ -107,18 +142,8 @@
       <Component type="ScriptPanel" id="pnlAdvancedPartialSettings" x="498.0"
                  y="20.0" width="459.0" height="482.0" parentComponent="pnlBody"
                  visible="0.0"/>
-      <Component type="ScriptSlider" id="knbPartialGain" x="380" y="25" style="Horizontal"
-                 middlePosition="0.5" suffix=" dB" text="PartialGain" width="100"
-                 height="16" parentComponent="pnlBody" defaultValue="0.75" mode="Decibel"
-                 bgColour="0" itemColour="4285493103" itemColour2="4292333756"
-                 textColour="4281611319" dragDirection="Horizontal" showTextBox="0"
-                 isPluginParameter="1" pluginParameterName="PartialGain" tooltip="Partial Gain."/>
-      <Component type="ScriptPanel" id="lblPartialADSR" x="-30" y="402" width="128"
-                 height="32" text="Env" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblResidueADSR" x="467" y="402" width="128"
                  height="32" text="Env" parentComponent="pnlBody"/>
-      <Component type="ScriptPanel" id="lblPartialGain" x="240" y="0" width="128"
-                 height="64" text="VOL" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblResidueGain" x="740" y="0" width="128"
                  height="64" text="VOL" parentComponent="pnlBody"/>
       <Component type="ScriptSlider" id="knbResidueGain" x="880" y="25" style="Horizontal"
@@ -127,28 +152,25 @@
                  bgColour="0" itemColour="4285493103" itemColour2="4292333756"
                  textColour="4281611319" dragDirection="Horizontal" showTextBox="0"
                  isPluginParameter="1" pluginParameterName="Residue_Gain" tooltip="Residue Gain."/>
-      <Component type="ScriptPanel" id="pnlProfilePartial" x="95.0" y="60.0" parentComponent="pnlBody"
-                 width="300.0" height="340.0"/>
       <Component type="ScriptPanel" id="pnlProfileResidue" x="595.0" y="60.0"
                  parentComponent="pnlBody" width="300.0" height="340.0"/>
-      <Component type="ScriptButton" id="btnPartialProfilePrev" x="66" y="205"
-                 width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
-                 parentComponent="pnlBody" tooltip="Previous Partial Profile."/>
-      <Component type="ScriptButton" id="btnPartialProfileNext" x="386" y="205"
-                 width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
-                 parentComponent="pnlBody" tooltip="Next Partial Profile."/>
-      <Component type="ScriptComboBox" id="cmbResidueProfile" x="0" y="0" width="10"
-                 height="10" text="profile" visible="0" parentComponent="pnlBody"
-                 items="&#10;A&#10;B&#10;C" max="3"/>
       <Component type="ScriptButton" id="btnResidueProfilePrev" x="566" y="205"
                  width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
-                 parentComponent="pnlBody" tooltip="Previous Residue Profile."/>
+                 parentComponent="pnlBody" tooltip="Previous Residue Profile."
+                 enableMidiLearn="0"/>
       <Component type="ScriptButton" id="btnResidueProfileNext" x="886" y="205"
                  width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
-                 parentComponent="pnlBody" tooltip="Next Residue Profile."/>
-      <Component type="ScriptComboBox" id="cmbPartialProfile" x="0" y="0" width="10"
-                 height="10" text="profile" visible="0" parentComponent="pnlBody"
-                 items="&#10;A&#10;B&#10;C" max="3"/>
+                 parentComponent="pnlBody" tooltip="Next Residue Profile." enableMidiLearn="0"/>
+      <Component type="ScriptButton" id="btnShowRSProfileCustom" x="584" y="18"
+                 width="18" height="18" text="open" saveInPreset="0" parentComponent="pnlBody"
+                 enableMidiLearn="0"/>
+      <Component type="ScriptPanel" id="pnlRSProfileCustom" x="512" y="60" width="460"
+                 height="342" parentComponent="pnlBody" visible="0.0">
+        <Component type="ScriptFloatingTile" id="fltRSProfileCustom" x="0.0" y="0.0"
+                   parentComponent="pnlRSProfileCustom" width="470.0" height="330.0"
+                   bgColour="0" itemColour="2164260863" itemColour2="855638016"
+                   ContentType="DraggableFilterPanel" Data="{&#10;  &quot;ProcessorId&quot;: &quot;leftRS_fxProfileCustom&quot;,&#10;  &quot;Index&quot;: -1,&#10;  &quot;FollowWorkspace&quot;: false&#10;}"/>
+      </Component>
       <Component type="ScriptPanel" id="pnlAdvanced" x="496" y="0" width="500"
                  height="522" parentComponent="pnlBody" visible="0">
         <Component type="ScriptPanel" id="lblAdvanced" x="-11" y="16" width="128"

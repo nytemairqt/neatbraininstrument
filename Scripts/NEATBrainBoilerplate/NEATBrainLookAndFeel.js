@@ -22,6 +22,7 @@ const LAFButtonRandomRatios = Content.createLocalLookAndFeel();
 const LAFButtonResetRatios = Content.createLocalLookAndFeel();
 const LAFButtonPrev = Content.createLocalLookAndFeel();
 const LAFButtonNext = Content.createLocalLookAndFeel();
+const LAFButtonCustomProfile = Content.createLocalLookAndFeel();
 
 const pnlBody = Content.getComponent("pnlBody");
 
@@ -180,6 +181,22 @@ LAFButtonNext.registerFunction("drawToggleButton", function(g, obj)
 	g.setColour(obj.over ? 0xFFE2E3F3 : Colours.grey);
 	g.drawLine(obj.area[2] - offset, 0, obj.area[3] / 2, obj.area[3] / 2, lineThickness);
 	g.fillTriangle([obj.area[2] - (offset * 2), offset, offset * 2, offset * 2], Math.toRadians(90));
+});
+
+// Custom Profile
+LAFButtonCustomProfile.registerFunction("drawToggleButton", function(g, obj)
+{
+	var offset = obj.area[2] / 4;
+	var p = Content.createPath();
+	
+	g.setColour(obj.over ? 0xFFE2E3F3 : Colours.grey);
+	if (obj.value)
+			g.setColour(0xFFE2E3F3);
+	
+	p.loadFromData(pathWrenchIcon);
+	
+	g.drawPath(p, obj.area, 1.2);
+	
 });
 
 
