@@ -122,6 +122,8 @@ inline function onbtnPartialNextControl(component, value)
 inline function onbtnShowWGProfileCustomControl(component, value)
 {
 	pnlWGProfileCustom.set("visible", value);
+	local state = leftWG_fxProfileCustom.exportState();
+	rightWG_fxProfileCustom.restoreState(state);
 }
 
 // Connect Custom Profile
@@ -272,6 +274,8 @@ inline function onbtnResidueNextControl(component, value)
 inline function onbtnShowRSProfileCustomControl(component, value)
 {
 	pnlRSProfileCustom.set("visible", value);
+	local state = leftRS_fxProfileCustom.exportState();
+	rightRS_fxProfileCustom.restoreState(state);	
 }
 
 // Connect Custom Profile

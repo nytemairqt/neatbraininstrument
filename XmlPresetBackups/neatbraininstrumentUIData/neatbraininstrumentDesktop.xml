@@ -108,10 +108,10 @@
       <Component type="ScriptButton" id="btnShowWGProfileCustom" x="110" y="18"
                  width="18" height="18" text="open" saveInPreset="0" parentComponent="pnlBody"
                  enableMidiLearn="0"/>
-      <Component type="ScriptPanel" id="pnlWGProfileCustom" x="10" y="60" width="460"
-                 height="342" parentComponent="pnlBody" visible="0.0">
+      <Component type="ScriptPanel" id="pnlWGProfileCustom" x="10" y="50" width="460"
+                 height="354" parentComponent="pnlBody" visible="0.0">
         <Component type="ScriptFloatingTile" id="fltWGProfileCustom" x="0.0" y="0.0"
-                   parentComponent="pnlWGProfileCustom" width="470.0" height="330.0"
+                   parentComponent="pnlWGProfileCustom" width="470.0" height="350.0"
                    bgColour="0" itemColour="2164260863" itemColour2="855638016"
                    ContentType="DraggableFilterPanel" Data="{&#10;  &quot;ProcessorId&quot;: &quot;leftWG_fxProfileCustom&quot;,&#10;  &quot;Index&quot;: -1,&#10;  &quot;FollowWorkspace&quot;: false&#10;}"/>
       </Component>
@@ -139,9 +139,6 @@
                  height="32" text="Sustain" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblResidueRelease" x="849" y="482" width="128"
                  height="32" text="Release" parentComponent="pnlBody"/>
-      <Component type="ScriptPanel" id="pnlAdvancedPartialSettings" x="498.0"
-                 y="20.0" width="459.0" height="482.0" parentComponent="pnlBody"
-                 visible="0.0"/>
       <Component type="ScriptPanel" id="lblResidueADSR" x="467" y="402" width="128"
                  height="32" text="Env" parentComponent="pnlBody"/>
       <Component type="ScriptPanel" id="lblResidueGain" x="740" y="0" width="128"
@@ -164,10 +161,10 @@
       <Component type="ScriptButton" id="btnShowRSProfileCustom" x="584" y="18"
                  width="18" height="18" text="open" saveInPreset="0" parentComponent="pnlBody"
                  enableMidiLearn="0"/>
-      <Component type="ScriptPanel" id="pnlRSProfileCustom" x="512" y="60" width="460"
-                 height="342" parentComponent="pnlBody" visible="0.0">
+      <Component type="ScriptPanel" id="pnlRSProfileCustom" x="512" y="50" width="460"
+                 height="354" parentComponent="pnlBody" visible="0.0">
         <Component type="ScriptFloatingTile" id="fltRSProfileCustom" x="0.0" y="0.0"
-                   parentComponent="pnlRSProfileCustom" width="470.0" height="330.0"
+                   parentComponent="pnlRSProfileCustom" width="470.0" height="350.0"
                    bgColour="0" itemColour="2164260863" itemColour2="855638016"
                    ContentType="DraggableFilterPanel" Data="{&#10;  &quot;ProcessorId&quot;: &quot;leftRS_fxProfileCustom&quot;,&#10;  &quot;Index&quot;: -1,&#10;  &quot;FollowWorkspace&quot;: false&#10;}"/>
       </Component>

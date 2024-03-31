@@ -714,9 +714,8 @@
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="rightRS_fxProfileCustom" Bypassed="0" NumFilters="1"
-                       Band0="8.94117546081543" Band1="149.6854553222656" Band2="1.0"
-                       Band3="1.0" Band4="4.0" FFTEnabled="0">
+            <Processor Type="CurveEq" ID="rightRS_fxProfileCustom" Bypassed="0" NumFilters="0"
+                       FFTEnabled="0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
@@ -937,8 +936,7 @@
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
             </Processor>
-            <Processor Type="CurveEq" ID="rightWG_fxProfileCustom" Bypassed="0" NumFilters="1"
-                       Band0="24.0" Band1="20.0" Band2="1.0" Band3="1.0" Band4="4.0"
+            <Processor Type="CurveEq" ID="rightWG_fxProfileCustom" Bypassed="0" NumFilters="0"
                        FFTEnabled="0">
               <ChildProcessors/>
               <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
