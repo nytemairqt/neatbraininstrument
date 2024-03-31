@@ -147,7 +147,7 @@ const lblPartialGain = createLabel("lblPartialGain", 240, 0, 128, 64, 16, "regul
 const knbPartialGain = createKnob("knbPartialGain", lblPartialGain.get("x") + 140, lblPartialGain.get("y") + 25, 100, 16, "PartialGain", true, onknbPartialGainControl, 0, 1, 0.01, .75, "pnlBody", true);
 
 const btnShowWGProfileCustom = createButton("btnShowWGProfileCustom", 110, 18, 18, 18, "open", false, onbtnShowWGProfileCustomControl, false, true, "pnlBody");
-const pnlWGProfileCustom = createChildPanel("pnlWGProfileCustom", 10, 60, 460, 342, "pnlBody");
+const pnlWGProfileCustom = createChildPanel("pnlWGProfileCustom", 10, 50, 460, 354, "pnlBody");
 const cmbPartialProfile = createComboBox("cmbPartialProfile", 0, 0, 10, 10, "profile", true, oncmbPartialProfileControl, PARTIAL_PROFILES, false, "pnlBody");
 const btnPartialProfilePrev = createButton("btnPartialProfilePrev", 66, 205, 30, 30, "Prev", false, onbtnPartialPrevControl, true, true, "pnlBody");
 const btnPartialProfileNext = createButton("btnPartialProfileNext", btnPartialProfilePrev.get("x") + 320, 205, 30, 30, "Prev", false, onbtnPartialNextControl, true, true, "pnlBody");
@@ -298,7 +298,9 @@ const cmbResidueProfile = createComboBox("cmbResidueProfile", 0, 0, 10, 10, "pro
 const btnResidueProfilePrev = createButton("btnResidueProfilePrev", 500 + btnPartialProfilePrev.get("x"), 205, 30, 30, "Prev", false, onbtnResiduePrevControl, true, true, "pnlBody");
 const btnResidueProfileNext = createButton("btnResidueProfileNext", btnResidueProfilePrev.get("x") + 320, 205, 30, 30, "Prev", false, onbtnResidueNextControl, true, true, "pnlBody");
 const btnShowRSProfileCustom = createButton("btnShowRSProfileCustom", 584, 18, 18, 18, "open", false, onbtnShowRSProfileCustomControl, false, true, "pnlBody");
-const pnlRSProfileCustom = createChildPanel("pnlRSProfileCustom", 512, 60, 460, 342, "pnlBody");
+const pnlRSProfileCustom = createChildPanel("pnlRSProfileCustom", 512, 50, 460, 354, "pnlBody");
+
+//10, 50, 460, 354
 
 const lblResidueADSR = createLabel("lblResidueADSR", 467, lblPartialADSR.get("y"), 128, 32, 20, "regular", "Env", "pnlBody", Colours.grey, "centred");
 
