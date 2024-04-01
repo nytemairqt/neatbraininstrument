@@ -148,7 +148,7 @@ const lblPartialADSR = createLabel("lblPartialADSR", -30, 402 , 128, 32, 20, "re
 const lblPartialGain = createLabel("lblPartialGain", 240, 0, 128, 64, 16, "regular", "VOL", "pnlBody", Colours.grey, "right");
 const knbPartialGain = createKnob("knbPartialGain", lblPartialGain.get("x") + 140, lblPartialGain.get("y") + 25, 100, 16, "PartialGain", true, onknbPartialGainControl, 0, 1, 0.01, .75, "pnlBody", true);
 
-const btnShowWGProfileCustom = createButton("btnShowWGProfileCustom", 110, 18, 18, 18, "open", false, onbtnShowWGProfileCustomControl, false, true, "pnlBody");
+const btnShowWGProfileCustom = createButton("btnShowWGProfileCustom", 114, 18, 18, 18, "open", false, onbtnShowWGProfileCustomControl, false, true, "pnlBody");
 const pnlWGProfileCustom = createChildPanel("pnlWGProfileCustom", 10, 50, 460, 354, "pnlBody");
 const cmbPartialProfile = createComboBox("cmbPartialProfile", 0, 0, 10, 10, "profile", true, oncmbPartialProfileControl, PARTIAL_PROFILES, false, "pnlBody");
 const btnPartialProfilePrev = createButton("btnPartialProfilePrev", 66, 205, 30, 30, "Prev", false, onbtnPartialPrevControl, true, true, "pnlBody");
