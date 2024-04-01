@@ -107,7 +107,7 @@
                  parentComponent="pnlBody" tooltip="Next Partial Profile." enableMidiLearn="0"/>
       <Component type="ScriptButton" id="btnShowWGProfileCustom" x="110" y="18"
                  width="18" height="18" text="open" saveInPreset="0" parentComponent="pnlBody"
-                 enableMidiLearn="0"/>
+                 enableMidiLearn="0" tooltip="Create a Custom Profile."/>
       <Component type="ScriptPanel" id="pnlWGProfileCustom" x="10" y="50" width="460"
                  height="354" parentComponent="pnlBody" visible="0.0">
         <Component type="ScriptFloatingTile" id="fltWGProfileCustom" x="0.0" y="0.0"
@@ -160,7 +160,7 @@
                  parentComponent="pnlBody" tooltip="Next Residue Profile." enableMidiLearn="0"/>
       <Component type="ScriptButton" id="btnShowRSProfileCustom" x="584" y="18"
                  width="18" height="18" text="open" saveInPreset="0" parentComponent="pnlBody"
-                 enableMidiLearn="0"/>
+                 enableMidiLearn="0" tooltip="Create a Custom Profile."/>
       <Component type="ScriptPanel" id="pnlRSProfileCustom" x="512" y="50" width="460"
                  height="354" parentComponent="pnlBody" visible="0.0">
         <Component type="ScriptFloatingTile" id="fltRSProfileCustom" x="0.0" y="0.0"
