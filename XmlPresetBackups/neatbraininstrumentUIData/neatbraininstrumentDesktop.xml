@@ -105,7 +105,7 @@
       <Component type="ScriptButton" id="btnPartialProfileNext" x="386" y="205"
                  width="30" height="30" text="Prev" saveInPreset="0" isMomentary="1"
                  parentComponent="pnlBody" tooltip="Next Partial Profile." enableMidiLearn="0"/>
-      <Component type="ScriptButton" id="btnShowWGProfileCustom" x="110" y="18"
+      <Component type="ScriptButton" id="btnShowWGProfileCustom" x="114" y="18"
                  width="18" height="18" text="open" saveInPreset="0" parentComponent="pnlBody"
                  enableMidiLearn="0" tooltip="Create a Custom Profile."/>
       <Component type="ScriptPanel" id="pnlWGProfileCustom" x="10" y="50" width="460"
@@ -126,7 +126,7 @@
       <Component type="ScriptSlider" id="knbResidueSustain" x="787" y="432" stepSize="1.0"
                  min="-100" max="0" text="R_Sustain" defaultValue="-100.0" width="48"
                  height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="R_Sustain"
-                 tooltip="Residue Sustain level."/>
+                 tooltip="Residue Sustain level." middlePosition="-12.0"/>
       <Component type="ScriptSlider" id="knbResidueRelease" x="887" y="432" stepSize="1.0"
                  min="5" max="15000" text="R_Release" defaultValue="200.0" width="48"
                  height="48" parentComponent="pnlBody" isPluginParameter="1" pluginParameterName="R_Release"
