@@ -209,9 +209,6 @@
         <Component type="ScriptSlider" id="knbToneShimmer" x="291" y="432" text="ToneBright"
                    width="48" height="48" isPluginParameter="1" pluginParameterName="ToneBright"
                    parentComponent="pnlAdvanced" min="-1.0" tooltip="Transparent high (8kHz) frequency EQ Sculpt."/>
-        <Component type="ScriptSlider" id="knbToneDampen" x="391" y="432" text="ToneDamp"
-                   defaultValue="0.4000000059604645" width="48" height="48" parentComponent="pnlAdvanced"
-                   isPluginParameter="1" pluginParameterName="ToneDamp" tooltip="Dynamic pitch-based harshness attenuation."/>
         <Component type="ScriptPanel" id="lblAmpVelocity" x="52" y="202" width="128"
                    height="32" text="Vel" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblAmpLFO" x="172" y="202" width="128"
@@ -232,8 +229,6 @@
                    height="32" text="Bite" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblToneShimmer" x="252" y="482" width="128"
                    height="32" text="Shimmer" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblToneDampen" x="352" y="482" width="128"
-                   height="32" text="Dampen" parentComponent="pnlAdvanced"/>
       </Component>
     </Component>
     <Component type="ScriptPanel" id="pnlStatusBar" x="5.0" y="585.0" text=""

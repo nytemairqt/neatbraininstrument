@@ -65,7 +65,6 @@ knbPitchRandom.set("tooltip", "Per-voice Pitch Randomization.");
 knbToneBody.set("tooltip", "Transparent lower frequency (135Hz) EQ Sculpt.");
 knbToneBite.set("tooltip", "Transparent upper-mid frequency (2.5kHz) EQ Sculpt.");
 knbToneShimmer.set("tooltip", "Transparent high (8kHz) frequency EQ Sculpt.");
-knbToneDampen.set("tooltip", "Dynamic pitch-based harshness attenuation.");
 RHAPSbtnUnload.set("tooltip", "Unload this instrument.");
 RHAPSbtnSettings.set("tooltip", "Open Settings.");
 RHAPSbtnMasterGain.set("tooltip", "Master Gain.");

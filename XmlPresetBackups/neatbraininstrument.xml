@@ -31,7 +31,6 @@
             <Control type="ScriptSlider" id="knbToneBody" value="0.0"/>
             <Control type="ScriptSlider" id="knbToneBite" value="0.0"/>
             <Control type="ScriptSlider" id="knbToneShimmer" value="0.0"/>
-            <Control type="ScriptSlider" id="knbToneDampen" value="0.7099999785423279"/>
             <Control type="ScriptSlider" id="knbMasterGain" value="-5.999998569488525"/>
             <Control type="ScriptSlider" id="knbMasterPan" value="0.0"/>
             <Control type="ScriptSlider" id="knbCoarseDetune" value="0.0"/>
@@ -435,16 +434,6 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="PolyScriptFX" ID="leftWG_fxDampen" Bypassed="0">
-              <ChildProcessors/>
-              <Content/>
-              <Networks>
-                <Network ID="dampenDynamicEQ" Version="0.0.0" AllowPolyphonic="1"/>
-              </Networks>
-              <UIData>
-                <ContentProperties DeviceType="Desktop"/>
-              </UIData>
-            </Processor>
             <Processor Type="CurveEq" ID="leftWG_fxProfileA" Bypassed="0" NumFilters="1"
                        Band0="9.434482574462891" Band1="1795.497924804688" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" FFTEnabled="0">
@@ -887,16 +876,6 @@
         </Processor>
         <Processor Type="EffectChain" ID="FX" Bypassed="0">
           <ChildProcessors>
-            <Processor Type="PolyScriptFX" ID="rightWG_fxDampen" Bypassed="0">
-              <ChildProcessors/>
-              <Content/>
-              <Networks>
-                <Network ID="dampenDynamicEQ" Version="0.0.0" AllowPolyphonic="1"/>
-              </Networks>
-              <UIData>
-                <ContentProperties DeviceType="Desktop"/>
-              </UIData>
-            </Processor>
             <Processor Type="CurveEq" ID="rightWG_fxProfileA" Bypassed="0" NumFilters="1"
                        Band0="9.434482574462891" Band1="1795.497924804688" Band2="0.5199999809265137"
                        Band3="1.0" Band4="3.0" FFTEnabled="0">
