@@ -203,10 +203,10 @@
         <Component type="ScriptSlider" id="knbToneBody" x="91" y="432" text="ToneBody"
                    width="48" height="48" isPluginParameter="1" pluginParameterName="ToneBody"
                    parentComponent="pnlAdvanced" min="-1.0" tooltip="Transparent lower frequency (135Hz) EQ Sculpt."/>
-        <Component type="ScriptSlider" id="knbToneBite" x="191" y="432" text="ToneBite"
+        <Component type="ScriptSlider" id="knbToneBite" x="211" y="432" text="ToneBite"
                    width="48" height="48" isPluginParameter="1" pluginParameterName="ToneBite"
                    parentComponent="pnlAdvanced" min="-1.0" tooltip="Transparent upper-mid frequency (2.5kHz) EQ Sculpt."/>
-        <Component type="ScriptSlider" id="knbToneShimmer" x="291" y="432" text="ToneBright"
+        <Component type="ScriptSlider" id="knbToneShimmer" x="331" y="432" text="ToneBright"
                    width="48" height="48" isPluginParameter="1" pluginParameterName="ToneBright"
                    parentComponent="pnlAdvanced" min="-1.0" tooltip="Transparent high (8kHz) frequency EQ Sculpt."/>
         <Component type="ScriptPanel" id="lblAmpVelocity" x="52" y="202" width="128"
@@ -225,9 +225,9 @@
                    height="32" text="Drift" parentComponent="pnlAdvanced"/>
         <Component type="ScriptPanel" id="lblToneBody" x="52" y="482" width="128"
                    height="32" text="Body" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblToneBite" x="152" y="482" width="128"
+        <Component type="ScriptPanel" id="lblToneBite" x="172" y="482" width="128"
                    height="32" text="Bite" parentComponent="pnlAdvanced"/>
-        <Component type="ScriptPanel" id="lblToneShimmer" x="252" y="482" width="128"
+        <Component type="ScriptPanel" id="lblToneShimmer" x="292" y="482" width="128"
                    height="32" text="Shimmer" parentComponent="pnlAdvanced"/>
       </Component>
     </Component>

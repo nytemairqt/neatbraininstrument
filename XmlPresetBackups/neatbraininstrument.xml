@@ -382,7 +382,7 @@
         <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
           <ChildProcessors>
             <Processor Type="AHDSR" ID="leftWG_pitchAHDSR" Bypassed="0" Monophonic="0.0"
-                       Retrigger="1.0" Bipolar="1" Intensity="0.01000000070780516" AttackCurve="0.0"
+                       Retrigger="1.0" Bipolar="0" Intensity="0.01000000070780516" AttackCurve="0.0"
                        DecayCurve="0.0" Attack="20.0" AttackLevel="0.0" Hold="10.0"
                        Decay="1000.0" Sustain="-100.0" Release="20.0" EcoMode="1.0">
               <ChildProcessors>
@@ -824,7 +824,7 @@
         <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
           <ChildProcessors>
             <Processor Type="AHDSR" ID="rightWG_pitchAHDSR" Bypassed="0" Monophonic="0.0"
-                       Retrigger="1.0" Bipolar="1" Intensity="0.01000000070780516" AttackCurve="0.0"
+                       Retrigger="1.0" Bipolar="0" Intensity="0.01000000070780516" AttackCurve="0.0"
                        DecayCurve="0.0" Attack="20.0" AttackLevel="0.0" Hold="10.0"
                        Decay="1000.0" Sustain="-100.0" Release="20.0" EcoMode="1.0">
               <ChildProcessors>
