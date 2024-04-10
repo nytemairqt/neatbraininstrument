@@ -39,7 +39,7 @@ pnlStore.setMouseCallback(function(event)
 {
 	if (event.clicked)
 	{
-		Engine.openWebsite("https://www.iamlamprey.com/instruments");
+		Engine.openWebsite("https://www.iamlamprey.com/software");
 	}
 
 	this.data.hover = event.hover;
